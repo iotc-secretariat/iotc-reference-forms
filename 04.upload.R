@@ -1,5 +1,6 @@
 SERVER_ROOT = "/var/www/static/reference"
-FORMS_FOLDER = "forms"
+FORMS_FOLDER         = "forms"
+INTERIM_FORMS_FOLDER = paste0(FORMS_FOLDER, "/interim")
 
 DATA_IOTC_SERVER_IP = Sys.getenv("DATA_IOTC_SERVER_IP")
 DATA_IOTC_USERNAME  = Sys.getenv("DATA_IOTC_USERNAME")
@@ -112,6 +113,19 @@ upload_forms = function(version) {
   }
 }
 
+upload_interim_forms = function(version) {
+  for(form in list.files("./form_reporting_templates/interim", pattern = "*.xlsx")) {
+    folder = full_folder(version, INTERIM_FORMS_FOLDER)
+    
+    print(paste0("Uploading form '", form, "' in ", folder, "..."))
+    
+    CURL_FTPu(
+      filename   = paste0("./form_reporting_templates/interim/", form),
+      target_url = ftp_url(paste0(folder, "/", form))
+    )
+  }
+}
+
 upload_form_docs = function(version) {
   folder = full_folder(version)
   
@@ -129,6 +143,7 @@ upload_form_docs = function(version) {
 
 disseminate = function(version) {
   upload_forms(version)
+  upload_interim_forms(version)
   upload_form_docs(version)
 }
 
