@@ -57,120 +57,119 @@ Fishing craft statistics data should be reported through the form [2-FC](https:/
 
 ## Main data fields
 + [IOTC area](#IOTCareasMain)
-  + [Gear](#Gear)
-    + [boat type](#boatTypes)
-      + [Mechanisation type](#mechanizationTypes)
-        + [Fish preservation method](#fishPreservationMethods)
-          + [Fish processing type](#fishProcessingTypes)
-            + [Fish processing type](#boatClassTypes)
-              + Size class
-              + Vessel number
-              
-              
-              ## Additional data fields
-              
-              # Referenced codelists
-              
-              ## Administrative and geospatial domains
-              
-              ### Countries (ADM.COU) {#countries}
-              
-              Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
-              
-              ```{r collapse = TRUE}
-              out_dt(COUNTRIES, "COUNTRIES")
-              ```
-              
-              ### IOTC main areas (GIS.IOTC.MA) {#IOTCareasMain}
-              
-              Reference codes modeling the two main areas in which the IOTC area of competence is split (western / eastern IOTC area, _roughly_ coinciding with FAO areas F51 and F57).
-              
-              ```{r collapse = TRUE}
-              out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
-              ```
-              
-              ## Fisheries and fishing technologies domains
-              
-              ### Gears (FIS.GE) {#gears}
-              
-              An _ad-hoc_ classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
-              
-              An [_interactive wizard_](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for  their fisheries (among those currently considered of relevance in the Indian Ocean).
-              
-              ```{r collapse = TRUE}
-              out_dt(FISHERIES, "FISHERIES")
-              ```
-              
-              ### Boat types (VES.BT) {#boatTypes}
-              
-              This codelist includes several types of boat currently known to the IOTC: countries using types of boat other than those specified are encouraged to provide this information to the Secretariat.
-              
-              ```{r collapse = TRUE}
-              out_dt(BOAT_TYPES, "BOAT_TYPES")
-              ```
-              
-              ### Mechanization types (VES.MT) {#mechanizationTypes}
-              
-              Reference codes modeling the type of boat mechanization known in the IOTC and for which fleet / effort statistics might be provided to the Secretariat.
-              
-              ```{r collapse = TRUE}
-              out_dt(MECHANIZATION_TYPES, "MECHANIZATION_TYPES")
-              ```
-              
-              ### Fish preservation methods (VES.PM) {#fishPreservationMethods}
-              
-              Reference codes modeling the type of preservation methods being used for target species onboard boats of a given type, and for which fleet / effort statistics might be provided to the Secretariat.
-              
-              ```{r collapse = TRUE}
-              out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
-              ```
-              
-              ### Fish processing types (VES.PR) {#fishProcessingTypes}
-              
-              Reference codes modeling the type of processing applied to the retained fish.
-              
-              ```{r collapse = TRUE}
-              out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
-              ```
-              
-              ### Boat class types (VES.BC) {#boatClassTypes}
-              
-              IOTC CPCs should make every possible effort to classify their fleets according to the categories recorded in this codelist and report this information to the Secretariat.
-              
-              ```{r collapse = TRUE}
-              out_dt(BOAT_CLASS_TYPES, "BOAT_CLASS_TYPES")
-              ```
-              
-              ## Data and metadata domains
-              
-              ### Data types (DTA.TY) {#dataTypes}
-              
-              Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
-              
-              ```{r collapse = TRUE}
-              out_dt(DATA_TYPES, "DATA_TYPES")
-              ```
-              
-              ### Fishing crafts data sources (DTA.SRC.FC) {#sourcesFC}
-              
-              Reference codes modeling the source of the data provided through the fishing craft data form.
-              
-              ```{r collapse = TRUE}
-              out_dt(DATA_SOURCES_FC, "DATA_SOURCES_FC")
-              ```
-              
-              ### Fishing crafts data processings (DTA.PRO.FC) {#dataProcessingsFC}
-              
-              Reference codes modeling the processing applied to the data provided through the fishing craft form.
-              
-              ```{r collapse = TRUE}
-              out_dt(DATA_PROCESSINGS_FC, "DATA_PROCESSINGS_FC")
-              ```
-              
-              ### Coverage types (DTA.COV.TY) {#coverageTypes}
-              
-              Reference codes modeling the type of coverage for the raw information used to obtain the data provided through a specific form.
-              
-              ```{r collapse = TRUE}
-              out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
-              ```
++ [Gear](#Gear)
++ [boat type](#boatTypes)
++ [Mechanisation type](#mechanizationTypes)
++ [Fish preservation method](#fishPreservationMethods)
++ [Fish processing type](#fishProcessingTypes)
++ [Fish processing type](#boatClassTypes)
++ Size class
++ Vessel number
+             
+## Additional data fields
+
+# Referenced codelists
+
+## Administrative and geospatial domains
+
+### Countries (ADM.COU) {#countries}
+
+Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+
+```{r collapse = TRUE}
+out_dt(COUNTRIES, "COUNTRIES")
+```
+
+### IOTC main areas (GIS.IOTC.MA) {#IOTCareasMain}
+
+Reference codes modeling the two main areas in which the IOTC area of competence is split (western / eastern IOTC area, _roughly_ coinciding with FAO areas F51 and F57).
+
+```{r collapse = TRUE}
+out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
+```
+
+## Fisheries and fishing technologies domains
+
+### Gears (FIS.GE) {#gears}
+
+An _ad-hoc_ classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
+
+An [_interactive wizard_](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for  their fisheries (among those currently considered of relevance in the Indian Ocean).
+
+```{r collapse = TRUE}
+out_dt(FISHERIES, "FISHERIES")
+```
+
+### Boat types (VES.BT) {#boatTypes}
+
+This codelist includes several types of boat currently known to the IOTC: countries using types of boat other than those specified are encouraged to provide this information to the Secretariat.
+
+```{r collapse = TRUE}
+out_dt(BOAT_TYPES, "BOAT_TYPES")
+```
+
+### Mechanization types (VES.MT) {#mechanizationTypes}
+
+Reference codes modeling the type of boat mechanization known in the IOTC and for which fleet / effort statistics might be provided to the Secretariat.
+
+```{r collapse = TRUE}
+out_dt(MECHANIZATION_TYPES, "MECHANIZATION_TYPES")
+```
+
+### Fish preservation methods (VES.PM) {#fishPreservationMethods}
+
+Reference codes modeling the type of preservation methods being used for target species onboard boats of a given type, and for which fleet / effort statistics might be provided to the Secretariat.
+
+```{r collapse = TRUE}
+out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
+```
+
+### Fish processing types (VES.PR) {#fishProcessingTypes}
+
+Reference codes modeling the type of processing applied to the retained fish.
+
+```{r collapse = TRUE}
+out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
+```
+
+### Boat class types (VES.BC) {#boatClassTypes}
+
+IOTC CPCs should make every possible effort to classify their fleets according to the categories recorded in this codelist and report this information to the Secretariat.
+
+```{r collapse = TRUE}
+out_dt(BOAT_CLASS_TYPES, "BOAT_CLASS_TYPES")
+```
+
+## Data and metadata domains
+
+### Data types (DTA.TY) {#dataTypes}
+
+Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+
+```{r collapse = TRUE}
+out_dt(DATA_TYPES, "DATA_TYPES")
+```
+
+### Fishing crafts data sources (DTA.SRC.FC) {#sourcesFC}
+
+Reference codes modeling the source of the data provided through the fishing craft data form.
+
+```{r collapse = TRUE}
+out_dt(DATA_SOURCES_FC, "DATA_SOURCES_FC")
+```
+
+### Fishing crafts data processings (DTA.PRO.FC) {#dataProcessingsFC}
+
+Reference codes modeling the processing applied to the data provided through the fishing craft form.
+
+```{r collapse = TRUE}
+out_dt(DATA_PROCESSINGS_FC, "DATA_PROCESSINGS_FC")
+```
+
+### Coverage types (DTA.COV.TY) {#coverageTypes}
+
+Reference codes modeling the type of coverage for the raw information used to obtain the data provided through a specific form.
+
+```{r collapse = TRUE}
+out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
+```
