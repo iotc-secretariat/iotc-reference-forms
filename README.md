@@ -23,14 +23,14 @@ Two sets of system environment variables are required in order to be able to pro
 #### Data access credentials
 
 -   `DEFAULT_IOTC_LIBS_DB_SERVER` pointing to the MSSQLServer hosting the `IOTC_master` database
--   `DEFAULT_IOTC_LIBS_DB_USER` '/ `DEFAULT_IOTC_LIBS_DB_PASSWORD` the credentials of a local MSSQLServer user that can access the `IOTC_master` database in read mode
+-   `DEFAULT_IOTC_LIBS_DB_USER` / `DEFAULT_IOTC_LIBS_DB_PASSWORD` the credentials of a local MSSQLServer user that can access the `IOTC_master` database in read mode
 
 > The names of the three environment variables above *shall* be changed to something more appropriate, e.g., `DEFAULT_IOTC_MASTER_DB_*`
 
-### FTP server access credentials
+### sFTP server credentials
 
 -   `DATA_IOTC_SERVER_IP` pointing to the Linux machine that hosts the Apache2 web server handling requests to `data.iotc.org` and its various services
--   `DATA_IOTC_USERNAME` / `DATA_IOTC_PASSWORD` the Linux credentials of a user with proper access rights for connecting to the sFTP server and transfer the process artifacts
+-   `DATA_IOTC_USERNAME` / `DATA_IOTC_PASSWORD` the Linux credentials of a user with proper access rights for connecting to the sFTP server on this same machine and transfer all process artifacts (HTML documents, XLSX and CSV files)
 
 ## How to build the artifacts
 
@@ -146,11 +146,11 @@ In order for these steps to work, and for the proper variables to be assigned a 
     |refs_biological|DEPREDATION_SOURCES|0|2023-05-12 00:00:00.000|
     |refs_biological|FATES|1|2024-02-01 08:53:36.873|
     
-> Updating the version of a _physical_ codelist is done automatically through triggers defined for each table, and named `VER_INS_DEL_REFS_<_schema_name_>_<_table_name_>` (for `INSERT`/`DELETE` operations performed on the table) or `VER_UPD_REFS_<_schema_name_>_<_table_name_>` (for `UPDATE` operations performed on the table).
+> Updating the version of a _physical_ codelist is done automatically through triggers defined for each table, and named `VER_INS_DEL_REFS_<_schema_name_>_<_table_name_>` for `INSERT`/`DELETE` operations performed on the table, or `VER_UPD_REFS_<_schema_name_>_<_table_name_>` for `UPDATE` operations performed on the table.
 
 By combining these two datasets it is possible to determine the latest version (and hence the resource name) of all codelists - both _physical_ and _virtual_ - and therefore allow the initialization script to download all codelist elements from its remote location.
 
-The initialization scripts takes also care of resolving issues related to the mapping between database schemata (on `IOTC_master`) and codelist domains being not as trivial as theu should have been. 
+The initialization scripts takes also care of resolving issues related to the mapping between database schemata (on `IOTC_master`) and codelist domains being not as trivial as they should have been. 
 
 For instance, codelists under the `admin` domain are currently stored as tables under either the `refs_admin` or the `refs_gis` schemata (depending on the case) whereas the vast majority of other codelists directly maps its domain to the corresponding database schema (`_domain_` -\> `refs_<domain>`). 
 

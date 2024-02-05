@@ -398,7 +398,7 @@ able to properly build this project and its artifacts:</p>
 <ul>
 <li><code>DEFAULT_IOTC_LIBS_DB_SERVER</code> pointing to the MSSQLServer
 hosting the <code>IOTC_master</code> database</li>
-<li><code>DEFAULT_IOTC_LIBS_DB_USER</code> ’/
+<li><code>DEFAULT_IOTC_LIBS_DB_USER</code> /
 <code>DEFAULT_IOTC_LIBS_DB_PASSWORD</code> the credentials of a local
 MSSQLServer user that can access the <code>IOTC_master</code> database
 in read mode</li>
@@ -410,15 +410,16 @@ changed to something more appropriate, e.g.,
 </blockquote>
 </div>
 </div>
-<div id="ftp-server-access-credentials" class="section level3">
-<h3>FTP server access credentials</h3>
+<div id="sftp-server-credentials" class="section level3">
+<h3>sFTP server credentials</h3>
 <ul>
 <li><code>DATA_IOTC_SERVER_IP</code> pointing to the Linux machine that
 hosts the Apache2 web server handling requests to
 <code>data.iotc.org</code> and its various services</li>
 <li><code>DATA_IOTC_USERNAME</code> / <code>DATA_IOTC_PASSWORD</code>
 the Linux credentials of a user with proper access rights for connecting
-to the sFTP server and transfer the process artifacts</li>
+to the sFTP server on this same machine and transfer all process
+artifacts (HTML documents, XLSX and CSV files)</li>
 </ul>
 </div>
 </div>
@@ -746,10 +747,10 @@ that codelist</li>
 <p>Updating the version of a <em>physical</em> codelist is done
 automatically through triggers defined for each table, and named
 <code>VER_INS_DEL_REFS_&lt;_schema_name_&gt;_&lt;_table_name_&gt;</code>
-(for <code>INSERT</code>/<code>DELETE</code> operations performed on the
-table) or
-<code>VER_UPD_REFS_&lt;_schema_name_&gt;_&lt;_table_name_&gt;</code>
-(for <code>UPDATE</code> operations performed on the table).</p>
+for <code>INSERT</code>/<code>DELETE</code> operations performed on the
+table, or
+<code>VER_UPD_REFS_&lt;_schema_name_&gt;_&lt;_table_name_&gt;</code> for
+<code>UPDATE</code> operations performed on the table.</p>
 </blockquote>
 <p>By combining these two datasets it is possible to determine the
 latest version (and hence the resource name) of all codelists - both
@@ -759,7 +760,7 @@ location.</p>
 <p>The initialization scripts takes also care of resolving issues
 related to the mapping between database schemata (on
 <code>IOTC_master</code>) and codelist domains being not as trivial as
-theu should have been.</p>
+they should have been.</p>
 <p>For instance, codelists under the <code>admin</code> domain are
 currently stored as tables under either the <code>refs_admin</code> or
 the <code>refs_gis</code> schemata (depending on the case) whereas the
