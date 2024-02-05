@@ -34,7 +34,7 @@ Two sets of system environment variables are required in order to be able to pro
 
 ## How to build the artifacts
 
--   Ensure that all environment variables are properly set (in case, contact [francis.kilindo\@fao.org](mailto:francis.kilindo@fao.org){.email} to retrieve all sensitive information above)
+-   Ensure that all environment variables are properly set (in case, contact [francis.kilindo@fao.org](mailto:francis.kilindo@fao.org){.email} to retrieve all sensitive information above)
 -   Run the `00.run.R` script and wait for its completion
 
 ### Process outputs
