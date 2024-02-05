@@ -1,0 +1,79 @@
+---
+title: "IOTC statistical data reporting: form 1-CE (v`r BASE_VERSION`)"
+author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+output:
+  word_document2:
+    reference_docx: "../templates/doc_template.docx"
+    number_sections: FALSE
+    reference_num: TRUE
+    fig_caption: TRUE
+      
+  html_document2:
+    css: "../templates/html_template.css"
+    includes: 
+      in_header: "../templates/google-analytics.html"
+    number_sections: FALSE
+    toc: yes
+    toc_float:
+      collapsed: FALSE
+    smooth_scroll: FALSE
+---
+
+# Description
+
+This form supports the reporting of _daily buoys positions_ for a given CPC / fleet / vessel.
+
+# Resources
+
+[return back](..) to the list of all IOTC statistical data reporting forms.
+
+# Supported resolutions
+
++ [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - _Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)_
++ [19/02](https://iotc.org/cmm/resolution-1902-procedures-fish-aggregating-devices-fads-management-plan) - _Procedures on a Fish Aggregating Devices (FADs) Management Plan_
+
+# Reporting deadlines
+
++ **Surface fisheries**: 
+
+# Stratification
+
+## Main data fields
+
++ Daily(mandatory)
++ Bouy ID
++ [IOTC  geospatial area](#geospatialData)
+
+## Additional data fields
+
++ [Estimation](#estimationTypes)
+
+# Referenced codelists
+
+## Administrative and geospatial domains
+                  
+### Countries (ADM.COU) {#countries}
+
+Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+                  
+```{r collapse = TRUE}
+out_dt(COUNTRIES, "COUNTRIES")
+```
+
+## Data and metadata domains
+
+### Data types (DTA.TY) {#dataTypes}
+
+Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+
+```{r collapse = TRUE}
+out_dt(DATA_TYPES, "DATA_TYPES")
+```
+
+### Data raising (DTA.RA) {#dataRaising}
+
+Reference codes modeling the level of raising applied to the data (raised to totals / not raised to totals / unknown).
+
+```{r collapse = TRUE}
+out_dt(DATA_RAISINGS, "DATA_RAISINGS")
+```

@@ -1,0 +1,154 @@
+---
+title: "IOTC statistical data reporting: form 1-RC (v`r BASE_VERSION`)"
+author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+output:
+  word_document2:
+    reference_docx: "../templates/doc_template.docx"
+    number_sections: FALSE
+    reference_num: TRUE
+    fig_caption: TRUE
+
+  html_document2:
+    css: "../templates/html_template.css"
+    includes: 
+      in_header: "../templates/google-analytics.html"
+    number_sections: FALSE
+    toc: yes
+    toc_float:
+      collapsed: FALSE
+    smooth_scroll: FALSE
+---
+  
+# Description
+  
+This form supports the reporting of _total annual retained catches in live weight equivalent_ for a given CPC / fleet.
+
+# Resources
+
+Click [here](https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx) to download an empty version of form 1-RC, or [return back](..) to the list of all IOTC statistical data reporting forms.
+
+# Supported resolutions
+
++ [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - _Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)_
++ [17/05](https://iotc.org/cmm/resolution-1705-conservation-sharks-caught-association-fisheries-managed-iotc) - _On the conservation of sharks caught in association with fisheries managed by IOTC_
++ [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) - _On the conservation of mobulid rays caught in association with fisheries in the IOTC area of competence_
+
+# Reference species groups
+
++ **IOTC species** [ mandatory ] 
++ **Sharks** [ mandatory ]
++ **Mobulids and rays** [ mandatory ]
++ **Other bycatch / non-IOTC species** [ voluntary ]
+
+# Reporting deadlines
+
++ **Longline fisheries**: 30 June (preliminary), 30 December (final)
++ **Surface fisheries**: 30 June (final)
++ **Coastal fisheries**: 30 June (final)
+
+# Stratification
+
+## Main data fields
+
++ Quarter (possibly)
++ [IOTC area](#IOTCareasMain)
+  + [Fishery](#fisheries)
+    + [Species](#allSpecies)
+      
+      ## Additional Data fields
+      
+      + [Retain reason](#retainReasons)
+        
+        # Referenced codelists
+        
+        ## Administrative and geospatial domains
+        
+        ### Countries (ADM.COU) {#countries}
+        
+        Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+        
+        ```{r collapse = TRUE}
+        out_dt(COUNTRIES, "COUNTRIES")
+        ```
+        
+        ### IOTC main areas (GIS.IOTC.MA) {#IOTCareasMain}
+        
+        Reference codes modeling the two main areas in which the IOTC area of competence is split (western / eastern IOTC area, _roughly_ coinciding with FAO areas F51 and F57).
+        
+        ![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
+        
+        ```{r collapse = TRUE}
+        out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
+        ```
+        
+        ## Fisheries and fishing technologies domains
+        
+        ### Fisheries (FIS) {#fisheries}
+        
+        An _ad-hoc_ classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
+        
+        An [_interactive wizard_](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for  their fisheries (among those currently considered of relevance in the Indian Ocean).
+        
+        ```{r collapse = TRUE}
+        out_dt(FISHERIES, "FISHERIES")
+        ```
+        
+        ## Biological and morphometrics domains
+        
+        ### All species (SPC.ALL) {#allSpecies}
+        
+        Reference codes modeling the species interacting with the fisheries as:
+          
+          + target species (retained or discarded)
+        + bycatch species (retained or discarded)
+        + sampled individuals
+        + etc.
+        
+        These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org
+        ) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+        
+        ```{r collapse = TRUE}
+        out_dt(SPECIES, "SPECIES")
+        ```
+        
+        ### Reasons for retaining (SPC.FTE.RE) {#retainReasons}
+        
+        Reference codes that model the reasons why aquatic creatures caught by the fishery are retained onboard.
+        
+        ```{r collapse = TRUE}
+        out_dt(RETAIN_REASONS, "RETAIN_REASONS")
+        ```
+        
+        ## Data and metadata domains
+        
+        ### Data types (DTA.TY) {#dataTypes}
+        
+        Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+        
+        ```{r collapse = TRUE}
+        out_dt(DATA_TYPES, "DATA_TYPES")
+        ```
+        
+        ### Retained catches data sources (DTA.SRC.RC) {#dataSourcesRC}
+        
+        Reference codes modeling the source of the data provided through the retained catches data form.
+        
+        ```{r collapse = TRUE}
+        out_dt(DATA_SOURCES_RC, "DATA_SOURCES_RC")
+        ```
+        
+        ### Retained catches data processings (DTA.PRO.RC) {#dataProcessingsRC}
+        
+        Reference codes modeling the processing applied to the data provided through the retained catches data form.
+        
+        ```{r collapse = TRUE}
+        out_dt(DATA_PROCESSINGS_RC, "DATA_PROCESSINGS_RC")
+        ```
+        
+        ### Coverage types (DTA.COV.TY) {#coverageTypes}
+        
+        Reference codes modeling the type of coverage for the raw information used to obtain the data provided through a specific form.
+        
+        ```{r collapse = TRUE}
+        out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
+        ```
