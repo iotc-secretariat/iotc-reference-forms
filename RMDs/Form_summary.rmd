@@ -144,7 +144,7 @@ For the submission of daily positions of active buoys equipping dFADs and natura
 + [Form template](./Form-3BU.xlsx)
 + [Form validator](https://data.iotc.org/interim-validators/3BU/)
 
-## Size frequency data
+## Size-frequency data
 
 ### Form 4SF{#4SF}
 
@@ -228,7 +228,7 @@ A version of [Form 3CE](#3CE) that still uses the _old_ [fishery](https://data.i
 + [Form template](./interim/Form-3CE_interim-multiple.xlsx)
 + [Form validator](https://data.iotc.org/interim-validators/multiple/3CE/)
 
-## Size frequency data
+## Size-frequency data
 
 ### Form 4SF{#4SF_interim}
 
