@@ -21,7 +21,7 @@ output:
 
 # Description
 
-The forms for the submission of fisheries statistics to the IOTC are available as Excel forms to simplify the process of entering and submitting the data. This format allows the reporting officer to enter the data directly on the form for later submission by e-mail or via e-MARIS to the IOTC Secretariat.
+The templates for the submission of fisheries statistics to the IOTC are available as plain Microsoft Excel forms to simplify the process of entering and submitting all required information This format allows the reporting officer to enter the data either _directly_ (i.e., by hand) or _programmatically_ (i.e., through automated scripts), for later submission by e-mail or via e-MARIS to the IOTC Secretariat.
 
 # _Default_ forms
 
