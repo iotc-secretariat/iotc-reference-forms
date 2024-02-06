@@ -4,9 +4,9 @@
 
 IOTC data reporting forms have recently undergone a major revision (2023+) which, combined with the introduction of the new approach to the definition of IOTC fisheries, requires:
 
-1.  Defining cleaner, more user-friendly templates which drop client side controls (e.g., Microsoft Excel&trade; macros) in favour of online validators, while leveraging the new [IOTC reference data catalogue](https://data.iotc.org/reference/latest/)
+1.  Defining cleaner, more user-friendly templates which drop client side controls (e.g., Microsoft Excel™ macros) in favour of online validators, while leveraging the new [IOTC reference data catalogue](https://data.iotc.org/reference/latest/)
 2.  Systematically describing the form structure and provide guidelines on how to fill their content
-3.  Accounting for the *interim* period during which two versions of the major IOTC forms (1-RC, 1-DI, 3-CE, 4-SF) will coexist, one still referencing the *old* [fishery](https://data.iotc.org/reference/latest/domain/legacy/#fisheries) and [species](https://data.iotc.org/reference/latest/domain/legacy/#species) codes as found in the IOTC data reporting guidelines (2014) and in the `IOTCStatistics` database, including the provision of target species as a side element to the fishery, and one fully adopting the *new* [fisheries](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries) and [species](https://data.iotc.org/reference/latest/domain/biological/#species) codes as found in the `IOTC_master` database.
+3.  Accounting for the *interim* period during which two versions of the major IOTC forms (`1RC`, `1DI`, `2FC`, `3CE`, `4SF`, including their *multiple* version, where appropriate) will coexist, one still referencing the *old* [fishery](https://data.iotc.org/reference/latest/domain/legacy/#fisheries) and [species](https://data.iotc.org/reference/latest/domain/legacy/#species) codes as found in the IOTC data reporting guidelines (2014) and in the `IOTCStatistics` database, and including the provision of target species as a side element to the fishery, and one fully adopting the *new* [fisheries](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries) and [species](https://data.iotc.org/reference/latest/domain/biological/#species) codes as found in the `IOTC_master` database.
 
 Therefore, this repository addresses points 1. and 2. above by:
 
@@ -22,19 +22,19 @@ Two sets of system environment variables are required in order to be able to pro
 
 #### Data access credentials
 
--   `DEFAULT_IOTC_LIBS_DB_SERVER` pointing to the Microsoft SQLServer&trade; hosting the `IOTC_master` database
--   `DEFAULT_IOTC_LIBS_DB_USER` / `DEFAULT_IOTC_LIBS_DB_PASSWORD` the credentials of a local Microsoft SQLServer&trade; user that can access the `IOTC_master` database in read mode
+-   `DEFAULT_IOTC_LIBS_DB_SERVER` pointing to the Microsoft SQLServer™ hosting the `IOTC_master` database
+-   `DEFAULT_IOTC_LIBS_DB_USER` / `DEFAULT_IOTC_LIBS_DB_PASSWORD` the credentials of a local Microsoft SQLServer™ user that can access the `IOTC_master` database in read mode
 
-> The names of the three environment variables above *shall* be changed to something more appropriate, e.g., `DEFAULT_IOTC_MASTER_DB_*`
+> The names of the three environment variables above *shall* be changed to something more appropriate, e.g., `DEFAULT_IOTC_MASTER_DB_<whatever>`
 
 ### sFTP server credentials
 
--   `DATA_IOTC_SERVER_IP` pointing to the Linux&reg; machine that hosts the Apache&reg; web server handling requests to `data.iotc.org` and its various services
+-   `DATA_IOTC_SERVER_IP` pointing to the Linux® machine that hosts the Apache® web server handling requests to `data.iotc.org` and its various services
 -   `DATA_IOTC_USERNAME` / `DATA_IOTC_PASSWORD` the credentials of a user with proper access rights for connecting to the sFTP server on this same machine and transfer all process artifacts (HTML documents, XLSX and CSV files)
 
 ## How to build the artifacts
 
--   Ensure that all environment variables are properly set (in case, contact the [IOTC IT manager](mailto:francis.kilindo@fao.org){.email} to retrieve all sensitive information above)
+-   Ensure that all environment variables are properly set (in case, contact the [IOTC IT manager](mailto:francis.kilindo@fao.org){.email} to retrieve the user credentials and other sensitive information)
 -   Run the `00.run.R` script and wait for its completion
 
 ### Process outputs
@@ -46,7 +46,7 @@ The process will take care of:
 
 > Descriptive documents for the *multiple* versions of forms `3CE` and `4SF` still need to be provided, as are those for forms `1DR`, `1IN`, `3AA`, and `3DA`, and those for the *interim* versions of form `1RC`, `1DI`, `2FC`, `3CE`, `3CE-multiple`, `4SF`, and `4SF-multiple` (which are not strictly required)
 
-3.  Connect to the sFTP server and upload the (empty) Microsoft Excel&trade; templates for each form to `/var/www/static/reference/latest/forms` and `/var/www/static/reference/latest/forms/interim`, from where they will eventually be accessed through the following URLs (which are also provided under the **Form template** link for each form in the [summary page](https://data.iotc.org/reference/latest/forms/)):
+3.  Connect to the sFTP server and upload the (empty) Microsoft Excel™ templates for each form to `/var/www/static/reference/latest/forms` and `/var/www/static/reference/latest/forms/interim`, from where they will eventually be accessed through the following URLs (which are also provided under the **Form template** link for each form in the [summary page](https://data.iotc.org/reference/latest/forms/)):
 
 -   <https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx>
 -   <https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx>
@@ -79,7 +79,7 @@ for the *interim* versions of the forms above, which include a *target species* 
 
 The RMD files might need to embed some of the [IOTC reference codelists](https://data.iotc.org/reference/latest/) in order to provide specific summary information to the end users.
 
-For this reason, the `01.initialize.R` scripts takes care of:
+For this reason, the `01.initialize.R` script takes care of:
 
 -   Building the mapping between a given codelist and the remote resource exposed through the IOTC reference data catalogue
 -   Fetching the codelist CSV from its remote location, whose URLs is built as: `https://data.iotc.org/reference/latest/domain/<_domain_>/codelists/<_codelist_name_>_<_codelist_version_>.csv` (e.g.: <https://data.iotc.org/reference/latest/domain/admin/codelists/COUNTRIES_1.0.0.csv>)
@@ -99,7 +99,7 @@ In order for these steps to work, and for the proper variables to be assigned a 
     e.g.:
 
     | CL_SCHEMA    | VIEW_NAME             | REFERENCE_NAME      | CL_NAME            |
-    |--------------|-----------------------|---------------------|--------------------|
+    |------------------|-------------------|------------------|------------------|
     | refs_admin   | V_CURRENT_CPCS        | CURRENT_CPCS        | CPCS               |
     | refs_admin   | V_ENTITIES            | ENTITIES            | ENTITIES           |
     | refs_data    | V_PROCESSINGS_CE      | DATA_PROCESSINGS_CE | PROCESSINGS        |
@@ -127,7 +127,7 @@ In order for these steps to work, and for the proper variables to be assigned a 
     e.g.:
 
     | CL_SCHEMA       | VIEW_NAME                    | VERSION | LAST_UPDATE             |
-    |-----------------|------------------------------|---------|-------------------------|
+    |------------------|--------------------|------------------|------------------|
     | refs_admin      | COUNTRIES                    | 0       | 2023-05-12 00:00:00.000 |
     | refs_admin      | CPC_HISTORY                  | 0       | 2023-05-12 00:00:00.000 |
     | refs_admin      | CPC_TO_FLAGS                 | 0       | 2023-05-12 00:00:00.000 |
@@ -145,7 +145,7 @@ In order for these steps to work, and for the proper variables to be assigned a 
 
 By combining these two datasets it is possible to determine the latest version (and hence the resource name) of all codelists - both *physical* and *virtual* - and therefore allow the initialization script to download all codelist elements from its remote location.
 
-The initialization scripts takes also care of resolving issues related to the mapping between database schemata (on `IOTC_master`) and codelist domains being not as trivial as they should have been.
+The initialization script takes also care of resolving issues related to the mapping between database schemata (on `IOTC_master`) and codelist domains being not as trivial as they should have been.
 
 For instance, codelists under the `admin` domain are currently stored as tables under either the `refs_admin` or the `refs_gis` schemata (depending on the case) whereas the vast majority of other codelists directly maps its domain to the corresponding database schema (`_domain_` -\> `refs_<domain>`).
 

@@ -367,7 +367,7 @@ catalogue</a></li>
 <li>Systematically describing the form structure and provide guidelines
 on how to fill their content</li>
 <li>Accounting for the <em>interim</em> period during which two versions
-of the major IOTC forms (1-RC, 1-DI, 3-CE, 4-SF) will coexist, one still
+of the major IOTC forms (1RC, 1DI, 3CE, 4SF) will coexist, one still
 referencing the <em>old</em> <a href="https://data.iotc.org/reference/latest/domain/legacy/#fisheries">fishery</a>
 and <a href="https://data.iotc.org/reference/latest/domain/legacy/#species">species</a>
 codes as found in the IOTC data reporting guidelines (2014) and in the
@@ -406,7 +406,7 @@ database in read mode</li>
 <blockquote>
 <p>The names of the three environment variables above <em>shall</em> be
 changed to something more appropriate, e.g.,
-<code>DEFAULT_IOTC_MASTER_DB_*</code></p>
+<code>DEFAULT_IOTC_MASTER_DB_&lt;whatever&gt;</code></p>
 </blockquote>
 </div>
 </div>
@@ -537,10 +537,10 @@ schema</li>
 <p>e.g.:</p>
 <table>
 <colgroup>
-<col width="17%" />
-<col width="29%" />
-<col width="26%" />
-<col width="25%" />
+<col width="24%" />
+<col width="27%" />
+<col width="24%" />
+<col width="24%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -656,12 +656,12 @@ of a new record, or the deletion / update of an existing record) for
 that codelist</li>
 </ul>
 <p>e.g.:</p>
-<table>
+<table style="width:100%;">
 <colgroup>
-<col width="20%" />
-<col width="37%" />
-<col width="11%" />
-<col width="30%" />
+<col width="23%" />
+<col width="28%" />
+<col width="23%" />
+<col width="24%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -761,10 +761,9 @@ latest version (and hence the resource name) of all codelists - both
 <em>physical</em> and <em>virtual</em> - and therefore allow the
 initialization script to download all codelist elements from its remote
 location.</p>
-<p>The initialization scripts takes also care of resolving issues
-related to the mapping between database schemata (on
-<code>IOTC_master</code>) and codelist domains being not as trivial as
-they should have been.</p>
+<p>The initialization script takes also care of resolving issues related
+to the mapping between database schemata (on <code>IOTC_master</code>)
+and codelist domains being not as trivial as they should have been.</p>
 <p>For instance, codelists under the <code>admin</code> domain are
 currently stored as tables under either the <code>refs_admin</code> or
 the <code>refs_gis</code> schemata (depending on the case) whereas the
