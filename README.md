@@ -4,7 +4,7 @@
 
 IOTC data reporting forms have recently undergone a major revision (2023+) which, combined with the introduction of the new approach to the definition of IOTC fisheries, requires:
 
-1.  Defining cleaner, more user-friendly templates which drop client side controls (e.g., Microsoft Excel™ macros) in favour of online validators, while leveraging the new [IOTC reference data catalogue](https://data.iotc.org/reference/latest/)
+1.  Defining cleaner, more user-friendly templates which drop client side controls (e.g., Microsoft Excel&trade; macros) in favour of online validators, while leveraging the new [IOTC reference data catalogue](https://data.iotc.org/reference/latest/)
 2.  Systematically describing the form structure and provide guidelines on how to fill their content
 3.  Accounting for the *interim* period during which two versions of the major IOTC forms (1-RC, 1-DI, 3-CE, 4-SF) will coexist, one still referencing the *old* [fishery](https://data.iotc.org/reference/latest/domain/legacy/#fisheries) and [species](https://data.iotc.org/reference/latest/domain/legacy/#species) codes as found in the IOTC data reporting guidelines (2014) and in the `IOTCStatistics` database, including the provision of target species as a side element to the fishery, and one fully adopting the *new* [fisheries](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries) and [species](https://data.iotc.org/reference/latest/domain/biological/#species) codes as found in the `IOTC_master` database.
 
@@ -22,14 +22,14 @@ Two sets of system environment variables are required in order to be able to pro
 
 #### Data access credentials
 
--   `DEFAULT_IOTC_LIBS_DB_SERVER` pointing to the Microsoft SQLServer™ hosting the `IOTC_master` database
--   `DEFAULT_IOTC_LIBS_DB_USER` / `DEFAULT_IOTC_LIBS_DB_PASSWORD` the credentials of a local Microsoft SQLServer™ user that can access the `IOTC_master` database in read mode
+-   `DEFAULT_IOTC_LIBS_DB_SERVER` pointing to the Microsoft SQLServer&trade; hosting the `IOTC_master` database
+-   `DEFAULT_IOTC_LIBS_DB_USER` / `DEFAULT_IOTC_LIBS_DB_PASSWORD` the credentials of a local Microsoft SQLServer&trade; user that can access the `IOTC_master` database in read mode
 
 > The names of the three environment variables above *shall* be changed to something more appropriate, e.g., `DEFAULT_IOTC_MASTER_DB_*`
 
 ### sFTP server credentials
 
--   `DATA_IOTC_SERVER_IP` pointing to the Linux&reg; machine that hosts the Apache2 web server handling requests to `data.iotc.org` and its various services
+-   `DATA_IOTC_SERVER_IP` pointing to the Linux&reg; machine that hosts the Apache&reg; web server handling requests to `data.iotc.org` and its various services
 -   `DATA_IOTC_USERNAME` / `DATA_IOTC_PASSWORD` the credentials of a user with proper access rights for connecting to the sFTP server on this same machine and transfer all process artifacts (HTML documents, XLSX and CSV files)
 
 ## How to build the artifacts
@@ -46,7 +46,7 @@ The process will take care of:
 
 > Descriptive documents for the *multiple* versions of forms `3CE` and `4SF` still need to be provided, as are those for forms `1DR`, `1IN`, `3AA`, and `3DA`, and those for the *interim* versions of form `1RC`, `1DI`, `2FC`, `3CE`, `3CE-multiple`, `4SF`, and `4SF-multiple` (which are not strictly required)
 
-3.  Connect to the sFTP server and upload the (empty) Microsoft Excel™ templates for each form to `/var/www/static/reference/latest/forms` and `/var/www/static/reference/latest/forms/interim`, from where they will eventually be accessed through the following URLs (which are also provided under each form in the [summary page](https://data.iotc.org/reference/latest/forms/)):
+3.  Connect to the sFTP server and upload the (empty) Microsoft Excel&trade; templates for each form to `/var/www/static/reference/latest/forms` and `/var/www/static/reference/latest/forms/interim`, from where they will eventually be accessed through the following URLs (which are also provided under the **Form template** link for each form in the [summary page](https://data.iotc.org/reference/latest/forms/)):
 
 -   <https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx>
 -   <https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx>
