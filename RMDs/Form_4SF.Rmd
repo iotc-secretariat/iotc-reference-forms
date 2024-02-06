@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting: form 1-CE (v`r BASE_VERSION`)"
+title: "IOTC statistical data reporting: form 4-SF (v`r BASE_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -21,7 +21,7 @@ output:
 
 # Description
 
-Length frequency is defined as The number of individuals of a catch or catch sample in each length interval. The modal size is the length group with the higher number of individuals by [UN ESCWA](https://www.unescwa.org/sd-glossary/length-frequency-distribution-lfd). 
+_Length frequency_ is defined by [UN ESCWA](https://www.unescwa.org/sd-glossary/length-frequency-distribution-lfd) as _the number of individuals of a catch or catch sample in each length interval_. The _modal size_ is the length group with the higher number of individuals. 
 
 Length frequency refers to individual body lengths (or weights) of species per fleet, fishery, year, gear, type of school, month and spatial areas
 

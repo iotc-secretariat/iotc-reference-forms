@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting: form 1-CE (v`r BASE_VERSION`)"
+title: "IOTC statistical data reporting: form 2-FC (v`r BASE_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
