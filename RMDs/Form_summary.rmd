@@ -21,7 +21,7 @@ output:
 
 # Description
 
-The templates for the submission of fisheries statistics to the IOTC are available as plain Microsoft Excel forms to simplify the process of entering and submitting all required information This format allows the reporting officer to enter the data either _directly_ (i.e., by hand) or _programmatically_ (i.e., through automated scripts), for later submission by e-mail or via e-MARIS to the IOTC Secretariat.
+The templates for the submission of fisheries statistics to the IOTC are available as plain Microsoft Excel&trade; spreadsheets to simplify the process of entering and submitting all required information This format allows the reporting officer to enter the data either _directly_ (i.e., by hand) or _programmatically_ (i.e., through automated scripts), for later submission by e-mail or via e-MARIS to the IOTC Secretariat.
 
 # _Default_ forms
 
@@ -172,7 +172,7 @@ For the submission of annual length / weight data stratified by fleet, fishery, 
 
 # _Ad interim_ forms
 
-In order to ensure a smooth transition between the historical data reporting process (which used macro-enabled, self validating Microsoft Excel spreadsheets) and the [newly proposed IOTC forms](https://iotc.org/documents/WPDCS/19/14), a version of the most common forms has been designed that presents the new form structure while maintaining references to the fishery and target species codes used by the previous IOTC forms.
+In order to ensure a smooth transition between the historical data reporting process (which used macro-enabled, self validating Microsoft Excel&trade; spreadsheets) and the [newly proposed IOTC forms](https://iotc.org/documents/WPDCS/19/14), a version of the most common forms has been designed that presents the new form structure while maintaining references to the fishery and target species codes used by the previous IOTC forms.
 
 ## Annual catch data
 

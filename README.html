@@ -361,8 +361,8 @@ display: none;
 definition of IOTC fisheries, requires:</p>
 <ol style="list-style-type: decimal">
 <li>Defining cleaner, more user-friendly templates which drop client
-side controls (e.g., Excel macros) in favour of online validators, while
-leveraging the new <a href="https://data.iotc.org/reference/latest/">IOTC reference data
+side controls (e.g., Microsoft Excel™ macros) in favour of online
+validators, while leveraging the new <a href="https://data.iotc.org/reference/latest/">IOTC reference data
 catalogue</a></li>
 <li>Systematically describing the form structure and provide guidelines
 on how to fill their content</li>
@@ -396,12 +396,12 @@ able to properly build this project and its artifacts:</p>
 <div id="data-access-credentials" class="section level4">
 <h4>Data access credentials</h4>
 <ul>
-<li><code>DEFAULT_IOTC_LIBS_DB_SERVER</code> pointing to the MSSQLServer
-hosting the <code>IOTC_master</code> database</li>
+<li><code>DEFAULT_IOTC_LIBS_DB_SERVER</code> pointing to the Microsoft
+SQLServer™ hosting the <code>IOTC_master</code> database</li>
 <li><code>DEFAULT_IOTC_LIBS_DB_USER</code> /
 <code>DEFAULT_IOTC_LIBS_DB_PASSWORD</code> the credentials of a local
-MSSQLServer user that can access the <code>IOTC_master</code> database
-in read mode</li>
+Microsoft SQLServer™ user that can access the <code>IOTC_master</code>
+database in read mode</li>
 </ul>
 <blockquote>
 <p>The names of the three environment variables above <em>shall</em> be
@@ -413,13 +413,13 @@ changed to something more appropriate, e.g.,
 <div id="sftp-server-credentials" class="section level3">
 <h3>sFTP server credentials</h3>
 <ul>
-<li><code>DATA_IOTC_SERVER_IP</code> pointing to the Linux machine that
+<li><code>DATA_IOTC_SERVER_IP</code> pointing to the Linux® machine that
 hosts the Apache2 web server handling requests to
 <code>data.iotc.org</code> and its various services</li>
 <li><code>DATA_IOTC_USERNAME</code> / <code>DATA_IOTC_PASSWORD</code>
-the Linux credentials of a user with proper access rights for connecting
-to the sFTP server on this same machine and transfer all process
-artifacts (HTML documents, XLSX and CSV files)</li>
+the credentials of a user with proper access rights for connecting to
+the sFTP server on this same machine and transfer all process artifacts
+(HTML documents, XLSX and CSV files)</li>
 </ul>
 </div>
 </div>
@@ -427,8 +427,8 @@ artifacts (HTML documents, XLSX and CSV files)</li>
 <h2>How to build the artifacts</h2>
 <ul>
 <li>Ensure that all environment variables are properly set (in case,
-contact <a href="mailto:francis.kilindo@fao.org" class="email">francis.kilindo@fao.org</a> to retrieve all sensitive
-information above)</li>
+contact the <a href="mailto:francis.kilindo@fao.org" class="email">IOTC
+IT manager</a> to retrieve all sensitive information above)</li>
 <li>Run the <code>00.run.R</code> script and wait for its
 completion</li>
 </ul>
@@ -441,16 +441,10 @@ completion</li>
 these, that will be placed under the <code>out\HTML</code> folder</li>
 <li>Connect to the sFTP server and transfer these HTML documents to
 <code>/var/www/static/reference/latest/forms</code>, from where they
-will eventually be accessed through the following URLs:</li>
+will eventually be accessed either directly, through their specific
+URLs, or through a <a href="https://data.iotc.org/reference/latest/forms/">summary
+page</a>.</li>
 </ol>
-<ul>
-<li><a href="https://data.iotc.org/reference/latest/forms/Form-1RC.html" class="uri">https://data.iotc.org/reference/latest/forms/Form-1RC.html</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/Form-1DI.html" class="uri">https://data.iotc.org/reference/latest/forms/Form-1DI.html</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/Form-2FC.html" class="uri">https://data.iotc.org/reference/latest/forms/Form-2FC.html</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/Form-3BU.html" class="uri">https://data.iotc.org/reference/latest/forms/Form-3BU.html</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/Form-3CE.html" class="uri">https://data.iotc.org/reference/latest/forms/Form-3CE.html</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/Form-4SF.html" class="uri">https://data.iotc.org/reference/latest/forms/Form-4SF.html</a></li>
-</ul>
 <blockquote>
 <p>Descriptive documents for the <em>multiple</em> versions of forms
 <code>3CE</code> and <code>4SF</code> still need to be provided, as are
@@ -461,10 +455,13 @@ form <code>1RC</code>, <code>1DI</code>, <code>2FC</code>,
 <code>4SF-multiple</code> (which are not strictly required)</p>
 </blockquote>
 <ol start="3" style="list-style-type: decimal">
-<li>Connect to the sFTP server and upload the (empty) Excel templates
-for each form to <code>/var/www/static/reference/latest/forms</code> and
+<li>Connect to the sFTP server and upload the (empty) Microsoft Excel™
+templates for each form to
+<code>/var/www/static/reference/latest/forms</code> and
 <code>/var/www/static/reference/latest/forms/interim</code>, from where
-they will eventually be accessed through the following URLs:</li>
+they will eventually be accessed through the following URLs (which are
+also provided under each form in the <a href="https://data.iotc.org/reference/latest/forms/">summary
+page</a>):</li>
 </ol>
 <ul>
 <li><a href="https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx</a></li>
@@ -539,9 +536,9 @@ schema</li>
 <p>e.g.:</p>
 <table>
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="17%" />
+<col width="29%" />
+<col width="26%" />
 <col width="25%" />
 </colgroup>
 <thead>
@@ -659,6 +656,12 @@ that codelist</li>
 </ul>
 <p>e.g.:</p>
 <table>
+<colgroup>
+<col width="20%" />
+<col width="37%" />
+<col width="11%" />
+<col width="30%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>CL_SCHEMA</th>
