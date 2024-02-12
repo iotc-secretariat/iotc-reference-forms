@@ -85,7 +85,7 @@ SPECIES               = read_codelist(domain = "biological", codelist = "SPECIES
 RETAIN_REASONS        = read_codelist(domain = "biological", codelist = "RETAIN_REASONS")
 DISCARD_REASONS       = read_codelist(domain = "biological", codelist = "DISCARD_REASONS")
 INDIVIDUAL_CONDITIONS = read_codelist(domain = "biological", codelist = "INDIVIDUAL_CONDITIONS")
-MEASUREMENT_TYPES     = read_codelist(domain = "biological", codelist = "MEASUREMENT_TYPES")
+MEASUREMENTS          = read_codelist(domain = "biological", codelist = "MEASUREMENTS")
 MEASUREMENT_TOOLS     = read_codelist(domain = "biological", codelist = "MEASUREMENT_TOOLS")
 TYPES_OF_MEASUREMENT  = read_codelist(domain = "biological", codelist = "TYPES_OF_MEASUREMENT")
 TYPES_OF_FATE         = read_codelist(domain = "biological", codelist = "TYPES_OF_FATE")
