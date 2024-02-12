@@ -108,7 +108,6 @@ An [_interactive wizard_](https://data.iotc.org/fisheries/wizard) to help CPCs i
 out_dt(FISHERIES, "FISHERIES")
 ```
 
-
 ## Biological and morphometrics domains
 
 ### Measurement type (MOR.MTY) {#allMeasurementTypes}
@@ -116,7 +115,7 @@ out_dt(FISHERIES, "FISHERIES")
 Reference codes that model the measurement types as lengths or weights collected as the size frequency.
 
 ```{r collapse = TRUE}
-out_dt(MEASUREMENT_TYPES, "MEASUREMENT_TYPES")
+out_dt(TYPES_OF_MEASUREMENT, "TYPES_OF_MEASUREMENT")
 ```
 
 ### Measurement tools (MOR.MTO) {#allMeasurementTools}
@@ -127,12 +126,12 @@ Reference codes that model the measurement tools, combining those specific for i
 out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
 ```
 
-### Measurement types (MOR.TME)) {#typesOfMeasurement}
+### Measurement types (MOR.MES)) {#Measurement}
 
 Reference codes that model the measurement types, combining those specific for individual lengths and weights used to measure individual species.
 
 ```{r collapse = TRUE}
-out_dt(TYPES_OF_MEASUREMENT, "TYPES_OF_MEASUREMENT")
+out_dt(MEASUREMENTS, "MEASUREMENTS")
 ```
 
 ### Type of fate (SPC.FTT) {#typesOfFate}
@@ -166,7 +165,6 @@ These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fi
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES")
 ```
-
 
 ## Data and metadata domains
 
