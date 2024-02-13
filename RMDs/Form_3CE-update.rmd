@@ -1,0 +1,172 @@
+---
+title: "IOTC statistical data reporting: Form 3CE (v`r BASE_VERSION`-update)"
+author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+output:
+  word_document2:
+    reference_docx: "../templates/doc_template.docx"
+    number_sections: FALSE
+    reference_num: TRUE
+    fig_caption: TRUE
+
+  html_document2:
+    css: "../templates/html_template.css"
+    includes: 
+      in_header: "../templates/google-analytics.html"
+    number_sections: FALSE
+    toc: yes
+    toc_float:
+      collapsed: FALSE
+    smooth_scroll: FALSE
+---
+  
+# Description
+
+Fishing effort is generally defined in terms of the time spent searching for fish (search duration) and/or the amount of fishing gear of a specific type used on the fishing grounds over a given unit of time e.g. a fishing operation, fishing activity, day or fishing trip. The measure of effort (unit of fishing effort) depends on the fishery and type of gear used depends on the fishery and type of gear used [CWP](The measure of effort (unit of fishing effort).
+                                                                                                                                                                                                                                                                                                                                                                                                                               
+The term catch-and-effort refers to the fine-scale data usually from logbooks (manual or electronic), and reported per fleet, fishery, year, gear-type of school, month, grid and species.
+
+This form supports the reporting of _estimates of geo-reference catch and effort in live weight (or number)_ for a given CPC / fleet.
+
+# Resources
+
+Geo-referenced data could be reported:
+- by individual fishery through the  single form [3-CE](https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx);
+- or for multiple fisheries using the form [3-CE multiple](https://data.iotc.org/reference/latest/forms/Form-3CE-multiple.xlsx). 
+Contrary to single 3-CE form, where data specifications are to be defined in the metadata worksheet, in the 3-CE multiple these are listed in the data worksheet to align the data with specifications for each fisheries. 
+[return back](..) to the list of all IOTC statistical data reporting forms.
+
+# Supported resolutions
+
++ [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - _Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)_
++ [17/05](https://iotc.org/cmm/resolution-1705-conservation-sharks-caught-association-fisheries-managed-iotc) - _On the conservation of sharks caught in association with fisheries managed by IOTC_
++ [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) - _On the conservation of mobulid rays caught in association with fisheries in the IOTC area of competence_
++ [12/04](https://iotc.org/cmm/resolution-1204-conservation-marine-turtles) - _On the conservation of marine turtles_
++ [12/06](https://iotc.org/cmm/resolution-1206-reducing-incidental-bycatch-seabirds-longline-fisheries) - _On reducing the incidental bycatch of seabirds in longline fisheries_
++ [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans) - _On the conservation of cetaceans_
++ [13/05](http://www.iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus) - _On the conservation of whale sharks (Rhincodon typus)_
+
+# Reference species groups
+
++ **IOTC species** [ mandatory ] 
++ **Sharks** [ mandatory ]
++ **Mobulids and rays** [ mandatory ]
++ **Other bycatch / non-IOTC species** [ voluntary ]
+
+# Reporting deadlines
+
++ **Longline fisheries**: 30 June (preliminary), 30 December (final)
++ **Surface fisheries**: 30 June (final)
++ **Coastal fisheries**: 30 June (final)
+
+# Stratification
+
+## Main data fields
+
++ Month (mandatory)
++ [IOTC regular grids and coastal areas](#geospatialData)
++ [Fishery](#fisheries)
++ [Species](#allSpecies)
++ [Effort unit](#effortUnits)
+
+## Additional data fields
+
++ [Estimation](#estimationTypes)
+
+
+# Referenced codelists
+
+## Administrative and geospatial domains
+
+### Countries (ADM.COU) {#countries}
+
+Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+
+```{r collapse = TRUE}
+out_dt(COUNTRIES, "COUNTRIES")
+```
+
+### IOTC grids and other coastal areas (GIS.IOTC.CESFAR) {#geospatialData}
+
+Codes for all 1°x1° and 5°x5° grids, plus all coastal areas of importance for artisanal fisheries and that overlap - at least partially - with the IOTC convention area.
+
+Due to to the large size of the dataset, this is not included for filtering / browsing, but can be directly downloaded as a CSV from here: [IOTC_GRIDS_CE_SF_AR](`r paste0("https://data.iotc.org/reference/latest/domain/admin/codelists/IOTC_GRIDS_CE_SF_AR_", version("IOTC_GRIDS_CE_SF_AR"), ".csv")`).
+
+## Fisheries and fishing technologies domains
+
+### Fisheries (FIS) {#fisheries}
+
+An _ad-hoc_ classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
+
+An [_interactive wizard_](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for  their fisheries (among those currently considered of relevance in the Indian Ocean).
+
+```{r collapse = TRUE}
+out_dt(FISHERIES, "FISHERIES")
+```
+
+### Catch units (FIA.CU) {#catchUnits}
+
+Reference codes that model the units used to report the level of catches a given species, further stratified by the specific criteria characterizing each reporting form.
+
+```{r collapse = TRUE}
+out_dt(CATCH_UNITS, "CATCH_UNITS")
+```
+
+## Biological and morphometrics domains
+
+### All species (SPC.ALL) {#allSpecies}
+
+Reference codes modeling the species interacting with the fisheries as:
+
++ target species (retained or discarded)
++ bycatch species (retained or discarded)
++ sampled individuals
++ etc.
+
+These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org
+) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+
+```{r collapse = TRUE}
+out_dt(SPECIES, "SPECIES")
+```
+
+## Data and metadata domains
+
+### Data types (DTA.TY) {#dataTypes}
+
+Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+
+```{r collapse = TRUE}
+out_dt(DATA_TYPES, "DATA_TYPES")
+```
+
+### Data raising (DTA.RA) {#dataRaising}
+
+Reference codes modeling the level of raising applied to the data (raised to totals / not raised to totals / unknown).
+
+```{r collapse = TRUE}
+out_dt(DATA_RAISINGS, "DATA_RAISINGS")
+```
+
+### Catches and effort data sources (DTA.SRC.CE) {#sourcesCE}
+
+Reference codes modeling the source of the data provided through the catch and effort data form.
+
+```{r collapse = TRUE}
+out_dt(DATA_SOURCES_CE, "DATA_SOURCES_CE")
+```
+
+### Catches and effort data processings (DTA.PRO.DI) {#dataProcessingsCE}
+
+Reference codes modeling the processing applied to the data provided through the catch and effort data form.
+
+```{r collapse = TRUE}
+out_dt(DATA_PROCESSINGS_CE, "DATA_PROCESSINGS_CE")
+```
+
+### Coverage types (DTA.COV.TY) {#coverageTypes}
+
+Reference codes modeling the type of coverage for the raw information used to obtain the data provided through a specific form.
+
+```{r collapse = TRUE}
+out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
+```
