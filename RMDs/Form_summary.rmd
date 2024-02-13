@@ -35,6 +35,7 @@ For the submission of estimates of total annual retained catches in live weight 
 
 + [Form description](./Form-1RC.html)
 + [Form template](./Form-1RC.xlsx)
++ [Form validator](https://data.iotc.org/validators/1RC/)
 
 ### Form 1DI{#1DI}
 
@@ -44,6 +45,7 @@ For the submission of estimates of total annual discard levels (either in live-w
 
 + [Form description](./Form-1DI.html)
 + [Form template](./Form-1DI.xlsx)
++ [Form validator](https://data.iotc.org/validators/1DI/)
 
 ### Form 1DR{#1DR}
 
@@ -80,19 +82,23 @@ For the submission of the annual number of operating fishing vessels stratified 
 
 For the submission of species-specific catch and fishing effort stratified by fleet, fishery, regular grid or irregular fishing area, effort unit, species, and month. 
 
+This version of the form allows reporting data for multiple fisheries at the same time.
+
 #### Resources 
 
 + [Form description](./Form-3CE.html)
 + [Form template](./Form-3CE.xlsx)
++ [Form validator](https://data.iotc.org/validators/3CE/)
 
-### Form 3CE-multiple{#3CE-multiple}
+### Form 3CE-update{#3CE-update}
 
-[Form 3CE](#3CE) is also available in a _multiple_ version to report data for several fisheries at the same time.
+This version of [Form 3CE](#3CE) is suitable for the reporting of **updated** data for a specific fishery.
 
 #### Resources 
 
-+ [Form description](./Form-3CE-multiple.html)
-+ [Form template](./Form-3CE-multiple.xlsx)
++ [Form description](./Form-3CE-update.html)
++ [Form template](./Form-3CE-update.xlsx)
++ [Form validator](https://data.iotc.org/validators/update/1RC/)
 
 ### Form 3AA{#3AA}
 
@@ -100,19 +106,21 @@ For the submission of interactions with anchored fish aggregating devices (aFADs
 
 If the interaction is followed by a set, the resulting catches should also be reported stratified by species, fate, and catch unit. 
 
+This version of the form allows reporting data for multiple fisheries at the same time.
+
 #### Resources 
 
 + [Form description](./Form-3AA.html)
 + [Form template](./Form-3AA.xlsx)
 
-### Form 3AA-multiple{#3AA-multiple}
+### Form 3AA-update{#3AA-update}
 
-[Form 3AA](#3AA) is also available in a _multiple_ version to report data for several fisheries at the same time.
+This version of [Form 3AA](#3AA) is suitable for the reporting of **updated** data for a specific fishery.
 
 #### Resources 
 
-+ [Form description](./Form-3AA-multiple.html)
-+ [Form template](./Form-3AA-multiple.xlsx)
++ [Form description](./Form-3AA-update.html)
++ [Form template](./Form-3AA-update.xlsx)
 
 ### Form 3DA{#3DA}
 
@@ -120,19 +128,21 @@ For the submission of interactions by purse seine and supply vessels with drifti
 
 If the interaction is followed by a set, the resulting catches should also be reported stratified by species, fate, and catch unit. 
 
+This version of the form allows reporting data for multiple vessels at the same time.
+
 #### Resources 
 
 + [Form description](./Form-3DA.html)
 + [Form template](./Form-3DA.xlsx)
 
-### Form 3DA-multiple{#3DA-multiple}
+### Form 3DA-update{#3DA-update}
 
-[Form 3DA](#3DA) is also available in a _multiple_ version to report data for several fisheries at the same time.
+This version of [Form 3DA](#3DA) is suitable for the reporting of **updated** data for a specific vessel.
 
 #### Resources 
 
-+ [Form description](./Form-3DA-multiple.html)
-+ [Form template](./Form-3DA-multiple.xlsx)
++ [Form description](./Form-3DA-update.html)
++ [Form template](./Form-3DA-update.xlsx)
 
 ### Form 3BU{#3BU}
 
@@ -142,7 +152,7 @@ For the submission of daily positions of active buoys equipping dFADs and natura
 
 + [Form description](./Form-3BU.html)
 + [Form template](./Form-3BU.xlsx)
-+ [Form validator](https://data.iotc.org/interim-validators/3BU/)
++ [Form validator](https://data.iotc.org/validators/3BU/)
 
 ## Size-frequency data
 
@@ -150,19 +160,23 @@ For the submission of daily positions of active buoys equipping dFADs and natura
 
 For the submission of annual length / weight data stratified by fleet, fishery, species, 5°x5° grid, type of measurement, measurement tool, fate, and month. 
 
+This version of the form allows reporting data for multiple fisheries and species at the same time.
+
 #### Resources
 
 + [Form description](./Form-4SF.html)
 + [Form template](./Form-4SF.xlsx)
++ [Form validator](https://data.iotc.org/validators/4SF/)
 
-### Form 4SF-multiple{#4SF-multiple}
+### Form 4SF-update{#4SF-update}
 
-[Form 4SF](#4SF) is also available in a _multiple_ version to report data for several fisheries and species at the same time.
+This version of [Form 4SF](#4SF) is suitable for the reporting of **updated** data for a specific fishery and species
 
 #### Resources 
 
-+ [Form description](./Form-4SF-multiple.html)
-+ [Form template](./Form-4SF-multiple.xlsx)
++ [Form description](./Form-4SF-update.html)
++ [Form template](./Form-4SF-update.xlsx)
++ [Form validator](https://data.iotc.org/validators/update/4SF/)
 
 ## Socio-economic data
 
@@ -218,15 +232,15 @@ A version of [Form 3CE](#3CE) that still uses the _old_ [fishery](https://data.i
 + [Form template](./interim/Form-3CE_interim.xlsx)
 + [Form validator](https://data.iotc.org/interim-validators/3CE/)
 
-### Form 3CE-multiple{#3CE_interim-multiple}
+### Form 3CE-update{#3CE_interim-update}
 
-[Form 3CE_interim](#3CE_interim) is also available in a _multiple_ version to report data for several fisheries at the same time.
+This version of [Form 3CE_interim](#3CE_interim) is suitable for the reporting of **updated** data for a specific fishery.
 
 #### Resources 
 
-+ [Form description](./interim/Form-3CE_interim-multiple.html)
-+ [Form template](./interim/Form-3CE_interim-multiple.xlsx)
-+ [Form validator](https://data.iotc.org/interim-validators/multiple/3CE/)
++ [Form description](./interim/Form-3CE_interim-update.html)
++ [Form template](./interim/Form-3CE_interim-update.xlsx)
++ [Form validator](https://data.iotc.org/interim-validators/update/3CE/)
 
 ## Size-frequency data
 
@@ -240,12 +254,12 @@ A version of [Form 4SF](#4SF) that still uses the _old_ [fishery](https://data.i
 + [Form template](./interim/Form-4SF_interim.xlsx)
 + [Form validator](https://data.iotc.org/interim-validators/4SF/)
 
-### Form 4SF-multiple{#4SF_interim-multiple}
+### Form 4SF-update{#4SF_interim-update}
 
 #### Resources 
 
-[Form 4SF_interim](#4SF_interim) is also available in a _multiple_ version to report data for several fisheries and species at the same time.
+This version of [Form 4SF_interim](#4SF_interim) is suitable for the reporting of **updated** data for a specific fishery and species.
 
-+ [Form template](./interim/Form-4SF_interim-multiple.xlsx)
-+ [Form description](./interim/Form-4SF_interim-multiple.html)
-+ [Form validator](https://data.iotc.org/interim-validators/multiple/4SF/)
++ [Form template](./interim/Form-4SF_interim-update.xlsx)
++ [Form description](./interim/Form-4SF_interim-update.html)
++ [Form validator](https://data.iotc.org/interim-validators/update/4SF/)
