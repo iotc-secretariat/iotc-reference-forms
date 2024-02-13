@@ -35,7 +35,7 @@ For the submission of estimates of total annual retained catches in live weight 
 
 + [Form description](./Form-1RC.html)
 + [Form template](./Form-1RC.xlsx)
-+ [Form validator](https://data.iotc.org/validators/1RC/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/1RC/)
 
 ### Form 1DI{#1DI}
 
@@ -45,7 +45,7 @@ For the submission of estimates of total annual discard levels (either in live-w
 
 + [Form description](./Form-1DI.html)
 + [Form template](./Form-1DI.xlsx)
-+ [Form validator](https://data.iotc.org/validators/1DI/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/1DI/)
 
 ### Form 1DR{#1DR}
 
@@ -88,7 +88,7 @@ This version of the form allows reporting data for multiple fisheries at the sam
 
 + [Form description](./Form-3CE.html)
 + [Form template](./Form-3CE.xlsx)
-+ [Form validator](https://data.iotc.org/validators/3CE/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/3CE/)
 
 ### Form 3CE-update{#3CE-update}
 
@@ -98,7 +98,7 @@ This version of [Form 3CE](#3CE) is suitable for the reporting of **updated** da
 
 + [Form description](./Form-3CE-update.html)
 + [Form template](./Form-3CE-update.xlsx)
-+ [Form validator](https://data.iotc.org/validators/update/1RC/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/update/1RC/)
 
 ### Form 3AA{#3AA}
 
@@ -152,7 +152,7 @@ For the submission of daily positions of active buoys equipping dFADs and natura
 
 + [Form description](./Form-3BU.html)
 + [Form template](./Form-3BU.xlsx)
-+ [Form validator](https://data.iotc.org/validators/3BU/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/3BU/)
 
 ## Size-frequency data
 
@@ -166,7 +166,7 @@ This version of the form allows reporting data for multiple fisheries and specie
 
 + [Form description](./Form-4SF.html)
 + [Form template](./Form-4SF.xlsx)
-+ [Form validator](https://data.iotc.org/validators/4SF/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/4SF/)
 
 ### Form 4SF-update{#4SF-update}
 
@@ -176,7 +176,7 @@ This version of [Form 4SF](#4SF) is suitable for the reporting of **updated** da
 
 + [Form description](./Form-4SF-update.html)
 + [Form template](./Form-4SF-update.xlsx)
-+ [Form validator](https://data.iotc.org/validators/update/4SF/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/update/4SF/)
 
 ## Socio-economic data
 
@@ -198,7 +198,7 @@ A version of [Form 1RC](#1RC) that still uses the _old_ [fishery](https://data.i
 
 + [Form description](./interim/Form-1RC_interim.html)
 + [Form template](./interim/Form-1RC_interim.xlsx)
-+ [Form validator](https://data.iotc.org/interim-validators/1RC/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/interim/1RC/)
 
 ### Form 1DI{#1DI_interim}
 
@@ -207,7 +207,7 @@ A version of [Form 1DI](#1DI) that still uses the _old_ [fishery](https://data.i
 
 + [Form description](./interim/Form-1DI_interim.html)
 + [Form template](./interim/Form-1DI_interim.xlsx) 
-+ [Form validator](https://data.iotc.org/interim-validators/1DI/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/interim/1DI/)
 
 ## Active crafts data
 
@@ -230,7 +230,7 @@ A version of [Form 3CE](#3CE) that still uses the _old_ [fishery](https://data.i
 
 + [Form description](./interim/Form-3CE_interim.html) 
 + [Form template](./interim/Form-3CE_interim.xlsx)
-+ [Form validator](https://data.iotc.org/interim-validators/3CE/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/interim/3CE/)
 
 ### Form 3CE-update{#3CE_interim-update}
 
@@ -240,7 +240,7 @@ This version of [Form 3CE_interim](#3CE_interim) is suitable for the reporting o
 
 + [Form description](./interim/Form-3CE_interim-update.html)
 + [Form template](./interim/Form-3CE_interim-update.xlsx)
-+ [Form validator](https://data.iotc.org/interim-validators/update/3CE/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/interim/update/3CE/)
 
 ## Size-frequency data
 
@@ -252,7 +252,7 @@ A version of [Form 4SF](#4SF) that still uses the _old_ [fishery](https://data.i
 
 + [Form description](./interim/Form-4SF_interim.html)
 + [Form template](./interim/Form-4SF_interim.xlsx)
-+ [Form validator](https://data.iotc.org/interim-validators/4SF/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/interim/4SF/)
 
 ### Form 4SF-update{#4SF_interim-update}
 
@@ -262,4 +262,4 @@ This version of [Form 4SF_interim](#4SF_interim) is suitable for the reporting o
 
 + [Form template](./interim/Form-4SF_interim-update.xlsx)
 + [Form description](./interim/Form-4SF_interim-update.html)
-+ [Form validator](https://data.iotc.org/interim-validators/update/4SF/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/interim/update/4SF/)
