@@ -21,4 +21,92 @@ output:
   
 # Description
   
-[ TBD ] 
+This form supports the reporting of *annual estimates of the numbers of interactions* of [longline fisheries](#iotclonglinefishery) and [surface fisheries](#iotcsurfacefishery) with endangered, threatened, and protected species by fishing fleet, fishery, IOTC main area, and species group for a given CPC / fleet.
+
+# Resources
+
+Click [here](https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx) to download an empty version of form 1-IN, or [return back](..) to the list of all IOTC statistical data reporting forms.
+
+# Supported resolutions
+
+- Res. [12/04](https://iotc.org/cmm/resolution-1204-conservation-marine-turtles) -- _On the conservation of marine turtles_
+- Res. [13/05](https://iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus) -- _On the conservation of whale sharks (Rhincodon typus)_
+- Res. [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans) -00- _On the conservation of cetaceans_
+- Res. [23/07](https://iotc.org/cmm/resolution-2307-reducing-incidental-bycatch-seabirds-longline-fisheries) -- _On reducing the incidental bycatch of seabirds in longline fisheries_
+- Res. [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) -- _On the conservation of mobulid rays caught in association with fisheries in the IOTC are fo competence_
+
+# Reference species groups
+
+- [Fisheries](../domain/fisheries/#fisheries)
+
+- Species group: marine turtles, seabirds, mobulid rays, cetaceans, and whale sharks
+
+# Reporting deadlines
+
+-   **Longline fisheries**: 30 June (preliminary), 30 December (final)
+-   **Surface fisheries**: 30 June (final)
+
+# Stratification
+
+## Main data fields
+
+-   [Fishery](#fisheries)
+- [IOTC main areas](../domain/admin/#IOareasMain)
+
+
+## Additional Data fields
+
+-   [Data types](#dataTypes)
+
+# Referenced codelists
+
+## Administrative and geospatial domains
+
+### Countries (ADM.COU) {#countries}
+
+Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+
+```{r collapse = TRUE}
+out_dt(COUNTRIES, "COUNTRIES")
+```
+
+### IOTC main areas (GIS.IOTC.MA) {#IOTCareasMain}
+
+Reference codes modeling the two main areas in which the IOTC area of competence is split (western / eastern IOTC area, *roughly* coinciding with FAO areas F51 and F57).
+
+![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
+
+```{r collapse = TRUE}
+out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
+```
+
+## Fisheries and fishing technologies domains
+
+### Fisheries (FIS) {#fisheries}
+
+An *ad-hoc* classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
+
+An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for their fisheries (among those currently considered of relevance in the Indian Ocean).
+
+```{r collapse = TRUE}
+out_dt(FISHERIES, "FISHERIES")
+```
+
+## Data and metadata domains
+
+### Data types (DTA.TY) {#dataTypes}
+
+Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+
+```{r collapse = TRUE}
+out_dt(DATA_TYPES, "DATA_TYPES")
+```
+
+### Coverage types (DTA.COV.TY) {#coverageTypes}
+
+Reference codes modeling the type of coverage for the raw information used to obtain the data provided through a specific form.
+
+```{r collapse = TRUE}
+out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
+```
+ 
