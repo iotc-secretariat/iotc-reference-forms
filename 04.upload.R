@@ -103,9 +103,9 @@ initialize_version = function(version) {
 }
 
 upload_forms = function(version) {
+  folder = full_folder(version, FORMS_FOLDER)
+  
   for(form in list.files("./form_reporting_templates", pattern = "*.xlsx")) {
-    folder = full_folder(version, FORMS_FOLDER)
-    
     print(paste0("Uploading form '", form, "' in ", folder, "..."))
     
     CURL_FTPu(
@@ -113,6 +113,17 @@ upload_forms = function(version) {
       target_url = ftp_url(paste0(folder, "/", form))
     )
   }
+  
+  print(paste0("Uploading all forms as a zipped archive in ", folder, "..."))
+  
+  zip::zip(zipfile = "./form_reporting_templates/Forms_all.zip", 
+           files = list.files("./form_reporting_templates/", pattern = "Form-.+.xlsx", full.names = TRUE),
+           mode = "cherry-pick")
+  
+  CURL_FTPu(
+    filename   = "./form_reporting_templates/Forms_all.zip",
+    target_url = ftp_url(paste0(folder, "/Forms_all.zip"))
+  )
 }
 
 upload_interim_forms = function(version) {
