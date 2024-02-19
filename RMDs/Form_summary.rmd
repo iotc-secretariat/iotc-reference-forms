@@ -33,7 +33,7 @@ For the submission of estimates of total annual retained catches in live weight 
 
 #### Resources 
 
-+ [Form description](./Form-1RC.html)
++ [Form description](./Form_1RC.html)
 + [Form template](./Form-1RC.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1RC/)
 
@@ -43,7 +43,7 @@ For the submission of estimates of total annual discard levels (either in live-w
 
 #### Resources 
 
-+ [Form description](./Form-1DI.html)
++ [Form description](./Form_1DI.html)
 + [Form template](./Form-1DI.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1DI/)
 
@@ -53,7 +53,7 @@ For the submission of the matrix of species presence in the catch (retained or d
 
 #### Resources 
 
-+ [Form description](./Form-1DR.html)
++ [Form description](./Form_1DR.html)
 + [Form template](./Form-1DR.xlsx)
 
 ### Form 1IN{#1IN}
@@ -62,7 +62,7 @@ For the submission of interactions of longline and surface fisheries with endang
 
 #### Resources 
 
-+ [Form description](./Form-1IN.html)
++ [Form description](./Form_1IN.html)
 + [Form template](./Form-1IN.xlsx)
 
 ## Active crafts data
@@ -73,7 +73,7 @@ For the submission of the annual number of operating fishing vessels stratified 
 
 #### Resources 
 
-+ [Form description](./Form-2FC.html)
++ [Form description](./Form_2FC.html)
 + [Form template](./Form-2FC.xlsx)
 
 ## Catch and effort data
@@ -86,7 +86,7 @@ This version of the form allows reporting data for multiple fisheries at the sam
 
 #### Resources 
 
-+ [Form description](./Form-3CE.html)
++ [Form description](./Form_3CE.html)
 + [Form template](./Form-3CE.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/3CE/)
 
@@ -96,7 +96,7 @@ This version of [Form 3CE](#3CE) is suitable for the reporting of **updated** da
 
 #### Resources 
 
-+ [Form description](./Form-3CE-update.html)
++ [Form description](./Form_3CE-update.html)
 + [Form template](./Form-3CE-update.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/update/1RC/)
 
@@ -110,7 +110,7 @@ This version of the form allows reporting data for multiple fisheries at the sam
 
 #### Resources 
 
-+ [Form description](./Form-3AA.html)
++ [Form description](./Form_3AA.html)
 + [Form template](./Form-3AA.xlsx)
 
 ### Form 3AA-update{#3AA-update}
@@ -119,7 +119,7 @@ This version of [Form 3AA](#3AA) is suitable for the reporting of **updated** da
 
 #### Resources 
 
-+ [Form description](./Form-3AA-update.html)
++ [Form description](./Form_3AA-update.html)
 + [Form template](./Form-3AA-update.xlsx)
 
 ### Form 3DA{#3DA}
@@ -132,7 +132,7 @@ This version of the form allows reporting data for multiple vessels at the same 
 
 #### Resources 
 
-+ [Form description](./Form-3DA.html)
++ [Form description](./Form_3DA.html)
 + [Form template](./Form-3DA.xlsx)
 
 ### Form 3DA-update{#3DA-update}
@@ -141,7 +141,7 @@ This version of [Form 3DA](#3DA) is suitable for the reporting of **updated** da
 
 #### Resources 
 
-+ [Form description](./Form-3DA-update.html)
++ [Form description](./Form_3DA-update.html)
 + [Form template](./Form-3DA-update.xlsx)
 
 ### Form 3BU{#3BU}
@@ -150,7 +150,7 @@ For the submission of daily positions of active buoys equipping dFADs and natura
 
 #### Resources 
 
-+ [Form description](./Form-3BU.html)
++ [Form description](./Form_3BU.html)
 + [Form template](./Form-3BU.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/3BU/)
 
@@ -164,7 +164,7 @@ This version of the form allows reporting data for multiple fisheries and specie
 
 #### Resources
 
-+ [Form description](./Form-4SF.html)
++ [Form description](./Form_4SF.html)
 + [Form template](./Form-4SF.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/4SF/)
 
@@ -174,7 +174,7 @@ This version of [Form 4SF](#4SF) is suitable for the reporting of **updated** da
 
 #### Resources 
 
-+ [Form description](./Form-4SF-update.html)
++ [Form description](./Form_4SF-update.html)
 + [Form template](./Form-4SF-update.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/update/4SF/)
 
