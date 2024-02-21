@@ -27,12 +27,6 @@ This form supports the reporting of *total annual retained catches in live weigh
 
 Click [here](https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx) to download an empty version of form 1-RC, or [return back](..) to the list of all IOTC statistical data reporting forms.
 
-# Supported resolutions
-
--   [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - *Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)*
--   [17/05](https://iotc.org/cmm/resolution-1705-conservation-sharks-caught-association-fisheries-managed-iotc) - *On the conservation of sharks caught in association with fisheries managed by IOTC*
--   [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) - *On the conservation of mobulid rays caught in association with fisheries in the IOTC area of competence*
-
 # Reference species groups
 
 -   **IOTC species** [ mandatory ]
