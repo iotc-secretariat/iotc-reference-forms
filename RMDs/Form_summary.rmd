@@ -43,7 +43,7 @@ For the submission of estimates of total annual discard levels (either in live-w
 
 #### Resources 
 
-+ [Form description](./Form_1DI.html)
++ [Form description](./Form-1DI.html)
 + [Form template](./Form-1DI.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1DI/)
 

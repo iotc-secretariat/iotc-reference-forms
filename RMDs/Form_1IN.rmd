@@ -57,6 +57,7 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx) to down
 ## Additional Data fields
 
 -   [Data types](#dataTypes)
+-   [Types of Coverage](#coverageTypes)
 
 # Referenced codelists
 

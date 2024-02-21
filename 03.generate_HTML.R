@@ -13,7 +13,7 @@ render("./RMDs/Form_summary.Rmd",
 ### Form 1-DR ####
 render("./RMDs/Form_1DR.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-1DR.html", 
+       output_file ="Form_1DR.html", 
        output_dir = "./out/HTML/")
 
 ## Amount of fish caught and retained ####
@@ -21,7 +21,7 @@ render("./RMDs/Form_1DR.Rmd",
 ### Form 1-RC #####
 render("./RMDs/Form_1RC.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-1RC.html", 
+       output_file ="Form_1RC.html", 
        output_dir = "./out/HTML/")
 
 ### Form 1-RC_interim ####
@@ -35,7 +35,7 @@ render("./RMDs/Form_1RC.Rmd",
 ### Form 1-DI ####
 render("./RMDs/Form_1DI.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-1DI.html", 
+       output_file ="Form_1DI.html", 
        output_dir = "./out/HTML/")
 
 ### Form 1-DI_interim ####
@@ -49,7 +49,7 @@ render("./RMDs/interim/Form_1DI_interim.Rmd",
 ### Form 1-IN ####
 render("./RMDs/Form_1IN.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-1IN.html", 
+       output_file ="Form_1IN.html", 
        output_dir = "./out/HTML/")
 
 ## Geo-referenced catches and efforts ####
@@ -57,13 +57,13 @@ render("./RMDs/Form_1IN.Rmd",
 ### Form 3-CE ####
 render("./RMDs/Form_3CE.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-3CE.html", 
+       output_file ="Form_3CE.html", 
        output_dir = "./out/HTML/")
 
 ### Form 3-CE-update ####
 render("./RMDs/Form_3CE-update.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-3CE-update.html", 
+       output_file ="Form-3CE_update.html", 
        output_dir = "./out/HTML/")
 
 ### Form 3-CE_interim ####
@@ -83,13 +83,13 @@ render("./RMDs/interim/Form_3CE_interim-update.Rmd",
 ### Form 4-SF ####
 render("./RMDs/Form_4SF.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-4SF.html", 
+       output_file ="Form_4SF.html", 
        output_dir = "./out/HTML/")
 
 ### Form 4-SF-update ####
 render("./RMDs/Form_4SF-update.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-4SF-update.html", 
+       output_file ="Form_4SF-update.html", 
        output_dir = "./out/HTML/")
 
 ### Form 4-SF_interim ####
@@ -101,7 +101,7 @@ render("./RMDs/interim/Form_4SF_interim.Rmd",
 ### Form 4-SF_interim-update ####
 render("./RMDs/interim/Form_4SF_interim-update.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-4SF_interim-update.html", 
+       output_file ="Form_4SF_interim-update.html", 
        output_dir = "./out/HTML/interim/")
 
 ## AFAD-related activities ####
@@ -109,13 +109,13 @@ render("./RMDs/interim/Form_4SF_interim-update.Rmd",
 ### Form 3-AA ####
 render("./RMDs/Form_3AA.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-3AA.html", 
+       output_file ="Form_3AA.html", 
        output_dir = "./out/HTML/")
 
 ### Form 3-AA-update ####
 render("./RMDs/Form_3AA-update.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-3AA-update.html", 
+       output_file ="Form_3AA-update.html", 
        output_dir = "./out/HTML/")
 
 ## DFOB-related activities ####
@@ -123,13 +123,13 @@ render("./RMDs/Form_3AA-update.Rmd",
 ### Form 3-DA ####
 render("./RMDs/Form_3DA.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-3DA.html", 
+       output_file ="Form_3DA.html", 
        output_dir = "./out/HTML/")
 
 ### Form 3-DA-update ####
 render("./RMDs/Form_3DA-update.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-3DA-update.html", 
+       output_file ="Form_3DA-update.html", 
        output_dir = "./out/HTML/")
 
 ## Daily buoy positions ####
@@ -137,7 +137,7 @@ render("./RMDs/Form_3DA-update.Rmd",
 ### Form 3-BU ####
 render("./RMDs/Form_3BU.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-3BU.html", 
+       output_file ="Form_3BU.html", 
        output_dir = "./out/HTML/")
 
 ## Fishing craft statistics ####
@@ -145,7 +145,7 @@ render("./RMDs/Form_3BU.Rmd",
 ### Form 2-FC #####
 render("./RMDs/Form_2FC.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-2FC.html", 
+       output_file ="Form_2FC.html", 
        output_dir = "./out/HTML/")
 
 ### Form 2-FC_interim #####

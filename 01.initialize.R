@@ -78,8 +78,20 @@ MECHANIZATION_TYPES       = read_codelist(domain = "fisheries", schema = "fisher
 FISH_PRESERVATION_METHODS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PRESERVATION_METHODS")
 FISH_PROCESSING_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")
 
+
 FISHERIES           = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISHERIES")
 CATCH_UNITS         = read_codelist(domain = "fisheries", schema = "fishery", codelist = "CATCH_UNITS")
+GEAR_GROUPS         = read_codelist(domain = "fisheries", schema = "fishery_config", codelist = "GEAR_GROUPS")
+AFOB_TYPES                = read_codelist(domain = "fisheries", schema = "fishery", codelist = "AFOB_TYPES")
+AFOB_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "AFOB_ACTIVITY_TYPES")
+BUOY_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "BUOY_ACTIVITY_TYPES")
+FOB_TYPES                = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")
+FOB_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
+
+#PR form
+
+PRICING_LOCATIONS    = read_codelist(domain = "fisheries", schema = "fishery", codelist = "PRICING_LOCATIONS")
+PRODUCT_TYPES        = read_codelist(domain = "fisheries", schema = "fishery", codelist = "PRODUCT_TYPES")
 
 SPECIES               = read_codelist(domain = "biological", codelist = "SPECIES")
 RETAIN_REASONS        = read_codelist(domain = "biological", codelist = "RETAIN_REASONS")
@@ -90,6 +102,7 @@ MEASUREMENT_TOOLS     = read_codelist(domain = "biological", codelist = "MEASURE
 TYPES_OF_MEASUREMENT  = read_codelist(domain = "biological", codelist = "TYPES_OF_MEASUREMENT")
 TYPES_OF_FATE         = read_codelist(domain = "biological", codelist = "TYPES_OF_FATE")
 FATES                 = read_codelist(domain = "biological", codelist = "FATES")
+
 
 out_dt = function(data, name) {
   datatable(data, 

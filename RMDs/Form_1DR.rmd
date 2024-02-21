@@ -47,7 +47,7 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx) to down
 
 ## Main data fields (already embedded in the form)
 
--   [Fishery](#fisheries)
+-   [Gear_groups](#GEAR_GROUPS)
 -   [Species](#allSpecies)
 
 ## Additional Data fields
@@ -64,4 +64,18 @@ Reference codes modeling the flag / reporting country submitting a dataset to th
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
+### Gear groups (ADM.COU) {#gear_groups}
 
+Reference codes modeling the gear groups by which the matrix table is assessing for the reporting catch by species.
+
+```{r collapse = TRUE}
+out_dt(GEAR_GROUPS, "GEAR_GROUPS")
+```
+
+###  (ADM.COU) {#gear_groups}
+
+Reference codes modeling the species by which the matrix table is assessing for the reporting catch by gear groups.
+
+```{r collapse = TRUE}
+out_dt(SPECIES, "SPECIES")
+```

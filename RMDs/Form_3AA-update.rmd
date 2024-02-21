@@ -21,4 +21,122 @@ output:
   
 # Description
   
-[ TBD ] 
+This form supports the reporting of *interactions with anchored fish aggregated devices(AFAD)* for a given CPC / fleet.
+
+# Resources
+
+Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to download an empty version of form 3-AA, or [return back](..) to the list of all IOTC statistical data reporting forms.
+
+# Supported resolutions
+
+-   [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - *Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)*
+-   [23/01](https://iotc.org/cmm/resolution-2301-management-anchored-fish-aggregating-devices-afads) - *On the conservation of sharks caught in association with fisheries managed by IOTC*
+
+
+# Reference species groups
+
+-   **IOTC species** [ mandatory ]
+-   **Sharks** [ mandatory ]
+-   **Other bycatch / non-IOTC species** [ voluntary ]
+
+# Reporting deadlines
+
+-   **Surface fisheries**: 30 June (final)
+
+
+# Stratification
+
+## Main data fields
+
+-   Month
+-   Day of the month
+-   Latitude and longitude
+-   [Fishery](#fisheries)
+-   [Species](#allSpecies)
+
+## Additional Data fields
+
+-   [FOB type](#FOBtypes)
+-   [FOB activity](#FOBactivities)
+-   [Fate type](#Fatetypes)
+-   [Raising](#raised)
+-   [Catch unit](#catchunit)
+
+
+# Referenced codelists
+
+## Administrative and geospatial domains
+
+### Countries (ADM.COU) {#countries}
+
+Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+
+```{r collapse = TRUE}
+out_dt(COUNTRIES, "COUNTRIES")
+```
+
+### Data types (DTA.TY) {#dataTypes}
+
+Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+
+```{r collapse = TRUE}
+out_dt(DATA_TYPES, "DATA_TYPES")
+```
+
+## Fisheries and fishing technologies domains
+
+### Fisheries (FIS) {#fisheries}
+
+An *ad-hoc* classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
+
+An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for their fisheries (among those currently considered of relevance in the Indian Ocean).
+
+```{r collapse = TRUE}
+out_dt(FISHERIES, "FISHERIES")
+```
+
+## Biological and morphometrics domains
+
+### All species (SPC.ALL) {#allSpecies}
+
+Reference codes modeling the species interacting with the fisheries as:
+
+-   target species (retained or discarded)
+-   bycatch species (retained or discarded)
+-   sampled individuals
+-   etc.
+
+These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+
+```{r collapse = TRUE}
+out_dt(SPECIES, "SPECIES")
+```
+
+
+## Data and metadata domains
+
+
+### Types of anchored fishing object (aFOB) (FOB.AFT) {#FOBtypes}
+
+Reference codes modeling the source of the data provided through the retained catches data form.
+
+```{r collapse = TRUE}
+out_dt(FOB_TYPES, "FOB_TYPES")
+```
+
+### Retained catches data processings (DTA.PRO.RC) {#dataProcessingsRC}
+
+Reference codes modeling the processing applied to the data provided through the retained catches data form.
+
+```{r collapse = TRUE}
+out_dt(DATA_PROCESSINGS_RC, "DATA_PROCESSINGS_RC")
+```
+
+### Coverage types (DTA.COV.TY) {#coverageTypes}
+
+Reference codes modeling the type of coverage for the raw information used to obtain the data provided through a specific form.
+
+```{r collapse = TRUE}
+out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
+```
+
