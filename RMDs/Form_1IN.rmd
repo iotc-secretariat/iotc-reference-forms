@@ -21,7 +21,8 @@ output:
   
 # Description
   
-This form supports the reporting of *annual estimates of the numbers of interactions* of [longline fisheries](#iotclonglinefishery) and [surface fisheries](#iotcsurfacefishery) with endangered, threatened, and protected species by fishing fleet, fishery, IOTC main area, and species group for a given CPC / fleet.
+This form supports the reporting of *number of interactions with marine turtles, seabirds, mobulid rays, cetaceans and whale sharks*, with information on national legislation in place in the case of cetaceans and whale sharks. For each stratum, the data coverage -- i.e., the percentage (%) of occurrences of interactions sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
+
 
 # Resources
 
@@ -29,15 +30,13 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx) to down
 
 # Supported resolutions
 
-- Res. [12/04](https://iotc.org/cmm/resolution-1204-conservation-marine-turtles) -- _On the conservation of marine turtles_
-- Res. [13/05](https://iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus) -- _On the conservation of whale sharks (Rhincodon typus)_
-- Res. [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans) -00- _On the conservation of cetaceans_
-- Res. [23/07](https://iotc.org/cmm/resolution-2307-reducing-incidental-bycatch-seabirds-longline-fisheries) -- _On reducing the incidental bycatch of seabirds in longline fisheries_
-- Res. [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) -- _On the conservation of mobulid rays caught in association with fisheries in the IOTC are fo competence_
+- Res. [12/04](https://iotc.org/cmm/resolution-1204-conservation-marine-turtles) (para. 3) -- _On the conservation of marine turtles_
+- Res. [13/05](https://iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus) (para. 7) -- _On the conservation of whale sharks (Rhincodon typus)_
+<!-- - Res. [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) -- _On the conservation of mobulid rays caught in association with fisheries in the IOTC are fo competence_ -->
+- Res. [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans) (para. 9) -- _On the conservation of cetaceans_
+- Res. [23/07](https://iotc.org/cmm/resolution-2307-reducing-incidental-bycatch-seabirds-longline-fisheries) (para. 1) -- _On reducing the incidental bycatch of seabirds in longline fisheries_
 
 # Reference species groups
-
-- [Fisheries](../domain/fisheries/#fisheries)
 
 - Species group: marine turtles, seabirds, mobulid rays, cetaceans, and whale sharks
 
@@ -48,16 +47,47 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx) to down
 
 # Stratification
 
-## Main data fields
+## Reporting metadata
 
--   [Fishery](#fisheries)
-- [IOTC main areas](../domain/admin/#IOareasMain)
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
 
-## Additional Data fields
+## General information
 
--   [Data types](#dataTypes)
--   [Types of Coverage](#coverageTypes)
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](../domain/admin/#entities) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](../domain/admin/#countries) |
+
+
+## Main data elements
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Fisheries]{#fisheries}    | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
+| [IOTC main areas]{#IOareasMain}| M | Main IOTC areas of competence   | [IOTC main areas](#IOareasMain)  |
+
+
+## Orignal data
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Original data type       | M | Preliminary/final status of the data | [Type of data](../domain/data/#types)      |
+| Types of Coverage   | M | Variable used for data coverage | [Types of Coverage](#coverageTypes)           |
+
+
+## Additional information
+
+Annual estimates of the numbers of interactions of longline fisheries and surface fisheries with endangered, threatened, and protected species by fishing fleet.
 
 # Referenced codelists
 
@@ -95,9 +125,12 @@ out_dt(FISHERIES, "FISHERIES")
 
 ## Data and metadata domains
 
-### Data types (DTA.TY) {#dataTypes}
+### Data types (DTA.TY) {#types}
 
-Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+
+a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")

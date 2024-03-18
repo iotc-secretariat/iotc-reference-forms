@@ -21,18 +21,26 @@ output:
 
 # Description
 
-This form supports the reporting of *total annual retained catches in live weight equivalent* for a given CPC / fleet.
+This form supports the reporting of *estimates of retained catches in live weight equivalent (metric tonnes; t)* for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
 # Resources
 
 Click [here](https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx) to download an empty version of form 1-RC, or [return back](..) to the list of all IOTC statistical data reporting forms.
 
-# Reference species groups
+#### Conservation and Management Measures
 
--   **IOTC species** [ mandatory ]
--   **Sharks** [ mandatory ]
--   **Mobulids and rays** [ mandatory ]
--   **Other bycatch / non-IOTC species** [ voluntary ]
+- Res. [15/01](https://www.iotc.org/cmm/resolution-1501-recording-catch-and-effort-data-fishing-vessels-iotc-area-competence) (Annex II) -- _On the recording of catch and effort data by fishing vessels in the IOTC area of competence_
+- Res. [15/02](https://www.iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) (para. 2) -- _On mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-Contracting Parties (CPCs)_
+- Res. [17/05](https://www.iotc.org/cmm/resolution-1705-conservation-sharks-caught-association-fisheries-managed-iotc) (para. 6) -- _On the conservation of sharks caught in association with fisheries managed by IOTC_
+- Res. [18/02](https://iotc.org/cmm/resolution-1802-management-measures-conservation-blue-shark-caught-association-iotc-fisheries) (para. 3) -- _On management measures for the conservation of blue shark caught in association with IOTC fisheries_
+- Res. [18/05](https://www.iotc.org/cmm/resolution-1805-management-measures-conservation-billfishes-striped-marlin-black-marlin-blue) (para. 8) -- _On management measures for the conservation of the billfishes: striped marlin, black marlin, blue marlin and Indo-Pacific sailfish_
+
+##### Retention ban in [longline](#iotclonglinefishery) and [surface](#iotcsurfacefishery) fisheries
+
+- Res. [12/09](https://iotc.org/cmm/resolution-1209-conservation-thresher-sharks-family-alopiidae-caught-association-fisheries-iotc) -- _On the conservation of thresher sharks (family Alopiidae) caught in association with fisheries in the IOTC agreement area_
+- Res. [13/06](https://iotc.org/cmm/resolution-1306-scientific-and-management-framework-conservation-sharks-species-caught) -- _On a scientific and management framework on the conservation of sharks in association with IOTC managed fisheries_
+- Res. [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) -- _On the conservation of mobulid species caught in association with fisheries in the IOTC area of competence_
+
 
 # Reporting deadlines
 
@@ -42,22 +50,55 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx) to down
 
 # Stratification
 
-## Main data fields
+## Reporting metadata
 
--   Quarter (possibly)
--   [IOTC area](#IOTCareasMain)
--   [Fishery](#fisheries)
--   [Species](#allSpecies)
--   [Retain reason](#retainReasons)
+### Submission information
 
-## Additional Data fields
-
--   [Types of data](#dataTypes)
--   [Data sources](#dataSourcesRC)
--   [Data processings](#dataProcessingsRC)
--   [Types of Coverage](#coverageTypes)
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
 
+### General information
+
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+
+
+## Data elements
+
+### Main data elements
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Quarter | M | Gregorian calendar quarterly of the fishing activities reported through the dataset | Integer |
+| Fisheries   | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
+| IOTC main areas| M | Main IOTC areas of competence   | [IOTC main areas](#IOTCareasMain)  |
+|Reasons for retaining  | M | Reasons for retaining the species onboard| [Reasons for retaining](#retainReasons) |
+| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
+
+### Original data
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Original data type       | M | Preliminary/final status of the data | [Type of data](#types)      |
+| Original data source     | M | Source of information | [Retained catches data sources](#dataSourcesRC)          |
+| Original data processing | M | Processing applied to the data    | [Retained catches data processings](#dataProcessingsRC) |
+| Source coverage type     | M | Variable used for data coverage | [Coverage types](#coverageTypes) |
+
+
+## Additional information
+
+Total annual estimates of the amount of fish caught and retained by fishing fleet, fishery, IOTC main area, retain reason, and species.
 
 # Referenced codelists
 
@@ -120,9 +161,12 @@ out_dt(RETAIN_REASONS, "RETAIN_REASONS")
 
 ## Data and metadata domains
 
-### Data types (DTA.TY) {#dataTypes}
+### Data types (DTA.TY) {#types}
 
-Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+
+a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")

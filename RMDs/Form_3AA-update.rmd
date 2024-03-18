@@ -21,11 +21,11 @@ output:
   
 # Description
   
-This form supports the reporting of *interactions with anchored fish aggregated devices(AFAD)* for a given CPC / fleet.
+This form supports the reporting of geographic position and description of each _fishing activity conducted around each anchored fish aggregated devices(AFAD), as **update,**_ along with estimates of retained catches and discards in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species.
 
 # Resources
 
-Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to download an empty version of form 3-AA, or [return back](..) to the list of all IOTC statistical data reporting forms.
+Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA-update.xlsx) to download an empty version of form 3-AA-update, or [return back](..) to the list of all IOTC statistical data reporting forms.
 
 # Supported resolutions
 
@@ -46,21 +46,39 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to down
 
 # Stratification
 
-## Main data fields
+## Reporting metadata
 
--   Month
--   Day of the month
--   Latitude and longitude
--   [Fishery](#fisheries)
--   [Species](#allSpecies)
+- [Focal point full name](#fcname)
+- [Focal point email](#fcemail)
+- [Organisation name](#orgname)
+- [Organisation email](#orgemail)
+- [Finalisation date](#findate)
+- [Submission date](#subdate)
+- [Reporting year](#repyear)
+- [Fisheries](#fisheries)
+- [Reporting entity](#repentity)
+- [Flag state](#repflagstate)
+- [Types of data](#types)
 
-## Additional Data fields
+## Main data elements
 
--   [FOB type](#FOBtypes)
--   [FOB activity](#FOBactivities)
--   [Fate type](#Fatetypes)
--   [Raising](#raised)
--   [Catch unit](#catchunit)
+##### Activity main stratum
+
+- Day of month
+- Latitude (in decimal degrees)
+- Longitude (in decimal degrees)
+
+- Identifier
+- [AFOB types](#FOBtypes)
+- [AFOB activity types](#FOBactivityTypes)
+
+##### Catch main stratum
+
+
+- [Species](#allSpecies)
+- [Types of fate](#typesOfFate)
+- [Raisings](#raisings)
+- [Catch units](#catchUnits)
 
 
 # Referenced codelists
@@ -75,13 +93,6 @@ Reference codes modeling the flag / reporting country submitting a dataset to th
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-### Data types (DTA.TY) {#dataTypes}
-
-Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
-
-```{r collapse = TRUE}
-out_dt(DATA_TYPES, "DATA_TYPES")
-```
 
 ## Fisheries and fishing technologies domains
 
@@ -93,6 +104,16 @@ An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs i
 
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
+```
+### Data types (DTA.TY) {#types}
+
+Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+
+a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+
+```{r collapse = TRUE}
+out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
 ## Biological and morphometrics domains
@@ -118,25 +139,37 @@ out_dt(SPECIES, "SPECIES")
 
 ### Types of anchored fishing object (aFOB) (FOB.AFT) {#FOBtypes}
 
-Reference codes modeling the source of the data provided through the retained catches data form.
+Reference codes that model the types of anchored FOBs.
 
 ```{r collapse = TRUE}
 out_dt(FOB_TYPES, "FOB_TYPES")
 ```
 
-### Retained catches data processings (DTA.PRO.RC) {#dataProcessingsRC}
+### Types of anchored fishing activity types (aFOB) (FOB.AAT) {#FOBactivityTypes}
 
-Reference codes modeling the processing applied to the data provided through the retained catches data form.
+Reference codes that model the type of activities undertaken when interacting with an anchored FOB.
 
 ```{r collapse = TRUE}
-out_dt(DATA_PROCESSINGS_RC, "DATA_PROCESSINGS_RC")
+out_dt(AFOB_ACTIVITIES, "AFOB_ACTIVITIES")
 ```
 
-### Coverage types (DTA.COV.TY) {#coverageTypes}
+### Type of fate (SPC.FTT) {#typesOfFate}
 
-Reference codes modeling the type of coverage for the raw information used to obtain the data provided through a specific form.
+Reference codes used to identify a given fate as indicating that the fish has been retained or discarded.
 
 ```{r collapse = TRUE}
-out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
+out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
+```
+
+### Raising (DTA.RA) {#raisings}
+
+Reference codes modeling the level of raising applied to the data, and in particular if data:
+
+-  have been raised to the represent the total catches and effort in the year concerned (RT),
+-  have been raised but does not represent the total catches and effort in the year concerned (PR), or
+-  have not been raised at all (NR)
+
+```{r collapse = TRUE}
+out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 

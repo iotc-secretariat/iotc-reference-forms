@@ -20,5 +20,200 @@ output:
 ---
   
 # Description
-  
-[ TBD ] 
+
+This form supports the reporting of _Operational activities conducted by purse seine and support vessels on DFOBs and buoys, **annually**_.
+
+When present, information on buoy identifier, knowledge of the buoy position, and type of activity conducted on the buoy. For each DFOB, information on materials (i.e., presence of plastic or metal), dimensions (i.e., length, width, and height), and presence of mesh with value of mesh size for both the surface (i.e., raft) and subsurface (i.e., tail) components. Finally, species-specific estimates of catches retained and discarded in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species.
+
+# Resources
+
+Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA.xlsx) to download an empty version of form 3-DA, or [return back](..) to the list of all IOTC statistical data reporting forms.
+
+# Supported resolutions
+
+-   [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - *Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)*
+-   [23/01](https://iotc.org/cmm/resolution-2301-management-anchored-fish-aggregating-devices-afads) - *On the conservation of sharks caught in association with fisheries managed by IOTC*
+
+
+# Reference species groups
+
+-   **IOTC species** [ mandatory ]
+-   **Sharks** [ mandatory ]
+-   **Other bycatch / non-IOTC species** [ voluntary ]
+
+# Reporting deadlines
+
+-   **Surface fisheries**: 30 June (final)
+
+
+# Stratification
+
+## Reporting metadata
+
+-   [Focal point full name](#fcname)
+-   [Focal point email](#fcemail)
+-   [Organisation name](#orgname)
+-   [Organisation email](#orgemail)
+-   [Finalisation date](#findate)
+-   [Submission date](#subdate)
+-   [Reporting year](#repyear)
+-   Reportng month
+-   [Reporting entity](#repentity)
+-   [Flag state](#repflagstate)
+-   [Types of data](#types)
+
+## Main data elements
+
+-   Vessel IOTC number
+-   Vessel name
+-   Day of month
+-   UTC time
+-   Latitude (in decimal degrees)
+-   Longitude (in decimal degrees)
+
+## Buoy stratum
+
+-   Present
+-   Identifier
+-   Position known
+-   [Activity](#FOBbuoyActivityTypes)
+
+## DFOB stratum
+
+-   Identifier
+-   [Type](#FOBtypes)
+-   [Activity](#FOBactivityTypes)
+
+## DFOB component descriptions
+
+<style type="text/css">
+  .component {width: 50%;}
+</style>
+
+
+<div class="component">
+|Surface (raft) | Surface (tail)|
+|:--------------------|:--------------------|
+|Plastic (_state if plastic materials are present_)  |Plastic (_state if plastic materials are present_)|
+|Metal (_state if metal materials are present_) | Metal (_state if metal materials are present_) |
+|Length | Length |
+|Width | Width |
+|Height |Height |
+|Mesh? (_state if mesh are present_) |Mesh? (_state if mesh are present_) |
+|Mesh size  | Mesh size |
+
+
+
+## Catch main stratum
+
+- [Species](#allSpecies)
+- [Types of fate](#typesOfFate)
+- [Raisings](#raisings)
+- [Catch units](#catchUnits)
+
+# Referenced codelists
+
+## Administrative and geospatial domains
+
+### Countries (ADM.COU) {#countries}
+
+Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+
+```{r collapse = TRUE}
+out_dt(COUNTRIES, "COUNTRIES")
+```
+
+### Data types (DTA.TY) {#types}
+
+Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+
+a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+
+
+```{r collapse = TRUE}
+out_dt(DATA_TYPES, "DATA_TYPES")
+```
+
+## Fisheries and fishing technologies domains
+
+### Fisheries (FIS) {#fisheries}
+
+An *ad-hoc* classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
+
+An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for their fisheries (among those currently considered of relevance in the Indian Ocean).
+
+```{r collapse = TRUE}
+out_dt(FISHERIES, "FISHERIES")
+```
+
+## Biological and morphometrics domains
+
+### All species (SPC.ALL) {#allSpecies}
+
+Reference codes modeling the species interacting with the fisheries as:
+
+-   target species (retained or discarded)
+-   bycatch species (retained or discarded)
+-   sampled individuals
+-   etc.
+
+These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+
+```{r collapse = TRUE}
+out_dt(SPECIES, "SPECIES")
+```
+
+## Data and metadata domains
+
+### Buoy activity types (FOB.AB) {#FOBbuoyActivityTypes}
+
+Reference codes that model the type of activities undertaken when visiting or deploying a buoy.
+
+```{r collapse = TRUE}
+out_dt(BUOY_ACTIVITIES, "BUOY_ACTIVITIES")
+```
+
+### FOB types (FOB.FT) {#FOBtypes}
+
+Reference codes that model the type of FOBs, both drifting (DFOB = TRUE) and anchored (DFOB = FALSE).
+
+```{r collapse = TRUE}
+out_dt(FOB_TYPES, "FOB_TYPES")
+```
+
+### FOB activity types (FOB.AT) {#FOBactivityTypes}
+
+Reference codes that model the type of activities undertaken when visiting or deploying a FOB.
+
+```{r collapse = TRUE}
+out_dt(FOB_ACTIVITIES, "FOB_ACTIVITIES")
+```
+
+### Types of fate (SPC.FTT) {#typesOfFate}
+
+Reference codes used to identify a given fate as indicating that the fish has been retained or discarded.
+
+```{r collapse = TRUE}
+out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
+```
+
+### Raising (DTA.RA) {#raisings}
+
+Reference codes modeling the level of raising applied to the data, and in particular if data:
+
+-   have been raised to the represent the total catches and effort in the year concerned (RT),
+-   have been raised but does not represent the total catches and effort in the year concerned (PR), or
+-   have not been raised at all (NR)
+
+```{r collapse = TRUE}
+out_dt(DATA_RAISINGS, "DATA_RAISINGS")
+```
+
+### Catch units (FIA.CU) {#catchUnits}
+
+Reference codes that model the units used to report the level of catches of a given species, further stratified by the specific criteria characterizing each reporting form.
+
+```{r collapse = TRUE}
+out_dt(CATCH_UNITS, "CATCH_UNITS")
+```

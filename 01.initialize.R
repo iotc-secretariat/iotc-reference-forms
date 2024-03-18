@@ -53,6 +53,7 @@ read_codelist = function(base_url = "https://data.iotc.org/reference/latest/doma
 
 COUNTRIES       = read_codelist(domain = "admin", codelist = "COUNTRIES")
 IOTC_MAIN_AREAS = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_MAIN_AREAS")
+FAO_AREAS = read_codelist(domain = "admin", schema = "gis", codelist = "FAO_AREAS")
 
 DATA_TYPES     = read_codelist(domain = "data", codelist = "DATA_TYPES")
 
@@ -77,9 +78,11 @@ BOAT_CLASS_TYPES          = read_codelist(domain = "fisheries", schema = "fisher
 MECHANIZATION_TYPES       = read_codelist(domain = "fisheries", schema = "fishery", codelist = "MECHANIZATION_TYPES")
 FISH_PRESERVATION_METHODS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PRESERVATION_METHODS")
 FISH_PROCESSING_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")
+FISH_STORAGE_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_STORAGE_TYPES")
 
 
 FISHERIES           = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISHERIES")
+FISHERY_CATEGORIES  = read_codelist(domain = "fisheries", schema = "fishery_config", codelist = "FISHERY_CATEGORIES")
 CATCH_UNITS         = read_codelist(domain = "fisheries", schema = "fishery", codelist = "CATCH_UNITS")
 GEAR_GROUPS         = read_codelist(domain = "fisheries", schema = "fishery_config", codelist = "GEAR_GROUPS")
 AFOB_TYPES                = read_codelist(domain = "fisheries", schema = "fishery", codelist = "AFOB_TYPES")
@@ -90,8 +93,8 @@ FOB_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", cod
 
 #PR form
 
-PRICING_LOCATIONS    = read_codelist(domain = "fisheries", schema = "fishery", codelist = "PRICING_LOCATIONS")
-PRODUCT_TYPES        = read_codelist(domain = "fisheries", schema = "fishery", codelist = "PRODUCT_TYPES")
+#PRICING_LOCATIONS    = read_codelist(domain = "fisheries", schema = "fishery", codelist = "PRICING_LOCATIONS")
+#PRODUCT_TYPES        = read_codelist(domain = "fisheries", schema = "fishery", codelist = "PRODUCT_TYPES")
 
 SPECIES               = read_codelist(domain = "biological", codelist = "SPECIES")
 RETAIN_REASONS        = read_codelist(domain = "biological", codelist = "RETAIN_REASONS")

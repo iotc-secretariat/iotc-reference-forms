@@ -128,9 +128,12 @@ out_dt(RETAIN_REASONS, "RETAIN_REASONS")
 
 ## Data and metadata domains
 
-### Data types (DTA.TY) {#dataTypes}
+### Data types (DTA.TY) {#types}
 
-Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+
+a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")

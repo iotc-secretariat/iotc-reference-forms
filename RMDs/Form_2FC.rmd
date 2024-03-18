@@ -21,12 +21,13 @@ output:
 
 # Description
 
-The term fishery fleet or fishery vessel refers to mobile floating platforms of any kind and size, operating in fresh, brackish or marine waters which are used for catching, harvesting, searching, transporting, landing, preserving and/or processing fish, where the term fishing vessel is used instead when the vessel is engaged only in catching operations [CWP](The measure of effort (unit of fishing effort). IOTC classification of fishery vessels by fishery types relate to [FAO ISSCFV code](https://www.fao.org/3/cb5201en/cb5201en.pdf). 
-                                                                                                                                                                                                                                                                                                                                                                            
-CPCs can use the IOTC [Fisheries Identification wizard](https://iotc.org/data/fisheries/wizard) as guide to define their type of fisheries
+This form support the reporting of *total numbers of boats/ fishing vessel involved in fishing activities*. The term fishing vessel is used when the vessel is engaged only in catching operations [CWP](The measure of effort (unit of fishing effort). IOTC classification of fishery vessels by fishery types relate to [FAO ISSCFV code](https://www.fao.org/3/cb5201en/cb5201en.pdf). 
+For each stratum, the data coverage -- i.e., the percentage (%) of catch/effort sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates. 
 
+#### Conservation and Management Measures
 
-This form supports the reporting of _number of operated fishing vessels_ for a given CPC / fleet, *on a voluntary* basis.
+- [UNFSA](https://www.un.org/depts/los/convention_agreements/texts/fish_stocks_agreement/CONF164_37.htm) -- _Article 4 of the Annex I of the United Nations Fish Stocks Agreement_ 
+
 
 # Resources
 
@@ -35,17 +36,6 @@ Fishing craft statistics data should be reported through the form [2-FC](https:/
 
 [return back](..) to the list of all IOTC statistical data reporting forms.
 
-# Supported resolutions
-
-+ [FSA-Annex I, Article 4]() - _Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)_
-
-
-# Reference species groups
-
-+ **IOTC species** [ mandatory ] 
-+ **Sharks** [ mandatory ]
-+ **Mobulids and rays** [ mandatory ]
-+ **Other bycatch / non-IOTC species** [ voluntary ]
 
 # Reporting deadlines
 
@@ -55,18 +45,63 @@ Fishing craft statistics data should be reported through the form [2-FC](https:/
 
 # Stratification
 
-## Main data fields
-+ [IOTC area](#IOTCareasMain)
-+ [Gear](#Gear)
-+ [boat type](#boatTypes)
-+ [Mechanisation type](#mechanizationTypes)
-+ [Fish preservation method](#fishPreservationMethods)
-+ [Fish processing type](#fishProcessingTypes)
-+ [Fish processing type](#boatClassTypes)
-+ Size class
-+ Vessel number
-             
-## Additional data fields
+## Reporting metadata
+
+### Submission information
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+
+### General information
+
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+
+
+## Data elements
+
+### Main data elements
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Fisheries   | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
+| IOTC main areas| M | Main IOTC areas of competence   | [IOTC main areas](#IOTCareasMain)  |
+
+
+### Original data
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Original data type       | M | Preliminary/final status of the data | [Type of data](#types)      |
+| Original data source     | M | Source of information | [Fishing craft data sources](#sourcesFC)          |
+| Original data processing | M | Processing applied to the data    | [Fishing craft data processings](#dataProcessingsFC) |
+| Source coverage type     | M | Variable used for data coverage | [Coverage types](#coverageTypes) |
+
+### Vessel characteristics
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Boat type     | M | Fishing boat classification based on shape and purpose| [boat type](#boatTypes)      |
+| Mechanisation type    | M | Type of boat mechanization| [Mechanisation type](#mechanizationTypes)          |
+| Boat class types | M |  Vessel size categories  | [Boat class types](#boatClassTypes) |
+| [Fish preservation method](#fishPreservationMethods)   | M | Type of preservation methods being used for target species onboard boats | [Fish preservation method](#fishPreservationMethods) |
+| Fish storage   | M | Type of structures present on-board and used by the vessel to store the catch | [Fish storage method](#fishStorageTypes) |
+
+## Additional information
+
+Annual number of active fishing vessels by gear, boat type, preservation and size class.
+
 
 # Referenced codelists
 
@@ -90,15 +125,17 @@ out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 
 ## Fisheries and fishing technologies domains
 
-### Gears (FIS.GE) {#gears}
 
-An _ad-hoc_ classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
+### Fisheries (FIS) {#fisheries}
 
-An [_interactive wizard_](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for  their fisheries (among those currently considered of relevance in the Indian Ocean).
+An *ad-hoc* classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
+
+An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for their fisheries (among those currently considered of relevance in the Indian Ocean).
 
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
 ```
+
 
 ### Boat types (VES.BT) {#boatTypes}
 
@@ -124,12 +161,12 @@ Reference codes modeling the type of preservation methods being used for target 
 out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```
 
-### Fish processing types (VES.PR) {#fishProcessingTypes}
+### Fish storage types (VES.PR) {#fishStorageTypes}
 
 Reference codes modeling the type of processing applied to the retained fish.
 
 ```{r collapse = TRUE}
-out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
+out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 ```
 
 ### Boat class types (VES.BC) {#boatClassTypes}
@@ -142,9 +179,12 @@ out_dt(BOAT_CLASS_TYPES, "BOAT_CLASS_TYPES")
 
 ## Data and metadata domains
 
-### Data types (DTA.TY) {#dataTypes}
+### Data types (DTA.TY) {#types}
 
-Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+
+a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")

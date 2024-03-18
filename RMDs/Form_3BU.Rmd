@@ -21,32 +21,55 @@ output:
 
 # Description
 
-This form supports the reporting of _daily buoys positions_ for a given CPC / fleet / vessel.
+This form supports the reporting of _single daily buoy position (latitude and longitude in decimal degrees)_ for each of the buoys monitored by each purse seine vessel. Each buoy is identified by its unique identifier which is a concatenation of the acronym of the buoy commercial model (e.g., ISD+, M3+, T8E) followed by 5-9 digits depending on the buoy model.
 
 # Resources
 
+Click [here](https://data.iotc.org/reference/latest/forms/Form-3BU.xlsx) to download an empty version of form 3-BU, or
 [return back](..) to the list of all IOTC statistical data reporting forms.
 
 # Supported resolutions
 
-+ [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - _Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)_
-+ [19/02](https://iotc.org/cmm/resolution-1902-procedures-fish-aggregating-devices-fads-management-plan) - _Procedures on a Fish Aggregating Devices (FADs) Management Plan_
+Daily positions of active buoys equipping FADs and natural floating objects for each purse seine vessel
+
+- Res. [19/02, para.24](https://iotc.org/cmm/resolution-1902-procedures-fish-aggregating-devices-fads-management-plan) -- _Procedures on a fish aggregating devices (FADS) management plan_
+
 
 # Reporting deadlines
 
-+ **Surface fisheries**: 
+- _Surface fisheries_: 
+**To be submitted with a time delay of at least 60 days, but no longer than 90 days**
+
 
 # Stratification
 
-## Main data fields
+## Reporting metadata
 
-+ Daily(mandatory)
-+ Bouy ID
-+ [IOTC  geospatial area](#geospatialData)
+- [Focal point full name](#fcname)
+- [Focal point email](#fcemail)
+- [Organisation name](#orgname)
+- [Organisation email](#orgemail)
+- [Finalisation date](#findate)
+- [Submission date](#subdate)
+- [Reporting year](#repyear)
+- [Reporting entity](#repentity)
+- [Flag state](#repflagstate)
+- [Types of data](#types)
 
-## Additional data fields
+### Vessel operation
 
-+ [Estimation](#estimationTypes)
+- Month
+- Vessel IOTC number
+- Vessel name
+
+
+## Main data elements
+
+- Day of month
+- Buoy ID
+- Latitude (in decimal degrees)
+- Longitude (in decimal degrees)
+
 
 # Referenced codelists
 
@@ -62,18 +85,14 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 ## Data and metadata domains
 
-### Data types (DTA.TY) {#dataTypes}
+### Data types (DTA.TY) {#types}
 
-Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+
+a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-### Data raising (DTA.RA) {#dataRaising}
-
-Reference codes modeling the level of raising applied to the data (raised to totals / not raised to totals / unknown).
-
-```{r collapse = TRUE}
-out_dt(DATA_RAISINGS, "DATA_RAISINGS")
-```
