@@ -80,22 +80,24 @@ FISH_PRESERVATION_METHODS = read_codelist(domain = "fisheries", schema = "fisher
 FISH_PROCESSING_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")
 FISH_STORAGE_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_STORAGE_TYPES")
 
-
 FISHERIES           = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISHERIES")
 FISHERY_CATEGORIES  = read_codelist(domain = "fisheries", schema = "fishery_config", codelist = "FISHERY_CATEGORIES")
 CATCH_UNITS         = read_codelist(domain = "fisheries", schema = "fishery", codelist = "CATCH_UNITS")
 GEAR_GROUPS         = read_codelist(domain = "fisheries", schema = "fishery_config", codelist = "GEAR_GROUPS")
-AFOB_TYPES                = read_codelist(domain = "fisheries", schema = "fishery", codelist = "AFOB_TYPES")
+AFOB_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "AFOB_TYPES")
 AFOB_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "AFOB_ACTIVITY_TYPES")
 BUOY_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "BUOY_ACTIVITY_TYPES")
-FOB_TYPES                = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")
+FOB_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")
 FOB_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
 
+<<<<<<< HEAD
 #PR form
 
 #PRICING_LOCATIONS    = read_codelist(domain = "fisheries", schema = "fishery", codelist = "PRICING_LOCATIONS")
 #PRODUCT_TYPES        = read_codelist(domain = "fisheries", schema = "fishery", codelist = "PRODUCT_TYPES")
 
+=======
+>>>>>>> a14c75ce8449b9bd7cbc6d54e8e6fcaf0cd61a4a
 SPECIES               = read_codelist(domain = "biological", codelist = "SPECIES")
 RETAIN_REASONS        = read_codelist(domain = "biological", codelist = "RETAIN_REASONS")
 DISCARD_REASONS       = read_codelist(domain = "biological", codelist = "DISCARD_REASONS")
@@ -105,6 +107,12 @@ MEASUREMENT_TOOLS     = read_codelist(domain = "biological", codelist = "MEASURE
 TYPES_OF_MEASUREMENT  = read_codelist(domain = "biological", codelist = "TYPES_OF_MEASUREMENT")
 TYPES_OF_FATE         = read_codelist(domain = "biological", codelist = "TYPES_OF_FATE")
 FATES                 = read_codelist(domain = "biological", codelist = "FATES")
+
+PRICING_LOCATIONS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "CURRENCIES")
+DESTINATION_MARKETS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "DESTINATION_MARKETS")
+PRICING_LOCATIONS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRICING_LOCATIONS")
+PRODUCT_TYPES        = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRODUCT_TYPES")
+
 
 
 out_dt = function(data, name) {
