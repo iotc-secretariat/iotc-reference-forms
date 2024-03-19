@@ -90,14 +90,9 @@ BUOY_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", co
 FOB_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")
 FOB_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
 
-<<<<<<< HEAD
-#PR form
 
-#PRICING_LOCATIONS    = read_codelist(domain = "fisheries", schema = "fishery", codelist = "PRICING_LOCATIONS")
-#PRODUCT_TYPES        = read_codelist(domain = "fisheries", schema = "fishery", codelist = "PRODUCT_TYPES")
 
-=======
->>>>>>> a14c75ce8449b9bd7cbc6d54e8e6fcaf0cd61a4a
+
 SPECIES               = read_codelist(domain = "biological", codelist = "SPECIES")
 RETAIN_REASONS        = read_codelist(domain = "biological", codelist = "RETAIN_REASONS")
 DISCARD_REASONS       = read_codelist(domain = "biological", codelist = "DISCARD_REASONS")
