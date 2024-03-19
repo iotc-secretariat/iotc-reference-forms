@@ -103,7 +103,7 @@ TYPES_OF_MEASUREMENT  = read_codelist(domain = "biological", codelist = "TYPES_O
 TYPES_OF_FATE         = read_codelist(domain = "biological", codelist = "TYPES_OF_FATE")
 FATES                 = read_codelist(domain = "biological", codelist = "FATES")
 
-PRICING_LOCATIONS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "CURRENCIES")
+CURRENCIES   = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "CURRENCIES")
 DESTINATION_MARKETS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "DESTINATION_MARKETS")
 PRICING_LOCATIONS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRICING_LOCATIONS")
 PRODUCT_TYPES        = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRODUCT_TYPES")
