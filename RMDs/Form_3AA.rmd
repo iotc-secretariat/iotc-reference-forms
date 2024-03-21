@@ -49,43 +49,64 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to down
 
 ## Reporting metadata
 
-- [Focal point full name](#fcname)
-- [Focal point email](#fcemail)
-- [Organisation name](#orgname)
-- [Organisation email](#orgemail)
-- [Finalisation date](#findate)
-- [Submission date](#subdate)
-- [Reporting year](#repyear)
-- [Reporting entity](#repentity)
-- [Flag state](#repflagstate)
-- [Types of data](#types)
+### Submission information
 
-## Main data elements
-
-##### Activity main stratum
-
-- Month
-- Day of month
-- [Fisheries](#fisheries)
-- Latitude (in decimal degrees)
-- Longitude (in decimal degrees)
-
-- Identifier
-- [AFOB types](#FOBtypes)
-- [AFOB activity types](#FOBactivityTypes)
-
-##### Catch main stratum
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
 
-- [Species](#allSpecies)
-- [Types of fate](#typesOfFate)
-- [Raisings](#raisings)
-- [Catch units](#catchUnits)
+### General information
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+
+
+### Data specifications
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Original data type       | M | Preliminary/final status of the data | [Type of data](#types)      |
+
+## Data elements
+
+### Main data elements
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Month | M | Gregorian calendar month of the fishing activities reported through the dataset | Integer |
+| Day of the Month | M | Day of the month of the fishing activities reported through the dataset | Integer |
+| Fisheries   | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
+| Latitude| M | Horizontal distances north or south of the Equation   | in decimal degrees  |
+| Longitude | M | Vertical distances east or west of the prime meridian | in decimal degrees |
+| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
+| Type of fate    | M | Fate of fish caught (retained or discarded)| [Types of fate](#typesOfFate)           |
+| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#raisings)| 
+| Catch unit   | M | Units used to report the level of catches of a given species,|[Catch units](#catchUnits) |
+
+### aFOB data
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Identifier   | M | FOB identification (Deacon ID) | Plain text      |
+| Type| M | Type of FOBs    | [AFOB types](#FOBtypes) |
+| Activity    | M | Type of activities undertaken when visiting or deploying  FOB | [AFOB activity types](#FOBactivityTypes) |
+
+
+## Additional information
+
+Annual submission of information of daily activities conducted around AFADs, including catches retained and discarded.
 
 
 # Referenced codelists
-
-## Administrative and geospatial domains
 
 ### Countries (ADM.COU) {#countries}
 
@@ -95,13 +116,6 @@ Reference codes modeling the flag / reporting country submitting a dataset to th
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-### Data types (DTA.TY) {#dataTypes}
-
-Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
-
-```{r collapse = TRUE}
-out_dt(DATA_TYPES, "DATA_TYPES")
-```
 
 ## Fisheries and fishing technologies domains
 
@@ -113,6 +127,16 @@ An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs i
 
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
+```
+### Data types (DTA.TY) {#types}
+
+Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+
+a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+
+```{r collapse = TRUE}
+out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
 ## Biological and morphometrics domains
@@ -152,7 +176,7 @@ Reference codes that model the type of activities undertaken when interacting wi
 out_dt(AFOB_ACTIVITIES, "AFOB_ACTIVITIES")
 ```
 
-### Tyoe of fate (SPC.FTT) {#typesOfFate}
+### Type of fate (SPC.FTT) {#typesOfFate}
 
 Reference codes used to identify a given fate as indicating that the fish has been retained or discarded.
 
@@ -172,4 +196,11 @@ Reference codes modeling the level of raising applied to the data, and in partic
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
+### Catch units (FIA.CU) {#catchUnits}
+
+Reference codes that model the units used to report the level of catches / discards of a given species, further stratified by the specific criteria characterizing each reporting form.
+
+```{r collapse = TRUE}
+out_dt(CATCH_UNITS, "CATCH_UNITS")
+```
 

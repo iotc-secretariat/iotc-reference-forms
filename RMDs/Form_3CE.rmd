@@ -23,6 +23,11 @@ output:
   
 This form supports the reporting of *Estimates of species-specific catches and efforts by fishing fleet, fishery, and space and time strata* for a given CPC / fleet.
 
+This form supports the reporting of estimates of geo-referenced of species-specific catches and efforts by fishing fleet, fishery, and space and time strata, _as update following revision of previously submitted catch and effort data_.
+Estimates of efforts expressed in units consistent with the recording requirements established in Res. 15/01 and complemented by numbers of fishing operations for longline fisheries and surface fisheries (IOTC-2022-SC25-R). The use of trips as effort unit is not recommended as trip length may vary substantially according to vessel length, fishing success, and multiple technical factors (e.g., fuel exhaustion). In the case of purse seine fisheries, other units could be added to refine the information on effort such as searching time and surface area explored.
+
+
+
 # Resources
 
 Click [here](https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx) to download an empty version of form 3-CE, or [return back](..) to the list of all IOTC statistical data reporting forms.
@@ -38,13 +43,6 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx) to down
 - Res. [13/06](https://iotc.org/cmm/resolution-1306-scientific-and-management-framework-conservation-sharks-species-caught) -- _On a scientific and management framework on the conservation of sharks in association with IOTC managed fisheries_
 - Res. [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) -- _On the conservation of mobulid species caught in association with fisheries in the IOTC area of competence_
 
-# Reference species groups
-
--   **IOTC species** [ mandatory ]
--   **Sharks** [ mandatory ]
--   **Mobulids and rays** [ mandatory ]
--   **Other bycatch / non-IOTC species** [ voluntary ]
-
 # Reporting deadlines
 
 -   **Longline fisheries**: 30 June (preliminary), 30 December (final)
@@ -53,21 +51,91 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx) to down
 
 # Stratification
 
-## Main data fields
+## Reporting metadata
 
--   Monthly ( for industrial fisheries; yearly or monthly for coastal fisheries )
--   [IOTC area](#IOTCgridsCESF)
--   [Fishery](#fisheries)
--   [Species](#allSpecies)
+### Submission information
 
-## Additional Data fields
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
--   [EStimation](#estimations)
--   [Types of data](#types)
--   [Data sources](#sourcesCE)
--   [Data processings](#processingsCE)
--   [Raisings](#raisings)
--   [Types of Coverage](#coverageTypes)
+
+### General information
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+
+## Data elements
+
+### Main data elements
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Month | M | The month of the fishing activities reported through the dataset | Integer |
+| Fisheries   | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
+|Grid| M | the seven digits grid square of the fishing area in Indian Ocean   | [Grid codes](#IOTCgridsCESF) |
+| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
+| Type of fate    | M | Fate of fish caught (retained or discarded)| [Types of fate](#typesOfFate)           |
+| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#raisings)| 
+| Catch unit   | M | Units used to report the level of catches of a given species,|[Catch units](#catchUnits) |
+
+
+
+### Original data
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Estimation   | M | Indicate if the data was estimated or actual recorded data | [Estimations](#estimations)     |
+| Original data type      | M | Preliminary/final status of the data | [Type of data](#types)      |
+| Original data source     | M | Source of information | [Catch and effort data sources](#sourcesCE)          |
+| Original data processing | M | Processing applied to the data    | [Catch and effort data processings](#dataProcessingsCE) |
+| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#dataRaising)| 
+| Source coverage type     | M | Variable used for data coverage | [Coverage types](#coverageTypes) |
+|Source coverage value   | M | Value of coverage |in percentage |
+
+
+### Effort units
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Primary     | M | Primary effort unit | [Effort units](#effortUnits)     |
+| Secondary    | O | Secondary effort unit (if any) | [Effort units](#effortUnits)     |
+| Tertiary    | O | Tertiary effort unit (if any) | [Effort units](#effortUnits)     |
+
+
+
+
+
+## Additional information
+
+### The recommended effort units for each fishery:
+
+| Gear group | Primary effort | Secondary effort | Tertiary effort 
+| :------------ | :------------------------- | :------------------------- | :------------------------- |
+Gillnets (GI)        | Number of fishing days   | Number of nets deployed | Total net surface deployed |
+Hooks and lines (HL) | Number of fishing days   | Number of hooks deployed | - |
+Longlines (LL)       | Number of hooks deployed | Number of sets | - |
+Other gears (OT)     | Number of days at sea    | - | - |
+Pole-and-lines (PL)  | Number of fishing days   | Number of sets | Number of day-poles |
+Purse seines (PS)    | Number of fishing hours  | Number of sets | Number of successful/null sets |
+
+### The spatial and temporal resolutions, catch units, and level of extrapolation vary according to the fishery category.
+
+| Category | Temporal resolution | Spatial resolution | Catch unit | Extrapolation | 
+| :-------- | :--------- | :---------- | :------------- | :-------: |
+[Surface fisheries](#iotcsurfacefishery)  | Month | [1° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids1x1) | Live weight equivalent | M |
+[Longline fisheries](#iotclonglinefishery) | Month or finer for the SC | [5° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids5x5) or finer for the SC | Numbers or live weight equivalent | M |
+[Coastal fisheries](#iotccoastalfishery) | Year or finer | [Irregular areas](https://data.iotc.org/reference/latest/domain/admin/#IOTCareasAR) | Numbers or live weight equivalent | O |
+
+
 
 
 # Referenced codelists
@@ -163,3 +231,10 @@ Reference codes modeling the type of coverage for the raw information used to ob
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
 ```
 
+### Estimations (DTA.ES) {#estimations}
+
+Reference codes indicating if the data estimated for a stratum was actually recorded in the stratum or derived from comparable strata through a substitution scheme.
+
+```{r collapse = TRUE}
+out_dt(DATA_ESTIMATIONS, "DATA_ESTIMATIONS")
+```

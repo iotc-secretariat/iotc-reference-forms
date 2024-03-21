@@ -34,84 +34,99 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx) 
 -   Res. [15/02](https://www.iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) -- *On mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-Contracting Parties (CPCs)*
 -   Res. [19/02](https://iotc.org/cmm/resolution-1902-procedures-fish-aggregating-devices-fads-management-plan) -- *Procedures on a fish aggregating devices (FADs) management plan*
 
-# Reference species groups
-
--   **IOTC species** [ mandatory ]
--   **Sharks** [ mandatory ]
--   **Other bycatch / non-IOTC species** [ voluntary ]
-
 # Reporting deadlines
 
 -   **Surface fisheries**: 30 June (final)
 
 # Stratification
 
-## Reporting metadata
+### Submission information
 
--   [Focal point full name](#fcname)
--   [Focal point email](#fcemail)
--   [Organisation name](#orgname)
--   [Organisation email](#orgemail)
--   [Finalisation date](#findate)
--   [Submission date](#subdate)
--   [Reporting year](#repyear)
--   [Fisheries](#fisheries)
--   [Reporting entity](#repentity)
--   [Flag state](#repflagstate)
--   [Types of data](#types)
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-### Vessel operation
 
--   Month
--   Vessel name
--   Vessel IOTC number
+### General information
 
-## Main data elements
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+| Reporting Month | M | Calendar month of the fishing activities reported through the dataset | Integer |
+| Vessel name | M | Name of vessel monitoring the buoy  | Plain text  |
+| Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy  | Plain text (_IOTCxxxxxx_) |
 
--   Day of month
--   UTC time
--   Latitude (in decimal degrees)
--   Longitude (in decimal degrees)
 
-## Buoy stratum
 
--   Present
--   Identifier
--   Position known
--   [Activity](#FOBbuoyActivityTypes)
+### Data specifications
 
-## DFOB stratum
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Original data type       | M | Preliminary/final status of the data | [Type of data](#types)      |
 
--   Identifier
--   [Type](#FOBtypes)
--   [Activity](#FOBactivityTypes)
 
-## DFOB component descriptions
+## Data elements
+
+### Main data elements
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Day of the Month | M | Day of the month of the fishing activities reported through the dataset | Integer |
+| UTC time | M | Universal time at which the FOB was visited | time (_hh:mm_) |
+| Latitude| M | Horizontal distances north or south of the Equation   | in decimal degrees  |
+| Longitude | M | Vertical distances east or west of the prime meridian | in decimal degrees |
+| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
+| Type of fate    | M | Fate of fish caught (retained or discarded)| [Types of fate](#typesOfFate)           |
+| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#raisings)| 
+| Catch unit   | M | Units used to report the level of catches of a given species,|[Catch units](#catchUnits) |
+
+
+### Buoy data
+
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Present  | M | FOB identification (Deacon ID) | binary       |
+| Identifier   | M | FOB identification (Deacon ID) | Plain text      |
+| Position| M | Indicate if the vessel have access/knowledge of the buoy position (_ownership_) | boolean |
+| Activity    | M | Type of activities undertaken when visiting or deploying  FOB | [buoy activity types](#FOBbuoyActivityTypes) |
+
+
+### dFOB data
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Identifier   | M | FOB identification (Deacon ID) | Plain text      |
+| Type| M | Type of FOBs    | [dFOB types](#FOBtypes) |
+| Activity    | M | Type of activities undertaken when visiting or deploying  FOB | [dFOB activity types](#FOBactivityTypes) |
+
+### dFOB characteristics 
+
+Indicate if any of the components are found, and size of the dFOB. 
 
 <style type="text/css">
-  .component {width: 40%;}
+  .component {width: 70%;}
 </style>
 
-
 <div class="component">
-|Surface (raft) | Surface (tail)|
-|:--------------------|:--------------------|
-|Plastic (Is plastic present?)  |Plastic (Is plastic present?)|
-|Metal (Is metal present?) | Metal (Is metal present?) |
-|Length | Length |
-|Width | Width |
-|Height |Height |
-|Mesh? (Is mesh present?) |Mesh? (Is mesh present?) |
-|Mesh size  | Mesh size |
+|Surface (raft) | Subsurface (tail)|Description | Format |
+|:--------------------|:--------------------|:--------------------|:--------------------|
+|Plastic  |Plastic | Indicate if the dFOB contains plastic material| Boolean|
+|Metal  | Metal  | Indicate if the dFOB contains metal material| Boolean|
+|Length | Length | Length of dFOB| Decimal(cm) |
+|Width | Width | Width of dFOB| Decimal(cm) |
+|Height |Height |Height of dFOB|Decimal(cm)|
+|Mesh |Mesh | Indicate if the dFOB contains mesh| Boolean|
+|Mesh size  | Mesh size |Size of the mesh| Decimal(mm)|
 
 
-
-## Catch main stratum
-
-- [Species](#allSpecies)
-- [Types of fate](#typesOfFate)
-- [Raisings](#raisings)
-- [Catch units](#catchUnits)
 
 # Referenced codelists
 

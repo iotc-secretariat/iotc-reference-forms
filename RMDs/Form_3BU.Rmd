@@ -45,30 +45,51 @@ Daily positions of active buoys equipping FADs and natural floating objects for 
 
 ## Reporting metadata
 
-- [Focal point full name](#fcname)
-- [Focal point email](#fcemail)
-- [Organisation name](#orgname)
-- [Organisation email](#orgemail)
-- [Finalisation date](#findate)
-- [Submission date](#subdate)
-- [Reporting year](#repyear)
-- [Reporting entity](#repentity)
-- [Flag state](#repflagstate)
-- [Types of data](#types)
+### Submission information
 
-### Vessel operation
-
-- Month
-- Vessel IOTC number
-- Vessel name
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
 
-## Main data elements
+### General information
 
-- Day of month
-- Buoy ID
-- Latitude (in decimal degrees)
-- Longitude (in decimal degrees)
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting month] | M | Month of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+| [Vessel name | M | Name of vessel monitoring the buoy  | Plain text  |
+| [Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy  | Plain text (_IOTCxxxxxx_) |
+
+### Data specifications
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Original data type       | M | Preliminary/final status of the data | [Type of data](#types)      |
+
+## Data elements
+
+### Main data elements
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Day of Month | M | Day of the month of the fishing activities reported through the dataset | Integer |
+| Buoy ID   | M | Unique identifier of buoy monitored| (e.g., ISD+, M3+, T8E) followed by 5-9 digit           |
+
+### Buoy position
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Latitude| M | Horizontal distances north or south of the Equation   | in decimal degrees  |
+| Longitude | M | Vertical distances east or west of the prime meridian | in decimal degrees |
+
 
 
 # Referenced codelists

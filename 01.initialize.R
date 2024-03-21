@@ -54,6 +54,7 @@ read_codelist = function(base_url = "https://data.iotc.org/reference/latest/doma
 COUNTRIES       = read_codelist(domain = "admin", codelist = "COUNTRIES")
 IOTC_MAIN_AREAS = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_MAIN_AREAS")
 FAO_AREAS = read_codelist(domain = "admin", schema = "gis", codelist = "FAO_AREAS")
+IOTC_GRIDS_CE_SF = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_CE_SF")
 
 DATA_TYPES     = read_codelist(domain = "data", codelist = "DATA_TYPES")
 
@@ -72,6 +73,7 @@ DATA_PROCESSINGS_FC = read_codelist(domain = "data", codelist = "DATA_PROCESSING
 DATA_RAISINGS       = read_codelist(domain = "data", codelist = "DATA_RAISINGS")
 
 COVERAGE_TYPES = read_codelist(domain = "data", codelist = "COVERAGE_TYPES")
+DATA_ESTIMATIONS = read_codelist(domain = "data", codelist = "DATA_ESTIMATIONS")
 
 BOAT_TYPES                = read_codelist(domain = "fisheries", schema = "fishery", codelist = "BOAT_TYPES")
 BOAT_CLASS_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "BOAT_CLASS_TYPES")
@@ -79,7 +81,7 @@ MECHANIZATION_TYPES       = read_codelist(domain = "fisheries", schema = "fisher
 FISH_PRESERVATION_METHODS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PRESERVATION_METHODS")
 FISH_PROCESSING_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")
 FISH_STORAGE_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_STORAGE_TYPES")
-
+EFFORT_UNITS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "EFFORT_UNITS")
 FISHERIES           = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISHERIES")
 FISHERY_CATEGORIES  = read_codelist(domain = "fisheries", schema = "fishery_config", codelist = "FISHERY_CATEGORIES")
 CATCH_UNITS         = read_codelist(domain = "fisheries", schema = "fishery", codelist = "CATCH_UNITS")
@@ -102,11 +104,12 @@ MEASUREMENT_TOOLS     = read_codelist(domain = "biological", codelist = "MEASURE
 TYPES_OF_MEASUREMENT  = read_codelist(domain = "biological", codelist = "TYPES_OF_MEASUREMENT")
 TYPES_OF_FATE         = read_codelist(domain = "biological", codelist = "TYPES_OF_FATE")
 FATES                 = read_codelist(domain = "biological", codelist = "FATES")
+SEX                = read_codelist(domain = "biological", codelist = "SEX")
 
-CURRENCIES   = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "CURRENCIES")
-DESTINATION_MARKETS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "DESTINATION_MARKETS")
-PRICING_LOCATIONS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRICING_LOCATIONS")
-PRODUCT_TYPES        = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRODUCT_TYPES")
+#CURRENCIES   = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "CURRENCIES")
+#DESTINATION_MARKETS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "DESTINATION_MARKETS")
+#PRICING_LOCATIONS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRICING_LOCATIONS")
+#PRODUCT_TYPES        = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRODUCT_TYPES")
 
 
 

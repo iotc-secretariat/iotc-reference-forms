@@ -21,11 +21,11 @@ output:
   
 # Description
 
-Fishing effort is generally defined in terms of the time spent searching for fish (search duration) and/or the amount of fishing gear of a specific type used on the fishing grounds over a given unit of time e.g. a fishing operation, fishing activity, day or fishing trip. The measure of effort (unit of fishing effort) depends on the fishery and type of gear used depends on the fishery and type of gear used [CWP](The measure of effort (unit of fishing effort).
-                                                                                                                                                                                                                                                                                                                                                                                                                               
+This form supports the reporting of estimates of geo-referenced of species-specific catches and efforts by fishing fleet, fishery, and space and time strata, _as update following revision of previously submitted catch and effort data_.
+Estimates of efforts expressed in units consistent with the recording requirements established in Res. 15/01 and complemented by numbers of fishing operations for longline fisheries and surface fisheries (IOTC-2022-SC25-R). The use of trips as effort unit is not recommended as trip length may vary substantially according to vessel length, fishing success, and multiple technical factors (e.g., fuel exhaustion). In the case of purse seine fisheries, other units could be added to refine the information on effort such as searching time and surface area explored.
+
 The term catch-and-effort refers to the fine-scale data usually from logbooks (manual or electronic), and reported per fleet, fishery, year, gear-type of school, month, grid and species.
 
-This form supports the reporting of _estimates of geo-reference catch and effort in live weight (or number)_ for a given CPC / fleet.
 
 # Resources
 
@@ -45,12 +45,6 @@ Contrary to single 3-CE form, where data specifications are to be defined in the
 + [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans) - _On the conservation of cetaceans_
 + [13/05](http://www.iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus) - _On the conservation of whale sharks (Rhincodon typus)_
 
-# Reference species groups
-
-+ **IOTC species** [ mandatory ] 
-+ **Sharks** [ mandatory ]
-+ **Mobulids and rays** [ mandatory ]
-+ **Other bycatch / non-IOTC species** [ voluntary ]
 
 # Reporting deadlines
 
@@ -60,17 +54,92 @@ Contrary to single 3-CE form, where data specifications are to be defined in the
 
 # Stratification
 
-## Main data fields
+## Reporting metadata
 
-+ Month (mandatory)
-+ [IOTC regular grids and coastal areas](#geospatialData)
-+ [Fishery](#fisheries)
-+ [Species](#allSpecies)
-+ [Effort unit](#effortUnits)
+### Submission information
 
-## Additional data fields
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-+ [Estimation](#estimationTypes)
+
+### General information
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+| Fisheries   | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
+
+
+### Data specifications
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Original data type      | M | Preliminary/final status of the data | [Type of data](#types)      |
+| Original data source     | M | Source of information | [Catch and effort data sources](#sourcesCE)          |
+| Original data processing | M | Processing applied to the data    | [Catch and effort data processings](#dataProcessingsCE) |
+| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#dataRaising)| 
+| Source coverage type     | M | Variable used for data coverage | [Coverage types](#coverageTypes) |
+|Source coverage value   | M | Value of coverage |in percentage |
+| Catch unit   | M | Units used to report the level of catches of a given species,|[Catch units](#catchUnits) |
+
+#### Effort units
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Primary     | M | Primary effort unit | [Effort units](#effortUnits)     |
+| Secondary    | O | Secondary effort unit (if any) | [Effort units](#effortUnits)     |
+| Tertiary    | O | Tertiary effort unit (if any) | [Effort units](#effortUnits)     |
+
+## Data elements
+
+### Main data elements
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Month | M | The month of the fishing activities reported through the dataset | Integer |
+|Grid| M | the seven digits grid square of the fishing area in Indian Ocean   | [Grid codes](#IOTCgridsCESF) |
+| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
+| Type of fate    | M | Fate of fish caught (retained or discarded)| [Types of fate](#typesOfFate)           |
+| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#raisings)| 
+
+
+### Original data
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Estimation   | M | Indicate if the data was estimated or actual recorded data | [Estimations](#estimations)     |
+
+
+
+
+## Additional information
+
+### The recommended effort units for each fishery:
+
+| Gear group | Primary effort | Secondary effort | Tertiary effort 
+| :------------ | :------------------------- | :------------------------- | :------------------------- |
+Gillnets (GI)        | Number of fishing days   | Number of nets deployed | Total net surface deployed |
+Hooks and lines (HL) | Number of fishing days   | Number of hooks deployed | - |
+Longlines (LL)       | Number of hooks deployed | Number of sets | - |
+Other gears (OT)     | Number of days at sea    | - | - |
+Pole-and-lines (PL)  | Number of fishing days   | Number of sets | Number of day-poles |
+Purse seines (PS)    | Number of fishing hours  | Number of sets | Number of successful/null sets |
+
+### The spatial and temporal resolutions, catch units, and level of extrapolation vary according to the fishery category.
+
+| Category | Temporal resolution | Spatial resolution | Catch unit | Extrapolation | 
+| :-------- | :--------- | :---------- | :------------- | :-------: |
+[Surface fisheries](#iotcsurfacefishery)  | Month | [1° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids1x1) | Live weight equivalent | M |
+[Longline fisheries](#iotclonglinefishery) | Month or finer for the SC | [5° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids5x5) or finer for the SC | Numbers or live weight equivalent | M |
+[Coastal fisheries](#iotccoastalfishery) | Year or finer | [Irregular areas](https://data.iotc.org/reference/latest/domain/admin/#IOTCareasAR) | Numbers or live weight equivalent | O |
 
 
 # Referenced codelists
@@ -85,7 +154,13 @@ Reference codes modeling the flag / reporting country submitting a dataset to th
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-### IOTC grids and other coastal areas (GIS.IOTC.CESFAR) {#geospatialData}
+### IOTC grids and other coastal areas (GIS.IOTC.CESFAR) {#IOTCgridsCESF}
+
+Reference codes for grids in catch and effort.
+
+```{r collapse = TRUE}
+out_dt(IOTC_GRIDS_CE_SF, "IOTC_GRIDS_CE_SF")
+```
 
 Codes for all 1°x1° and 5°x5° grids, plus all coastal areas of importance for artisanal fisheries and that overlap - at least partially - with the IOTC convention area.
 
@@ -172,4 +247,20 @@ Reference codes modeling the type of coverage for the raw information used to ob
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
+```
+
+### Estimations (DTA.ES) {#estimations}
+
+Reference codes indicating if the data estimated for a stratum was actually recorded in the stratum or derived from comparable strata through a substitution scheme.
+
+```{r collapse = TRUE}
+out_dt(DATA_ESTIMATIONS, "DATA_ESTIMATIONS")
+```
+
+### Effort units (FIA.EU) {#effortUnits}
+
+Reference codes that model the units used to report the level of effort, further stratified by the specific criteria characterizing each reporting form.
+
+```{r collapse = TRUE}
+out_dt(EFFORT_UNITS, "EFFORT_UNITSS")
 ```

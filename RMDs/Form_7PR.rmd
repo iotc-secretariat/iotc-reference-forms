@@ -29,6 +29,63 @@ Data should be provided per type of fish product, preservation, processing and m
 
 Click [here](https://data.iotc.org/reference/latest/forms/Form-7PR.xlsx) to download an empty version of form 7-PR, or [return back](..) to the list of all IOTC statistical data reporting forms.
 
+# Reporting deadlines
+
+-   **Longline fisheries**: 30 June (preliminary), 30 December (final)
+-   **Surface fisheries**: 30 June (final)
+-   **Coastal fisheries**: 30 June (final)
+
+# Stratification
+
+## Reporting metadata
+
+### Submission information
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+
+### General information
+
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+
+
+## Data elements
+
+### Main data elements
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Quarter | M | Gregorian calendar quarterly of the fishing activities reported through the dataset | Integer |
+| Ocean   | M | The ocean the species caught| [Fisheries](#fisheries)            |
+| Pricing location| M | Location the price collected   | [IOTC main areas](#IOTCareasMain)  |
+| Currency | M | Currency of the price| [Reasons for retaining](#retainReasons) |
+| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
+| Processing    | M | Species processing type for the price reported| [Species](#allSpecies)           |
+| Product type    | M | The type of product for price reported| [Species](#allSpecies)           |
+| Preservation type    | M | The type of preservation of product | [Species](#allSpecies)           |
+| Destination    | M | Market destination| [Species](#allSpecies)           |
+| Weight unit    | M | Weight units used| [Species](#allSpecies)           |
+| Weight class(lo)    | M | Lowest size class of the weight| [Species](#allSpecies)           |
+| Weight class(hi)   | M | Highest size class of the weight| [Species](#allSpecies)           |
+
+
+
+
+
+
+
 # Reference species groups
 
 + **IOTC species** [ mandatory ] 
