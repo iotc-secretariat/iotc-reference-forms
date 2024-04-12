@@ -147,8 +147,6 @@ render("./RMDs/Form_2FC.Rmd",
        output_format = "html_document2",
        output_file ="Form_2FC.html", 
        output_dir = "./out/HTML/")
-### Form 2-FC #####
-
 
 ### Form 2-FC_interim #####
 render("./RMDs/interim/Form_2FC_interim.Rmd", 
