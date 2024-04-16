@@ -76,7 +76,7 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx) to down
 
 | Element        | Requirement | Description | Input value  |
 | :---------- | :-----: | :----------------------- | :---------------- |
-| Quarter | O  | Fishing time period: 0: Annual; 1: Jan-Mar; 2: Apr-Jun; 3: Jul-Sep; 4: Oct-Dec) | 0, 1, 2, 3, 4 |
+| Quarter | O  | Fishing time period: 0: Annual; 1: Jan-Mar; 2: Apr-Jun; 3: Jul-Sep; 4: Oct-Dec | 0, 1, 2, 3, 4 |
 | Fishery | M | One of the IOTC-defined fisheries  | Code from [Fisheries](#fisheries) codelist |
 | IOTC area | M | One of the two main IOTC areas | Code from [IOTC main areas](#IOTCareasMain) codelist |
 | Retain reason | M | Reason for retaining the catch onboard | Code from [Reasons for retaining](#retainReasons) codelist |
