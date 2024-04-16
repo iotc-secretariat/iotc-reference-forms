@@ -64,7 +64,7 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx) to down
 
 ### General information
 
-| Element        | Requirement | Description | Code list  |
+| Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
 | [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
