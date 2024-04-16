@@ -61,9 +61,9 @@ render("./RMDs/Form_3CE.Rmd",
        output_dir = "./out/HTML/")
 
 ### Form 3-CE-update ####
-render("./RMDs/Form_3CE-update.Rmd", 
+render("./RMDs/Form_3CE_update.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-3CE_update.html", 
+       output_file ="Form_3CE_update.html", 
        output_dir = "./out/HTML/")
 
 ### Form 3-CE_interim ####
@@ -87,9 +87,9 @@ render("./RMDs/Form_4SF.Rmd",
        output_dir = "./out/HTML/")
 
 ### Form 4-SF-update ####
-render("./RMDs/Form_4SF-update.Rmd", 
+render("./RMDs/Form_4SF_update.Rmd", 
        output_format = "html_document2",
-       output_file ="Form_4SF-update.html", 
+       output_file ="Form_4SF_update.html", 
        output_dir = "./out/HTML/")
 
 ### Form 4-SF_interim ####
@@ -113,9 +113,9 @@ render("./RMDs/Form_3AA.Rmd",
        output_dir = "./out/HTML/")
 
 ### Form 3-AA-update ####
-render("./RMDs/Form_3AA-update.Rmd", 
+render("./RMDs/Form_3AA_update.Rmd", 
        output_format = "html_document2",
-       output_file ="Form_3AA-update.html", 
+       output_file ="Form_3AA_update.html", 
        output_dir = "./out/HTML/")
 
 ## DFOB-related activities ####
@@ -127,9 +127,9 @@ render("./RMDs/Form_3DA.Rmd",
        output_dir = "./out/HTML/")
 
 ### Form 3-DA-update ####
-render("./RMDs/Form_3DA-update.Rmd", 
+render("./RMDs/Form_3DA_update.Rmd", 
        output_format = "html_document2",
-       output_file ="Form_3DA-update.html", 
+       output_file ="Form_3DA_update.html", 
        output_dir = "./out/HTML/")
 
 ## Daily buoy positions ####
@@ -150,16 +150,11 @@ render("./RMDs/Form_2FC.Rmd",
 ### Form 2-FC #####
 
 
-### Form 2-FC_interim #####
-render("./RMDs/interim/Form_2FC_interim.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-2FC_interim.html", 
-       output_dir = "./out/HTML/interim/")
 
 ## Fish prices ####
 
-render("./RMDs/Form_7PR.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form_7PR.html", 
-       output_dir = "./out/HTML/")
+#render("./RMDs/Form_7PR.Rmd", 
+#       output_format = "html_document2",
+#       output_file ="Form_7PR.html", 
+#       output_dir = "./out/HTML/")
 ### Form 7-PR #####

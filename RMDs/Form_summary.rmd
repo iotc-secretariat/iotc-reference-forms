@@ -43,7 +43,7 @@ For the submission of estimates of total annual discard levels (either in live-w
 
 #### Resources 
 
-+ [Form description](./Form-1DI.html)
++ [Form description](./Form_1DI.html)
 + [Form template](./Form-1DI.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1DI/)
 
@@ -96,9 +96,9 @@ This version of [Form 3CE](#3CE) is suitable for the reporting of **updated** da
 
 #### Resources 
 
-+ [Form description](./Form_3CE-update.html)
++ [Form description](./Form_3CE_update.html)
 + [Form template](./Form-3CE-update.xlsx)
-+ [Interactive form validator](https://data.iotc.org/validators/ui/update/1RC/)
++ [Interactive form validator](https://data.iotc.org/validators/ui/update/3CE/)
 
 ### Form 3AA{#3AA}
 
@@ -119,7 +119,7 @@ This version of [Form 3AA](#3AA) is suitable for the reporting of **updated** da
 
 #### Resources 
 
-+ [Form description](./Form_3AA-update.html)
++ [Form description](./Form_3AA_update.html)
 + [Form template](./Form-3AA-update.xlsx)
 
 ### Form 3DA{#3DA}
@@ -141,7 +141,7 @@ This version of [Form 3DA](#3DA) is suitable for the reporting of **updated** da
 
 #### Resources 
 
-+ [Form description](./Form_3DA-update.html)
++ [Form description](./Form_3DA_update.html)
 + [Form template](./Form-3DA-update.xlsx)
 
 ### Form 3BU{#3BU}
@@ -174,7 +174,7 @@ This version of [Form 4SF](#4SF) is suitable for the reporting of **updated** da
 
 #### Resources 
 
-+ [Form description](./Form_4SF-update.html)
++ [Form description](./Form_4SF_update.html)
 + [Form template](./Form-4SF-update.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/update/4SF/)
 
