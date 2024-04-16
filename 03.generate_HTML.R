@@ -147,8 +147,6 @@ render("./RMDs/Form_2FC.Rmd",
        output_format = "html_document2",
        output_file ="Form_2FC.html", 
        output_dir = "./out/HTML/")
-### Form 2-FC #####
-
 
 
 ## Fish prices ####
