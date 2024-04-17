@@ -21,24 +21,9 @@ output:
   
 # Description
   
-This form supports the reporting of *number of interactions with marine turtles, seabirds, mobulid rays, cetaceans and whale sharks*, with information on national legislation in place in the case of cetaceans and whale sharks. For each stratum, the data coverage -- i.e., the percentage (%) of occurrences of interactions sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
-
-
-# Resources
+This form supports the reporting of data on the *number of interactions with marine turtles, seabirds, mobulid rays, cetaceans and whale sharks*. CPCs having national and state legislation for protecting whale sharks (_Rhincodon typus_) are encouraged to provide the data although they are exempt from reporting  (Res. [13/05](https://iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus)). CPCs having national and state legislation for protecting cetaceans are encouraged to provide the information to the Secretariat (Res. [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans)). For each stratum, the data coverage -- i.e., the percentage (%) of occurrences of interactions sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
 Click [here](https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx) to download an empty version of form 1-IN, or [return back](..) to the list of all IOTC statistical data reporting forms.
-
-# Supported resolutions
-
-- Res. [12/04](https://iotc.org/cmm/resolution-1204-conservation-marine-turtles) (para. 3) -- _On the conservation of marine turtles_
-- Res. [13/05](https://iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus) (para. 7) -- _On the conservation of whale sharks (Rhincodon typus)_
-<!-- - Res. [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) -- _On the conservation of mobulid rays caught in association with fisheries in the IOTC are fo competence_ -->
-- Res. [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans) (para. 9) -- _On the conservation of cetaceans_
-- Res. [23/07](https://iotc.org/cmm/resolution-2307-reducing-incidental-bycatch-seabirds-longline-fisheries) (para. 1) -- _On reducing the incidental bycatch of seabirds in longline fisheries_
-
-# Reference species groups
-
-- Species group: marine turtles, seabirds, mobulid rays, cetaceans, and whale sharks
 
 # Reporting deadlines
 
@@ -58,9 +43,7 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx) to down
 | [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-
 ## General information
-
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -76,19 +59,12 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx) to down
 | [Fisheries]{#fisheries}    | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
 | [IOTC main areas]{#IOareasMain}| M | Main IOTC areas of competence   | [IOTC main areas](#IOareasMain)  |
 
-
 ## Orignal data
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Original data type       | M | Preliminary/final status of the data | [Type of data](../domain/data/#types)      |
 | Types of Coverage   | M | Variable used for data coverage | [Types of Coverage](#coverageTypes)           |
-
-
-## Additional information
-
-Annual estimates of the numbers of interactions of longline fisheries and surface fisheries with endangered, threatened, and protected species by fishing fleet.
-
 # Referenced codelists
 
 ## Administrative and geospatial domains
