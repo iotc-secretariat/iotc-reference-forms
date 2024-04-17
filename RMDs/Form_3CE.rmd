@@ -95,7 +95,7 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx) to down
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Estimation   | M | Indicate if the data was estimated or actual recorded data | [Estimations](#estimations)     |
 | Original data type      | M | Preliminary/final status of the data | [Type of data](#types)      |
-| Original data source     | M | Source of information | [Catch and effort data sources](#sourcesCE)          |
+| Original data source     | M | Source of information | [Catch and effort data sources](#dataSourcesCE)          |
 | Original data processing | M | Processing applied to the data    | [Catch and effort data processings](#dataProcessingsCE) |
 | Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#dataRaising)| 
 | Source coverage type     | M | Variable used for data coverage | [Coverage types](#coverageTypes) |
@@ -207,20 +207,28 @@ b)    final if the statistics were estimated by using the complete set of data f
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-### Retained catches data sources (DTA.SRC.RC) {#dataSourcesRC}
+### Data raising (DTA.RA) {#dataRaising}
+
+Reference codes modeling the level of raising applied to the data (raised to totals / not raised to totals / unknown).
+
+```{r collapse = TRUE}
+out_dt(DATA_RAISINGS, "DATA_RAISINGS")
+```
+
+### Retained catches data sources (DTA.SRC.CE) {#dataSourcesCE}
 
 Reference codes modeling the source of the data provided through the retained catches data form.
 
 ```{r collapse = TRUE}
-out_dt(DATA_SOURCES_RC, "DATA_SOURCES_RC")
+out_dt(DATA_SOURCES_CE, "DATA_SOURCES_CE")
 ```
 
-### Retained catches data processings (DTA.PRO.RC) {#dataProcessingsRC}
+### Retained catches data processings (DTA.PRO.CE) {#dataProcessingsCE}
 
 Reference codes modeling the processing applied to the data provided through the retained catches data form.
 
 ```{r collapse = TRUE}
-out_dt(DATA_PROCESSINGS_RC, "DATA_PROCESSINGS_RC")
+out_dt(DATA_PROCESSINGS_CE, "DATA_PROCESSINGS_CE")
 ```
 
 ### Coverage types (DTA.COV.TY) {#coverageTypes}
@@ -237,4 +245,12 @@ Reference codes indicating if the data estimated for a stratum was actually reco
 
 ```{r collapse = TRUE}
 out_dt(DATA_ESTIMATIONS, "DATA_ESTIMATIONS")
+```
+
+### Effort units (FIA.EU) {#effortUnits}
+
+Reference codes that model the units used to report the level of effort, further stratified by the specific criteria characterizing each reporting form.
+
+```{r collapse = TRUE}
+out_dt(EFFORT_UNITS, "EFFORT_UNITSS")
 ```

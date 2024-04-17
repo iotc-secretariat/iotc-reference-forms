@@ -107,8 +107,7 @@ Contrary to single 3-CE form, where data specifications are to be defined in the
 | Month | M | The month of the fishing activities reported through the dataset | Integer |
 |Grid| M | the seven digits grid square of the fishing area in Indian Ocean   | [Grid codes](#IOTCgridsCESF) |
 | Species    | M | Species caught and discarded| [Species](#allSpecies)           |
-| Type of fate    | M | Fate of fish caught (retained or discarded)| [Types of fate](#typesOfFate)           |
-| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#raisings)| 
+
 
 
 ### Original data
