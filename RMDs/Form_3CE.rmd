@@ -23,25 +23,9 @@ output:
   
 This form supports the reporting of *Estimates of species-specific catches and efforts by fishing fleet, fishery, and space and time strata* for a given CPC / fleet.
 
-This form supports the reporting of estimates of geo-referenced of species-specific catches and efforts by fishing fleet, fishery, and space and time strata, _as update following revision of previously submitted catch and effort data_.
-Estimates of efforts expressed in units consistent with the recording requirements established in Res. 15/01 and complemented by numbers of fishing operations for longline fisheries and surface fisheries (IOTC-2022-SC25-R). The use of trips as effort unit is not recommended as trip length may vary substantially according to vessel length, fishing success, and multiple technical factors (e.g., fuel exhaustion). In the case of purse seine fisheries, other units could be added to refine the information on effort such as searching time and surface area explored.
-
-
-
-# Resources
+This form supports the reporting of estimates of geo-referenced of species-specific catches and efforts by fishing fleet, fishery, and space and time strata, _as initial submission for all fisheries of a CPC in June_.
 
 Click [here](https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx) to download an empty version of form 3-CE, or [return back](..) to the list of all IOTC statistical data reporting forms.
-
-# Supported resolutions
-
-- Res. [15/01](https://www.iotc.org/cmm/resolution-1501-recording-catch-and-effort-data-fishing-vessels-iotc-area-competence) -- _On the recording of catch and effort data by fishing vessels in the IOTC area of competence_
-- Res. [15/02](https://www.iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) -- _On mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-Contracting Parties (CPCs)_
-- Res. [18/05](https://www.iotc.org/cmm/resolution-1805-management-measures-conservation-billfishes-striped-marlin-black-marlin-blue) -- _On management measures for the conservation of the billfishes: striped marlin, black marlin, blue marlin and Indo-Pacific sailfish_
-- Res. [17/05](https://www.iotc.org/cmm/resolution-1705-conservation-sharks-caught-association-fisheries-managed-iotc) -- _On the conservation of sharks caught in association with fisheries managed by IOTC_
-- Res. [18/02](https://iotc.org/cmm/resolution-1802-management-measures-conservation-blue-shark-caught-association-iotc-fisheries) -- _On management measures for the conservation of blue shark caught in association with IOTC fisheries_
-- Res. [12/09](https://iotc.org/cmm/resolution-1209-conservation-thresher-sharks-family-alopiidae-caught-association-fisheries-iotc) -- _On the conservation of thresher sharks (family Alopiidae) caught in association with fisheries in the IOTC agreement area_
-- Res. [13/06](https://iotc.org/cmm/resolution-1306-scientific-and-management-framework-conservation-sharks-species-caught) -- _On a scientific and management framework on the conservation of sharks in association with IOTC managed fisheries_
-- Res. [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) -- _On the conservation of mobulid species caught in association with fisheries in the IOTC area of competence_
 
 # Reporting deadlines
 
@@ -67,48 +51,48 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx) to down
 
 ### General information
 
-| Element        | Requirement | Description | Code list  |
+| Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
-| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat |**Code** of the [Entity](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** of the [Countries](#countries) |
 
 ## Data elements
 
 ### Main data elements
 
-| Element        | Requirement | Description | Code list  |
+| Element        | Requirement | Description |Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Month | M | The month of the fishing activities reported through the dataset | Integer |
-| Fisheries   | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
-|Grid| M | the seven digits grid square of the fishing area in Indian Ocean   | [Grid codes](#IOTCgridsCESF) |
-| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
-| Type of fate    | M | Fate of fish caught (retained or discarded)| [Types of fate](#typesOfFate)           |
-| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#raisings)| 
-| Catch unit   | M | Units used to report the level of catches of a given species,|[Catch units](#catchUnits) |
+| Fisheries   | M | Type of fishing practices based on several factors| **Code** of the [Fisheries](#fisheries)            |
+|Grid| M | the seven digits grid square of the fishing area in Indian Ocean   |**Code** of the [IOTC Grids](https://data.iotc.org/reference/latest/domain/admin/#IOTCgridsCESF) or [IOTC artisanal grids](https://data.iotc.org/reference/latest/domain/admin/#FAOareas) |
+| Species    | M | Species caught and discarded|**Code** of the [Species](#allSpecies)           |
+| Type of fate    | M | Fate of fish caught (retained or discarded)|**Code** of the [Types of fate](#typesOfFate)           |
+| Data raising             | M | Level of raising (i.e., extrapolation) |**Code** of the [Raisings](#raisings)| 
+| Catch unit   | M | Units used to report the level of catches of a given species,|**Code** of the [Catch units](#catchUnits) |
 
 
 
 ### Original data
 
-| Element        | Requirement | Description | Code list  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Estimation   | M | Indicate if the data was estimated or actual recorded data | [Estimations](#estimations)     |
-| Original data type      | M | Preliminary/final status of the data | [Type of data](#types)      |
-| Original data source     | M | Source of information | [Catch and effort data sources](#dataSourcesCE)          |
-| Original data processing | M | Processing applied to the data    | [Catch and effort data processings](#dataProcessingsCE) |
-| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#dataRaising)| 
-| Source coverage type     | M | Variable used for data coverage | [Coverage types](#coverageTypes) |
+| Element        | Requirement | Description | Input value  |
+| :-------------: | :-----: | :----------------------- | :-----------: |
+| Estimation   | M | Indicate if the data was estimated or actual recorded data | **Code** of the [type of estimations](#estimations)     |
+| Original data type      | M | Preliminary/final status of the data |**Code** of the [type of data](#types)      |
+| Original data source     | M | Source of information | **Code** of the [catch and effort data sources](#dataSourcesCE)          |
+| Original data processing | M | Processing applied to the data    | **Code** of the [catch and effort data processings](#dataProcessingsCE) |
+| Data raising             | M | Level of raising (i.e., extrapolation) | **Code** of the [Raisings](#dataRaising)| 
+|source coverage type     | M | Variable used for data coverage |**Code** of the [coverage types](#coverageTypes) |
 |Source coverage value   | M | Value of coverage |in percentage |
 
 
 ### Effort units
 
-| Element        | Requirement | Description | Code list  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Primary     | M | Primary effort unit | [Effort units](#effortUnits)     |
-| Secondary    | O | Secondary effort unit (if any) | [Effort units](#effortUnits)     |
-| Tertiary    | O | Tertiary effort unit (if any) | [Effort units](#effortUnits)     |
+| Element        | Requirement | Description | Input value  |
+| :-------------: | :-----: | :----------------------- | :-----------: |
+| Primary     | M | Primary effort unit | **Code** of the effort units](#effortUnits)     |
+| Secondary    | O | Secondary effort unit (if any) | **Code** of the [effort units](#effortUnits)     |
+| Tertiary    | O | Tertiary effort unit (if any) |**Code** of the [effort units](#effortUnits)     |
 
 
 
@@ -150,12 +134,6 @@ Reference codes modeling the flag / reporting country submitting a dataset to th
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-### IOTC regular and irregular areas (GIS.IOTC.MA) {#IOTC_areas_(GISIOIAA)}
-
-Reference the types grid:
--  (1° grid area)[#IOgrids1x1] for surface fisheries
--  (5° grid area)[#IOgrids5x5] or finer for the SC for longline fisheries
--  (irregular areas) [#IOTCareasAR] for coastal fisheries.
 
 ## Fisheries and fishing technologies domains
 
