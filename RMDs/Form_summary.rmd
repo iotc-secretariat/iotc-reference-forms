@@ -19,170 +19,116 @@ output:
     smooth_scroll: FALSE
 ---
 
-# Description
+# Overview
 
 The templates for the submission of fisheries statistics to the IOTC are available as plain Microsoft Excel&trade; spreadsheets to simplify the process of entering and submitting all required information This format allows the reporting officer to enter the data either _directly_ (i.e., by hand) or _programmatically_ (i.e., through automated scripts), for later submission by e-mail or via e-MARIS to the IOTC Secretariat.
 
-# _Default_ forms
+## Form 1DR {#1DR}
 
-## Annual catch data
-
-### Form 1DR{#1DR}
-
-For the submission of the matrix of species presence in the catch (retained or discarded) by gear group.
-
-#### Resources 
+For the submission of data on [species presence in the catch](https://data.iotc.org/reference/latest/guidelines/#Species_presence_in_the_catch).
 
 + [Form description](./Form_1DR.html)
 + [Form template](./Form-1DR.xlsx)
 
-### Form 1IN{#1IN}
+## Form 1IN {#1IN}
 
-For the submission of interactions of longline and surface fisheries with endangered, threatened, and protected (ETP) species.
-
-#### Resources 
+For the submission data on [interactions of longline and surface fisheries with endangered, threatened, and protected (ETP) species](https://data.iotc.org/reference/latest/guidelines/#Interactions_with_Endangered,_Threatened_and_Protected_species).
 
 + [Form description](./Form_1IN.html)
 + [Form template](./Form-1IN.xlsx)
 
+## Form 1RC {#1RC}
 
-
-### Form 1RC{#1RC}
-
-For the submission of estimates of total annual retained catches in live weight stratified by fleet, fishery, main IOTC area, species, and quarter.
-
-#### Resources 
+For the submission of data on the total [amount of fish caught and retained](https://data.iotc.org/reference/latest/guidelines/#Amount_of_fish_caught_and_retained).
 
 + [Form description](./Form_1RC.html)
 + [Form template](./Form-1RC.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1RC/)
 
-### Form 1DI{#1DI}
+## Form 1DI {#1DI}
 
-For the submission of estimates of total annual discard levels (either in live-weight equivalent or in numbers) stratified by fleet, fishery, main IOTC area, species, condition at release, and quarter.
-
-#### Resources 
+For the submission of data on the [amount of discards](https://data.iotc.org/reference/latest/guidelines/#Amount_of_discards).
 
 + [Form description](./Form_1DI.html)
 + [Form template](./Form-1DI.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1DI/)
 
-## Active crafts data
+## Form 3CE {#3CE}
 
-### Form 2FC{#2FC}
+For the submission of data on [geo-referenced catches and efforts](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_catches_and_efforts).
 
-For the submission of the annual number of operating fishing vessels stratified by fleet, fishery, IOTC main area, boat type, mechanisation type, and size class.
-
-#### Resources 
-
-+ [Form description](./Form_2FC.html)
-+ [Form template](./Form-2FC.xlsx)
-
-## Catch and effort data
-
-### Form 3CE{#3CE}
-
-For the submission of species-specific catch and fishing effort stratified by fleet, fishery, regular grid or irregular fishing area, effort unit, species, and month. 
-
-This version of the form allows reporting data for multiple fisheries at the same time.
-
-#### Resources 
+This version of the form allows reporting data for multiple fisheries at the same time:
 
 + [Form description](./Form_3CE.html)
 + [Form template](./Form-3CE.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/3CE/)
 
-### Form 3CE-update{#3CE-update}
+This version of the form is suitable for the reporting of **updated** data for a specific fishery:
 
-This version of [Form 3CE](#3CE) is suitable for the reporting of **updated** data for a specific fishery.
-
-#### Resources 
-
-+ [Form description](./Form_3CE_update.html)
++ [Form description]( ./Form_3CE_update.html)
 + [Form template](./Form-3CE-update.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/update/3CE/)
 
-### Form 3AA{#3AA}
+## Form 4SF {#4SF}
 
-For the submission of interactions with anchored fish aggregating devices (aFADs) stratified by fleet, fishery, location of the interaction, type of aFAD and activity, and month.
+For the submission of data on [geo-referenced size frequencies](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_size_frequencies).
 
-If the interaction is followed by a set, the resulting catches should also be reported stratified by species, fate, and catch unit. 
-
-This version of the form allows reporting data for multiple fisheries at the same time.
-
-#### Resources 
-
-+ [Form description](./Form_3AA.html)
-+ [Form template](./Form-3AA.xlsx)
-
-### Form 3AA-update{#3AA-update}
-
-This version of [Form 3AA](#3AA) is suitable for the reporting of **updated** data for a specific fishery.
-
-#### Resources 
-
-+ [Form description](./Form_3AA_update.html)
-+ [Form template](./Form-3AA-update.xlsx)
-
-### Form 3DA{#3DA}
-
-For the submission of interactions by purse seine and supply vessels with drifting floating objects (dFOBs, i.e., drifting fish aggregating devices and natural objects) stratified by fleet, vessel, fishery, time and location of the interaction, and type of dFOB.
-
-If the interaction is followed by a set, the resulting catches should also be reported stratified by species, fate, and catch unit. 
-
-This version of the form allows reporting data for multiple vessels at the same time.
-
-#### Resources 
-
-+ [Form description](./Form_3DA.html)
-+ [Form template](./Form-3DA.xlsx)
-
-### Form 3DA-update{#3DA-update}
-
-This version of [Form 3DA](#3DA) is suitable for the reporting of **updated** data for a specific vessel.
-
-#### Resources 
-
-+ [Form description](./Form_3DA_update.html)
-+ [Form template](./Form-3DA-update.xlsx)
-
-### Form 3BU{#3BU}
-
-For the submission of daily positions of active buoys equipping dFADs and natural floating objects stratified by vessel and time.
-
-#### Resources 
-
-+ [Form description](./Form_3BU.html)
-+ [Form template](./Form-3BU.xlsx)
-+ [Interactive form validator](https://data.iotc.org/validators/ui/3BU/)
-
-## Size-frequency data
-
-### Form 4SF{#4SF}
-
-For the submission of annual length / weight data stratified by fleet, fishery, species, 5°x5° grid, type of measurement, measurement tool, fate, and month. 
-
-This version of the form allows reporting data for multiple fisheries and species at the same time.
-
-#### Resources
+This version of the form allows reporting data for multiple fisheries and species at the same time:
 
 + [Form description](./Form_4SF.html)
 + [Form template](./Form-4SF.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/4SF/)
 
-### Form 4SF-update{#4SF-update}
-
-This version of [Form 4SF](#4SF) is suitable for the reporting of **updated** data for a specific fishery and species
-
-#### Resources 
+This version of the form is suitable for the reporting of **updated** data for a specific fishery and species:
 
 + [Form description](./Form_4SF_update.html)
 + [Form template](./Form-4SF-update.xlsx)
 + [Interactive form validator](https://data.iotc.org/validators/ui/update/4SF/)
 
-## Socio-economic data
+## Form 3AA {#3AA}
 
-### Form 7PR{#7PR}
+For the submission of data on [activities related to anchored fish aggregating devices](https://data.iotc.org/reference/latest/guidelines/#AFAD-related_activities).
 
-[ TBD ]
+This version of the form allows reporting data for multiple fisheries at the same time:
+
++ [Form description](./Form_3AA.html)
++ [Form template](./Form-3AA.xlsx)
+
+This version of the form is suitable for the reporting of **updated** data for a specific fishery:
+
++ [Form description](./Form_3AA_update.html)
++ [Form template](./Form-3AA-update.xlsx)
+
+## Form 3DA{#3DA}
+
+For the submission of data on [interactions related to drifting floating objects](https://data.iotc.org/reference/latest/guidelines/#DFOB-related_activities).
+
+This version of the form allows reporting data for multiple vessels at the same time:
+
++ [Form description](./Form_3DA.html)
++ [Form template](./Form-3DA.xlsx)
+
+This version of the form is suitable for the reporting of **updated** data for a specific vessel:
+
++ [Form description](./Form_3DA_update.html)
++ [Form template](./Form-3DA-update.xlsx)
+
+## Form 3BU {#3BU}
+
+For the submission of data on [daily buoy positions](https://data.iotc.org/reference/latest/guidelines/#Daily_buoy_positions).
+
++ [Form description](./Form_3BU.html)
++ [Form template](./Form-3BU.xlsx)
++ [Interactive form validator](https://data.iotc.org/validators/ui/3BU/)
+
+## Form 2FC {#2FC}
+
+For the submission of data on [fishing craft statistics](https://data.iotc.org/reference/latest/guidelines/#Fishing_craft_statistics).
+
++ [Form description](./Form_2FC.html)
++ [Form template](./Form-2FC.xlsx)
+
+<!-- ## Form 7PR{#7PR} -->
+
+<!-- [ TBD ] -->
 

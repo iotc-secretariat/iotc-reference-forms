@@ -23,28 +23,18 @@ output:
   
 This form supports the reporting of the _Matrix table with species in rows and gear groups in columns._ For each species/gear combination, the cell must be filled with either a value of one (1) in case of positive catch or a value of zero (0) in case of absence of catch (i.e., no landing and no discard). Species include IOTC species, mobulid rays, common sharks, and other bycatch species. All gear groups (hooks and lines, pole-and-lines, longlines, purse seines, gillnets, and other gears) are included and further broken down by broad fishery category, i.e., [coastal](#iotccoastalfishery) and [industrial](#iotcindustrialfishery).
 
-# Resources
-
 Click [here](https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx) to download an empty version of form 1-DR, or [return back](..) to the list of all IOTC statistical data reporting forms.
-
-# Supported resolutions
-
-- Res. [15/01](https://www.iotc.org/cmm/resolution-1501-recording-catch-and-effort-data-fishing-vessels-iotc-area-competence) -- _On the recording of catch and effort data by fishing vessels in the IOTC area of competence_
-- Res. [18/07](https://www.iotc.org/cmm/resolution-1807-measures-applicable-case-non-fulfilment-reporting-obligations-iotc) -- _On measures applicable in case of non-fulfilment of reporting obligations in the IOTC_
-
 
 # Reporting deadlines
 
 -   **All fisheries**: 30 June (final)
 
-# Stratification
+# Reporting metadata
 
-## Reporting metadata
-
-### Submission information
+## Submission information
 
 | Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
+| :----------- | :----: | :----------------------- | :-------- | :------------ |
 | [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
 | [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
 | [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
@@ -52,8 +42,7 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx) to down
 | [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-### General information
-
+## General information
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -61,43 +50,37 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx) to down
 | [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](../domain/admin/#entities) |
 | [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](../domain/admin/#countries) |
 
+# Data elements
 
-## Data elements
-
-### Main data elements (already embedded in the form)
+## Main data elements (already embedded in the form)
 
 | Element        | Description | Code list  |
-| :----------------- | :----------------------- | :-------: |
+| :----------- | :-------------------------- | :-------: |
 | [Species]{#allSpecies}|Species include IOTC species, mobulid rays, common sharks, and other bycatch species, expected to be present by respective fisheries and gear groups | [Species](#allSpecies) |
 | [Gear groups]{#gearGroups} | Gear groups catching IOTC species and other species of interest | [Gear groups](#gearGroups) |
 | [Fishery categories]{#fisheryCategories} | Fishery categories by each gear group | [Fishery categories](#fisheryCategories)|
-
-
-## Additional information
-
--  Matrix table with species in rows and gear groups in columns. For each species/gear combination, the cell must be filled with either a value of 'one' (1) in case of positive catch or a value of 'zero' (0) in case of absence of catch (i.e., no landing and no discard). For shaded cells, the species/gear combination is not expected. 
 
 # Referenced codelists
 
 ### Countries (ADM.COU) {#countries}
 
-Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+Reference codes modelling the flag / reporting country submitting a dataset to the IOTC Secretariat.
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-### Gear groups (ADM.COU) {#gear_groups}
+### Gear groups (FIS.GG) {#gear_groups}
 
-Reference codes modeling the gear groups by which the matrix table is assessing for the reporting catch by species.
+Reference codes modelling the gear groups by which the matrix table is assessing for the reporting catch by species.
 
 ```{r collapse = TRUE}
 out_dt(GEAR_GROUPS, "GEAR_GROUPS")
 ```
 
-### Species_groups (ADM.COU) {#species_groups}
+### Species (SPC) {#species}
 
-Reference codes modeling the species by which the matrix table is assessing for the reporting catch by gear groups.
+Reference codes modelling the species by which the matrix table is assessing for the reporting catch by gear groups.
 
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES")

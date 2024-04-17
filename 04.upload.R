@@ -153,23 +153,23 @@ upload_form_docs = function(version) {
     )
   }
   
-  folder = full_folder(version)
+  #folder = full_folder(version)
   
-  folder = paste0(full_folder(version, "forms/interim/"))
-  
-  for(form in list.files(paste0("./out/HTML/interim/"), pattern = "*.html")) {
-    print(paste0("Uploading form document '", form, "' in ", folder, "..."))
-    
-    CURL_FTPu(
-      filename   = paste0("./out/HTML/interim/", form), 
-      target_url = paste0(ftp_url(folder), "/", form) 
-    )
-  }
+  # folder = paste0(full_folder(version, "forms/interim/"))
+  # 
+  # for(form in list.files(paste0("./out/HTML/interim/"), pattern = "*.html")) {
+  #   print(paste0("Uploading form document '", form, "' in ", folder, "..."))
+  #   
+  #   CURL_FTPu(
+  #     filename   = paste0("./out/HTML/interim/", form), 
+  #     target_url = paste0(ftp_url(folder), "/", form) 
+  #   )
+  # }
 }
 
 disseminate = function(version) {
   upload_forms(version)
-  upload_interim_forms(version)
+  #upload_interim_forms(version)
   upload_form_docs(version)
 }
 
