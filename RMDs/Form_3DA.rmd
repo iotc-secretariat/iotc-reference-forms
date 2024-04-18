@@ -111,23 +111,31 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA.xlsx) to down
 
 ### dFOB characteristics 
 
-Indicate if any of the components are found, and size of the dFOB. 
+Indicate if any of the components are found, and size of the dFOB, from both *surface* and *subsurface*. 
 
-<style type="text/css">
-  .component {width: 70%;}
-</style>
 
-<div class="component">
-|Surface (raft) | Subsurface (tail)|Description | Format |
-|:--------------------|:--------------------|:--------------------|:--------------------|
-|Plastic  |Plastic | Indicate if the dFOB contains plastic material| Boolean|
-|Metal  | Metal  | Indicate if the dFOB contains metal material| Boolean|
-|Length | Length | Length of dFOB| Decimal(cm) |
-|Width | Width | Width of dFOB| Decimal(cm) |
-|Height |Height |Height of dFOB|Decimal(cm)|
-|Mesh |Mesh | Indicate if the dFOB contains mesh| Boolean|
-|Mesh size  | Mesh size |Size of the mesh| Decimal(mm)|
+#### Surface (raft)
+|Element | Description | Unit  | Format  |
+|:---------------|:----------------------|:------------|:------------------|
+|Plastic  | Indicate if the dFOB contains plastic material| -|Boolean|
+|Metal  | Indicate if the dFOB contains metal material| - |Boolean|
+|Length | Length of dFOB| cm |Decimal |
+|Width | Width of dFOB|  cm | Decimal |
+|Height |Height of dFOB| cm |Decimal|
+|Mesh | Indicate if the dFOB contains mesh| - |Boolean|
+|Mesh size  | Size of the mesh|  mm  |Decimal|
 
+#### Subsurface (tail)
+
+|Element | Description | Unit  | Format  |
+|:---------------|:----------------------|:------------|:------------------|
+|Plastic  | Indicate if the dFOB contains plastic material| -|Boolean|
+|Metal  | Indicate if the dFOB contains metal material| - |Boolean|
+|Length | Length of dFOB| cm |Decimal |
+|Width | Width of dFOB|  cm | Decimal |
+|Height |Height of dFOB| cm |Decimal|
+|Mesh | Indicate if the dFOB contains mesh| - |Boolean|
+|Mesh size  | Size of the mesh|  mm  |Decimal|
 
 # Referenced codelists
 
