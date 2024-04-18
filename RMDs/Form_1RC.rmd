@@ -35,46 +35,43 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx) to down
 
 ## Submission information
 
-| Element        | Requirement | Description | Format | Example |
-| :----------- | :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+| Element                          | Requirement | Description                                                                                      | Format                                             | Example                                              |
+|:------------|:-----------:|:--------------------|:------------|:------------|
+| [Focal point full name]{#fcname} |      M      | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat           | Plain text                                         | John Doe                                             |
+| [Focal point email]{#fcemail}    |      M      | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address                                | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| [Organisation name]{#orgname}    |      M      | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat          | Plain text                                         | National Institute of Fisheries                      |
+| [Organisation email]{#orgemail}  |      O      | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address                                | [nif\@gov.sc](mailto:nif@gov.sc){.email}             |
+| [Finalisation date]{#findate}    |      M      | Date of finalisation of the dataset                                                              | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27                                           |
+| [Submission date]{#subdate}      |      M      | Date of submission of the dataset                                                                | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21                                           |
 
 ## General information
 
-| Element | Requirement | Description | Code list  |
-| :------- | :-----: | :------------------- | :-------: |
-=======
-| Element        | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | **Code** of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entity](#countries) codelist |
-| [Flag state]{#repflagstate} | M | **Code** of the country registration of the fishery vessels | **Code** from [Countries](#countries) codelist |
+| Element                       | Requirement | Description | Input value                   |
+|:-----------------|:------------:|:------------------------|:------------:|
+| [Reporting year]{#repyear}     |      M      | Gregorian calendar year of the fishing activities reported through the dataset |                    Integer                     |
+| [Reporting entity]{#repentity} |      M      | **Code** of the entity reporting the dataset to the IOTC Secretariat           |  **Code** from [Entity](#countries) codelist   |
+| [Flag state]{#repflagstate}    |      M      | **Code** of the country registration of the fishery vessels                    | **Code** from [Countries](#countries) codelist |
 
 # Data elements
 
 ## Main data elements
 
-| Element        | Requirement | Description | Input value  |
-| :------- | :-----: | :----------------------- | :----------------------- |
-| Quarter | O  | Fishing time period | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
-| Fishery | M | IOTC-defined fisheries  | **Code** from [Fisheries](#fisheries) codelist |
-| IOTC area | M | Main IOTC areas | **Code** from [IOTC main areas](#IOTCareasMain) codelist |
-| Retain reason | M | Reason for retaining the catch onboard | **Code** from [Reasons for retaining](#retainReasons) codelist |
-| Species | M | Species caught and retained | **Code** from [Species](#allSpecies) codelist |
+| Element       | Requirement | Description                            | Input value                                                                    |
+|:-------------|:------------:|:----------------------|:----------------------|
+| Quarter       |      O      | Fishing time period                    | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
+| Fishery       |      M      | IOTC-defined fisheries                 | **Code** from [Fisheries](#fisheries) codelist                                 |
+| IOTC area     |      M      | Main IOTC areas                        | **Code** from [IOTC main areas](#IOTCareasMain) codelist                       |
+| Retain reason |      M      | Reason for retaining the catch onboard | **Code** from [Reasons for retaining](#retainReasons) codelist                 |
+| Species       |      M      | Species caught and retained            | **Code** from [Species](#allSpecies) codelist                                  |
 
 ## Original data
 
-| Element        | Requirement | Description | Code list  |
-| :----------------- | :-----: | :----------------------- | :----------- |
-| Original data type | M | Preliminary/final status of the data | **Code** from [Type of data](#types) codelist |
-| Original data source | M | Source of information | **Code** from [Retained catches data sources](#dataSourcesRC) codelist |
-| Original data processing | M | Processing applied to the data    | **Code** from [Retained catches data processings](#dataProcessingsRC) codelist |
-| Source coverage type     | M | Variable used for data coverage | **Code** from [Coverage types](#coverageTypes) codelist |
+| Element                  | Requirement | Description                          | Code list                                                                      |
+|:-----------------|:-------------:|:------------------------|:--------------|
+| Original data type       |      M      | Preliminary/final status of the data | **Code** from [Type of data](#types) codelist                                  |
+| Original data source     |      M      | Source of information                | **Code** from [Retained catches data sources](#dataSourcesRC) codelist         |
+| Original data processing |      M      | Processing applied to the data       | **Code** from [Retained catches data processings](#dataProcessingsRC) codelist |
+| Source coverage type     |      M      | Variable used for data coverage      | **Code** from [Coverage types](#coverageTypes) codelist                        |
 
 # Referenced codelists
 
@@ -141,8 +138,8 @@ out_dt(RETAIN_REASONS, "RETAIN_REASONS")
 
 Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
 
-a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
-b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+a)  preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+b)  final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
