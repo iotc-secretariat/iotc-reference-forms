@@ -51,6 +51,7 @@ read_codelist = function(base_url = "https://data.iotc.org/reference/latest/doma
 
 # Reads all required codelists from the (remote) repository on https://data.iotc.org/reference/latest/domain/<domain>/codelists/<codelist>_<codelist_version>
 
+ENTITIES        = read_codelist(domain = "admin", codelist = "ENTITIES")
 COUNTRIES       = read_codelist(domain = "admin", codelist = "COUNTRIES")
 IOTC_MAIN_AREAS = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_MAIN_AREAS")
 FAO_AREAS = read_codelist(domain = "admin", schema = "gis", codelist = "FAO_AREAS")

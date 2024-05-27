@@ -19,37 +19,19 @@ output:
     smooth_scroll: FALSE
 ---
   
-
 # Description
   
 This form supports the reporting of geographic position and description of each _fishing activity conducted around each anchored fish aggregated devices(AFAD), **annually,**_ along with estimates of retained catches and discards in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species.
 
-# Resources
-
-Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to download an empty version of form 3-AA, or [return back](..) to the list of all IOTC statistical data reporting forms.
-
-# Supported resolutions
-
--   [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - *Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)*
--   [23/01](https://iotc.org/cmm/resolution-2301-management-anchored-fish-aggregating-devices-afads) - *On the conservation of sharks caught in association with fisheries managed by IOTC*
-
-
-# Reference species groups
-
--   **IOTC species** [ mandatory ]
--   **Sharks** [ mandatory ]
--   **Other bycatch / non-IOTC species** [ voluntary ]
+Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to download an empty version of form 3-AA, or [return back](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
--   **Surface fisheries**: 30 June (final)
+- **Surface fisheries**: 30 June (final)
 
+# Reporting metadata
 
-# Stratification
-
-## Reporting metadata
-
-### Submission information
+## Submission information
 
 | Element        | Requirement | Description | Format | Example |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
@@ -60,8 +42,7 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to down
 | [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-
-### General information
+## General information
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -69,16 +50,9 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to down
 | [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
 | [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
 
+# Data elements
 
-### Data specifications
-
-| Element        | Requirement | Description | Code list  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type       | M | Preliminary/final status of the data | [Type of data](#types)      |
-
-## Data elements
-
-### Main data elements
+## Main data elements
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -87,12 +61,12 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to down
 | Fisheries   | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
 | Latitude| M | Horizontal distances north or south of the Equation   | in decimal degrees  |
 | Longitude | M | Vertical distances east or west of the prime meridian | in decimal degrees |
-| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
-| Type of fate    | M | Fate of fish caught (retained or discarded)| [Types of fate](#typesOfFate)           |
-| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#raisings)| 
+| Species | M | Species caught and discarded| [Species](#allSpecies)           |
+| Type of fate  | M | Fate of fish caught (retained or discarded)| [Types of fate](#typesOfFate)           |
+| Data raising  | M | Level of raising (i.e., extrapolation) | [Raisings](#raisings) | 
 | Catch unit   | M | Units used to report the level of catches of a given species,|[Catch units](#catchUnits) |
 
-### aFOB data
+## aFOB data
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -100,22 +74,17 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to down
 | Type| M | Type of FOBs    | [AFOB types](#FOBtypes) |
 | Activity    | M | Type of activities undertaken when visiting or deploying  FOB | [AFOB activity types](#FOBactivityTypes) |
 
-
-## Additional information
-
-Annual submission of information of daily activities conducted around AFADs, including catches retained and discarded.
-
-
 # Referenced codelists
+
+## Administrative and geospatial domains
 
 ### Countries (ADM.COU) {#countries}
 
-Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+Reference codes modelling the flag / reporting country submitting a dataset to the IOTC Secretariat.
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
-
 
 ## Fisheries and fishing technologies domains
 
@@ -128,22 +97,12 @@ An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs i
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
 ```
-### Data types (DTA.TY) {#types}
-
-Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
-
-a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
-b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
-
-```{r collapse = TRUE}
-out_dt(DATA_TYPES, "DATA_TYPES")
-```
 
 ## Biological and morphometrics domains
 
 ### All species (SPC.ALL) {#allSpecies}
 
-Reference codes modeling the species interacting with the fisheries as:
+Reference codes modelling the species interacting with the fisheries as:
 
 -   target species (retained or discarded)
 -   bycatch species (retained or discarded)
@@ -156,13 +115,23 @@ These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fi
 out_dt(SPECIES, "SPECIES")
 ```
 
-
 ## Data and metadata domains
 
+### Data types (DTA.TY) {#types}
+
+Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
+
+a. Preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+
+b. Final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+
+```{r collapse = TRUE}
+out_dt(DATA_TYPES, "DATA_TYPES")
+```
 
 ### Types of anchored fishing object (aFOB) (FOB.AFT) {#FOBtypes}
 
-Reference codes that model the types of anchored FOBs.
+Reference codes modelling the types of anchored FOBs.
 
 ```{r collapse = TRUE}
 out_dt(FOB_TYPES, "FOB_TYPES")
@@ -170,7 +139,7 @@ out_dt(FOB_TYPES, "FOB_TYPES")
 
 ### Types of anchored fishing activity types (aFOB) (FOB.AAT) {#FOBactivityTypes}
 
-Reference codes that model the type of activities undertaken when interacting with an anchored FOB.
+Reference codes modelling the type of activities undertaken when interacting with an anchored FOB.
 
 ```{r collapse = TRUE}
 out_dt(AFOB_ACTIVITIES, "AFOB_ACTIVITIES")
@@ -186,7 +155,7 @@ out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 
 ### Raising (DTA.RA) {#raisings}
 
-Reference codes modeling the level of raising applied to the data, and in particular if data:
+Reference codes modelling the level of raising applied to the data, and in particular if data:
 
 -  have been raised to the represent the total catches and effort in the year concerned (RT),
 -  have been raised but does not represent the total catches and effort in the year concerned (PR), or
@@ -198,9 +167,8 @@ out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 
 ### Catch units (FIA.CU) {#catchUnits}
 
-Reference codes that model the units used to report the level of catches / discards of a given species, further stratified by the specific criteria characterizing each reporting form.
+Reference codes modelling the units used to report the level of catches / discards of a given species, further stratified by the specific criteria characterizing each reporting form.
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
 ```
-
