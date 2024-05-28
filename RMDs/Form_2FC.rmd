@@ -28,7 +28,7 @@ For each stratum, the data coverage -- i.e., the percentage (%) of vessels or fi
 
 # Resources
 
-Click [here](https://data.iotc.org/reference/latest/forms/Form-2FC.xlsx) to download an empty version of form 1-RC, or [return back](..) to the list of all IOTC statistical data reporting forms.
+Click [here](https://data.iotc.org/reference/latest/forms/Form-2FC.xlsx) to download an empty version of form 1-RC, or [return back](../forms) to the list of all IOTC statistical data reporting forms.
 
 
 #### Conservation and Management Measures

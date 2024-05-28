@@ -36,19 +36,7 @@ Length frequency data could be reported:
 - or for multiple fisheries and species using the form [4-SF multiple](https://data.iotc.org/reference/latest/forms/Form-4SF-multiple.xlsx). 
 Contrary to single 4-SF form, where data specifications are to be defined in the metadata worksheet, in the 4-SF multiple these are listed in the data worksheet to align the data with specifications for each fisheries and species. 
 
-
-[return back](..) to the list of all IOTC statistical data reporting forms.
-
-# Supported resolutions
-
-+ [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - _Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)_
-+ [17/05](https://iotc.org/cmm/resolution-1705-conservation-sharks-caught-association-fisheries-managed-iotc) - _On the conservation of sharks caught in association with fisheries managed by IOTC_
-+ [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) - _On the conservation of mobulid rays caught in association with fisheries in the IOTC area of competence_
-+ [12/04](https://iotc.org/cmm/resolution-1204-conservation-marine-turtles) - _On the conservation of marine turtles_
-+ [12/06](https://iotc.org/cmm/resolution-1206-reducing-incidental-bycatch-seabirds-longline-fisheries) - _On reducing the incidental bycatch of seabirds in longline fisheries_
-+ [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans) - _On the conservation of cetaceans_
-+ [13/05](http://www.iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus) - _On the conservation of whale sharks (Rhincodon typus)_
-
+[return back](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Reporting deadlines
 

@@ -21,34 +21,17 @@ output:
   
 # Description
   
-_Length frequency_ is defined by [UN ESCWA](https://www.unescwa.org/sd-glossary/length-frequency-distribution-lfd) as _the number of individuals of a catch or catch sample in each length interval_. The _modal size_ is the length group with the higher number of individuals. 
-
-Length frequency refers to individual body lengths (or weights) of species per fleet, fishery, year, gear, type of school, month and spatial areas
-
-This form supports the reporting of _annual submission of estimates of sample size taken by number (or weight)_ measures of individual sizes of fish for the IOTC species, common sharks, and other bycatch species. Straight length measurements made with a calliper or measuring board are recommended over fish weights and vary according to fish groups: (i) lower-jaw fork length for billfish, (ii) upper-jaw fork length for tunas, mackerels, sharks, and all other bycatch fish species with forked or lunate tails, (iii) standard length for bycatch fish species with rounded or truncate tails, and (iv) disc width for rays. The Secretariat further recommends the use of length intervals for the IOTC species and most commonly caught sharks along with maximum length intervals and ranges of valid values which are used to filter and consolidate the size-frequency datasets made available to support the IOTC process (see Recommended measurements).
+This form supports the reporting of _annual submission of estimates of sample size taken by number (or weight)_ measures of individual sizes of fish for the IOTC species, common sharks, and other bycatch species. _Length frequency_ is defined as _the number of individuals of a catch or catch sample in each length interval_ ([UN ESCWA](https://www.unescwa.org/sd-glossary/length-frequency-distribution-lfd). The _modal size_ is the length group with the higher number of individuals. Straight length measurements made with a calliper or measuring board are recommended over fish weights and vary according to fish groups: (i) lower-jaw fork length for billfish, (ii) upper-jaw fork length for tunas, mackerels, sharks, and all other bycatch fish species with forked or lunate tails, (iii) standard length for bycatch fish species with rounded or truncate tails, and (iv) disc width for rays. The Secretariat further recommends the use of length intervals for the IOTC species and most commonly caught sharks along with maximum length intervals and ranges of valid values which are used to filter and consolidate the size-frequency datasets made available to support the IOTC process (see Recommended measurements).
 
 Sampling coverage shall be set to at least one (1) fish measured by tonne caught by fishery and species, with samples being representative of all the periods and areas fished. For each stratum, the data coverage – i.e., the percentage (%) of catch/effort sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates. In addition, raised estimates of the size samples must be reported to the Secretariat to account for bias due to unrepresentative sampling. Documents covering sampling and raising procedures must be provided for each fishery and species.
 
-# Resources
-
 Length frequency data could be reported:
-- by individual fishery and species through the  single form [4-SF](https://data.iotc.org/reference/latest/forms/Form-4SF.xlsx);
-- or for multiple fisheries and species using the form [4-SF multiple](https://data.iotc.org/reference/latest/forms/Form-4SF-multiple.xlsx). 
-Contrary to single 4-SF form, where data specifications are to be defined in the metadata worksheet, in the 4-SF multiple these are listed in the data worksheet to align the data with specifications for each fisheries and species. 
 
+- by individual fishery and species through the single form [4-SF](https://data.iotc.org/reference/latest/forms/Form-4SF.xlsx);
 
-[return back](..) to the list of all IOTC statistical data reporting forms.
+- or for multiple fisheries and species using the form [4-SF multiple](https://data.iotc.org/reference/latest/forms/Form-4SF-multiple.xlsx). Contrary to single 4-SF form, where data specifications are to be defined in the metadata worksheet, in the 4-SF multiple these are listed in the data worksheet to align the data with specifications for each fisheries and species. 
 
-# Supported resolutions
-
-+ [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - _Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)_
-+ [17/05](https://iotc.org/cmm/resolution-1705-conservation-sharks-caught-association-fisheries-managed-iotc) - _On the conservation of sharks caught in association with fisheries managed by IOTC_
-+ [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) - _On the conservation of mobulid rays caught in association with fisheries in the IOTC area of competence_
-+ [12/04](https://iotc.org/cmm/resolution-1204-conservation-marine-turtles) - _On the conservation of marine turtles_
-+ [12/06](https://iotc.org/cmm/resolution-1206-reducing-incidental-bycatch-seabirds-longline-fisheries) - _On reducing the incidental bycatch of seabirds in longline fisheries_
-+ [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans) - _On the conservation of cetaceans_
-+ [13/05](http://www.iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus) - _On the conservation of whale sharks (Rhincodon typus)_
-
+[return back](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
@@ -71,99 +54,92 @@ Contrary to single 4-SF form, where data specifications are to be defined in the
 | [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-
 ### General information
 
-| Element        | Requirement | Description | Code list  |
+| Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
-| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
-
-
-
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 
 ## Data elements
 
 ### Main data elements
 
-| Element        | Requirement | Description | Code list  |
+| Element | Requirement | Description |Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Month | M | The month of the fishing activities reported through the dataset | Integer |
-| Fisheries   | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
-|Grid| M | the seven digits grid square of the fishing area in Indian Ocean   | [Grid codes](#geospatialData) |
-| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
-|Sex| M | The sex of species sampled   | [Sex](#sex) |
-| Type of fate    | M | Fate of fish caught (retained or discarded)| [Types of fate](#typesOfFate)           |
-| Fate   | M | Reason for retained or discarded of the catch | [Fate](#fates)           |
-
+| Fisheries  | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries)            |
+|Grid| M | the seven digits grid square of the fishing area in Indian Ocean | **Code** from [Grids](#geospatialData) |
+| Species | M | Species caught and discarded| **Code** from [Species](#allSpecies) |
+|Sex| M | The sex of species sampled | **Code** from [Sexes](#sex) |
+| Type of fate | M | Fate of fish caught (retained or discarded)| **Code** from [Types of fate](#typesOfFate)           |
+| Fate | M | Reason for retained or discarded of the catch | **Code** from [Fates](#fates) |
 
 ### Original data
 
-| Element        | Requirement | Description | Code list  |
+| Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Estimation   | M | Indicate if the data was estimated or actual recorded data | [Estimations](#estimations)     |
-| Original data type      | M | Preliminary/final status of the data | [Type of data](#types)      |
-| Original data source     | M | Source of information | [Size frequency data sources](#sourcesSF)          |
-| Original data processing | M | Processing applied to the data    | [Size frequency data processings](#processingsSF) |
-| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#dataRaising)| 
-| Source coverage type     | M | Variable used for data coverage | [Coverage types](#coverageTypes) |
-| Source coverage value   | M | Value of coverage |in percentage |
+| Estimation | M | Indicate if the data was estimated or actual recorded data | **Code** from [Estimations](#estimations) |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
+| Original data source | M | Source of information | [Size frequency data sources](#sourcesSF) |
+| Original data processing | M | Processing applied to the data  | **Code** from [Size frequency data processings](#processingsSF) |
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising) | 
+| Source coverage type | M | Variable used for data coverage | **Code** from [Coverage types](#coverageTypes) |
+| Source coverage value  | M | Value of coverage | Percentage |
 
 ### Measurements
 
-| Element        | Requirement | Description | Code list  |
+| Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Type of Measurement    | M | Given measurement types (weight or length) | [Measurement types](#typesOfMeasurement)     |
-| Measured type    | M |Type of measure recorded | [Type measured](#Measurement)     |
-| Measurement Tool    | M | Tool used to take the measurement | [Measurement tools](#allMeasurementTools)     |
-
-
+| Type of Measurement | M | Given measurement types (weight or length) | **Code** from [Types of measurement](#typesOfMeasurement)     |
+| Measurements | M | Type of measure recorded | **Code** from [Measurements](#Measurements)     |
+| Measurement tool | M | Tool used to take the measurement | **Code** from [Measurement tools](#allMeasurementTools) |
 
 ### Sample data
 
-| Element        | Requirement | Description | Code list  |
+| Element  | Requirement | Description | Data type  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Size class (_lo_)  | M | The lowest size recorded for the sample | integer    |
-| Size class (_hi_)  | M | The highest size recorded for the sample | integer    |
-| Number of samples | M | The sample size of strata| integer    |
-| Number of fish  | M | The number of fish measured   | integer    |
-
-
+| Size class (_lo_)  | M | The lowest size recorded for the sample | Integer |
+| Size class (_hi_)  | M | The highest size recorded for the sample | Integer |
+| Number of samples | M | The sample size of strata | Integer |
+| Number of fish  | M | The number of fish measured | Integer |
 
 ## Additional information
 
-
-### The spatial and temporal resolutions, and catch units.
+### The spatial and temporal resolutions, and catch units
 
 | Category | Temporal resolution | Spatial resolution | Catch unit |
 | :-------- | :--------- | :---------- | :------------- |
 All fisheries  | Month | [5° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids5x5) or finer for the SC  | number of fish |
 
-Paragraph 5 of resolution 15/02: Alternatively, size data for longline fleets may be provided as part of the Regional Observer Scheme where such fleets have at least 5% observer coverage of all fishing operations.
+Alternatively, size data for longline fleets may be provided as part of the Regional Observer Scheme where such fleets have at least 5% observer coverage of all fishing operations (Res.  [15/02](https://www.iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and); Para. 5).
 
+# Reference codelists
 
-# Referenced codelists
+## Entities (ADM.ENT) {#Entities}
 
-## Administrative and geospatial domains
-                  
-### Countries (ADM.COU) {#countries}
+Reference codes modelling the entity submitting the dataset to the IOTC Secretariat.
 
-Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+```{r collapse = TRUE}
+out_dt(ENTITIES, "ENTITIES")
+```
+
+## Countries (ADM.COU) {#countries}
+
+Reference codes modelling the flag / reporting country submitting the dataset to the IOTC Secretariat.
                   
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-### IOTC regular grids (GIS.IOTC.CESF) {#geospatialData}
+## IOTC regular grids (GIS.IOTC.CESF) {#geospatialData}
 
 Codes for all 1°x1° and 5°x5° grids that overlap - at least partially - with the IOTC convention area.
 
 Due to to the large size of the dataset, this is not included for filtering / browsing, but can be directly downloaded as a CSV from here: [IOTC_GRIDS_CE_SF](`r paste0("https://data.iotc.org/reference/latest/domain/admin/codelists/IOTC_GRIDS_CE_SF_", version("IOTC_GRIDS_CE_SF"), ".csv")`).
 
-## Fisheries and fishing technologies domains
-
-### Fisheries (FIS) {#fisheries}
+## Fisheries (FIS) {#fisheries}
 
 An _ad-hoc_ classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
 
@@ -173,62 +149,57 @@ An [_interactive wizard_](https://data.iotc.org/fisheries/wizard) to help CPCs i
 out_dt(FISHERIES, "FISHERIES")
 ```
 
-## Biological and morphometrics domains
+## Measurement types (MOR.MTY) {#typesOfMeasurement}
 
-### Measurement type (MOR.MTY) {#typesOfMeasurement}
-
-Reference codes that model the measurement types as lengths or weights collected as the size frequency.
+Reference codes modelling the measurement types as lengths or weights collected as the size frequency.
 
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_MEASUREMENT, "TYPES_OF_MEASUREMENT")
 ```
 
-### Measurement types (MOR.MES)) {#Measurement}
+## Measurements (MOR.MES)) {#Measurements}
 
-Reference codes that model the measurement types, combining those specific for individual lengths and weights used to measure individual species.
+Reference codes modelling the measurement types, combining those specific for individual lengths and weights used to measure individual species.
 
 ```{r collapse = TRUE}
 out_dt(MEASUREMENTS, "MEASUREMENTS")
 ```
 
+## Measurement tools (MOR.MTO) {#allMeasurementTools}
 
-### Measurement tools (MOR.MTO) {#allMeasurementTools}
-
-Reference codes that model the measurement tools, combining those specific for individual lengths and weights used to measure individual species.
+Reference codes modelling the measurement tools, combining those specific for individual lengths and weights used to measure individual species.
 
 ```{r collapse = TRUE}
 out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
 ```
 
+## Types of fate (SPC.FTT) {#typesOfFate}
 
-
-### Type of fate (SPC.FTT) {#typesOfFate}
-
-Reference codes  used to identify fate as indicating that the fish has been retained or discarded.
+Reference codes used to identify fate as indicating that the fish has been retained or discarded.
 
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```
 
-### Fates (SPC.FTE.\*) {#fates}
+## Fates (SPC.FTE.\*) {#fates}
 
-Reference codes  used to identify fate combined the reasons for retain and those for discard.
+Reference codes used to identify fate combined the reasons for retain and those for discard.
 
 ```{r collapse = TRUE}
 out_dt(FATES, "FATES")
 ```
 
-### Sex (MOR.SX) {#sex}
+## Sexes (MOR.SX) {#sex}
 
-Reference codes  used to identify fate combined the reasons for retain and those for discard.
+Reference codes used to identify sex.
 
 ```{r collapse = TRUE}
 out_dt(SEX, "SEX")
 ```
 
-### All species (SPC.ALL) {#allSpecies}
+## All species (SPC.ALL) {#allSpecies}
 
-Reference codes modeling the species interacting with the fisheries as:
+Reference codes modelling the species interacting with the fisheries as:
 
 + target species (retained or discarded)
 + bycatch species (retained or discarded)
@@ -242,54 +213,53 @@ These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fi
 out_dt(SPECIES, "SPECIES")
 ```
 
-## Data and metadata domains
+## Data types (DTA.TY) {#types}
 
-### Data types (DTA.TY) {#types}
+Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
 
-Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+a. Preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
 
-a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
-b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+b. Final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-### Data raising (DTA.RA) {#dataRaising}
+## Data raising (DTA.RA) {#dataRaising}
 
-Reference codes modeling the level of raising applied to the data (raised to totals / not raised to totals / unknown).
+Reference codes modelling the level of raising applied to the data (raised to totals / not raised to totals / unknown).
 
 ```{r collapse = TRUE}
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
-### Size-frequency data sources (DTA.SRC.SF){#sourcesSF}
+## Size-frequency data sources (DTA.SRC.SF){#sourcesSF}
 
-Reference codes modeling the source of the data provided through the size-frequency data form
+Reference codes modelling the source of the data provided through the size-frequency data form.
 
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_SF, "DATA_SOURCES_SF")
 ```
 
-### Size-frequency data processings (DTA.PRO.SF) {#processingsSF}
+## Size-frequency data processings (DTA.PRO.SF) {#processingsSF}
 
-Reference codes modeling the processing applied to the data provided through the size-frequency data form.
+Reference codes modelling the processing applied to the data provided through the size-frequency data form.
 
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_SF, "DATA_PROCESSINGS_SF")
 ```
 
-### Coverage types (DTA.COV.TY) {#coverageTypes}
+## Coverage types (DTA.COV.TY) {#coverageTypes}
 
-Reference codes modeling the type of coverage for the raw information used to obtain the data provided through a specific form.
+Reference codes modelling the type of coverage for the raw information used to obtain the data provided through a specific form.
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
 ```
 
-### Estimations (DTA.ES) {#estimations}
+## Estimations (DTA.ES) {#estimations}
 
-Reference codes indicating if the data estimated for a stratum was actually recorded in the stratum or derived from comparable strata through a substitution scheme.
+Reference codes indicating if the data estimated for a stratum were actually recorded in the stratum or derived from comparable strata through a substitution scheme.
 
 ```{r collapse = TRUE}
 out_dt(DATA_ESTIMATIONS, "DATA_ESTIMATIONS")

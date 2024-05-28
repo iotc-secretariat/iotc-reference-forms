@@ -23,7 +23,7 @@ output:
   
 This form supports the reporting of data on the *number of interactions with marine turtles, seabirds, mobulid rays, cetaceans, and whale sharks*. CPCs having national and state legislation for protecting whale sharks (_Rhincodon typus_) are encouraged to provide the data although they are exempt from reporting  (Res. [13/05](https://iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus)). CPCs having national and state legislation for protecting cetaceans are encouraged to provide the information to the Secretariat (Res. [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans)). For each stratum, the data coverage -- i.e., the percentage (%) of occurrences of interactions sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
-Click [here](https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx) to download an empty version of form 1-IN, or [return back](..) to the list of all IOTC statistical data reporting forms.
+Click [here](https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx) to download an empty version of form 1-IN, or [return back](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Reporting deadlines
 

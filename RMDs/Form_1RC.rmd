@@ -23,7 +23,7 @@ output:
 
 This form supports the reporting of *estimates of retained catches in live weight equivalent (metric tonnes; t)* for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
-Click [here](https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx) to download an empty version of form 1-RC, or [return back](..) to the list of all IOTC statistical data reporting forms.
+Click [here](https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx) to download an empty version of form 1-RC, or [return back](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
@@ -35,7 +35,7 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx) to down
 
 ## Submission information
 
-| Element                          | Requirement | Description                                                                                      | Format                                             | Example                                              |
+| Element  | Requirement | Description | Format | Example                                              |
 |:------------|:-----------:|:--------------------|:------------|:------------|
 | [Focal point full name]{#fcname} |      M      | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat           | Plain text                                         | John Doe                                             |
 | [Focal point email]{#fcemail}    |      M      | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address                                | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |

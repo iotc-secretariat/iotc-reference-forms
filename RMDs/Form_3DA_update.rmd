@@ -27,16 +27,11 @@ When present, information on buoy identifier, knowledge of the buoy position, an
 
 # Resources
 
-Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx) to download an empty version of form 3-DA-update, or [return back](..) to the list of all IOTC statistical data reporting forms.
-
-# Supported resolutions
-
--   Res. [15/02](https://www.iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) -- *On mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-Contracting Parties (CPCs)*
--   Res. [19/02](https://iotc.org/cmm/resolution-1902-procedures-fish-aggregating-devices-fads-management-plan) -- *Procedures on a fish aggregating devices (FADs) management plan*
+Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx) to download an empty version of form 3-DA-update, or [return back](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
--   **Surface fisheries**: 30 June (final)
+- **Surface fisheries**: 30 June (final)
 
 # Stratification
 
@@ -51,7 +46,6 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx) 
 | [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-
 ### General information
 
 | Element        | Requirement | Description | Code list  |
@@ -63,14 +57,11 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx) 
 | Vessel name | M | Name of vessel monitoring the buoy  | Plain text  |
 | Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy  | Plain text (_IOTCxxxxxx_) |
 
-
-
 ### Data specifications
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Original data type       | M | Preliminary/final status of the data | [Type of data](#types)      |
-
 
 ## Data elements
 
@@ -87,9 +78,7 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx) 
 | Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#raisings)| 
 | Catch unit   | M | Units used to report the level of catches of a given species,|[Catch units](#catchUnits) |
 
-
 ### Buoy data
-
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -97,7 +86,6 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx) 
 | Identifier   | M | FOB identification (Deacon ID) | Plain text      |
 | Position| M | Indicate if the vessel have access/knowledge of the buoy position (_ownership_) | boolean |
 | Activity    | M | Type of activities undertaken when visiting or deploying  FOB | [buoy activity types](#FOBbuoyActivityTypes) |
-
 
 ### dFOB data
 
@@ -111,8 +99,8 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx) 
 
 Indicate if any of the components are found, and size of the dFOB, from both *surface* and *subsurface*. 
 
-
 #### Surface (raft)
+
 |Element | Description | Unit  | Format  |
 |:---------------|:----------------------|:------------|:------------------|
 |Plastic  | Indicate if the dFOB contains plastic material| -|Boolean|
@@ -135,14 +123,13 @@ Indicate if any of the components are found, and size of the dFOB, from both *su
 |Mesh | Indicate if the dFOB contains mesh| - |Boolean|
 |Mesh size  | Size of the mesh|  mm  |Decimal|
 
-
 # Referenced codelists
 
 ## Administrative and geospatial domains
 
 ### Countries (ADM.COU) {#countries}
 
-Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+Reference codes modelling the flag / reporting country submitting a dataset to the IOTC Secretariat.
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
@@ -150,7 +137,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 ### Data types (DTA.TY) {#types}
 
-Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
 
 a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
 b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
@@ -159,9 +146,7 @@ b)    final if the statistics were estimated by using the complete set of data f
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-## Fisheries and fishing technologies domains
-
-### Fisheries (FIS) {#fisheries}
+## Fisheries (FIS) {#fisheries}
 
 An *ad-hoc* classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
 
@@ -171,9 +156,7 @@ An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs i
 out_dt(FISHERIES, "FISHERIES")
 ```
 
-## Biological and morphometrics domains
-
-### All species (SPC.ALL) {#allSpecies}
+## All species (SPC.ALL) {#allSpecies}
 
 Reference codes modeling the species interacting with the fisheries as:
 
@@ -188,9 +171,7 @@ These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fi
 out_dt(SPECIES, "SPECIES")
 ```
 
-## Data and metadata domains
-
-### Buoy activity types (FOB.AB) {#FOBbuoyActivityTypes}
+## Buoy activity types (FOB.AB) {#FOBbuoyActivityTypes}
 
 Reference codes that model the type of activities undertaken when visiting or deploying a buoy.
 
@@ -198,7 +179,7 @@ Reference codes that model the type of activities undertaken when visiting or de
 out_dt(BUOY_ACTIVITIES, "BUOY_ACTIVITIES")
 ```
 
-### FOB types (FOB.FT) {#FOBtypes}
+## FOB types (FOB.FT) {#FOBtypes}
 
 Reference codes that model the type of FOBs, both drifting (DFOB = TRUE) and anchored (DFOB = FALSE).
 
@@ -206,7 +187,7 @@ Reference codes that model the type of FOBs, both drifting (DFOB = TRUE) and anc
 out_dt(FOB_TYPES, "FOB_TYPES")
 ```
 
-### FOB activity types (FOB.AT) {#FOBactivityTypes}
+## FOB activity types (FOB.AT) {#FOBactivityTypes}
 
 Reference codes that model the type of activities undertaken when visiting or deploying a FOB.
 
@@ -214,7 +195,7 @@ Reference codes that model the type of activities undertaken when visiting or de
 out_dt(FOB_ACTIVITIES, "FOB_ACTIVITIES")
 ```
 
-### Types of fate (SPC.FTT) {#typesOfFate}
+## Types of fate (SPC.FTT) {#typesOfFate}
 
 Reference codes used to identify a given fate as indicating that the fish has been retained or discarded.
 
@@ -222,7 +203,7 @@ Reference codes used to identify a given fate as indicating that the fish has be
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```
 
-### Raising (DTA.RA) {#raisings}
+## Raising (DTA.RA) {#raisings}
 
 Reference codes modeling the level of raising applied to the data, and in particular if data:
 
@@ -234,7 +215,7 @@ Reference codes modeling the level of raising applied to the data, and in partic
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
-### Catch units (FIA.CU) {#catchUnits}
+## Catch units (FIA.CU) {#catchUnits}
 
 Reference codes that model the units used to report the level of catches of a given species, further stratified by the specific criteria characterizing each reporting form.
 

@@ -27,18 +27,11 @@ When present, information on buoy identifier, knowledge of the buoy position, an
 
 # Resources
 
-Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA.xlsx) to download an empty version of form 3-DA, or [return back](..) to the list of all IOTC statistical data reporting forms.
-
-# Supported resolutions
-
--   [15/02](https://iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) - *Mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-contracting Parties (CPCs)*
--   [23/01](https://iotc.org/cmm/resolution-2301-management-anchored-fish-aggregating-devices-afads) - *On the conservation of sharks caught in association with fisheries managed by IOTC*
-
+Click [here](https://data.iotc.org/reference/latest/forms/Form-3DA.xlsx) to download an empty version of form 3-DA, or [return back](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
--   **Surface fisheries**: 30 June (final)
-
+- **Surface fisheries**: 30 June (final)
 
 # Stratification
 
