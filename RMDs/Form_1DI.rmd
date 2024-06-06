@@ -23,17 +23,9 @@ output:
   
 This form supports the reporting of _estimates of discards in numbers or live weight equivalent for the IOTC species, mobulid rays, whale sharks, cetaceans, common sharks, and other bycatch species_. Reporting of quarterly estimates is voluntary and recommended to assess the seasonality of the discards. For each stratum, the data coverage -- i.e., the percentage (%) of amount of fish sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
-#### Conservation and Management Measures
+You can download the recommended form for submitting the dataset for the 2023 statistical year [here](../forms/legacy/Form-1DI-legacy.xlsx).
 
-- Res. [15/01](https://www.iotc.org/cmm/resolution-1501-recording-catch-and-effort-data-fishing-vessels-iotc-area-competence) (Annex II) -- _On the recording of catch and effort data by fishing vessels in the IOTC area of competence_
-- Res. [15/02](https://www.iotc.org/cmm/resolution-1502-mandatory-statistical-reporting-requirements-iotc-contracting-parties-and) (paras. 2-3) -- _On mandatory statistical reporting requirements for IOTC Contracting Parties and Cooperating Non-Contracting Parties (CPCs)_
-- Res. [12/09](https://iotc.org/cmm/resolution-1209-conservation-thresher-sharks-family-alopiidae-caught-association-fisheries-iotc) (paras. 3-5, 8) -- _On the conservation of thresher sharks (family Alopiidae) caught in association with fisheries in the IOTC agreement area_
-- Res. [13/06](https://iotc.org/cmm/resolution-1306-scientific-and-management-framework-conservation-sharks-species-caught) (paras. 4-5, 8) -- _On a scientific and management framework on the conservation of sharks in association with IOTC managed fisheries_
-- Res. [17/05](https://www.iotc.org/cmm/resolution-1705-conservation-sharks-caught-association-fisheries-managed-iotc) (para. 6) -- _On the conservation of sharks caught in association with fisheries managed by IOTC_
-- Res. [18/02](https://iotc.org/cmm/resolution-1802-management-measures-conservation-blue-shark-caught-association-iotc-fisheries) (para. 3) -- _On management measures for the conservation of blue shark caught in association with IOTC fisheries_
-- Res. [19/03](https://iotc.org/cmm/resolution-1903-conservation-mobulid-rays-caught-association-fisheries-iotc-area-competence) (para. 8) -- _On the conservation of mobulid species caught in association with fisheries in the IOTC area of competence_
-
-Click [here](https://data.iotc.org/reference/latest/forms/Form-1DI.xlsx) to download an empty version of form 1-DI, or [return back](../forms) to the list of all IOTC statistical data reporting forms.
+Please help us by using the new forms on an optional basis and providing feedback. Click [here](../forms/Form-1DI.xlsx) to download an empty version of Form 1DI, or [return](../forms) to the list of all new versions of the IOTC statistical data reporting forms.
 
 # Reporting deadlines
 

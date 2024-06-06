@@ -23,7 +23,9 @@ output:
   
 This form supports the reporting of the matrix of presence of species in the retained catches and discards of each fishing fleet by gear group and broad fishery category. For each species/gear combination, the cell must be filled with either a value of one (1) in case of positive catch or a value of zero (0) in case of absence of catch (i.e., no landing and no discard). Species include IOTC species, mobulid rays, common sharks, and other bycatch species. All gear groups (hooks and lines, pole-and-lines, longlines, purse seines, gillnets, and other gears) are included and further broken down by broad fishery category, i.e., [coastal](#iotccoastalfishery) and [industrial](#iotcindustrialfishery).
 
-Click [here](https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx) to download an empty version of Form 1DR, or [return back](../forms) to the list of all IOTC statistical data reporting forms.
+You can download the recommended form for submitting the data matrix for the 2023 statistical year [here](../forms/legacy/Form-1DR-legacy.xlsx).
+
+Please help us by using the new forms on an optional basis and providing feedback. Click [here](../forms/Form-1DR.xlsx) to download an empty version of Form 1DR, or [return](../forms) to the list of all new versions of the IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
