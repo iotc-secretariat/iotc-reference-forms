@@ -23,9 +23,7 @@ output:
   
 This form supports the reporting of _estimates of discards in numbers or live weight equivalent for the IOTC species, mobulid rays, whale sharks, cetaceans, common sharks, and other bycatch species_. Reporting of quarterly estimates is voluntary and recommended to assess the seasonality of the discards. For each stratum, the data coverage -- i.e., the percentage (%) of amount of fish sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
-You can download the recommended form for submitting the dataset for the 2023 statistical year [here](../forms/legacy/Form-1DI-legacy.xlsx).
-
-Please help us by using the new forms on an optional basis and providing feedback. Click [here](../forms/Form-1DI.xlsx) to download an empty version of Form 1DI, or [return](../forms) to the list of all new versions of the IOTC statistical data reporting forms.
+Click [here](../forms/Form-1DI.xlsx) to download an empty version of Form 1DI, or [return](../forms) to the list of all new versions of the IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
@@ -50,11 +48,11 @@ Please help us by using the new forms on an optional basis and providing feedbac
 
 ### General information
 
-| Element        | Requirement | Description | Code list  |
+| Element        | Requirement | Description | Codelist  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
-| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#countries) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 
 ## Data elements
 
@@ -63,22 +61,22 @@ Please help us by using the new forms on an optional basis and providing feedbac
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Quarter | M | Gregorian calendar quarterly of the fishing activities reported through the dataset | Integer |
-| Fisheries    | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
-| IOTC main areas | M | Main IOTC areas of competence   | [IOTC main areas](#IOTCareasMain)  |
-| Reasons for discarding  | M | Reasons why the species were discarded | [Reasons for discarding](#discardReasons) |
-| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
-| Condition of species | M | Conditions of species being discarded at sea  | [Condition](#individualConditions)|
-| Data raising             | M | Level of raising (i.e., extrapolation) | [Raisings](#dataRaising)| 
-| Catch unit   | M | Units used to report the level of catches of a given species,|[Catch units](#catchUnits) |
+| Fisheries    | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries)            |
+| IOTC main areas | M | Main IOTC areas of competence   | **Code** from  [IOTC main areas](#IOTCareasMain)  |
+| Reasons for discarding  | M | Reasons why the species were discarded | **Code** from [Reasons for discarding](#discardReasons) |
+| Species    | M | Species caught and discarded| **Code** from [Species](#allSpecies)           |
+| Condition of species | M | Conditions of species being discarded at sea  | **Code** from  [Conditions](#individualConditions)|
+| Data raising             | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| 
+| Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 
 ### Original data
 
-| Element        | Requirement | Description | Code list  |
+| Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type       | M | Preliminary/final status of the data | [Type of data](#types)      |
-| Original data source     | M | Source of information | [Discards data sources](#dataSourcesDI)           |
-| Original data processing | M | Processing applied to the data  | [Discards data processings](#dataProcessingsDI) |
-| Source coverage type     | M | Variable used for data coverage | [Coverage types](#coverageTypes) |
+| Original data type       | M | Preliminary/final status of the data | **Code** from [Types of data](#types)      |
+| Original data source     | M | Source of information | **Code** from [Discards data sources](#dataSourcesDI)           |
+| Original data processing | M | Processing applied to the data  | **Code** from [Discards data processings](#dataProcessingsDI) |
+| Source coverage type     | M | Variable used for data coverage | **Code** from [Coverage types](#coverageTypes) |
 
 ## Additional information
 
@@ -116,7 +114,7 @@ out_dt(FISHERIES, "FISHERIES")
 
 ### Catch units (FIA.CU) {#catchUnits}
 
-Reference codes that model the units used to report the level of catches / discards of a given species, further stratified by the specific criteria characterizing each reporting form.
+Reference codes modelling the units used to report the level of catches / discards of a given species, further stratified by the specific criteria characterizing each reporting form.
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
@@ -124,7 +122,7 @@ out_dt(CATCH_UNITS, "CATCH_UNITS")
 
 ## All species (SPC.ALL) {#allSpecies}
 
-Reference codes modeling the species interacting with the fisheries as:
+Reference codes modelling the species interacting with the fisheries as:
   
 + target species (retained or discarded)
 + bycatch species (retained or discarded)
@@ -140,7 +138,7 @@ out_dt(SPECIES, "SPECIES")
 
 ## Reasons for discarding (SPC.FTE.DI) {#discardReasons}
 
-Reference codes that model the reasons why aquatic creatures caught by the fishery are then discarded at sea.
+Reference codes modelling the reasons why aquatic creatures caught by the fishery are then discarded at sea.
 
 ```{r collapse = TRUE}
 out_dt(DISCARD_REASONS, "DISCARD_REASONS")
