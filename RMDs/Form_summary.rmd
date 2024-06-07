@@ -21,11 +21,13 @@ output:
 
 # Overview
 
-The current templates, referred to as 'legacy,' are recommended for submitting fisheries statistics to the IOTC for the statistical year 2023. These templates are available as macro-enabled Microsoft Excel™ spreadsheets, incorporating entry controls and the necessary codelists for specific data fields. Guidance on completing these templates is provided in the legacy version of the IOTC Data Reporting Guidelines, accessible [here](./IOTC_Data_Reporting_Guidelines_2014.pdf).
+The current templates, referred to as 'legacy,' are recommended for submitting fisheries statistics to the IOTC for the statistical year 2023. These templates are available as macro-enabled Microsoft Excel™ spreadsheets, incorporating entry controls and the necessary codelists for specific data fields. Guidance on completing these templates is provided in the legacy version of the IOTC Data Reporting Guidelines, accessible [here](./legacy/IOTC_Data_Reporting_Guidelines_2014.pdf).
+
+You can download all recommended forms for submitting the data for the statistical year 2023 [here](../forms/legacy/IOTC-forms-current.zip). In addition to the legacy forms used for the IOTC core fisheries datasets, the ZIP archive includes the forms [1IN](#1IN), [3AA](#3AA), and [3DA](#3DA) that have been developed to better address the data requirements of the IOTC Conservation and Management Measures.
 
 New optional templates for submission are available as plain Microsoft Excel™ spreadsheets to simplify the process of entering and submitting all required information. This format allows the reporting officer to enter data either **directly** (by hand) or **programmatically** (through automated scripts), for later submission by email or via e-MARIS to the IOTC Secretariat. CPCs are encouraged to familiarise with and trial the new reporting templates for the reporting of the data for the statistical year 2023.
 
-We welcome your feedback on the new forms and encourage you to ask any questions to the IOTC Secretariat through our email address at IOTC-Statistics@fao.org. We're here to help!
+You can download all new forms for submitting the data for the statistical year 2023 [here](../forms/IOTC-forms-new.zip). We welcome your feedback on the new forms and encourage you to ask any questions to the IOTC Secretariat through our email address at IOTC-Statistics@fao.org.!
 
 ## Form 1DR {#1DR}
 

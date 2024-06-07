@@ -21,25 +21,14 @@ output:
 
 # Description
 
-This form supports the reporting of _single daily buoy position (latitude and longitude in decimal degrees)_ for each of the buoys monitored by each purse seine vessel. Each buoy is identified by its unique identifier which is a concatenation of the acronym of the buoy commercial model (e.g., ISD+, M3+, T8E) followed by 5-9 digits depending on the buoy model.
+This form supports the reporting of single daily buoy position (latitude and longitude in decimal degrees) for each of the buoys monitored by each purse seine vessel. Each buoy is identified by its unique identifier which is a concatenation of the acronym of the buoy commercial model (e.g., ISD+, M3+, T8E) followed by 5-9 digits depending on the buoy model.
 
-# Resources
-
-Click [here](https://data.iotc.org/reference/latest/forms/Form-3BU.xlsx) to download an empty version of form 3-BU, or
-[return back](..) to the list of all IOTC statistical data reporting forms.
-
-# Supported resolutions
-
-Daily positions of active buoys equipping FADs and natural floating objects for each purse seine vessel
-
-- Res. [19/02, para.24](https://iotc.org/cmm/resolution-1902-procedures-fish-aggregating-devices-fads-management-plan) -- _Procedures on a fish aggregating devices (FADS) management plan_
-
+Click [here](../forms/Form-3BU.xlsx) to download an empty version of form 3-BU, or [return](../forms) the list of all new versions of the IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
 - _Surface fisheries_: 
 **To be submitted with a time delay of at least 60 days, but no longer than 90 days**
-
 
 # Stratification
 
@@ -56,15 +45,14 @@ Daily positions of active buoys equipping FADs and natural floating objects for 
 | [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-
 ### General information
 
-| Element        | Requirement | Description | Code list  |
+| Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting month] | M | Month of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
-| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
+| [Reporting month] | M | Month of the fishing activities reported through the dataset | Integer 1..12 |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 | [Vessel name | M | Name of vessel monitoring the buoy  | Plain text  |
 | [Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy  | Plain text (_IOTCxxxxxx_) |
 
@@ -72,48 +60,50 @@ Daily positions of active buoys equipping FADs and natural floating objects for 
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type       | M | Preliminary/final status of the data | [Type of data](#types)      |
+| Original data type       | M | Preliminary/final status of the data | **Code** from [Types of data](#types)      |
 
 ## Data elements
 
 ### Main data elements
 
-| Element        | Requirement | Description | Code list  |
+| Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Day of Month | M | Day of the month of the fishing activities reported through the dataset | Integer |
-| Buoy ID   | M | Unique identifier of buoy monitored| (e.g., ISD+, M3+, T8E) followed by 5-9 digit           |
+| Day of Month | M | Day of the month of the fishing activities reported through the dataset | Integer 1..31 |
+| Buoy ID   | M | Unique identifier of buoy monitored| (e.g., ISD+, M3+, T8E) followed by 5-9 digit |
 
 ### Buoy position
 
-| Element        | Requirement | Description | Code list  |
+| Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Latitude| M | Horizontal distances north or south of the Equation   | in decimal degrees  |
-| Longitude | M | Vertical distances east or west of the prime meridian | in decimal degrees |
+| Latitude| M | Horizontal distances north or south of the Equator   | Decimal degrees  |
+| Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees |
 
+# Reference codelists
 
+## Entities {#entities}
 
-# Referenced codelists
+Reference codes modelling the entity submitting the dataset to the IOTC Secretariat.
 
-## Administrative and geospatial domains
-                  
-### Countries (ADM.COU) {#countries}
+```{r collapse = TRUE}
+out_dt(ENTITIES, "ENTITIES")
+```
 
-Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+## Countries {#countries}
+
+Reference codes modelling the flag / reporting country submitting a dataset to the IOTC Secretariat.
                   
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## Data and metadata domains
+## Data types {#types}
 
-### Data types (DTA.TY) {#types}
+Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
 
-Reference codes modeling the type of statistics provided through a specific form, and in particular if these are:
+a. Preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
 
-a)    preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
-b)    final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+b. Final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
-

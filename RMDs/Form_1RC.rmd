@@ -21,9 +21,9 @@ output:
 
 # Description
 
-This form supports the reporting of *estimates of retained catches in live weight equivalent (metric tonnes; t)* for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
+This form supports the reporting of estimates of retained catches in live weight equivalent (metric tonnes; t) for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
-Click [here](../forms/Form-1RC.xlsx) to download an empty version of form 1-RC, or [return back](../forms) to the list of all IOTC statistical data reporting forms.
+Click [here](../forms/Form-1RC.xlsx) to download an empty version of form 1-RC, or [return back](../forms) to the list of all new versions of the IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
@@ -49,8 +49,8 @@ Click [here](../forms/Form-1RC.xlsx) to download an empty version of form 1-RC, 
 | Element | Requirement | Description | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|
 | [Reporting year]{#repyear}     | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
-| [Reporting entity]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Entities](#Entities) |
-| [Flag state]{#repflagstate}    | M | Country registration of the fishing vessels  | **Code** from [Countries](#Countries) |
+| [Reporting entity]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Entities](#entities) |
+| [Flag state]{#repflagstate}    | M | Country registration of the fishing vessels  | **Code** from [Countries](#countries) |
 
 # Data elements
 
@@ -75,7 +75,7 @@ Click [here](../forms/Form-1RC.xlsx) to download an empty version of form 1-RC, 
 
 # Reference codelists
 
-## Entities (ADM.ENT) {#Entities}
+## Entities {#entities}
 
 Reference codes modelling the entity submitting the dataset to the IOTC Secretariat.
 
@@ -83,7 +83,7 @@ Reference codes modelling the entity submitting the dataset to the IOTC Secretar
 out_dt(ENTITIES, "ENTITIES")
 ```
 
-## Countries (ADM.COU) {#Countries}
+## Countries {#countries}
 
 Reference codes modelling the flag / reporting country submitting the dataset to the IOTC Secretariat.
 
@@ -91,7 +91,7 @@ Reference codes modelling the flag / reporting country submitting the dataset to
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## IOTC main areas (GIS.IOTC.MA) {#IOTCareasMain}
+## IOTC main areas {#IOTCareasMain}
 
 Reference codes modelling the two main areas in which the IOTC area of competence is split (western / eastern IOTC area, *roughly* coinciding with FAO areas F51 and F57).
 
@@ -101,7 +101,7 @@ Reference codes modelling the two main areas in which the IOTC area of competenc
 out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 ```
 
-## Fisheries (FIS) {#fisheries}
+## Fisheries {#fisheries}
 
 An *ad-hoc* classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
 
@@ -111,7 +111,7 @@ An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs i
 out_dt(FISHERIES, "FISHERIES")
 ```
 
-## All species (SPC.ALL) {#allSpecies}
+## All species {#allSpecies}
 
 Reference codes modelling the species interacting with the fisheries as:
 
@@ -126,7 +126,7 @@ These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fi
 out_dt(SPECIES, "SPECIES")
 ```
 
-## Reasons for retaining (SPC.FTE.RE) {#retainReasons}
+## Reasons for retaining {#retainReasons}
 
 Reference codes modelling the reasons why marine organisms caught by the fishery are retained onboard.
 
@@ -134,7 +134,7 @@ Reference codes modelling the reasons why marine organisms caught by the fishery
 out_dt(RETAIN_REASONS, "RETAIN_REASONS")
 ```
 
-## Data types (DTA.TY) {#types}
+## Data types {#types}
 
 Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
 
@@ -146,7 +146,7 @@ b. Final when the statistics were estimated by using the complete set of data fr
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-## Retained catches data sources (DTA.SRC.RC) {#dataSourcesRC}
+## Retained catches data sources {#dataSourcesRC}
 
 Reference codes modelling the source of the data provided through the retained catches data form.
 
@@ -154,7 +154,7 @@ Reference codes modelling the source of the data provided through the retained c
 out_dt(DATA_SOURCES_RC, "DATA_SOURCES_RC")
 ```
 
-## Retained catches data processings (DTA.PRO.RC) {#dataProcessingsRC}
+## Retained catches data processings {#dataProcessingsRC}
 
 Reference codes modelling the processing applied to the data provided through the retained catches data form.
 
@@ -162,7 +162,7 @@ Reference codes modelling the processing applied to the data provided through th
 out_dt(DATA_PROCESSINGS_RC, "DATA_PROCESSINGS_RC")
 ```
 
-## Coverage types (DTA.COV.TY) {#coverageTypes}
+## Coverage types {#coverageTypes}
 
 Reference codes modelling the type of coverage for the raw information used to obtain the data provided through a specific form.
 

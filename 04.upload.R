@@ -116,13 +116,13 @@ upload_forms = function(version) {
   
   print(paste0("Uploading all forms as a zipped archive in ", folder, "..."))
   
-  zip::zip(zipfile = "./form_reporting_templates/Forms_all.zip", 
+  zip::zip(zipfile = "./form_reporting_templates/IOTC-forms-new.zip", 
            files = list.files("./form_reporting_templates/", pattern = "Form-.+.xlsx", full.names = TRUE),
            mode = "cherry-pick")
   
   CURL_FTPu(
-    filename   = "./form_reporting_templates/Forms_all.zip",
-    target_url = ftp_url(paste0(folder, "/Forms_all.zip"))
+    filename   = "./form_reporting_templates/IOTC-forms-new.zip",
+    target_url = ftp_url(paste0(folder, "/IOTC-forms-new.zip"))
   )
 }
 

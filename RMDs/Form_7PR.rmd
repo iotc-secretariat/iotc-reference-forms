@@ -21,19 +21,17 @@ output:
   
 # Description
   
-This form supports the *voluntary* reporting of _average market prices of fish per type of fish product_ for a given CPC / fleet.
+This form supports the *voluntary* reporting of _monthly time series of price of fish products for tuna and tuna-like species_ caught in the Indian Ocean.
 
-Data should be provided per type of fish product, preservation, processing and monthly.
+Click [here](../forms/legacy/Form-7PR-legacy.xlsm) to download an empty version of the legacy form 7-PR, or [return](../forms) to the list of all new versions of the IOTC statistical data reporting forms. 
 
-# Resources
-
-Click [here](https://data.iotc.org/reference/latest/forms/Form-7PR.xlsx) to download an empty version of form 7-PR, or [return back](..) to the list of all IOTC statistical data reporting forms.
+<!-- The new reporting form 7-PR is under construction and should become available soon. The information below pertains to the new form. -->
 
 # Reporting deadlines
 
--   **Longline fisheries**: 30 June (preliminary), 30 December (final)
--   **Surface fisheries**: 30 June (final)
--   **Coastal fisheries**: 30 June (final)
+- **Longline fisheries**: 30 June (preliminary), 30 December (final)
+- **Surface fisheries**: 30 June (final)
+- **Coastal fisheries**: 30 June (final)
 
 # Stratification
 
@@ -50,183 +48,76 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-7PR.xlsx) to down
 | [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-
 ### General information
 
-
-| Element        | Requirement | Description | Code list  |
+| Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | [Entity](#countries) |
-| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | [Countries](#countries) |
-
+| [Reporting entity]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entity](#entities) |
+| [Flag state]{#repflagstate} | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
 
 ## Data elements
 
 ### Main data elements
 
-| Element        | Requirement | Description | Code list  |
+| Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Quarter | M | Gregorian calendar quarterly of the fishing activities reported through the dataset | Integer |
-| Ocean   | M | The ocean the species caught| [Fisheries](#fisheries)            |
-| Pricing location| M | Location the price collected   | [IOTC main areas](#IOTCareasMain)  |
-| Currency | M | Currency of the price| [Reasons for retaining](#retainReasons) |
-| Species    | M | Species caught and discarded| [Species](#allSpecies)           |
-| Processing    | M | Species processing type for the price reported| [Species](#allSpecies)           |
-| Product type    | M | The type of product for price reported| [Species](#allSpecies)           |
-| Preservation type    | M | The type of preservation of product | [Species](#allSpecies)           |
-| Destination    | M | Market destination| [Species](#allSpecies)           |
-| Weight unit    | M | Weight units used| [Species](#allSpecies)           |
-| Weight class(lo)    | M | Lowest size class of the weight| [Species](#allSpecies)           |
-| Weight class(hi)   | M | Highest size class of the weight| [Species](#allSpecies)           |
+| Month | M | Gregorian calendar month of the fish sale | **1**: Jan; **2**: Feb, ... **12**: Dec |
+| Currency | M | Price currency | **Code** from [Currencies](#currencies) |
+| Processing | M | Processing type applied to species | **Code** from [Fish processing types](#fishProcessingType) |
+| Product type | M | Type of fish product | **Code** from [Product types](#fishProductTypes) |
+| Preservation type  | M | Type of preservation method | **Code** from [Fish preservation methods](#FishPreservationMethod) |
+| Species | M | Fish species | **Code** from [Species](#IOTCSpecies) |
+| Weight unit  | M | Unit of fish weight | **Code** from [Weight units](#weightUnits) |
+| Weight class(lo) | M | Lowest weight class | Numeric value |
+| Weight class(hi) | M | Highest weight class | Numeric value |
 
+# Reference codelists
 
+## Entities {#entities}
 
+Reference codes modelling the entity submitting the dataset to the IOTC Secretariat.
 
+```{r collapse = TRUE}
+out_dt(ENTITIES, "ENTITIES")
+```
 
+## Countries {#countries}
 
-
-# Reference species groups
-
-+ **IOTC species** [ mandatory ] 
-+ **Sharks** [ mandatory ]
-+ **Mobulids and rays** [ mandatory ]
-+ **Other bycatch / non-IOTC species** [ voluntary ]
-
-# Reporting deadlines
-
-+ **All fisheries**: 30 June
-
-# Stratification
-
-## Main data fields
-
-+ Monthly (possibly)
-+ [Ocean](#IOTCareas)
-+ [Price location](#location)
-
-      
-## Additional data fields
-
-+ [Destination](#destination)
-+ [Spcies](#species)
-
-# Referenced codelists
-
-## Administrative and geospatial domains
-
-### Countries (ADM.COU) {#countries}
-
-Reference codes modeling the flag / reporting country submitting a dataset to the IOTC Secretariat.
+Reference codes modelling the flag / reporting country submitting a dataset to the IOTC Secretariat.
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-### FAO areas (GIS.FAO) {#FAO_AREAS}
+## Catch units {#weightUnits}
 
-[FAO fishing areas](https://www.fao.org/fishery/en/area/search)
-
-
-Reference codes modelling the FAO main areas.
-
-```{r collapse = TRUE}
-out_dt(FAO_AREAS, "FAO_AREAS")
-```
-
-
-## Fisheries and fishing technologies domains
-
-### Fisheries (FIS) {#fisheries}
-
-An _ad-hoc_ classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
-
-An [_interactive wizard_](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for  their fisheries (among those currently considered of relevance in the Indian Ocean).
-
-```{r collapse = TRUE}
-out_dt(FISHERIES, "FISHERIES")
-```
-
-### Catch units (FIA.CU) {#catchUnits}
-
-Reference codes that model the units used to report the level of catches / discards of a given species, further stratified by the specific criteria characterizing each reporting form.
+Units of fish weight.
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
 ```
 
-## Biological and morphometrics domains
+## IOTC species {#IOTCSpecies}
 
-### All species (SPC.ALL) {#allSpecies}
-
-Reference codes modeling the species interacting with the fisheries as:
-  
-  + target species (retained or discarded)
-+ bycatch species (retained or discarded)
-+ sampled individuals
-+ etc.
-
-These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org
-) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+List of IOTC species.
 
 ```{r collapse = TRUE}
-out_dt(SPECIES, "SPECIES")
+out_dt(SPECIES[IS_IOTC == TRUE & IS_AGGREGATE == FALSE], "SPECIES")
 ```
 
-### Reasons for discarding (SPC.FTE.DI) {#discardReasons}
+## Fish processing types {#fishProcessingType}
 
-Reference codes that model the reasons why aquatic creatures caught by the fishery are then discarded at sea.
+Types of processing applied to the fish prior to sale.
 
 ```{r collapse = TRUE}
-out_dt(DISCARD_REASONS, "DISCARD_REASONS")
+out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
 ```
 
-### Individual conditions (SPC.CN) {#individualConditions}
+## Fish preservation method {#fishPreservationMethod}
 
-Reference codes modeling the conditions (at capture / at release) of individual aquatic creatures being discarded at sea or measured.
-
-```{r collapse = TRUE}
-out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
-```
-
-## Data and metadata domains
-
-### Data types (DTA.TY) {#dataTypes}
-
-Reference codes modeling the type of data provided through a specific form (preliminary / final / unknown).
+Main method used to preserve the fish between its capture and sale.
 
 ```{r collapse = TRUE}
-out_dt(DATA_TYPES, "DATA_TYPES")
-```
-
-### Data raising (DTA.RA) {#dataRaising}
-
-Reference codes modeling the level of raising applied to the data (raised to totals / not raised to totals / unknown).
-
-```{r collapse = TRUE}
-out_dt(DATA_RAISINGS, "DATA_RAISINGS")
-```
-
-### Discarded catches data sources (DTA.SRC.DI) {#dataSourcesDI}
-
-Reference codes modeling the source of the data provided through the discards data form.
-
-```{r collapse = TRUE}
-out_dt(DATA_SOURCES_DI, "DATA_SOURCES_DI")
-```
-
-### Discarded catches data processings (DTA.PRO.DI) {#dataProcessingsDI}
-
-Reference codes modeling the processing applied to the data provided through the discards data form.
-
-```{r collapse = TRUE}
-out_dt(DATA_PROCESSINGS_DI, "DATA_PROCESSINGS_DI")
-```
-
-### Coverage types (DTA.COV.TY) {#coverageTypes}
-
-Reference codes modeling the type of coverage for the raw information used to obtain the data provided through a specific form.
-
-```{r collapse = TRUE}
-out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
+out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```

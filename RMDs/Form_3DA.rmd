@@ -21,11 +21,9 @@ output:
   
 # Description
 
-This form supports the reporting of _Operational activities conducted by purse seine and support vessels on DFOBs and buoys, **annually**_.
+This form supports the reporting of data on operational activities conducted by purse seine and support vessels on drifting floating objects (DFOBs) and buoys. When present, data include information on buoy identifier, knowledge of the buoy position, and type of activity conducted on the buoy. For each DFOB, information on materials (i.e., presence of plastic or metal), dimensions (i.e., length, width, and height), and presence of mesh with value of mesh size for both the surface (i.e., raft) and subsurface (i.e., tail) components must be recorded. Finally, species-specific estimates of catches retained and discarded in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species must also be included in the dataset.
 
-When present, information on buoy identifier, knowledge of the buoy position, and type of activity conducted on the buoy. For each DFOB, information on materials (i.e., presence of plastic or metal), dimensions (i.e., length, width, and height), and presence of mesh with value of mesh size for both the surface (i.e., raft) and subsurface (i.e., tail) components. Finally, species-specific estimates of catches retained and discarded in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species.
-
-Click [here](../forms/Form-3DA.xlsx) to download an empty version of form 3-DA, or [return back](../forms) to the list of all IOTC statistical data reporting forms.
+Click [here](../forms/Form-3DA.xlsx) to download an empty version of the form 3-DA, or [return](../forms) to the list of all new versions of the IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
@@ -49,9 +47,9 @@ Click [here](../forms/Form-3DA.xlsx) to download an empty version of form 3-DA, 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entity](#countries) |
-| [Flag state]{#repflagstate} | M | Country registration of the fishery vessels | **Code** from [Countries](#countries) |
-| Reporting Month | M | Calendar month of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
+| Reporting Month | M | Calendar month of the fishing activities reported through the dataset | Integer 1..12 |
 
 ### Data specifications
 
@@ -65,66 +63,71 @@ Click [here](../forms/Form-3DA.xlsx) to download an empty version of form 3-DA, 
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Vessel name | M | Name of vessel monitoring the buoy  | Plain text  |
-| Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy  | Plain text (_IOTCxxxxxx_) |
-| Day of the Month | M | Day of the month of the fishing activities reported through the dataset | Integer |
-| UTC time | M | Universal time at which the FOB was visited | time (_hh:mm_) |
-| Latitude| M | Horizontal distances north or south of the Equation   | in decimal degrees  |
-| Longitude | M | Vertical distances east or west of the prime meridian | in decimal degrees |
-| Species    | M | Species caught and discarded | **Code** from [Species](#allSpecies)           |
-| Type of fate    | M | Fate of fish caught (retained or discarded)| **Code** from [Types of fate](#typesOfFate) |
-| Data raising  | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings)| 
-| Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
+| Day of the month | M | Day of the month of the fishing activities reported through the dataset | Integer 1..31 |
+| UTC time  | M | Universal time at which the FOB was visited | time (_hh:mm_) |
+| Latitude  | M | Horizontal distances north or south of the Equator    | Decimal degrees  |
+| Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees |
+| Species    | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
+| Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](#typesOfFate) |
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | 
+| Catch unit   | M | Unit used to report the vakue of catch of a given species | **Code** from [Catch units](#catchUnits) |
 
 ### Buoy data
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Present  | M | FOB identification (Deacon ID) | binary       |
+| Present  | M | Unique identifier of the buoy | Character  |
 | Identifier   | M | FOB identification (Deacon ID) | Plain text      |
-| Position| M | Indicate if the vessel have access/knowledge of the buoy position (_ownership_) | boolean |
+| Position| M | Indicate whether the vessel have access/knowledge of the buoy position (_ownership_) | Boolean |
 | Activity    | M | Type of activities undertaken when visiting or deploying  FOB | **Code** from [Buoy activity types](#FOBbuoyActivityTypes) |
 
+### DFOB data
 
-### dFOB data
-
-| Element | Requirement | Description | Input value  |
+| Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Identifier | M | FOB identification (Deacon ID) | Plain text      |
-| Type| M | Type of FOBs  | **Code** from [dFOB types](#FOBtypes) |
-| Activity    | M | Type of activities undertaken when visiting or deploying  FOB | **code** [dFOB activity types](#FOBactivityTypes) |
+| Identifier | M | Unique identifier of the drifting floating object (Buoy identifier) | Plain text |
+| Type | M | Type of drifting floating object | **Code** from [DFOB types](#FOBtypes) |
+| Activity  | M | Type of activities undertaken when visiting or deploying the drifting floating object | **Code** from [DFOB activity types](#FOBactivityTypes) |
 
 ### dFOB characteristics 
 
-Indicate if any of the components are found, and size of the dFOB, from both *surface* and *subsurface*.
+Description of the materials and dimensions of both *surface* and *subsurface* components of the drifting floating objects.
 
 #### Surface (raft)
 
-| Element | Description | Unit  | Format  |
+|Element | Description | Unit  | Format  |
 |:---------------|:----------------------|:------------|:------------------|
-| Plastic  | Indicate if the dFOB contains plastic material| - | Boolean |
-| Metal  | Indicate if the dFOB contains metal material| - | Boolean |
-| Length | Length of dFOB| cm |Decimal |
-| Width | Width of dFOB|  cm | Decimal |
-| Height |Height of dFOB| cm |Decimal|
-| Mesh | Indicate if the dFOB contains mesh| - | Boolean |
-| Mesh size  | Size of the mesh|  mm  | Decimal |
+| Plastic  | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | - | Boolean |
+| Metal  | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | - | Boolean |
+| Length | Length of the surface or near-surface structure of the drifting floating object | cm | Decimal |
+| Width  | Width of the surface or near-surface structure of the drifting floating object  | cm | Decimal |
+| Height | Height of the surface or near-surface structure of the drifting floating object | cm | Decimal |
+| Mesh   | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | - | Boolean |
+| Mesh size | Size of the main net mesh used on the surface or near-surface structure of the drifting floating object (if any) | mm | Decimal |
 
 #### Subsurface (tail)
 
 | Element | Description | Unit  | Format  |
-|:---------------|:----------------------|:------------|:------------------|
-| Plastic  | Indicate if the dFOB contains plastic material | -| Boolean |
-| Metal  | Indicate if the dFOB contains metal material | - | Boolean |
-| Length | Length of dFOB| cm |Decimal |
-| Width | Width of dFOB|  cm | Decimal |
-| Height |Height of dFOB| cm |Decimal |
-| Mesh | Indicate if the dFOB contains mesh | - | Boolean |
-| Mesh size  | Size of the mesh|  mm  | Decimal |
+| :---------------|:----------------------|:------------|:------------------|
+| Plastic  | Indicates whether the tail of the drifting floating object contains some plastic materials | - | Boolean|
+| Metal    | Indicates whether the tail of the drifting floating object contains some metal materials | - | Boolean|
+| Length   | Length of the subsurface structure of the drifting floating object | cm | Decimal |
+| Width    | Width of the subsurface structure of the drifting floating object  | cm | Decimal |
+| Height   | Height of the subsurface structure of the drifting floating object | cm | Decimal|
+| Mesh     | Indicates whether the subsurface structure of the drifting floating object contains mesh | - | Boolean|
+| Mesh size | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) | mm  | Decimal |
 
-# Referenced codelists
+# Reference codelists
 
-## Countries (ADM.COU) {#countries}
+## Entities {#entities}
+
+Reference codes modelling the entity submitting the dataset to the IOTC Secretariat.
+
+```{r collapse = TRUE}
+out_dt(ENTITIES, "ENTITIES")
+```
+
+## Countries {#countries}
 
 Reference codes modelling the flag / reporting country submitting a dataset to the IOTC Secretariat.
 
@@ -132,7 +135,7 @@ Reference codes modelling the flag / reporting country submitting a dataset to t
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## Data types (DTA.TY) {#types}
+## Data types {#types}
 
 Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
 
@@ -144,7 +147,7 @@ b. Final if the statistics were estimated by using the complete set of data from
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-## Fisheries (FIS) {#fisheries}
+## Fisheries {#fisheries}
 
 An *ad-hoc* classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
 
@@ -154,7 +157,7 @@ An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs i
 out_dt(FISHERIES, "FISHERIES")
 ```
 
-## All species (SPC.ALL) {#allSpecies}
+## All species {#allSpecies}
 
 Reference codes modelling the species interacting with the fisheries as:
 
@@ -169,7 +172,7 @@ These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fi
 out_dt(SPECIES, "SPECIES")
 ```
 
-## Buoy activity types (FOB.AB) {#FOBbuoyActivityTypes}
+## Buoy activity types {#FOBbuoyActivityTypes}
 
 Reference codes modelling the type of activities undertaken when visiting or deploying a buoy.
 
@@ -177,7 +180,7 @@ Reference codes modelling the type of activities undertaken when visiting or dep
 out_dt(BUOY_ACTIVITIES, "BUOY_ACTIVITIES")
 ```
 
-## FOB types (FOB.FT) {#FOBtypes}
+## FOB types {#FOBtypes}
 
 Reference codes modelling the type of FOBs, both drifting (DFOB = TRUE) and anchored (DFOB = FALSE).
 
@@ -185,7 +188,7 @@ Reference codes modelling the type of FOBs, both drifting (DFOB = TRUE) and anch
 out_dt(FOB_TYPES, "FOB_TYPES")
 ```
 
-## FOB activity types (FOB.AT) {#FOBactivityTypes}
+## FOB activity types {#FOBactivityTypes}
 
 Reference codes modelling the type of activities undertaken when visiting or deploying a FOB.
 
@@ -193,7 +196,7 @@ Reference codes modelling the type of activities undertaken when visiting or dep
 out_dt(FOB_ACTIVITIES, "FOB_ACTIVITIES")
 ```
 
-## Types of fate (SPC.FTT) {#typesOfFate}
+## Types of fate {#typesOfFate}
 
 Reference codes used to identify a given fate as indicating that the fish has been retained or discarded.
 
@@ -201,7 +204,7 @@ Reference codes used to identify a given fate as indicating that the fish has be
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```
 
-## Raisings (DTA.RA) {#raisings}
+## Raisings {#raisings}
 
 Reference codes modelling the level of raising applied to the data, and in particular if data:
 
@@ -213,9 +216,9 @@ Reference codes modelling the level of raising applied to the data, and in parti
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
-## Catch units (FIA.CU) {#catchUnits}
+## Catch units {#catchUnits}
 
-Reference codes modelling the units used to report the level of catches of a given species, further stratified by the specific criteria characterizing each reporting form.
+Reference codes that model the units used to report the level of catches of a given species, further stratified by the specific criteria characterizing each reporting form.
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
