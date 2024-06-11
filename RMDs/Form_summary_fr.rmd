@@ -1,0 +1,151 @@
+---
+title: "IOTC statistical data reporting forms"
+author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+output:
+  word_document2:
+    reference_docx: "../templates/doc_template.docx"
+    number_sections: FALSE
+    reference_num: TRUE
+    fig_caption: TRUE
+
+  html_document2:
+    css: "../templates/html_template.css"
+    includes: 
+      in_header: "../templates/google-analytics.html"
+    number_sections: FALSE
+    toc: yes
+    toc_float:
+      collapsed: FALSE
+    smooth_scroll: FALSE
+---
+
+# Overview
+
+Les modèles actuels, appelés 'legacy', sont encouragés à utiliser pour soumettre des statistiques de pêche à la CTOI pour l’année statistique 2023 afin de faciliter la curation et la gestion des données. Ces modèles sont disponibles sous forme de feuilles de calcul Microsoft Excel™ avec macro, intégrant des contrôles d’entrée et les listes de codes nécessaires pour des champs de données spécifiques. Des conseils sur la façon de remplir ces modèles sont fournis dans l’ancienne version des lignes directrices de la CTOI sur les rapports de données, accessible [ici] (./legacy/Directives%20pour%20la%20declaration%20des%20donnees%20a%20la%20CTOI.pdf).
+
+Vous pouvez télécharger tous les anciens formulaires encouragés à soumettre des données [ici](../forms/legacy/IOTC-forms-current.zip). Outre les anciens formulaires conçus pour les ensembles de données de base de la CTOI, l'archive ZIP contient également les formulaires [1IN](#1IN), [3AA](#3AA), et [3DA](#3DA). Ces formulaires supplémentaires ont été développés pour répondre plus efficacement aux exigences en matière de données décrites dans les mesures de conservation et de gestion de la CTOI.
+
+De nouveaux modèles optionnels de soumission sont disponibles sous forme de feuilles de calcul Microsoft Excel™ pour simplifier le processus de saisie et de soumission de toutes les informations requises. Ce format permet à l'agent chargé de la déclaration de saisir les données soit **directement** (manuellement), soit **par programmation** (par l’intermédiaire de scripts automatisés), pour une soumission ultérieure par courrier électronique ou via e-MARIS au Secrétariat de la CTOI. Les CPC sont encouragées à se familiariser avec les nouveaux modèles de déclaration et à les tester pour la déclaration des données de l'année statistique 2023.
+
+Vous pouvez télécharger tous les nouveaux formulaires pour soumettre les données pour l'année statistique 2023 [ici](../forms/IOTC-forms-new.zip). Nous vous invitons à nous faire part de vos commentaires sur les nouveaux formulaires et vous encourageons à poser vos questions au Secrétariat de la CTOI par le biais de notre adresse électronique IOTC-Statistics@fao.org.!
+
+## Formulaire 1DR {#1DR}
+
+Pour la soumission de données sur [présence d’espèces dans les prises](https://data.iotc.org/reference/latest/guidelines/#Species_presence_in_the_catch).
+
++ [Legacy form template](./legacy/Form-1DR-legacy.xlsx)
++ [New form template](./Form-1DR.xlsx)
++ [New form description](./Form_1DR.html)
+
+## Formulaire 1IN {#1IN}
+
+Pour la soumission de données sur [interactions avec les espèces en voie de disparition, menacées et protégées (ETP)](https://data.iotc.org/reference/latest/guidelines/#Interactions_with_Endangered,_Threatened_and_Protected_species).
+
++ [Form template](./Form-1IN.xlsx)
++ [Form description](./Form_1IN.html)
+
+## Formulaire 1RC {#1RC}
+
+Pour la soumission des données sur le total [quantités de poissons capturés et conservés à bord](https://data.iotc.org/reference/latest/guidelines/#Amount_of_fish_caught_and_retained).
+
++ [Legacy form template](./legacy/Form-1RC-legacy.xlsm)
++ [New form template](./Form-1RC.xlsx)
++ [New form description](./Form_1RC.html)
++ [Interactive form validator](https://data.iotc.org/validators/ui/1RC/)
+
+## Formulaire 1DI {#1DI}
+
+Pour la soumission de données sur [quantités de poissons rejetés en mer](https://data.iotc.org/reference/latest/guidelines/#Amount_of_discards).
+
++ [Legacy form template](./legacy/Form-1DI-legacy.xlsm)
++ [New form template](./Form-1DI.xlsx)
++ [New form description](./Form_1DI.html)
++ [Interactive form validator](https://data.iotc.org/validators/ui/1DI/)
+
+## Formulaire 3CE {#3CE}
+
+Pour la soumission de données sur [captures et efforts de pêche géo-référencés](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_catches_and_efforts).
+
+Les anciens formulaires sont divisés pour:
+
++ Pêcheries côtières: [Legacy form template](./legacy/Form-3AR-legacy.xlsm)
++ Pêche à la palangre et pêche de surface: [Legacy form template](./legacy/Form-3CE-legacy.xlsm)
++ Navires d'appui: [Legacy form template](./legacy/Form-3SU-legacy.xlsm)
+
+Le nouveau formulaire unifié permet de déclarer simultanément des données pour plusieurs pêcheries:
+
++ [New form template](./Form-3CE.xlsx)
++ [New form description](./Form_3CE.html)
++ [Interactive form validator](https://data.iotc.org/validators/ui/3CE/)
+
+Une version du formulaire permet de déclarer des données **mises à jour** pour une seule pêcherie:
+
++ [New form template](./Form-3CE-update.xlsx)
++ [New form description]( ./Form_3CE_update.html)
++ [Interactive form validator](https://data.iotc.org/validators/ui/update/3CE/)
+
+## Formulaire 4SF {#4SF}
+
+Pour la soumission de données sur [fréquences de taille géo-référencées](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_size_frequencies).
+
+Le nouveau formulaire unifié permet de déclarer des données pour plusieurs pêches et espèces simultanément:
+
++ [Legacy form template](./legacy/Form-4SF-legacy.xlsm)
++ [New form template](./Form-4SF.xlsx)
++ [New form description](./Form_4SF.html)
++ [Interactive form validator](https://data.iotc.org/validators/ui/4SF/)
+
+Une version du formulaire permet de déclarer des données **actualisées** pour une seule pêcherie et une seule espèce:
+
++ [New form template](./Form-4SF-update.xlsx)
++ [New form description](./Form_4SF_update.html)
++ [Interactive form validator](https://data.iotc.org/validators/ui/update/4SF/)
+
+## Formulaire 3AA {#3AA}
+
+Pour la soumission de données sur [activités liées aux DCP ancrés](https://data.iotc.org/reference/latest/guidelines/#AFAD-related_activities).
+
+Le formulaire unifié permet de déclarer simultanément des données pour plusieurs pêcheries:
+
++ [Form template](./Form-3AA.xlsx)
++ [Form description](./Form_3AA.html)
+
+Une version du formulaire permet de déclarer des données **mises à jour** pour une seule pêcherie:
+
++ [Form template](./Form-3AA-update.xlsx)
++ [Form description](./Form_3AA_update.html)
+
+## Formuliare 3DA{#3DA}
+
+Pour la soumission de données sur [Activités liées aux objects flottants dérivants ](https://data.iotc.org/reference/latest/guidelines/#DFOB-related_activities).
+
+
+Le nouveau formulaire unifié comble les lacunes de l'ancien formulaire 3FA et permet de communiquer des données pour plusieurs navires simultanément:
+
++ [Form template](./Form-3DA.xlsx)
++ [Form description](./Form_3DA.html)
+
+Une version du formulaire permet de déclarer des données **mises à jour** pour un seul navire:
+
++ [Form template](./Form-3DA-update.xlsx)
++ [Form description](./Form_3DA_update.html)
+
+## Formulaire 3BU {#3BU}
+
+Pour la soumission de données sur [Positions journalières des balises](https://data.iotc.org/reference/latest/guidelines/#Daily_buoy_positions).
+
++ [Legacy form template](./legacy/Form-)
++ [New form template](./Form-3BU.xlsx)
++ [New form description](./Form_3BU.html)
++ [Interactive form validator](https://data.iotc.org/validators/ui/3BU/)
+
+## Formulaire 2FC {#2FC}
+
+Pour la soumission de données sur [Statistiques des bateaux de pêche](https://data.iotc.org/reference/latest/guidelines/#Fishing_craft_statistics).
+
++ [Legacy form template](./legacy/Form-2FC-legacy.xlsm)
++ [New form template](./Form-2FC.xlsx)
++ [New form description](./Form_2FC.html)
+
+<!-- ## Form 7PR{#7PR} -->
+
