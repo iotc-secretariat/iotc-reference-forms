@@ -1,6 +1,6 @@
 ---
-title: "IOTC statistical data reporting forms"
-author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+title: "Formulaires de déclaration des statistiques des pêches à la CTOI"
+author: "Author: [Secrétariat de la CTOI](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
     reference_docx: "../templates/doc_template.docx"
@@ -19,9 +19,9 @@ output:
     smooth_scroll: FALSE
 ---
 
-# Overview
+# Présentation
 
-Les modèles actuels, appelés 'legacy', sont encouragés à utiliser pour soumettre des statistiques de pêche à la CTOI pour l’année statistique 2023 afin de faciliter la curation et la gestion des données. Ces modèles sont disponibles sous forme de feuilles de calcul Microsoft Excel™ avec macro, intégrant des contrôles d’entrée et les listes de codes nécessaires pour des champs de données spécifiques. Des conseils sur la façon de remplir ces modèles sont fournis dans l’ancienne version des lignes directrices de la CTOI sur les rapports de données, accessible [ici] (./legacy/Directives%20pour%20la%20declaration%20des%20donnees%20a%20la%20CTOI.pdf).
+Les modèles actuels, appelés 'legacy', sont encouragés à utiliser pour soumettre des statistiques de pêche à la CTOI pour l’année statistique 2023 afin de faciliter la curation et la gestion des données. Ces modèles sont disponibles sous forme de feuilles de calcul Microsoft Excel™ avec macro, intégrant des contrôles d’entrée et les listes de codes nécessaires pour des champs de données spécifiques. Des conseils sur la façon de remplir ces modèles sont fournis dans l’ancienne version des lignes directrices de la CTOI sur les rapports de données, accessible [ici](./legacy/Directives_Declaration_Donnees_CTOI_2014.pdf).
 
 Vous pouvez télécharger tous les anciens formulaires encouragés à soumettre des données [ici](../forms/legacy/IOTC-forms-current.zip). Outre les anciens formulaires conçus pour les ensembles de données de base de la CTOI, l'archive ZIP contient également les formulaires [1IN](#1IN), [3AA](#3AA), et [3DA](#3DA). Ces formulaires supplémentaires ont été développés pour répondre plus efficacement aux exigences en matière de données décrites dans les mesures de conservation et de gestion de la CTOI.
 

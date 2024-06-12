@@ -6,6 +6,12 @@ render("./RMDs/Form_summary.Rmd",
        output_file = "index.html",
        output_dir = "./out/HTML/")
 
+# Summary_FR ####
+render("./RMDs/Form_summary_fr.Rmd",
+       output_format = "html_document2",
+       output_file = "index_fr.html",
+       output_dir = "./out/HTML/")
+
 # Forms ####
 
 ## Species presence in the catch ####
