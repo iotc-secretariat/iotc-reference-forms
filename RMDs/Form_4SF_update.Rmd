@@ -27,14 +27,7 @@ Straight length measurements made with a calliper or measuring board are recomme
 
 Sampling coverage shall be set to at least one (1) fish measured by tonne caught by fishery and species, with samples being representative of all the periods and areas fished. For each stratum, the data coverage – i.e., the percentage (%) of catch/effort sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates. In addition, raised estimates of the size samples must be reported to the Secretariat to account for bias due to unrepresentative sampling. Documents covering sampling and raising procedures must be provided for each fishery and species.
 
-Click [here](../forms/Form-4SF-update.xlsx) to download an empty version of form 4-SF-update, or [return](../forms) to the list of all new versions of the IOTC statistical data reporting forms.
-
-<!-- Length frequency data could be reported: -->
-<!-- - by individual fishery and species through the  single form [4-SF](https://data.iotc.org/reference/latest/forms/Form-4SF.xlsx); -->
-<!-- - or for multiple fisheries and species using the form [4-SF multiple](https://data.iotc.org/reference/latest/forms/Form-4SF-multiple.xlsx).  -->
-<!-- Contrary to single 4-SF form, where data specifications are to be defined in the metadata worksheet, in the 4-SF multiple these are listed in the data worksheet to align the data with specifications for each fisheries and species.  -->
-
-<!-- [return back](../forms) to the list of all IOTC statistical data reporting forms. -->
+Click [here](../forms/Form-4SF-update.xlsx) to download a blank version of Form 4-SF-update, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Reporting deadlines
 

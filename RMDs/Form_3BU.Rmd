@@ -23,12 +23,11 @@ output:
 
 This form supports the reporting of single daily buoy position (latitude and longitude in decimal degrees) for each of the buoys monitored by each purse seine vessel. Each buoy is identified by its unique identifier which is a concatenation of the acronym of the buoy commercial model (e.g., ISD+, M3+, T8E) followed by 5-9 digits depending on the buoy model.
 
-Click [here](../forms/Form-3BU.xlsx) to download an empty version of form 3-BU, or [return](../forms) the list of all new versions of the IOTC statistical data reporting forms.
+Click [here](../forms/Form-3BU.xlsx) to download a blank version of Form 3-BU, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
-- _Surface fisheries_: 
-**To be submitted with a time delay of at least 60 days, but no longer than 90 days**
+- _Surface fisheries_: **To be submitted with a time delay of at least 60 days, but no longer than 90 days**
 
 # Stratification
 

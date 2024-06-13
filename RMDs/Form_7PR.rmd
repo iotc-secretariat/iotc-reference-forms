@@ -21,11 +21,9 @@ output:
   
 # Description
   
-This form supports the *voluntary* reporting of _monthly time series of price of fish products for tuna and tuna-like species_ caught in the Indian Ocean.
+This form supports the *voluntary* reporting of _prices of fish products for tuna and tuna-like species under IOTC mandate_.
 
-Click [here](../forms/legacy/Form-7PR-legacy.xlsm) to download an empty version of the legacy form 7-PR, or [return](../forms) to the list of all new versions of the IOTC statistical data reporting forms. 
-
-<!-- The new reporting form 7-PR is under construction and should become available soon. The information below pertains to the new form. -->
+Click [here](../forms/legacy/Form-7PR-legacy.xlsm) to download an empty version of the legacy form 7-PR, or [return](../forms) to the list of all versions of the IOTC statistical data reporting forms. 
 
 # Reporting deadlines
 

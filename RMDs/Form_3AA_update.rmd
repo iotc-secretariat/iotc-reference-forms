@@ -23,7 +23,7 @@ output:
   
 This form supports the reporting of geographic position and description of each _fishing activity conducted around each anchored fish aggregated devices(AFAD), as **update,**_ along with estimates of retained catches and discards in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species.
 
-Click [here](../forms/Form-3AA-update.xlsx) to download an empty version of form 3-AA-update, or [return](../forms) to the list of all new versions of the IOTC statistical data reporting forms.
+Click [here](../forms/Form-3AA-update.xlsx) to download a blank version of Form 3-AA-update, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Reporting deadlines
 
