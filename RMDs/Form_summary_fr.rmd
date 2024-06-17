@@ -152,7 +152,7 @@ Pour la déclaration de données sur les [_statistiques des bateaux de pêche_](
 + [Nouveau modèle de formulaire](./Form-2FC.xlsx)
 + [Description du nouveau formulaire](./Form_2FC.html)
 
-## Form 7PR {#7PR}
+## Formulaire 7PR {#7PR}
 
 Pour la déclaration de données sur les _prix des produits de la pêche pour le thon et les espèces apparentées dans le cadre du mandat de la CTOI_. Le nouveau modèle de formulaire est en cours de construction.
 
