@@ -31,27 +31,16 @@ Click [here](../forms/Form-3DA.xlsx) to download a blank version of Form 3-DA, o
 
 # Stratification
 
-### Submission information
-
-| Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
-### General information
+## General information
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer, e.g., 1996 |
 | [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
-| Reporting Month | M | Calendar month of the fishing activities reported through the dataset | Integer 1..12 |
+| Reporting month | M | Calendar month of the fishing activities reported through the dataset | Integer 1..12 |
 
-### Data specifications
+## Data specifications
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -78,8 +67,8 @@ Click [here](../forms/Form-3DA.xlsx) to download a blank version of Form 3-DA, o
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Present  | M | Unique identifier of the buoy | Character  |
 | Identifier   | M | FOB identification (Deacon ID) | Plain text      |
-| Position| M | Indicate whether the vessel have access/knowledge of the buoy position (_ownership_) | Boolean |
-| Activity    | M | Type of activities undertaken when visiting or deploying  FOB | **Code** from [Buoy activity types](#FOBbuoyActivityTypes) |
+| Position| M | Indicate whether the vessel have access/knowledge of the buoy position | Boolean (Y/N) |
+| Activity | M | Type of activities undertaken when visiting or deploying  FOB | **Code** from [Buoy activity types](#FOBbuoyActivityTypes) |
 
 ### DFOB data
 
@@ -95,27 +84,38 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 
 #### Surface (raft)
 
-|Element | Description | Unit  | Format  |
-|:---------------|:----------------------|:------------|:------------------|
-| Plastic  | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | - | Boolean |
-| Metal  | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | - | Boolean |
-| Length | Length of the surface or near-surface structure of the drifting floating object | cm | Decimal |
-| Width  | Width of the surface or near-surface structure of the drifting floating object  | cm | Decimal |
-| Height | Height of the surface or near-surface structure of the drifting floating object | cm | Decimal |
-| Mesh   | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | - | Boolean |
-| Mesh size | Size of the main net mesh used on the surface or near-surface structure of the drifting floating object (if any) | mm | Decimal |
+|Element | Requirement | Description | Unit  | Format  |
+|:---------------| :----: | :----------------------|:------------|:------------------|
+| Plastic  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | - | Boolean (Y/N) |
+| Metal  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | - | Boolean (Y/N) |
+| Length | M | Length of the surface or near-surface structure of the drifting floating object | cm | Decimal |
+| Width  | O |  Width of the surface or near-surface structure of the drifting floating object  | cm | Decimal |
+| Height | O | Height of the surface or near-surface structure of the drifting floating object | cm | Decimal | 
+| Mesh   | M | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | - | Boolean (Y/N) |
+| Mesh size | O | Size of the main net mesh used on the surface or near-surface structure of the drifting floating object (if any) | mm | Decimal |
 
 #### Subsurface (tail)
 
-| Element | Description | Unit  | Format  |
-| :---------------|:----------------------|:------------|:------------------|
-| Plastic  | Indicates whether the tail of the drifting floating object contains some plastic materials | - | Boolean|
-| Metal    | Indicates whether the tail of the drifting floating object contains some metal materials | - | Boolean|
-| Length   | Length of the subsurface structure of the drifting floating object | cm | Decimal |
-| Width    | Width of the subsurface structure of the drifting floating object  | cm | Decimal |
-| Height   | Height of the subsurface structure of the drifting floating object | cm | Decimal|
-| Mesh     | Indicates whether the subsurface structure of the drifting floating object contains mesh | - | Boolean|
-| Mesh size | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) | mm  | Decimal |
+| Element | Requirement | Description | Unit  | Format  |
+| :---------------| :---: | :----------------------|:------------|:------------------|
+| Plastic  | M | Indicates whether the tail of the drifting floating object contains some plastic materials | - | Boolean (Y/N) |
+| Metal | M | Indicates whether the tail of the drifting floating object contains some metal materials | - | Boolean (Y/N) |
+| Length | M |  Length of the subsurface structure of the drifting floating object | cm | Decimal |
+| Width  | O | Width of the subsurface structure of the drifting floating object  | cm | Decimal |
+| Height | O | Height of the subsurface structure of the drifting floating object | cm | Decimal |
+| Mesh | M | Indicates whether the subsurface structure of the drifting floating object contains mesh | - | Boolean (Y/N) |
+| Mesh size | O | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) | mm | Decimal |
+
+# Reporting metadata
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Liaison officer full name]{#fcname} | M | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe  |
+| [Liaison officer email]{#fcemail} | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
 # Reference codelists
 
