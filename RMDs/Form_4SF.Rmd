@@ -29,28 +29,13 @@ Sampling coverage shall be set to at least one (1) fish measured by tonne caught
 
 Click [here](../forms/Form-4SF.xlsx) to download a blank version of Form 4-SF, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
-# Reporting deadlines
+# Data content
 
-+ **Longline fisheries**: 30 June (preliminary), 30 December (final)
-+ **Surface fisheries**: 30 June (final)
-+ **Coastal fisheries**: 30 June (final)
+Number (or weight) of fish sample and raised estimates by size category and species, along with information on the value (%) and type of sampling coverage used for the estimations by month, year, fleet, fishery and geographical grid.
 
 # Stratification
 
-## Reporting metadata
-
-### Submission information
-
-| Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
-### General information
+## General information
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -58,9 +43,7 @@ Click [here](../forms/Form-4SF.xlsx) to download a blank version of Form 4-SF, o
 | [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 
-## Data elements
-
-### Main data elements
+## Main data elements
 
 | Element | Requirement | Description |Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -72,7 +55,7 @@ Click [here](../forms/Form-4SF.xlsx) to download a blank version of Form 4-SF, o
 | Type of fate | M | Fate of fish caught (retained or discarded)| **Code** from [Types of fate](#typesOfFate)           |
 | Fate | M | Reason for retained or discarded of the catch | **Code** from [Fates](#fates) |
 
-### Original data
+## Original data
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -84,7 +67,7 @@ Click [here](../forms/Form-4SF.xlsx) to download a blank version of Form 4-SF, o
 | Source coverage type | M | Variable used for data coverage | **Code** from [Coverage types](#coverageTypes) |
 | Source coverage value  | M | Value of coverage | Percentage |
 
-### Measurements
+## Measurements
 
 | Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -92,7 +75,7 @@ Click [here](../forms/Form-4SF.xlsx) to download a blank version of Form 4-SF, o
 | Measurements | M | Type of measure recorded | **Code** from [Measurements](#Measurements)     |
 | Measurement tool | M | Tool used to take the measurement | **Code** from [Measurement tools](#allMeasurementTools) |
 
-### Sample data
+## Sample data
 
 | Element  | Requirement | Description | Data type  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -101,7 +84,24 @@ Click [here](../forms/Form-4SF.xlsx) to download a blank version of Form 4-SF, o
 | Number of samples | M | The sample size of strata | Integer |
 | Number of fish  | M | The number of fish measured | Integer |
 
-## Additional information
+# Reporting metadata
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+# Reporting deadlines
+
++ **Longline fisheries**: 30 June (preliminary), 30 December (final)
++ **Surface fisheries**: 30 June (final)
++ **Coastal fisheries**: 30 June (final)
+
+# Additional information
 
 ### The spatial and temporal resolutions, and catch units
 

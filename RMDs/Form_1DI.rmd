@@ -25,28 +25,13 @@ This form supports the reporting of estimates of discards in numbers or live wei
 
 Click [here](../forms/Form-1DI.xlsx) to download a blank version of Form 1-DI, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
-# Reporting deadlines
+# Data content
 
-+ **Longline fisheries**: 30 June (preliminary), 30 December (final)
-+ **Surface fisheries**: 30 June (final)
-+ **Coastal fisheries**: 30 June (final)
+Number or live weight of discards by species, including their condition at release, if the data is raised, along with information on the value (%) and type of sampling coverage used for the estimations by  quarter if available, year, fleet, fishery, and IOTC main area.
 
 # Stratification
 
-## Reporting metadata
-
-### Submission information
-
-| Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
-### General information
+## General information
 
 | Element        | Requirement | Description | Codelist  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -54,9 +39,8 @@ Click [here](../forms/Form-1DI.xlsx) to download a blank version of Form 1-DI, o
 | [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 
-## Data elements
 
-### Main data elements
+## Main data elements
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -69,7 +53,7 @@ Click [here](../forms/Form-1DI.xlsx) to download a blank version of Form 1-DI, o
 | Data raising             | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| 
 | Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 
-### Original data
+## Original data
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -78,9 +62,23 @@ Click [here](../forms/Form-1DI.xlsx) to download a blank version of Form 1-DI, o
 | Original data processing | M | Processing applied to the data  | **Code** from [Discards data processings](#dataProcessingsDI) |
 | Source coverage type     | M | Variable used for data coverage | **Code** from [Coverage types](#coverageTypes) |
 
-## Additional information
+# Reporting metadata
 
-Total annual estimates of the amount of fish caught and discarded by fishing fleet, fishery, IOTC main area, species, and condition.
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+# Reporting deadlines
+
++ **Longline fisheries**: 30 June (preliminary), 30 December (final)
++ **Surface fisheries**: 30 June (final)
++ **Coastal fisheries**: 30 June (final)
 
 # Reference codelists
 

@@ -27,28 +27,14 @@ For each stratum, the data coverage -- i.e., the percentage (%) of vessels or fi
 
 Click [here](../latest/forms/Form-2FC.xlsx) to download a blank version of Form 1-RC, or [return](../forms) to the list of IOTC statistical data reporting forms.
 
-# Reporting deadlines
+# Data content
 
-+ **Longline fisheries**: 30 June (preliminary), 30 December (final)
-+ **Surface fisheries**: 30 June (final)
-+ **Coastal fisheries**: 30 June (final)
+Number of fishing vessel by size category, along with information on the value (%) and type of sampling coverage used for the estimations by year, fleet, fishery, and vessel characteristics.
+
 
 # Stratification
 
-## Reporting metadata
-
-### Submission information
-
-| Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
-### General information
+## General information
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -56,9 +42,7 @@ Click [here](../latest/forms/Form-2FC.xlsx) to download a blank version of Form 
 | [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 
-## Data elements
-
-### Main data elements
+## Main data elements
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -82,6 +66,25 @@ Click [here](../latest/forms/Form-2FC.xlsx) to download a blank version of Form 
 | Boat class types | M |  Vessel size categories  | **Code** from [Boat class types](#boatClassTypes) |
 | Fish preservation method | M | Type of preservation methods being used for target species onboard boats | **Code** from [Fish preservation methods](#fishPreservationMethods) |
 | Fish storage | M | Type of structures present on-board and used by the vessel to store the catch | **Code** from [Fish storage method](#fishStorageTypes) |
+
+# Reporting metadata
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+
+# Reporting deadlines
+
++ **Longline fisheries**: 30 June (preliminary), 30 December (final)
++ **Surface fisheries**: 30 June (final)
++ **Coastal fisheries**: 30 June (final)
+
 
 # Referenced codelists
 

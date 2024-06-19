@@ -25,9 +25,9 @@ This form supports the reporting of data on operational activities conducted by 
 
 Click [here](../forms/Form-3DA.xlsx) to download a blank version of Form 3-DA, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
-# Reporting deadlines
+# Data content
 
-- **Surface fisheries**: 30 June (final)
+Total number and/or live weight of catches by species, fate, raising, along with daily information by dFOB activities, characteristics and dimensions.
 
 # Stratification
 
@@ -46,9 +46,7 @@ Click [here](../forms/Form-3DA.xlsx) to download a blank version of Form 3-DA, o
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
 
-## Data elements
-
-### Main data elements
+## Main data elements
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -61,7 +59,7 @@ Click [here](../forms/Form-3DA.xlsx) to download a blank version of Form 3-DA, o
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | 
 | Catch unit   | M | Unit used to report the vakue of catch of a given species | **Code** from [Catch units](#catchUnits) |
 
-### Buoy data
+## Buoy data
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -70,7 +68,7 @@ Click [here](../forms/Form-3DA.xlsx) to download a blank version of Form 3-DA, o
 | Position| M | Indicate whether the vessel have access/knowledge of the buoy position | Boolean (Y/N) |
 | Activity | M | Type of activities undertaken when visiting or deploying  FOB | **Code** from [Buoy activity types](#FOBbuoyActivityTypes) |
 
-### DFOB data
+## DFOB data
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -116,6 +114,10 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 | [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
 | [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+# Reporting deadlines
+
+- **Surface fisheries**: 30 June (final)
 
 # Reference codelists
 

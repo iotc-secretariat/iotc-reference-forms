@@ -25,22 +25,9 @@ This form supports the reporting of geographic position and description of each 
 
 Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to download a blank version of Form 3-AA, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
-# Reporting deadlines
+# Data content
 
-- **Surface fisheries**: 30 June (final)
-
-# Reporting metadata
-
-## Submission information
-
-| Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+Number or live weight of retained and discards by species, including their fate, if the data is raised, estimations by day of the month, year, fleet, fishery, and geographic position from each aFOB.
 
 ## General information
 
@@ -49,8 +36,6 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to down
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
 | Reporting entity | M | Entity reporting the dataset to the IOTC Secretariat | **Code** From [Entities](#entities) |
 | Flag state | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
-
-# Data elements
 
 ## Main data elements
 
@@ -73,6 +58,23 @@ Click [here](https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx) to down
 | Identifier | M | Unique identifier of the floating object | Plain text      |
 | Type | M | Type of floating objects | **Code** from [AFOB types](#FOBtypes) |
 | Activity | M | Type of activities undertaken when visiting or deploying a floating object | **Code** from [AFOB activity types](#FOBactivityTypes) |
+
+
+# Reporting metadata
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+
+# Reporting deadlines
+
+- **Surface fisheries**: 30 June (final)
 
 # Reference codelists
 

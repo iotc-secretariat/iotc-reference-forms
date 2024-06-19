@@ -25,24 +25,13 @@ This form supports the reporting of data on operational activities conducted by 
 
 Click [here](../forms/Form-3DA-update.xlsx) to download a blank version of Form 3-DA-update, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
-# Reporting deadlines
+# Data content
 
-- **Surface fisheries**: 30 June (final)
+Total number and/or live weight of catches by species, fate, raising, along with daily information by dFOB activity, characteristics and dimensions.
 
 # Stratification
 
-### Submission information
-
-| Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
-### General information
+## General information
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -53,15 +42,7 @@ Click [here](../forms/Form-3DA-update.xlsx) to download a blank version of Form 
 | Vessel name | M | Name of vessel monitoring the buoy  | Plain text  |
 | Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy | Plain text (_IOTCxxxxxx_) |
 
-### Data specifications
-
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
-
-## Data elements
-
-### Main data elements
+## Main data elements
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -74,7 +55,13 @@ Click [here](../forms/Form-3DA-update.xlsx) to download a blank version of Form 
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | 
 | Catch unit   | M | Unit used to report the vakue of catch of a given species | **Code** from [Catch units](#catchUnits) |
 
-### Buoy data
+## Data specifications
+
+| Element | Requirement | Description | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
+
+## Buoy data
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -83,7 +70,7 @@ Click [here](../forms/Form-3DA-update.xlsx) to download a blank version of Form 
 | Position| M | Indicate whether the vessel have access/knowledge of the buoy position (_ownership_) | Boolean |
 | Activity    | M | Type of activities undertaken when visiting or deploying  FOB | **Code** from [Buoy activity types](#FOBbuoyActivityTypes) |
 
-### DFOB data
+## DFOB data
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -107,7 +94,7 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 | Mesh   | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | - | Boolean |
 | Mesh size | Size of the main net mesh used on the surface or near-surface structure of the drifting floating object (if any) | mm | Decimal |
 
-#### Subsurface (tail)
+### Subsurface (tail)
 
 | Element | Description | Unit  | Format  |
 | :---------------|:----------------------|:------------|:------------------|
@@ -118,6 +105,23 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 | Height   | Height of the subsurface structure of the drifting floating object | cm | Decimal|
 | Mesh     | Indicates whether the subsurface structure of the drifting floating object contains mesh | - | Boolean|
 | Mesh size | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) | mm  | Decimal |
+
+
+# Reporting metadata
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+
+# Reporting deadlines
+
+- **Surface fisheries**: 30 June (final)
 
 # Reference codelists
 

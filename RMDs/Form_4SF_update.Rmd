@@ -29,29 +29,13 @@ Sampling coverage shall be set to at least one (1) fish measured by tonne caught
 
 Click [here](../forms/Form-4SF-update.xlsx) to download a blank version of Form 4-SF-update, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
-# Reporting deadlines
+# Data content
 
-+ **Longline fisheries**: 30 June (preliminary), 30 December (final)
-+ **Surface fisheries**: 30 June (final)
-+ **Coastal fisheries**: 30 June (final)
+Number (or weight) of fish sample and raised estimates by size category and species, along with information on the value (%) and type of sampling coverage used for the estimations by month, year, fleet, fishery and geographical grid.
 
 # Stratification
 
-## Reporting metadata
-
-### Submission information
-
-| Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
-
-### General information
+## General information
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -61,7 +45,23 @@ Click [here](../forms/Form-4SF-update.xlsx) to download a blank version of Form 
 | Fisheries   | M | Type of fishing practices based on several factors| [Fisheries](#fisheries)            |
 | Species    | M | Species caught and discarded| [Species](#allSpecies)           |
 
-### Data specifications
+## Main data elements
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Month | M | The month of the fishing activities reported through the dataset | Integer |
+|Grid| M | the seven digits grid square of the fishing area in Indian Ocean   | [Grid codes](#geospatialData) |
+|Sex| M | The sex of species sampled   | [Sex](#sex) |
+
+## Sample data
+
+| Element        | Requirement | Description | Code list  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Size class (_low_)  | M | The lowest size recorded for the sample | integer    |
+| Number of samples | M | The sample size of strata| integer    |
+| Number of fish  | M | The number of fish measured   | integer    |
+
+## Data specifications
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -74,7 +74,7 @@ Click [here](../forms/Form-4SF-update.xlsx) to download a blank version of Form 
 | Type of fate    | M | Fate of fish caught (retained or discarded)| [Types of fate](#typesOfFate)           |
 | Fate   | M | Reason for retained or discarded of the catch | [Fate](#fates)  
 
-#### Measurements
+## Measurements
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -83,34 +83,31 @@ Click [here](../forms/Form-4SF-update.xlsx) to download a blank version of Form 
 | Measurement Tool    | M | Tool used to take the measurement | [Measurement tools](#allMeasurementTools)     |
 | Size interval   | M | Size interval between lowest and highest measurements of the sampled species | integer    |
 
-
-## Data elements
-
-### Main data elements
-
-| Element        | Requirement | Description | Code list  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Month | M | The month of the fishing activities reported through the dataset | Integer |
-|Grid| M | the seven digits grid square of the fishing area in Indian Ocean   | [Grid codes](#geospatialData) |
-|Sex| M | The sex of species sampled   | [Sex](#sex) |
-
-
-### Original data
+## Original data
 
 | Element        | Requirement | Description | Code list  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Estimation   | M | Indicate if the data was estimated or actual recorded data | [Estimations](#estimations)     |
 
 
-### Sample data
+# Reporting metadata
 
-| Element        | Requirement | Description | Code list  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Size class (_low_)  | M | The lowest size recorded for the sample | integer    |
-| Number of samples | M | The sample size of strata| integer    |
-| Number of fish  | M | The number of fish measured   | integer    |
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-## Additional information
+# Reporting deadlines
+
++ **Longline fisheries**: 30 June (preliminary), 30 December (final)
++ **Surface fisheries**: 30 June (final)
++ **Coastal fisheries**: 30 June (final)
+
+# Additional information
 
 ### The spatial and temporal resolutions, and catch units
 

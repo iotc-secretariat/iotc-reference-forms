@@ -25,28 +25,13 @@ This form supports the reporting of estimates of species-specific catches and ef
 
 Click [here](../forms/Form-3CE.xlsx) to download a blank version of Form 3-CE, or [return](..) to the list of all new versions of the IOTC statistical data reporting forms.
 
-# Reporting deadlines
+# Data content
 
--   **Longline fisheries**: 30 June (preliminary), 30 December (final)
--   **Surface fisheries**: 30 June (final)
--   **Coastal fisheries**: 30 June (final)
+Total number and/or live weight of retained catches by species and effort by stratum, along with information on the value (%) and type of sampling coverage used for the estimations by month, year, fleet, fishery, raising level and geographical grid.
 
 # Stratification
 
-## Reporting metadata
-
-### Submission information
-
-| Element        | Requirement | Description | Format | Example |
-| :-------- | :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
-### General information
+## General information
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -54,9 +39,7 @@ Click [here](../forms/Form-3CE.xlsx) to download a blank version of Form 3-CE, o
 | [Reporting entity]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | [Flag state]{#repflagstate} | M | Country registration of the fishery vessels | **Code** from [Countries](#countries) |
 
-## Data elements
-
-### Main data elements
+## Main data elements
 
 | Element        | Requirement | Description |Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -64,11 +47,10 @@ Click [here](../forms/Form-3CE.xlsx) to download a blank version of Form 3-CE, o
 | Fisheries   | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#fisheries) |
 | Grid | M | The 7-digit CWP grid square of the fishing area in the Indian Ocean  | **Code** from [IOTC Grids](https://data.iotc.org/reference/latest/domain/admin/#IOTCgridsCESF) or [IOTC artisanal grids](https://data.iotc.org/reference/latest/domain/admin/#FAOareas) |
 | Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
-| Type of fate  | M | Fate of fish caught (retained or discarded)| **Code** from [Types of fate](#typesOfFate) |
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings)| 
 | Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 
-### Original data
+## Original data
 
 | Element        | Requirement | Description | Input value  |
 | :------------- | :-----: | :----------------------- | :-----------: |
@@ -80,7 +62,7 @@ Click [here](../forms/Form-3CE.xlsx) to download a blank version of Form 3-CE, o
 |source coverage type     | M | Variable used for data coverage | **Code** from [coverage types](#coverageTypes) |
 |Source coverage value   | M | Value of coverage |in percentage |
 
-### Effort units
+## Effort units
 
 | Element        | Requirement | Description | Input value  |
 | :------------- | :-----: | :----------------------- | :-----------: |
@@ -88,9 +70,27 @@ Click [here](../forms/Form-3CE.xlsx) to download a blank version of Form 3-CE, o
 | Secondary    | O | Secondary effort unit (if any) | **Code** from [effort units](#effortUnits)     |
 | Tertiary    | O | Tertiary effort unit (if any) |**Code** from [effort units](#effortUnits)     |
 
-## Additional information
+# Reporting metadata
 
-### Effort units
+| Element        | Requirement | Description | Format | Example |
+| :-------- | :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+
+# Reporting deadlines
+
+-   **Longline fisheries**: 30 June (preliminary), 30 December (final)
+-   **Surface fisheries**: 30 June (final)
+-   **Coastal fisheries**: 30 June (final)
+
+# Additional information
+
+### Effort units recommended by fishery
 
 Effort units must be consistent with the recording requirements established in Res. [15/01](https://www.iotc.org/cmm/resolution-1501-recording-catch-and-effort-data-fishing-vessels-iotc-area-competence) complemented by numbers of fishing operations for [longline fisheries](#iotclonglinefishery) and [surface fisheries](#iotcsurfacefishery) ([IOTC-2022-SC25-R](https://iotc.org/documents/SC/25/RE)). For coastal fisheries, it is recommended that effort data be submitted in the same units as those prescribed for longline fisheries and surface fisheries characterised by the same fishing gear. 
 

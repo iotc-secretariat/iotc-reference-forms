@@ -25,24 +25,13 @@ This form supports the reporting of geographic position and description of each 
 
 Click [here](../forms/Form-3AA-update.xlsx) to download a blank version of Form 3-AA-update, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
-# Reporting deadlines
+# Data content
 
-- **Surface fisheries**: 30 June (final)
+Number or live weight of retained and discards by species, including their fate, if the data is raised, estimations by day of the month, year, fleet, fishery, and geographic position from each aFOB.
 
-## Reporting metadata
+# Stratification
 
-### Submission information
-
-| Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
-### General information
+## General information
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -52,15 +41,13 @@ Click [here](../forms/Form-3AA-update.xlsx) to download a blank version of Form 
 | Month | M | Gregorian calendar month of the fishing activities reported through the dataset | Integer 1..12 |
 | Fisheries   | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries)            |
 
-### Data specifications
+## Data specifications
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Original data type  | M | Preliminary/final status of the data | **Code** from [Types of data](#types)      |
 
-## Data elements
-
-### Main data elements
+## Main data elements
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -72,13 +59,29 @@ Click [here](../forms/Form-3AA-update.xlsx) to download a blank version of Form 
 | Data raising  | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings)| 
 | Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 
-### aFOB data
+## aFOB data
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Identifier   | M | Unique identifier of the anchored floating object | Plain text      |
 | Type | M | Type of anchored floating object | [AFOB types](#FOBtypes) |
 | Activity    | M | Type of activities undertaken when visiting or deploying an anchored floating object | [AFOB activity types](#FOBactivityTypes) |
+
+# Reporting metadata
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+
+# Reporting deadlines
+
+- **Surface fisheries**: 30 June (final)
 
 # Reference codelists
 

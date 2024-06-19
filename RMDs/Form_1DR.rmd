@@ -25,13 +25,27 @@ This form supports the reporting of the matrix of presence of species in the ret
 
 Click [here](../forms/Form-1DR.xlsx) to download a blank version of Form 1DR, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
-# Reporting deadlines
+# Data content
 
-- **All fisheries**: 30 June (final)
+Indicate presence *(one (1) for positive or zero (0) for absence)* of species in the retained catches and discards, by year, fleet, fishery, and fishery categories.
+
+## General information
+
+| Element | Requirement | Description | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [entities](#Entities) |
+| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [countries](#Countries) |
+
+## Main data elements
+
+| Element | Description | Codelist |
+| :----------- | :-------------------------- | :-------: |
+| Species | Species include IOTC species, mobulid rays, common sharks, and other bycatch species, expected to be present by respective fisheries and gear groups | [Species](#species) |
+| Gear groups | Gear groups catching IOTC species and other species of interest | [Gear groups](#gearGroups) |
+| Fishery categories | Fishery categories by each gear group | [Fishery categories](#fisheryCategories)|
 
 # Reporting metadata
-
-## Submission information
 
 | Element        | Requirement | Description | Format | Example |
 | :----------- | :----: | :----------------------- | :-------- | :------------ |
@@ -42,23 +56,10 @@ Click [here](../forms/Form-1DR.xlsx) to download a blank version of Form 1DR, or
 | [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-## General information
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [entities](#Entities) |
-| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [countries](#Countries) |
+# Reporting deadlines
 
-# Data elements
-
-## Main data elements
-
-| Element | Description | Codelist |
-| :----------- | :-------------------------- | :-------: |
-| Species | Species include IOTC species, mobulid rays, common sharks, and other bycatch species, expected to be present by respective fisheries and gear groups | [Species](#species) |
-| Gear groups | Gear groups catching IOTC species and other species of interest | [Gear groups](#gearGroups) |
-| Fishery categories | Fishery categories by each gear group | [Fishery categories](#fisheryCategories)|
+- **All fisheries**: 30 June (final)
 
 # Reference codelists
 
