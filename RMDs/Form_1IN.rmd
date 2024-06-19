@@ -21,49 +21,53 @@ output:
   
 # Description
   
-This form supports the reporting of data on the number of interactions with marine turtles, seabirds, mobulid rays, cetaceans, and whale sharks. CPCs having national and state legislation for protecting whale sharks (_Rhincodon typus_) are encouraged to provide the data although they are exempt from reporting (Res. [13/05](https://iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus)). CPCs having national and state legislation for protecting cetaceans are encouraged to provide the information to the Secretariat (Res. [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans)). For each stratum, the data coverage -- i.e., the percentage (%) of occurrences of interactions sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
+This form supports the reporting of data on fisheries interactions with marine turtles, seabirds, mobulid rays, cetaceans, and whale sharks. CPCs having national and state legislation for protecting whale sharks (_Rhincodon typus_) are encouraged to provide the data although they are exempt from reporting (Res. [13/05](https://iotc.org/cmm/resolution-1305-conservation-whale-sharks-rhincodon-typus)). CPCs having national and state legislation for protecting cetaceans are encouraged to provide the information to the Secretariat (Res. [23/06](https://iotc.org/cmm/resolution-2306-conservation-cetaceans)). For each stratum, the data type and coverage (percentage; %) are essential to assess the representativeness and quality of the estimates.
 
 Click [here](../forms/Form-1IN.xlsx) to download a blank version of Form 1-IN, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+
+# Data content
+
+Number of interactions along with information on the value (%) and type of sampling coverage used for the estimations by year, fleet, fishery, and IOTC main area.
+
+# Stratification
+
+## General information
+
+| Element        | Requirement | Description | Input value  |
+| :-------------- | :-----: | :----------------------- | :-------: |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the reported fishing activities in the dataset | Integer (e.g., 1996) |
+| [Reporting entity]{#repentity} | M | Entity reporting the data to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| [Flag state]{#repflagstate} | M | Country of registration of the fishing vessels | **Code** from [Countries](#countries) |
+
+## Main data elements
+
+| Element | Requirement | Description | Input value  |
+| :-------------- | :-----: | :----------------------- | :-------: |
+| Fisheries | M | IOTC definition of fishery units used to define fishing practices, which emerge from the combination of fishery purposes, area of operation, fishing vessels' size, gear and gear configuration, and target species | **Code** from [Fisheries](#fisheries) |
+| IOTC main areas | M | Two main statistical areas constituting the IOTC area of competence | **Code** from [IOTC main areas](#IOareasMain) |
+
+## Original data
+
+| Element | Requirement | Description | Input value |
+| :-------------- | :-----: | :----------------------- | :-------: |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Type of data](#types) |
+| Types of Coverage   | O | Variable used for data coverage | **Code** from [Types of Coverage](#coverageTypes) |
+
+# Reporting metadata
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Liaison officer full name]{#fcname} | M | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe  |
+| [Liaison officer email]{#fcemail} | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the compilation of the data | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
 # Reporting deadlines
 
 - **Longline fisheries**: 30 June (preliminary), 30 December (final)
 - **Surface fisheries**: 30 June (final)
-
-# Stratification
-
-## Reporting metadata
-
-| Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
-## General information
-
-| Element        | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| [Flag state]{#repflagstate} | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
-
-## Main data elements
-
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Fisheries | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries) |
-| [IOTC main areas]{#IOareasMain}| M | Main IOTC areas of competence | **Code** from [IOTC main areas](#IOareasMain) |
-
-## Orignal data
-
-| Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type | M | Preliminary/final status of the data | **Code** from [Type of data](#types) |
-| Types of Coverage   | M | Variable used for data coverage | **Code** from [Types of Coverage](#coverageTypes) |
 
 # Reference codelists
 

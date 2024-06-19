@@ -2,11 +2,9 @@
 library(rmarkdown)
 library(knitr)
 library(bookdown)
-
 library(RCurl)
 library(data.table)
 library(DT)
-
 library(iotc.base.common.data)
 
 source("./01.initialize.R")
