@@ -1,0 +1,77 @@
+---
+title: "IOTC statistical data reporting: Legacy Form 1DR (v`r BASE_VERSION`)"
+author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+output:
+  word_document2:
+    reference_docx: "../templates/doc_template.docx"
+    number_sections: FALSE
+    reference_num: TRUE
+    fig_caption: TRUE
+
+  html_document2:
+    css: "../templates/html_template.css"
+    includes: 
+      in_header: "../templates/google-analytics.html"
+    number_sections: FALSE
+    toc: yes
+    toc_float:
+      collapsed: FALSE
+    smooth_scroll: FALSE
+---
+  
+# Description
+  
+This form supports the reporting of the matrix of presence of species in the retained catches and discards of each fishing fleet and gear group. For each species/gear combination, the cell must be filled with either a value of one (1) in case of positive catch or a value of zero (0) in case of absence of catch (i.e., no landing and no discard). Species include IOTC species, mobulid rays, common sharks, and other bycatch species.
+
+Click [here](../forms/legacy/Form-1DR-legacy.xlsx) to download a blank version of Form 1DR, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+
+# Data content
+
+Indicate presence *(one (1) for positive or zero (0) for absence)* of species in the retained catches and discards, by year, fleet, fishery, and fishery categories.
+
+## General information
+
+| Element | Requirement | Description | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|
+| [Reporting year]{#repyear}     | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
+| [CPC]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#LEGACY_FLEETS) |
+
+
+## Main data elements
+
+| Element | Description | Codelist |
+| :----------- | :-------------------------- | :-------: |
+| Species | Species include IOTC species, mobulid rays, common sharks, and other bycatch species, expected to be present by respective fisheries and gear groups | [Species](#species) |
+| Gear groups | Gear groups catching IOTC species and other species of interest | [Gear groups](#gearGroups) |
+
+
+# Reporting deadlines
+
+- **All fisheries**: 30 June (final)
+
+# Reference codelists
+
+## Fleet {#LEGACY_FLEETS}
+
+Reference codes modelling the flag / reporting country submitting the dataset to the IOTC Secretariat.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_FLEETS, "LEGACY_FLEETS")
+```
+
+## Gear groups {#gearGroups}
+
+Reference codes modelling the gear groups used to catch the fish species.
+
+```{r collapse = TRUE}
+out_dt(GEAR_GROUPS, "GEAR_GROUPS")
+```
+
+## Species {#species}
+
+Reference codes modelling the species caught with the gear groups.
+
+```{r collapse = TRUE}
+out_dt(SPECIES, "SPECIES")
+```
+

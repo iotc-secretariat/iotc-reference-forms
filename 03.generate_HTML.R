@@ -125,3 +125,40 @@ render("./RMDs/Form_2FC.Rmd",
 #       output_file ="Form_7PR.html", 
 #       output_dir = "./out/HTML/")
 ### Form 7-PR #####
+
+
+#### legacy ####
+
+## Amount of fish caught and retained ####
+
+### Form 1-RC #####
+render("./RMDs/legacy_Form_1RC.Rmd", 
+       output_format = "html_document2",
+       output_file ="Form_1RC_legacy.html", 
+       output_dir = "./out/HTML/")
+
+render("./RMDs/legacy_Form_1DI.Rmd", 
+       output_format = "html_document2",
+       output_file ="Form_1DI_legacy.html", 
+       output_dir = "./out/HTML/")
+
+render("./RMDs/legacy_Form_1DR.Rmd", 
+       output_format = "html_document2",
+       output_file ="Form_1DR_legacy.html", 
+       output_dir = "./out/HTML/")
+
+render("./RMDs/legacy_Form_3CE.Rmd", 
+       output_format = "html_document2",
+       output_file ="Form_3CE_legacy.html", 
+       output_dir = "./out/HTML/")
+
+render("./RMDs/legacy_Form_2FC.Rmd", 
+       output_format = "html_document2",
+       output_file ="Form_2FC_legacy.html", 
+       output_dir = "./out/HTML/")
+
+
+render("./RMDs/legacy_Form_4SF.Rmd", 
+       output_format = "html_document2",
+       output_file ="Form_4SF_legacy.html", 
+       output_dir = "./out/HTML/")

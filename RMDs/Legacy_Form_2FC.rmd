@@ -1,0 +1,207 @@
+---
+title: "IOTC statistical data reporting: Form 2FC (v`r BASE_VERSION`)"
+author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+output:
+  word_document2:
+    reference_docx: "../templates/doc_template.docx"
+    number_sections: FALSE
+    reference_num: TRUE
+    fig_caption: TRUE
+
+  html_document2:
+    css: "../templates/html_template.css"
+    includes: 
+      in_header: "../templates/google-analytics.html"
+    number_sections: FALSE
+    toc: yes
+    toc_float:
+      collapsed: FALSE
+    smooth_scroll: FALSE
+---
+
+# Definition
+
+The term Fishing Craft refers to highly aggregated statistics per fleet, gear, type/size/range of boat and year for the entire IOTC Area. These include:
+
+•	Numbers of active fishing crafts targeting IOTC species (or sharks): Refers to the total number of fishing crafts that were fishing for IOTC species or other species within the IOTC Area during a calendar year.
+
+•	Numbers of active fishing crafts targeting other species: Refers to the total number of fishing crafts that, fishing for species other than those referred to above, caught IOTC species or main shark species as a bycatch within the IOTC Area during a calendar year.
+
+
+For each stratum, the data coverage -- i.e., the percentage (%) of vessels or fishing activities sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
+
+Click [here](../latest/forms/legacy/Form-2FC-legacy.xlsm) to download a blank version of Form 1-RC, or [return](../forms) to the list of IOTC statistical data reporting forms.
+
+# Data content
+
+Number of fishing vessel by size category, along with information on the value (%) and type of sampling coverage used for the estimations by year, fleet, fishery, and vessel characteristics.
+
+
+# Stratification
+
+## General information
+
+| Element | Requirement | Description | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|
+| [Reporting year]{#repyear}     | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
+| [Reporting country]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#LEGACY_FLEETS) |
+| [Flag country]{#repflagstate}    | M | Country registration of the fishing vessels  | **Code** from [Fleet](#LEGACY_FLEETS) |
+
+## Main data elements
+
+| Element | Requirement | Description | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Type of fishery       |      M      | IOTC-defined fisheries                 | **Code** from [Fisheries](#LEGACY_FISHERIES) |
+| Target Species       |      M      | Main species targeted            | **Code** from [Species](#LEGACY_SPECIES ) |
+
+### Original data
+
+| Element  | Requirement | Description  | Input value |
+|:-----------------|:-------------:|:------------------------|:--------------|
+| Original data type       |      M      | Preliminary/final status of the data | **Code** from [Type of data](#types) |
+| Original data source     |      M      | Source of information                | **Code** from [Retained catches data sources](#LegacydataSourcesRC) |
+| Original data processing |      M      | Processing applied to the data       | **Code** from [Retained catches data processings](#legacydataProcessingsRC) |
+| Source coverage type     |      M      | Variable used for data coverage      | **Code** from [Coverage types](#coverageTypes) |
+
+
+### Vessel characteristics
+
+| Element        | Requirement | Description | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Boat type | M | Fishing boat classification based on shape and purpose| **Code** from [Boat types](#LEGACY_BOAT_TYPES)      |
+| Mechanisation | M | Type of boat mechanization| **Code** from [Mechanisation types](#mechanizationTypes)          |
+| Boat class size types | M |  Vessel size categories  | **Code** from [Boat class types](#boatClassTypes) |
+| Onboard preservation | M | Type of preservation methods being used for target species onboard boats | **Code** from [Fish preservation methods](#fishPreservationMethods) |
+| Onboard processing | M | Type of fish processing methods use onboard | **Code** from [Fish processing method](#legacyFISHPROCESSINGTYPES) |
+
+# Reporting metadata
+
+| Element        | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+
+# Reporting deadlines
+
++ **Longline fisheries**: 30 June (preliminary), 30 December (final)
++ **Surface fisheries**: 30 June (final)
++ **Coastal fisheries**: 30 June (final)
+
+
+# Referenced codelists
+
+## Fleet {#LEGACY_FLEETS}
+
+Reference codes modelling the flag / reporting country submitting the dataset to the IOTC Secretariat.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_FLEETS, "LEGACY_FLEETS")
+```
+
+
+## Fisheries {#LEGACY_FISHERIES}
+
+```{r collapse = TRUE}
+out_dt(LEGACY_FISHERIES, "LEGACY_FISHERIES")
+```
+
+## Species {#LEGACY_SPECIES }
+
+Reference codes modelling the species interacting with the fisheries as:
+
+-   target species (retained or discarded)
+-   bycatch species (retained or discarded)
+-   sampled individuals
+-   etc.
+
+These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_SPECIES, "LEGACY_SPECIES")
+```
+
+### Boat types {#LEGACY_BOAT_TYPES}
+
+This codelist includes several types of boat currently known to the IOTC: countries using types of boat other than those specified are encouraged to provide this information to the Secretariat.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_BOAT_TYPES, "LEGACY_BOAT_TYPES")
+```
+
+### Mechanization types {#mechanizationTypes}
+
+Reference codes modelling the type of boat mechanization known in the IOTC and for which fleet / effort statistics might be provided to the Secretariat.
+
+```{r collapse = TRUE}
+out_dt(MECHANIZATION_TYPES, "MECHANIZATION_TYPES")
+```
+
+### Fish preservation methods {#fishPreservationMethods}
+
+Reference codes modelling the type of preservation methods being used for target species onboard boats of a given type, and for which fleet / effort statistics might be provided to the Secretariat.
+
+```{r collapse = TRUE}
+out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
+```
+
+### Fish processing types {#legacyFISHPROCESSINGTYPES}
+
+Reference codes modelling the type of processing applied to the retained fish.
+
+```{r collapse = TRUE}
+out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
+```
+
+### Boat class types {#boatClassTypes}
+
+CPCs should make every possible effort to classify their fleets according to the categories recorded in this codelist and report this information to the Secretariat. Additionally, the legacy form grouped by size class and type (**Tab. \@ref(tab:SZC**)
+
+```{r collapse = TRUE}
+out_dt(BOAT_CLASS_TYPES, "BOAT_CLASS_TYPES")
+```
+
+```{r SZC, collapse = TRUE}
+library(knitr)
+kable(read.xlsx("data/legacy_code_list.xlsx", "SZC", sep.names = " "), caption = "Boat size class by type")
+```
+
+### Data types {#legacytypes}
+
+Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
+
+a. Preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
+
+b. Final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_DATA_TYPES, "LEGACY_DATA_TYPES")
+```
+
+### Fishing crafts data sources {#legacysourcesFC}
+
+Reference codes modelling the source of the data provided through the fishing craft data form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_SOURCES[DATASET_CODE == "FC"] , "LDATA_SOURCES_FC")
+```
+
+### Fishing crafts data processings {#legacydataProcessingsFC}
+
+Reference codes modelling the processing applied to the data provided through the fishing craft form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_PROCESSINGS[DATASET_CODE == "FC"], "LDATA_PROCESSINGS_FC")
+```
+
+### Coverage types {#coverageTypes}
+
+Reference codes modelling the type of coverage for the raw information used to obtain the data provided through a specific form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_COVERAGE, "LCOVERAGE_TYPES")
+```

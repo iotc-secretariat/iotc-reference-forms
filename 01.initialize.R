@@ -111,6 +111,25 @@ SEX                   = read_codelist(domain = "biological", codelist = "SEX")
 #PRICING_LOCATIONS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRICING_LOCATIONS")
 #PRODUCT_TYPES        = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRODUCT_TYPES")
 
+## legacy code lists
+LEGACY_FISHERIES    = read_codelist(domain = "legacy", codelist = "FISHERIES")
+LEGACY_FLEETS    = read_codelist(domain = "legacy", codelist = "FLEETS")
+LEGACY_PROCESSINGS   = read_codelist(domain = "legacy", codelist = "DATA_PROCESSINGS")
+LEGACY_SPECIES   = read_codelist(domain = "legacy", codelist = "SPECIES")
+LEGACY_SOURCES   = read_codelist(domain = "legacy", codelist = "DATA_SOURCES")
+LEGACY_COVERAGE   = read_codelist(domain = "legacy", codelist = "COVERAGE_TYPES")
+LEGACY_ESTIMATION   = read_codelist(domain = "legacy", codelist = "ESTIMATION_TYPES")
+LEGACY_EFFORT_UNITS   = read_codelist(domain = "legacy", codelist = "EFFORT_UNITS")
+LEGACY_CATCH_UNITS  = read_codelist(domain = "legacy", codelist = "CATCH_UNITS")
+LEGACY_DATA_TYPES  = read_codelist(domain = "legacy", codelist = "DATA_TYPES")
+LEGACY_FATES  = read_codelist(domain = "legacy", codelist = "FATES")
+#LEGACY_CONDITION  = read_codelist(domain = "legacy", codelist = "SPECIES_CON")
+LEGACY_BOAT_TYPES = read_codelist(domain = "legacy", codelist = "BOAT_TYPES")
+LEGACY_SAMPLED_CATCH = read_codelist(domain = "legacy", codelist = "SAMPLED_CATCH_TYPES")
+LEGACY_MEASUREMENT_TOOLS = read_codelist(domain = "legacy", codelist = "MEASUREMENT_TOOLS")
+LEGACY_MEASUREMENT_TYPES= read_codelist(domain = "legacy", codelist = "MEASUREMENT_TYPES")
+
+
 out_dt = function(data, name) {
   datatable(data, 
             rownames = FALSE, 

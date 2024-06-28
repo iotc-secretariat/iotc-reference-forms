@@ -1,0 +1,246 @@
+---
+title: "IOTC statistical data reporting: Legacy Form 3CE (v`r BASE_VERSION`)"
+author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+output:
+  word_document2:
+    reference_docx: "../templates/doc_template.docx"
+    number_sections: FALSE
+    reference_num: TRUE
+    fig_caption: TRUE
+
+  html_document2:
+    css: "../templates/html_template.css"
+    includes: 
+      in_header: "../templates/google-analytics.html"
+    number_sections: FALSE
+    toc: yes
+    toc_float:
+      collapsed: FALSE
+    smooth_scroll: FALSE
+---
+  
+# Definition
+  
+The term catch-and-effort refers to the fine-scale data – usually from logbooks, and reported per fleet, year, gear- type of school, month, grid and species.  This includes:
+
+•	Surface fisheries:
+
+o   	Purse seine and pole-and-line fisheries: catch weight by species and fishing effort by fishing mode, 1° grid area and month strata. In addition:
+Support vessels: effort data expressed as the number of days at sea by 1° grid area and month.
+Fish Aggregating Devices (FAD): effort data expressed as the total number of FAD visited per type of FAD, type of visit, 1° grid area and month.
+o   	Other fisheries: catch weight by species and fishing effort by 1° grid area and month strata.
+
+•	Longline fisheries: catch by species, in numbers or weight, and effort as the number of hooks deployed by 5° grid area and month strata.
+
+•	Coastal fisheries: available catch by species, fishing gear and fishing effort may be provided using an alternative geographical area if it better represents the fishery concerned.
+Catch-and-effort data shall be extrapolated (raised) to the total catches (and effort) for the fishery concerned. 
+
+
+Click [here](../forms/legacy/Form-3CE-legacy.xlsm) to download a blank version of Form 3-CE, or [return](..) to the list of all new versions of the IOTC statistical data reporting forms.
+
+# Data content
+
+Total number and/or live weight of retained catches by species and effort by stratum, along with information on the value (%) and type of sampling coverage used for the estimations by month, year, fleet, fishery, raising level and geographical grid.
+
+# Stratification
+
+## General information
+
+| Element | Requirement | Description | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|
+| [Reporting year]{#repyear}     | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
+| [Reporting country]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#Legacyfleet) |
+| [Flag country]{#repflagstate}    | M | Country registration of the fishing vessels  | **Code** from [Fleet](#Legacyfleet) |
+
+## Main data elements
+
+| Element        | Requirement | Description |Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Month | M | The month of the fishing activities reported through the dataset | Integer 1..12 |
+| Fisheries   | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#LegacyFISHERIES) |
+| Grid | M | The 7-digit CWP grid square of the fishing area in the Indian Ocean  | **example** [Grids](#LegacyIOTCGrids)|
+| Species | M | Species caught and discarded | **Code** from [Species](#LegacySPECIES) |
+| Data raising | M | Indicate if raised to total catch |Y/N| 
+| Catch units   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#LegacycatchUnits) |
+
+## Original data
+
+| Element  | Requirement | Description  | Input value |
+|:-----------------|:-------------:|:------------------------|:--------------|
+| Type of data      |      M      | Preliminary/final status of the data | **Code** from [Y/N |
+| Original data source     |      M      | Source of information                | **Code** from [Retained catches data sources](#LegacydataSourcesCE) |
+| Original data processing |      M      | Processing applied to the data       | **Code** from [Retained catches data processings](#legacydataProcessingsCE) |
+| Source coverage type     |      M      | Variable used for data coverage      | **Code** from [Coverage types](#LegacycoverageTypes) |
+| Target species    |      M      | Species targeting by the fishery      |  **Code** from [Species](#LegacySPECIES) |
+
+
+## Effort units
+
+| Element        | Requirement | Description | Input value  |
+| :------------- | :-----: | :----------------------- | :-----------: |
+| Effort units     | M | Primary effort unit | **Code** from [Effort units](#legacyeffortUnits)     |
+
+
+# Reporting metadata
+
+| Element  | Requirement | Description | Format | Example                                              |
+|:------------|:-----------:|:--------------------|:------------|:------------|
+| [Contact name]{#fcname} |      M      | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat           | Plain text                                         | John Doe                                             |
+| [Contact e-mail address]{#fcemail}    |      M      | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address                                | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| [Contact phone]{#fcphone}    |      O      | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number                                | country code - number |
+| [Organisation name]{#orgname}    |      M      | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat          | Plain text                                         | National Institute of Fisheries                      |
+| [Organisation email]{#orgemail}  |      O      | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address                                | [nif\@gov.sc](mailto:nif@gov.sc){.email}             |
+
+
+# Reporting deadlines
+
+-   **Longline fisheries**: 30 June (preliminary), 30 December (final)
+-   **Surface fisheries**: 30 June (final)
+-   **Coastal fisheries**: 30 June (final)
+
+# Additional information
+
+### Grid definition {#LegacyIOTCGrids}
+
+Each grid is defined through a 7 digits number, as can be seen in the following examples for grids.
+Example:
+
+|7 digit code   |Grid Size   | Quadrant | Degrees Latitude | Degrees Longitude |
+|:-----:|:-----:|:-----|:-----|:-----:|
+| 6100050  →| 6 | 1 | 0 0| 0 5 0 |
+| 5104088  →| 5 | 1 | 0 4 | 0 8 8 |
+
+Where:
+
+•	Grid size: Size of the square/rectangle used as unit of area. Use the following codes:
+
+a.	5 to refer to 1° square areas (catch-and-effort surface fleets and support vessels)
+b.	6 to refer to 5° square areas (catch-and-effort longline fleets and size data all fleets)
+
+•	Quadrant: Major geographic quadrants divided by the Equator (latitude 0°) and the Greenwich meridian (longitude 0°), as follows:
+
+a.	1: Northeast
+b.	2: Southeast
+c.	3: Southwest
+d.	4: Northwest
+
+In the Indian Ocean, only 1 and 2 will apply	 
+
+•	Latitude / Longitude: Indicate the latitude (two digits) and longitude (three digits) of the corner of the square closest to 0° latitude and 0° longitude (point defined by the white square in each case).
+
+
+### Effort units recommended by fishery
+
+Effort units must be consistent with the recording requirements established in Res. [15/01](https://www.iotc.org/cmm/resolution-1501-recording-catch-and-effort-data-fishing-vessels-iotc-area-competence) complemented by numbers of fishing operations for [longline fisheries](#iotclonglinefishery) and [surface fisheries](#iotcsurfacefishery) ([IOTC-2022-SC25-R](https://iotc.org/documents/SC/25/RE)). For coastal fisheries, it is recommended that effort data be submitted in the same units as those prescribed for longline fisheries and surface fisheries characterised by the same fishing gear. 
+
+| Gear group | Primary effort | Secondary effort | 
+| :------------ | :-------------------- | :------------------- |
+Gillnets (GI)        | Number of fishing days   | Number of fishing operations |
+Hooks and lines (HL) | Number of fishing days   | Number of fishing operations |
+Longlines (LL)       | Number of hooks deployed | Number of fishing operations |
+Other gears (OT)     | Number of days at sea    | Number of active gears/fishing operations |
+Pole-and-lines (PL)  | Number of fishing days   | Number of fishing operations |
+Purse seines (PS)    | Number of fishing hours  | Number of fishing operations |
+
+From a general perspective, using trips as a unit of effort is not recommended because trip duration can vary widely due to factors such as vessel size, fishing success, and technical considerations (e.g., fuel availability).
+
+Additional units may be considered to refine and standardise the estimation of nominal fishing effort:
+
+i. In gillnet fisheries, the surface area of the nets deployed may better reflect effort intensity by accounting for differences in net length and height;
+
+ii. In hooks and line fisheries, the number of hooks may be used as required for longline fisheries;
+
+iii. In pole-and-line fisheries, the number of day-poles used may help account for differences in the number of fishers onboard the vessels;
+
+iv. In purse seine fisheries, the numbers of successful and null fishing operations, searching time, and surface area explored may complement the information provided by fishing time and the total number of fishing sets. 
+
+### Other dimensions
+
+Areas to be used for the provision of catch-and-effort and size frequency data 
+The standards for the reporting of catch-and-effort and size frequency data are specified in IOTC Resolution 10/02 (Mandatory statistical requirements for IOTC Members and Cooperating Non-Contracting Parties (CPC’s)):
+
+•	Paragraph 3. Catch-and-effort data
+
+a.	 Subparagraph (a) For surface fisheries: catch weight by species and fishing effort shall be provided by 1° grid area and month strata. (…)
+b.	Subparagraph (b) Longline fisheries: catch by species, in numbers or weight, and effort as the number of hooks deployed shall be provided by 5° grid area and month strata. (…)
+c.	Subparagraph (c) Coastal fisheries: available catch by species, fishing gear and fishing effort shall be submitted frequently and may be provided using an alternative geographical area if it better represents the fishery concerned.
+
+
+# Reference codelists
+
+## Entities {#Legacyfleet}
+
+Reference codes modelling the flag / reporting country submitting the dataset to the IOTC Secretariat.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_FLEETS, "LEGACY_FLEETS")
+```
+
+## Fisheries {#LegacyFISHERIES}
+
+```{r collapse = TRUE}
+out_dt(LEGACY_FISHERIES, "LEGACY_FISHERIES")
+```
+
+## Catch units {#LegacycatchUnits}
+
+Reference codes modelling the units used to report the level of catches a given species, further stratified by the specific criteria characterizing each reporting form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_CATCH_UNITS, "LEGACY_CATCH_UNITS")
+```
+
+## Species {#LegacySPECIES}
+
+Reference codes modelling the species interacting with the fisheries as:
+
+-   target species (retained or discarded)
+-   bycatch species (retained or discarded)
+-   sampled individuals
+-   etc.
+
+These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_SPECIES, "LEGACY_SPECIES")
+```
+
+## Catches and effort data sources {#LegacysourcesCE}
+
+Reference codes modelling the source of the data provided through the catch and effort data form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_SOURCES[DATASET_CODE == "CE"] , "LDATA_SOURCES_CE")
+```
+
+## Catches and effort data processings  {#LegacydataProcessingsCE}
+
+Reference codes modelling the processing applied to the data provided through the catch and effort data form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_PROCESSINGS[DATASET_CODE == "CE"], "LDATA_PROCESSINGS_CE")
+```
+
+## Coverage types {#LegacycoverageTypes}
+
+Reference codes modelling the type of coverage for the raw information used to obtain the data provided through a specific form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_COVERAGE, "LCOVERAGE_TYPES")
+```
+
+## Estimations {#Legacyestimations}
+
+Reference codes indicating whether the data estimated for a stratum was actually recorded in the stratum or derived from comparable strata through a substitution scheme.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_ESTIMATION, "LEGACY_ESTIMATION")
+```
+
+## Effort units {#LegacyeffortUnits}
+
+Reference codes modelling the units used to report the level of effort, further stratified by the specific criteria characterizing each reporting form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_EFFORT_UNITS , "LEGACY_EFFORT_UNITS ")
+```

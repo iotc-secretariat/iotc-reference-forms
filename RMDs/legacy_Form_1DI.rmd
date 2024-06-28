@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting: Legacy Form 1RC (v`r BASE_VERSION`)"
+title: "IOTC statistical data reporting: Legacy Form 1DI (v`r BASE_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -23,16 +23,17 @@ output:
 
 The term Annual catches refers to highly aggregated statistics for each species estimated per fleet, gear and year for a large area (IOTC Area). These include:
 
-•	Retained catches: Refers to the part of the catch that is retained on board, expressed in live weight; it includes:
-  o	Catches of specimens of the target species, which are usually stored on the main vessel compartments and sold in the local market or other international markets. 
-  o	Retained bycatch, which refers to the incidental catches of specimens of species that are not the target of the fishery but are of commercial value or to the catches of specimens of the target species having poor quality (e.g. undersized, spoiled, etc.).  Retained bycatch specimens are usually stored on separate compartments onboard and sold in the local markets or used for direct consumption. 
-  
+•	Discards: Refers to the part of the bycatch that is not retained on board, expressed in number and/or live weight. It includes:
+o	    The catches of specimens that are discarded dead due to them not having commercial value: non-commercial species, fish of small size, fish in poor condition, etc.
+o	    The catches of specimens that are discarded dead due to other reasons: not enough storage on board, gear breakdown, etc.
+STANDARDS FOR THE REPORTING OF ANNUAL CATCHES: The standards for the reporting of annual catches to the IOTC are defined in IOTC Resolution 10/02; in addition, other IOTC resolutions include specific requirements for the reporting of data on total catches from the fisheries, including requirements for sharks (05/05, 13/06, 12/09, 13/05), seabirds (05/09, 10/06), marine turtles (12/04), and Cetaceans (13/04). The recommended minima levels of coverage for catch data are specified in IOTC Resolution 11/04 (Regional Observer Scheme). Appendix I and Appendix II contain more information about these requirements.
 
-Click [here](../forms/legacy/Form-1RC-legacy.xlsm) to download a blank version of Form 1-RC, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+
+Click [here](../forms/legacy/Form-1DI-legacy.xlsm) to download a blank version of Form 1-DI, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 
-Total live weight of retained catches by species, along with information on the value (%) and type of sampling coverage used for the estimations by  quarter if available, year, fleet, fishery and IOTC main area.
+Total number or live weight of discarded catches by species, along with information on the value (%) and type of sampling coverage used for the estimations by  quarter if available, year, fleet, fishery, discard reason and IOTC main area.
 
 # Stratification
 
@@ -49,12 +50,14 @@ Total live weight of retained catches by species, along with information on the 
 | Element | Requirement | Description | Input value |
 |:-------------|:------------:|:----------------------|:----------------------|
 | Quarter       |      O      | Fishing time period                    | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
-| Type of fishery       |      M      | IOTC-defined fisheries                 | **Code** from [Fisheries](#LEGACY_FISHERIES) |
-| IOTC area     |      M      | Main IOTC areas                        | **Code** from [IOTC main areas](#IOTCareasMain) |
+| Fishery       |      M      | IOTC-defined fisheries                 | **Code** from [Fisheries](#LEGACY_FISHERIES) |
+| Area    |      M      | Main IOTC areas                        | **Code** from [IOTC main areas](#IOTCareasMain) |
 | Target Species       |      M      | Main species targeted            | **Code** from [Species](#LEGACY_SPECIES ) |
-| Species       |      M      | Species caught and retained            | **Code** from [Species](#LEGACY_SPECIES ) |
-| Catch       |      M      | catches for each species retained on board            | Integer |
-
+| Reasons for discarding  | M | Reasons why the species were discarded | **Code** from [Reasons for discarding](#legacydiscardreason) |
+| Species    | M | Species caught and discarded| **Code** from [Species](#LEGACY_SPECIES )           |
+| Condition of species | M | Conditions of species being discarded at sea  | **Code** from  [Conditions](#legacydiscardconditions)|
+| Data raising             | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| 
+| Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 
 
 ## Original data
@@ -64,7 +67,7 @@ Total live weight of retained catches by species, along with information on the 
 | Original data type       |      M      | Preliminary/final status of the data | **Code** from [Type of data](#types) |
 | Original data source     |      M      | Source of information                | **Code** from [Retained catches data sources](#LegacydataSourcesRC) |
 | Original data processing |      M      | Processing applied to the data       | **Code** from [Retained catches data processings](#legacydataProcessingsRC) |
-| Source coverage type     |      M      | Variable used for data coverage      | **Code** from [Coverage types](#legacycoverageTypes) |
+| Source coverage type     |      M      | Variable used for data coverage      | **Code** from [Coverage types](#coverageTypes) |
 
 # Reporting metadata
 
@@ -84,7 +87,6 @@ Total live weight of retained catches by species, along with information on the 
 - **Coastal fisheries**: 30 June (final)
 
 # Reference codelists
-
 
 ## Fleet {#LEGACY_FLEETS}
 
@@ -127,8 +129,24 @@ These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fi
 out_dt(LEGACY_SPECIES, "LEGACY_SPECIES")
 ```
 
+## Discard reasons {#legacydiscardreason}
 
-## Data types {#legacytypes}
+Reference codes modelling the discard reasons information used to obtain the data provided through a specific form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_FATES[DATASET_CODE == "DI"], "LFATES")
+```
+
+## Discard conditions {#legacydiscardconditions}
+
+Reference codes modelling the conditions (at capture / at release) of individual aquatic creatures being discarded at sea or measured.
+
+```{r collapse = TRUE}
+out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
+```
+
+
+## Data types {#Legacytypes}
 
 Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
 
@@ -156,7 +174,7 @@ Reference codes modelling the processing applied to the data provided through th
 out_dt(LEGACY_PROCESSINGS[DATASET_CODE == "RC"], "LDATA_PROCESSINGS_RC")
 ```
 
-## Coverage types {#LegacycoverageTypes}
+## Coverage types {#legacycoverageTypes}
 
 Reference codes modelling the type of coverage for the raw information used to obtain the data provided through a specific form.
 

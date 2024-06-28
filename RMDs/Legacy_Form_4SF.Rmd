@@ -1,0 +1,218 @@
+---
+title: "IOTC statistical data reporting: Legacy Form 4SF (v`r BASE_VERSION`)"
+author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+output:
+  word_document2:
+    reference_docx: "../templates/doc_template.docx"
+    number_sections: FALSE
+    reference_num: TRUE
+    fig_caption: TRUE
+
+  html_document2:
+    css: "../templates/html_template.css"
+    includes: 
+      in_header: "../templates/google-analytics.html"
+    number_sections: FALSE
+    toc: yes
+    toc_float:
+      collapsed: FALSE
+    smooth_scroll: FALSE
+---
+  
+# Definition
+  
+The term length frequency refers to individual body lengths of IOTC species and main shark species per fleet, year, gear, type of school, month and 5 degrees square areas. 
+Length frequency is defined as the number of individuals of a catch or catch sample in each length interval ([UN ESCWA](https://www.unescwa.org/sd-glossary/length-frequency-distribution-lfd)). The modal size is the length group with the higher number of individuals.
+
+Straight length measurements made with a calliper or measuring board are recommended over fish weights and vary according to fish groups: (i) lower-jaw fork length for billfish, (ii) upper-jaw fork length for tunas, mackerels, sharks, and all other bycatch fish species with forked or lunate tails, (iii) standard length for bycatch fish species with rounded or truncate tails, and (iv) disc width for rays. The Secretariat further recommends the use of length intervals for the IOTC species and most commonly caught sharks along with maximum length intervals and ranges of valid values which are used to filter and consolidate the size-frequency datasets made available to support the IOTC process (see Recommended measurements).
+
+Sampling coverage shall be set to at least one (1) fish measured by tonne caught by fishery and species, with samples being representative of all the periods and areas fished. For each stratum, the data coverage – i.e., the percentage (%) of catch/effort sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates. In addition, raised estimates of the size samples must be reported to the Secretariat to account for bias due to unrepresentative sampling. Documents covering sampling and raising procedures must be provided for each fishery and species.
+
+Click [here](../forms/legacy/Form-4SF-legacy.xlsm) to download a blank version of Form 4-SF, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+
+# Data content
+
+Number (or weight) of fish sample and raised estimates by size category and species, along with information on the value (%) and type of sampling coverage used for the estimations by month, year, fleet, fishery and geographical grid.
+
+# Stratification
+
+## General information
+
+| Element | Requirement | Description | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|
+| [Reporting year]{#repyear}     | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
+| [Reporting country]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#LEGACY_FLEETS) |
+| [Flag country]{#repflagstate}    | M | Country registration of the fishing vessels  | **Code** from [Fleet](#LEGACY_FLEETS) |
+
+## Main data elements
+
+| Element        | Requirement | Description |Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Month | M | The month of the fishing activities reported through the dataset | Integer 1..12 |
+| Fisheries   | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#LegacyFISHERIES) |
+| Grid | M | The 7-digit CWP grid square of the fishing area in the Indian Ocean  | **example** [Grids](#LegacyIOTCGrids)|
+| Species | M | Species caught and discarded | **Code** from [Species](#LegacySPECIES) |
+
+
+## Measurements
+
+| Element | Requirement | Description | Input value |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Type of Measurement | M | Given measurement types (weight or length) | **Code** from [Types of measurement](#LegacytypesOfMeasurement)     |
+| Type of catch sampled | M | Type of catch sampled (Retain or Discard)| **Code** from [Sampled Catch](#Legacysamplecatch)     |
+| Measurement tool | M | Tool used to take the measurement | **Code** from [Measurement tools](#LegacyallMeasurementTools) |
+
+## Sample data
+
+| Element  | Requirement | Description | Data type  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| LOW CLASS  | M | The lowest size recorded for the sample | Integer |
+| HIGH CLASS  | M | The highest size recorded for the sample | Integer |
+| SIZE INTERVAL / UNIT  | M |The size interval between the low and the high class, include unit measurement | Integer |
+| Number of fish  | M | The number of fish measured | Integer |
+
+## Original data
+
+| Element | Requirement | Description | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Estimation | M | Indicate if the data was estimated or actual recorded data | **Code** from [Estimations](#Legacyestimations) |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |Y/N |
+| Original data source | M | Source of information | [Size frequency data sources](#LegacysourcesSF) |
+| Original data processing | M | Processing applied to the data  | **Code** from [Size frequency data processings](#LegacyprocessingsSF) |
+| Source coverage type | M | Variable used for data coverage | **Code** from [Coverage types](#LegacycoverageTypes) |
+
+
+
+# Reporting metadata
+
+|| Element  | Requirement | Description | Format | Example                                              |
+|:------------|:-----------:|:--------------------|:------------|:------------|
+| [Contact name]{#fcname} |      M      | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat           | Plain text                                         | John Doe                                             |
+| [Contact e-mail address]{#fcemail}    |      M      | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address                                | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| [Contact phone]{#fcphone}    |      O      | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number                                | country code - number |
+| [Organisation name]{#orgname}    |      M      | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat          | Plain text                                         | National Institute of Fisheries                      |
+| [Organisation email]{#orgemail}  |      O      | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address                                | [nif\@gov.sc](mailto:nif@gov.sc){.email}             |
+
+# Reporting deadlines
+
++ **Longline fisheries**: 30 June (preliminary), 30 December (final)
++ **Surface fisheries**: 30 June (final)
++ **Coastal fisheries**: 30 June (final)
+
+# Additional information
+
+## Grid definition {#LegacyIOTCGrids}
+
+Each grid is defined through a 7 digits number, as can be seen in the following examples for grids.
+Example:
+
+|7 digit code   |Grid Size   | Quadrant | Degrees Latitude | Degrees Longitude |
+|:-----:|:-----:|:-----|:-----|:-----:|
+| 6100050  →| 6 | 1 | 0 0| 0 5 0 |
+| 5104088  →| 5 | 1 | 0 4 | 0 8 8 |
+
+Where:
+
+•	Grid size: Size of the square/rectangle used as unit of area. Use the following codes:
+
+a.	5 to refer to 1° square areas (catch-and-effort surface fleets and support vessels)
+b.	6 to refer to 5° square areas (catch-and-effort longline fleets and size data all fleets)
+
+•	Quadrant: Major geographic quadrants divided by the Equator (latitude 0°) and the Greenwich meridian (longitude 0°), as follows:
+
+a.	1: Northeast
+b.	2: Southeast
+c.	3: Southwest
+d.	4: Northwest
+
+In the Indian Ocean, only 1 and 2 will apply	 
+
+•	Latitude / Longitude: Indicate the latitude (two digits) and longitude (three digits) of the corner of the square closest to 0° latitude and 0° longitude (point defined by the white square in each case).
+
+# Reference codelists
+
+## Fleet {#LEGACY_FLEETS}
+
+Reference codes modelling the flag / reporting country submitting the dataset to the IOTC Secretariat.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_FLEETS, "LEGACY_FLEETS")
+```
+
+
+### Fisheries {#LEGACY_FISHERIES}
+
+```{r collapse = TRUE}
+out_dt(LEGACY_FISHERIES, "LEGACY_FISHERIES")
+```
+
+## Species {#LEGACY_SPECIES }
+
+Reference codes modelling the species interacting with the fisheries as:
+
+-   target species (retained or discarded)
+-   bycatch species (retained or discarded)
+-   sampled individuals
+-   etc.
+
+These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_SPECIES, "LEGACY_SPECIES")
+```
+
+## Measurement types {#LegacytypesOfMeasurement}
+
+Reference codes modelling the measurement types as lengths or weights collected as the size frequency.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_MEASUREMENT_TYPES, "LEGACY_MEASUREMENT_TYPES")
+```
+
+## Type of Sampled catch {#Legacysamplecatch}
+
+Reference codes for the sampled catch used to measure individual species.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_SAMPLED_CATCH, "LEGACY_SAMPLED_CATCH")
+```
+
+## Measurement tools {#LegacyallMeasurementTools}
+
+Reference codes modelling the measurement tools, combining those specific for individual lengths and weights used to measure individual species.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_MEASUREMENT_TOOLS, "LEGACY_MEASUREMENT_TOOLS")
+```
+
+## Size-frequency data sources {#LegacysourcesSF}
+
+Reference codes modelling the source of the data provided through the size-frequency data form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_SOURCES[DATASET_CODE == "SF"] , "LDATA_SOURCES_SF")
+```
+
+## Size-frequency data processings {#LegacyprocessingsSF}
+
+Reference codes modelling the processing applied to the data provided through the size-frequency data form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_PROCESSINGS[DATASET_CODE == "SF"], "LDATA_PROCESSINGS_SF")
+```
+
+## Coverage types {#LegacycoverageTypes}
+
+Reference codes modelling the type of coverage for the raw information used to obtain the data provided through a specific form.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_COVERAGE, "LCOVERAGE_TYPES")
+```
+
+## Estimations {#Legacyestimations}
+
+Reference codes indicating if the data estimated for a stratum were actually recorded in the stratum or derived from comparable strata through a substitution scheme.
+
+```{r collapse = TRUE}
+out_dt(LEGACY_ESTIMATION[UNIT_TYPE_CODE == "FL"] , "LEGACY_ESTIMATION")
+```

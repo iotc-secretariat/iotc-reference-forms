@@ -40,6 +40,7 @@ You can download all new form templates for submitting the data for the statisti
 For the submission of data on [_species presence in the catch_](https://data.iotc.org/reference/latest/guidelines/#Species_presence_in_the_catch).
 
 + [Legacy form template](./legacy/Form-1DR-legacy.xlsx)
++ [Legacy form description](./Form_1DR_legacy.html)
 + [New form template](./Form-1DR.xlsx)
 + [New form description](./Form_1DR.html)
 
@@ -55,6 +56,7 @@ For the submission of data on [_interactions of longline and surface fisheries w
 For the submission of data on the total [_amount of fish caught and retained_](https://data.iotc.org/reference/latest/guidelines/#Amount_of_fish_caught_and_retained).
 
 + [Legacy form template](./legacy/Form-1RC-legacy.xlsm)
++ [Legacy form description](./Form_1RC_legacy.html)
 + [New form template](./Form-1RC.xlsx)
 + [New form description](./Form_1RC.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1RC/)
@@ -64,6 +66,7 @@ For the submission of data on the total [_amount of fish caught and retained_](h
 For the submission of data on the [_amount of discards_](https://data.iotc.org/reference/latest/guidelines/#Amount_of_discards).
 
 + [Legacy form template](./legacy/Form-1DI-legacy.xlsm)
++ [Legacy form description](./Form_1DI_legacy.html)
 + [New form template](./Form-1DI.xlsx)
 + [New form description](./Form_1DI.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1DI/)
@@ -72,11 +75,14 @@ For the submission of data on the [_amount of discards_](https://data.iotc.org/r
 
 For the submission of data on [_geo-referenced catches and efforts_](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_catches_and_efforts).
 
+
 The legacy forms are split for:
 
 + Coastal fisheries: [Legacy form template](./legacy/Form-3AR-legacy.xlsm)
 + Longline and surface fisheries: [Legacy form template](./legacy/Form-3CE-legacy.xlsm)
 + Support vessels: [Legacy form template](./legacy/Form-3SU-legacy.xlsm)
+
++ [Legacy form description](./Form_3CE_legacy.html)
 
 The new unified form allows reporting data for multiple fisheries simultaneously:
 
@@ -97,6 +103,7 @@ For the submission of data on [_geo-referenced size frequencies_](https://data.i
 The new unified form allows reporting data for multiple fisheries and species simultaneously:
 
 + [Legacy form template](./legacy/Form-4SF-legacy.xlsm)
++ [Legacy form description](./Form_4SF_legacy.html)
 + [New form template](./Form-4SF.xlsx)
 + [New form description](./Form_4SF.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/4SF/)
@@ -149,6 +156,7 @@ For the submission of data on [_daily buoy positions_](https://data.iotc.org/ref
 For the submission of data on [_fishing craft statistics_](https://data.iotc.org/reference/latest/guidelines/#Fishing_craft_statistics).
 
 + [Legacy form template](./legacy/Form-2FC-legacy.xlsm)
++ [Legacy form description](./Form_2FC_legacy.html)
 + [New form template](./Form-2FC.xlsx)
 + [New form description](./Form_2FC.html)
 
