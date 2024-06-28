@@ -23,7 +23,7 @@ output:
 
 This form supports the reporting of estimates of geo-referenced of species-specific catches and efforts by fishing fleet, fishery, and space and time strata, _as update following revision of previously submitted catch and effort data_.
 
-Click [here](../forms/Form-3CE.xlsx) to download a blank version of Form 3-CE, or [return](..) to the list of all IOTC statistical data reporting forms.
+Click [here](../forms/Form-3CE.xlsx) to download a blank version of Form 3-CE, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 

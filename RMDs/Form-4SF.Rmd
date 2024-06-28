@@ -133,7 +133,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 Codes for all 1°x1° and 5°x5° grids that overlap - at least partially - with the IOTC convention area.
 
-Due to to the large size of the dataset, this is not included for filtering / browsing, but can be directly downloaded as a CSV from here: [IOTC_GRIDS_CE_SF](`r paste0("https://data.iotc.org/reference/latest/domain/admin/codelists/IOTC_GRIDS_CE_SF_", version("IOTC_GRIDS_CE_SF"), ".csv")`).
+Due to to the large size of the dataset, this is not included for filtering / browsing, but can be directly downloaded as a CSV from here: [IOTC_GRIDS_CE_SF](`r paste0("https://data.iotc.org/reference/latest/domain/admin/codelists/IOTC_GRIDS_CE_SF_", version_number("IOTC_GRIDS_CE_SF"), ".csv")`).
 
 ## Fisheries {#fisheries}
 

@@ -12,7 +12,7 @@ C_MASTER =
     clientcharset = "UTF-8"
   )
 
-version = function(codelist_name, codelist_schema = NA) {
+version_number = function(codelist_name, codelist_schema = NA) {
   VERSION = details(codelist_name, codelist_schema)$VERSION[1]
   
   if(!is.na(VERSION)) return(paste0(BASE_VERSION, ".", VERSION))
@@ -27,7 +27,7 @@ details = function(codelist_name, codelist_schema = NA) {
 
 CODELISTS_VERSIONS = query(C_MASTER, "SELECT * FROM [refs_meta].CODELISTS_VERSIONS")
 
-V_MAPPINGS = as.data.table(read.csv("./REFERENCE_CODELISTS_VIEW_MAPPINGS.csv"))
+V_MAPPINGS = fread("./REFERENCE_CODELISTS_VIEW_MAPPINGS.csv")
 V_MAPPINGS = merge(V_MAPPINGS, CODELISTS_VERSIONS, by = c("CL_SCHEMA", "CL_NAME"), all.x = TRUE)[, .(CL_SCHEMA, CL_NAME = REFERENCE_NAME, VERSION, LAST_UPDATE)]
 
 CODELISTS_VERSIONS = unique(rbind(CODELISTS_VERSIONS, V_MAPPINGS))
@@ -105,7 +105,6 @@ TYPES_OF_FATE         = read_codelist(domain = "biological", codelist = "TYPES_O
 FATES                 = read_codelist(domain = "biological", codelist = "FATES")
 SEX                   = read_codelist(domain = "biological", codelist = "SEX")
 
-
 #CURRENCIES   = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "CURRENCIES")
 #DESTINATION_MARKETS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "DESTINATION_MARKETS")
 #PRICING_LOCATIONS    = read_codelist(domain = "socio_economics", schema = "socio_economics", codelist = "PRICING_LOCATIONS")
@@ -113,22 +112,20 @@ SEX                   = read_codelist(domain = "biological", codelist = "SEX")
 
 ## legacy code lists
 LEGACY_FISHERIES    = read_codelist(domain = "legacy", codelist = "FISHERIES")
-LEGACY_FLEETS    = read_codelist(domain = "legacy", codelist = "FLEETS")
-LEGACY_PROCESSINGS   = read_codelist(domain = "legacy", codelist = "DATA_PROCESSINGS")
-LEGACY_SPECIES   = read_codelist(domain = "legacy", codelist = "SPECIES")
-LEGACY_SOURCES   = read_codelist(domain = "legacy", codelist = "DATA_SOURCES")
-LEGACY_COVERAGE   = read_codelist(domain = "legacy", codelist = "COVERAGE_TYPES")
+LEGACY_FLEETS       = read_codelist(domain = "legacy", codelist = "FLEETS")
+LEGACY_PROCESSINGS  = read_codelist(domain = "legacy", codelist = "DATA_PROCESSINGS")
+LEGACY_SPECIES      = read_codelist(domain = "legacy", codelist = "SPECIES")
+LEGACY_SOURCES      = read_codelist(domain = "legacy", codelist = "DATA_SOURCES")
+LEGACY_COVERAGE     = read_codelist(domain = "legacy", codelist = "COVERAGE_TYPES")
 LEGACY_ESTIMATION   = read_codelist(domain = "legacy", codelist = "ESTIMATION_TYPES")
-LEGACY_EFFORT_UNITS   = read_codelist(domain = "legacy", codelist = "EFFORT_UNITS")
+LEGACY_EFFORT_UNITS = read_codelist(domain = "legacy", codelist = "EFFORT_UNITS")
 LEGACY_CATCH_UNITS  = read_codelist(domain = "legacy", codelist = "CATCH_UNITS")
-LEGACY_DATA_TYPES  = read_codelist(domain = "legacy", codelist = "DATA_TYPES")
-LEGACY_FATES  = read_codelist(domain = "legacy", codelist = "FATES")
-#LEGACY_CONDITION  = read_codelist(domain = "legacy", codelist = "SPECIES_CON")
-LEGACY_BOAT_TYPES = read_codelist(domain = "legacy", codelist = "BOAT_TYPES")
+LEGACY_DATA_TYPES   = read_codelist(domain = "legacy", codelist = "DATA_TYPES")
+LEGACY_FATES        = read_codelist(domain = "legacy", codelist = "FATES")
+LEGACY_BOAT_TYPES   = read_codelist(domain = "legacy", codelist = "BOAT_TYPES")
 LEGACY_SAMPLED_CATCH = read_codelist(domain = "legacy", codelist = "SAMPLED_CATCH_TYPES")
 LEGACY_MEASUREMENT_TOOLS = read_codelist(domain = "legacy", codelist = "MEASUREMENT_TOOLS")
-LEGACY_MEASUREMENT_TYPES= read_codelist(domain = "legacy", codelist = "MEASUREMENT_TYPES")
-
+LEGACY_MEASUREMENT_TYPES = read_codelist(domain = "legacy", codelist = "MEASUREMENT_TYPES")
 
 out_dt = function(data, name) {
   datatable(data, 
@@ -140,7 +137,7 @@ out_dt = function(data, name) {
                    buttons = list(
                      list(
                        extend = "csv", 
-                       filename = paste0(name, "_", version(name))
+                       filename = paste0(name, "_", version_number(name))
                      )
                    )
               )

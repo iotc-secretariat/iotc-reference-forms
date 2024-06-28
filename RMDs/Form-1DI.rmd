@@ -39,7 +39,6 @@ Number or live weight of discards by species, including their condition at relea
 | [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 
-
 ## Main data elements
 
 | Element        | Requirement | Description | Input value  |

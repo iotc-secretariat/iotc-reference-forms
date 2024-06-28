@@ -1,17 +1,17 @@
 ---
-title: "IOTC statistical data reporting: Form 2FC (v`r BASE_VERSION`)"
+title: "IOTC statistical data reporting: Legacy Form 2FC"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
-    reference_docx: "../templates/doc_template.docx"
+    reference_docx: "../../templates/doc_template.docx"
     number_sections: FALSE
     reference_num: TRUE
     fig_caption: TRUE
 
   html_document2:
-    css: "../templates/html_template.css"
+    css: "../../templates/html_template.css"
     includes: 
-      in_header: "../templates/google-analytics.html"
+      in_header: "../../templates/google-analytics.html"
     number_sections: FALSE
     toc: yes
     toc_float:
@@ -35,7 +35,6 @@ Click [here](../latest/forms/legacy/Form-2FC-legacy.xlsm) to download a blank ve
 # Data content
 
 Number of fishing vessel by size category, along with information on the value (%) and type of sampling coverage used for the estimations by year, fleet, fishery, and vessel characteristics.
-
 
 # Stratification
 
@@ -85,13 +84,11 @@ Number of fishing vessel by size category, along with information on the value (
 | [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-
 # Reporting deadlines
 
 + **Longline fisheries**: 30 June (preliminary), 30 December (final)
 + **Surface fisheries**: 30 June (final)
 + **Coastal fisheries**: 30 June (final)
-
 
 # Referenced codelists
 
@@ -102,7 +99,6 @@ Reference codes modelling the flag / reporting country submitting the dataset to
 ```{r collapse = TRUE}
 out_dt(LEGACY_FLEETS, "LEGACY_FLEETS")
 ```
-
 
 ## Fisheries {#LEGACY_FISHERIES}
 
@@ -167,7 +163,7 @@ out_dt(BOAT_CLASS_TYPES, "BOAT_CLASS_TYPES")
 
 ```{r SZC, collapse = TRUE}
 library(knitr)
-kable(read.xlsx("data/legacy_code_list.xlsx", "SZC", sep.names = " "), caption = "Boat size class by type")
+kable(read.xlsx("../../data/legacy_code_list.xlsx", "SZC", sep.names = " "), caption = "Boat size class by type")
 ```
 
 ### Data types {#legacytypes}

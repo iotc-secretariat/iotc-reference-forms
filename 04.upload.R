@@ -3,6 +3,7 @@ SERVER_ROOT = "/reference"
 
 FORMS_FOLDER         = "forms"
 INTERIM_FORMS_FOLDER = paste0(FORMS_FOLDER, "/interim")
+LEGACY_FORMS_FOLDER = paste0(FORMS_FOLDER, "/legacy")
 
 DATA_IOTC_SERVER_IP = Sys.getenv("DATA_IOTC_SERVER_IP")
 DATA_IOTC_USERNAME  = Sys.getenv("DATA_IOTC_USERNAME")
@@ -139,6 +140,21 @@ upload_interim_forms = function(version) {
   }
 }
 
+upload_legacy_form_docs = function(version) {
+  folder = full_folder(version)
+  
+  folder = paste0(full_folder(version, "forms/legacy"))
+  
+  for(form in list.files(paste0("./out/HTML/legacy/"), pattern = "*.html")) {
+    print(paste0("Uploading form document '", form, "' in ", folder, "..."))
+    
+    CURL_FTPu(
+      filename   = paste0("./out/HTML/legacy/", form), 
+      target_url = paste0(ftp_url(folder), "/", form) 
+    )
+  }
+}
+
 upload_form_docs = function(version) {
   folder = full_folder(version)
   
@@ -152,26 +168,14 @@ upload_form_docs = function(version) {
       target_url = paste0(ftp_url(folder), "/", form) 
     )
   }
-  
-  #folder = full_folder(version)
-  
-  # folder = paste0(full_folder(version, "forms/interim/"))
-  # 
-  # for(form in list.files(paste0("./out/HTML/interim/"), pattern = "*.html")) {
-  #   print(paste0("Uploading form document '", form, "' in ", folder, "..."))
-  #   
-  #   CURL_FTPu(
-  #     filename   = paste0("./out/HTML/interim/", form), 
-  #     target_url = paste0(ftp_url(folder), "/", form) 
-  #   )
-  # }
-}
+ }
 
 disseminate = function(version) {
   upload_forms(version)
   #upload_interim_forms(version)
+  upload_legacy_form_docs(version)
   upload_form_docs(version)
 }
 
-version = "1.0.0"
-disseminate(version) 
+form_version = "1.0.0"
+disseminate(form_version) 

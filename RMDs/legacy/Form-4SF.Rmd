@@ -1,17 +1,17 @@
 ---
-title: "IOTC statistical data reporting: Legacy Form 4SF (v`r BASE_VERSION`)"
+title: "IOTC statistical data reporting: Legacy Form 4SF"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
-    reference_docx: "../templates/doc_template.docx"
+    reference_docx: "../../templates/doc_template.docx"
     number_sections: FALSE
     reference_num: TRUE
     fig_caption: TRUE
 
   html_document2:
-    css: "../templates/html_template.css"
+    css: "../../templates/html_template.css"
     includes: 
-      in_header: "../templates/google-analytics.html"
+      in_header: "../../templates/google-analytics.html"
     number_sections: FALSE
     toc: yes
     toc_float:
@@ -40,26 +40,25 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 
 | Element | Requirement | Description | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|
-| [Reporting year]{#repyear}     | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
+| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
 | [Reporting country]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#LEGACY_FLEETS) |
-| [Flag country]{#repflagstate}    | M | Country registration of the fishing vessels  | **Code** from [Fleet](#LEGACY_FLEETS) |
+| [Flag country]{#repflagstate} | M | Country registration of the fishing vessels  | **Code** from [Fleet](#LEGACY_FLEETS) |
 
 ## Main data elements
 
-| Element        | Requirement | Description |Input value  |
+| Element | Requirement | Description |Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Month | M | The month of the fishing activities reported through the dataset | Integer 1..12 |
-| Fisheries   | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#LegacyFISHERIES) |
+| Fisheries | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#LegacyFISHERIES) |
 | Grid | M | The 7-digit CWP grid square of the fishing area in the Indian Ocean  | **example** [Grids](#LegacyIOTCGrids)|
 | Species | M | Species caught and discarded | **Code** from [Species](#LegacySPECIES) |
-
 
 ## Measurements
 
 | Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Type of Measurement | M | Given measurement types (weight or length) | **Code** from [Types of measurement](#LegacytypesOfMeasurement)     |
-| Type of catch sampled | M | Type of catch sampled (Retain or Discard)| **Code** from [Sampled Catch](#Legacysamplecatch)     |
+| Type of catch sampled | M | Type of catch sampled (Retain or Discard)| **Code** from [Sampled catch](#Legacysamplecatch)     |
 | Measurement tool | M | Tool used to take the measurement | **Code** from [Measurement tools](#LegacyallMeasurementTools) |
 
 ## Sample data
@@ -81,17 +80,15 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 | Original data processing | M | Processing applied to the data  | **Code** from [Size frequency data processings](#LegacyprocessingsSF) |
 | Source coverage type | M | Variable used for data coverage | **Code** from [Coverage types](#LegacycoverageTypes) |
 
-
-
 # Reporting metadata
 
 || Element  | Requirement | Description | Format | Example                                              |
 |:------------|:-----------:|:--------------------|:------------|:------------|
-| [Contact name]{#fcname} |      M      | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat           | Plain text                                         | John Doe                                             |
-| [Contact e-mail address]{#fcemail}    |      M      | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address                                | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| [Contact phone]{#fcphone}    |      O      | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number                                | country code - number |
-| [Organisation name]{#orgname}    |      M      | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat          | Plain text                                         | National Institute of Fisheries                      |
-| [Organisation email]{#orgemail}  |      O      | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address                                | [nif\@gov.sc](mailto:nif@gov.sc){.email}             |
+| [Contact name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text  | John Doe  |
+| [Contact e-mail address]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address                                | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| [Contact phone]{#fcphone}    |      O      | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number | country code - number |
+| [Organisation name]{#orgname}    |      M      | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries                      |
+| [Organisation email]{#orgemail}  | O  | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
 
 # Reporting deadlines
 
@@ -103,20 +100,19 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 
 ## Grid definition {#LegacyIOTCGrids}
 
-Each grid is defined through a 7 digits number, as can be seen in the following examples for grids.
-Example:
+Each grid is defined through a 7 digits number, as can be seen in the following examples for grids:
 
-|7 digit code   |Grid Size   | Quadrant | Degrees Latitude | Degrees Longitude |
+| 7 digit code  | Grid size   | Quadrant | Degrees Latitude | Degrees Longitude |
 |:-----:|:-----:|:-----|:-----|:-----:|
-| 6100050  →| 6 | 1 | 0 0| 0 5 0 |
-| 5104088  →| 5 | 1 | 0 4 | 0 8 8 |
+| 6100050 | 6 | 1 | 0 0| 0 5 0 |
+| 5104088 | 5 | 1 | 0 4 | 0 8 8 |
 
 Where:
 
 •	Grid size: Size of the square/rectangle used as unit of area. Use the following codes:
 
-a.	5 to refer to 1° square areas (catch-and-effort surface fleets and support vessels)
-b.	6 to refer to 5° square areas (catch-and-effort longline fleets and size data all fleets)
+a.	5 to refer to 1° square areas for catch and effort for surface fisheries, including and support vessels
+b.	6 to refer to 5° square areas for catch and effort for longline fisheries and size data for all fisheries
 
 •	Quadrant: Major geographic quadrants divided by the Equator (latitude 0°) and the Greenwich meridian (longitude 0°), as follows:
 
@@ -125,7 +121,7 @@ b.	2: Southeast
 c.	3: Southwest
 d.	4: Northwest
 
-In the Indian Ocean, only 1 and 2 will apply	 
+In the Indian Ocean, only 1 and 2 apply.	 
 
 •	Latitude / Longitude: Indicate the latitude (two digits) and longitude (three digits) of the corner of the square closest to 0° latitude and 0° longitude (point defined by the white square in each case).
 
@@ -138,7 +134,6 @@ Reference codes modelling the flag / reporting country submitting the dataset to
 ```{r collapse = TRUE}
 out_dt(LEGACY_FLEETS, "LEGACY_FLEETS")
 ```
-
 
 ### Fisheries {#LEGACY_FISHERIES}
 
