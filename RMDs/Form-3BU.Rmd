@@ -52,8 +52,8 @@ Click [here](../forms/Form-3BU.xlsx) to download a blank version of Form 3-BU, o
 | [Reporting month] | M | Month of the fishing activities reported through the dataset | Integer 1..12 |
 | [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
-| [Vessel name | M | Name of vessel monitoring the buoy  | Plain text  |
-| [Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy  | Plain text (_IOTCxxxxxx_) |
+| Vessel name | M | Name of vessel monitoring the buoy  | Plain text  |
+| Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy  | Plain text (_IOTCxxxxxx_) |
 
 ### Data specifications
 
