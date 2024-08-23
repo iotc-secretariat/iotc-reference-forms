@@ -54,9 +54,10 @@ read_codelist = function(base_url = "https://data.iotc.org/reference/latest/doma
 ENTITIES        = read_codelist(domain = "admin", codelist = "ENTITIES")
 COUNTRIES       = read_codelist(domain = "admin", codelist = "COUNTRIES")
 IOTC_MAIN_AREAS = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_MAIN_AREAS")
-FAO_AREAS = read_codelist(domain = "admin", schema = "gis", codelist = "FAO_AREAS")
-IOTC_GRIDS_CE_SF = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_CE_SF")
-
+FAO_AREAS       = read_codelist(domain = "admin", schema = "gis", codelist = "FAO_AREAS")
+IOTC_GRIDS_SF   = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_05x05")
+#IOTC_GRIDS_CE_SF = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_CE_SF")
+IOTC_GRIDS_CE_SF_AR = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_CE_SF_AR")
 DATA_TYPES     = read_codelist(domain = "data", codelist = "DATA_TYPES")
 
 DATA_SOURCES_DI = read_codelist(domain = "data", codelist = "DATA_SOURCES_DI")
@@ -90,8 +91,10 @@ GEAR_GROUPS         = read_codelist(domain = "fisheries", schema = "fishery_conf
 AFOB_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "AFOB_TYPES")
 AFOB_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "AFOB_ACTIVITY_TYPES")
 BUOY_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "BUOY_ACTIVITY_TYPES")
-FOB_TYPES           = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")
-FOB_ACTIVITIES      = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
+AFOB_TYPES           = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")[DFOB == FALSE][, DFOB := NULL]
+DFOB_TYPES           = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")[DFOB == TRUE][, DFOB := NULL]
+AFOB_ACTIVITIES      = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
+DFOB_ACTIVITIES      = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
 CATCH_UNITS         = read_codelist(domain = "fisheries", schema = "fishery", codelist  = "CATCH_UNITS")
 
 SPECIES               = read_codelist(domain = "biological", codelist = "SPECIES")

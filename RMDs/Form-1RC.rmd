@@ -21,7 +21,7 @@ output:
 
 # Description
 
-This form supports the reporting of estimates of retained catches in live weight equivalent (metric tonnes; t) for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
+This form provides for the reporting of estimates of retained catches in live weight equivalent (metric tonnes; t) for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
 Click [here](../forms/Form-1RC.xlsx) to download a blank version of Form 1-RC, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
@@ -35,39 +35,39 @@ Total live weight of retained catches by species, along with information on the 
 
 | Element | Requirement | Description | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|
-| [Reporting year]{#repyear}     | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
-| [Reporting entity]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Entities](#entities) |
-| [Flag state]{#repflagstate}    | M | Country registration of the fishing vessels  | **Code** from [Countries](#countries) |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| Reporting entity| M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Entities](#entities) |
+| Flag state | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
 
 ## Main data elements
 
 | Element | Requirement | Description | Input value |
 |:-------------|:------------:|:----------------------|:----------------------|
-| Quarter       |      O      | Fishing time period                    | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
-| Fishery       |      M      | IOTC-defined fisheries                 | **Code** from [Fisheries](#Fisheries) |
-| IOTC area     |      M      | Main IOTC areas                        | **Code** from [IOTC main areas](#IOTCareasMain) |
-| Retain reason |      M      | Reason for retaining the catch onboard | **Code** from [Reasons for retaining](#retainReasons) |
-| Species       |      M      | Species caught and retained            | **Code** from [Species](#allSpecies) |
+| Quarter | O | Fishing time period | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
+| Fishery | M | IOTC-defined fisheries | **Code** from [Fisheries](#Fisheries) |
+| IOTC area | M | Main IOTC areas | **Code** from [IOTC main areas](#IOTCareasMain) |
+| Retain reason | M | Reason for retaining the catch onboard | **Code** from [Reasons for retaining](#retainReasons) |
+| Species | M | Species caught and retained            | **Code** from [Species](#allSpecies) |
 
 ## Original data
 
-| Element  | Requirement | Description  | Input value |
+| Element | Requirement | Description  | Input value |
 |:-----------------|:-------------:|:------------------------|:--------------|
-| Original data type       |      M      | Preliminary/final status of the data | **Code** from [Type of data](#types) |
-| Original data source     |      M      | Source of information                | **Code** from [Retained catches data sources](#dataSourcesRC) |
-| Original data processing |      M      | Processing applied to the data       | **Code** from [Retained catches data processings](#dataProcessingsRC) |
-| Source coverage type     |      M      | Variable used for data coverage      | **Code** from [Coverage types](#coverageTypes) |
+| Original data type  | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
+| Original data source  | M | Source of information | **Code** from [Retained catches data sources](#dataSourcesRC) |
+| Original data processing | M  | Processing applied to the data | **Code** from [Retained catches data processings](#dataProcessingsRC) |
+| Source coverage type  | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) |
 
 # Reporting metadata
 
-| Element  | Requirement | Description | Format | Example                                              |
-|:------------|:-----------:|:--------------------|:------------|:------------|
-| [Focal point full name]{#fcname} |      M      | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat           | Plain text                                         | John Doe                                             |
-| [Focal point email]{#fcemail}    |      M      | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address                                | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| [Organisation name]{#orgname}    |      M      | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat          | Plain text                                         | National Institute of Fisheries                      |
-| [Organisation email]{#orgemail}  |      O      | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address                                | [nif\@gov.sc](mailto:nif@gov.sc){.email}             |
-| [Finalisation date]{#findate}    |      M      | Date of finalisation of the dataset                                                              | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27                                           |
-| [Submission date]{#subdate}      |      M      | Date of submission of the dataset                                                                | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21                                           |
+| Element | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
 # Reporting deadlines
 
@@ -75,11 +75,9 @@ Total live weight of retained catches by species, along with information on the 
 - **Surface fisheries**: 30 June (final)
 - **Coastal fisheries**: 30 June (final)
 
-# Reference codelists
+# Reference code lists
 
 ## Entities {#entities}
-
-Reference codes modelling the entity submitting the dataset to the IOTC Secretariat.
 
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
@@ -87,15 +85,11 @@ out_dt(ENTITIES, "ENTITIES")
 
 ## Countries {#countries}
 
-Reference codes modelling the flag / reporting country submitting the dataset to the IOTC Secretariat.
-
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
 ## IOTC main areas {#IOTCareasMain}
-
-Reference codes modelling the two main areas in which the IOTC area of competence is split (western / eastern IOTC area, *roughly* coinciding with FAO areas F51 and F57).
 
 ![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
 
@@ -105,24 +99,11 @@ out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 
 ## Fisheries {#fisheries}
 
-An *ad-hoc* classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
-
-An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for their fisheries (among those currently considered of relevance in the Indian Ocean).
-
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
 ```
 
-## All species {#allSpecies}
-
-Reference codes modelling the species interacting with the fisheries as:
-
--   target species (retained or discarded)
--   bycatch species (retained or discarded)
--   sampled individuals
--   etc.
-
-These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+## Species {#allSpecies}
 
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES")
@@ -130,19 +111,11 @@ out_dt(SPECIES, "SPECIES")
 
 ## Reasons for retaining {#retainReasons}
 
-Reference codes modelling the reasons why marine organisms caught by the fishery are retained onboard.
-
 ```{r collapse = TRUE}
 out_dt(RETAIN_REASONS, "RETAIN_REASONS")
 ```
 
-## Data types {#types}
-
-Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
-
-a. Preliminary when the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
-
-b. Final when the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+## Types of data {#types}
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
@@ -150,23 +123,17 @@ out_dt(DATA_TYPES, "DATA_TYPES")
 
 ## Retained catches data sources {#dataSourcesRC}
 
-Reference codes modelling the source of the data provided through the retained catches data form.
-
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_RC, "DATA_SOURCES_RC")
 ```
 
 ## Retained catches data processings {#dataProcessingsRC}
 
-Reference codes modelling the processing applied to the data provided through the retained catches data form.
-
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_RC, "DATA_PROCESSINGS_RC")
 ```
 
-## Coverage types {#coverageTypes}
-
-Reference codes modelling the type of coverage for the raw information used to obtain the data provided through a specific form.
+## Types of coverage {#coverageTypes}
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")

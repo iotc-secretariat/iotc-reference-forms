@@ -21,68 +21,69 @@ output:
   
 # Description
 
-This form supports the reporting of data on operational activities conducted by purse seine and support vessels on drifting floating objects (DFOBs) and buoys. When present, data include information on buoy identifier, knowledge of the buoy position, and type of activity conducted on the buoy. For each DFOB, information on materials (i.e., presence of plastic or metal), dimensions (i.e., length, width, and height), and presence of mesh with value of mesh size for both the surface (i.e., raft) and subsurface (i.e., tail) components must be recorded. Finally, species-specific estimates of catches retained and discarded in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species must also be included in the dataset.
+This form provides for the reporting of data on operational activities conducted by purse seine and support vessels on drifting floating objects (DFOBs) and buoys. When present, data include information on buoy identifier, knowledge of the buoy position, and type of activity conducted on the buoy. For each DFOB, information on materials (i.e., presence of plastic or metal), dimensions (i.e., length, width, and height), and presence of mesh with value of mesh size for both the surface (i.e., raft) and subsurface (i.e., tail) components must be recorded. Finally, species-specific estimates of catches retained and discarded in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species caught in association with IOTC fisheries must also be included in the dataset.
 
 Click [here](../forms/Form-3DA.xlsx) to download a blank version of Form 3-DA, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 
-Total number and/or live weight of catches by species, fate, raising, along with daily information by dFOB activities, characteristics and dimensions.
+Operational information on DFOB-related activities, including buoys and DFOB characteristics and dimensions, along with estimates of retained catches and discards (in numbers or live weight equivalent) by species, fate, raising status, and catch unit.
 
 # Stratification
 
 ## General information
 
-| Element        | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer, e.g., 1996 |
-| [Reporting entity]{#repentity} | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| [Flag state]{#repflagstate} | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer, e.g., 1996 |
+| Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| Flag state | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 | Reporting month | M | Calendar month of the fishing activities reported through the dataset | Integer 1..12 |
 
 ## Data specifications
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#datatypes) |
 
 ## Main data elements
 
-| Element        | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Day of the month | M | Day of the month of the fishing activities reported through the dataset | Integer 1..31 |
-| UTC time  | M | Universal time at which the FOB was visited | time (_hh:mm_) |
-| Latitude  | M | Horizontal distances north or south of the Equator    | Decimal degrees  |
+| Vessel name | M | Name of vessel monitoring the buoy | Plain text  |
+| Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy | Plain text (e.g., IOTC013542) || Day of the month | M | Day of the month of the fishing activities reported through the dataset | Integer 1..31 |
+| UTC time  | M | Universal time at which the drifting floating object was visited | time (_hh:mm_) |
+| Latitude  | M | Horizontal distances north or south of the Equator | Decimal degrees  |
 | Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees |
-| Species    | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
+| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
 | Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](#typesOfFate) |
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | 
-| Catch unit   | M | Unit used to report the vakue of catch of a given species | **Code** from [Catch units](#catchUnits) |
+| Catch unit   | M | Unit used to report the value of catch of a given species | **Code** from [Catch units](#catchUnits) |
 
 ## Buoy data
 
-| Element | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Present  | M | Unique identifier of the buoy | Character  |
-| Identifier   | M | FOB identification (Deacon ID) | Plain text      |
-| Position| M | Indicate whether the vessel have access/knowledge of the buoy position | Boolean (Y/N) |
-| Activity | M | Type of activities undertaken when visiting or deploying  FOB | **Code** from [Buoy activity types](#FOBbuoyActivityTypes) |
+| Present | M | Indicates whether a buoy is attached to the drifting floating object | Boolean (Y/N) |
+| Identifier | M | Unique identifier of buoy monitored | (e.g., ISD+, M3+, T8E) followed by 5-9 digits | Plain text |
+| Position | M | Indicates whether the vessel have access/knowledge of the buoy position | Boolean (Y/N) |
+| Activity | M | Type of activities undertaken when visiting or deploying the drifting floating object | **Code** from [Buoy activity types](#DFOBbuoyActivityTypes) |
 
 ## DFOB data
 
-| Element        | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Identifier | M | Unique identifier of the drifting floating object (Buoy identifier) | Plain text |
-| Type | M | Type of drifting floating object | **Code** from [DFOB types](#FOBtypes) |
-| Activity  | M | Type of activities undertaken when visiting or deploying the drifting floating object | **Code** from [DFOB activity types](#FOBactivityTypes) |
+| Identifier | M | Unique identifier of the drifting floating object | Plain text |
+| Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](#FOBtypes) |
+| Activity | M | Type of activity undertaken when visiting or deploying the drifting floating object | **Code** from [Types of DFOB activities](#FOBactivityTypes) |
 
-### dFOB characteristics 
+### DFOB characteristics 
 
 Description of the materials and dimensions of both *surface* and *subsurface* components of the drifting floating objects.
 
 #### Surface (raft)
 
-|Element | Requirement | Description | Unit  | Format  |
+| Element | Requirement | Description | Unit  | Format  |
 |:---------------| :----: | :----------------------|:------------|:------------------|
 | Plastic  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | - | Boolean (Y/N) |
 | Metal  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | - | Boolean (Y/N) |
@@ -106,24 +107,22 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 
 # Reporting metadata
 
-| Element        | Requirement | Description | Format | Example |
+| Element | Requirement | Description | Format | Example |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Liaison officer full name]{#fcname} | M | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe  |
-| [Liaison officer email]{#fcemail} | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
 # Reporting deadlines
 
 - **Surface fisheries**: 30 June (final)
 
-# Reference codelists
+# Reference code lists
 
 ## Entities {#entities}
-
-Reference codes modelling the entity submitting the dataset to the IOTC Secretariat.
 
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
@@ -131,19 +130,11 @@ out_dt(ENTITIES, "ENTITIES")
 
 ## Countries {#countries}
 
-Reference codes modelling the flag / reporting country submitting a dataset to the IOTC Secretariat.
-
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## Data types {#types}
-
-Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
-
-a. Preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
-
-b. Final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+## Types of data {#datatypes}
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
@@ -151,56 +142,35 @@ out_dt(DATA_TYPES, "DATA_TYPES")
 
 ## Fisheries {#fisheries}
 
-An *ad-hoc* classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
-
-An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for their fisheries (among those currently considered of relevance in the Indian Ocean).
-
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
 ```
 
-## All species {#allSpecies}
-
-Reference codes modelling the species interacting with the fisheries as:
-
--   target species (retained or discarded)
--   bycatch species (retained or discarded)
--   sampled individuals
--   etc.
-
-These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+## Species {#allSpecies}
 
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES")
 ```
 
-## Buoy activity types {#FOBbuoyActivityTypes}
-
-Reference codes modelling the type of activities undertaken when visiting or deploying a buoy.
+## Types of buoy activities {#FOBbuoyActivityTypes}
 
 ```{r collapse = TRUE}
 out_dt(BUOY_ACTIVITIES, "BUOY_ACTIVITIES")
 ```
 
-## FOB types {#FOBtypes}
-
-Reference codes modelling the type of FOBs, both drifting (DFOB = TRUE) and anchored (DFOB = FALSE).
+## Types of drifting floating objects {#FOBtypes}
 
 ```{r collapse = TRUE}
-out_dt(FOB_TYPES, "FOB_TYPES")
+out_dt(DFOB_TYPES, "DFOB_TYPES")
 ```
 
-## FOB activity types {#FOBactivityTypes}
-
-Reference codes modelling the type of activities undertaken when visiting or deploying a FOB.
+## Types of activities on drifting floating objects {#DFOBactivityTypes}
 
 ```{r collapse = TRUE}
-out_dt(FOB_ACTIVITIES, "FOB_ACTIVITIES")
+out_dt(DFOB_ACTIVITIES, "DFOB_ACTIVITIES")
 ```
 
-## Types of fate {#typesOfFate}
-
-Reference codes used to identify a given fate as indicating that the fish has been retained or discarded.
+## Types of fates {#typesOfFate}
 
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
@@ -208,19 +178,11 @@ out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 
 ## Raisings {#raisings}
 
-Reference codes modelling the level of raising applied to the data, and in particular if data:
-
--   have been raised to the represent the total catches and effort in the year concerned (RT),
--   have been raised but does not represent the total catches and effort in the year concerned (PR), or
--   have not been raised at all (NR)
-
 ```{r collapse = TRUE}
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
 ## Catch units {#catchUnits}
-
-Reference codes that model the units used to report the level of catches of a given species, further stratified by the specific criteria characterizing each reporting form.
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")

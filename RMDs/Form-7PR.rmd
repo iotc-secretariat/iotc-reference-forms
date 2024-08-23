@@ -33,48 +33,42 @@ Click [here](../forms/legacy/Form-7PR-legacy.xlsm) to download an empty version 
 
 # Stratification
 
-## Reporting metadata
+## General information
 
-### Submission information
-
-| Element        | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
-### General information
-
-| Element        | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entity](#entities) |
-| [Flag state]{#repflagstate} | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| Reporting entity | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| Flag state | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
 
 ## Data elements
 
-### Main data elements
-
-| Element | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Month | M | Gregorian calendar month of the fish sale | **1**: Jan; **2**: Feb, ... **12**: Dec |
 | Currency | M | Price currency | **Code** from [Currencies](#currencies) |
-| Processing | M | Processing type applied to species | **Code** from [Fish processing types](#fishProcessingType) |
-| Product type | M | Type of fish product | **Code** from [Product types](#fishProductTypes) |
-| Preservation type  | M | Type of preservation method | **Code** from [Fish preservation methods](#FishPreservationMethod) |
+| Processing | M | Processing type applied to species | **Code** from [Types of fish processing](#fishProcessingType) |
+| Product type | M | Type of fish product | **Code** from [Types of product](#fishProductTypes) |
+| Preservation type  | M | Type of preservation method | **Code** from [Methods of fish preservation](#FishPreservationMethod) |
 | Species | M | Fish species | **Code** from [Species](#IOTCSpecies) |
 | Weight unit  | M | Unit of fish weight | **Code** from [Weight units](#weightUnits) |
 | Weight class(lo) | M | Lowest weight class | Numeric value |
 | Weight class(hi) | M | Highest weight class | Numeric value |
 
-# Reference codelists
+# Reporting metadata
+
+| Element | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| Submission date | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+# Reference code lists
 
 ## Entities {#entities}
-
-Reference codes modelling the entity submitting the dataset to the IOTC Secretariat.
 
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
@@ -82,15 +76,11 @@ out_dt(ENTITIES, "ENTITIES")
 
 ## Countries {#countries}
 
-Reference codes modelling the flag / reporting country submitting a dataset to the IOTC Secretariat.
-
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
 ## Catch units {#weightUnits}
-
-Units of fish weight.
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
@@ -98,23 +88,23 @@ out_dt(CATCH_UNITS, "CATCH_UNITS")
 
 ## IOTC species {#IOTCSpecies}
 
-List of IOTC species.
-
 ```{r collapse = TRUE}
 out_dt(SPECIES[IS_IOTC == TRUE & IS_AGGREGATE == FALSE], "SPECIES")
 ```
 
-## Fish processing types {#fishProcessingType}
-
-Types of processing applied to the fish prior to sale.
+## Types of fish processing {#fishProcessingType}
 
 ```{r collapse = TRUE}
 out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
 ```
 
-## Fish preservation method {#fishPreservationMethod}
+## Types of product {#fishProductTypes}
 
-Main method used to preserve the fish between its capture and sale.
+```{r collapse = TRUE}
+out_dt(FISH_PRODUCT_TYPES, "FISH_PRODUCT_TYPES")
+```
+
+## Methods of fish preservation {#fishPreservationMethod}
 
 ```{r collapse = TRUE}
 out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")

@@ -21,73 +21,70 @@ output:
   
 # Description
   
-This form supports the reporting of geographic position and description of each _fishing activity conducted around each anchored fish aggregated devices(AFAD), as **update,**_ along with estimates of retained catches and discards in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species.
+This form provides for the annual reporting of fishing activities conducted around anchored fish aggregated devices (AFADs) located in the IOTC area of competence along with estimates of retained catches and discards for the IOTC species, common sharks, and other bycatch species caught in association with IOTC fisheries.
 
-Click [here](../forms/Form-3AA-update.xlsx) to download a blank version of Form 3-AA-update, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+Click [here](../forms/Form-3AA-update.xlsx) to download a blank version of Form 3-AA-update, or [return](../forms) to the list of all IOTC statistical data reporting forms. The form allows reporting updated data for a single fishery. Click [here](../forms/Form-3AA.xlsx) to download a blank version of Form 3-AA which has been designed to report data for multiple fisheries simultaneously.
 
 # Data content
 
-Number or live weight of retained and discards by species, including their fate, if the data is raised, estimations by day of the month, year, fleet, fishery, and geographic position from each aFOB.
+Daily information on AFOB-related activities along with estimates of total number and/or live weight of retained catches and discards by species, fate, raising status, and catch unit.
 
 # Stratification
 
 ## General information
 
-| Element        | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| [Flag state]{#repflagstate} | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| Reporting entity | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| Flag state | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
 | Month | M | Gregorian calendar month of the fishing activities reported through the dataset | Integer 1..12 |
-| Fisheries   | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries)            |
+| Fisheries | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries) |
 
 ## Data specifications
 
-| Element | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type  | M | Preliminary/final status of the data | **Code** from [Types of data](#types)      |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
 
 ## Main data elements
 
-| Element        | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Day of the Month | M | Day of the month of the fishing activities reported through the dataset | Integer 1..31 |
-| Latitude | M | Horizontal distances north or south of the Equator   | Decimal degrees  |
+| Latitude | M | Horizontal distances north or south of the Equator | Decimal degrees  |
 | Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees |
-| Species    | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
-| Type of fate    | M | Fate of fish caught (retained or discarded)| **Code** from [Types of fate](#typesOfFate) |
-| Data raising  | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings)| 
+| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
+| Type of fate | M | Fate of fish caught (retained or discarded)| **Code** from [Types of fate](#typesOfFate) |
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings)| 
 | Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 
-## aFOB data
+## AFOB data
 
-| Element        | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Identifier   | M | Unique identifier of the anchored floating object | Plain text      |
-| Type | M | Type of anchored floating object | [AFOB types](#FOBtypes) |
-| Activity    | M | Type of activities undertaken when visiting or deploying an anchored floating object | [AFOB activity types](#FOBactivityTypes) |
+| Identifier | M | Unique identifier of the anchored floating object | Plain text      |
+| Type | M | Type of anchored floating object | **Code** from [Types of AFOBs](#AFOBtypes) |
+| Activity | M | Type of activity undertaken when visiting or deploying an anchored floating object | **Code** from [Types of activities on AFOBs](#AFOBactivityTypes) |
 
 # Reporting metadata
 
-| Element        | Requirement | Description | Format | Example |
+| Element | Requirement | Description | Format | Example |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
-
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
 # Reporting deadlines
 
 - **Surface fisheries**: 30 June (final)
 
-# Reference codelists
+# Reference code lists
 
 ## Entities {#entities}
-
-Reference codes modelling the entity submitting the dataset to the IOTC Secretariat.
 
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
@@ -95,68 +92,41 @@ out_dt(ENTITIES, "ENTITIES")
 
 ## Countries {#countries}
 
-Reference codes modelling the flag / reporting country submitting a dataset to the IOTC Secretariat.
-
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
 ## Fisheries {#fisheries}
 
-An *ad-hoc* classification derived from a combination of several factors (purpose, area of operation, vessel size category, gear, gear configuration, fishing mode and target species) that uniquely describe fishing practices for groups of vessels.
-
-An [*interactive wizard*](https://data.iotc.org/fisheries/wizard) to help CPCs identify the IOTC code for their fisheries (among those currently considered of relevance in the Indian Ocean).
-
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
 ```
 
-## Data types {#types}
-
-Reference codes modelling the type of statistics provided through a specific form, and in particular if these are:
-
-a. Preliminary if the statistics were estimated by using some information from the fishery and year concerned, and the data reported are likely to change in the future as more information become available; or
-
-b. Final if the statistics were estimated by using the complete set of data from the fishery and year concerned, and the data reported are unlikely to change in the future.
+## Types of data {#types}
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-## All species {#allSpecies}
-
-Reference codes modelling the species interacting with the fisheries as:
-
--   target species (retained or discarded)
--   bycatch species (retained or discarded)
--   sampled individuals
--   etc.
-
-These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fishery/en/collection/asfis/en) list of species for fishery statistics purposes, from which they inherit the alphabetic codes, English, French and scientific names, as well as the family and order, and add the species category (in the IOTC sense), the IUCN status (retrieved from the [IUCN red list](https://www.iucnredlist.org) of endangered species) and other characteristics of each entry such as their status of single species / species aggregate, bait species, SSI species, IOTC species.
+## Species {#allSpecies}
 
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES")
 ```
 
-## Types of anchored floating object (aFOB) {#FOBtypes}
-
-Reference codes modelling the types of anchored FOBs.
+## Types of anchored floating objects {#AFOBtypes}
 
 ```{r collapse = TRUE}
-out_dt(FOB_TYPES, "FOB_TYPES")
+out_dt(AFOB_TYPES, "AFOB_TYPES")
 ```
 
-## Types of anchored fishing activity types (aFOB) {#FOBactivityTypes}
-
-Reference codes modelling the type of activities undertaken when interacting with an anchored FOB.
+## Types of activities on anchored floating objects {#AFOBactivityTypes}
 
 ```{r collapse = TRUE}
 out_dt(AFOB_ACTIVITIES, "AFOB_ACTIVITIES")
 ```
 
-## Types of fate {#typesOfFate}
-
-Reference codes used to identify a given fate as indicating that the fish has been retained or discarded.
+## Types of fates {#typesOfFate}
 
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
@@ -164,19 +134,11 @@ out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 
 ## Raisings {#raisings}
 
-Reference codes modelling the level of raising applied to the data, and in particular if data:
-
--  have been raised to the represent the total catches and effort in the year concerned (RT),
--  have been raised but does not represent the total catches and effort in the year concerned (PR), or
--  have not been raised at all (NR)
-
 ```{r collapse = TRUE}
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
 ## Catch units {#catchUnits}
-
-Reference codes modelling the units used to report the level of catches / discards of a given species, further stratified by the specific criteria characterizing each reporting form.
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
