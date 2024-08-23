@@ -97,7 +97,9 @@ AFOB_ACTIVITIES      = read_codelist(domain = "fisheries", schema = "fishery", c
 DFOB_ACTIVITIES      = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
 CATCH_UNITS         = read_codelist(domain = "fisheries", schema = "fishery", codelist  = "CATCH_UNITS")
 
-SPECIES               = read_codelist(domain = "biological", codelist = "SPECIES")
+SPECIES           = read_codelist(domain = "biological", codelist = "SPECIES")
+SPECIES_1DR_CODES = data.table(read.xlsx("./form_reporting_templates/Form-1DR.xlsx", sheet = "Data", cols = 3, startRow = 4))
+SPECIES_1DR       = merge(SPECIES_1DR_CODES, SPECIES, by.x = "Code", by.y = "CODE", all.x = TRUE)
 RETAIN_REASONS        = read_codelist(domain = "biological", codelist = "RETAIN_REASONS")
 DISCARD_REASONS       = read_codelist(domain = "biological", codelist = "DISCARD_REASONS")
 INDIVIDUAL_CONDITIONS = read_codelist(domain = "biological", codelist = "INDIVIDUAL_CONDITIONS")

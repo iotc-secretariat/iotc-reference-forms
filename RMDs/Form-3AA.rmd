@@ -109,7 +109,7 @@ out_dt(DATA_TYPES, "DATA_TYPES")
 ## Types of anchored fishing objects {#AFOBtypes}
 
 ```{r collapse = TRUE}
-out_dt(FOB_TYPES, "AFOB_TYPES")
+out_dt(AFOB_TYPES, "AFOB_TYPES")
 ```
 
 ## Types of activities on anchored floating objects {#AFOBactivityTypes}

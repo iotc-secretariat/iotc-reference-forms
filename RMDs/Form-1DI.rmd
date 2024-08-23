@@ -27,27 +27,27 @@ Click [here](../forms/Form-1DI.xlsx) to download a blank version of Form 1-DI, o
 
 # Data content
 
-Number or live weight of discards by species, including their condition at release, if the data is raised, along with information on the value (%) and type of sampling coverage used for the estimations by  quarter if available, year, fleet, fishery, and IOTC main area.
+Number or live weight of discards by species, including their condition at release, if the data are raised, along with information on the value (%) and type of sampling coverage used for the estimations by  quarter if available, year, fleet, fishery, and IOTC main area.
 
 # Stratification
 
 ## General information
 
-| Element | Requirement | Description | Code list  |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| Element | Requirement | Description | Input value  |
+| :-------- | :-----: | :----------------------- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
 | Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| Flag state | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
+| Flag state | M | Code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |
 
 ## Main data elements
 
 | Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| :-------- | :-----: | :----------------------- | :-------: |
 | Quarter | M | Gregorian calendar quarter of the fishing activities reported through the dataset | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
-| Fisheries    | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries)            |
+| Fisheries | M | [IOTC fishery](../guidelines/#Fisheries) derived from the combination of several factors | **Code** from [Fisheries](#fisheries) |
 | IOTC main areas | M | Main IOTC areas of competence   | **Code** from  [IOTC main areas](#IOTCareasMain)  |
-| Reasons for discarding  | M | Reasons why the species were discarded | **Code** from [Reasons for discarding](#discardReasons) |
-| Species    | M | Species caught and discarded| **Code** from [Species](#allSpecies)           |
+| Reasons for discarding | M | Reasons why the species was discarded | **Code** from [Reasons for discarding](#discardReasons) |
+| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies)           |
 | Condition of species | M | Conditions of species being discarded at sea  | **Code** from  [Conditions](#individualConditions)|
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| 
 | Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
@@ -55,7 +55,7 @@ Number or live weight of discards by species, including their condition at relea
 ## Original data
 
 | Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| :-------- | :-----: | :----------------------- | :-------: |
 | Original data type       | M | Preliminary/final status of the data | **Code** from [Types of data](#datatypes) |
 | Original data source     | M | Source of information | **Code** from [Discards data sources](#dataSourcesDI) |
 | Original data processing | M | Processing applied to the data  | **Code** from [Discards data processings](#dataProcessingsDI) |
@@ -64,11 +64,11 @@ Number or live weight of discards by species, including their condition at relea
 # Reporting metadata
 
 | Element | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
+| :-------- | :----: | :----------------------- | :-------- | :------------ |
 | Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
 | Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
 | Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
@@ -92,6 +92,12 @@ out_dt(ENTITIES, "ENTITIES")
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
+## Fisheries {#fisheries}
+
+```{r collapse = TRUE}
+out_dt(FISHERIES, "FISHERIES")
+```
+
 ## IOTC main areas {#IOTCareasMain}
 
 ![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
@@ -100,16 +106,10 @@ out_dt(COUNTRIES, "COUNTRIES")
 out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 ```
 
-## Fisheries {#fisheries}
+## Reasons for discarding {#discardReasons}
 
 ```{r collapse = TRUE}
-out_dt(FISHERIES, "FISHERIES")
-```
-
-### Catch units {#catchUnits}
-
-```{r collapse = TRUE}
-out_dt(CATCH_UNITS, "CATCH_UNITS")
+out_dt(DISCARD_REASONS, "DISCARD_REASONS")
 ```
 
 ## Species {#allSpecies}
@@ -118,16 +118,22 @@ out_dt(CATCH_UNITS, "CATCH_UNITS")
 out_dt(SPECIES, "SPECIES")
 ```
 
-## Reasons for discarding {#discardReasons}
-
-```{r collapse = TRUE}
-out_dt(DISCARD_REASONS, "DISCARD_REASONS")
-```
-
-## Individual conditions {#individualConditions}
+## Conditions {#individualConditions}
 
 ```{r collapse = TRUE}
 out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
+```
+
+## Raisings {#dataRaising}
+
+```{r collapse = TRUE}
+out_dt(DATA_RAISINGS, "DATA_RAISINGS")
+```
+
+## Catch units {#catchUnits}
+
+```{r collapse = TRUE}
+out_dt(CATCH_UNITS, "CATCH_UNITS")
 ```
 
 ## Types of data {#datatypes}
@@ -136,19 +142,13 @@ out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-## Data raising {#dataRaising}
-
-```{r collapse = TRUE}
-out_dt(DATA_RAISINGS, "DATA_RAISINGS")
-```
-
-## Discarded catches data sources {#dataSourcesDI}
+## Discards data sources {#dataSourcesDI}
 
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_DI, "DATA_SOURCES_DI")
 ```
 
-### Discarded catches data processings {#dataProcessingsDI}
+## Discards data processings {#dataProcessingsDI}
 
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_DI, "DATA_PROCESSINGS_DI")
