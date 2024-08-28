@@ -115,7 +115,7 @@ out_dt(DISCARD_REASONS, "DISCARD_REASONS")
 ## Species {#allSpecies}
 
 ```{r collapse = TRUE}
-out_dt(SPECIES, "SPECIES")
+out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
 ```
 
 ## Conditions {#individualConditions}

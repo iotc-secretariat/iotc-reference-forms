@@ -83,7 +83,7 @@ out_dt(GEAR_GROUPS, "GEAR_GROUPS")
 ## Species {#1DRspecies}
 
 ```{r collapse = TRUE}
-out_dt(SPECIES_1DR, "SPECIES")
+out_dt(SPECIES_1DR, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
 ```
 
 ## Fishery categories {#fisheryCategories}

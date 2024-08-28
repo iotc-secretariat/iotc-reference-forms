@@ -89,7 +89,7 @@ out_dt(CATCH_UNITS, "CATCH_UNITS")
 ## IOTC species {#IOTCSpecies}
 
 ```{r collapse = TRUE}
-out_dt(SPECIES[IS_IOTC == TRUE & IS_AGGREGATE == FALSE], "SPECIES")
+out_dt(SPECIES[IS_IOTC == TRUE & IS_AGGREGATE == FALSE], "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
 ```
 
 ## Types of fish processing {#fishProcessingType}

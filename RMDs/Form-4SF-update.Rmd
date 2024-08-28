@@ -181,7 +181,7 @@ out_dt(SEX, "SEX")
 ## Species {#allSpecies}
 
 ```{r collapse = TRUE}
-out_dt(SPECIES, "SPECIES")
+out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
 ```
 
 ## Types of data {#datatypes}

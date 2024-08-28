@@ -153,7 +153,7 @@ out_dt(IOTC_GRIDS_CE_SF_AR, "FISHING_AREAS")
 ## Species {#allSpecies}
 
 ```{r collapse = TRUE}
-out_dt(SPECIES, "SPECIES")
+out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
 ```
 
 ## Types of data {#types}
