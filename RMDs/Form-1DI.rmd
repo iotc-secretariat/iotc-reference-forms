@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting: Form 1DI (v`r BASE_VERSION`)"
+title: "IOTC Statistical Data Reporting: Form 1DI (v`r BASE_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -25,13 +25,13 @@ This form provides for the reporting of estimates of discards in numbers or live
 
 Click [here](../forms/Form-1DI.xlsx) to download a blank version of Form 1-DI, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
-# Data content
+# Data Content
 
 Number or live weight of discards by species, including their condition at release, if the data are raised, along with information on the value (%) and type of sampling coverage used for the estimations by  quarter if available, year, fleet, fishery, and IOTC main area.
 
 # Stratification
 
-## General information
+## General Information
 
 | Element | Requirement | Description | Input value  |
 | :-------- | :-----: | :----------------------- | :-------: |
@@ -39,7 +39,7 @@ Number or live weight of discards by species, including their condition at relea
 | Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | Flag state | M | Code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |
 
-## Main data elements
+## Main Data Elements
 
 | Element | Requirement | Description | Input value  |
 | :-------- | :-----: | :----------------------- | :-------: |
@@ -52,7 +52,7 @@ Number or live weight of discards by species, including their condition at relea
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| 
 | Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 
-## Original data
+## Original Data
 
 | Element | Requirement | Description | Input value  |
 | :-------- | :-----: | :----------------------- | :-------: |
@@ -61,7 +61,7 @@ Number or live weight of discards by species, including their condition at relea
 | Original data processing | M | Processing applied to the data  | **Code** from [Discards data processings](#dataProcessingsDI) |
 | Source coverage type     | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) |
 
-# Reporting metadata
+# Reporting Metadata
 
 | Element | Requirement | Description | Format | Example |
 | :-------- | :----: | :----------------------- | :-------- | :------------ |
@@ -72,13 +72,13 @@ Number or live weight of discards by species, including their condition at relea
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-# Reporting deadlines
+# Reporting Deadlines
 
 + **Longline fisheries**: 30 June (preliminary), 30 December (final)
 + **Surface fisheries**: 30 June (final)
 + **Coastal fisheries**: 30 June (final)
 
-# Reference code lists
+# Reference Code Lists
 
 ## Entities {#entities}
 
@@ -98,7 +98,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 out_dt(FISHERIES, "FISHERIES")
 ```
 
-## IOTC main areas {#IOTCareasMain}
+## IOTC Main Areas {#IOTCareasMain}
 
 ![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
 
@@ -106,7 +106,7 @@ out_dt(FISHERIES, "FISHERIES")
 out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 ```
 
-## Reasons for discarding {#discardReasons}
+## Reasons For Discarding {#discardReasons}
 
 ```{r collapse = TRUE}
 out_dt(DISCARD_REASONS, "DISCARD_REASONS")
@@ -130,31 +130,31 @@ out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
-## Catch units {#catchUnits}
+## Catch Units {#catchUnits}
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
 ```
 
-## Types of data {#datatypes}
+## Types of Data {#datatypes}
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-## Discards data sources {#dataSourcesDI}
+## Discards Data Sources {#dataSourcesDI}
 
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_DI, "DATA_SOURCES_DI")
 ```
 
-## Discards data processings {#dataProcessingsDI}
+## Discards Data Processings {#dataProcessingsDI}
 
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_DI, "DATA_PROCESSINGS_DI")
 ```
 
-## Types of coverage {#coverageTypes}
+## Types Of Coverage {#coverageTypes}
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")

@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting: Form 1DR (v`r BASE_VERSION`)"
+title: "IOTC Statistical Data Reporting: Form 1DR (v`r BASE_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -25,11 +25,11 @@ This form provides for the reporting of the matrix of presence of species in the
 
 Click [here](../forms/Form-1DR.xlsx) to download a blank version of Form 1DR, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
-# Data content
+# Data Content
 
 For the combination of each taxon, gear group, and fishery category listed in the form, the cell must be filled with either a value of one (1) in case of positive catch or a value of zero (0) in case of absence of catch, i.e., no landing nor discard.
 
-## General information
+## General Information
 
 | Element | Requirement | Description | Input value  |
 | :-------- | :-----: | :----------------------- | :-------: |
@@ -37,7 +37,7 @@ For the combination of each taxon, gear group, and fishery category listed in th
 | Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#Entities) |
 | Flag state | M | Code of the country registration of the fishing vessels | **Code** from [Countries](#Countries) |
 
-## Main data elements
+## Main Data Elements
 
 | Element | Description | Code list |
 | :-------- | :-------------------------- | :-------: |
@@ -45,7 +45,7 @@ For the combination of each taxon, gear group, and fishery category listed in th
 | Gear groups | Classification of different types of fishing gear that share similar characteristics or functions | [Gear groups](#gearGroups) |
 | Fishery categories | One of the three main IOTC fishery categories defined according to the main gear used by the vessel and their recording in the IOTC Record of Authorised Vessels | [Fishery categories](#fisheryCategories)|
 
-# Reporting metadata
+# Reporting Metadata
 
 | Element | Requirement | Description | Format | Example |
 | :-------- | :----: | :----------------------- | :-------- | :------------ |
@@ -56,11 +56,11 @@ For the combination of each taxon, gear group, and fishery category listed in th
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-# Reporting deadlines
+# Reporting Deadlines
 
 - **All fisheries**: 30 June (final)
 
-# Reference code lists
+# Reference Code Lists
 
 ## Entities {#entities}
 
@@ -74,7 +74,7 @@ out_dt(ENTITIES, "ENTITIES")
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## Gear groups {#gearGroups}
+## Gear Groups {#gearGroups}
 
 ```{r collapse = TRUE}
 out_dt(GEAR_GROUPS, "GEAR_GROUPS")
@@ -86,7 +86,7 @@ out_dt(GEAR_GROUPS, "GEAR_GROUPS")
 out_dt(SPECIES_1DR, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
 ```
 
-## Fishery categories {#fisheryCategories}
+## Fishery Categories {#fisheryCategories}
 
 ```{r collapse = TRUE}
 out_dt(FISHERY_CATEGORIES, "FISHERY_CATEGORIES")
