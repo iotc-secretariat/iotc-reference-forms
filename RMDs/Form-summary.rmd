@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting forms"
+title: "IOTC Data Reporting Forms"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -21,21 +21,21 @@ output:
 
 # Overview
 
-Following Article XI of the [Agreement for the establishment of the Indian Ocean Tuna Commission](https://iotc.org/sites/default/files/documents/2012/5/25/IOTC%20Agreement.pdf) (IOTC), [Contracting Parties and Cooperating Non-Contracting Parties](https://iotc.org/about-iotc/structure-commission) (CPCs) are required to collect and report fisheries data in accordance with the [Conservation and Management Measures](https://iotc.org/cmms) (CMMs). To manage the data received from CPCs and other parties fishing in the IOTC area of competence for IOTC-managed species, the Secretariat has developed specific reporting forms for each dataset. The use of these forms for submitting fisheries statistics to the IOTC is highly **recommended**, as they include all mandatory metadata, data fields, and information on IOTC formats and standard codelists.
+Following Article XI of the [Agreement for the establishment of the Indian Ocean Tuna Commission](https://iotc.org/sites/default/files/documents/2012/5/25/IOTC%20Agreement.pdf) (IOTC), [Contracting Parties and Cooperating Non-Contracting Parties](https://iotc.org/about-iotc/structure-commission) (CPCs) are required to collect and report fisheries data in accordance with the [Conservation and Management Measures](https://iotc.org/cmms) (CMMs). To manage the data received from CPCs and other parties fishing in the IOTC area of competence for IOTC-managed species, the Secretariat has developed specific reporting forms for each dataset. The use of these forms for submitting fisheries statistics to the IOTC is highly **recommended**, as they include all mandatory metadata, data fields, and information on IOTC formats and standard code lists available from the [IOTC Reference Data Catalogue](../).
 
-#### Legacy data reporting forms
+#### Legacy Data Reporting Forms
 
-The current data reporting forms, referred to as 'legacy,' are available as macro-enabled Microsoft Excel™ spreadsheets. These forms incorporate entry controls and necessary codelists for specific data fields. Guidance on completing these forms is provided in the legacy version of the IOTC Data Reporting Guidelines, accessible [here](./legacy/IOTC_Data_Reporting_Guidelines_2014.pdf).
+The current data reporting forms, referred to as 'legacy,' are available as macro-enabled Microsoft Excel™ spreadsheets. These forms incorporate entry controls and necessary code lists for specific data fields. Guidance on completing these forms is provided in the legacy version of the IOTC Data Reporting Guidelines, accessible [here](./legacy/IOTC_Data_Reporting_Guidelines_2014.pdf).
 
 You can download all the legacy form templates [here](../forms/legacy/IOTC-forms-current.zip). This ZIP archive includes the legacy forms used for the IOTC core fisheries datasets, as well as forms [1IN](#1IN), [3AA](#3AA), and [3DA](#3DA) These forms are tailored to address specific data requirements related to interactions with Endangered, Threatened, and Protected species (1IN), AFAD-related activities (3AA), and DFOB-related activities (3DA).
 
-#### New data reporting forms
+#### New Data Reporting Forms
 
 New optional data reporting forms are available as plain Microsoft Excel™ spreadsheets to streamline the entry and submission of all necessary information. This format enables reporting officers to input data either manually or programmatically using automated scripts. CPCs are encouraged to familiarise with and test these new forms for reporting data for the statistical year 2023.
 
 You can download all new form templates for submitting the data for the statistical year 2023 [here](../forms/IOTC-forms-new.zip). We welcome your feedback on these new forms and encourage you to direct any questions to the IOTC Secretariat via email at IOTC-Statistics@fao.org.
 
-## Form 1DR {#1DR}
+# Form 1DR {#1DR}
 
 For the submission of data on [_species presence in the catch_](https://data.iotc.org/reference/latest/guidelines/#Species_presence_in_the_catch).
 
@@ -44,14 +44,14 @@ For the submission of data on [_species presence in the catch_](https://data.iot
 + [New form template](./Form-1DR.xlsx)
 + [New form description](./Form-1DR.html)
 
-## Form 1IN {#1IN}
+# Form 1IN {#1IN}
 
 For the submission of data on [_interactions of longline and surface fisheries with endangered, threatened, and protected (ETP) species_](https://data.iotc.org/reference/latest/guidelines/#Interactions_with_Endangered,_Threatened_and_Protected_species).
 
 + [Form template](./Form-1IN.xlsx)
 + [Form description](./Form-1IN.html)
 
-## Form 1RC {#1RC}
+# Form 1RC {#1RC}
 
 For the submission of data on the total [_amount of fish caught and retained_](https://data.iotc.org/reference/latest/guidelines/#Amount_of_fish_caught_and_retained).
 
@@ -61,7 +61,7 @@ For the submission of data on the total [_amount of fish caught and retained_](h
 + [New form description](./Form-1RC.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1RC/)
 
-## Form 1DI {#1DI}
+# Form 1DI {#1DI}
 
 For the submission of data on the [_amount of discards_](https://data.iotc.org/reference/latest/guidelines/#Amount_of_discards).
 
@@ -71,7 +71,7 @@ For the submission of data on the [_amount of discards_](https://data.iotc.org/r
 + [New form description](./Form-1DI.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1DI/)
 
-## Form 3CE {#3CE}
+# Form 3CE {#3CE}
 
 For the submission of data on [_geo-referenced catches and efforts_](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_catches_and_efforts).
 
@@ -95,7 +95,7 @@ A version of the form allows reporting **updated** data for a single fishery:
 + [New form description]( ./Form-3CE-update.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/update/3CE/)
 
-## Form 4SF {#4SF}
+# Form 4SF {#4SF}
 
 For the submission of data on [_geo-referenced size frequencies_](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_size_frequencies).
 
@@ -113,7 +113,7 @@ A version of the form allows reporting **updated** data for a single fishery and
 + [New form description](./Form-4SF-update.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/update/4SF/)
 
-## Form 3AA {#3AA}
+# Form 3AA {#3AA}
 
 For the submission of data on [_activities related to anchored fish aggregating devices_](https://data.iotc.org/reference/latest/guidelines/#AFAD-related_activities).
 
@@ -127,7 +127,7 @@ A version of the form allows reporting **updated** data for a single fishery:
 + [Form template](./Form-3AA-update.xlsx)
 + [Form description](./Form-3AA_update.html)
 
-## Form 3DA{#3DA}
+# Form 3DA{#3DA}
 
 For the submission of data on [_interactions related to drifting floating objects_](https://data.iotc.org/reference/latest/guidelines/#DFOB-related_activities).
 
@@ -141,7 +141,7 @@ A version of the form allows reporting **updated** data for a single vessel:
 + [Form template](./Form-3DA-update.xlsx)
 + [Form description](./Form-3DA-update.html)
 
-## Form 3BU {#3BU}
+# Form 3BU {#3BU}
 
 For the submission of data on [_daily buoy positions_](https://data.iotc.org/reference/latest/guidelines/#Daily_buoy_positions).
 
@@ -150,7 +150,7 @@ For the submission of data on [_daily buoy positions_](https://data.iotc.org/ref
 + [New form description](./Form-3BU.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/3BU/)
 
-## Form 2FC {#2FC}
+# Form 2FC {#2FC}
 
 For the submission of data on [_fishing craft statistics_](https://data.iotc.org/reference/latest/guidelines/#Fishing_craft_statistics).
 
@@ -159,7 +159,7 @@ For the submission of data on [_fishing craft statistics_](https://data.iotc.org
 + [New form template](./Form-2FC.xlsx)
 + [New form description](./Form-2FC.html)
 
-## Form 7PR {#7PR}
+# Form 7PR {#7PR}
 
 For the submission of data on _prices of fish products for tuna and tuna-like species under IOTC mandate_. The new form template is currently under construction.
 
