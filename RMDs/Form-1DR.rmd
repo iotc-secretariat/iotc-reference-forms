@@ -33,7 +33,7 @@ For the combination of each taxon, gear group, and fishery category listed in th
 
 | Element | Requirement | Description | Input value  |
 | :-------- | :-----: | :----------------------- | :-------: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer (e.g., 1996) |
 | Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#Entities) |
 | Flag state | M | Code of the country registration of the fishing vessels | **Code** from [Countries](#Countries) |
 

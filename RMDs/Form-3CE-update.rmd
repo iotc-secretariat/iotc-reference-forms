@@ -151,7 +151,7 @@ out_dt(FISHERIES, "FISHERIES")
 ## Fishing area {#fishingArea}
 
 ```{r collapse = TRUE}
-out_dt(IOTC_GRIDS_CE_SF, "")
+out_dt(IOTC_GRIDS_CE_SF_AR, "FISHING_AREAS")
 ```
 
 ## Species {#allSpecies}

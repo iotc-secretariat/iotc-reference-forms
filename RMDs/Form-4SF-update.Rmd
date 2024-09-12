@@ -21,11 +21,7 @@ output:
 
 # Description
 
-This form supports the reporting of annual estimates of sample size taken by number (or weight) measures of individual sizes of fish for the IOTC species, common sharks, and other bycatch species. Length frequency is defined as the number of individuals of a catch or catch sample in each length interval ([UN ESCWA](https://www.unescwa.org/sd-glossary/length-frequency-distribution-lfd)). The modal size is the length group with the higher number of individuals.
-
-Straight length measurements made with a calliper or measuring board are recommended over fish weights and vary according to fish groups: (i) lower-jaw fork length for billfish, (ii) upper-jaw fork length for tunas, mackerels, sharks, and all other bycatch fish species with forked or lunate tails, (iii) standard length for bycatch fish species with rounded or truncate tails, and (iv) disc width for rays. The Secretariat further recommends the use of length intervals for the IOTC species and most commonly caught sharks along with maximum length intervals and ranges of valid values which are used to filter and consolidate the size-frequency datasets made available to support the IOTC process (see Recommended measurements).
-
-Sampling coverage shall be set to at least one (1) fish measured by tonne caught by fishery and species, with samples being representative of all the periods and areas fished. For each stratum, the data coverage – i.e., the percentage (%) of catch/effort sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates. In addition, raised estimates of the size samples must be reported to the Secretariat to account for bias due to unrepresentative sampling. Documents covering sampling and raising procedures must be provided for each fishery and species.
+This form provides for the monthly reporting of size-frequency estimates for IOTC species, as well as common sharks and other bycatch species caught in association with IOTC fisheries. The form allows reporting updated data for a single fishery.
 
 Click [here](../forms/Form-4SF-update.xlsx) to download a blank version of Form 4-SF-update, or [return](../forms) to the list of all IOTC statistical data reporting forms.
 
@@ -39,7 +35,7 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer (e.g., 1996)  |
 | Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | Flag state | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 | Fisheries | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries) |
@@ -49,17 +45,18 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Month | M | The month of the fishing activities reported through the dataset | Integer |
-| Grid | M | the seven digits grid square of the fishing area in Indian Ocean   | **Code** from [Grid codes](#geospatialData) |
-| Sex | M | The sex of species sampled | **Code** from [Sex](#sex) |
+| Month | M | Month of the fishing activities reported through the dataset | Integer 1..12 |
+| Grid | M | 5° grid area | **Code** from [Grid codes](#5x5Grids) |
+| Sex | O | Sex of the fish sampled | **Code** from [Sex](#sex) |
 
 ## Sample data
 
 | Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Size class (_low_)  | M | The lowest size recorded for the sample | Integer |
-| Number of samples | M | The sample size of strata | Integer |
-| Number of fish  | M | The number of fish measured | Integer |
+| Size class (_low_) | M | The lowest size recorded for the sample | Integer |
+| Size class (_high_) | M | The highest size recorded for the sample | Integer |
+| Number of samples | M | Actual number of fish measured in the stratum | Integer |
+| Number of fish  | M | Raised number of fish in the stratum | Integer |
 
 ## Data specifications
 
@@ -69,10 +66,10 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 | Original data source | M | Source of information | **Code** from [Size frequency data sources](#sourcesSF)          |
 | Original data processing | M | Processing applied to the data | **Code** from [Size frequency data processings](#processingsSF) |
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| 
-| Source coverage type | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) |
-|Source coverage value | M | Value of coverage | Percentage (%) |
-| Type of fate  | M | Fate of fish caught (retained or discarded)| **Code** from [Types of fate](#typesOfFate)           |
-| Fate   | M | Reason for retained or discarded of the catch | **Code** from [Fate](#fates)  
+| Source coverage type | O | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) |
+| Source coverage value | O | Value of coverage | Percentage (%) |
+| Type of fate | M | Fate of fish caught (retained or discarded)| **Code** from [Types of fate](#typesOfFate)           |
+| Fate | O | Reason for retained or discarded of the catch | **Code** from [Fate](#fates)  
 
 ## Measurements
 
@@ -87,7 +84,7 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 
 | Element | Requirement | Description | Code list |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Estimation   | M | Indicate if the data was estimated or actual recorded data | **Code** from [Estimations](#estimations) |
+| Estimation | M | Indicates if the data was estimated or actual recorded data | **Code** from [Estimations](#estimations) |
 
 # Reporting metadata
 
@@ -112,9 +109,7 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 
 | Category | Temporal resolution | Spatial resolution | Catch unit |
 | :-------- | :--------- | :---------- | :------------- |
-All fisheries  | Month | [5° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids5x5) or finer for the SC  | number of fish |
-
-Paragraph 5 of resolution 15/02: Alternatively, size data for longline fleets may be provided as part of the Regional Observer Scheme where such fleets have at least 5% observer coverage of all fishing operations.
+All fisheries  | Month | [5° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids5x5) or finer for the SC | number of fish |
 
 # Reference code lists
 
@@ -130,11 +125,11 @@ out_dt(ENTITIES, "ENTITIES")
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## IOTC regular grids {#geospatialData}
+## IOTC 5° grids {#5x5Grids}
 
-Codes for all 1°x1° and 5°x5° grids that overlap - at least partially - with the IOTC convention area.
-
-Due to to the large size of the dataset, this is not included for filtering / browsing, but can be directly downloaded as a CSV from here: [IOTC_GRIDS_CE_SF](`r paste0("https://data.iotc.org/reference/latest/domain/admin/codelists/IOTC_GRIDS_CE_SF_", version_number("IOTC_GRIDS_CE_SF"), ".csv")`).
+```{r collapse = TRUE}
+out_dt(IOTC_GRIDS_SF, "AREAS_IOTC_05")
+```
 
 ## Fisheries {#fisheries}
 

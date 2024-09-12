@@ -35,16 +35,16 @@ Total number and/or live weight of retained catches by species and effort by str
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| [Reporting entity]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| [Flag state]{#repflagstate} | M | Country registration of the fishery vessels | **Code** from [Countries](#countries) |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer (e.g., 1996) |
+| Reporting entity | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| Flag state | M | Country registration of the fishery vessels | **Code** from [Countries](#countries) |
 
 ## Main data elements
 
-| Element        | Requirement | Description |Input value  |
+| Element | Requirement | Description |Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Month | M | Month of fishing activities | Integer 1..12 |
-| Fisheries   | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#fisheries) |
+| Fisheries | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#fisheries) |
 | Grid  | M | Fishing area | **Code** from [Grid codes](#fishingArea) |
 | Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings)| 
@@ -52,15 +52,15 @@ Total number and/or live weight of retained catches by species and effort by str
 
 ## Original data
 
-| Element        | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value  |
 | :------------- | :-----: | :----------------------- | :-----------: |
-| Estimation   | M | Indicates whether the data were estimated or actual recorded data | **Code** from [Types of estimations](#estimations) |
-| Original data type      | M | Preliminary/final status of the data | **Code** from [Types of data](#types)      |
-| Original data source     | M | Source of information | **Code** from [Catch and effort data sources](#dataSourcesCE)          |
+| Estimation | M | Indicates whether the data were estimated or actual recorded data | **Code** from [Types of estimations](#estimations) |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types)      |
+| Original data source | M | Source of information | **Code** from [Catch and effort data sources](#dataSourcesCE)          |
 | Original data processing | M | Processing applied to the data | **Code** from [Catch and effort data processings](#dataProcessingsCE) |
-| Data raising             | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| 
-|source coverage type     | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) |
-|Source coverage value   | M | Value of coverage |in percentage |
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| 
+|source coverage type | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) |
+|Source coverage value | M | Value of coverage |in percentage |
 
 ## Effort units
 

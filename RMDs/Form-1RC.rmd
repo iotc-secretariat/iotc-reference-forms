@@ -35,8 +35,8 @@ Total live weight of retained catches by species, along with information on the 
 
 | Element | Requirement | Description | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| Reporting entity| M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Entities](#entities) |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer (e.g., 1996) |
+| Reporting entity | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Entities](#entities) |
 | Flag state | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
 
 ## Main data elements
