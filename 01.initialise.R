@@ -164,7 +164,7 @@ DESTINATION_MARKETS    = read_codelist(domain = "economics", schema = "socio_eco
 
 PRICING_LOCATIONS    = read_codelist(domain = "economics", schema = "socio_economics", codelist = "PRICING_LOCATIONS")
 
-PRODUCT_TYPES        = read_codelist(domain = "economics", schema = "socio_economics", codelist = "PRODUCT_TYPES")
+FISH_PRODUCT_TYPES   = read_codelist(domain = "economics", schema = "socio_economics", codelist = "PRODUCT_TYPES")
 
 # LEGACY CODE LISTS ####
 LEGACY_FISHERIES     = read_codelist(domain = "legacy", codelist = "FISHERIES")

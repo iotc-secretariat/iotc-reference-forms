@@ -161,9 +161,10 @@ For the submission of data on [_fishing craft statistics_](https://data.iotc.org
 
 # Form 7PR {#7PR}
 
-For the submission of data on _prices of fish products for tuna and tuna-like species under IOTC mandate_. The new form template is currently under construction.
+For the submission of data on _prices of fish products for tuna and tuna-like species under IOTC mandate_. Specifications for a new IOTC Form for fish prices and other socio-economic indicators are expected to be defined through the work conducted by the [Working Party on Socio-Economics](https://iotc.org/meetings/1st-working-party-socio-economics).
 
 + [Legacy form template](./legacy/Form-7PR-legacy.xlsm)
++ [Legacy form description](./legacy/Form-7PR-legacy.html)
 <!-- + [New form template](./Form-7PR.xlsx) -->
 <!-- + [New form description](./Form_7PR.html) -->
 
