@@ -178,7 +178,7 @@ out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 out_dt(DATA_SOURCES_CE, "DATA_SOURCES_CE")
 ```
 
-## Catches and effort data processings (DTA.PRO.DI) {#dataProcessingsCE}
+## Catches and effort data processings {#dataProcessingsCE}
 
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_CE, "DATA_PROCESSINGS_CE")
