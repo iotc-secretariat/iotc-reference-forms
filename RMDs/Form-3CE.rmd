@@ -46,7 +46,7 @@ Total number and/or live weight of retained catches by species and effort by str
 | Month | M | Month of fishing activities | Integer 1..12 |
 | Fisheries | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#fisheries) |
 | Grid  | M | Fishing area | **Code** from [Grid codes](#fishingArea) |
-| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
+| Species | M | Species caught and retained | **Code** from [Species](#allSpecies) |
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings)| 
 | Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 

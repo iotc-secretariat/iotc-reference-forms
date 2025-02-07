@@ -39,7 +39,7 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 | Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | Flag state | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 | Fisheries | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries) |
-| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
+| Species | M | Species sampled | **Code** from [Species](#allSpecies) |
 
 ## Main data elements
 
