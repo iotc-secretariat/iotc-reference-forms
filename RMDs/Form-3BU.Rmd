@@ -37,8 +37,8 @@ Single positions (latitude and longitude in decimal degrees) by buoy and day for
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
 | Reporting month | M | Month of the fishing activities reported through the dataset | Integer 1..12 |
-| Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| Flag state | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code_iso3** from [Countries](#countries) |
 | Vessel name | M | Name of purse seine vessel monitoring the buoy as available from the IOTC Record of Authorised Vessel [RAV](https://rav.iotc.org/) | Plain text |
 | Vessel IOTC number | M | IOTC registered number of the purse seine vessel monitoring the buoy | Plain text (e.g., IOTC018542) |
 

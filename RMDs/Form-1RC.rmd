@@ -36,8 +36,8 @@ Total live weight of retained catches by species, along with information on the 
 | Element | Requirement | Description | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer (e.g., 1996) |
-| Reporting entity | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Entities](#entities) |
-| Flag state | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat |  **Code_iso3** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code_iso3** from [Countries](#countries) |
 
 ## Main data elements
 
@@ -47,7 +47,7 @@ Total live weight of retained catches by species, along with information on the 
 | Fishery | M | IOTC-defined fisheries | **Code** from [Fisheries](#Fisheries) |
 | IOTC area | M | Main IOTC areas | **Code** from [IOTC main areas](#IOTCareasMain) |
 | Retain reason | M | Reason for retaining the catch onboard | **Code** from [Reasons for retaining](#retainReasons) |
-| Species | M | Species caught and retained            | **Code** from [Species](#allSpecies) |
+| Species | M | Species caught and retained | **Code** from [Species](#allSpecies) |
 
 ## Original data
 
@@ -62,7 +62,7 @@ Total live weight of retained catches by species, along with information on the 
 
 | Element | Requirement | Description | Format | Example |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
 | Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
 | Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
 | Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |

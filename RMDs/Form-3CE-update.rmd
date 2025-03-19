@@ -36,8 +36,8 @@ Total number and/or live weight of retained catches by species and effort by str
 | Element | Requirement | Description | Input value |
 | :------------- | :-----: | :----------------------- | :------------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities | Integer |
-| Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| Flag state | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code_iso3** from [Countries](#countries) |
 | Fisheries | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#fisheries)            |
 
 ## Main data elements

@@ -36,8 +36,8 @@ Number of interactions along with information on the value (%) and type of sampl
 | Element | Requirement | Description | Input value  |
 | :-------------- | :-----: | :----------------------- | :-------: |
 | Reporting year | M | Gregorian calendar year of the reported fishing activities in the dataset | Integer (e.g., 1996) |
-| Reporting entity | M | Entity reporting the data to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| Flag state | M | Country of registration of the fishing vessels | **Code** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country of registration of the fishing vessels | **Code_iso3** from [Countries](#countries) |
 
 ## Main data elements
 

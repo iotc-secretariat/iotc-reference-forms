@@ -38,8 +38,8 @@ Number of fishing vessel by size category, along with information on the value (
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| Flag state | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code_iso3** from [Countries](#countries) |
 
 ## Main data elements
 
@@ -51,14 +51,14 @@ Number of fishing vessel by size category, along with information on the value (
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type       | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
-| Original data source     | M | Source of information | **Code** from [Fishing craft data sources](#sourcesFC) |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
+| Original data source | M | Source of information | **Code** from [Fishing craft data sources](#sourcesFC) |
 | Original data processing | M | Processing applied to the data | **Code** from [Fishing craft data processings](#dataProcessingsFC) |
 | Source coverage type     | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) |
 
 ## Vessel characteristics
 
-| Element        | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Boat type | M | Fishing boat classification based on shape and purpose| **Code** from [Boat types](#boatTypes)      |
 | Mechanisation type | M | Type of boat mechanization| **Code** from [Mechanisation types](#mechanizationTypes)          |

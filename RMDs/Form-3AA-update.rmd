@@ -36,8 +36,8 @@ Daily information on AFOB-related activities along with estimates of total numbe
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| Reporting entity | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| Flag state | M | Country registration of the fishing vessels | **Code** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code_iso3** from [Countries](#countries) |
 | Month | M | Gregorian calendar month of the fishing activities reported through the dataset | Integer 1..12 |
 | Fisheries | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries) |
 
