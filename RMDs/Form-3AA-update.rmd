@@ -23,7 +23,7 @@ output:
   
 This form provides for the annual reporting of fishing activities conducted around anchored fish aggregated devices (AFADs) located in the IOTC area of competence along with estimates of retained catches and discards for the IOTC species, common sharks, and other bycatch species caught in association with IOTC fisheries.
 
-Click [here](../forms/Form-3AA-update.xlsx) to download a blank version of Form 3-AA-update, or [return](../forms) to the list of all IOTC statistical data reporting forms. The form allows reporting updated data for a single fishery. Click [here](../forms/Form-3AA.xlsx) to download a blank version of Form 3-AA which has been designed to report data for multiple fisheries simultaneously.
+Click [here](./Form-3AA-update.xlsx) to download a blank version of Form 3AA-update, or [return](./index.html) to the list of all IOTC statistical data reporting forms. The form allows reporting updated data for a single fishery. Click [here](./Form-3AA.xlsx) to download a blank version of Form 3AA which has been designed to report data for multiple fisheries simultaneously.
 
 # Data content
 

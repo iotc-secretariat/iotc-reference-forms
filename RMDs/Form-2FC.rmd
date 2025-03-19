@@ -25,7 +25,7 @@ This form provides for the reporting of the total annual numbers of fishing vess
 
 For each stratum, the data coverage -- i.e., the percentage (%) of vessels or fishing activities sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
-Click [here](../latest/forms/Form-2FC.xlsx) to download a blank version of Form 1-RC, or [return](../forms) to the list of IOTC statistical data reporting forms.
+Click [here](./Form-2FC.xlsx) to download a blank version of Form 2FC, or [return](./index.html) to the list of IOTC statistical data reporting forms.
 
 # Data content
 

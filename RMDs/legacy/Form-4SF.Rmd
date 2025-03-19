@@ -21,14 +21,13 @@ output:
   
 # Definition
   
-The term length frequency refers to individual body lengths of IOTC species and main shark species per fleet, year, gear, type of school, month and 5 degrees square areas. 
-Length frequency is defined as the number of individuals of a catch or catch sample in each length interval ([UN ESCWA](https://www.unescwa.org/sd-glossary/length-frequency-distribution-lfd)). The modal size is the length group with the higher number of individuals.
+The term length frequency refers to individual body lengths of IOTC species and main shark species per fleet, year, gear, type of school, month and 5 degrees square areas. Length frequency is defined as the number of individuals of a catch or catch sample in each length interval ([UN ESCWA](https://www.unescwa.org/sd-glossary/length-frequency-distribution-lfd)). The modal size is the length group with the higher number of individuals.
 
 Straight length measurements made with a calliper or measuring board are recommended over fish weights and vary according to fish groups: (i) lower-jaw fork length for billfish, (ii) upper-jaw fork length for tunas, mackerels, sharks, and all other bycatch fish species with forked or lunate tails, (iii) standard length for bycatch fish species with rounded or truncate tails, and (iv) disc width for rays. The Secretariat further recommends the use of length intervals for the IOTC species and most commonly caught sharks along with maximum length intervals and ranges of valid values which are used to filter and consolidate the size-frequency datasets made available to support the IOTC process (see Recommended measurements).
 
 Sampling coverage shall be set to at least one (1) fish measured by tonne caught by fishery and species, with samples being representative of all the periods and areas fished. For each stratum, the data coverage – i.e., the percentage (%) of catch/effort sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates. In addition, raised estimates of the size samples must be reported to the Secretariat to account for bias due to unrepresentative sampling. Documents covering sampling and raising procedures must be provided for each fishery and species.
 
-Click [here](../forms/legacy/Form-4SF-legacy.xlsm) to download a blank version of Form 4-SF, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+Click [here](./Form-4SF-legacy.xlsm) to download a blank version of Form 4SF, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 
@@ -40,9 +39,9 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 
 | Element | Requirement | Description | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|
-| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
-| [Reporting country]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#LEGACY_FLEETS) |
-| [Flag country]{#repflagstate} | M | Country registration of the fishing vessels  | **Code** from [Fleet](#LEGACY_FLEETS) |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| Reporting country | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#LEGACY_FLEETS) |
+| Flag country | M | Country registration of the fishing vessels | **Code** from [Fleet](#LEGACY_FLEETS) |
 
 ## Main data elements
 
@@ -56,7 +55,7 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 ## Measurements
 
 | Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| :--------------- | :-----: | :----------------------- | :-------: |
 | Type of Measurement | M | Given measurement types (weight or length) | **Code** from [Types of measurement](#LegacytypesOfMeasurement)     |
 | Type of catch sampled | M | Type of catch sampled (Retain or Discard)| **Code** from [Sampled catch](#Legacysamplecatch)     |
 | Measurement tool | M | Tool used to take the measurement | **Code** from [Measurement tools](#LegacyallMeasurementTools) |
@@ -64,7 +63,7 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 ## Sample data
 
 | Element  | Requirement | Description | Data type  |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| :-------------- | :-----: | :----------------------- | :-------: |
 | LOW CLASS  | M | The lowest size recorded for the sample | Integer |
 | HIGH CLASS  | M | The highest size recorded for the sample | Integer |
 | SIZE INTERVAL / UNIT  | M |The size interval between the low and the high class, include unit measurement | Integer |
@@ -73,7 +72,7 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 ## Original data
 
 | Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| :--------------- | :-----: | :----------------------- | :-------: |
 | Estimation | M | Indicate if the data was estimated or actual recorded data | **Code** from [Estimations](#Legacyestimations) |
 | Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |Y/N |
 | Original data source | M | Source of information | [Size frequency data sources](#LegacysourcesSF) |
@@ -83,12 +82,12 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 # Reporting metadata
 
 || Element  | Requirement | Description | Format | Example                                              |
-|:------------|:-----------:|:--------------------|:------------|:------------|
-| [Contact name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text  | John Doe  |
-| [Contact e-mail address]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address                                | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| [Contact phone]{#fcphone}    |      O      | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number | country code - number |
-| [Organisation name]{#orgname}    |      M      | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries                      |
-| [Organisation email]{#orgemail}  | O  | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
+|:------------ |:-----------:|:--------------------|:------------|:------------|
+| Contact name | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text  | John Doe |
+| Contact e-mail address | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Contact phone | O | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number | country code - number |
+| Organisation name    |      M      | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries                      |
+| Organisation email  | O  | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
 
 # Reporting deadlines
 

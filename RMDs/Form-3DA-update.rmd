@@ -23,7 +23,7 @@ output:
 
 This form supports the reporting of data on operational activities conducted by purse seine and support vessels on drifting floating objects (DFOBs) and buoys. When present, data include information on buoy identifier, knowledge of the buoy position, and type of activity conducted on the buoy. For each DFOB, information on materials (i.e., presence of plastic or metal), dimensions (i.e., length, width, and height), and presence of mesh with value of mesh size for both the surface (i.e., raft) and subsurface (i.e., tail) components must be recorded. Finally, species-specific estimates of catches retained and discarded in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species must also be included in the dataset.
 
-Click [here](../forms/Form-3DA-update.xlsx) to download a blank version of Form 3-DA-update, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+Click [here](./Form-3DA-update.xlsx) to download a blank version of Form 3DA-update, or [return](./index.html) to the list of all IOTC statistical data reporting forms. Click [here](./Form-3DA.xlsx) to download a blank version of Form 3DA which has been designed to report data for multiple fisheries simultaneously.
 
 # Data content
 

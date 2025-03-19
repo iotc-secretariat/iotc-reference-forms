@@ -31,7 +31,7 @@ This form supports the reporting of estimates of discards in numbers or live wei
 
 <!-- Appendix I and Appendix II contain more information about these requirements. -->
 
-Click [here](../forms/legacy/Form-1DI-legacy.xlsm) to download a blank version of Form 1-DI, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+Click [here](./Form-1DI-legacy.xlsm) to download a blank version of Form 1DI, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 
@@ -55,15 +55,15 @@ Total number or live weight of discarded catches by species, along with informat
 
 | Element | Requirement | Description | Input value |
 |:-------------|:------------:|:----------------------|:----------------------|
-| Quarter       |      O      | Fishing time period                    | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
-| Fishery       |      M      | IOTC-defined fisheries                 | **Code** from [Fisheries](#LEGACY_FISHERIES) |
-| Area    |      M      | Main IOTC areas                        | **Code** from [IOTC main areas](#IOTCareasMain) |
-| Target Species       |      M      | Main species targeted            | **Code** from [Species](#LEGACY_SPECIES ) |
-| Reasons for discarding  | M | Reasons why the species were discarded | **Code** from [Reasons for discarding](#legacydiscardreason) |
-| Species    | M | Species caught and discarded| **Code** from [Species](#LEGACY_SPECIES )           |
-| Condition of species | M | Conditions of species being discarded at sea  | **Code** from  [Conditions](#legacydiscardconditions)|
-| Data raising             | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| 
-| Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
+| Quarter | O  | Fishing time period | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
+| Fishery | M | IOTC-defined fisheries | **Code** from [Fisheries](#LEGACY_FISHERIES) |
+| Area | M | Main IOTC areas | **Code** from [IOTC main areas](#IOTCareasMain) |
+| Target Species | M | Main species targeted | **Code** from [Species](#LEGACY_SPECIES) |
+| Reasons for discarding | M | Reasons why the species were discarded | **Code** from [Reasons for discarding](#legacydiscardreason) |
+| Species | M | Species caught and discarded| **Code** from [Species](#LEGACY_SPECIES) |
+| Condition of species | M | Conditions of species being discarded at sea | **Code** from  [Conditions](#legacydiscardconditions)|
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising) | 
+| Catch unit | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 
 ## Original data
 
@@ -78,11 +78,11 @@ Total number or live weight of discarded catches by species, along with informat
 
 | Element  | Requirement | Description | Format | Example                                              |
 |:------------|:-----------:|:--------------------|:------------|:------------|
-| [Contact name]{#fcname} |      M      | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat           | Plain text                                         | John Doe                                             |
-| [Contact e-mail address]{#fcemail}    |      M      | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address                                | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| [Contact phone]{#fcphone}    |      O      | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number                                | country code - number |
-| [Organisation name]{#orgname}    |      M      | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat          | Plain text                                         | National Institute of Fisheries                      |
-| [Organisation email]{#orgemail}  |      O      | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address                                | [nif\@gov.sc](mailto:nif@gov.sc){.email}             |
+| Contact name | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe |
+| Contact e-mail address | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Contact phone | O | Phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number | Country code - number |
+| Organisation name | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | [nif\@gov.sc](mailto:nif@gov.sc){.email}             |
 
 # Reporting deadlines
 
@@ -90,7 +90,7 @@ Total number or live weight of discarded catches by species, along with informat
 - **Surface fisheries**: 30 June (final)
 - **Coastal fisheries**: 30 June (final)
 
-# Reference codelists
+# Reference code lists
 
 ## Fleet {#LEGACY_FLEETS}
 
@@ -102,7 +102,7 @@ out_dt(LEGACY_FLEETS, "LEGACY_FLEETS")
 
 ## IOTC main areas {#IOTCareasMain}
 
-Reference codes modelling the two main areas in which the IOTC area of competence is split (western / eastern IOTC area, *roughly* coinciding with FAO areas F51 and F57).
+Reference codes modelling the two main areas in which the IOTC area of competence is split (western / eastern IOTC area).
 
 ![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
 

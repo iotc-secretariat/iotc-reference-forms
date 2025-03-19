@@ -23,7 +23,7 @@ output:
 
 This form supports the reporting of estimates of retained catches in live weight equivalent (metric tonnes; t) for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
   
-Click [here](../forms/legacy/Form-1RC-legacy.xlsm) to download a blank version of Form 1-RC, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+Click [here](./Form-1RC-legacy.xlsm) to download a blank version of Form 1RC, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 
@@ -35,26 +35,24 @@ Total live weight of retained catches by species, along with information on the 
 
 | Element | Requirement | Description | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|
-| [Reporting year]{#repyear}     | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
-| [Reporting country]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#LEGACY_FLEETS) |
-| [Flag country]{#repflagstate}    | M | Country registration of the fishing vessels  | **Code** from [Fleet](#LEGACY_FLEETS) |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
+| Reporting country | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Fleet](#LEGACY_FLEETS) |
+| Flag country  | M | Country registration of the fishing vessels  | **Code** from [Fleet](#LEGACY_FLEETS) |
 
 ## Main data elements
 
 | Element | Requirement | Description | Input value |
 |:-------------|:------------:|:----------------------|:----------------------|
-| Quarter       |      O      | Fishing time period                    | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
-| Type of fishery       |      M      | IOTC-defined fisheries                 | **Code** from [Fisheries](#LEGACY_FISHERIES) |
-| IOTC area     |      M      | Main IOTC areas                        | **Code** from [IOTC main areas](#IOTCareasMain) |
-| Target Species       |      M      | Main species targeted            | **Code** from [Species](#LEGACY_SPECIES ) |
-| Species       |      M      | Species caught and retained            | **Code** from [Species](#LEGACY_SPECIES ) |
-| Catch       |      M      | catches for each species retained on board            | Integer |
-
-
+| Quarter | O | Fishing time period | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
+| Type of fishery | M | IOTC-defined fisheries | **Code** from [Fisheries](#LEGACY_FISHERIES) |
+| IOTC area | M | Main IOTC areas | **Code** from [IOTC main areas](#IOTCareasMain) |
+| Target Species | M | Main species targeted | **Code** from [Species](#LEGACY_SPECIES ) |
+| Species | M | Species caught and retained | **Code** from [Species](#LEGACY_SPECIES ) |
+| Catch | M | Catches for each species retained on board | Numeric |
 
 ## Original data
 
-| Element  | Requirement | Description  | Input value |
+| Element | Requirement | Description | Input value |
 |:-----------------|:-------------:|:------------------------|:--------------|
 | Original data type       |      M      | Preliminary/final status of the data | **Code** from [Type of data](#types) |
 | Original data source     |      M      | Source of information                | **Code** from [Retained catches data sources](#LegacydataSourcesRC) |
@@ -63,14 +61,13 @@ Total live weight of retained catches by species, along with information on the 
 
 # Reporting metadata
 
-| Element  | Requirement | Description | Format | Example                                              |
+| Element | Requirement | Description | Format | Example |
 |:------------|:-----------:|:--------------------|:------------|:------------|
-| [Contact name]{#fcname} |      M      | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat           | Plain text                                         | John Doe                                             |
-| [Contact e-mail address]{#fcemail}    |      M      | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address                                | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| [Contact phone]{#fcphone}    |      O      | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number                                | country code - number |
-| [Organisation name]{#orgname}    |      M      | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat          | Plain text                                         | National Institute of Fisheries                      |
-| [Organisation email]{#orgemail}  |      O      | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address                                | [nif\@gov.sc](mailto:nif@gov.sc){.email}             |
-
+| Contact name | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe |
+| Contact e-mail address | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Contact phone | O | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid phone number | Country code - number |
+| Organisation name | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| Organisation email | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
 
 # Reporting deadlines
 
@@ -78,8 +75,7 @@ Total live weight of retained catches by species, along with information on the 
 - **Surface fisheries**: 30 June (final)
 - **Coastal fisheries**: 30 June (final)
 
-# Reference codelists
-
+# Reference code lists
 
 ## Fleet {#LEGACY_FLEETS}
 
@@ -91,7 +87,7 @@ out_dt(LEGACY_FLEETS, "LEGACY_FLEETS")
 
 ## IOTC main areas {#IOTCareasMain}
 
-Reference codes modelling the two main areas in which the IOTC area of competence is split (western / eastern IOTC area, *roughly* coinciding with FAO areas F51 and F57).
+Reference codes modelling the two main areas in which the IOTC area of competence is split (western / eastern IOTC area).
 
 ![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
 
@@ -104,8 +100,6 @@ out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 ```{r collapse = TRUE}
 out_dt(LEGACY_FISHERIES, "LEGACY_FISHERIES")
 ```
-
-
 
 ## Species {#LEGACY_SPECIES }
 
@@ -121,7 +115,6 @@ These codelists are subsets of the entries in the [ASFIS](https://www.fao.org/fi
 ```{r collapse = TRUE}
 out_dt(LEGACY_SPECIES, "LEGACY_SPECIES")
 ```
-
 
 ## Data types {#legacytypes}
 

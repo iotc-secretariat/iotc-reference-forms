@@ -27,10 +27,9 @@ The term Fishing Craft refers to highly aggregated statistics per fleet, gear, t
 
 •	Numbers of active fishing crafts targeting other species: Refers to the total number of fishing crafts that, fishing for species other than those referred to above, caught IOTC species or main shark species as a bycatch within the IOTC Area during a calendar year.
 
-
 For each stratum, the data coverage -- i.e., the percentage (%) of vessels or fishing activities sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
-Click [here](../latest/forms/legacy/Form-2FC-legacy.xlsm) to download a blank version of Form 1-RC, or [return](../forms) to the list of IOTC statistical data reporting forms.
+Click [here](./Form-2FC-legacy.xlsm) to download a blank version of Form 2FC, or [return](../index.html) to the list of IOTC statistical data reporting forms.
 
 # Data content
 
@@ -41,48 +40,47 @@ Number of fishing vessel by size category, along with information on the value (
 ## General information
 
 | Element | Requirement | Description | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|
-| [Reporting year]{#repyear}     | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
-| [Reporting country]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#LEGACY_FLEETS) |
-| [Flag country]{#repflagstate}    | M | Country registration of the fishing vessels  | **Code** from [Fleet](#LEGACY_FLEETS) |
+|:----------------- |:------------:|:------------------------|:------------:|
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
+| Reporting country | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#LEGACY_FLEETS) |
+| Flag country | M | Country registration of the fishing vessels | **Code** from [Fleet](#LEGACY_FLEETS) |
 
 ## Main data elements
 
-| Element | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Type of fishery       |      M      | IOTC-defined fisheries                 | **Code** from [Fisheries](#LEGACY_FISHERIES) |
-| Target Species       |      M      | Main species targeted            | **Code** from [Species](#LEGACY_SPECIES ) |
+| Type of fishery | M | IOTC-defined fisheries | **Code** from [Fisheries](#LEGACY_FISHERIES) |
+| Target Species | M | Main species targeted | **Code** from [Species](#LEGACY_SPECIES ) |
 
 ### Original data
 
 | Element  | Requirement | Description  | Input value |
 |:-----------------|:-------------:|:------------------------|:--------------|
-| Original data type       |      M      | Preliminary/final status of the data | **Code** from [Type of data](#types) |
-| Original data source     |      M      | Source of information                | **Code** from [Retained catches data sources](#LegacydataSourcesRC) |
-| Original data processing |      M      | Processing applied to the data       | **Code** from [Retained catches data processings](#legacydataProcessingsRC) |
-| Source coverage type     |      M      | Variable used for data coverage      | **Code** from [Coverage types](#coverageTypes) |
-
+| Original data type  | M | Preliminary/final status of the data | **Code** from [Type of data](#types) |
+| Original data source | M | Source of information | **Code** from [Retained catches data sources](#LegacydataSourcesRC) |
+| Original data processing | M | Processing applied to the data | **Code** from [Retained catches data processings](#legacydataProcessingsRC) |
+| Source coverage type | M | Variable used for data coverage | **Code** from [Coverage types](#coverageTypes) |
 
 ### Vessel characteristics
 
-| Element        | Requirement | Description | Input value  |
+| Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Boat type | M | Fishing boat classification based on shape and purpose| **Code** from [Boat types](#LEGACY_BOAT_TYPES)      |
-| Mechanisation | M | Type of boat mechanization| **Code** from [Mechanisation types](#mechanizationTypes)          |
-| Boat class size types | M |  Vessel size categories  | **Code** from [Boat class types](#boatClassTypes) |
+| Boat type | M | Fishing boat classification based on shape and purpose| **Code** from [Boat types](#LEGACY_BOAT_TYPES) |
+| Mechanisation | M | Type of boat mechanization| **Code** from [Mechanisation types](#mechanizationTypes) |
+| Boat class size types | M |  Vessel size categories | **Code** from [Boat class types](#boatClassTypes) |
 | Onboard preservation | M | Type of preservation methods being used for target species onboard boats | **Code** from [Fish preservation methods](#fishPreservationMethods) |
 | Onboard processing | M | Type of fish processing methods use onboard | **Code** from [Fish processing method](#legacyFISHPROCESSINGTYPES) |
 
 # Reporting metadata
 
-| Element        | Requirement | Description | Format | Example |
+| Element | Requirement | Description | Format | Example |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| [Focal point full name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
-| [Focal point email]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
-| [Finalisation date]{#findate} | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+| Focal point full name | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe  |
+| Focal point email | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | John.Doe@fao.org |
+| Organisation name | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| Organisation email | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | nif@gov.sc |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| Submission date | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
 # Reporting deadlines
 

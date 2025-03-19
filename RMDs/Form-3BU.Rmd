@@ -23,7 +23,7 @@ output:
 
 This form provides for the monthly reporting of daily positions for each of the buoys monitored in purse seine fisheries. Each buoy is identified by its unique identifier which is a concatenation of the acronym of the buoy commercial model (e.g., ISD+, M3+, T8E) followed by 5-9 digits depending on the buoy model.
 
-Click [here](../forms/Form-3BU.xlsx) to download a blank version of Form 3-BU, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+Click [here](./Form-3BU.xlsx) to download a blank version of Form 3BU, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 

@@ -23,7 +23,7 @@ output:
   
 This form supports the *voluntary* reporting of _prices of fish products for tuna and tuna-like species under IOTC mandate_.
 
-Click [here](../forms/legacy/Form-7PR-legacy.xlsm) to download an empty version of the legacy form 7-PR, or [return](../forms) to the list of all versions of the IOTC statistical data reporting forms. 
+Click [here](./Form-7PR-legacy.xlsm) to download an empty version of the legacy form 7PR, or [return](../index.html) to the list of all versions of the IOTC statistical data reporting forms. 
 
 # Reporting deadlines
 

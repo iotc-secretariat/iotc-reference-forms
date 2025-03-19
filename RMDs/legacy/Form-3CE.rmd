@@ -38,7 +38,7 @@ The term catch and effort refers to the fine-scale data – usually from logbook
 
 Catch and effort data must be extrapolated (raised) to the total catches (and effort) for the fishery concerned.
 
-Click [here](../forms/legacy/Form-3CE-legacy.xlsm) to download a blank version of Form 3-CE, or [return](../forms) to the list of all new versions of the IOTC statistical data reporting forms.
+Click [here](./Form-3CE-legacy.xlsm) to download a blank version of Form 3CE, or [return](../index.html) to the list of all new versions of the IOTC statistical data reporting forms.
 
 # Data content
 
@@ -49,17 +49,17 @@ Total number and/or live weight of retained catches by species and effort by str
 ## General information
 
 | Element | Requirement | Description | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|
-| [Reporting year]{#repyear} | M | Gregorian calendar year of the fishing activities reported through the dataset |  Integer  |
-| [Reporting country]{#repentity} | M | Entity reporting the dataset to the IOTC Secretariat |  **Code** from [Fleet](#Legacyfleet) |
-| [Flag country]{#repflagstate} | M | Country registration of the fishing vessels  | **Code** from [Fleet](#Legacyfleet) |
+|:-------------- |:------------:|:------------------------|:------------:|
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| Reporting country | M | Entity reporting the dataset to the IOTC Secretariat | **Code** from [Fleet](#Legacyfleet) |
+| Flag country | M | Country registration of the fishing vessels | **Code** from [Fleet](#Legacyfleet) |
 
 ## Main data elements
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| Element | Requirement | Description | Input value |
+| :-------------- | :-----: | :----------------------- | :-------: |
 | Month | M | The month of the fishing activities reported through the dataset | Integer 1..12 |
-| Fisheries   | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#LegacyFISHERIES) |
+| Fisheries | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#LegacyFISHERIES) |
 | Grid | M | The 7-digit CWP grid square of the fishing area in the Indian Ocean  | **example** [Grids](#LegacyIOTCGrids) |
 | Species | M | Species caught and discarded | **Code** from [Species](#LegacySPECIES) |
 | Data raising | M | Indicate if raised to total catch | Y/N | 
@@ -68,7 +68,7 @@ Total number and/or live weight of retained catches by species and effort by str
 ## Original data
 
 | Element  | Requirement | Description  | Input value |
-|:-----------------|:-------------:|:------------------------|:--------------|
+|:-------------- |:-------------:|:------------------------|:--------------|
 | Type of data | M | Preliminary/final status of the data | **Code** from [Y/N |
 | Original data source | M | Source of information | **Code** from [Retained catches data sources](#LegacydataSourcesCE) |
 | Original data processing | M | Processing applied to the data | **Code** from [Retained catches data processings](#legacydataProcessingsCE) |
@@ -78,18 +78,18 @@ Total number and/or live weight of retained catches by species and effort by str
 ## Effort units
 
 | Element | Requirement | Description | Input value  |
-| :------------- | :-----: | :----------------------- | :-----------: |
+| :---------- | :-----: | :----------------------- | :-----------: |
 | Effort units | M | Primary effort unit | **Code** from [Effort units](#legacyeffortUnits)     |
 
 # Reporting metadata
 
 | Element | Requirement | Description | Format | Example                                              |
 |:------------|:-----------:|:--------------------|:------------|:------------|
-| [Contact name]{#fcname} | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe |
-| [Contact e-mail address]{#fcemail} | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| [Contact phone]{#fcphone} | O | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number | country code - number |
-| [Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text  | National Institute of Fisheries |
-| [Organisation email]{#orgemail} | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address  | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
+| Contact name | M | Name of the focal point in charge of the reporting of the data to the IOTC Secretariat | Plain text | John Doe |
+| Contact e-mail address | M | Email address of the focal point in charge of the reporting of the data to the IOTC Secretariat | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Contact phone | O | phone number of the organisation of the focal point in charge of the reporting of the data to the IOTC Secretariat  | Valid phone number | country code - number |
+| Organisation name]{#orgname} | M | Name of the organisation in charge of the reporting of the data to the IOTC Secretariat | Plain text | National Institute of Fisheries |
+| Organisation email | O | Email address of the organisation in charge of the reporting of the data to the IOTC Secretariat | Valid email address | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
 
 # Reporting deadlines
 
@@ -162,7 +162,7 @@ a.	 Subparagraph (a) For surface fisheries: catch weight by species and fishing 
 b.	Subparagraph (b) Longline fisheries: catch by species, in numbers or weight, and effort as the number of hooks deployed shall be provided by 5° grid area and month strata. (…)
 c.	Subparagraph (c) Coastal fisheries: available catch by species, fishing gear and fishing effort shall be submitted frequently and may be provided using an alternative geographical area if it better represents the fishery concerned.
 
-# Reference codelists
+# Reference code lists
 
 ## Entities {#Legacyfleet}
 

@@ -23,7 +23,7 @@ output:
 
 This form provides for the monthly reporting of size-frequency estimates for IOTC species, as well as common sharks and other bycatch species caught in association with IOTC fisheries. The form allows reporting updated data for a single fishery.
 
-Click [here](../forms/Form-4SF-update.xlsx) to download a blank version of Form 4-SF-update, or [return](../forms) to the list of all IOTC statistical data reporting forms.
+Click [here](./Form-4SF-update.xlsx) to download a blank version of Form 4SF-update, or [return](./index.hmtl) to the list of all IOTC statistical data reporting forms. Click [here](./Form-4SF.xlsx) to download a blank version of Form 4SF which has been designed to report data for multiple fisheries simultaneously.
 
 # Data content
 
