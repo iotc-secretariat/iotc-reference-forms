@@ -25,15 +25,15 @@ Following Article XI of the [Agreement for the establishment of the Indian Ocean
 
 #### Legacy Data Reporting Forms
 
-The current data reporting forms, referred to as 'legacy,' are available as macro-enabled Microsoft Excel™ spreadsheets. These forms incorporate entry controls and necessary code lists for specific data fields. Guidance on completing these forms is provided in the legacy version of the IOTC Data Reporting Guidelines, accessible [here](./legacy/IOTC_Data_Reporting_Guidelines_2014.pdf).
+The legacy data reporting forms are available as macro-enabled Microsoft Excel™ spreadsheets. These forms incorporate entry controls and necessary code lists for specific data fields. Guidance on completing these forms is provided in the legacy version of the IOTC Data Reporting Guidelines, accessible [here](../guidelines/legacy/IOTC_Data_Reporting_Guidelines_2014.pdf).
 
-You can download all the legacy form templates [here](../forms/legacy/IOTC-forms-current.zip). This ZIP archive includes the legacy forms used for the IOTC core fisheries datasets, as well as forms [1IN](#1IN), [3AA](#3AA), and [3DA](#3DA) These forms are tailored to address specific data requirements related to interactions with Endangered, Threatened, and Protected species (1IN), AFAD-related activities (3AA), and DFOB-related activities (3DA).
+You can download all the legacy form templates [here](../forms/legacy/IOTC-forms-legacy.zip). This ZIP archive includes the legacy forms used for the IOTC core fisheries datasets, as well as forms [1IN](#1IN), [3AA](#3AA), and [3DA](#3DA) These forms are tailored to address specific data requirements related to interactions with Endangered, Threatened, and Protected species (1IN), AFAD-related activities (3AA), and DFOB-related activities (3DA). The use of these forms is now obsolete, and all CPCs are required to use the new data reporting forms.
 
 #### New Data Reporting Forms
 
-New optional data reporting forms are available as plain Microsoft Excel™ spreadsheets to streamline the entry and submission of all necessary information. This format enables reporting officers to input data either manually or programmatically using automated scripts. CPCs are encouraged to familiarise with and test these new forms for reporting data for the statistical year 2023.
+At its 26^th^ session, the IOTC Scientific Committee endorsed the adoption of new reporting forms to streamline data flow and improve the quality of dataset submissions to the Secretariat. The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts.
 
-You can download all new form templates for submitting the data for the statistical year 2023 [here](../forms/IOTC-forms-new.zip). We welcome your feedback on these new forms and encourage you to direct any questions to the IOTC Secretariat via email at IOTC-Statistics@fao.org.
+You can download all new form templates for submitting the data for the statistical year 2024 [here](../forms/IOTC-forms-new.zip). We welcome your feedback on these new forms and encourage you to direct any questions to the IOTC Secretariat via email at IOTC-Statistics@fao.org.
 
 # Form 1DR {#1DR}
 
