@@ -70,7 +70,8 @@ Single positions (latitude and longitude in decimal degrees) by buoy and day for
 
 # Reporting deadlines
 
-- **Surface fisheries**: To be submitted with a time delay of at least 60 days, but no longer than 90 days
+- **Surface fisheries**: To be submitted with a 30–60 day delay (Para. 23 of Res. [24/02](https://www.iotc.org/cmm/resolution-2402-management-drifting-fish-aggregating-devices-fads-iotc-area-competence))
+or a 60-90 delay (Para. 24 of Res. [19/02](https://iotc.org/cmm/resolution-1902-procedures-fish-aggregating-devices-fads-management-plan), which remains binding on Oman)
 
 # Reference code lists
 
