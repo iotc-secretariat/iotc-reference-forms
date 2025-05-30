@@ -21,28 +21,28 @@ output:
 
 # Overview
 
-Following Article XI of the [Agreement for the establishment of the Indian Ocean Tuna Commission](https://iotc.org/sites/default/files/documents/2012/5/25/IOTC%20Agreement.pdf) (IOTC), [Contracting Parties and Cooperating Non-Contracting Parties](https://iotc.org/about-iotc/structure-commission) (CPCs) are required to collect and report fisheries data in accordance with the [Conservation and Management Measures](https://iotc.org/cmms) (CMMs). To manage the data received from CPCs and other parties fishing in the IOTC area of competence for IOTC-managed species, the Secretariat has developed specific reporting forms for each dataset. The use of these forms for submitting fisheries statistics to the IOTC is highly **recommended**, as they include all mandatory metadata, data fields, and information on IOTC formats and standard code lists available from the [IOTC Reference Data Catalogue](../).
+Following Article XI of the [Agreement for the establishment of the Indian Ocean Tuna Commission](https://iotc.org/sites/default/files/documents/2012/5/25/IOTC%20Agreement.pdf) (IOTC), [Contracting Parties and Cooperating Non-Contracting Parties](https://iotc.org/about-iotc/structure-commission) (CPCs) are required to collect and report fisheries data in accordance with the [Conservation and Management Measures](https://iotc.org/cmms) (CMMs). To manage the data received from CPCs and other parties fishing in the IOTC area of competence for IOTC-managed species, the Secretariat has developed specific reporting forms for each dataset. The forms include all mandatory metadata, data fields, and information on IOTC formats and standard code lists available from the [IOTC Reference Data Catalogue](../).
 
-#### Legacy Data Reporting Forms
+<!-- #### Legacy Data Reporting Forms -->
 
-The legacy data reporting forms are available as macro-enabled Microsoft Excel™ spreadsheets. These forms incorporate entry controls and necessary code lists for specific data fields. Guidance on completing these forms is provided in the legacy version of the IOTC Data Reporting Guidelines, accessible [here](../guidelines/legacy/IOTC_Data_Reporting_Guidelines_2014.pdf).
+<!-- The legacy data reporting forms are available as macro-enabled Microsoft Excel™ spreadsheets. These forms incorporate entry controls and necessary code lists for specific data fields. Guidance on completing these forms is provided in the legacy version of the IOTC Data Reporting Guidelines, accessible [here](../guidelines/legacy/IOTC_Data_Reporting_Guidelines_2014.pdf). -->
 
-You can download all the legacy form templates [here](../forms/legacy/IOTC-forms-legacy.zip). This ZIP archive includes the legacy forms used for the IOTC core fisheries datasets, as well as forms [1IN](#1IN), [3AA](#3AA), and [3DA](#3DA) These forms are tailored to address specific data requirements related to interactions with Endangered, Threatened, and Protected species (1IN), AFAD-related activities (3AA), and DFOB-related activities (3DA). The use of these forms is now obsolete, and all CPCs are required to use the new data reporting forms.
+<!-- You can download all the legacy form templates [here](../forms/legacy/IOTC-forms-legacy.zip). This ZIP archive includes the legacy forms used for the IOTC core fisheries datasets, as well as forms [1IN](#1IN), [3AA](#3AA), and [3DA](#3DA) These forms are tailored to address specific data requirements related to interactions with Endangered, Threatened, and Protected species (1IN), AFAD-related activities (3AA), and DFOB-related activities (3DA). The use of these forms is now obsolete, and all CPCs are required to use the new data reporting forms. -->
 
-#### New Data Reporting Forms
+At its 26^th^ session, the IOTC Scientific Committee endorsed the adoption of new reporting forms to streamline data flow and improve the quality of dataset submissions to the Secretariat. The use of these forms for submitting fisheries statistics to the IOTC became **mandatory** as of 2025.
 
-At its 26^th^ session, the IOTC Scientific Committee endorsed the adoption of new reporting forms to streamline data flow and improve the quality of dataset submissions to the Secretariat. The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts.
+The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts.
 
-You can download all new form templates for submitting the data for the statistical year 2024 [here](../forms/IOTC-forms-new.zip). We welcome your feedback on these new forms and encourage you to direct any questions to the IOTC Secretariat via email at IOTC-Statistics@fao.org.
+You can download all form templates for submitting the data for the statistical year 2024 [here](../forms/IOTC-forms.zip). We welcome your feedback on these new forms and encourage you to direct any questions to the IOTC Secretariat via email at [IOTC-Statistics@fao.org](mailto:IOTC-Statistics@fao.org).
 
 # Form 1DR {#1DR}
 
 For the submission of data on [_species presence in the catch_](https://data.iotc.org/reference/latest/guidelines/#Species_presence_in_the_catch).
 
-+ [Legacy form template](./legacy/Form-1DR-legacy.xlsx)
-+ [Legacy form description](./legacy/Form-1DR-legacy.html)
-+ [New form template](./Form-1DR.xlsx)
-+ [New form description](./Form-1DR.html)
+<!-- + [Legacy form template](./legacy/Form-1DR-legacy.xlsx) -->
+<!-- + [Legacy form description](./legacy/Form-1DR-legacy.html) -->
++ [Form template](./Form-1DR.xlsx)
++ [Form description](./Form-1DR.html)
 
 # Form 1IN {#1IN}
 
@@ -55,62 +55,62 @@ For the submission of data on [_interactions of longline and surface fisheries w
 
 For the submission of data on the total [_amount of fish caught and retained_](https://data.iotc.org/reference/latest/guidelines/#Amount_of_fish_caught_and_retained).
 
-+ [Legacy form template](./legacy/Form-1RC-legacy.xlsm)
-+ [Legacy form description](./legacy/Form-1RC-legacy.html)
-+ [New form template](./Form-1RC.xlsx)
-+ [New form description](./Form-1RC.html)
+<!-- + [Legacy form template](./legacy/Form-1RC-legacy.xlsm) -->
+<!-- + [Legacy form description](./legacy/Form-1RC-legacy.html) -->
++ [Form template](./Form-1RC.xlsx)
++ [Form description](./Form-1RC.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1RC/)
 
 # Form 1DI {#1DI}
 
 For the submission of data on the [_amount of discards_](https://data.iotc.org/reference/latest/guidelines/#Amount_of_discards).
 
-+ [Legacy form template](./legacy/Form-1DI-legacy.xlsm)
-+ [Legacy form description](./legacy/Form-1DI-legacy.html)
-+ [New form template](./Form-1DI.xlsx)
-+ [New form description](./Form-1DI.html)
+<!-- + [Legacy form template](./legacy/Form-1DI-legacy.xlsm) -->
+<!-- + [Legacy form description](./legacy/Form-1DI-legacy.html) -->
++ [Form template](./Form-1DI.xlsx)
++ [Form description](./Form-1DI.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/1DI/)
 
 # Form 3CE {#3CE}
 
 For the submission of data on [_geo-referenced catches and efforts_](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_catches_and_efforts).
 
-The legacy forms are split for:
+<!-- The legacy forms are split for: -->
 
-+ Coastal fisheries: [Legacy form template](./legacy/Form-3AR-legacy.xlsm)
-+ Longline and surface fisheries: [Legacy form template](./legacy/Form-3CE-legacy.xlsm)
-+ Support vessels: [Legacy form template](./legacy/Form-3SU-legacy.xlsm)
+<!-- + Coastal fisheries: [Legacy form template](./legacy/Form-3AR-legacy.xlsm) -->
+<!-- + Longline and surface fisheries: [Legacy form template](./legacy/Form-3CE-legacy.xlsm) -->
+<!-- + Support vessels: [Legacy form template](./legacy/Form-3SU-legacy.xlsm) -->
 
-+ [Legacy form description](./legacy/Form-3CE-legacy.html)
+<!-- + [Legacy form description](./legacy/Form-3CE-legacy.html) -->
 
-The new unified form allows reporting data for multiple fisheries simultaneously:
+The unified form allows reporting data for multiple fisheries simultaneously:
 
-+ [New form template](./Form-3CE.xlsx)
-+ [New form description](./Form-3CE.html)
-<!-- + [Interactive form validator](https://data.iotc.org/validators/ui/3CE/) -->
++ [Form template](./Form-3CE.xlsx)
++ [Form description](./Form-3CE.html)
++ [Interactive form validator](https://data.iotc.org/validators/ui/3CE/)
 
 A version of the form allows reporting **updated** data for a single fishery:
 
-+ [New form template](./Form-3CE-update.xlsx)
-+ [New form description]( ./Form-3CE-update.html)
++ [Form template](./Form-3CE-update.xlsx)
++ [Form description]( ./Form-3CE-update.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/update/3CE/)
 
 # Form 4SF {#4SF}
 
 For the submission of data on [_geo-referenced size frequencies_](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_size_frequencies).
 
-The new unified form allows reporting data for multiple fisheries and species simultaneously:
+The unified form allows reporting data for multiple fisheries and species simultaneously:
 
-+ [Legacy form template](./legacy/Form-4SF-legacy.xlsm)
-+ [Legacy form description](./legacy/Form-4SF-legacy.html)
-+ [New form template](./Form-4SF.xlsx)
-+ [New form description](./Form-4SF.html)
+<!-- + [Legacy form template](./legacy/Form-4SF-legacy.xlsm) -->
+<!-- + [Legacy form description](./legacy/Form-4SF-legacy.html) -->
++ [Form template](./Form-4SF.xlsx)
++ [Form description](./Form-4SF.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/4SF/)
 
 A version of the form allows reporting **updated** data for a single fishery and species:
 
-+ [New form template](./Form-4SF-update.xlsx)
-+ [New form description](./Form-4SF-update.html)
++ [Form template](./Form-4SF-update.xlsx)
++ [Form description](./Form-4SF-update.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/update/4SF/)
 
 # Form 3AA {#3AA}
@@ -131,7 +131,7 @@ A version of the form allows reporting **updated** data for a single fishery:
 
 For the submission of data on [_interactions related to drifting floating objects_](https://data.iotc.org/reference/latest/guidelines/#DFOB-related_activities).
 
-The new unified form addresses the shortcomings of the previous 3FA form and allows reporting data for multiple vessels simultaneously:
+The unified form addresses the shortcomings of the previous 3FA form and allows reporting data for multiple vessels simultaneously:
 
 + [Form template](./Form-3DA.xlsx)
 + [Form description](./Form-3DA.html)
@@ -145,19 +145,19 @@ A version of the form allows reporting **updated** data for a single vessel:
 
 For the submission of data on [_daily buoy positions_](https://data.iotc.org/reference/latest/guidelines/#Daily_buoy_positions).
 
-+ [Legacy form template](./legacy/Form-3BU-legacy.xlsx)
-+ [New form template](./Form-3BU.xlsx)
-+ [New form description](./Form-3BU.html)
+<!-- + [Legacy form template](./legacy/Form-3BU-legacy.xlsx) -->
++ [Form template](./Form-3BU.xlsx)
++ [Form description](./Form-3BU.html)
 + [Interactive form validator](https://data.iotc.org/validators/ui/3BU/)
 
 # Form 2FC {#2FC}
 
 For the submission of data on [_fishing craft statistics_](https://data.iotc.org/reference/latest/guidelines/#Fishing_craft_statistics).
 
-+ [Legacy form template](./legacy/Form-2FC-legacy.xlsm)
-+ [Legacy form description](./legacy/Form-2FC-legacy.html)
-+ [New form template](./Form-2FC.xlsx)
-+ [New form description](./Form-2FC.html)
+<!-- + [Legacy form template](./legacy/Form-2FC-legacy.xlsm) -->
+<!-- + [Legacy form description](./legacy/Form-2FC-legacy.html) -->
++ [Form template](./Form-2FC.xlsx)
++ [Form description](./Form-2FC.html)
 
 # Form 7PR {#7PR}
 

@@ -27,7 +27,7 @@ Click [here](./Form-1DR.xlsx) to download a blank version of Form 1DR, or [retur
 
 # Data Content
 
-For the combination of each taxon, gear group, and fishery category listed in the form, the cell must be filled with either a value of one (1) in case of positive catch or a value of zero (0) in case of absence of catch, i.e., no landing nor discard.
+For the combination of each taxon, gear group, and fishery category listed in the form, the cell must be completed with a value of one (1) in the case of a positive catch, or zero (0) if no catch occurred -- that is, there were neither landings nor discards.
 
 ## General Information
 
