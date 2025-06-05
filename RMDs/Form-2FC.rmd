@@ -21,7 +21,7 @@ output:
 
 # Description
 
-This form provides for the reporting of the total annual numbers of fishing vessels involved in operation by fishery, boat type, mechanisation type, onboard fish preservation type, and size class.
+This form provides for the reporting of the total annual numbers of fishing vessels involved in operation by type of fishing vessel, configuration, mechanisation, onboard fish preservation, and size class.
 
 For each stratum, the data coverage -- i.e., the percentage (%) of vessels or fishing activities sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
@@ -60,10 +60,10 @@ Number of fishing vessel by size category, along with information on the value (
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Boat type | M | Fishing boat classification based on shape and purpose| **Code** from [Boat types](#boatTypes)      |
-| Mechanisation type | M | Type of boat mechanization| **Code** from [Mechanisation types](#mechanizationTypes)          |
-| Boat class types | M |  Vessel size categories  | **Code** from [Boat class types](#boatClassTypes) |
-| Fish preservation method | M | Type of preservation methods being used for target species onboard boats | **Code** from [Fish preservation methods](#fishPreservationMethods) |
+| Configuration | M | Classification of the fishing vessels based on design and construction type | **Code** from [Confuguration types](#configurationTypes)      |
+| Mechanisation type | M | Type of vessel mechanization| **Code** from [Mechanisation types](#mechanisationTypes)          |
+| Vessel size class types | M | Categories of vessel size class | **Code** from [Vessel size class types](#vesselSizeClassTypes) |
+| Fish preservation method | M | Type of preservation methods being used for target species onboard vessels | **Code** from [Fish preservation methods](#fishPreservationMethods) |
 | Fish storage | M | Type of structures present on-board and used by the vessel to store the catch | **Code** from [Fish storage method](#fishStorageTypes) |
 
 # Reporting metadata
@@ -97,67 +97,61 @@ out_dt(ENTITIES, "ENTITIES")
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## IOTC main areas {#IOTCareasMain}
+## Types of Vessel {#vesseltypes}
 
 ```{r collapse = TRUE}
-out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
+out_dt(VESSEL_TYPES, "VESSEL_TYPES")
 ```
 
-## Fisheries {#fisheries}
+## Types of Configuration {#configurationTypes}
 
 ```{r collapse = TRUE}
-out_dt(FISHERIES, "FISHERIES")
+out_dt(CONFIGURATION_TYPES, "CONFIGURATION_TYPES")
 ```
 
-## Types of boats {#boatTypes}
+## Types of Mechanisation {#mechanisationTypes}
 
 ```{r collapse = TRUE}
-out_dt(BOAT_TYPES, "BOAT_TYPES")
+out_dt(MECHANISATION_TYPES, "MECHANISATION_TYPES")
 ```
 
-## Types of mechanization {#mechanizationTypes}
-
-```{r collapse = TRUE}
-out_dt(MECHANIZATION_TYPES, "MECHANIZATION_TYPES")
-```
-
-## Methods of fish preservation {#fishPreservationMethods}
+## Methods of Fish Preservation {#fishPreservationMethods}
 
 ```{r collapse = TRUE}
 out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```
 
-## Types of fish storage {#fishStorageTypes}
+## Types of Fish Storage {#fishStorageTypes}
 
 ```{r collapse = TRUE}
 out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 ```
 
-## Types of boat class {#boatClassTypes}
+## Types of Vessel Size Class {#vesselSizeClassTypes}
 
 ```{r collapse = TRUE}
-out_dt(BOAT_CLASS_TYPES, "BOAT_CLASS_TYPES")
+out_dt(VESSEL_SIZE_CLASS_TYPES, "VESSEL_SIZE_CLASS_TYPES")
 ```
 
-## Types of data {#types}
+## Types of Data {#types}
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-## Fishing crafts data sources {#sourcesFC}
+## Fishing Craft Data Sources {#sourcesFC}
 
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_FC, "DATA_SOURCES_FC")
 ```
 
-## Fishing crafts data processings {#dataProcessingsFC}
+## Fishing Craft Data Processings {#dataProcessingsFC}
 
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_FC, "DATA_PROCESSINGS_FC")
 ```
 
-## Types of coverage {#coverageTypes}
+## Types of Coverage {#coverageTypes}
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
