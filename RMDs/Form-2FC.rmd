@@ -61,7 +61,7 @@ Number of fishing vessel by size category, along with information on the value (
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Configuration | M | Classification of the fishing vessels based on design and construction type | **Code** from [Confuguration types](#configurationTypes)      |
-| Mechanisation type | M | Type of vessel mechanization| **Code** from [Mechanisation types](#mechanisationTypes)          |
+| Mechanisation type | M | Type of vessel mechanisation| **Code** from [Mechanisation types](#mechanisationTypes)          |
 | Vessel size class types | M | Categories of vessel size class | **Code** from [Vessel size class types](#vesselSizeClassTypes) |
 | Fish preservation method | M | Type of preservation methods being used for target species onboard vessels | **Code** from [Fish preservation methods](#fishPreservationMethods) |
 | Fish storage | M | Type of structures present on-board and used by the vessel to store the catch | **Code** from [Fish storage method](#fishStorageTypes) |
@@ -103,10 +103,10 @@ out_dt(COUNTRIES, "COUNTRIES")
 out_dt(VESSEL_TYPES, "VESSEL_TYPES")
 ```
 
-## Types of Configuration {#configurationTypes}
+## Types of Configuration {#vesselArchitectures}
 
 ```{r collapse = TRUE}
-out_dt(CONFIGURATION_TYPES, "CONFIGURATION_TYPES")
+out_dt(VESSEL_ARCHITECTURES, "VESSEL_ARCHITECTURES")
 ```
 
 ## Types of Mechanisation {#mechanisationTypes}
@@ -130,7 +130,7 @@ out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 ## Types of Vessel Size Class {#vesselSizeClassTypes}
 
 ```{r collapse = TRUE}
-out_dt(VESSEL_SIZE_CLASS_TYPES, "VESSEL_SIZE_CLASS_TYPES")
+out_dt(VESSEL_SIZE_TYPES, "VESSEL_SIZE_TYPES")
 ```
 
 ## Types of Data {#types}

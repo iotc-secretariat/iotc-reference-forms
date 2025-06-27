@@ -95,9 +95,9 @@ DATA_ESTIMATIONS = read_codelist(domain = "data", codelist = "DATA_ESTIMATIONS")
 
 VESSEL_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_TYPES")
 
-CONFIGURATION_TYPES                = read_codelist(domain = "fisheries", schema = "fishery", codelist = "BOAT_TYPES")
+VESSEL_ARCHITECTURES                = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_ARCHITECTURES")
 
-VESSEL_SIZE_CLASS_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "BOAT_CLASS_TYPES")
+VESSEL_SIZE_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_SIZE_TYPES")
 
 MECHANISATION_TYPES       = read_codelist(domain = "fisheries", schema = "fishery", codelist = "MECHANIZATION_TYPES")
 

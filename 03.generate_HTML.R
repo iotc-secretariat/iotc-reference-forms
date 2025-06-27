@@ -127,37 +127,37 @@ render("./RMDs/Form-2FC.Rmd",
 
 # LEGACY FORMS ####
 
-render("./RMDs/legacy/Form-1DI.Rmd", 
-       output_format = "html_document2",
-       output_file = "Form-1DI-legacy.html", 
-       output_dir = "./out/HTML/legacy/")
-
-render("./RMDs/legacy/Form-1DR.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-1DR-legacy.html", 
-       output_dir = "./out/HTML/legacy/")
-
-render("./RMDs/legacy/Form-1RC.Rmd", 
-       output_format = "html_document2",
-       output_file = "Form-1RC-legacy.html", 
-       output_dir = "./out/HTML/legacy/")
-
-render("./RMDs/legacy/Form-3CE.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-3CE-legacy.html", 
-       output_dir = "./out/HTML/legacy/")
-
-render("./RMDs/legacy/Form-2FC.Rmd", 
-       output_format = "html_document2",
-       output_file = "Form-2FC-legacy.html", 
-       output_dir = "./out/HTML/legacy/")
-
-render("./RMDs/legacy/Form-4SF.Rmd", 
-       output_format = "html_document2",
-       output_file = "Form-4SF-legacy.html", 
-       output_dir = "./out/HTML/legacy/")
-
-render("./RMDs/legacy/Form-7PR.rmd", 
-       output_format = "html_document2",
-       output_file = "Form-7PR-legacy.html", 
-       output_dir = "./out/HTML/legacy/")
+# render("./RMDs/legacy/Form-1DI.Rmd", 
+#        output_format = "html_document2",
+#        output_file = "Form-1DI-legacy.html", 
+#        output_dir = "./out/HTML/legacy/")
+# 
+# render("./RMDs/legacy/Form-1DR.Rmd", 
+#        output_format = "html_document2",
+#        output_file ="Form-1DR-legacy.html", 
+#        output_dir = "./out/HTML/legacy/")
+# 
+# render("./RMDs/legacy/Form-1RC.Rmd", 
+#        output_format = "html_document2",
+#        output_file = "Form-1RC-legacy.html", 
+#        output_dir = "./out/HTML/legacy/")
+# 
+# render("./RMDs/legacy/Form-3CE.Rmd", 
+#        output_format = "html_document2",
+#        output_file ="Form-3CE-legacy.html", 
+#        output_dir = "./out/HTML/legacy/")
+# 
+# render("./RMDs/legacy/Form-2FC.Rmd", 
+#        output_format = "html_document2",
+#        output_file = "Form-2FC-legacy.html", 
+#        output_dir = "./out/HTML/legacy/")
+# 
+# render("./RMDs/legacy/Form-4SF.Rmd", 
+#        output_format = "html_document2",
+#        output_file = "Form-4SF-legacy.html", 
+#        output_dir = "./out/HTML/legacy/")
+# 
+# render("./RMDs/legacy/Form-7PR.rmd", 
+#        output_format = "html_document2",
+#        output_file = "Form-7PR-legacy.html", 
+#        output_dir = "./out/HTML/legacy/")
