@@ -45,9 +45,9 @@ Number of fishing vessel by size category, along with information on the value (
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Vessel type | M | | **Code** from [](#vesselTypes) |
+| Vessel type | M | Type of fishing vessel according to primary gear or operational function | **Code** from [Vessel types](#vesselTypes) |
 
-## Original data
+## Original Data
 
 | Element        | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -60,7 +60,7 @@ Number of fishing vessel by size category, along with information on the value (
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Architecture | M | Classification of the fishing vessels based on structural design and construction type | **Code** from [Vessel architectures](#vesselArchitectures) |
+| Architecture | M | Type fishing vessel based on structural design and construction type | **Code** from [Vessel architectures](#vesselArchitectures) |
 | Mechanisation type | M | Type of vessel mechanisation| **Code** from [Mechanisation types](#mechanisationTypes)          |
 | Vessel size class types | M | Categories of vessel size class | **Code** from [Vessel size class types](#vesselSizeClassTypes) |
 | Fish preservation method | M | Type of preservation methods being used for target species onboard vessels | **Code** from [Fish preservation methods](#fishPreservationMethods) |
