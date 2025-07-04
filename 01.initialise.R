@@ -21,7 +21,7 @@ version_number = function(codelist_name, codelist_schema = NA) {
 
 details = function(codelist_name, codelist_schema = NA) {
   return(
-    CODELISTS_VERSIONS[(is.na(codelist_schema) | CL_SCHEMA == codelist_schema) & CL_NAME == codelist_name]
+    unique(CODELISTS_VERSIONS[(is.na(codelist_schema) | CL_SCHEMA == codelist_schema) & CL_NAME == codelist_name])
   )
 }
 
@@ -51,7 +51,7 @@ read_codelist = function(base_url = "https://data.iotc.org/reference/latest/doma
 
 # Reads all required codelists from the (remote) repository on https://data.iotc.org/reference/latest/domain/<domain>/codelists/<codelist>_<codelist_version>
 
-# ADMININSTRATIVE AND GEOSPATIAL CODE LISTS ####
+# ADMINISTRATIVE AND GEOSPATIAL CODE LISTS ####
 
 ENTITIES        = read_codelist(domain = "admin", codelist = "ENTITIES")
 
