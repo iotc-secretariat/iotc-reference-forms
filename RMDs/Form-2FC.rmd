@@ -27,13 +27,13 @@ For each stratum, the data coverage -- i.e., the percentage (%) of vessels or fi
 
 Click [here](./Form-2FC.xlsx) to download a blank version of Form 2FC, or [return](./index.html) to the list of IOTC statistical data reporting forms.
 
-# Data content
+# Data Content
 
 Number of fishing vessel by size category, along with information on the value (%) and type of sampling coverage used for the estimations by year, fleet, fishery, and vessel characteristics.
 
 # Stratification
 
-## General information
+## General Information
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -41,11 +41,11 @@ Number of fishing vessel by size category, along with information on the value (
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
 | Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code_iso3** from [Countries](#countries) |
 
-## Main data elements
+## Main Data Elements
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Fisheries | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries) |
+| Vessel type | M | | **Code** from [](#vesselTypes) |
 
 ## Original data
 
@@ -56,17 +56,17 @@ Number of fishing vessel by size category, along with information on the value (
 | Original data processing | M | Processing applied to the data | **Code** from [Fishing craft data processings](#dataProcessingsFC) |
 | Source coverage type     | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) |
 
-## Vessel characteristics
+## Vessel Characteristics
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Configuration | M | Classification of the fishing vessels based on design and construction type | **Code** from [Confuguration types](#configurationTypes)      |
+| Architecture | M | Classification of the fishing vessels based on structural design and construction type | **Code** from [Vessel architectures](#vesselArchitectures) |
 | Mechanisation type | M | Type of vessel mechanisation| **Code** from [Mechanisation types](#mechanisationTypes)          |
 | Vessel size class types | M | Categories of vessel size class | **Code** from [Vessel size class types](#vesselSizeClassTypes) |
 | Fish preservation method | M | Type of preservation methods being used for target species onboard vessels | **Code** from [Fish preservation methods](#fishPreservationMethods) |
 | Fish storage | M | Type of structures present on-board and used by the vessel to store the catch | **Code** from [Fish storage method](#fishStorageTypes) |
 
-# Reporting metadata
+# Reporting Metadata
 
 | Element | Requirement | Description | Format | Example |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
@@ -77,13 +77,13 @@ Number of fishing vessel by size category, along with information on the value (
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-# Reporting deadlines
+# Reporting Deadlines
 
 + **Longline fisheries**: 30 June (preliminary), 30 December (final)
 + **Surface fisheries**: 30 June (final)
 + **Coastal fisheries**: 30 June (final)
 
-# Reference code lists
+# Reference Code Lists
 
 ## Entities {#entities}
 
@@ -97,13 +97,13 @@ out_dt(ENTITIES, "ENTITIES")
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## Types of Vessel {#vesseltypes}
+## Types of Vessel {#vesselTypes}
 
 ```{r collapse = TRUE}
 out_dt(VESSEL_TYPES, "VESSEL_TYPES")
 ```
 
-## Types of Configuration {#vesselArchitectures}
+## Types of Architecture {#vesselArchitectures}
 
 ```{r collapse = TRUE}
 out_dt(VESSEL_ARCHITECTURES, "VESSEL_ARCHITECTURES")
