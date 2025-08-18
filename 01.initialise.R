@@ -1,28 +1,39 @@
-BASE_VERSION = "1.0"
+# C_MASTER =
+#   DBI::dbConnect(
+#     drv      = odbc::odbc(),
+#     Driver   = "SQL Server",
+#     Server   = Sys.getenv("DEFAULT_IOTC_LIBS_DB_SERVER"),
+#     Database = "IOTC_master",
+#     UID      = Sys.getenv("DEFAULT_IOTC_LIBS_DB_USER"),
+#     PWD      = Sys.getenv("DEFAULT_IOTC_LIBS_DB_PASSWORD"),
+#     encoding = "CP1252",
+#     clientcharset = "UTF-8"
+#   )
 
-C_MASTER =
-  DBI::dbConnect(
-    drv      = odbc::odbc(),
-    Driver   = "SQL Server",
-    Server   = Sys.getenv("DEFAULT_IOTC_LIBS_DB_SERVER"),
-    Database = "IOTC_master",
-    UID      = Sys.getenv("DEFAULT_IOTC_LIBS_DB_USER"),
-    PWD      = Sys.getenv("DEFAULT_IOTC_LIBS_DB_PASSWORD"),
-    encoding = "CP1252",
-    clientcharset = "UTF-8"
-  )
+C_REFERENCE_DATA = 
+  DBI::dbConnect(drv = RPostgres::Postgres(),
+                 host = '192.168.98.140',
+                 dbname = 'IOTC_ReferenceData_2025_07_23',
+                 port = 5432,
+                 user = 'ros-admin',
+                 password = 'ros2025-poWer2$')
 
-C_REFERENCE_DATA =
-  DBI::dbConnect(
-    drv      = odbc::odbc(),
-    Driver   = "SQL Server",
-    Server   = Sys.getenv("DEFAULT_IOTC_LIBS_DB_SERVER"),
-    Database = "IOTC_master",
-    UID      = Sys.getenv("DEFAULT_IOTC_LIBS_DB_USER"),
-    PWD      = Sys.getenv("DEFAULT_IOTC_LIBS_DB_PASSWORD"),
-    encoding = "CP1252",
-    clientcharset = "UTF-8"
+
+# Version of the Published Code List
+DOI_PERMANENT = "10.5281/zenodo.15743874"
+DOI_VERSION = zen4R::get_versions(DOI_PERMANENT)$version
+
+# Temp version still based on table refs_meta.CODELISTS_VERSIONS
+# Need to create a table_history and a row_history
+# BASE_VERSION = "1.0"
+#BASE_VERSION = sprintf("%.1f", DOI_VERSION)
+BASE_VERSION = DOI_VERSION
+
+details = function(codelist_name, codelist_schema = NA) {
+  return(
+    unique(CODELISTS_VERSIONS[(is.na(codelist_schema) | CL_SCHEMA == codelist_schema) & CL_NAME == codelist_name])
   )
+}
 
 version_number = function(codelist_name, codelist_schema = NA) {
   VERSION = details(codelist_name, codelist_schema)$VERSION[1]
@@ -31,13 +42,15 @@ version_number = function(codelist_name, codelist_schema = NA) {
   else return(NA)
 }
 
-details = function(codelist_name, codelist_schema = NA) {
+last_update = function(codelist_name, codelist_schema = NA) {
   return(
-    unique(CODELISTS_VERSIONS[(is.na(codelist_schema) | CL_SCHEMA == codelist_schema) & CL_NAME == codelist_name])
+    details(codelist_name, codelist_schema)$LAST_UPDATE[1]
   )
 }
 
-CODELISTS_VERSIONS = query(C_MASTER, "SELECT * FROM [refs_meta].CODELISTS_VERSIONS")
+CODELISTS_VERSIONS = query(C_REFERENCE_DATA, "SELECT * FROM refs_meta.CODELISTS_VERSIONS")
+
+names(CODELISTS_VERSIONS) = toupper(names(CODELISTS_VERSIONS))
 
 V_MAPPINGS = fread("./REFERENCE_CODELISTS_VIEW_MAPPINGS.csv")
 V_MAPPINGS = merge(V_MAPPINGS, CODELISTS_VERSIONS, by = c("CL_SCHEMA", "CL_NAME"), all.x = TRUE)[, .(CL_SCHEMA, CL_NAME = REFERENCE_NAME, VERSION, LAST_UPDATE)]
