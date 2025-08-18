@@ -34,16 +34,16 @@ For the combination of each taxon, gear group, and fishery category listed in th
 | Element | Requirement | Description | Input value  |
 | :-------- | :-----: | :----------------------- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer (e.g., 1996) |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#Entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code_iso3** from [Countries](#Countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code_iso3** from [Countries](#countries) |
 
 ## Main Data Elements
 
-| Element | Description | Code list |
+| Element | Description | Input value |
 | :-------- | :-------------------------- | :-------: |
-| Species | Fish species caught, whether retained or discarded | [Species](#1DRspecies) |
-| Gear groups | Classification of different types of fishing gear that share similar characteristics or functions | [Gear groups](#gearGroups) |
-| Fishery categories | One of the three main IOTC fishery categories defined according to the main gear used by the vessel and their recording in the IOTC Record of Authorised Vessels | [Fishery categories](#fisheryCategories)|
+| Species | Fish species caught, whether retained or discarded | **Code** from [Species](#1DRspecies) |
+| Gear groups | Classification of different types of fishing gear that share similar characteristics or functions | **Code** from [Gear groups](#gearGroups) |
+| Fishery categories | One of the three main IOTC fishery categories defined according to the main gear used by the vessel and their recording in the IOTC Record of Authorised Vessels | **Code** from [Fishery categories](#fisheryCategories)|
 
 # Reporting Metadata
 
