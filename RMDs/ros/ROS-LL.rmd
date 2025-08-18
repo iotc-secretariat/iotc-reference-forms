@@ -21,7 +21,7 @@ output:
 
 # Description
 
-REDO WITH LONGLINE DESCRIPTION:  This form provides for the reporting of estimates of retained catches in live weight equivalent (metric tonnes; t) for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
+REPLACE WITH LONGLINE DESCRIPTION:  This form provides for the reporting of estimates of retained catches in live weight equivalent (metric tonnes; t) for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
 REPLACE WITH PROPER FORM LINK     Click [here](./Form-1RC.xlsx) to download a blank version of Form 1RC, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
@@ -38,56 +38,56 @@ Fill out organization information (name, email)
 
 ## General information
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-|Reporting year | M |  | Integer | |
-|Reporting entity | M | 
-|Reporting flag / Chartering state | M | Record the reporting flag or chartering state | |
-| Data source | M | Record the source of data provided (Observer data or EM DATA) |  |
+|Reporting year | M |  | Integer | e.g.  |
+|Reporting entity | M | | | | 
+|Reporting flag / Chartering state | M | The reporting flag or chartering state | | |
+| Data source | M | The source of data provided (Observer data or EM DATA) |  | |
 
 
 
 # (O-INFO) Observer and observed trip information
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-|Observed trip ID |M |Record trip unique identifier. This should begin with the observation or trip start date (YYYY-MM-DD), followed by, IOTC observer number,  IOTC vessel identifier as per RAV (Register of Active Vessels) and vessel main gear code as per IOTC classification.| e.g. 2024-01-23/IOTCFRA001/IOTC012345/PS  | input value ____| 
+|Observed trip ID |M |The trip unique identifier. This should begin with the observation or trip start date (YYYY-MM-DD), followed by, IOTC observer number,  IOTC vessel identifier as per RAV (Register of Active Vessels) and vessel main gear code as per IOTC classification.|  | e.g. 2024-01-23/IOTCFRA001/IOTC012345/PS | 
 
 ## Observer Identification
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| IOTC ID | M | Alphanumeric registration number allocated by the IOTC Secretariat  | e.g. IOTC_0976 | input value ____| 
-| Full name | M | Record the name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer |Free entry. Plain text | input value ____|
+| IOTC ID | M | Alphanumeric registration number allocated by the IOTC Secretariat  |  | e.g. IOTC_0976| 
+| Full name | M | The name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer |Free entry. Plain text | e.g. John Doe|
 
 ## Observer trip details
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Embarkation |O | Record the starting port. If the first observation is available after the departure form the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure) , record “at sea”. | | | 
+| Embarkation |O | The starting port. If the first observation is available after the departure form the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure) , record “at sea”. | --- | --- | 
 | -> In port  |  |   |  |  |
-| ---> country code | O | Record the country or EEZ of the observation starting location  | Three-letter (alpha-3) code | input value ____|
-| ---> port code | O | Record the port of the observation starting location  |Five-letter code (e.g.SC  POV) | input value ____|
-| -> at sea | |  | | |
-| ---> latitude | O | Record the latitude of the observation starting location.  |dd°mm,m’ N/S | input value ____|
-| ---> longitude | O | Record the longitude of the observation starting location.|dd°mm,m’ N/S | input value ____|
-| -> data/time UTC | O | Record the date and time of the start of observations  | YYYY-MM-DDThh:mm (ISO 8601)  | input value ____|
-| Disembarkation| O | Record the ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still recorded as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , record “at sea” | | |
-| | -> In port  |  |   |  |  |
-| ---> country code | O | Record the country or EEZ of the observation ending location.  |Three-letter (alpha-3) code | input value ____|
-| ---> port code | O | Record the port of the observation ending location  |Five-letter code (e.g.SC  POV) | input value ____|
-| -> at sea | |  | | |
-| ---> latitude | O | Record the latitude of the observation ending location.  |dd°mm,m’ N/S | input value ____|
-| ---> longitude | O | Record the longitude of the observation ending location.|dd°mm,m’ N/S | input value ____|
-| -> data/time UTC | O | Record the date and time of the end of observations  | YYYY-MM-DDThh:mm (ISO 8601)  | input value ____|
+| ---> country code | O | The country or EEZ of the observation starting location  | (ISO 3166) | **Code_iso3 from ....**|
+| ---> port code | O | The port of the observation starting location  |e.g., SC  POV) | **CODE_ISO from ...** |
+| -> At sea | |  | | |
+| ---> latitude | O | The latitude of the observation starting location.  |dd°mm,m’ N/S | input value ____|
+| ---> longitude | O | The longitude of the observation starting location.|dd°mm,m’ N/S | input value ____|
+| -> data/time UTC | O | The date and time of the start of observations  | YYYY-MM-DDThh:mm (ISO 8601)  | input value ____|
+| Disembarkation| O | The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still recorded as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , record “at sea” | | |
+| -> In port  |  |   |  |  |
+| ---> country code | O | The country or EEZ of the observation ending location  |(ISO 3166) | **Code_iso3 from ....**|
+| ---> port code | O | The port of the observation ending location  |e.g., SC  POV) | **CODE_ISO from ...** |
+| -> At sea | |  | | |
+| ---> latitude | O | The latitude of the observation ending location.  |dd°mm,m’ N/S | input value ____|
+| ---> longitude | O | The longitude of the observation ending location.|dd°mm,m’ N/S | input value ____|
+| -> data/time UTC | O | The date and time of the end of observations  | YYYY-MM-DDThh:mm (ISO 8601)  | input value ____|
 
 ## Observed trip summary
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Number of fishing events | M | | | |
-| -> conducted | M | Record the total number of fishing events/sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities.  |Integer | input value ____|
-| -> observed | M | Record the total number of fishing sets/events monitored by the observer. In the case of EM, only processed events to be included |Integer | input value ____|
+| -> conducted | M | The total number of fishing events/sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities.  |Integer | input value ____|
+| -> observed | M | The total number of fishing sets/events monitored by the observer. In the case of EM, only processed events to be included |Integer | input value ____|
 | Number of days | O |  | | |
 | -> searching | O | Number of hours/days searching during the observation period |Integer | input value ____|
 | -> actively fishing | O | Number of active fishing hours/days during the observation period |Integer | input value ____|
@@ -95,100 +95,99 @@ Fill out organization information (name, email)
 | -> transiting | O | Number of hours transiting during the observation period | Integer | input value ____|
 | -> lost | O | Number of hours/days lost during the observation period | Integer| input value? | 
 | Reasons for lost days | O | ||| 
-| -> reason codes | O | Reason(s) of hours lost | Two digit codes | input? |
+| -> reason codes | O | Reason(s) of hours lost | **Code** from | LINK TO CODE!!|
 
 # (V-INFO) Vessel > General Information
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 
 ## Vessel information
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Identification| M |  |  |  |
-| -> Name | M | Record the vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or EM records | Plain text |  |
-| -> Flag or chartering code | M  |Record the name of country in which vessel is registered. Where chartering occurs, record name of the chartering country  | Three-letter (alpha-3) code of the country registration of the fishing vessels ( (ISO 3166). |  |
-| -> IOTC number  | M  | Vessel IOTC number as per the IOTC Record of Authorized Vessels and crosschecked with the number recorded on vessel certificates. | Free entry, alphanumeric code (e.g IOTC008460)  |  |
-| -> IMO number  | O  | Record the vessel IMO number  | seven-digit number  |  |
-| -> International radio call sign (IRCS)  | O | Record vessel radio call sign if available. This is the number displayed prominently on the vessel’s side or superstructure | Alphanumeric code |  |
+| -> Name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or EM records | Plain text |  |
+| -> Flag or chartering code | M  |The name of country in which vessel is registered. Where chartering occurs, record name of the chartering country  |  | **Code from LINK TO CODE!!**|
+| -> IOTC number  | M  | Vessel IOTC number as per the IOTC Record of Authorized Vessels and crosschecked with the number recorded on vessel certificates. | Free entry, alphanumeric code |e.g., IOTC008460  |
+| -> IMO number  | O  | The vessel IMO number  | seven-digit number  |  |
+| -> International radio call sign (IRCS)  | O | Vessel radio call sign if available. This is the number displayed prominently on the vessel’s side or superstructure | Alphanumeric code |  |
 | Registration  | O  |  |  |  |
-| -> country code | O |Record the code of vessel's country of registry  | Three-letter (alpha-3) code (ISO 3166) |  |
-| -> port code | O | Record the code of vessel's port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship's hull – also include the country. | Five-letter code (e.g.SC  POV) |  |
-| -> reg number | O | Record the number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel. This may be a combination of characters and numbers; record them all (e.g.: CBG303).  | Alphanumeric or numeric code according to CPC standards |  |
-|Liscenced target species  | O | "Record licensed target species (FAO spp. 3-alpha code) as specified in vessel licences or permit conditions.
-Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all. "  | Three/ four letters code from Target species |  |
-| Gear (main fishing gear) | M | Record vessel main fishing gear | Two letters code from  ISSCFG gears |  |
+| -> country code | O |The code of vessel's country of registry  | Three-letter (alpha-3) code (ISO 3166) |  |
+| -> port code | O | The code of vessel's port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship's hull – also include the country. | Five-letter code (e.g.SC  POV) |  |
+| -> reg number | O | The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel. This may be a combination of characters and numbers; record them all (e.g.: CBG303).  | Alphanumeric or numeric code according to CPC standards |  |
+|Licenced target species  | O |Licensed target species (FAO spp. 3-alpha code) as specified in vessel licences or permit conditions.
+Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all. "  |  |**CODE from LINK TO TARGET SPECIES CODE!!**|
+| Gear (main fishing gear) | M | Vessel main fishing gear | Two letters code from  ISSCFG gears |  |
 | Vessel Personnel | M |  |  |  |
-| -> fishing master  | M | Record the fishing master name and nationality in full | Full name: Plain text ; Nationality code: Three-letter (alpha-3) code (ISO 3166) |  |
-| -> skipper/captain | M | Record skipper name and nationality in full | Full name: Plain text ; Nationality code: Three-letter (alpha-3) code (ISO 3166)  |  |
-| -> crew number | O | Record the number of crew. This should be cross checked against the vessel's crew list | Integer |  |
+| -> fishing master  | M | The fishing master name and nationality in full | Full name: Plain text ; Nationality code: Three-letter (alpha-3) code (ISO 3166) |  LINK TO NATIONALITY CODE|
+| -> skipper/captain | M | Skipper name and nationality in full | Full name: Plain text ; Nationality code: Three-letter (alpha-3) code (ISO 3166)  | LINK TO NATIONALITY CODE  |
+| -> crew number | O | The number of crew. This should be cross checked against the vessel's crew list | Integer |  |
 
 # (V-TRIP) Vessel > Trip details
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 
 ## Trip Details
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Vessel departure | O |Record the name and/or geographical coordinates of the port from where the vessel sailed – also include the country.  If the vessel started a new trip at sea following transhipment record ‘at-sea’ plus the geographical coordinates corresponding to the location the trip started | | |
-| -> port | | | | |
-| ---> country code | O | | Three-letter (alpha-3) code (ISO 3166) | |
-| ---> port code | O  | |Five-letter code (e.g.SC  POV) | |
-| ---> latitude  | O  | | dd°mm,m’ N/S | |
-| ---> longitude | O  | | dd°mm,m’ N/S | |
+| Vessel departure | O |The name and/or geographical coordinates of the port from where the vessel sailed – also include the country.  If the vessel started a new trip at sea following transshipment record ‘at-sea’ plus the geographical coordinates corresponding to the location the trip started | | |
+| -> In port | | | | |
+| ---> country code | O |The country or EEZ of the observation starting location. | ISO 3166 | **CODE_ISO3 from ____** |
+| ---> port code | O  | The port of the observation starting location| e.g.SC  POV |**CODE_ from ____** |
+| ---> latitude  | O  |The latitude of the observation starting location. | dd°mm,m’ N/S | |
+| ---> longitude | O  |The longitude of the observation starting location | dd°mm,m’ N/S | |
+| -> date/time UTC |O |   |  (ISO 8601) | YYYY-MM-DDThh:mm |
+| -> At sea | | | | |
+| ---> country code | O |The country or EEZ of the observation starting location. | ISO 3166 | **CODE_ISO3 from ____** |
+| ---> latitude  | O  |The latitude of the observation starting location. | dd°mm,m’ N/S | |
+| ---> longitude | O  |The longitude of the observation starting location | dd°mm,m’ N/S | |
+| -> date/time UTC |O |The date and time the vessel departed from port or from a transshipment location |  YYYY-MM-DDThh:mm (ISO 8601) | |
+| Vessel return | O | The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record ‘at-sea’ plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel |  | |
+| -> In port | | | | |
+| ---> country code | O |The country or EEZ of the observation ending location. |  ISO 3166 | **CODE_ISO3 from ____** |
+| ---> port code | O  |The port of the observation ending location |e.g.SC  POV |**CODE_ from ____** |
+| ---> latitude  | O  |The latitude of the observation ending location. | dd°mm,m’ N/S | |
+| ---> longitude | O  |The longitude of the observation ending location | dd°mm,m’ N/S | |
 | -> date/time UTC |O |  |  YYYY-MM-DDThh:mm (ISO 8601) | |
 | -> at sea | | | | |
-| ---> country code | O | | Three-letter (alpha-3) code (ISO 3166) | |
-| ---> latitude  | O  | | dd°mm,m’ N/S | |
-| ---> longitude | O  | | dd°mm,m’ N/S | |
-| -> date/time UTC |O |  Record the date and time the vessel departed from port or from a transshipment location |  YYYY-MM-DDThh:mm (ISO 8601) | |
-| Vessel return | O | Record the name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record ‘at-sea’ plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel |  | |
-| -> port | | | | |
-| ---> country code | O | | Three-letter (alpha-3) code (ISO 3166) | |
-| ---> port code | O  | |Five-letter code (e.g.SC  POV) | |
-| ---> latitude  | O  | | dd°mm,m’ N/S | |
-| ---> longitude | O  | | dd°mm,m’ N/S | |
-| -> date/time UTC |O |  |  YYYY-MM-DDThh:mm (ISO 8601) | |
-| -> at sea | | | | |
-| ---> country code | O | | Three-letter (alpha-3) code (ISO 3166) | |
-| ---> latitude  | O  | | dd°mm,m’ N/S | |
-| ---> longitude | O  | | dd°mm,m’ N/S | |
-| -> date/time UTC |O |  Record the date and time the fishing vessel finishes its fishing campaign. i.e. returns to port or to a transhipment location for unloading. If the observer disembarks before the vessel returns then record expected date and time of arrival (ETA) as provided by the vessel |  YYYY-MM-DDThh:mm (ISO 8601) | |
-
+| ---> country code | O |The country or EEZ of the observation ending location.|  ISO 3166 | **CODE_ISO3 from ____** |
+| ---> latitude  | O  |The latitude of the observation ending location.| dd°mm,m’ N/S | |
+| ---> longitude | O  |The longitude of the observation ending location | dd°mm,m’ N/S | |
+| -> date/time UTC |O |The date and time the fishing vessel finishes its fishing campaign. i.e. returns to port or to a transshipment location for unloading. If the observer disembarks before the vessel returns then record expected date and time of arrival (ETA) as provided by the vessel |   (ISO 8601) |YYYY-MM-DDThh:mm |
 
 
 
 # (V-ATTRIBUTES) Vessel > Vessel attributes
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 
 ## Vessel Attributes
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Tonnage (TG) | O |The vessel tonnage as specified in vessel registration documents  |Float  |  |
 | Length (M) | O |The vessel overall length (LOA) as specified in vessel registration documents  |Floats  |  |
-| Hull material code | O |Rescord the vessel hull material  |Two letters code  |  |
+| Hull material code | O |The vessel hull material  |Two letters code  |  |
 | Main engines |O  |The make (brand) and power of the main engines  |  |  |
 | -> make |O  |  |Free entry. Plain text  |  |
 | -> power value |O  |  |Float  |  |
 | -> KW/HP/BHP |O  |  |Power units code (KW, HP, or BHP)  |  |
 | Fish storage capacity |O  | The vessel total maximum capacity to store catches. This should include blast freezer(s) capacity. Note: specify units (metric Tons (mT.) or cubic meters (m3)) - from original ROS description form** | Float |  |
 | Fish preservation methods | O | Fish preservation methods: Record the method(s) used by the vessel to preserve the catch (e.g. iced, frozen in brine, deep-frozen) |Method two letter code  |  |
-| Fish storage types |O  | Record the type of structure(s) present on-board used by the vessel to store the catch  |Type two letter code  |  |
-| Autonomy range |O  | "Record vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nautical miles). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows.
+| Fish storage types |O  | The type of structure(s) present on-board used by the vessel to store the catch  |Type two letter code  |  |
+| Autonomy range |O  | Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nautical miles). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows.
 <Vessel range (nm)> = <Vessel average cruising distance per metric ton (nm/mT)> : <Tonnage of fuel carried (mT)>
-Note: specify units( days or nautical miles)"  - from original ROS description form** |  |  |
+Note: specify units( days or nautical miles)"  **- from original ROS description form** |  |  |
 | -> value  | O |  |Float  |  |
 | -> Days/NM |  |  |Select DAYS or NM  |  |
 
 ## Vessel Electronics
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | GPS | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
 | VMS | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
@@ -206,21 +205,21 @@ Note: specify units( days or nautical miles)"  - from original ROS description f
 
 ## Waste Management
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Waste category  |O  |Record the category of the waste produced by the vessel  |Two letters code  |  |
-| Storage/disposal method | O | Record how the waste was disposed of  | Two letters code  |  |
+| Waste category  |O  |The category of the waste produced by the vessel  |Code  | **LINK TO CODE** |
+| Storage/disposal method | O | How the waste was disposed of  | Code  | **LINK TO CODE** |
 
 
 # (G-GENERAL) Longline general gear specifications
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 
 
 ## Special equipment of machinery
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Line shooter |M  |Indicate Yes if vessel equipped with this technology  |Yes/No  |  |
 | Line hauler |M  |Indicate Yes if vessel equipped with this technology  |Yes/No  |  |
@@ -228,37 +227,37 @@ Note: specify units( days or nautical miles)"  - from original ROS description f
 
 
 # (G-CONFIG-BRANCHLINES) Longline general gear specifications > Branchline configurations
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 
 ## Branchline configurations
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Configuration number |O  | Unique number for a specific branchline specification as detailed based on the fields below | Integer |  |
 | Section number | O |  | Integer |  |
-| Material type code | O | Record the branchline material for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | Two letters code |  |
-| Length (M) | O | Record the length of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float |  |
-| Diameter (cm) | O | Red the length of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float |  |
+| Material type code | O | The branchline material for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | Code | **LINK TO CODE** |
+| Length (M) | O | Length of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float |  |
+| Diameter (cm) | O | Length of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float |  |
 
 
 ## Additional branchline details
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-|storage codes  | O | Record if the branch lines are coiled up and packed into baskets (BSK), or layered out in tubs (TBS), or coiled up onto reels (RLS) | Two letters code |  |
+|storage codes  | O | If the branch lines are coiled up and packed into baskets (BSK), or layered out in tubs (TBS), or coiled up onto reels (RLS) | Two letters code |  |
 |  |  |  |  |  |
 |  |  |  |  |  |
 |  |  |  |  |  |
 
 # (G-CONFIG-MITIGATION-DEVICES) Longline gear specifications > Mitigation devices
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 
 ## Tori line details
 Note: If the vessel was equipped with a tori line, provide tori line details below. If not tori line was present on board, fill in NA for not applicable. _ from original ROS description form**
 
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:
 | Tori line length |M  |Record the total length of the tori line (not including streamers)  |Float  |  |
 | Streamer type code |M  |Indicate the type of streamers which are used with the tori line (e.g. paired or single)  |Two letters code  |  |
@@ -271,20 +270,20 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 | Towed objects |O  |Record the total number and type of towed objects used to maintain tori line tension and achieve aerial extent when deployed  |Number: integer; Type: Free entry. Plain text  |  |
 
 ## Other mitigation devices
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:
 | Device codes |O  |  | Device code: Two letters code |  |
 
 
 
 # (E-SET) Longline fishing events > Setting Operations
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | Record set ID. This should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line set to the last line set of the observed trip | 4 digits number |  |
 
 ##Setting operations
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:
 | Start setting date and time |M  |Record the date and the time in GMT/UTC the first dhan buoy and / or radio buoy is deployed to start the setting of the line  |  YYYY-MM-DDThh:mm (ISO 8601) |  |
 | Start setting position | M  | Record the position in latitude and longitude for the start of the setting operation  | dd°mm,m’ N/S  |  |
@@ -315,13 +314,13 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 
 # (E-SET-LIGHTS) Longline fishing events > Setting operations > Attached lights
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
 
 ## Attached lights
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:
 | attached lights |M  |Record number of lights attached to the branchlines per type and colour  |  |  |
 | -> type code |M  |  |Two letters code  |  |
@@ -331,13 +330,13 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 
 # (E-SET-MITIGATION-MEASURES)
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
 
 ## Mitigation measures
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Number of tori lines deployed | M | The total number of tori lines deployed during the setting operation. Record zero if none were deployed | Integer |  |
 | Minimum deck lighting used | M | Indicate Y or No for whether minimum deck lighting is used during night setting. Mitigation measures of IOTC Res 23/07 | Integer** _ shouldn't this be Yes/No??? |  |
@@ -350,25 +349,25 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 #### ALERT: check reporting format for the minimum deck lighting used
 
 ## Branchline details
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Configuration number  |O  |  | Record the number of branchlines set by type (branchline configuration number). Branchlinline types must be in accordance to types previously defined under the “Gear specifications” section.  | Alphanumeric code |
 | Number of branchlines set | O | Record the number of branchlines set by type (branchline configuration number). Branchlinline types must be in accordance to types previously defined under the “Gear specifications” section.  | Integer |  |
 
 ## Other mitigation measures used
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Measure codes  |M  |record any other mitigation measures observed  | Two letters code |  |
 
 
 # (E-SET-HOOKS)
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
 
 ## Setting operations > Hook details > Hook
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 |Types codes  | M |Record the types of hooks used  |Alphanumeric code  |  |
 |Percentage  | O  |Record the percentage (%) of hooks set by type  |Float  |  |
@@ -376,13 +375,13 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 
 # (E-SET-BAITS)
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
 
 ## Setting operations > Bait details > Bait
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Condition code |M  |Record bait type/condition used  |Two letters code  |  |
 | Species code |M  |Record the species/species group of bait used (FAO spp. 3-alpha code)  | Three letter (alpha) code  |  |
@@ -392,13 +391,13 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 
 # (E-SET-HAULING)
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
 
 ## Hauling Operations
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Start hauling date and time  |M  | Record the date and the time in GMT/UTC when the first dhan buoy and / or radio buoy is hauled back on-board to start hauling the line. |  YYYY-MM-DDThh:mm (ISO 8601) |  |
 | Start hauling position | M |Record the position in latitude and longitude for the start of the hauling operation  | dd°mm,m’ N/S |  |
@@ -414,13 +413,13 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 
 # (E-SET-HAULING-BITEOFFS)
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
 
 ## Biteoff details - branchline
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Biteoff details - branchline  | O |Record for each branchline configuration setup previously identified how many have had the hook bitten off.  This only includes bite-offs observed while the observer was in a position to observe and record the hooks coming directly out of the water - from original ROS description form **  |  |  |
 | -> configuration number | O |  |Integer  |  |
@@ -428,14 +427,14 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 
 #(E-SET-CATCHES)
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
 | Catch ID |M  |Unique within a specific set, as a branch of set-ID  |Alphanumeric code  |  |
 
 ## Catch details
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Species code |M  | Record the species code for each specimen observed using FAO three figure alpha codes. If species FAO code is not available, record the species scientific name |Three letter (alpha-3) code  |  |
 | Fate (type and code) |M  | Specify the fate which includes whether it was retained or discarded and the reason |Two letters code  |  |
@@ -452,7 +451,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 
 # (E-SET-CATCHES-SPECIMEN)
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
@@ -460,7 +459,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 | Specimen ID | M |Record the specimen  number. This should be a four digit numerical code beginning 0001. Specimen numbers should be consecutive within the same catch detail within the same set of the observed trip.  | 4 digit code |  |
 
 ## Specimen details
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Length 1 | M |  |  |  |
 | -> type code |M  |Specify the length code used for the measurement  | Two letters code |  |
@@ -493,7 +492,7 @@ c) destination (i.e. location to be sent/stored)" |  |  |
 
 
 # (E-SET-CATCHES-SSI)
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
@@ -501,7 +500,7 @@ c) destination (i.e. location to be sent/stored)" |  |  |
 | Specimen ID | M | refer to parent specimen ID  | 4 digit code |  |
 
 ## Additional catch details on SSI
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Condition at capture code | M | State the condition of the specimen at capture  |Two letters code  |  |
 | Condition at release code | M | State the condition of the specimen at the time of release | Two letters code  |  |
@@ -522,7 +521,7 @@ c) destination (i.e. location to be sent/stored)" |  |  |
 
 
 # (E-SET-TAG-DETAILS)
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
@@ -530,7 +529,7 @@ c) destination (i.e. location to be sent/stored)" |  |  |
 | Specimen ID | M | refer to parent specimen ID  | 4 digit code |  |
 
 ## Tag details
-| Element | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Release | O | Indicate Yes or No, whether this individual was re-released with a tag attached. |Yes/No  |  |
 | Recovery | O  | Indicate Yes or No, whether this individual was re-released with a tag attached. |Yes/No  |  |
