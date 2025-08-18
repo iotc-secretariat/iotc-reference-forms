@@ -12,6 +12,18 @@ C_MASTER =
     clientcharset = "UTF-8"
   )
 
+C_REFERENCE_DATA =
+  DBI::dbConnect(
+    drv      = odbc::odbc(),
+    Driver   = "SQL Server",
+    Server   = Sys.getenv("DEFAULT_IOTC_LIBS_DB_SERVER"),
+    Database = "IOTC_master",
+    UID      = Sys.getenv("DEFAULT_IOTC_LIBS_DB_USER"),
+    PWD      = Sys.getenv("DEFAULT_IOTC_LIBS_DB_PASSWORD"),
+    encoding = "CP1252",
+    clientcharset = "UTF-8"
+  )
+
 version_number = function(codelist_name, codelist_schema = NA) {
   VERSION = details(codelist_name, codelist_schema)$VERSION[1]
   
@@ -139,7 +151,9 @@ SPECIES           = read_codelist(domain = "biology", schema = "biological", cod
 
 SPECIES_1DR_CODES = data.table(read.xlsx("./form_reporting_templates/Form-1DR.xlsx", sheet = "Data", cols = 3, startRow = 4))
 
-SPECIES_1DR       = merge(SPECIES_1DR_CODES, SPECIES, by.x = "Code", by.y = "CODE", all.x = TRUE)
+setnames(SPECIES_1DR_CODES, old = "Code", new = "CODE")
+
+SPECIES_1DR       = merge(SPECIES_1DR_CODES, SPECIES, by.x = "CODE", by.y = "CODE", all.x = TRUE)
 
 RETAIN_REASONS        = read_codelist(domain = "biology", schema = "biological", codelist = "RETAIN_REASONS")
 
