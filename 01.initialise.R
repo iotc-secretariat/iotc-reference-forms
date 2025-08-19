@@ -26,8 +26,8 @@ DOI_VERSION = zen4R::get_versions(DOI_PERMANENT)$version
 # Temp version still based on table refs_meta.CODELISTS_VERSIONS
 # Need to create a table_history and a row_history
 # BASE_VERSION = "1.0"
-#BASE_VERSION = sprintf("%.1f", DOI_VERSION)
-BASE_VERSION = DOI_VERSION
+BASE_VERSION = sprintf("%.1f", DOI_VERSION)
+#BASE_VERSION = DOI_VERSION
 
 details = function(codelist_name, codelist_schema = NA) {
   return(

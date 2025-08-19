@@ -48,7 +48,7 @@ For the combination of each taxon, gear group, and fishery category listed in th
 # Reporting Metadata
 
 | Element | Requirement | Description | Format | Input value |
-| :-------- | :----: | :----------------------- | :----- | :------------ |
+| :-------- | :----: | :----------------------- | :------- | :------------ |
 | Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | e.g., John Doe |
 | Liaison officer email | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
 | Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |

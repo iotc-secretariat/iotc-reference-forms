@@ -1,5 +1,5 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 1DI (v`r BASE_VERSION`)"
+title: "IOTC Statistical Data Reporting: Form 1DI"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -33,44 +33,44 @@ Number or live weight of discards by species, including their condition at relea
 
 ## General Information
 
-| Element | Requirement | Description | Input value  |
-| :-------- | :-----: | :----------------------- | :-------: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code_iso3** from [Countries](#countries) |
+| Element | Requirement | Description | Format | Input value  |
+| :-------- | :-----: | :----------------------- | :----- | :-------: |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 | 
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code_iso3** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code_iso3** from [Countries](#countries) |
 
 ## Main Data Elements
 
-| Element | Requirement | Description | Input value  |
-| :-------- | :-----: | :----------------------- | :-------: |
-| Quarter | M | Gregorian calendar quarter of the fishing activities reported through the dataset | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
-| Fisheries | M | [IOTC fishery](../guidelines/#Fisheries) derived from the combination of several factors | **Code** from [Fisheries](#fisheries) |
-| IOTC main areas | M | Main IOTC areas of competence   | **Code** from  [IOTC main areas](#IOTCareasMain)  |
-| Reasons for discarding | M | Reasons why the species was discarded | **Code** from [Reasons for discarding](#discardReasons) |
-| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies)           |
-| Condition of species | M | Conditions of species being discarded at sea  | **Code** from  [Conditions](#individualConditions)|
-| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| 
-| Catch unit   | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
+| Element | Requirement | Description | Format | Input value  |
+| :-------- | :-----: | :----------------------- | :----- | :---------------------: |
+| Quarter | M | Gregorian calendar quarter of the fishing activities reported through the dataset | Integer | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
+| Fisheries | M | [IOTC fishery](../guidelines/#Fisheries) derived from the combination of several factors | String | **Code** from [Fisheries](#fisheries) |
+| IOTC main areas | M | Main IOTC areas of competence   | String | **Code** from  [IOTC main areas](#IOTCareasMain)  |
+| Reasons for discarding | M | Reasons why the species was discarded | String | **Code** from [Reasons for discarding](#discardReasons) |
+| Species | M | Species caught and discarded | String | **Code** from [Species](#allSpecies)           |
+| Condition of species | M | Conditions of species being discarded at sea  | String | **Code** from  [Conditions](#individualConditions)|
+| Data raising | M | Level of raising (i.e., extrapolation) | String | **Code** from [Raisings](#dataRaising)| 
+| Catch unit | M | Units used to report the level of catches of a given species | String | **Code** from [Catch units](#catchUnits) |
 
 ## Original Data
 
-| Element | Requirement | Description | Input value  |
-| :-------- | :-----: | :----------------------- | :-------: |
-| Original data type       | M | Preliminary/final status of the data | **Code** from [Types of data](#datatypes) |
-| Original data source     | M | Source of information | **Code** from [Discards data sources](#dataSourcesDI) |
-| Original data processing | M | Processing applied to the data  | **Code** from [Discards data processings](#dataProcessingsDI) |
-| Source coverage type     | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) |
+| Element | Requirement | Description | Format | Input value  |
+| :-------- | :-----: | :------------------ | :------ | :-------: |
+| Original data type  | M | Preliminary/final status of the data | String | **Code** from [Types of data](#datatypes) |
+| Original data source     | M | Source of information | String | **Code** from [Discards data sources](#dataSourcesDI) |
+| Original data processing | M | Processing applied to the data  | String | **Code** from [Discards data processings](#dataProcessingsDI) |
+| Source coverage type     | M | Variable used for data coverage | String | **Code** from [Types of coverage](#coverageTypes) |
 
 # Reporting Metadata
 
-| Element | Requirement | Description | Format | Example |
+| Element | Requirement | Description | Format | Input value |
 | :-------- | :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
-| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | e.g., John Doe |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | e.g., National Institute of Fisheries |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., [nif\@gov.sc](mailto:nif@gov.sc){.email} |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., 1996-03-27 |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., 1997-03-21 |
 
 # Reporting Deadlines
 
@@ -82,11 +82,19 @@ Number or live weight of discards by species, including their condition at relea
 
 ## Entities {#entities}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
++ **Version:** `r version_number("ENTITIES")`
++ **Last updated**: `r last_update("ENTITIES")`
+
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
 ```
 
 ## Countries {#countries}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
++ **Version:** `r version_number("COUNTRIES")`
++ **Last updated**: `r last_update("COUNTRIES")`
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
@@ -94,11 +102,19 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 ## Fisheries {#fisheries}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries)
++ **Version:** `r version_number("FISHERIES")`
++ **Last updated**: `r last_update("FISHERIES")`
+
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
 ```
 
 ## IOTC Main Areas {#IOTCareasMain}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#IOTCareasMain)
++ **Version:** `r version_number("IOTC_MAIN_AREAS")`
++ **Last updated**: `r last_update("IOTC_MAIN_AREAS")`
 
 ![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
 
@@ -108,11 +124,19 @@ out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 
 ## Reasons For Discarding {#discardReasons}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#discardReasons)
++ **Version:** `r version_number("DISCARD_REASONS")`
++ **Last updated**: `r last_update("DISCARD_REASONS")`
+
 ```{r collapse = TRUE}
 out_dt(DISCARD_REASONS, "DISCARD_REASONS")
 ```
 
 ## Species {#allSpecies}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
++ **Version:** `r version_number("SPECIES")`
++ **Last updated**: `r last_update("SPECIES")`
 
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
@@ -120,11 +144,19 @@ out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyl
 
 ## Conditions {#individualConditions}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#individualConditions)
++ **Version:** `r version_number("INDIVIDUAL_CONDITIONS")`
++ **Last updated**: `r last_update("INDIVIDUAL_CONDITIONS")`
+
 ```{r collapse = TRUE}
 out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
 ```
 
-## Raisings {#dataRaising}
+## Data Raisings {#dataRaising}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#raisings)
++ **Version:** `r version_number("DATA_RAISINGS")`
++ **Last updated**: `r last_update("DATA_RAISINGS")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
@@ -132,11 +164,19 @@ out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 
 ## Catch Units {#catchUnits}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#catchUnits)
++ **Version:** `r version_number("CATCH_UNITS")`
++ **Last updated**: `r last_update("CATCH_UNITS")`
+
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
 ```
 
 ## Types of Data {#datatypes}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#types)
++ **Version:** `r version_number("DATA_TYPES")`
++ **Last updated**: `r last_update("DATA_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
@@ -144,17 +184,29 @@ out_dt(DATA_TYPES, "DATA_TYPES")
 
 ## Discards Data Sources {#dataSourcesDI}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesDI)
++ **Version:** `r version_number("DATA_SOURCES_DI")`
++ **Last updated**: `r last_update("DATA_SOURCES_DI")`
+
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_DI, "DATA_SOURCES_DI")
 ```
 
 ## Discards Data Processings {#dataProcessingsDI}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#processingsDI)
++ **Version:** `r version_number("DATA_PROCESSINGS_DI")`
++ **Last updated**: `r last_update("DATA_PROCESSINGS_DI")`
+
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_DI, "DATA_PROCESSINGS_DI")
 ```
 
 ## Types Of Coverage {#coverageTypes}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#coverageTypes)
++ **Version:** `r version_number("COVERAGE_TYPES")`
++ **Last updated**: `r last_update("COVERAGE_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
