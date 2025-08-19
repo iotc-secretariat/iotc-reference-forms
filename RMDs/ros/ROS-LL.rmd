@@ -244,7 +244,7 @@ Note: specify units( days or nautical miles)"  **- from original ROS description
 ## Additional branchline details
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-|storage codes  | O | If the branch lines are coiled up and packed into baskets (BSK), or layered out in tubs (TBS), or coiled up onto reels (RLS) | Two letters code |  |
+|storage codes  | O | If the branch lines are coiled up and packed into baskets (BSK), or layered out in tubs (TBS), or coiled up onto reels (RLS) | Two letters code | **CODE** from _______ |
 |  |  |  |  |  |
 |  |  |  |  |  |
 |  |  |  |  |  |
@@ -259,58 +259,60 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:
-| Tori line length |M  |Record the total length of the tori line (not including streamers)  |Float  |  |
-| Streamer type code |M  |Indicate the type of streamers which are used with the tori line (e.g. paired or single)  |Two letters code  |  |
-| Reach surface |O  |Indicate Yes if the streamers are long enough to touch the surface of the water in calm conditions or No if they are not  |Yes/No  |  |
-| Streamer line length (max) |M  |Record length of individual streamer lines (minimum and maximum where lengths vary). Record only one length if they do not vary  |Float  |  |
-| Streamer line length (min) |O  |Record length of individual streamer lines (minimum and maximum where lengths vary). Record only one length if they do not vary  |Float  |  |
-| No. streamers per line |M  |Record the number of streamers that are attached to a single tori line  |Integer  |  |
-| Distance between streamers |O  |record the distance between streamers  |Float  |  |
-| Attached height | M |record the height that the tori line is attached above the water level  |Float  |  |
-| Towed objects |O  |Record the total number and type of towed objects used to maintain tori line tension and achieve aerial extent when deployed  |Number: integer; Type: Free entry. Plain text  |  |
+| Tori line length |M  |The total length of the tori line (not including streamers)  |Float  |  |
+| Streamer type code |M  |The type of streamers which are used with the tori line (e.g. paired or single)  |Two letters code  |  |
+| Reach surface |O  | Yes if the streamers are long enough to touch the surface of the water in calm conditions or No if they are not  |Yes/No  |  |
+| Streamer line length (max) |M  |Length of individual streamer lines (minimum and maximum where lengths vary). Record only one length if they do not vary  |Float  |  |
+| Streamer line length (min) |O  |Length of individual streamer lines (minimum and maximum where lengths vary). Record only one length if they do not vary  |Float  |  |
+| No. streamers per line |M  |The number of streamers that are attached to a single tori line  |Integer  |  |
+| Distance between streamers |O  |The distance between streamers  |Float  |  |
+| Attached height | M |The height that the tori line is attached above the water level  |Float  |  |
+| Towed objects |O  |The total number and type of towed objects used to maintain tori line tension and achieve aerial extent when deployed  |Number: integer; Type: Free entry. Plain text  |  |
 
 ## Other mitigation devices
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:
-| Device codes |O  |  | Device code: Two letters code |  |
+| Device codes |O  |  | Device code: Two letters code | **CODE** from device codes |
 
 
 
 # (E-SET) Longline fishing events > Setting Operations
+
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | refer to parent observed trip | | |
-| Set ID |M  | Record set ID. This should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line set to the last line set of the observed trip | 4 digits number |  |
+| Set ID |M  |  This should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line set to the last line set of the observed trip | 4 digits number |  |
 
 ##Setting operations
+
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:
-| Start setting date and time |M  |Record the date and the time in GMT/UTC the first dhan buoy and / or radio buoy is deployed to start the setting of the line  |  YYYY-MM-DDThh:mm (ISO 8601) |  |
-| Start setting position | M  | Record the position in latitude and longitude for the start of the setting operation  | dd°mm,m’ N/S  |  |
-| End setting date and time  |M | Record the date and the time in GMT/UTC that the last dhan buoy and / or radio buoy is deployed. |  YYYY-MM-DDThh:mm (ISO 8601) |  |
-| End setting position |M  | Record the position in latitude and longitude for the end of the setting operation | dd°mm,m’ N/S |  |
-| Vessel speed | M | Record the vessel’s average speed during setting (knots) | Float |  |
-| Line setter speed |M  | Record the speed setting of the line setter (meters/second) | Float |  |
-| Mainline | O | Record mainline material and total set length (i.e. the total deployed length of the mainline for the specific set). Usually calculated by multiplying the total time to set the line and the average line setter speed, taking into account any interruption times. This information can be obtained from the Fishing Master and cross checked against observer calculations |  |  |
-| -> Material code | O |  | Two letters code |  |
+| Start setting date and time |M  |The date and the time in GMT/UTC the first dhan buoy and / or radio buoy is deployed to start the setting of the line  |  YYYY-MM-DDThh:mm (ISO 8601) |  |
+| Start setting position | M  | The position in latitude and longitude for the start of the setting operation  | dd°mm,m’ N/S  |  |
+| End setting date and time  |M | The date and the time in GMT/UTC that the last dhan buoy and / or radio buoy is deployed. |  YYYY-MM-DDThh:mm (ISO 8601) |  |
+| End setting position |M  | The position in latitude and longitude for the end of the setting operation | dd°mm,m’ N/S |  |
+| Vessel speed | M | The vessel’s average speed during setting (knots) | Float |  |
+| Line setter speed |M  | The speed setting of the line setter (meters/second) | Float |  |
+| Mainline | O | Mainline material and total set length (i.e. the total deployed length of the mainline for the specific set). Usually calculated by multiplying the total time to set the line and the average line setter speed, taking into account any interruption times. This information can be obtained from the Fishing Master and cross checked against observer calculations |  |  |
+| -> Material code | O |  | Two letters code | **CODE** from ______  |
 | -> value  | O |  | Float |  |
 | -> KM/NM | O |  | Indicate unit (KM or NM) |  |
 | Clip on time | O |  |  |  |
-| -> branchline |O  | Record the average time interval in seconds between the “beeps” that indicate to the crew to clip on a branch line. | Yes/No |  |
-| -> buoys |O  | Record the average time interval in seconds between the “beeps” that indicate to the crew to clip on a buoy | Yes/No |  |
-| Number of total hooks set  | M | Record the total number of hooks deployed for the set. Usually calculated by multiplying number of baskets by the average number of hooks between the baskets. This information can be obtained from the Fishing Master and cross checked against observer calculations |Integer  |  |
-|Number of total floats on set  |O  | Record the total number of floats deployed during the set (this should not include the radio/dhan buoys). Usually calculated by subtracting the number of buoys in their holders before setting by the number of buoys in their holders after setting. This information can be obtained from the Fishing Master and cross checked against observer calculations | Integer |  |
-| Number of hooks between floats |M  | Record the number of hooks set between floats. This will correspond to the number of hooks stored in each basket/tub, or on a reel and will be equivalent to the number of branch lines set. | Integer |  |
+| -> branchline |O  | The average time interval in seconds between the “beeps” that indicate to the crew to clip on a branch line. | Yes/No |  |
+| -> buoys |O  | The average time interval in seconds between the “beeps” that indicate to the crew to clip on a buoy | Yes/No |  |
+| Number of total hooks set  | M | The total number of hooks deployed for the set. Usually calculated by multiplying number of baskets by the average number of hooks between the baskets. This information can be obtained from the Fishing Master and cross checked against observer calculations |Integer  |  |
+|Number of total floats on set  |O  | The total number of floats deployed during the set (this should not include the radio/dhan buoys). Usually calculated by subtracting the number of buoys in their holders before setting by the number of buoys in their holders after setting. This information can be obtained from the Fishing Master and cross checked against observer calculations | Integer |  |
+| Number of hooks between floats |M  | The number of hooks set between floats. This will correspond to the number of hooks stored in each basket/tub, or on a reel and will be equivalent to the number of branch lines set. | Integer |  |
 | Shark lines | M |  |  |  |
 | -> set |M  | Indicate Yes or No if shark lines were set during the operation | Yes/No |  |
-| -> number of lines | O | Record the number of shark lines set during the operation.  If no shark lines are set then record zero (0) | Integer |  |
+| -> number of lines | O | The number of shark lines set during the operation.  If no shark lines are set then record zero (0) | Integer |  |
 | leader material |M  |  |  |  |
-| -> material code | M | specify each leader type used in the set (based on Table T16 – line material types) | two letters code |  |
+| -> material code | M | Each leader type used in the set (based on Table T16 – line material types) | two letters code | **CODES** from _______ |
 | -> percentage |M  |for each leader type used in the set, estimate the percentage of total branchlines in the set using that leader type. Estimate by counting the number of branchlines in a basket by leader type and dividing each count by the total hooks in the basket. This assumes uniform use of leader types across baskets in a set. Estimates should be adjusted if there is variation across baskets (within a set) in leader proportions  | Float |  |
 | Branchline length max | M | specify the minimum and maximum total branchline lengths observed in the set. Total branchline length is measured (in meters) from the mainline clip to the hook. If total branchline lengths are uniform across the set, write the same number in the minimum and maximum fields |  |  |
 | -> value |M  |  |Float  |  |
 | -> CM/M | M |  |Indicate Unit (CM or M) |  |
-| Target species | M | Record the target species for the set (FAO spp. 3-alpha code) | Three/ four letters code from Target species|  |
+| Target species | M | The target species for the set (FAO spp. 3-alpha code) | Three/ four letters code from Target species| **CODES** from ______ |
 
 
 # (E-SET-LIGHTS) Longline fishing events > Setting operations > Attached lights
@@ -322,9 +324,9 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ## Attached lights
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:
-| attached lights |M  |Record number of lights attached to the branchlines per type and colour  |  |  |
-| -> type code |M  |  |Two letters code  |  |
-| -> colour code |M  |  |Two letters code  |  |
+| attached lights |M  |Number of lights attached to the branchlines per type and colour  |  |  |
+| -> type code |M  |  |Two letters code  | **CODE** from _________  |
+| -> colour code |M  |  |Two letters code  | **CODE** from __________ |
 | -> number of lights | M |  |Integer  |  |
 
 
@@ -341,9 +343,9 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 | Number of tori lines deployed | M | The total number of tori lines deployed during the setting operation. Record zero if none were deployed | Integer |  |
 | Minimum deck lighting used | M | Indicate Y or No for whether minimum deck lighting is used during night setting. Mitigation measures of IOTC Res 23/07 | Integer** _ shouldn't this be Yes/No??? |  |
 | Hooks set between dusk dawn | M |  | Integer |  |
-| Branchline weighted |O  | Indicate Yes or No or Unknow (UNK) if the branch line is weighted. CPCs adjustment using additgional information | Yes/No/Unk  |  |
-| Average branchline weight (g) | M | Record the average weight of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) |Float  |  |
-| Percent branchline weighted | M | Record the proportion of branchlines weighted (%). If all weighted, record 100% | Float |  |
+| Branchline weighted |O  | Indicate Yes or No or Unknown (UNK) if the branch line is weighted. CPCs adjustment using additional information | Yes/No/Unk  |  |
+| Average branchline weight (g) | M | The average weight of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) |Float  |  |
+| Percent branchline weighted | M | The proportion of branchlines weighted (%). If all weighted, record 100% | Float |  |
 | Hook sinker distance (cm) | M | The distance of the  weights/sinkers from the eye of the hook | Float |  |
 | Hook pods | M | Indicate Yes or No if the bait is protected on the branchlines until they are a certain depth below the surface | Yes/No |  |
 #### ALERT: check reporting format for the minimum deck lighting used
@@ -351,13 +353,13 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ## Branchline details
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Configuration number  |O  |  | Record the number of branchlines set by type (branchline configuration number). Branchlinline types must be in accordance to types previously defined under the “Gear specifications” section.  | Alphanumeric code |
-| Number of branchlines set | O | Record the number of branchlines set by type (branchline configuration number). Branchlinline types must be in accordance to types previously defined under the “Gear specifications” section.  | Integer |  |
+| Configuration number  |O  |  | The number of branchlines set by type (branchline configuration number). Branchline types must be in accordance to types previously defined under the “Gear specifications” section.  | Alphanumeric code |
+| Number of branchlines set | O | The number of branchlines set by type (branchline configuration number). Branchline types must be in accordance to types previously defined under the “Gear specifications” section.  | Integer |  |
 
 ## Other mitigation measures used
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Measure codes  |M  |record any other mitigation measures observed  | Two letters code |  |
+| Measure codes  |M  |Any other mitigation measures observed  | Two letters code |**CODE** from ______  |
 
 
 # (E-SET-HOOKS)
@@ -369,8 +371,8 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ## Setting operations > Hook details > Hook
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-|Types codes  | M |Record the types of hooks used  |Alphanumeric code  |  |
-|Percentage  | O  |Record the percentage (%) of hooks set by type  |Float  |  |
+|Types codes  | M |The types of hooks used  |Alphanumeric code  |  |
+|Percentage  | O  |The percentage (%) of hooks set by type  |Float  |  |
 |Variations  | O  |Where possible indicate any variations in hook type, hook material, and presence/absence of hook ring  | Free entry. Plain text. |  |
 
 
@@ -383,10 +385,10 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ## Setting operations > Bait details > Bait
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Condition code |M  |Record bait type/condition used  |Two letters code  |  |
-| Species code |M  |Record the species/species group of bait used (FAO spp. 3-alpha code)  | Three letter (alpha) code  |  |
-| Percentage |M  |Record the approximate proportion of bait species and condition used across all hooks in the set (%)  |Float  |  |
-| Dye colour |O  |Record the colour or colours that the different baits are dyed (e.g. blue to avoid bird bycatch). If none, write NONE  |Free entry. Plain text.  |  |
+| Condition code |M  |Bait type/condition used  |Two letters code  |  |
+| Species code |M  |The species/species group of bait used (FAO spp. 3-alpha code)  | Three letter (alpha) code  |  |
+| Percentage |M  |The approximate proportion of bait species and condition used across all hooks in the set (%)  |Float  |  |
+| Dye colour |O  |The colour or colours that the different baits are dyed (e.g. blue to avoid bird bycatch). If none, write NONE  |Free entry. Plain text.  |  |
 
 
 
@@ -399,16 +401,16 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ## Hauling Operations
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Start hauling date and time  |M  | Record the date and the time in GMT/UTC when the first dhan buoy and / or radio buoy is hauled back on-board to start hauling the line. |  YYYY-MM-DDThh:mm (ISO 8601) |  |
-| Start hauling position | M |Record the position in latitude and longitude for the start of the hauling operation  | dd°mm,m’ N/S |  |
-| End hauling date and time | M | Record the date and the time when the when the last component of the longline gear (dhan buoy and / or radio buoy) is hauled back on-board |  YYYY-MM-DDThh:mm (ISO 8601) |  |
-| End hauling position |M  | Record the position in latitude and longitude for the end of the hauling operation | dd°mm,m’ N/S |  |
-| Offal management |O  | Record fate given to the offal (fish heads, guts, etc.) and bait produced during the observed set. Indicate if these are retained for batch disposal (BD) at a later stage and/or disposed of ad hoc (AH) as they accumulate | Two letters code |  |
-| Position of offal disposal - position code |O| Record the position where offal and used bait was disposed. Indicate if these are disposed at port side (BB), starboard (SB) or aft (AF)| **MISSING CODES- DEFINE |  |
-| Bird scaring device at hauler | M | Indicate Yes if a bird scaring device was deployed during hauling operations and No if not.  | Yes/No |  |
-| Number of branchline haulings observed | M | Record the number of branchline haulings observed | Integer |  |
-| Number of hooks retrieved during observation |M  |Record the number of hooks retrieved during observation  |Integer  |  |
-| Sampling protocol code |M  |Indicate sampling protocol followed by the observer  |Two letters code  |  |
+| Start hauling date and time  |M  | The date and the time in GMT/UTC when the first dhan buoy and / or radio buoy is hauled back on-board to start hauling the line. |  YYYY-MM-DDThh:mm (ISO 8601) |  |
+| Start hauling position | M |The position in latitude and longitude for the start of the hauling operation  | dd°mm,m’ N/S |  |
+| End hauling date and time | M | The date and the time when the when the last component of the longline gear (dhan buoy and / or radio buoy) is hauled back on-board |  YYYY-MM-DDThh:mm (ISO 8601) |  |
+| End hauling position |M  | The position in latitude and longitude for the end of the hauling operation | dd°mm,m’ N/S |  |
+| Offal management |O  | Fate given to the offal (fish heads, guts, etc.) and bait produced during the observed set. Indicate if these are retained for batch disposal (BD) at a later stage and/or disposed of ad hoc (AH) as they accumulate | Two letters code |**CODE** from _______  |
+| Position of offal disposal - position code |O| The position where offal and used bait was disposed. Indicate if these are disposed at port side (BB), starboard (SB) or aft (AF)| **MISSING CODES- DEFINE |  |
+| Bird scaring device at hauler | M | Yes if a bird scaring device was deployed during hauling operations and No if not.  | Yes/No |  |
+| Number of branchline haulings observed | M | The number of branchline haulings observed | Integer |  |
+| Number of hooks retrieved during observation |M  |The number of hooks retrieved during observation  |Integer  |  |
+| Sampling protocol code |M  |Sampling protocol followed by the observer  |Two letters code  | **CODE** from ________ |
 
 
 
@@ -421,7 +423,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ## Biteoff details - branchline
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Biteoff details - branchline  | O |Record for each branchline configuration setup previously identified how many have had the hook bitten off.  This only includes bite-offs observed while the observer was in a position to observe and record the hooks coming directly out of the water - from original ROS description form **  |  |  |
+| Biteoff details - branchline  | O |For each branchline configuration setup previously identified how many have had the hook bitten off.  This only includes bite-offs observed while the observer was in a position to observe and record the hooks coming directly out of the water - from original ROS description form **  |  |  |
 | -> configuration number | O |  |Integer  |  |
 | -> number of biteoffs | O |  |Integer  |  |
 
@@ -436,17 +438,17 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ## Catch details
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Species code |M  | Record the species code for each specimen observed using FAO three figure alpha codes. If species FAO code is not available, record the species scientific name |Three letter (alpha-3) code  |  |
-| Fate (type and code) |M  | Specify the fate which includes whether it was retained or discarded and the reason |Two letters code  |  |
-| Sampling method code |M  |  |Two letters code  |  |
-| Number of fish |M  | Record the numbers of individuals observed/caught by species and fate (including if recording at an individual animal level)  |  |  |
-| Weight |O  | Record the catch weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, record the unprocessed weight |  |  |
-| -> processing type code |O  |  |Two letters code  |  |
+| Species code |M  | The species code for each specimen observed using FAO three figure alpha codes. If species FAO code is not available, record the species scientific name |Three letter (alpha-3) code  |**CODE** from species codes  |
+| Fate (type and code) |M  | The fate which includes whether it was retained or discarded and the reason |Two letters code  | **CODE** from |
+| Sampling method code |M  |  |Two letters code  |**CODE** from _____  |
+| Number of fish |M  | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level)  | Integer??? |  |
+| Weight |O  | The catch weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, record the unprocessed weight |Float???  |  |
+| -> processing type code |O  |  |Two letters code  |**CODE** from ______  |
 | -> value | O  |  |Float  |  |
 | -> KG/T | O |  | Indicate units (KG or T)  |  |
-| -> estimation method code | O |  | Two letters code  |  |
-| Sampling period code |M  |  |  |  |
-| Sampling method code |M  |Indicate the sampling method used for the collection of biological sub-sample  |  |  |
+| -> estimation method code | O |  | Two letters code  | **CODE** from _____ |
+| Sampling period code |M  |  |  | **CODE** from ______ |
+| Sampling method code |M  |The sampling method used for the collection of biological sub-sample  |  |**CODE** from _____  |
 
 
 
@@ -456,40 +458,102 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 | Observed trip ID| | M | refer to parent observed trip | | |
 | Set ID |M  | refer to parent Set ID | 4 digits number |  |
 | Catch ID |M  |refer to parent catch ID  |Alphanumeric code  |  |
-| Specimen ID | M |Record the specimen  number. This should be a four digit numerical code beginning 0001. Specimen numbers should be consecutive within the same catch detail within the same set of the observed trip.  | 4 digit code |  |
+| Specimen ID | M |The specimen  number. This should be a four digit numerical code beginning 0001. Specimen numbers should be consecutive within the same catch detail within the same set of the observed trip.  | 4 digit code | **CODE** from ______ |
 
 ## Specimen details
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Length 1 | M |  |  |  |
-| -> type code |M  |Specify the length code used for the measurement  | Two letters code |  |
-| -> value (cm) |M  |Record the length corresponding to the length type taken rounded to the lower centimeter  |Float  |  |
-| -> measuring tool code |M  | Specify the tool code used for the measurement  |Two letters code  |  |
-| -> is straight |M  |Indicate Yes or No  |Yes/No  |  |
+| -> type code |M  |The length code used for the measurement  | Two letters code |**CODE** from ______  |
+| -> value (cm) |M  |The length corresponding to the length type taken rounded to the lower centimeter  |Float  |  |
+| -> measuring tool code |M  | Specify the tool code used for the measurement  |Two letters code  |**CODE** from _____  |
+| -> is straight |M  | Yes or No  |Yes/No  |  |
 | Length 2 |O  |  |  |  |
-| -> type code |O  |Specify the length code used for the measurement  | Two letters code |  |
-| -> value (cm) |O  |Record the length corresponding to the length type taken rounded to the lower centimeter  |Float  |  |
-| -> measuring tool code |O  | Specify the tool code used for the measurement  |Two letters code  |  |
+| -> type code |O  |The length code used for the measurement  | Two letters code |**CODE** from ________  |
+| -> value (cm) |O  |The length corresponding to the length type taken rounded to the lower centimeter  |Float  |  |
+| -> measuring tool code |O  | The tool code used for the measurement  |Two letters code  | **CODE** from ______ |
 | -> is straight |O  |Indicate Yes or No  |Yes/No  |  |
-| Weight |O  | Record the specimen’s weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, record the unprocessed weight  |  |  |
-| -> processing type code |O  |  |Two letters code  |  |
+| Weight |O  | The specimen’s weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, record the unprocessed weight  |  |  |
+| -> processing type code |O  |  |Two letters code  | **CODE** from _____ |
 | -> value |O  |  | Float |  |
 | -> KG/T | O  |  | Indicate units (KG or T) |  |
-| -> estimation method code |O  |  |Two letters code  |  |
-| Sex | O | "Record the sex of the sampled fish specimen. If unknown record "U" | One letter code |  |
-| Maturity |O  | Record the stage of maturity of the specimen according to standard maturity scales approved by the IOTC. If unknown record UNK. |  |  |
+| -> estimation method code |O  |  |Two letters code  | **CODE** from _______ |
+| Sex | O | The sex of the sampled fish specimen. If unknown record "U" | One letter code | **CODE** from _____ |
+| Maturity |O  | The stage of maturity of the specimen according to standard maturity scales approved by the IOTC. If unknown record UNK. |  |  |
 | -> scale |O  |  | ** MISSING CODES TO DEFINE |  |
 | -> stage |O  |  | ** MISSING CODES TO DEFINE |  |
-| Sample collected |O  | "Record the following details on the collection of samples: 
+| Sample collected |O  | The following details on the collection of samples: 
 a) type (e.g. otoliths, spine clippings, and genetic samples)
 b) preservation method (e.g. alcohol, frozen, etc.) 
-c) destination (i.e. location to be sent/stored)" |  |  |
+c) destination (i.e. location to be sent/stored) |  |  |
 | -> type | O |  |**MISSING CODES TO DEFINE  |  |
 | -> preservation method |O  |  |**MISSING CODES TO DEFINE  |  |
 | Depredation method |O  |  |  |  |
-| -> depredation source code |O  | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA |Two letters code  |  |
+| -> depredation source code |O  | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA |Two letters code  |**CODE** from ______  |
 | -> observed predatory code |O  | For depredated specimens/or catch, record the predator species directly observed and identified (FAO spp. 3-alpha code). If the predator was not observed record UNK (unknown). For non-depredated specimens record NA | Text code |  |
 
+
+## Specimen details - REVISED FORMAT
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Length 1 | M | Length of individual specimen |
+<div style="margin-left:40px">
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| type code |M  |The length code used for the measurement  | Two letters code |**CODE** from ______  |
+| value (cm) |M  |The length corresponding to the length type taken rounded to the lower centimeter  |Float  |  |
+| measuring tool code |M  | Specify the tool code used for the measurement  |Two letters code  |**CODE** from _____  |
+| is straight |M  | Yes or No  |Yes/No  |  |
+</div>
+
+| Length 2: 
+<div style="margin-left:40px">
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+|  type code |O  |The length code used for the measurement  | Two letters code |**CODE** from ________  |
+|  value (cm) |O  |The length corresponding to the length type taken rounded to the lower centimeter  |Float  |  |
+|  measuring tool code |O  | The tool code used for the measurement  |Two letters code  | **CODE** from ______ |
+|  is straight |O  |Indicate Yes or No  |Yes/No  |  |
+</div>
+
+| Weight: The specimen’s weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, record the unprocessed weight
+<div style="margin-left:40px">
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+|  processing type code |O  | The processing code used for the weight measurement  |Two letters code  | **CODE** from _____ |
+|  value |O  | The weight corresponding to the length type code taken rounded to the...? | Float |  |
+|  KG/T | O  | Indicate units |  KG or T |  |
+|  estimation method code |O  | Method used to estimate weight of specimen |Two letters code  | **CODE** from _______ |
+</div>
+
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Sex | O | The sex of the sampled fish specimen. If unknown record "U" | One letter code | **CODE** from _____ |
+
+| Maturity: optional reporting
+| The stage of maturity of the specimen according to standard maturity scales approved by the IOTC. If unknown record UNK.
+<div style="margin-left:40px">
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+|  scale |O  |  | ** MISSING CODES TO DEFINE |  |
+|  stage |O  |  | ** MISSING CODES TO DEFINE |  |
+</div>
+
+| Sample collected
+| The following details on the collection of samples: a) type (e.g. otoliths, spine clippings, and genetic samples) b) preservation method (e.g. alcohol, frozen, etc.) c) destination (i.e. location to be sent/stored) 
+<div style="margin-left:40px">
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+|  type | O |  |**MISSING CODES TO DEFINE  |  |
+|  preservation method |O  |  |**MISSING CODES TO DEFINE  |  |
+</div>
+
+| Depredation method:
+<div style="margin-left:40px">
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+|  depredation source code |O  | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA |Two letters code  |**CODE** from ______  |
+| observed predatory code |O  | For depredated specimens/or catch, record the predator species directly observed and identified (FAO spp. 3-alpha code). If the predator was not observed record UNK (unknown). For non-depredated specimens record NA | Text code |  |
 
 # (E-SET-CATCHES-SSI)
 | Element | Requirement | Description | Format | Input value |
@@ -499,6 +563,7 @@ c) destination (i.e. location to be sent/stored)" |  |  |
 | Catch ID |M  |refer to parent catch ID  |Alphanumeric code  |  |
 | Specimen ID | M | refer to parent specimen ID  | 4 digit code |  |
 
+
 ## Additional catch details on SSI
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
@@ -507,18 +572,25 @@ c) destination (i.e. location to be sent/stored)" |  |  |
 | Gear interaction code | M |Specify the type of interaction of the specimen with the fishing gear. In the case of difficulty to collect this information, use the code "UNK"  | Two letters code |  |
 | Hook type code |O  |Record the type of hook the individual was hauled on  | Two letters code  |  |
 | Bait |O  | Record the type and condition of the bait the individual was hauled on  |Two letters code  |  |
-| Leader |  |  |  |  |
-| -> material code |M  | For SSI only, record the leader material the individual was hauled on (Table 16). [Consistent with IOTC Res 12-04 and IOTC Res. 17/05] - from original ROS description form** | Two letters code |  |
-| -> diameter (mm) |O  | For SSI only, record the thickness of the leader the individual was hauled on. Note: precise units (preferably millimeters (mm)). [Consistent with IOTC Res 12-04 and IOTC Res. 17/05] - from original ROS description form ** | Float |  |
-| De-hooker device code | O | Specify de-hooking or line cutting device used to extract the hook |Two letters code  |  |
+| Leader
+<div style="margin-left:40px">
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| material code |M  | For SSI only, record the leader material the individual was hauled on (Table 16). [Consistent with IOTC Res 12-04 and IOTC Res. 17/05] - from original ROS description form** | Two letters code |  |
+| diameter (mm) |O  | For SSI only, record the thickness of the leader the individual was hauled on. Note: precise units (preferably millimeters (mm)). [Consistent with IOTC Res 12-04 and IOTC Res. 17/05] - from original ROS description form ** | Float |  |
+</div>
+|De-hooker device code | O | Specify de-hooking or line cutting device used to extract the hook |Two letters code  |  |
 | Brought onboard |O  |Indicate Yes or No, if the specimen was brought onboard  |Yes/No  |  |
 | Handling method code |O  |Detail how the specimen was brought onboard  | Two letters code |  |
 | Revival |O  | For turtles indicate Yes if the release took place with resuscitation and No if not | Yes/No |  |
 | Photo ID | O  | If a photo is taken, record photo number/code so that it can be linked back to the specimen for onshore examination | Photo code |  |
-| Depredation details | O |  |  |  |
-| -> depredation source code | O  | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA | Two letters code  |  |
-| -> depredation predator code | O  | For depredated specimens/or catch, record the predator species directly observed and identified (FAO spp. 3-alpha code). If the predator was not observed record UNK (unknown). For non-depredated specimens record NA | Two letters code  |  |
-
+| Depredation details 
+<div style="margin-left:40px">
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| depredation source code | O  | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA | Two letters code  |  |
+| depredation predator code | O  | For depredated specimens/or catch, record the predator species directly observed and identified (FAO spp. 3-alpha code). If the predator was not observed record UNK (unknown). For non-depredated specimens record NA | Two letters code|**CODE** from _____  |
+</div>
 
 # (E-SET-TAG-DETAILS)
 | Element | Requirement | Description | Format | Input value |
