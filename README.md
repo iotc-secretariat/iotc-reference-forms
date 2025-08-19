@@ -55,25 +55,13 @@ The process will take care of:
 -   <https://data.iotc.org/reference/latest/forms/Form-2FC.xlsx>
 -   <https://data.iotc.org/reference/latest/forms/Form-3BU.xlsx>
 -   <https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-3CE-multiple.xlsx>
+-   <https://data.iotc.org/reference/latest/forms/Form-3CE-update.xlsx>
 -   <https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-3AA-multiple.xlsx>
+-   <https://data.iotc.org/reference/latest/forms/Form-3AA-update.xlsx>
 -   <https://data.iotc.org/reference/latest/forms/Form-3DA.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-3DA-multiple.xlsx>
+-   <https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx>
 -   <https://data.iotc.org/reference/latest/forms/Form-4SF.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-4SF-multiple.xlsx>
-
-and
-
--   <https://data.iotc.org/reference/latest/forms/interim/Form-1RC_interim.xlsx>
--   <https://data.iotc.org/reference/latest/forms/interim/Form-1DI_interim.xlsx>
--   <https://data.iotc.org/reference/latest/forms/interim/Form-2FC_interim.xlsx>
--   <https://data.iotc.org/reference/latest/forms/interim/Form-3CE_interim.xlsx>
--   <https://data.iotc.org/reference/latest/forms/interim/Form-3CE_interim-multiple.xlsx>
--   <https://data.iotc.org/reference/latest/forms/interim/Form-4SF_interim.xlsx>
--   <https://data.iotc.org/reference/latest/forms/interim/Form-4SF_interim-multiple.xlsx>
-
-for the *interim* versions of the forms above, which include a *target species* element, and still reference the *legacy* IOTC codelists for [fishery](https://data.iotc.org/reference/latest/domain/legacy/#fisheries) and [species](https://data.iotc.org/reference/latest/domain/legacy/#species).
+-   <https://data.iotc.org/reference/latest/forms/Form-4SF-update.xlsx>
 
 ### Contribution guidelines
 
