@@ -5,8 +5,7 @@
 IOTC data reporting forms have recently undergone a major revision (2023+) which, combined with the introduction of the new approach to the definition of IOTC fisheries, requires:
 
 1.  Defining cleaner, more user-friendly templates which drop client side controls (e.g., Microsoft Excel™ macros) in favour of online validators, while leveraging the new [IOTC reference data catalogue](https://data.iotc.org/reference/latest/)
-2.  Systematically describing the form structure and provide guidelines on how to fill their content
-3.  Accounting for the *interim* period during which two versions of the major IOTC forms (`1RC`, `1DI`, `2FC`, `3CE`, `4SF`, including their *multiple* version, where appropriate) will coexist, one still referencing the *old* [fishery](https://data.iotc.org/reference/latest/domain/legacy/#fisheries) and [species](https://data.iotc.org/reference/latest/domain/legacy/#species) codes as found in the IOTC data reporting guidelines (2014) and in the `IOTCStatistics` database, and including the provision of target species as a side element to the fishery, and one fully adopting the *new* [fisheries](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries) and [species](https://data.iotc.org/reference/latest/domain/biological/#species) codes as found in the `IOTC_master` database.
+2.  Systematically describing the form structure and provide guidelines on how to fill their content. 
 
 Therefore, this repository addresses points 1. and 2. above by:
 
