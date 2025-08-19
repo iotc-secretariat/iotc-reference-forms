@@ -12,12 +12,12 @@
 
 C_REFERENCE_DATA = 
   DBI::dbConnect(drv = RPostgres::Postgres(),
-                 host = '192.168.98.140',
+                 host = Sys.getenv("IOTC_REFERENCE_DATA_DB_SERVER"),
                  dbname = 'IOTC_ReferenceData_2025_07_23',
                  port = 5432,
-                 user = 'ros-admin',
-                 password = 'ros2025-poWer2$')
-
+                 user = Sys.getenv("IOTC_REFERENCE_DATA_DB_USER"),
+                 password = Sys.getenv("IOTC_REFERENCE_DATA_DB_PWD")
+  )
 
 # Version of the Published Code List
 DOI_PERMANENT = "10.5281/zenodo.15743874"
