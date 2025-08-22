@@ -823,7 +823,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 
 # Reporting Deadlines
 
-Take from Res. 24/04
+- **Longline fisheries**: 30 June (preliminary), 30 December (final)
 
 # Reference code lists
 
