@@ -86,7 +86,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Date/time UTC | O | The date and time of the start of observations | YYYY-MM-DDThh:mm | e.g., 1/7/2023  12:00:00 AM
+| Date/time UTC | O | The date and time of the start of observations | YYYY-MM-DDThh:mm | e.g., 2025-09-15 12:00
 :::
 
 | **Disembarkation:** The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still recorded as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , record “at sea”
@@ -117,7 +117,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Date/time UTC | O | The date and time of the end of observations | YYYY-MM-DDThh:mm  |e.g., 1/7/2023  12:00:00 AM
+| Date/time UTC | O | The date and time of the end of observations | YYYY-MM-DDThh:mm  |e.g., 2025-09-15 12:00
 :::
 
 ## Observed Trip Summary
@@ -183,7 +183,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Licensed target species | O | Licensed target species (FAO spp. 3-alpha code) as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all. |**CODE** from TARGET SPECIES CODE |e.g.,   |
+| Licensed target species | O | Licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all. |**CODE** from TARGET SPECIES CODE |e.g.,   |
 | Main Fishing Gear) | M | Vessel main fishing gear | **CODE** from |e.g.,  DL |
 
 | Vessel Personnel: insert description here
@@ -191,8 +191,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Fishing master | M | The fishing master name and nationality in full | Full name: Plain text ; Nationality code: Three-letter (alpha-3) code (ISO 3166) | e.g., John Doe, FRA |
-| Skipper/captain | M | Skipper name and nationality in full | Full name: Plain text ; Nationality code: Three-letter (alpha-3) code (ISO 3166) | e.g. John Doe, FRA |
+| Fishing master | M | The fishing master name and nationality in full | Full name: Plain text ; **Nationality code** from  | e.g., John Doe, FRA |
+| Skipper/captain | M | Skipper name and nationality in full | Full name: Plain text ; **Nationality code** from  | e.g. John Doe, FRA |
 | Crew number | O | The number of crew. This should be cross checked against the vessel's crew list | Integer |  |
 :::
 
@@ -222,7 +222,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 |               |     |     |            |                  |
 |:--------------|:---:|:----|:----------:|:----------------:|
-| Date/time UTC |  O  |     |YYYY-MM-DDThh:mm  |e.g., 1/7/2023  12:00:00 AM |
+| Date/time UTC |  O  |     |YYYY-MM-DDThh:mm  |e.g.,2025-09-15 12:00 |
 :::
 
 ::: {style="margin-left:40px"}
@@ -240,7 +240,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Date/time UTC | O | The date and time the vessel departed from port or from a transshipment location | YYYY-MM-DDThh:mm  |e.g., 1/7/2023  12:00:00 AM |
+| Date/time UTC | O | The date and time the vessel departed from port or from a transshipment location | YYYY-MM-DDThh:mm  |e.g., 2025-09-15 12:00 |
 :::
 
 | Vessel return: The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record ‘at-sea’ plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
@@ -261,7 +261,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 |               |     |     |                             |     |
 |:--------------|:---:|:----|:---------------------------:|:---:|
-| Date/time UTC |  O  |     | YYYY-MM-DDThh:mm |  e.g., 1/7/2023  12:00:00 AM |
+| Date/time UTC |  O  |     | YYYY-MM-DDThh:mm |  e.g., 2025-09-15 12:00 |
 :::
 
 ::: {style="margin-left:40px"}
@@ -279,7 +279,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Date/time UTC | O | The date and time the fishing vessel finishes its fishing campaign. i.e. returns to port or to a transshipment location for unloading. If the observer disembarks before the vessel returns then record expected date and time of arrival (ETA) as provided by the vessel | YYYY-MM-DDThh:mm |  e.g., 1/7/2023  12:00:00 AM |
+| Date/time UTC | O | The date and time the fishing vessel finishes its fishing campaign. i.e. returns to port or to a transshipment location for unloading. If the observer disembarks before the vessel returns then record expected date and time of arrival (ETA) as provided by the vessel | YYYY-MM-DDThh:mm |  e.g., 2025-09-15 12:00 |
 :::
 
 # (V-ATTRIBUTES) Vessel \> Vessel Attributes
@@ -431,7 +431,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Date and time | M | The date and the time in GMT/UTC the first dhan buoy and / or radio buoy is deployed to start the setting of the line |YYYY-MM-DDThh:mm |  e.g., 1/7/2023  12:00:00 AM |
+| Date and time | M | The date and the time in GMT/UTC the first dhan buoy and / or radio buoy is deployed to start the setting of the line |YYYY-MM-DDThh:mm |  e.g., 2025-09-15 12:00|
 | Position | M | The position in latitude and longitude for the start of the setting operation |  dd°mm,m’ N/S | eg., **-20.88** - CORRECT FORMAT?  |
 :::
 
@@ -604,7 +604,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Date and time | M | The date and the time in GMT/UTC when the first dhan buoy and / or radio buoy is hauled back on-board to start hauling the line. | YYYY-MM-DDThh:mm  |  |
+| Date and time | M | The date and the time in GMT/UTC when the first dhan buoy and / or radio buoy is hauled back on-board to start hauling the line. | YYYY-MM-DDThh:mm  | 2025-09-15 12:00 |
 | Position | M | The position in latitude and longitude for the start of the hauling operation | dd°mm,m’ N/S |  |
 :::
 
@@ -613,7 +613,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Date and time | M | The date and the time when the when the last component of the longline gear (dhan buoy and / or radio buoy) is hauled back on-board | YYYY-MM-DDThh:mm  |  |
+| Date and time | M | The date and the time when the when the last component of the longline gear (dhan buoy and / or radio buoy) is hauled back on-board | YYYY-MM-DDThh:mm  | e.g., 2025-09-15 12:00 |
 | Position | M | The position in latitude and longitude for the end of the hauling operation | dd°mm,m’ N/S |  |
 :::
 

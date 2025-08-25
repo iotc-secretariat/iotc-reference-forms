@@ -22,7 +22,7 @@ output:
 
 # Description
 
-REPLACE WITH POLE AND LINE DESCRIPTION:  This form provides for the reporting of estimates of retained catches in live weight equivalent (metric tonnes; t) for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
+This form provides for the reporting of operational and catch data from pole and line fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with pole and line operations, including IOTC species, and other bycatch species.The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of pole and line fisheries on associated and dependent species. Observers are required to complete the form for pole and line operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected.
 
 REPLACE WITH PROPER FORM LINK     Click [here](./Form-1RC.xlsx) to download a blank version of the ROS-PL form, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
@@ -90,7 +90,7 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| -> Date/time UTC | O | Record the date and time of the start of observations  | YYYY-MM-DDThh:mm  |e.g., 1/7/2023  12:00:00 AM |
+| -> Date/time UTC | O | Record the date and time of the start of observations  | YYYY-MM-DDThh:mm  |e.g., 2025-09-15 12:00 |
 :::
 
 
@@ -121,7 +121,7 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | O | Record the date and time of the end of observations  | YYYY-MM-DDThh:mm  | e.g., 1/7/2023  12:00:00 AM |
+| Date/time UTC | O | Record the date and time of the end of observations  | YYYY-MM-DDThh:mm  | e.g., 2025-09-15 12:00 |
 :::
 
 ## Observed trip summary
@@ -213,7 +213,7 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |O |  |  YYYY-MM-DDThh:mm |e.g., 1/7/2023  12:00:00 AM | |
+| Date/time UTC |O |  |  YYYY-MM-DDThh:mm |e.g., 2025-09-15 12:00|
 :::
 ::: {style="margin-left:40px"}
 | At sea
@@ -228,7 +228,7 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |O |  Record the date and time the vessel departed from port or from a transshipment location |  YYYY-MM-DDThh:mm |  e.g., 1/7/2023  12:00:00 AM |
+| Date/time UTC |O |  Record the date and time the vessel departed from port or from a transshipment location |  YYYY-MM-DDThh:mm |  e.g., 2025-09-15 12:00 |
 :::
 
 | **Vessel return:** Record the name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record ‘at-sea’ plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
@@ -247,7 +247,7 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |O |  |  YYYY-MM-DDThh:mm  |e.g., 1/7/2023  12:00:00 AM | |
+| Date/time UTC |O |  |  YYYY-MM-DDThh:mm  |e.g., 2025-09-15 12:00 | |
 
 |At sea
 :::
@@ -261,7 +261,7 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |O |  Record the date and time the fishing vessel finishes its fishing campaign. i.e. returns to port or to a transhipment location for unloading. If the observer disembarks before the vessel returns then record expected date and time of arrival (ETA) as provided by the vessel |  YYYY-MM-DDThh:mm | e.g., 1/7/2023  12:00:00 AM |
+| Date/time UTC |O |  Record the date and time the fishing vessel finishes its fishing campaign. i.e. returns to port or to a transshipment location for unloading. If the observer disembarks before the vessel returns then record expected date and time of arrival (ETA) as provided by the vessel |  YYYY-MM-DDThh:mm | e.g., 2025-09-15 12:00 |
 :::
 
 
@@ -281,9 +281,9 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| -> Make |O  |  |Free entry. Plain text  |  |
-| -> Power value |O  |  |Float  |  |
-| -> KW/HP/BHP |O  |  |Power units code (KW, HP, or BHP)  |  |
+| Make |O  |  |Free entry. Plain text  |  |
+| Power value |O  |  |Float  |  |
+| KW/HP/BHP |O  |  |Power units code (KW, HP, or BHP)  |  |
 :::
 
 | Fish storage capacity |O  | The vessel total maximum capacity to store catches. This should include blast freezer(s) capacity. Note: specify units (metric Tons (mT.) or cubic meters (m3)) - from original ROS description form** | Float |  |
@@ -296,8 +296,8 @@ Note: specify units( days or nautical miles)"  - from original ROS description f
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| -> Value  | O |  |Float  |  |
-| -> Days/NM |  |  |Select DAYS or NM  |  |
+| Value  | O |  |Float  |  |
+| Days/NM |  |  |Select DAYS or NM  |  |
 :::
 
 ## Vessel Electronics
@@ -371,7 +371,7 @@ Note: specify units( days or nautical miles)"  - from original ROS description f
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | M  |   |  YYYY-MM-DDThh:mm  | e.g., 1/7/2023  12:00:00 AM | |
+| Date/time UTC | M  |   |  YYYY-MM-DDThh:mm  | e.g., 2025-09-15 12:00 | |
 
 | position: Record the position in latitude and longitude for the start of the setting operation
 :::
@@ -386,7 +386,7 @@ Note: specify units( days or nautical miles)"  - from original ROS description f
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | M  |   |  YYYY-MM-DDThh:mm  | e.g., 1/7/2023  12:00:00 AM  |
+| Date/time UTC | M  |   |  YYYY-MM-DDThh:mm  | e.g., 2025-09-15 12:00  |
 **ALERT! IS THERE A LAT / LONG SECTION HERE?**
 :::
 
@@ -602,7 +602,7 @@ Note: specify units( days or nautical miles)"  - from original ROS description f
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | O  |  |  YYYY-MM-DDThh:mm   |  |
+| Date/time UTC | O  |  |  YYYY-MM-DDThh:mm   | e.g., 2025-09-15 12:00 |
 | 
 | Position: Record the position in latitude and longitude for the start of the setting operation
 :::
@@ -617,7 +617,7 @@ Note: specify units( days or nautical miles)"  - from original ROS description f
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | O  |  |  YYYY-MM-DDThh:mm   |  |
+| Date/time UTC | O  |  |  YYYY-MM-DDThh:mm   |e.g., 2025-09-15 12:00  |
 
 | Position: Record the position in latitude and longitude for the end of the setting operation
 :::
@@ -635,7 +635,8 @@ Note: specify units( days or nautical miles)"  - from original ROS description f
 | Value | O  |  | Float  |  |
 | FT / M | O  |  |Indicate units (FT or M)  |  |
 :::
-
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Fishing gear | O  |  |  |  |
 | Number of fishers  | O  |  |  |  |
 
