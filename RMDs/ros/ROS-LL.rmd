@@ -86,7 +86,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Data/time UTC | O | The date and time of the start of observations | YYYY-MM-DDThh:mm | e.g., 1/7/2023  12:00:00 AM
+| Date/time UTC | O | The date and time of the start of observations | YYYY-MM-DDThh:mm | e.g., 1/7/2023  12:00:00 AM
 :::
 
 | **Disembarkation:** The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still recorded as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , record “at sea”
@@ -117,7 +117,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Data/time UTC | O | The date and time of the end of observations | YYYY-MM-DDThh:mm  |e.g., 1/7/2023  12:00:00 AM
+| Date/time UTC | O | The date and time of the end of observations | YYYY-MM-DDThh:mm  |e.g., 1/7/2023  12:00:00 AM
 :::
 
 ## Observed Trip Summary
@@ -693,7 +693,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 
 | Element  | Requirement | Description                   | Format | Input value |
 |:---------|:-----------:|:------------------------------|:------:|:-----------:|
-| Length 1 |      M      | Length of individual specimen |        |             |
+| Length 1: Length of individual specimen
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
@@ -704,7 +704,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 | Is straight | M | Yes or No | Yes/No |  |
 :::
 
-| Length 2:
+| Length 2: definition?
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
