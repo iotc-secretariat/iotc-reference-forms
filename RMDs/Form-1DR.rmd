@@ -1,5 +1,5 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 1DR"
+title: "IOTC Statistical Data Reporting: Form 1DR (v`r DOI_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -34,8 +34,8 @@ For the combination of each taxon, gear group, and fishery category listed in th
 | Element | Requirement | Description | Format | Input value  |
 | :-------- | :-----: | :----------------------- | :----- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g. 1996 |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code_iso3** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code_iso3** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code** from [Countries](#countries) |
 
 ## Main Data Elements
 
@@ -65,8 +65,8 @@ For the combination of each taxon, gear group, and fishery category listed in th
 ## Entities {#entities}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
-+ **Version:** `r version_number("ENTITIES")`
-+ **Last updated**: `r last_update("ENTITIES")`
++ **Version**: `r version_number("ENTITIES")`
++ **Last update**: `r last_update("ENTITIES")`
 
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
@@ -75,8 +75,8 @@ out_dt(ENTITIES, "ENTITIES")
 ## Countries {#countries}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
-+ **Version:** `r version_number("COUNTRIES")`
-+ **Last updated**: `r last_update("COUNTRIES")`
++ **Version**: `r version_number("COUNTRIES")`
++ **Last update**: `r last_update("COUNTRIES")`
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
@@ -85,8 +85,8 @@ out_dt(COUNTRIES, "COUNTRIES")
 ## Gear Groups {#gearGroups}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups)
-+ **Version:** `r version_number("GEAR_GROUPS")`
-+ **Last updated**: `r last_update("GEAR_GROUPS")`
++ **Version**: `r version_number("GEAR_GROUPS")`
++ **Last update**: `r last_update("GEAR_GROUPS")`
 
 ```{r collapse = TRUE}
 out_dt(GEAR_GROUPS, "GEAR_GROUPS")
@@ -95,8 +95,8 @@ out_dt(GEAR_GROUPS, "GEAR_GROUPS")
 ## Species {#1DRspecies}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
-+ **Version:** `r version_number("SPECIES")`
-+ **Last updated**: `r last_update("SPECIES")`
++ **Version**: `r version_number("SPECIES")`
++ **Last update**: `r last_update("SPECIES")`
 
 ```{r collapse = TRUE}
 out_dt(SPECIES_1DR, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
@@ -105,8 +105,8 @@ out_dt(SPECIES_1DR, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", font
 ## Fishery Categories {#fisheryCategories}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheryCategories)
-+ **Version:** `r version_number("FISHERY_CATEGORIES")`
-+ **Last updated**: `r last_update("FISHERY_CATEGORIES")`
++ **Version**: `r version_number("FISHERY_CATEGORIES")`
++ **Last update**: `r last_update("FISHERY_CATEGORIES")`
 
 ```{r collapse = TRUE}
 out_dt(FISHERY_CATEGORIES, "FISHERY_CATEGORIES")

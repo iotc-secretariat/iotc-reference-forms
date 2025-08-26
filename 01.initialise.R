@@ -44,7 +44,7 @@ version_number = function(codelist_name, codelist_schema = NA) {
 
 last_update = function(codelist_name, codelist_schema = NA) {
   return(
-    details(codelist_name, codelist_schema)$LAST_UPDATE[1]
+    as.Date(details(codelist_name, codelist_schema)$LAST_UPDATE[1])
   )
 }
 
@@ -57,13 +57,30 @@ V_MAPPINGS = merge(V_MAPPINGS, CODELISTS_VERSIONS, by = c("CL_SCHEMA", "CL_NAME"
 
 CODELISTS_VERSIONS = unique(rbind(CODELISTS_VERSIONS, V_MAPPINGS))
 
+# read_codelist = function(base_url = "https://data.iotc.org/reference/latest/domain/", domain, schema = NA, codelist) {
+#   if(is.na(schema)) 
+#     schema = domain
+#   
+#   CL = CODELISTS_VERSIONS[CL_SCHEMA == paste0("refs_", schema) & CL_NAME == codelist]
+#    
+#   return(
+#     as.data.table(
+#       read.csv2(
+#         paste0(base_url, domain, "/codelists/", codelist, "_", BASE_VERSION, ".", CL$VERSION, ".csv"),
+#         header = TRUE,
+#         sep = ","
+#       )
+#     )
+#   )
+# }
+
 read_codelist = function(base_url = "https://data.iotc.org/reference/latest/domain/", domain, schema = NA, codelist) {
   if(is.na(schema)) 
     schema = domain
   
   CL = CODELISTS_VERSIONS[CL_SCHEMA == paste0("refs_", schema) & CL_NAME == codelist]
   
-  return(
+  CL_DATA = 
     as.data.table(
       read.csv2(
         paste0(base_url, domain, "/codelists/", codelist, "_", BASE_VERSION, ".", CL$VERSION, ".csv"),
@@ -71,8 +88,12 @@ read_codelist = function(base_url = "https://data.iotc.org/reference/latest/doma
         sep = ","
       )
     )
-  )
+  setnames(CL_DATA, new = toupper(names(CL_DATA)))
+  return(CL_DATA)
 }
+
+
+
 
 # Reads all required codelists from the (remote) repository on https://data.iotc.org/reference/latest/domain/<domain>/codelists/<codelist>_<codelist_version>
 
@@ -124,7 +145,7 @@ VESSEL_ARCHITECTURES                = read_codelist(domain = "fisheries", schema
 
 VESSEL_SIZE_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_SIZE_TYPES")
 
-MECHANISATION_TYPES       = read_codelist(domain = "fisheries", schema = "fishery", codelist = "MECHANIZATION_TYPES")
+MECHANISATION_TYPES       = read_codelist(domain = "fisheries", schema = "fishery", codelist = "MECHANISATION_TYPES")
 
 FISH_PRESERVATION_METHODS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PRESERVATION_METHODS")
 
@@ -160,7 +181,7 @@ CATCH_UNITS         = read_codelist(domain = "fisheries", schema = "fishery", co
 
 # BIOLOGY AND MORPHOMETRICS CODE LISTS ####
 
-SPECIES           = read_codelist(domain = "biology", schema = "biological", codelist = "SPECIES")
+SPECIES           = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
 
 SPECIES_1DR_CODES = data.table(read.xlsx("./form_reporting_templates/Form-1DR.xlsx", sheet = "Data", cols = 3, startRow = 4))
 
@@ -168,23 +189,23 @@ setnames(SPECIES_1DR_CODES, old = "Code", new = "CODE")
 
 SPECIES_1DR       = merge(SPECIES_1DR_CODES, SPECIES, by.x = "CODE", by.y = "CODE", all.x = TRUE)
 
-RETAIN_REASONS        = read_codelist(domain = "biology", schema = "biological", codelist = "RETAIN_REASONS")
+RETAIN_REASONS        = read_codelist(domain = "biology", schema = "biology", codelist = "RETAIN_REASONS")
 
-DISCARD_REASONS       = read_codelist(domain = "biology", schema = "biological", codelist = "DISCARD_REASONS")
+DISCARD_REASONS       = read_codelist(domain = "biology", schema = "biology", codelist = "DISCARD_REASONS")
 
-INDIVIDUAL_CONDITIONS = read_codelist(domain = "biology", schema = "biological", codelist = "INDIVIDUAL_CONDITIONS")
+INDIVIDUAL_CONDITIONS = read_codelist(domain = "biology", schema = "biology", codelist = "INDIVIDUAL_CONDITIONS")
 
-MEASUREMENTS          = read_codelist(domain = "biology", schema = "biological", codelist = "MEASUREMENTS")
+MEASUREMENTS          = read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENTS")
 
-MEASUREMENT_TOOLS     = read_codelist(domain = "biology", schema = "biological", codelist = "MEASUREMENT_TOOLS")
+MEASUREMENT_TOOLS     = read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENT_TOOLS")
 
-TYPES_OF_MEASUREMENT  = read_codelist(domain = "biology", schema = "biological", codelist = "TYPES_OF_MEASUREMENT")
+TYPES_OF_MEASUREMENT  = read_codelist(domain = "biology", schema = "biology", codelist = "TYPES_OF_MEASUREMENT")
 
-TYPES_OF_FATE         = read_codelist(domain = "biology", schema = "biological", codelist = "TYPES_OF_FATE")
+TYPES_OF_FATE         = read_codelist(domain = "biology", schema = "biology", codelist = "TYPES_OF_FATE")
 
-FATES                 = read_codelist(domain = "biology", schema = "biological", codelist = "FATES")
+FATES                 = read_codelist(domain = "biology", schema = "biology", codelist = "FATES")
 
-SEX                   = read_codelist(domain = "biology", schema = "biological", codelist = "SEX")
+SEX                   = read_codelist(domain = "biology", schema = "biology", codelist = "SEX")
 
 # SOCIO-ECONOMIC CODE LISTS ####
 COUNTRIES_CURRENCIES   = read_codelist(domain = "economics", schema = "socio_economics", codelist = "COUNTRIES_CURRENCIES")

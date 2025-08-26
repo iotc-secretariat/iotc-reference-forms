@@ -1,5 +1,5 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 1DI"
+title: "IOTC Statistical Data Reporting: Form 1DI (v`r DOI_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -36,8 +36,8 @@ Number or live weight of discards by species, including their condition at relea
 | Element | Requirement | Description | Format | Input value  |
 | :-------- | :-----: | :----------------------- | :----- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 | 
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code_iso3** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code_iso3** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code** from [Countries](#countries) |
 
 ## Main Data Elements
 
@@ -83,8 +83,8 @@ Number or live weight of discards by species, including their condition at relea
 ## Entities {#entities}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
-+ **Version:** `r version_number("ENTITIES")`
-+ **Last updated**: `r last_update("ENTITIES")`
++ **Version**: `r version_number("ENTITIES")`
++ **Last update**: `r last_update("ENTITIES")`
 
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
@@ -93,8 +93,8 @@ out_dt(ENTITIES, "ENTITIES")
 ## Countries {#countries}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
-+ **Version:** `r version_number("COUNTRIES")`
-+ **Last updated**: `r last_update("COUNTRIES")`
++ **Version**: `r version_number("COUNTRIES")`
++ **Last update**: `r last_update("COUNTRIES")`
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
@@ -103,8 +103,8 @@ out_dt(COUNTRIES, "COUNTRIES")
 ## Fisheries {#fisheries}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries)
-+ **Version:** `r version_number("FISHERIES")`
-+ **Last updated**: `r last_update("FISHERIES")`
++ **Version**: `r version_number("FISHERIES")`
++ **Last update**: `r last_update("FISHERIES")`
 
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
@@ -113,8 +113,8 @@ out_dt(FISHERIES, "FISHERIES")
 ## IOTC Main Areas {#IOTCareasMain}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#IOTCareasMain)
-+ **Version:** `r version_number("IOTC_MAIN_AREAS")`
-+ **Last updated**: `r last_update("IOTC_MAIN_AREAS")`
++ **Version**: `r version_number("IOTC_MAIN_AREAS")`
++ **Last update**: `r last_update("IOTC_MAIN_AREAS")`
 
 ![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
 
@@ -125,8 +125,8 @@ out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 ## Reasons For Discarding {#discardReasons}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#discardReasons)
-+ **Version:** `r version_number("DISCARD_REASONS")`
-+ **Last updated**: `r last_update("DISCARD_REASONS")`
++ **Version**: `r version_number("DISCARD_REASONS")`
++ **Last update**: `r last_update("DISCARD_REASONS")`
 
 ```{r collapse = TRUE}
 out_dt(DISCARD_REASONS, "DISCARD_REASONS")
@@ -135,8 +135,8 @@ out_dt(DISCARD_REASONS, "DISCARD_REASONS")
 ## Species {#allSpecies}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
-+ **Version:** `r version_number("SPECIES")`
-+ **Last updated**: `r last_update("SPECIES")`
++ **Version**: `r version_number("SPECIES")`
++ **Last update**: `r last_update("SPECIES")`
 
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
@@ -145,8 +145,8 @@ out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyl
 ## Conditions {#individualConditions}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#individualConditions)
-+ **Version:** `r version_number("INDIVIDUAL_CONDITIONS")`
-+ **Last updated**: `r last_update("INDIVIDUAL_CONDITIONS")`
++ **Version**: `r version_number("INDIVIDUAL_CONDITIONS")`
++ **Last update**: `r last_update("INDIVIDUAL_CONDITIONS")`
 
 ```{r collapse = TRUE}
 out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
@@ -155,8 +155,8 @@ out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
 ## Data Raisings {#dataRaising}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#raisings)
-+ **Version:** `r version_number("DATA_RAISINGS")`
-+ **Last updated**: `r last_update("DATA_RAISINGS")`
++ **Version**: `r version_number("DATA_RAISINGS")`
++ **Last update**: `r last_update("DATA_RAISINGS")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
@@ -165,8 +165,8 @@ out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ## Catch Units {#catchUnits}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#catchUnits)
-+ **Version:** `r version_number("CATCH_UNITS")`
-+ **Last updated**: `r last_update("CATCH_UNITS")`
++ **Version**: `r version_number("CATCH_UNITS")`
++ **Last update**: `r last_update("CATCH_UNITS")`
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
@@ -175,8 +175,8 @@ out_dt(CATCH_UNITS, "CATCH_UNITS")
 ## Types of Data {#datatypes}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#types)
-+ **Version:** `r version_number("DATA_TYPES")`
-+ **Last updated**: `r last_update("DATA_TYPES")`
++ **Version**: `r version_number("DATA_TYPES")`
++ **Last update**: `r last_update("DATA_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
@@ -185,8 +185,8 @@ out_dt(DATA_TYPES, "DATA_TYPES")
 ## Discards Data Sources {#dataSourcesDI}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesDI)
-+ **Version:** `r version_number("DATA_SOURCES_DI")`
-+ **Last updated**: `r last_update("DATA_SOURCES_DI")`
++ **Version**: `r version_number("DATA_SOURCES_DI")`
++ **Last update**: `r last_update("DATA_SOURCES_DI")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_DI, "DATA_SOURCES_DI")
@@ -195,8 +195,8 @@ out_dt(DATA_SOURCES_DI, "DATA_SOURCES_DI")
 ## Discards Data Processings {#dataProcessingsDI}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#processingsDI)
-+ **Version:** `r version_number("DATA_PROCESSINGS_DI")`
-+ **Last updated**: `r last_update("DATA_PROCESSINGS_DI")`
++ **Version**: `r version_number("DATA_PROCESSINGS_DI")`
++ **Last update**: `r last_update("DATA_PROCESSINGS_DI")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_DI, "DATA_PROCESSINGS_DI")
@@ -205,8 +205,8 @@ out_dt(DATA_PROCESSINGS_DI, "DATA_PROCESSINGS_DI")
 ## Types Of Coverage {#coverageTypes}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#coverageTypes)
-+ **Version:** `r version_number("COVERAGE_TYPES")`
-+ **Last updated**: `r last_update("COVERAGE_TYPES")`
++ **Version**: `r version_number("COVERAGE_TYPES")`
++ **Last update**: `r last_update("COVERAGE_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")

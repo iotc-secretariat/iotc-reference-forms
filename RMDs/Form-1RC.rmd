@@ -1,5 +1,5 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 1RC"
+title: "IOTC Statistical Data Reporting: Form 1RC (v`r DOI_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -36,8 +36,8 @@ Total live weight of retained catches by species, along with information on the 
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:----- |:------------:|
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code_iso3** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code_iso3** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code** from [Countries](#countries) |
 
 ## Main Data Elements
 
@@ -81,7 +81,7 @@ Total live weight of retained catches by species, along with information on the 
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
 + **Version:** `r version_number("ENTITIES")`
-+ **Last updated**: `r last_update("ENTITIES")`
++ **Last update**: `r last_update("ENTITIES")`
 
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
@@ -91,7 +91,7 @@ out_dt(ENTITIES, "ENTITIES")
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
 + **Version:** `r version_number("COUNTRIES")`
-+ **Last updated**: `r last_update("COUNTRIES")`
++ **Last update**: `r last_update("COUNTRIES")`
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
@@ -101,7 +101,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#IOTCareasMain)
 + **Version:** `r version_number("IOTC_MAIN_AREAS")`
-+ **Last updated**: `r last_update("IOTC_MAIN_AREAS")`
++ **Last update**: `r last_update("IOTC_MAIN_AREAS")`
 
 ![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
 
@@ -113,7 +113,7 @@ out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries)
 + **Version:** `r version_number("FISHERIES")`
-+ **Last updated**: `r last_update("FISHERIES")`
++ **Last update**: `r last_update("FISHERIES")`
 
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
@@ -123,7 +123,7 @@ out_dt(FISHERIES, "FISHERIES")
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
 + **Version:** `r version_number("SPECIES")`
-+ **Last updated**: `r last_update("SPECIES")`
++ **Last update**: `r last_update("SPECIES")`
 
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
@@ -133,7 +133,7 @@ out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyl
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#retainReasons)
 + **Version:** `r version_number("RETAIN_REASONS")`
-+ **Last updated**: `r last_update("RETAIN_REASONS")`
++ **Last update**: `r last_update("RETAIN_REASONS")`
 
 ```{r collapse = TRUE}
 out_dt(RETAIN_REASONS, "RETAIN_REASONS")
@@ -143,7 +143,7 @@ out_dt(RETAIN_REASONS, "RETAIN_REASONS")
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#types)
 + **Version:** `r version_number("DATA_TYPES")`
-+ **Last updated**: `r last_update("DATA_TYPES")`
++ **Last update**: `r last_update("DATA_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
@@ -153,7 +153,7 @@ out_dt(DATA_TYPES, "DATA_TYPES")
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesRC)
 + **Version:** `r version_number("DATA_SOURCES_RC")`
-+ **Last updated**: `r last_update("DATA_SOURCES_RC")`
++ **Last update**: `r last_update("DATA_SOURCES_RC")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_RC, "DATA_SOURCES_RC")
@@ -163,7 +163,7 @@ out_dt(DATA_SOURCES_RC, "DATA_SOURCES_RC")
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#processingsRC)
 + **Version:** `r version_number("DATA_PROCESSINGS_RC")`
-+ **Last updated**: `r last_update("DATA_PROCESSINGS_RC")`
++ **Last update**: `r last_update("DATA_PROCESSINGS_RC")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_RC, "DATA_PROCESSINGS_RC")
@@ -173,7 +173,7 @@ out_dt(DATA_PROCESSINGS_RC, "DATA_PROCESSINGS_RC")
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#coverageTypes)
 + **Version:** `r version_number("COVERAGE_TYPES")`
-+ **Last updated**: `r last_update("COVERAGE_TYPES")`
++ **Last update**: `r last_update("COVERAGE_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")

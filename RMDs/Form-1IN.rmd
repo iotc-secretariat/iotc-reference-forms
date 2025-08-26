@@ -1,5 +1,5 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 1IN"
+title: "IOTC Statistical Data Reporting: Form 1IN  (v`r DOI_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -36,8 +36,8 @@ Number of interactions along with information on the value (%) and type of sampl
 | Element | Requirement | Description | Format | Input value  |
 | :-------------- | :-----: | :----------------------- | :----- | :-------: |
 | Reporting year | M | Gregorian calendar year of the reported fishing activities in the dataset | Integer | e.g., 1996 |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code_iso3** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country of registration of the fishing vessels | String | **Code_iso3** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country of registration of the fishing vessels | String | **Code** from [Countries](#countries) |
 
 ## Main Data Elements
 
@@ -74,8 +74,8 @@ Number of interactions along with information on the value (%) and type of sampl
 ## Entities {#entities}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
-+ **Version:** `r version_number("ENTITIES")`
-+ **Last updated**: `r last_update("ENTITIES")`
++ **Version**: `r version_number("ENTITIES")`
++ **Last update**: `r last_update("ENTITIES")`
 
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
@@ -84,8 +84,8 @@ out_dt(ENTITIES, "ENTITIES")
 ## Countries {#countries}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
-+ **Version:** `r version_number("COUNTRIES")`
-+ **Last updated**: `r last_update("COUNTRIES")`
++ **Version**: `r version_number("COUNTRIES")`
++ **Last update**: `r last_update("COUNTRIES")`
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
@@ -94,8 +94,8 @@ out_dt(COUNTRIES, "COUNTRIES")
 ## IOTC Main Areas {#IOTCareasMain}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/admin/#IOTCareasMain)
-+ **Version:** `r version_number("IOTC_MAIN_AREAS")`
-+ **Last updated**: `r last_update("IOTC_MAIN_AREAS")`
++ **Version**: `r version_number("IOTC_MAIN_AREAS")`
++ **Last update**: `r last_update("IOTC_MAIN_AREAS")`
 
 ![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
 
@@ -106,8 +106,8 @@ out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 ## Fisheries {#fisheries}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries)
-+ **Version:** `r version_number("FISHERIES")`
-+ **Last updated**: `r last_update("FISHERIES")`
++ **Version**: `r version_number("FISHERIES")`
++ **Last update**: `r last_update("FISHERIES")`
 
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
@@ -116,8 +116,8 @@ out_dt(FISHERIES, "FISHERIES")
 ## Types of Data {#datatypes}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#types)
-+ **Version:** `r version_number("DATA_TYPES")`
-+ **Last updated**: `r last_update("DATA_TYPES")`
++ **Version**: `r version_number("DATA_TYPES")`
++ **Last update**: `r last_update("DATA_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
@@ -126,8 +126,8 @@ out_dt(DATA_TYPES, "DATA_TYPES")
 ## Types of Coverage {#coverageTypes}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#coverageTypes)
-+ **Version:** `r version_number("COVERAGE_TYPES")`
-+ **Last updated**: `r last_update("COVERAGE_TYPES")`
++ **Version**: `r version_number("COVERAGE_TYPES")`
++ **Last update**: `r last_update("COVERAGE_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")

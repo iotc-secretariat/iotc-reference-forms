@@ -1,5 +1,5 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 3CE"
+title: "IOTC Statistical Data Reporting: Form 3CE (v`r DOI_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -36,8 +36,8 @@ Total number and/or live weight of retained catches by species and effort by str
 | Element | Requirement | Description | Format | Input value  |
 | :----------------- | :-----: | :----------------------- | :----- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code_iso3** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | String | **Code_iso3** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | String | **Code** from [Countries](#countries) |
 
 ## Main Data Elements
 
