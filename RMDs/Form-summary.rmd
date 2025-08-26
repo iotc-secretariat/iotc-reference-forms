@@ -155,16 +155,16 @@ The ROS data reporting forms were revised during the 20^th^ Session of the Worki
 
 ## Form ROS-GN | Gillnets
 
-+ [Form template](./ros/Form)
++ [Form template](./Form-ROS-GN.xlsx)
 
 ## Form ROS-LL | Longlines
 
-+ [Form template](https://iotc.org/sites/default/files/documents/data/ROS_Forms_2025/IOTC_ROS_LL_reporting_form.xlsx)
++ [Form template](./Form-ROS-LL.xlsx)
 
 ## Form ROS-PL | Pole-and-Lines
 
-+ [Form template](https://iotc.org/sites/default/files/documents/data/ROS_Forms_2025/IOTC_ROS_PL_reporting_form.xlsx)
++ [Form template](./Form-ROS-PL.xlsx)
 
 ## Form ROS-PS | Purse Seines
 
-+ [Form template](https://iotc.org/sites/default/files/documents/data/ROS_Forms_2025/IOTC_ROS_PS_reporting_form.xlsx)
++ [Form template](./Form-ROS-PS.xlsx)
