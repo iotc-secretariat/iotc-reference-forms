@@ -3,7 +3,7 @@ SERVER_ROOT = "/reference"
 
 FORMS_FOLDER         = "forms"
 INTERIM_FORMS_FOLDER = paste0(FORMS_FOLDER, "/interim")
-LEGACY_FORMS_FOLDER = paste0(FORMS_FOLDER, "/legacy")
+LEGACY_FORMS_FOLDER  = paste0(FORMS_FOLDER, "/legacy")
 
 DATA_IOTC_SERVER_IP = Sys.getenv("DATA_IOTC_SERVER_IP")
 DATA_IOTC_USERNAME  = Sys.getenv("DATA_IOTC_USERNAME")

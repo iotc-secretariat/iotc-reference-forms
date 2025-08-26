@@ -39,7 +39,7 @@ For the submission of data on [_species presence in the catch_](https://data.iot
 
 + [Form template](./Form-1DR.xlsx)
 + [Form description](./Form-1DR.html)
-+ [Form example]()
+<!-- + [Form example]() -->
 
 ## Form 1IN {#1IN}
 
@@ -154,7 +154,7 @@ The ROS data reporting forms were revised during the 20^th^ Session of the Worki
 
 ## Form ROS-GN | Gillnets
 
-+ [Form template](https://iotc.org/sites/default/files/documents/science/ROS-files/reporting/1.0.0/ROS_GN_data_reporting.xlsx)
++ [Form template](./ros/Form)
 
 ## Form ROS-LL | Longlines
 
