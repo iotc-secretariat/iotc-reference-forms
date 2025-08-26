@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting: Form ROS-LL (v`r BASE_VERSION`)"
+title: "IOTC statistical data reporting: Form ROS-LL"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -23,11 +23,13 @@ output:
 
 This form provides for the reporting of operational and catch data from longline fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with longline operations, including IOTC species, and other bycatch species.The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of longline fisheries on associated and dependent species.Observers are required to complete the form for longline operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected.
 
-REPLACE WITH PROPER FORM LINK Click [here](./Form-1RC.xlsx) to download a blank version of Form 1RC, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](./Form-ROS-LL.xlsx) to download a blank version of Form ROS-LL, or [return](./index.html) to the list of all IOTC data reporting forms.
 
 # Data Content
 
-Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, set position); operational details of each set; catch and bycatch by species in number and weight; fate of catch (retained/discarded); interactions with sharks, seabirds, turtles, and other species; and mitigation measures used. Data are stratified by year, fleet, fishery, and IOTC main area.
+Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, set position); operational details of each set; catch and bycatch by species in number and weight; fate of catch (retained/discarded); interactions with sharks, seabirds, turtles, and other species; and mitigation measures used.
+
+<!-- Data are stratified by year, fleet, fishery, and IOTC main area. -->
 
 # Metadata
 
@@ -41,7 +43,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g.,1996 |
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
-| Reporting flag / Chartering state | M | The reporting flag or chartering state **OR** Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |  |
+| Reporting flag / Chartering state | M | The reporting flag or chartering state **OR** three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |  |
 | Data source | M | The source of data provided (Observer data or EM DATA) |  |  |
 
 # (O-INFO) Observer and Observed Trip Information
@@ -342,8 +344,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Waste category | O | The category of the waste produced by the vessel | **Code** from [Waste Categories] (#wasteCategories) | e.g., CP |
-| Storage/disposal method | O | How the waste was disposed of | **Code** from [Storage/Disposal Methods] (#storageDisposalMethods)| e.g., AS |
+| Waste category | O | The category of the waste produced by the vessel | **Code** from [Waste Categories](#wasteCategories) | e.g., CP |
+| Storage/disposal method | O | How the waste was disposed of | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., AS |
 
 # (G-GENERAL) Longline General Gear Specifications
 
@@ -371,7 +373,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Configuration number | O | Unique number for a specific branchline specification as detailed based on the fields below | Integer |  |
 | Section number | O |  | Integer |  |
-| Material type code | O | The branchline material for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | **Code** from [Line Material Types] (#lineMaterialTypes) | e.g., NL |
+| Material type code | O | The branchline material for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., NL |
 | Length (M) | O | Length of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float |  |
 | Diameter (cm) | O | Length of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float |  |
 
@@ -379,7 +381,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Storage codes | O | If the branch lines are coiled up and packed into baskets (BSK), or layered out in tubs (TBS), or coiled up onto reels (RLS) | **Code** from [Branchline Storages] (#branchlineStorages) | e.g., BA |
+| Storage codes | O | If the branch lines are coiled up and packed into baskets (BSK), or layered out in tubs (TBS), or coiled up onto reels (RLS) | **Code** from [Branchline Storages](#branchlineStorages) | e.g., BA |
 
 # (G-CONFIG-MITIGATION-DEVICES) Longline Gear Specifications > Mitigation Devices
 
@@ -405,9 +407,9 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 ## Other Mitigation Devices
 
-| Element      | Requirement | Description |          Format          | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Device codes |      O      |             | **Code** from [Mitigation Devices] (#mitigationDevices) |    e.g., AA  |
+| Device codes |  O |  | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., AA |
 
 # (E-SET) Longline Fishing Events > Setting Operations
 
@@ -448,9 +450,9 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ::: {style="margin-left:40px"}
 | Element       | Requirement | Description |          Format          | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Material code |      O      |             |  **Code** from [Line Material Types] (#lineMaterialTypes) |    e.g., NL   |
-| value         |      O      |             |          Float           |             |
-| KM/NM         |      O      |             | Indicate unit (KM or NM) |             |
+| Material code | O | |  **Code** from [Line Material Types](#lineMaterialTypes) | e.g., NL |
+| value         | O | |  Float  | |
+| KM/NM         | O | | Indicate unit (KM or NM) | |
 :::
 
 | Clip on time
@@ -481,7 +483,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Material code | M | Each leader type used in the set  | **Code** from [Line Material Types] (#lineMaterialTypes) | e.g., NL |
+| Material code | M | Each leader type used in the set  | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., NL |
 | Percentage | M | for each leader type used in the set, estimate the percentage of total branchlines in the set using that leader type. Estimate by counting the number of branchlines in a basket by leader type and dividing each count by the total hooks in the basket. This assumes uniform use of leader types across baskets in a set. Estimates should be adjusted if there is variation across baskets (within a set) in leader proportions | Float |  |
 :::
 
@@ -512,8 +514,8 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ::: {style="margin-left:40px"}
 | Element          | Requirement | Description |    Format     | Input value |
 |:-----------------|:-----------:|:------------|:-------------:|:-----------:|
-| Type code        |      M      |             | **Code** from [Light Types] (#lightTypes) |  e.g., CL   |
-| Colour code      |      M      |             | **Code** from [Light Colours] (#lightColours) |  e.g., BU   |
+| Type code        |      M      |             | **Code** from [Light Types](#lightTypes) |  e.g., CL   |
+| Colour code      |      M      |             | **Code** from [Light Colours](#lightColours) |  e.g., BU   |
 | Number of lights |      M      |             |    Integer    |             |
 :::
 
@@ -550,7 +552,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Measure codes | M | Any other mitigation measures observed | **Code** from [Mitigation Devices] (#mitigationDevices) | e.g., AA |
+| Measure codes | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., AA |
 
 # (E-SET-HOOKS)
 
@@ -563,7 +565,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Types codes | M | The types of hooks used | **Code** from [Hook Types] (#hookTypes) |  |
+| Types codes | M | The types of hooks used | **Code** from [Hook Types](#hookTypes) |  |
 | Percentage | O | The percentage (%) of hooks set by type | Float |  |
 | Variations | O | Where possible indicate any variations in hook type, hook material, and presence/absence of hook ring | Free entry. Plain text. |  |
 
@@ -578,8 +580,8 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Condition code | M | Bait type/condition used | **Code** from [Bait Conditions] (#baitConditions) |e.g., DE  |
-| Species code | M | The species/species group of bait used (FAO spp. 3-alpha code) | **Code** from [Bait Species] (#baitSpecies) | e.g., ANX |
+| Condition code | M | Bait type/condition used | **Code** from [Bait Conditions](#baitConditions) |e.g., DE  |
+| Species code | M | The species/species group of bait used (FAO spp. 3-alpha code) | **Code** from [Bait Species](#baitSpecies) | e.g., ANX |
 | Percentage | M | The approximate proportion of bait species and condition used across all hooks in the set (%) | Float |  |
 | Dye colour | O | The colour or colours that the different baits are dyed (e.g. blue to avoid bird bycatch). If none, write NONE | Free entry. Plain text. |  |
 
@@ -614,7 +616,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 |  |  |  |  |  |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Offal management | O | Fate given to the offal (fish heads, guts, etc.) and bait produced during the observed set. Indicate if these are retained for batch disposal (BD) at a later stage and/or disposed of ad hoc (AH) as they accumulate | **Code** from [Offal Management Types] (#offalManagementTypes) | e.g., AH |
+| Offal management | O | Fate given to the offal (fish heads, guts, etc.) and bait produced during the observed set. Indicate if these are retained for batch disposal (BD) at a later stage and/or disposed of ad hoc (AH) as they accumulate | **Code** from [Offal Management Types](#offalManagementTypes) | e.g., AH |
 | Position of offal disposal - position code | O | The position where offal and used bait was disposed. Indicate if these are disposed at port side (BB), starboard (SB) or aft (AF) | \*\*MISSING CODES- DEFINE |  |
 | Bird scaring device at hauler | M | Yes if a bird scaring device was deployed during hauling operations and No if not. | Yes/No |  |
 | Number of branchline haulings observed | M | The number of branchline haulings observed | Integer |  |
@@ -777,7 +779,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Material code | M | For SSI only, record the leader material the individual was hauled on (Table 16). [Consistent with IOTC Res 12-04 and IOTC Res. 17/05] - from original ROS description form\*\* | **Code** from | e.g |
-| Diameter (mm) | O | For SSI only, record the thickness of the leader the individual was hauled on. Note: precise units (preferably millimeters (mm)). [Consistent with IOTC Res 12-04 and IOTC Res. 17/05] - from original ROS description form \*\* | Float |  |
+| Diameter (mm) | O | For SSI only, record the thickness of the leader the individual was hauled on. Note: precise units (preferably millimetres (mm)). [Consistent with IOTC Res 12-04 and IOTC Res. 17/05] - from original ROS description form \*\* | Float |  |
 :::
 
 | Element | Requirement | Description | Format | Input value |
@@ -825,8 +827,8 @@ Weight: The catch weight corresponding to the specified product type recorded in
 ## Entities {#entities}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
--   **Version:** `r version_number("ENTITIES")`
--   **Last updated**: `r last_update("ENTITIES")`
+-   **Version**: `r version_number("ENTITIES")`
+-   **Last update**: `r last_update("ENTITIES")`
 
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
@@ -835,8 +837,8 @@ out_dt(ENTITIES, "ENTITIES")
 ## Countries {#countries}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
--   **Version:** `r version_number("COUNTRIES")`
--   **Last updated**: `r last_update("COUNTRIES")`
+-   **Version**: `r version_number("COUNTRIES")`
+-   **Last update**: `r last_update("COUNTRIES")`
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
@@ -844,19 +846,19 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 ## Ports {#ports}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/legacy/#LOCODEPorts)
--   **Version:** `r version_number("PORTS")`
--   **Last updated**: `r last_update("PORTS")`
+-   [Permalink](https://data.iotc.org/reference/latest/domain/admin/#Ports)
+-   **Version**: `r version_number("PORTS")`
+-   **Last update**: `r last_update("PORTS")`
 
 ```{r collapse = TRUE}
-out_dt(PORTS, "PORTS")
+out_dt(PORTS[, -c("POINT")], "PORTS")
 ```
 
 ## Reasons for Days Lost {#reasonsDaysLost}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#reasonsDaysLost)
--   **Version:** `r version_number("REASONS_DAYS_LOST")`
--   **Last updated**: `r last_update("REASONS_DAYS_LOST")`
+-   **Version**: `r version_number("REASONS_DAYS_LOST")`
+-   **Last update**: `r last_update("REASONS_DAYS_LOST")`
 
 ```{r collapse = TRUE}
 out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
@@ -865,18 +867,20 @@ out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
 ## Target Species {#targetSpecies}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#targetSpecies)
--   **Version:** `r version_number("SPECIES_TARGET")`
--   **Last updated**: `r last_update("SPECIES_TARGET")`
+-   **Version**: `r version_number("SPECIES_TARGET")`
+-   **Last update**: `r last_update("SPECIES_TARGET")`
 
 ```{r collapse = TRUE}
 out_dt(SPECIES_TARGET, "SPECIES_TARGET")
 ```
 
-## Fishing Gear {#fishingGear}
+<!-- To replace with the code list of target species used for fishery definition (https://data.iotc.org/reference/latest/domain/fisheries/#targetSpecies) -->
+
+## Fishing Gears {#fishingGear}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#gears)
--   **Version:** `r version_number("GEAR_TYPES")`
--   **Last updated**: `r last_update("GEAR_TYPES")`
+-   **Version**: `r version_number("GEAR_TYPES")`
+-   **Last update**: `r last_update("GEAR_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(GEAR_TYPES, "GEAR_TYPES")
@@ -885,161 +889,141 @@ out_dt(GEAR_TYPES, "GEAR_TYPES")
 ## Fish Preservation Methods {#fishPreservationMethods}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishPreservationMethods)
--   **Version:** `r version_number("FISH_PRESERVATION_METHODS")`
--   **Last updated**: `r last_update("FISH_PRESERVATION_METHODS")`
+-   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
+-   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
 
 ```{r collapse = TRUE}
 out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```
 
-
 ## Waste Categories {#wasteCategories}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#wasteCategories)
--   **Version:** `r version_number("WASTE_CATEGORIES")`
--   **Last updated**: `r last_update("WASTE_CATEGORIES")`
-##I see this table under refs_fishery but it is not in the refs-meta table
+-   **Version**: `r version_number("WASTE_CATEGORIES")`
+-   **Last update**: `r last_update("WASTE_CATEGORIES")`
 
 ```{r collapse = TRUE}
 out_dt(WASTE_CATEGORIES, "WASTE_CATEGORIES")
 ```
 
-
 ## Storage/Disposal Methods {#storageDisposalMethods}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#wasteDisposalMethods)
--   **Version:** `r version_number("WASTE_DISPOSAL_METHODS")`
--   **Last updated**: `r last_update("WASTE_DISPOSAL_METHODS")`
-##I see this table under refs_fishery but it is not in the refs-meta table in PgAdmin
+-   **Version**: `r version_number("WASTE_DISPOSAL_METHODS")`
+-   **Last update**: `r last_update("WASTE_DISPOSAL_METHODS")`
 
 ```{r collapse = TRUE}
 out_dt(WASTE_DISPOSAL_METHODS, "WASTE_DISPOSAL_METHODS")
 ```
 
-
 ## Line Material Types {#lineMaterialTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#lineMaterialTypes)
--   **Version:** `r version_number("LINE_MATERIAL_TYPES")`
--   **Last updated**: `r last_update("LINE_MATERIAL_TYPES")`
+-   **Version**: `r version_number("LINE_MATERIAL_TYPES")`
+-   **Last update**: `r last_update("LINE_MATERIAL_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(LINE_MATERIAL_TYPES, "LINE_MATERIAL_TYPES")
 ```
 
-
-
 ## Branchline Storages {#branchlineStorages}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#branchlineStorages)
--   **Version:** `r version_number("BRANCHLINE_STORAGES")`
--   **Last updated**: `r last_update("BRANCHLINE_STORAGES")`
+-   **Version**: `r version_number("BRANCHLINE_STORAGES")`
+-   **Last update**: `r last_update("BRANCHLINE_STORAGES")`
 
 ```{r collapse = TRUE}
 out_dt(BRANCHLINE_STORAGES, "BRANCHLINE_STORAGES")
 ```
 
-
-
 ## Streamer Types {#streamerTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#streamerTypes)
--   **Version:** `r version_number("STREAMER_TYPES")`
--   **Last updated**: `r last_update("STREAMER_TYPES")`
+-   **Version**: `r version_number("STREAMER_TYPES")`
+-   **Last update**: `r last_update("STREAMER_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(STREAMER_TYPES, "STREAMER_TYPES")
 ```
 
-
-
-## Mitigation Devices {#mititgationDevices}
+## Mitigation Devices {#mitigationDevices}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#mitigationDevices)
--   **Version:** `r version_number("MITIGATION_DEVICES")`
--   **Last updated**: `r last_update("MITIGATION_DEVICES")`
+-   **Version**: `r version_number("MITIGATION_DEVICES")`
+-   **Last update**: `r last_update("MITIGATION_DEVICES")`
 
 ```{r collapse = TRUE}
 out_dt(MITIGATION_DEVICES, "MITIGATION_DEVICES")
 ```
 
-
-
 ## Light Types {#lightTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#lightTypes)
--   **Version:** `r version_number("LIGHT_TYPES")`
--   **Last updated**: `r last_update("LIGHT_TYPES")`
+-   **Version**: `r version_number("LIGHT_TYPES")`
+-   **Last update**: `r last_update("LIGHT_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(LIGHT_TYPES, "LIGHT_TYPES")
 ```
 
-
-
 ## Light Colours {#lightColours}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#lightColours)
--   **Version:** `r version_number("LIGHT_COLOURS")`
--   **Last updated**: `r last_update("LIGHT_COLOURS")`
+-   **Version**: `r version_number("LIGHT_COLOURS")`
+-   **Last update**: `r last_update("LIGHT_COLOURS")`
 
 ```{r collapse = TRUE}
 out_dt(LIGHT_COLOURS, "LIGHT_COLOURS")
 ```
 
-
-
 ## Hook Types {#hookTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#hookTypes)
--   **Version:** `r version_number("HOOK_TYPES")`
--   **Last updated**: `r last_update("HOOK_TYPES")`
+-   **Version**: `r version_number("HOOK_TYPES")`
+-   **Last update**: `r last_update("HOOK_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(HOOK_TYPES, "HOOK_TYPES")
 ```
 
-
-
 ## Bait Conditions {#baitConditions}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#baitConditions)
--   **Version:** `r version_number("BAIT_CONDITIONS")`
--   **Last updated**: `r last_update("BAIT_CONDITIONS")`
+-   **Version**: `r version_number("BAIT_CONDITIONS")`
+-   **Last update**: `r last_update("BAIT_CONDITIONS")`
 
 ```{r collapse = TRUE}
 out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 ```
 
-
 ## Bait Species {baitSpecies}
+
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#baits)
--   **Version:** `r version_number("SPECIES_BAITS")`
--   **Last updated**: `r last_update("SPECIES_BAITS")`
+-   **Version**: `r version_number("SPECIES_BAITS")`
+-   **Last update**: `r last_update("SPECIES_BAITS")`
+
 **just to double check, we don't want "bait type", but we do want "bait species"** 
+
 ```{r collapse = TRUE}
 out_dt(SPECIES_BAITS, "SPECIES_BAITS")
 ```
 
-
 ## Offal Management Types {offalManagementTypes}
+
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#offalManagementTypes)
--   **Version:** `r version_number("OFFAL_MANAGEMENT_TYPES")`
--   **Last updated**: `r last_update("OFFAL_MANAGEMENT_TYPES")`
+-   **Version**: `r version_number("OFFAL_MANAGEMENT_TYPES")`
+-   **Last update**: `r last_update("OFFAL_MANAGEMENT_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(OFFAL_MANAGEMENT_TYPES, "OFFAL_MANAGEMENT_TYPES")
 ```
 
-
 ## Sampling protocols {samplingProtocols}
+
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingProtocols)
--   **Version:** `r version_number("SAMPLING_PROTOCOLS")`
--   **Last updated**: `r last_update("SAMPLING_PROTOCOLS")`
+-   **Version**: `r version_number("SAMPLING_PROTOCOLS")`
+-   **Last update**: `r last_update("SAMPLING_PROTOCOLS")`
 
 ```{r collapse = TRUE}
 out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
 ```
-
-
-

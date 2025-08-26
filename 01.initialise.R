@@ -92,16 +92,15 @@ read_codelist = function(base_url = "https://data.iotc.org/reference/latest/doma
   return(CL_DATA)
 }
 
-
-
-
 # Reads all required codelists from the (remote) repository on https://data.iotc.org/reference/latest/domain/<domain>/codelists/<codelist>_<codelist_version>
 
-# ADMINISTRATIVE AND GEOSPATIAL CODE LISTS ####
+# ADMINISTRATIVE AND GEOSPATIAL DOMAINS ####
 
 ENTITIES        = read_codelist(domain = "admin", codelist = "ENTITIES")
 
 COUNTRIES       = read_codelist(domain = "admin", codelist = "COUNTRIES")
+
+PORTS           = read_codelist(domain = "admin", codelist = "PORTS")
 
 IOTC_MAIN_AREAS = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_MAIN_AREAS")
 
@@ -110,6 +109,8 @@ FAO_AREAS       = read_codelist(domain = "admin", schema = "gis", codelist = "FA
 IOTC_GRIDS_05x05 = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_05x05")
 
 IOTC_GRIDS_CE_SF_AR = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_CE_SF_AR")
+
+# DATA DOOMAIN ####
 
 DATA_TYPES     = read_codelist(domain = "data", codelist = "DATA_TYPES")
 
@@ -135,21 +136,23 @@ DATA_PROCESSINGS_FC = read_codelist(domain = "data", codelist = "DATA_PROCESSING
 
 DATA_RAISINGS       = read_codelist(domain = "data", codelist = "DATA_RAISINGS")
 
-COVERAGE_TYPES = read_codelist(domain = "data", codelist = "COVERAGE_TYPES")
+COVERAGE_TYPES      = read_codelist(domain = "data", codelist = "COVERAGE_TYPES")
 
-DATA_ESTIMATIONS = read_codelist(domain = "data", codelist = "DATA_ESTIMATIONS")
+DATA_ESTIMATIONS    = read_codelist(domain = "data", codelist = "DATA_ESTIMATIONS")
 
-VESSEL_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_TYPES")
+# FISHERY DOMAIN ####
 
-VESSEL_ARCHITECTURES                = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_ARCHITECTURES")
+VESSEL_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_TYPES")
 
-VESSEL_SIZE_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_SIZE_TYPES")
+VESSEL_ARCHITECTURES  = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_ARCHITECTURES")
 
-MECHANISATION_TYPES       = read_codelist(domain = "fisheries", schema = "fishery", codelist = "MECHANISATION_TYPES")
+VESSEL_SIZE_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_SIZE_TYPES")
+
+MECHANISATION_TYPES   = read_codelist(domain = "fisheries", schema = "fishery", codelist = "MECHANISATION_TYPES")
 
 FISH_PRESERVATION_METHODS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PRESERVATION_METHODS")
 
-FISH_PROCESSING_TYPES  = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")
+FISH_PROCESSING_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")
 
 FISH_STORAGE_TYPES  = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_STORAGE_TYPES")
 
@@ -161,6 +164,8 @@ FISHERY_CATEGORIES  = read_codelist(domain = "fisheries", schema = "fishery_conf
 
 CATCH_UNITS         = read_codelist(domain = "fisheries", schema = "fishery", codelist = "CATCH_UNITS")
 
+GEAR_TYPES         = read_codelist(domain = "fisheries", schema = "fishery", codelist = "GEAR_TYPES")
+
 GEAR_GROUPS         = read_codelist(domain = "fisheries", schema = "fishery_config", codelist = "GEAR_GROUPS")
 
 AFOB_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "AFOB_TYPES")
@@ -169,25 +174,49 @@ AFOB_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", co
 
 BUOY_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "BUOY_ACTIVITY_TYPES")
 
-AFOB_TYPES           = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")[DFOB == FALSE][, DFOB := NULL]
+AFOB_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")[DFOB == FALSE][, DFOB := NULL]
 
-DFOB_TYPES           = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")[DFOB == TRUE][, DFOB := NULL]
+DFOB_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_TYPES")[DFOB == TRUE][, DFOB := NULL]
 
-AFOB_ACTIVITIES      = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
+AFOB_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
 
-DFOB_ACTIVITIES      = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
+DFOB_ACTIVITIES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FOB_ACTIVITY_TYPES")
 
 CATCH_UNITS         = read_codelist(domain = "fisheries", schema = "fishery", codelist  = "CATCH_UNITS")
 
-# BIOLOGY AND MORPHOMETRICS CODE LISTS ####
+WASTE_CATEGORIES    = read_codelist(domain = "fisheries", schema = "fishery", codelist = "WASTE_CATEGORIES")
 
-SPECIES           = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
+WASTE_DISPOSAL_METHODS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "WASTE_DISPOSAL_METHODS")
 
-SPECIES_1DR_CODES = data.table(read.xlsx("./form_reporting_templates/Form-1DR.xlsx", sheet = "Data", cols = 3, startRow = 4))
+REASONS_DAYS_LOST   = read_codelist(domain = "fisheries", schema = "fishery", codelist = "REASONS_DAYS_LOST")
+
+LINE_MATERIAL_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "LINE_MATERIAL_TYPES")
+
+BRANCHLINE_STORAGES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "BRANCHLINE_STORAGES")
+
+STREAMER_TYPES      = read_codelist(domain = "fisheries", schema = "fishery", codelist = "STREAMER_TYPES")
+
+MITIGATION_DEVICES  = read_codelist(domain = "fisheries", schema = "fishery", codelist = "MITIGATION_DEVICES")
+
+LIGHT_TYPES         = read_codelist(domain = "fisheries", schema = "fishery", codelist = "LIGHT_TYPES")
+  
+LIGHT_COLOURS       = read_codelist(domain = "fisheries", schema = "fishery", codelist = "LIGHT_COLOURS")
+
+HOOK_TYPES       = read_codelist(domain = "fisheries", schema = "fishery", codelist = "HOOK_TYPES")
+
+OFFAL_MANAGEMENT_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "OFFAL_MANAGEMENT_TYPES")
+
+# BIOLOGY AND MORPHOMETRICS DOMAINS ####
+
+SPECIES               = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
+
+SPECIES_1DR_CODES     = data.table(read.xlsx("./form_reporting_templates/Form-1DR.xlsx", sheet = "Data", cols = 3, startRow = 4))
 
 setnames(SPECIES_1DR_CODES, old = "Code", new = "CODE")
 
-SPECIES_1DR       = merge(SPECIES_1DR_CODES, SPECIES, by.x = "CODE", by.y = "CODE", all.x = TRUE)
+SPECIES_1DR           = merge(SPECIES_1DR_CODES, SPECIES, by.x = "CODE", by.y = "CODE", all.x = TRUE)
+
+SPECIES_TARGET        = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_TARGET")
 
 RETAIN_REASONS        = read_codelist(domain = "biology", schema = "biology", codelist = "RETAIN_REASONS")
 
@@ -207,16 +236,24 @@ FATES                 = read_codelist(domain = "biology", schema = "biology", co
 
 SEX                   = read_codelist(domain = "biology", schema = "biology", codelist = "SEX")
 
-# SOCIO-ECONOMIC CODE LISTS ####
-COUNTRIES_CURRENCIES   = read_codelist(domain = "economics", schema = "socio_economics", codelist = "COUNTRIES_CURRENCIES")
+BAIT_CONDITIONS       = read_codelist(domain = "biology", schema = "biology", codelist = "BAIT_CONDITIONS")
 
-DESTINATION_MARKETS    = read_codelist(domain = "economics", schema = "socio_economics", codelist = "DESTINATION_MARKETS")
+SPECIES_BAITS         = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_BAITS")
+
+SAMPLING_PROTOCOLS    = read_codelist(domain = "biology", schema = "biology", codelist = "SAMPLING_PROTOCOLS")
+
+# SOCIO-ECONOMIC DOMAIN ####
+
+COUNTRIES_CURRENCIES = read_codelist(domain = "economics", schema = "socio_economics", codelist = "COUNTRIES_CURRENCIES")
+
+DESTINATION_MARKETS  = read_codelist(domain = "economics", schema = "socio_economics", codelist = "DESTINATION_MARKETS")
 
 PRICING_LOCATIONS    = read_codelist(domain = "economics", schema = "socio_economics", codelist = "PRICING_LOCATIONS")
 
 FISH_PRODUCT_TYPES   = read_codelist(domain = "economics", schema = "socio_economics", codelist = "PRODUCT_TYPES")
 
-# LEGACY CODE LISTS ####
+# LEGACY DOMAIN ####
+
 LEGACY_FISHERIES     = read_codelist(domain = "legacy", codelist = "FISHERIES")
 LEGACY_FLEETS        = read_codelist(domain = "legacy", codelist = "FLEETS")
 LEGACY_PROCESSINGS   = read_codelist(domain = "legacy", codelist = "DATA_PROCESSINGS")
