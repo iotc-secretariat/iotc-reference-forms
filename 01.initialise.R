@@ -107,7 +107,7 @@ IOTC_MAIN_AREAS = read_codelist(domain = "admin", schema = "gis", codelist = "IO
 
 FAO_AREAS       = read_codelist(domain = "admin", schema = "gis", codelist = "FAO_AREAS")
 
-IOTC_GRIDS_SF   = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_05x05")
+IOTC_GRIDS_05x05 = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_05x05")
 
 IOTC_GRIDS_CE_SF_AR = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_CE_SF_AR")
 
