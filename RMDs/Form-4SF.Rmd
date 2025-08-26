@@ -103,11 +103,19 @@ Numbers of fish sampled and raised by size category and species, along with info
 
 ## Entities {#entities}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
++ **Version:** `r version_number("ENTITIES")`
++ **Last update**: `r last_update("ENTITIES")`
+
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
 ```
 
 ## Countries {#countries}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
++ **Version:** `r version_number("COUNTRIES")`
++ **Last update**: `r last_update("COUNTRIES")`
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
@@ -115,8 +123,12 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 ## IOTC 5° grids {#5x5Grids}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#IOTCgrids5x5)
++ **Version:** `r version_number("IOTC_GRIDS_05x05")`
++ **Last update**: `r last_update("IOTC_GRIDS_05x05")`
+
 ```{r collapse = TRUE}
-out_dt(IOTC_GRIDS_SF, "AREAS_IOTC_05")
+out_dt(IOTC_GRIDS_05x05, "AREAS_IOTC_05")
 ```
 
 <!-- Codes for all 1°x1° and 5°x5° grids that overlap - at least partially - with the IOTC convention area. -->
@@ -125,11 +137,19 @@ out_dt(IOTC_GRIDS_SF, "AREAS_IOTC_05")
 
 ## Fisheries {#fisheries}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries)
++ **Version:** `r version_number("FISHERIES")`
++ **Last update**: `r last_update("FISHERIES")`
+
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
 ```
 
 ## Types of Measurement {#typesOfMeasurement}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#typesOfMeasurement)
++ **Version:** `r version_number("TYPES_OF_MEASUREMENT")`
++ **Last update**: `r last_update("TYPES_OF_MEASUREMENT")`
 
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_MEASUREMENT, "TYPES_OF_MEASUREMENT")
@@ -137,11 +157,19 @@ out_dt(TYPES_OF_MEASUREMENT, "TYPES_OF_MEASUREMENT")
 
 ## Measurements {#Measurements}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allMeasurements)
++ **Version:** `r version_number("MEASUREMENTS")`
++ **Last update**: `r last_update("MEASUREMENTS")`
+
 ```{r collapse = TRUE}
 out_dt(MEASUREMENTS, "MEASUREMENTS")
 ```
 
 ## Measurement tools {#allMeasurementTools}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allMeasurementTools)
++ **Version:** `r version_number("MEASUREMENT_TOOLS")`
++ **Last update**: `r last_update("MEASUREMENT_TOOLS")`
 
 ```{r collapse = TRUE}
 out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
@@ -149,11 +177,19 @@ out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
 
 ## Types of Fate {#typesOfFate}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#typesOfFate)
++ **Version:** `r version_number("TYPES_OF_FATE")`
++ **Last update**: `r last_update("TYPES_OF_FATE")`
+
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```
 
 ## Fates {#fates}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#fates)
++ **Version:** `r version_number("FATES")`
++ **Last update**: `r last_update("FATES")`
 
 ```{r collapse = TRUE}
 out_dt(FATES, "FATES")
@@ -161,11 +197,19 @@ out_dt(FATES, "FATES")
 
 ## Sexes {#sex}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#sex)
++ **Version:** `r version_number("SEX")`
++ **Last update**: `r last_update("SEX")`
+
 ```{r collapse = TRUE}
 out_dt(SEX, "SEX")
 ```
 
 ## Species {#allSpecies}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
++ **Version:** `r version_number("SPECIES")`
++ **Last update**: `r last_update("SPECIES")`
 
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
@@ -173,11 +217,19 @@ out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyl
 
 ## Types of Data {#datatypes}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#types)
++ **Version:** `r version_number("DATA_TYPES")`
++ **Last update**: `r last_update("DATA_TYPES")`
+
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
 ## Data Raising {#dataRaising}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#raisings)
++ **Version:** `r version_number("DATA_RAISINGS")`
++ **Last update**: `r last_update("DATA_RAISINGS")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
@@ -185,11 +237,19 @@ out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 
 ## Size-Frequency Data Sources {#sourcesSF}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesSF)
++ **Version:** `r version_number("DATA_SOURCES_SF")`
++ **Last update**: `r last_update("DATA_SOURCES_SF")`
+
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_SF, "DATA_SOURCES_SF")
 ```
 
 ## Size-Frequency Data Processings {#processingsSF}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#processingsSF)
++ **Version:** `r version_number("DATA_PROCESSINGS_SF")`
++ **Last update**: `r last_update("DATA_PROCESSINGS_SF")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_SF, "DATA_PROCESSINGS_SF")
@@ -197,11 +257,19 @@ out_dt(DATA_PROCESSINGS_SF, "DATA_PROCESSINGS_SF")
 
 ## Types of Coverage {#coverageTypes}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#coverageTypes)
++ **Version:** `r version_number("COVERAGE_TYPES")`
++ **Last update**: `r last_update("COVERAGE_TYPES")`
+
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
 ```
 
 ## Estimations {#estimations}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#estimations)
++ **Version:** `r version_number("DATA_ESTIMATIONS")`
++ **Last update**: `r last_update("DATA_ESTIMATIONS")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_ESTIMATIONS, "DATA_ESTIMATIONS")
