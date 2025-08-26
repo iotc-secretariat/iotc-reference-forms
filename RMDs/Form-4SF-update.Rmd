@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting: Form 4SF (v`r BASE_VERSION`-update)"
+title: "IOTC Statistical Data Reporting: Form 4SF (v`r DOI_VERSION`-update)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -25,23 +25,23 @@ This form provides for the monthly reporting of size-frequency estimates for IOT
 
 Click [here](./Form-4SF-update.xlsx) to download a blank version of Form 4SF-update, or [return](./index.hmtl) to the list of all IOTC statistical data reporting forms. Click [here](./Form-4SF.xlsx) to download a blank version of Form 4SF which has been designed to report data for multiple fisheries simultaneously.
 
-# Data content
+# Data Content
 
 Number (or weight) of fish sample and raised estimates by size category and species, along with information on the value (%) and type of sampling coverage used for the estimations by month, year, fleet, fishery and geographical grid.
 
 # Stratification
 
-## General information
+## General Information
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer (e.g., 1996)  |
-| Reporting entity | M | Three-letter (alpha-3) ccode of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code_iso3** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) ccode of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 | Fisheries | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries) |
 | Species | M | Species sampled | **Code** from [Species](#allSpecies) |
 
-## Main data elements
+## Main Data Elements
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -49,7 +49,7 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 | Grid | M | 5° grid area | **Code** from [Grid codes](#5x5Grids) |
 | Sex | O | Sex of the fish sampled | **Code** from [Sex](#sex) |
 
-## Sample data
+## Sample Data
 
 | Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -58,7 +58,7 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 | Number of samples | M | Actual number of fish measured in the stratum | Integer |
 | Number of fish  | M | Raised number of fish in the stratum | Integer |
 
-## Data specifications
+## Data Specifications
 
 | Element | Requirement | Description | Code list |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -80,13 +80,13 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 | Measurement Tool | M | Tool used to take the measurement | **Code** from [Measurement tools](#allMeasurementTools) |
 | Size interval | M | Size interval between lowest and highest measurements of the sampled species | Integer |
 
-## Original data
+## Original Data
 
 | Element | Requirement | Description | Code list |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Estimation | M | Indicates if the data was estimated or actual recorded data | **Code** from [Estimations](#estimations) |
 
-# Reporting metadata
+# Reporting Metadata
 
 | Element | Requirement | Description | Format | Example |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
@@ -97,21 +97,21 @@ Number (or weight) of fish sample and raised estimates by size category and spec
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | Submission date | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-# Reporting deadlines
+# Reporting Deadlines
 
 + **Longline fisheries**: 30 June (preliminary), 30 December (final)
 + **Surface fisheries**: 30 June (final)
 + **Coastal fisheries**: 30 June (final)
 
-# Additional information
+# Additional Information
 
-### The spatial and temporal resolutions, and catch units
+### The Spatial and Temporal Resolutions, and Catch Units
 
 | Category | Temporal resolution | Spatial resolution | Catch unit |
 | :-------- | :--------- | :---------- | :------------- |
 All fisheries  | Month | [5° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids5x5) or finer for the SC | number of fish |
 
-# Reference code lists
+# Reference Code Lists
 
 ## Entities {#entities}
 
@@ -149,13 +149,13 @@ out_dt(TYPES_OF_MEASUREMENT, "TYPES_OF_MEASUREMENT")
 out_dt(MEASUREMENTS, "MEASUREMENTS")
 ```
 
-## Measurement tools {#allMeasurementTools}
+## Measurement Tools {#allMeasurementTools}
 
 ```{r collapse = TRUE}
 out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
 ```
 
-## Types of fate {#typesOfFate}
+## Types of Fate {#typesOfFate}
 
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
@@ -179,31 +179,31 @@ out_dt(SEX, "SEX")
 out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
 ```
 
-## Types of data {#datatypes}
+## Types of Data {#datatypes}
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-## Data raising {#dataRaising}
+## Data Raising {#dataRaising}
 
 ```{r collapse = TRUE}
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
-## Size-frequency data sources {#sourcesSF}
+## Size-Frequency Data Sources {#sourcesSF}
 
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_SF, "DATA_SOURCES_SF")
 ```
 
-## Size-frequency data processings {#processingsSF}
+## Size-Frequency Data Processings {#processingsSF}
 
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_SF, "DATA_PROCESSINGS_SF")
 ```
 
-## Types of coverage types {#coverageTypes}
+## Types of Coverage Types {#coverageTypes}
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")

@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting: Form 3DA (v`r BASE_VERSION`-update)"
+title: "IOTC Statistical Data Reporting: Form 3DA (v`r DOI_VERSION`-update)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -25,24 +25,24 @@ This form supports the reporting of data on operational activities conducted by 
 
 Click [here](./Form-3DA-update.xlsx) to download a blank version of Form 3DA-update, or [return](./index.html) to the list of all IOTC statistical data reporting forms. Click [here](./Form-3DA.xlsx) to download a blank version of Form 3DA which has been designed to report data for multiple fisheries simultaneously.
 
-# Data content
+# Data Content
 
 Operational information on DFOB-related activities, including buoys and DFOB characteristics and dimensions, along with estimates of retained catches and discards (in numbers or live weight equivalent) by species, fate, raising status, and catch unit.
 
 # Stratification
 
-## General information
+## General Information
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code_iso3** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 | Reporting Month | M | Calendar month of the fishing activities reported through the dataset | Integer 1..12 |
 | Vessel name | O | Name of the fishery vessel monitoring the buoy as available from the IOTC Record of Authorised Vessel [RAV](https://rav.iotc.org/) | Plain text |
 | Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy | Plain text (e.g., IOTC013542) |
 
-## Main data elements
+## Main Data Elements
 
 | Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -55,13 +55,13 @@ Operational information on DFOB-related activities, including buoys and DFOB cha
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | 
 | Catch unit   | M | Unit used to report the value of catch of a given species | **Code** from [Catch units](#catchUnits) |
 
-## Data specifications
+## Data Specifications
 
 | Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
 
-## Buoy data
+## Buoy Data
 
 | Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -70,7 +70,7 @@ Operational information on DFOB-related activities, including buoys and DFOB cha
 | Position | M | Indicates whether the vessel have access/knowledge of the buoy position | Boolean (Y/N) |
 | Activity | M | Type of activity undertaken when visiting or deploying the drifting floating object | **Code** from [Buoy activity types](#DFOBbuoyActivityTypes) |
 
-## DFOB data
+## DFOB Data
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -78,7 +78,7 @@ Operational information on DFOB-related activities, including buoys and DFOB cha
 | Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](#FOBtypes) |
 | Activity | M | Type of activities undertaken when visiting or deploying the drifting floating object | **Code** from [Types of DFOB activities](#FOBactivityTypes) |
 
-### DFOB characteristics 
+### DFOB Characteristics 
 
 Description of the materials and dimensions of both *surface* and *subsurface* components of the drifting floating objects. 
 
@@ -106,7 +106,7 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 | Mesh     | Indicates whether the subsurface structure of the drifting floating object contains mesh | - | Boolean|
 | Mesh size | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) | mm  | Decimal |
 
-# Reporting metadata
+# Reporting Metadata
 
 | Element | Requirement | Description | Format | Example |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
@@ -117,11 +117,11 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-# Reporting deadlines
+# Reporting Deadlines
 
 - **Surface fisheries**: 30 June (final)
 
-# Reference code lists
+# Reference Code Lists
 
 ## Entities {#entities}
 

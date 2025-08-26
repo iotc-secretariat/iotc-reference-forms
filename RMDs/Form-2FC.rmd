@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting: Form 2FC (v`r BASE_VERSION`)"
+title: "IOTC Statistical Data Reporting: Form 2FC (v`r DOI_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -38,8 +38,8 @@ Number of fishing vessel by size category, along with information on the value (
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code_iso3** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code_iso3** from [Countries](#countries) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
 
 ## Main Data Elements
 
@@ -87,11 +87,19 @@ Number of fishing vessel by size category, along with information on the value (
 
 ## Entities {#entities}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
++ **Version**: `r version_number("ENTITIES")`
++ **Last update**: `r last_update("ENTITIES")`
+
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
 ```
 
 ## Countries {#countries}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
++ **Version**: `r version_number("COUNTRIES")`
++ **Last update**: `r last_update("COUNTRIES")`
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
@@ -99,11 +107,19 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 ## Types of Vessel {#vesselTypes}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#vesselTypes)
++ **Version**: `r version_number("VESSEL_TYPES")`
++ **Last update**: `r last_update("VESSEL_TYPES")`
+
 ```{r collapse = TRUE}
 out_dt(VESSEL_TYPES, "VESSEL_TYPES")
 ```
 
 ## Types of Architecture {#vesselArchitectures}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#vesselArchitectures)
++ **Version**: `r version_number("VESSEL_ARCHITECTURES")`
++ **Last update**: `r last_update("VESSEL_ARCHITECTURES")`
 
 ```{r collapse = TRUE}
 out_dt(VESSEL_ARCHITECTURES, "VESSEL_ARCHITECTURES")
@@ -111,11 +127,19 @@ out_dt(VESSEL_ARCHITECTURES, "VESSEL_ARCHITECTURES")
 
 ## Types of Mechanisation {#mechanisationTypes}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#mechanisationTypes)
++ **Version**: `r version_number("MECHANISATION_TYPES")`
++ **Last update**: `r last_update("MECHANISATION_TYPES")`
+
 ```{r collapse = TRUE}
 out_dt(MECHANISATION_TYPES, "MECHANISATION_TYPES")
 ```
 
 ## Methods of Fish Preservation {#fishPreservationMethods}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishPreservationMethods)
++ **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
++ **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
 
 ```{r collapse = TRUE}
 out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
@@ -123,11 +147,19 @@ out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 
 ## Types of Fish Storage {#fishStorageTypes}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
++ **Version**: `r version_number("FISH_STORAGE_TYPES")`
++ **Last update**: `r last_update("FISH_STORAGE_TYPES")`
+
 ```{r collapse = TRUE}
 out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 ```
 
-## Types of Vessel Size Class {#vesselSizeClassTypes}
+## Types of Vessel Size {#vesselSizeClassTypes}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#vesselSizeTypes)
++ **Version**: `r version_number("VESSEL_SIZE_TYPES")`
++ **Last update**: `r last_update("VESSEL_SIZE_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(VESSEL_SIZE_TYPES, "VESSEL_SIZE_TYPES")
@@ -135,11 +167,19 @@ out_dt(VESSEL_SIZE_TYPES, "VESSEL_SIZE_TYPES")
 
 ## Types of Data {#types}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#types)
++ **Version**: `r version_number("DATA_TYPES")`
++ **Last update**: `r last_update("DATA_TYPES")`
+
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
 ## Fishing Craft Data Sources {#sourcesFC}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesFC)
++ **Version**: `r version_number("DATA_SOURCES_FC")`
++ **Last update**: `r last_update("DATA_SOURCES_FC")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_SOURCES_FC, "DATA_SOURCES_FC")
@@ -147,11 +187,19 @@ out_dt(DATA_SOURCES_FC, "DATA_SOURCES_FC")
 
 ## Fishing Craft Data Processings {#dataProcessingsFC}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#processingsFC)
++ **Version**: `r version_number("DATA_PROCESSINGS_FC")`
++ **Last update**: `r last_update("DATA_PROCESSINGS_FC")`
+
 ```{r collapse = TRUE}
 out_dt(DATA_PROCESSINGS_FC, "DATA_PROCESSINGS_FC")
 ```
 
 ## Types of Coverage {#coverageTypes}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#coverageTypes)
++ **Version**: `r version_number("COVERAGE_TYPES")`
++ **Last update**: `r last_update("COVERAGE_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")

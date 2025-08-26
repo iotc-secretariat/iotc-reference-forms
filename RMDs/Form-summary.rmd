@@ -1,5 +1,6 @@
 ---
-title: "IOTC Data Reporting Forms"
+title: "IOTC Data Reporting Forms (v`r DOI_VERSION`)"
+subtitle: "`r paste0('Last updated: ', format(Sys.time(), format = '%d %B %Y'))`"   #%F %r %Z
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -23,15 +24,15 @@ output:
 
 Following Article XI of the [Agreement for the establishment of the Indian Ocean Tuna Commission](https://iotc.org/sites/default/files/documents/2012/5/25/IOTC%20Agreement.pdf) (IOTC), [Contracting Parties and Cooperating Non-Contracting Parties](https://iotc.org/about-iotc/structure-commission) (CPCs) are required to collect and report fisheries data in accordance with the [Conservation and Management Measures](https://iotc.org/cmms) (CMMs). To manage the data received from CPCs and other parties fishing in the IOTC area of competence for IOTC-managed species, the Secretariat has developed specific reporting forms for each dataset. The forms include all mandatory metadata, data fields, and information on IOTC formats and standard code lists.
 
-All IOTC code lists are distributed through the [IOTC Reference Data Catalogue](../) and are also made available via an R library hosted on the IOTC Secretariat’s GitHub repository ([iotc-data-reference-codelists](https://github.com/iotc-secretariat/iotc-data-reference-codelists)), with a mirror maintained by the Fisheries Data Interoperability Working Group ([fdiwg](https://github.com/fdiwg/fdi-codelists/tree/main/regional/iotc)). In addition, the code lists have been published on the Zenodo platform to support versioning, citation, and long-term accessibility ([https://zenodo.org/records/15743875](https://zenodo.org/records/15743875)).
+All IOTC code lists required by the forms are distributed through the [IOTC Reference Data Catalogue](../) and are also made available via an R library hosted on the IOTC Secretariat's GitHub repository ([iotc-data-reference-codelists](https://github.com/iotc-secretariat/iotc-data-reference-codelists)), with a mirror maintained by the Fisheries Data Interoperability Working Group ([fdiwg](https://github.com/fdiwg/fdi-codelists/tree/main/regional/iotc)). In addition, the code lists have been published on the Zenodo platform to support versioning, citation, and long-term accessibility ([https://doi.org/10.5281/zenodo.15743874](https://zenodo.org/records/15743875)).
 
 # Statistical Fishery Datasets
 
 At its 26^th^ session, the IOTC Scientific Committee endorsed the adoption of new reporting forms to streamline data flow and improve the quality of dataset submissions to the Secretariat. The use of these forms for submitting fisheries statistics to the IOTC became **mandatory** as of 2025.
 
-The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts.
+The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts. You can download all current form templates for submitting data to the IOTC [here](../forms/IOTC-forms.zip). They are also available on the Zenodo platform, which is used to manage their different versions and to maintain links with the corresponding IOTC code list versions [https://doi.org/10.5281/zenodo.16941787](https://zenodo.org/records/16941788).
 
-You can download all form templates for submitting the data for the statistical year 2024 [here](../forms/IOTC-forms.zip). We welcome your feedback on these forms and encourage you to direct any questions to the IOTC Secretariat via email at [IOTC-Statistics@fao.org](mailto:IOTC-Statistics@fao.org).
+We welcome your feedback on these forms and encourage you to direct any questions to the IOTC Secretariat via email at [IOTC-Statistics@fao.org](mailto:IOTC-Statistics@fao.org).
 
 ## Form 1DR {#1DR}
 
