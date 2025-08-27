@@ -656,26 +656,34 @@ Biteoff details - branchline: For each branchline configuration setup previously
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Species code | M | The species code for each specimen observed using FAO three figure alpha codes. If species FAO code is not available, record the species scientific name | **Code** from \_\_\_ | e.g., |
-| Fate (type and code) | M | The fate which includes whether it was retained or discarded and the reason | **CODE** from | e.g., |
-| Sampling method code | M |  | Two letters code | **CODE** from \_\_\_\_\_ |
+| Species code | M | The species code for each specimen observed using FAO three figure alpha codes. If species FAO code is not available, record the species scientific name | **Code** from [All Species] (#allSpecies)| e.g., ABL|
+**IS IT THE ALL SPECIES CODELIST**
+| Fate: The fate which includes whether it was retained or discarded and the reason
+::: {style="margin-left:40px"}
+| Element              | Requirement | Description | Format  | Input value |
+|:---------------------|:-----------:|:------------|:-------:|:-----------:|
+| Type | M |  | **Code** from [Types of Fate] (#fateType)  | e.g., DI |
+| Code | M |  | **Code** from [Fates] (#fates)  | e.g., DL |
+:::
+| Sampling method code | M |  |  **CODE** from [Sampling Methods for Catch Estimation] {#samplingMethodsCatchEstimation} |e.g., EP |
 | Number of fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer??? |  |
+
 
 Weight: The catch weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, record the unprocessed weight
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Processing type code | O |  | **CODE** from | e.g., |
+| Processing type code | O |  | **CODE** from  [Fish Processing Types] (#fishProcessingTypes) | e.g., DR |
 | Value | O |  | Float |  |
 | KG/T | O |  | Indicate units (KG or T) |  |
-| Estimation method code | O |  | **CODE** from | e.g., |
+| Estimation method code | O |  | **CODE** from [Total Catch Estimation] (#totalCatchEstimation) | e.g., EP|
 :::
 
 |  |  |  |  |  |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Sampling period code | M |  | **CODE** from | e.g., |
-| Sampling method code | M | The sampling method used for the collection of biological sub-sample | **CODE** from | e.g., |
+| Sampling period code | M |  | **CODE** from [Sampling Period] (#samplingPeriod) | e.g., BS |
+| Sampling method code | M | The sampling method used for the collection of biological sub-sample | **CODE** from [Biological Sampling Method] (#biologicalSamplingMethod) | e.g., ES |
 
 # (E-SET-CATCHES-SPECIMEN)
 
@@ -684,7 +692,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 | Observed trip ID |  | M | refer to parent observed trip |  |
 | Set ID | M | refer to parent Set ID | 4 digits number |  |
 | Catch ID | M | refer to parent catch ID | Alphanumeric code |  |
-| Specimen ID | M | The specimen number. This should be a four digit numerical code beginning 0001. Specimen numbers should be consecutive within the same catch detail within the same set of the observed trip. | **Code** from | e.g., |
+| Specimen ID | M | The specimen number. This should be a four digit numerical code beginning 0001. Specimen numbers should be consecutive within the same catch detail within the same set of the observed trip. | Numeric code | e.g., |
 
 ## Specimen Details
 
@@ -696,7 +704,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Type code | M | The length code used for the measurement | **CODE** from | e.g., |
-| Value (cm) | M | The length corresponding to the length type taken rounded to the lower centimeter | Float |  |
+| Value | M | The length corresponding to the length type taken rounded to the lower centimetre | Float |  |
 | Measuring tool code | M | Specify the tool code used for the measurement | **CODE** from |  |
 | Is straight | M | Yes or No | Yes/No |  |
 :::
@@ -707,7 +715,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Type code | O | The length code used for the measurement | **CODE** from | e.g., |
-| Value (cm) | O | The length corresponding to the length type taken rounded to the lower centimeter | Float |  |
+| Value (cm) | O | The length corresponding to the length type taken rounded to the lower centimetre | Float |  |
 | Measuring tool code | O | The tool code used for the measurement | **CODE** from |  |
 | Is straight | O | Indicate Yes or No | Yes/No |  |
 :::
@@ -996,7 +1004,7 @@ out_dt(HOOK_TYPES, "HOOK_TYPES")
 out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 ```
 
-## Bait Species {baitSpecies}
+## Bait Species {#baitSpecies}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#baits)
 -   **Version**: `r version_number("SPECIES_BAITS")`
@@ -1008,7 +1016,7 @@ out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 out_dt(SPECIES_BAITS, "SPECIES_BAITS")
 ```
 
-## Offal Management Types {offalManagementTypes}
+## Offal Management Types {#offalManagementTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#offalManagementTypes)
 -   **Version**: `r version_number("OFFAL_MANAGEMENT_TYPES")`
@@ -1018,7 +1026,7 @@ out_dt(SPECIES_BAITS, "SPECIES_BAITS")
 out_dt(OFFAL_MANAGEMENT_TYPES, "OFFAL_MANAGEMENT_TYPES")
 ```
 
-## Sampling protocols {samplingProtocols}
+## Sampling protocols {#samplingProtocols}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingProtocols)
 -   **Version**: `r version_number("SAMPLING_PROTOCOLS")`
@@ -1027,3 +1035,100 @@ out_dt(OFFAL_MANAGEMENT_TYPES, "OFFAL_MANAGEMENT_TYPES")
 ```{r collapse = TRUE}
 out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
 ```
+
+
+## All Species {#allSpecies}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
+-   **Version**: `r version_number("SPECIES")`
+-   **Last update**: `r last_update("SPECIES")`
+
+```{r collapse = TRUE}
+out_dt(SPECIES, "SPECIES")
+```
+
+
+
+## Types of Fate {#fateType}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#typesOfFate)
+-   **Version**: `r version_number("TYPES_OF_FATE")`
+-   **Last update**: `r last_update("TYPES_OF_FATE")`
+
+```{r collapse = TRUE}
+out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
+```
+
+
+
+## Fates {#fates}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#fates)
+-   **Version**: `r version_number("FATES")`
+-   **Last update**: `r last_update("FATES")`
+
+```{r collapse = TRUE}
+out_dt(FATES, "FATES")
+```
+
+
+## Sampling Method for Catch Estimation {#samplingMethodCatchEstimation}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForCatchEstimation)
+-   **Version**: `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
+-   **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
+```
+
+
+## Fish Processing Types (#fishProcessingTypes)
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishProcessingTypes)
+-   **Version**: `r version_number("FISH_PROCESSING_TYPES")`
+-   **Last update**: `r last_update("FISH_PROCESSING_TYPES")`
+
+```{r collapse = TRUE}
+out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
+```
+
+
+
+## Total Catch Estimation (#totalCatchEstimation)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForCatchEstimation)
+-   **Version**: `r version_number("ESTIMATIONS")`
+-   **Last update**: `r last_update("ESTIMATIONS")`
+
+```{r collapse = TRUE}
+out_dt(ESTIMATIONS, "ESTIMATIONS")
+```
+
+
+
+## sampling Periond (#samplingPeriod)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingPeriods)
+-   **Version**: `r version_number("SAMPLING_PERIODS")`
+-   **Last update**: `r last_update("SAMPLING_PERIODS")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_PERIODS, "SAMPLING_PERIODS")
+```
+
+
+
+## Biological Sampling Method (#biologicalSamplingMethod)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForSamplingCollection)
+-   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+-   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
+```
+
+
+
+
+
+
+
