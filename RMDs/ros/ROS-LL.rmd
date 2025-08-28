@@ -562,7 +562,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Observed trip ID |  | M | refer to parent observed trip |  |
+| Observed trip ID |  | M | Refer to parent observed trip |  |
 | Set ID | M | Refer to parent Set ID | 4 digits number |  |
 
 ## Setting Operations \> Hook Details \> Hook
@@ -577,7 +577,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Observed trip ID |  | M | refer to parent observed trip |  |
+| Observed trip ID |  | M | Refer to parent observed trip |  |
 | Set ID | M | Refer to parent Set ID | 4 digits number |  |
 
 ## Setting Operations \> Bait Details \> Bait
@@ -758,9 +758,9 @@ Weight: The catch weight corresponding to the specified product type recorded in
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Type | O |  | \*\*MISSING CODES TO DEFINE |  |
-| Preservation method | O |  | \*\*MISSING CODES TO DEFINE |  |
-**I dont see these types of samples codelists in the metadata table**
+| Type | O |  | [Sampling Type](#samplingMethodsForSamplingCollections) |  |
+| Preservation method | O |  | [Sample Preservation Method](#fishPreservationMethods) |  |
+**I dont see proper codelists for these sections, are these correct?**
 :::
 
 | Depredation method:
@@ -1230,6 +1230,32 @@ out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
 ```{r collapse = TRUE}
 out_dt(SEX, "SEX")
 ```
+
+
+## Sampling Type {#samplingMethodsForSamplingCollections}
+
+-   [Permalink]()
+-   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+-   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
+```
+
+
+
+## Sample Preservation Method {#fishPreservationMethods}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
+-   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
+-   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
+
+```{r collapse = TRUE}
+out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
+```
+
+
+
 
 ## Depredation Sources {#depredationSources}
 
