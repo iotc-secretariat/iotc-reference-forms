@@ -45,10 +45,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |e.g., ABW |
 | Reporting flag / Chartering state | M | The reporting flag or chartering state **OR** three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., FRA |
 | Data source | M | The source of data provided  | Observer data or EM data |  |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
-| Reporting flag / Chartering state | M | The reporting flag or chartering state **OR** three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |  |
-| Data source | M | The source of data provided (Observer data or EM DATA) |  |  |
+
 
 # (O-INFO) Observer and Observed Trip Information
 
@@ -735,7 +732,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Processing type code | O | The processing code used for the weight measurement | **Code** from [Weight Measurements](#weightMeasurements)  | e.g., GG |
-| Value | O | The weight corresponding to the length type code taken rounded to the...? | Float |  |
+| Value | O | The weight corresponding to the length type code | Float |  |
 | KG/T | O | Indicate units | KG or T |  |
 | Estimation method code | O | Method used to estimate weight of specimen | **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., BR |
 
