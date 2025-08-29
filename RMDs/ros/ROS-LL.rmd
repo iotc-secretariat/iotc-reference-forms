@@ -1,5 +1,5 @@
 ---
-title: "IOTC statistical data reporting: Form ROS-LL"
+title: "IOTC ROS Data Reporting: Form ROS-LL"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -21,44 +21,43 @@ output:
 
 # Description
 
-This form provides for the reporting of operational and catch data from longline fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with longline operations, including IOTC species, and other bycatch species.The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of longline fisheries on associated and dependent species.Observers are required to complete the form for longline operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected.
+This form provides for the reporting of operational and catch data from longline fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with longline operations, including IOTC species, and other bycatch species. The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of longline fisheries on associated and dependent species. CPCs are required to complete the form for longline operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers at sea or reviewing data collected with Electronic Monitoring Systems.
 
 Click [here](./Form-ROS-LL.xlsx) to download a blank version of Form ROS-LL, or [return](./index.html) to the list of all IOTC data reporting forms.
 
 # Data Content
 
-Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, set position); operational details of each set; catch and bycatch by species in number and weight; fate of catch (retained/discarded); interactions with sharks, seabirds, turtles, and other species; and mitigation measures used.
-
-<!-- Data are stratified by year, fleet, fishery, and IOTC main area. -->
+Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, set position); operational details of each set; catch and bycatch by species in number and weight; fate of catch (retained/discarded); interactions with sharks, seabirds, turtles, and other species; mitigation measures used; size measurements of catch as well as some biological samples.
 
 # Metadata
 
 ## Submission Information
 
-Fill out focal point information (full name, email, finalization date, and submission date) Fill out organization information (name, email)
+Focal point (full name, email, finalisation date, and submission date) and organisation information (name, email).
 
 ## General Information
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |e.g., ABW |
-| Reporting flag / Chartering state | M | The reporting flag or chartering state **OR** three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., FRA |
-| Data source | M | The source of data provided  | Observer data or EM data |  |
-
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., `1996` |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `ABW` |
+| Reporting flag / Chartering state | M | The reporting flag or chartering state **OR** three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Data source | M | The source of data provided | Observer data or EM data | e.g., `**XXXX**`  |
 
 # (O-INFO) Observer and Observed Trip Information
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------:|:-------------:|:-------------:|
-| Observed trip ID | M | The trip unique identifier. |Record trip unique identifier. This should begin with the observation or trip start date (YYYY-MM-DD), followed by, IOTC observer number,  IOTC vessel identifier as per RAV (Register of Active Vessels) and vessel main gear code as per IOTC classification | e.g. 2024-01-23/IOTCFRA001/IOTC012345/LL |
+| Observed trip ID | M | The trip unique identifier | Trip unique identifier which should begin with the observation or trip start date (YYYY-MM-DD), followed by, IOTC observer number, IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and vessel main gear code as per IOTC classification | e.g., 2024-01-23/IOTCFRA001/IOTC012345/LL |
 
 ## Observer Identification
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| IOTC ID | M | Record observer registration number allocated by the IOTC Secretariat. CPCs report the list of the name and nationality of all observers, port samplers/ inspectors to the Secretariat in order obtain the allocated registration number | Alphanumeric registration number allocated by the IOTC Secretariat | e.g. IOTC_0976 |
-| Full name | M | The name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer | Free entry. Plain text | e.g. John Doe |
+| IOTC ID | M | The observer registration number allocated by the IOTC Secretariat | Alphanumeric registration number allocated by the IOTC Secretariat | e.g., IOTC_0976 |
+| Full name | M | The name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer | Free entry. Plain text | e.g., John Doe |
+
+<!-- CPCs report the list of the name and nationality of all observers, port samplers/ inspectors to the Secretariat in order obtain the allocated registration number  -->
 
 ## Observer Trip Details
 
@@ -819,30 +818,29 @@ Weight: The catch weight corresponding to the specified product type recorded in
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Depredation source code | O | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA | **Code** [Depredation Sources](#depredationSources) from | e.g., BA |
-| Observed predator code | O | For depredated specimens/or catch, record the predator species directly observed and identified (FAO spp. 3-alpha code). If the predator was not observed record UNK (unknown). For non-depredated specimens record NA | **CODE** from [Predator Species](#predatorSepcies) | e.g., AG15 
-|
+| Depredation source code | O | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA | **Code** [Depredation Sources](#depredationSources) from | e.g., `BA` |
+| Observed predator code | O | For depredated specimens/or catch, record the predator species directly observed and identified (FAO spp. 3-alpha code). If the predator was not observed record UNK (unknown). For non-depredated specimens record NA | **CODE** from [Predator Species](#predatorSepcies) | e.g., `AG15` |
 :::
 
 # (E-SET-TAG-DETAILS)
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Observed trip ID | M | Refer to parent observed trip |  |  | 
-| Set ID | M | Refer to parent Set ID | 4 digits number |  |
-| Catch ID | M | Refer to parent catch ID | Alphanumeric code |  |
-| Specimen ID | M | Refer to parent specimen ID | 4 digit code |  |
+| Observed trip ID | M | Refer to parent observed trip ||| 
+| Set ID | M | Refer to parent Set ID | 4 digits number ||
+| Catch ID | M | Refer to parent catch ID | Alphanumeric code ||
+| Specimen ID | M | Refer to parent specimen ID | 4 digit code ||
 
 ## Tag Details
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Release | O | Indicate Yes or No, whether this individual was re-released with a tag attached. | Yes/No |  |
-| Recovery | O | Indicate Yes or No, whether this individual was re-released with a tag attached. | Yes/No |  |
-| Type code | O | Record the type of tag used | **Code** from [Tag Types](#tagTypes) |e.g., CP  |
-| Tag number | O | Provide the tag number. If a turtle, provide both tag numbers (right and left flipper). | Alphanumeric code |  |
+| Release | O |  Indicates whether the individual was re-released with a tag attached | Yes/No |  |
+| Recovery | O | Indicates whether the individual was recovered with a tag attached | Yes/No |  |
+| Type code | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP`  |
+| Tag number | O | The tag number. If a turtle, provide both tag numbers (right and left flipper) | Alphanumeric code ||
 | Finder name | O |  |  | Free entry. Plain text |
-| Finder contact details | O |  |  | Free entry. Plain text |
+| Finder contact details | O |  | Free entry. Plain text | |
 
 # Reporting Deadlines
 
@@ -912,8 +910,6 @@ out_dt(SPECIES_TARGET, "SPECIES_TARGET")
 out_dt(GEAR_TYPES, "GEAR_TYPES")
 ```
 
-
-
 ## Hull Material Types {#hullMaterialTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#hullMaterialTypes)
@@ -923,8 +919,6 @@ out_dt(GEAR_TYPES, "GEAR_TYPES")
 ```{r collapse = TRUE}
 out_dt(HULL_MATERIAL_TYPES, "HULL_MATERIAL_TYPES")
 ```
-
-
 
 ## Fish Preservation Methods {#fishPreservationMethods}
 
@@ -936,7 +930,6 @@ out_dt(HULL_MATERIAL_TYPES, "HULL_MATERIAL_TYPES")
 out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```
 
-
 ## Fish Storage Types {#fishStorageTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
@@ -946,7 +939,6 @@ out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```{r collapse = TRUE}
 out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 ```
-
 
 ## Waste Categories {#wasteCategories}
 
@@ -1070,8 +1062,6 @@ out_dt(SPECIES_BAITS, "SPECIES_BAITS")
 out_dt(OFFAL_MANAGEMENT_TYPES, "OFFAL_MANAGEMENT_TYPES")
 ```
 
-
-
 ## Vessel Sections {#vesselSections}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#vesselSections)
@@ -1081,8 +1071,6 @@ out_dt(OFFAL_MANAGEMENT_TYPES, "OFFAL_MANAGEMENT_TYPES")
 ```{r collapse = TRUE}
 out_dt(VESSEL_SECTIONS, "VESSEL_SECTIONS")
 ```
-
-
 
 ## Sampling protocols {#samplingProtocols}
 
@@ -1094,7 +1082,6 @@ out_dt(VESSEL_SECTIONS, "VESSEL_SECTIONS")
 out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
 ```
 
-
 ## All Species {#allSpecies}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
@@ -1104,8 +1091,6 @@ out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES")
 ```
-
-
 
 ## Types of Fate {#fateType}
 
@@ -1117,8 +1102,6 @@ out_dt(SPECIES, "SPECIES")
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```
 
-
-
 ## Fates {#fates}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#fates)
@@ -1128,7 +1111,6 @@ out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```{r collapse = TRUE}
 out_dt(FATES, "FATES")
 ```
-
 
 ## Sampling Method for Catch Estimation {#samplingMethodCatchEstimation}
 
@@ -1151,21 +1133,17 @@ out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMA
 out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
 ```
 
-
-
 ## Total Catch Estimation {#totalCatchEstimation}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForCatchEstimation)
--   **Version**: `r version_number("ESTIMATIONS")`
--   **Last update**: `r last_update("ESTIMATIONS")`
+-   **Version**: `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
+-   **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
 
 ```{r collapse = TRUE}
-out_dt(ESTIMATIONS, "ESTIMATIONS")
+out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
 ```
 
-
-
-## Sampling Periond {#samplingPeriod}
+## Sampling Period {#samplingPeriod}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingPeriods)
 -   **Version**: `r version_number("SAMPLING_PERIODS")`
@@ -1174,8 +1152,6 @@ out_dt(ESTIMATIONS, "ESTIMATIONS")
 ```{r collapse = TRUE}
 out_dt(SAMPLING_PERIODS, "SAMPLING_PERIODS")
 ```
-
-
 
 ## Biological Sampling Method {#biologicalSamplingMethod}
 
@@ -1186,8 +1162,6 @@ out_dt(SAMPLING_PERIODS, "SAMPLING_PERIODS")
 ```{r collapse = TRUE}
 out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
 ```
-
-
 
 ## Length Measurements {#lengthMeasurements}
 
@@ -1232,10 +1206,8 @@ out_dt(MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CO
 -   **Last update**: `r last_update("MEASUREMENTS_TOOLS")`
 
 ```{r collapse = TRUE}
-out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
+out_dt(MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CODE")], "MEASUREMENT_TOOLS")
 ```
-
-**I do not see a more specific schema in the pgAdmin codelists**
 
 ## Sex {#sex}
 
@@ -1247,10 +1219,9 @@ out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
 out_dt(SEX, "SEX")
 ```
 
-
 ## Sampling Type {#samplingMethodsForSamplingCollections}
 
--   [Permalink]()
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForSamplingCollection)
 -   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
 -   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
 
@@ -1258,9 +1229,7 @@ out_dt(SEX, "SEX")
 out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
 ```
 
-
-
-## Sample Preservation Method {#fishPreservationMethods}
+## Sample Preservation Methods{#fishPreservationMethods}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
 -   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
@@ -1269,9 +1238,6 @@ out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING
 ```{r collapse = TRUE}
 out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```
-
-
-
 
 ## Depredation Sources {#depredationSources}
 
@@ -1323,7 +1289,6 @@ out_dt(GEAR_INTERACTIONS, "GEAR_INTERACTIONS")
 out_dt(HOOK_TYPES, "HOOK_TYPES")
 ```
 
-
 ## Bait Conditions {#baitConditions}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#baitConditions)
@@ -1334,19 +1299,15 @@ out_dt(HOOK_TYPES, "HOOK_TYPES")
 out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 ```
 
-
-
 ## De-hooker Types {#dehookerTypes}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#baitConditions)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#dehookerTypes)
 -   **Version**: `r version_number("DEHOOKER_TYPES")`
 -   **Last update**: `r last_update("DEHOOKER_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(DEHOOKER_TYPES, "DEHOOKER_TYPES")
 ```
-
-
 
 ## Handling Methods {#handlingMethods}
 
@@ -1358,7 +1319,6 @@ out_dt(DEHOOKER_TYPES, "DEHOOKER_TYPES")
 out_dt(HANDLING_METHODS, "HANDLING_METHODS")
 ```
 
-
 ## Tag Types {#tagTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#tagTypes)
@@ -1368,17 +1328,3 @@ out_dt(HANDLING_METHODS, "HANDLING_METHODS")
 ```{r collapse = TRUE}
 out_dt(TAG_TYPES, "TAG_TYPES")
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-

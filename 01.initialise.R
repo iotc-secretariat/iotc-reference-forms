@@ -110,7 +110,7 @@ IOTC_GRIDS_05x05 = read_codelist(domain = "admin", schema = "gis", codelist = "I
 
 IOTC_GRIDS_CE_SF_AR = read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_CE_SF_AR")
 
-# DATA DOOMAIN ####
+# DATA DOMAIN ####
 
 DATA_TYPES     = read_codelist(domain = "data", codelist = "DATA_TYPES")
 
@@ -138,13 +138,13 @@ DATA_RAISINGS       = read_codelist(domain = "data", codelist = "DATA_RAISINGS")
 
 COVERAGE_TYPES      = read_codelist(domain = "data", codelist = "COVERAGE_TYPES")
 
-DATA_ESTIMATIONS    = read_codelist(domain = "data", codelist = "DATA_ESTIMATIONS")
-
 # FISHERY DOMAIN ####
 
 VESSEL_TYPES          = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_TYPES")
 
 VESSEL_ARCHITECTURES  = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_ARCHITECTURES")
+
+VESSEL_SECTIONS       = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_SECTIONS")
 
 VESSEL_SIZE_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_SIZE_TYPES")
 
@@ -206,6 +206,10 @@ HOOK_TYPES       = read_codelist(domain = "fisheries", schema = "fishery", codel
 
 OFFAL_MANAGEMENT_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "OFFAL_MANAGEMENT_TYPES")
 
+HULL_MATERIAL_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "HULL_MATERIAL_TYPES")
+
+DEHOOKER_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "DEHOOKER_TYPES")
+
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
 SPECIES               = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
@@ -217,6 +221,8 @@ setnames(SPECIES_1DR_CODES, old = "Code", new = "CODE")
 SPECIES_1DR           = merge(SPECIES_1DR_CODES, SPECIES, by.x = "CODE", by.y = "CODE", all.x = TRUE)
 
 SPECIES_TARGET        = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_TARGET")
+
+SPECIES_PREDATORS     = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_PREDATORS")
 
 RETAIN_REASONS        = read_codelist(domain = "biology", schema = "biology", codelist = "RETAIN_REASONS")
 
@@ -240,7 +246,19 @@ BAIT_CONDITIONS       = read_codelist(domain = "biology", schema = "biology", co
 
 SPECIES_BAITS         = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_BAITS")
 
+HANDLING_METHODS      = read_codelist(domain = "biology", schema = "biology", codelist = "HANDLING_METHODS")
+
 SAMPLING_PROTOCOLS    = read_codelist(domain = "biology", schema = "biology", codelist = "SAMPLING_PROTOCOLS")
+
+SAMPLING_PERIODS      = read_codelist(domain = "biology", schema = "biology", codelist = "SAMPLING_PERIODS")
+
+SAMPLING_METHODS_FOR_CATCH_ESTIMATION = read_codelist(domain = "biology", codelist = "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
+
+SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS = read_codelist(domain = "biology", codelist = "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
+
+TAG_TYPES = read_codelist(domain = "biology", schema = "biology", codelist = "TAG_TYPES")
+
+DEPREDATION_SOURCES = read_codelist(domain = "biology", schema = "biology", codelist = "DEPREDATION_SOURCES")
 
 # SOCIO-ECONOMIC DOMAIN ####
 
