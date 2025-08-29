@@ -226,6 +226,8 @@ SPECIES_PREDATORS     = read_codelist(domain = "biology", schema = "biology", co
 
 RETAIN_REASONS        = read_codelist(domain = "biology", schema = "biology", codelist = "RETAIN_REASONS")
 
+GEAR_INTERACTIONS     = read_codelist(domain = "biology", schema = "biology", codelist = "GEAR_INTERACTIONS")
+
 DISCARD_REASONS       = read_codelist(domain = "biology", schema = "biology", codelist = "DISCARD_REASONS")
 
 INDIVIDUAL_CONDITIONS = read_codelist(domain = "biology", schema = "biology", codelist = "INDIVIDUAL_CONDITIONS")

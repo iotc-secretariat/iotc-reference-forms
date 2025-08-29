@@ -38,24 +38,26 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 ## General Information
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., `1996` |
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `ABW` |
 | Reporting flag / Chartering state | M | The reporting flag or chartering state **OR** three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Data source | M | The source of data provided | Observer data or EM data | e.g., `**XXXX**`  |
+| Data source | M | The source of data provided | Observer data or EM data | e.g., `OAS` |
+
+<!-- Code list of data sources to define: OAS/EMS -->
 
 # (O-INFO) Observer and Observed Trip Information
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------:|:-------------:|:-------------:|
-| Observed trip ID | M | The trip unique identifier | Trip unique identifier which should begin with the observation or trip start date (YYYY-MM-DD), followed by, IOTC observer number, IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and vessel main gear code as per IOTC classification | e.g., 2024-01-23/IOTCFRA001/IOTC012345/LL |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Observed trip ID | M | The observed trip identifier | Unique identifier of the fishing trip defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer number, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 
 ## Observer Identification
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| IOTC ID | M | The observer registration number allocated by the IOTC Secretariat | Alphanumeric registration number allocated by the IOTC Secretariat | e.g., IOTC_0976 |
-| Full name | M | The name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer | Free entry. Plain text | e.g., John Doe |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| IOTC ID | M | The observer registration number allocated by the IOTC Secretariat | Alphanumeric registration number allocated by the IOTC Secretariat | e.g., `IOTC_0976` |
+| Full name | M | The name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer | Free entry. Plain text | e.g., `John Doe` |
 
 <!-- CPCs report the list of the name and nationality of all observers, port samplers/ inspectors to the Secretariat in order obtain the allocated registration number  -->
 
@@ -69,9 +71,9 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Country code | O | The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | e.g., FRA |
-| Port code | O | The port of the observation starting location | **Code** from [Ports](#ports) | e.g., RE REU |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Country code | O | The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | e.g.,`FRA` |
+| Port code | O | The port of the observation starting location | **Code** from [Ports](#ports) | e.g., `REUREU` |
 :::
 
 ::: {style="margin-left:40px"}
@@ -80,18 +82,18 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Latitude | O | The latitude of the observation starting location. | dd°mm,m’ N/S | eg., -20.88 |
-| Longitude | O | The longitude of the observation starting location. | dd°mm,m’ N/S | e.g., 55.53|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Latitude | O | The latitude of the observation starting location | dd&deg;mm,m' N/S | e.g., `-20.88` |
+| Longitude | O | The longitude of the observation starting location | dd&deg;mm,m# N/S | e.g., `55.53` |
 :::
 
 ::: {style="margin-left:40px"}
-|  |  |  |  |  |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+||||||
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Date/time UTC | O | The date and time of the start of observations | YYYY-MM-DDThh:mm | e.g., 2025-09-15 12:00 |
 :::
 
-| **Disembarkation:** The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still recorded as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , record “at sea”
+| **Disembarkation:** The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still recorded as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , record "at sea"
 | 
 
 ::: {style="margin-left:40px"}
@@ -100,7 +102,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Country code | O | The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., FRA |
 | Port code | O | The port of the observation ending location | **Code** from [Ports](#ports) | e.g., RE REU |
 :::
@@ -111,14 +113,14 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Latitude | O | The latitude of the observation ending location. | dd°mm,m’ N/S | eg., -20.88 |
 | Longitude | O | The longitude of the observation ending location. | dd°mm,m’ N/S | e.g., 55.53 |
 :::
 
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Date/time UTC | O | The date and time of the end of observations | YYYY-MM-DDThh:mm | e.g., 2025-09-15 12:00 |
 :::
 
@@ -128,7 +130,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Conducted | M | The total number of fishing events/sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities. | Integer |  |
 | Observed | M | The total number of fishing sets/events monitored by the observer. In the case of EM, only processed events to be included | Integer |  |
 :::
@@ -137,7 +139,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Searching | O | Number of hours/days searching during the observation period | Integer |  |
 | Actively fishing | O | Number of active fishing hours/days during the observation period | Integer |  |
 | In fishing area | O | Number of hours in the fishing area during the observation period | Integer |  |
@@ -149,16 +151,14 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Reason codes | O | Reason(s) of hours lost | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., AW |
 :::
-
-
 
 # (V-INFO) Vessel \> General Information
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Observed trip ID |  | M | Refer to parent observed trip |  |
 
 ## Vessel Information
@@ -167,7 +167,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or EM records | Plain text | e.g., CAP EST |
 | Flag or chartering code | M | The name of country in which vessel is registered. Where chartering occurs, record name of the chartering country | **Code** from [Countries](#countries) | e.g., FRA |
 | IOTC number | M | Vessel IOTC number as per the IOTC Record of Authorized Vessels and crosschecked with the number recorded on vessel certificates. | Free entry, alphanumeric code | e.g., IOTC008460 |
@@ -179,14 +179,14 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Country code | O | The code of vessel's country of registry | **Code** from [Countries](#countries) | e.g., FRA |
 | Port code | O | The code of vessel's port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship's hull – also include the country. | **Code** from [Ports](#ports) | e.g., RE REU |
 | Reg number | O | The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel. This may be a combination of characters and numbers; record them all | Alphanumeric or numeric code according to CPC standards | e.g., CBG303 |
 :::
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Licensed target species | O | Licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all. | **Code** from [Target Species](#targetSpecies) | e.g., AL |
 | Main Fishing Gear | M | Vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., DL |
 **!!!!MAKE SURE THAT CODELIST IS CORRECT!!!**
@@ -195,7 +195,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Fishing master | M | The fishing master name and nationality in full | Full name: Plain text ; [Countries](#countries) **NOTE: DID NOT SEE A SEPARATE NATIONALITY CODE** | e.g., John Doe, FRA |
 | Skipper/captain | M | Skipper name and nationality in full | Full name: Plain text ; [Countries](#countries) **NOTE: DID NOT SEE A SEPARATE NATIONALITY CODE**  | e.g. John Doe, FRA |
 | Crew number | O | The number of crew. This should be cross checked against the vessel's crew list | Integer |  |
@@ -204,7 +204,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 # (V-TRIP) Vessel \> Trip details
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Observed trip ID |  | M | Refer to parent observed trip |  |
 
 ## Trip Details
@@ -217,7 +217,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Country code | O | The country or EEZ of the observation starting location. | **Code** from [Countries](#countries) | e.g., FRA |
 | Port code | O | The port of the observation starting location | **Code** from [Ports](#ports) | e.g., RE REU |
 | Latitude | O | The latitude of the observation starting location. | dd°mm,m’ N/S | e.g., -20.88 |
@@ -226,7 +226,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 |               |     |     |                  |                       |
-|:--------------|:---:|:----|:----------------:|:---------------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Date/time UTC |  O  |     | YYYY-MM-DDThh:mm | e.g.,2025-09-15 12:00 |
 :::
 
@@ -236,7 +236,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Country code | O | The country or EEZ of the observation starting location. | **Code** from [Countries](#countries) | e.g., FRA |
 | Latitude | O | The latitude of the observation starting location. | dd°mm,m’ N/S | e.g., -20.88 |
 | Longitude | O | The longitude of the observation starting location | dd°mm,m’ N/S | e.g., 55.53 |
@@ -244,7 +244,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Date/time UTC | O | The date and time the vessel departed from port or from a transshipment location | YYYY-MM-DDThh:mm | e.g., 2025-09-15 12:00 |
 :::
 
@@ -256,7 +256,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Country code | O | The country or EEZ of the observation ending location. | **Code** from [Countries](#countries) | e.g., FRA |
 | Port code | O | The port of the observation ending location |**Code** from [Ports](#ports) | e.g., RE REU |
 | Latitude | O | The latitude of the observation ending location. | dd°mm,m’ N/S | e.g., -20.88 |
@@ -265,7 +265,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 |               |     |     |                  |                        |
-|:--------------|:---:|:----|:----------------:|:----------------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Date/time UTC |  O  |     | YYYY-MM-DDThh:mm | e.g., 2025-09-15 12:00 |
 :::
 
@@ -275,7 +275,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Country code | O | The country or EEZ of the observation ending location. | **Code** from [Countries](#countries) | e.g., FRA |
 | Latitude | O | The latitude of the observation ending location. | dd°mm,m’ N/S | e.g., -20.88 |
 | Longitude | O | The longitude of the observation ending location | dd°mm,m’ N/S | e.g., 55.53 |
@@ -283,20 +283,20 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Date/time UTC | O | The date and time the fishing vessel finishes its fishing campaign. i.e. returns to port or to a transshipment location for unloading. If the observer disembarks before the vessel returns then record expected date and time of arrival (ETA) as provided by the vessel | YYYY-MM-DDThh:mm | e.g., 2025-09-15 12:00 |
 :::
 
 # (V-ATTRIBUTES) Vessel \> Vessel Attributes
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Observed trip ID |  | M | Refer to parent observed trip |  |
 
 ## Vessel Attributes
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Tonnage (GT) | O | The vessel tonnage as specified in vessel registration documents | Float |  |
 | Length (M) | O | The vessel overall length (LOA) as specified in vessel registration documents | Floats |  |
 | Hull material code | O | The vessel hull material | **code** from [Hull Material Types](#hullMaterialTypes) | e.g., AL |
@@ -305,14 +305,14 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Make | O |  | Free entry. Plain text |  |
 | Power value | O |  | Float |  |
 | KW/HP/BHP | O |  | Power units code (KW, HP, or BHP) |  |
 :::
 
 |  |  |  |  |  |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Fish storage capacity | O | The vessel total maximum capacity to store catches. This should include blast freezer(s) capacity. Note: specify units (metric Tons (mT.) or cubic meters (m3)) - from original ROS description form\*\* | Float |  |
 | Fish preservation methods | O | Fish preservation methods: Record the method(s) used by the vessel to preserve the catch (e.g. iced, frozen in brine, deep-frozen) | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., BR |
 | Fish storage types | O | The type of structure(s) present on-board used by the vessel to store the catch | **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., BF |
@@ -321,7 +321,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description |      Format       | Input value |
-|:--------|:-----------:|:------------|:-----------------:|:-----------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Value   |      O      |             |       Float       |             |
 | Days/NM |      O      |             | Select DAYS or NM |             |
 :::
@@ -329,7 +329,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 ## Vessel Electronics
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | GPS | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
 | VMS | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
 | AIS | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
@@ -347,20 +347,20 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 ## Waste Management
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Waste category | O | The category of the waste produced by the vessel | **Code** from [Waste Categories](#wasteCategories) | e.g., CP |
 | Storage/disposal method | O | How the waste was disposed of | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., AS |
 
 # (G-GENERAL) Longline General Gear Specifications
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Observed trip ID |  | M | Refer to parent observed trip |  |
 
 ## Special Equipment or Machinery
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Line setter/ line shooter | M | Indicate Yes if vessel equipped with this technology | Yes/No |  |
 | Line hauler | M | Indicate Yes if vessel equipped with this technology | Yes/No |  |
 | Bait casting machine | M | Indicate Yes if vessel equipped with this technology | Yes/No |  |
@@ -368,13 +368,13 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 # (G-CONFIG-BRANCHLINES) Longline General Gear Specifications > Branchline Configurations
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Observed trip ID |  | M | Refer to parent observed trip |  |
 
 ## Branchline Configurations
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Configuration number | O | Unique number for a specific branchline specification as detailed based on the fields below | Integer |  |
 | Section number | O |  | Integer |  |
 | Material type code | O | The branchline material for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., NL |
@@ -384,13 +384,13 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 ## Additional Branchline Details
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Storage codes | O | If the branch lines are coiled up and packed into baskets (BSK), or layered out in tubs (TBS), or coiled up onto reels (RLS) | **Code** from [Branchline Storages](#branchlineStorages) | e.g., BA |
 
 # (G-CONFIG-MITIGATION-DEVICES) Longline Gear Specifications > Mitigation Devices
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Observed trip ID |  | M | Refer to parent observed trip |  |
 
 ## Tori Line Details
@@ -398,7 +398,7 @@ Focal point (full name, email, finalisation date, and submission date) and organ
 Note: If the vessel was equipped with a tori line, provide tori line details below. If not tori line was present on board, fill in NA for not applicable. \_ from original ROS description form\*\*
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Tori line length | M | The total length of the tori line (not including streamers) | Float |  |
 | Streamer type code | M | The type of streamers which are used with the tori line (e.g. paired or single) | **Code** from [Streamer Types](#streamerTypes) | e.g., MU |
 | Reach surface | O | Yes if the streamers are long enough to touch the surface of the water in calm conditions or No if they are not | Yes/No |  |
@@ -412,25 +412,25 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 ## Other Mitigation Devices
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Device codes |  O |  | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., AA |
 
 # (E-SET) Longline Fishing Events > Setting Operations
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Observed trip ID |  | M | Refer to parent observed trip |  |
 | Set ID | M | This should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line set to the last line set of the observed trip | 4 digits number |  |
 
 ## Setting Operations
 
 | Element       | Requirement | Description | Format | Input value |
-|:--------------|:-----------:|:------------|:------:|:-----------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Start setting |             |             |        |             |
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Date and time | M | The date and the time in GMT/UTC the first dhan buoy and / or radio buoy is deployed to start the setting of the line | YYYY-MM-DDThh:mm | e.g., 2025-09-15 12:00 |
 | Position | M | The position in latitude and longitude for the start of the setting operation | dd°mm,m’ N/S | eg., **-20.88** - CORRECT FORMAT? |
 :::
@@ -439,13 +439,13 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Date and time | M | The date and the time in GMT/UTC that the last dhan buoy and / or radio buoy is deployed. | YYYY-MM-DDThh:mm | e.g., 1/7/2023 12:00:00 AM |
 | Position | M | The position in latitude and longitude for the end of the setting operation | dd°mm,m’ N/S | eg., **-20.88** - CORRECT FORMAT? |
 :::
 
 |  |  |  |  |  |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Vessel speed | M | The vessel’s average speed during setting (knots) | Float |  |
 | Line setter speed | M | The speed setting of the line setter (meters/second) | Float |  |
 
@@ -453,7 +453,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 ::: {style="margin-left:40px"}
 | Element       | Requirement | Description |          Format          | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Material code | O | |  **Code** from [Line Material Types](#lineMaterialTypes) | e.g., NL |
 | value         | O | |  Float  | |
 | KM/NM         | O | | Indicate unit (KM or NM) | |
@@ -463,13 +463,13 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Branchline | O | The average time interval in seconds between the “beeps” that indicate to the crew to clip on a branch line. | Yes/No |  |
 | Buoys | O | The average time interval in seconds between the “beeps” that indicate to the crew to clip on a buoy | Yes/No |  |
 :::
 
 |  |  |  |  |  |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Number of total hooks set | M | The total number of hooks deployed for the set. Usually calculated by multiplying number of baskets by the average number of hooks between the baskets. This information can be obtained from the Fishing Master and cross checked against observer calculations | Integer |  |
 | Number of total floats on set | O | The total number of floats deployed during the set (this should not include the radio/dhan buoys). Usually calculated by subtracting the number of buoys in their holders before setting by the number of buoys in their holders after setting. This information can be obtained from the Fishing Master and cross checked against observer calculations | Integer |  |
 | Number of hooks between floats | M | The number of hooks set between floats. This will correspond to the number of hooks stored in each basket/tub, or on a reel and will be equivalent to the number of branch lines set. | Integer |  |
@@ -477,7 +477,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Set | M | Indicate Yes or No if shark lines were set during the operation | Yes/No |  |
 | Number of lines | O | The number of shark lines set during the operation. If no shark lines are set then record zero (0) | Integer |  |
 :::
@@ -486,7 +486,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Material code | M | Each leader type used in the set  | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., NL |
 | Percentage | M | for each leader type used in the set, estimate the percentage of total branchlines in the set using that leader type. Estimate by counting the number of branchlines in a basket by leader type and dividing each count by the total hooks in the basket. This assumes uniform use of leader types across baskets in a set. Estimates should be adjusted if there is variation across baskets (within a set) in leader proportions | Float |  |
 :::
@@ -495,19 +495,19 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description |         Format          | Input value |
-|:--------|:-----------:|:------------|:-----------------------:|:-----------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Value   |      M      |             |          Float          |             |
 | CM/M    |      M      |             | Indicate Unit (CM or M) |             |
 :::
 
 |  |  |  |  |  |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Target species | M | The target species for the set (FAO spp. 3-alpha code) | **Code** from [Target Species](#targetSpecies) | e.g., AL |
 
 # (E-SET-LIGHTS) Longline Fishing Events > Setting Operations > Attached Lights
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Observed trip ID |  | M | Refer to parent observed trip |  |
 | Set ID | M | Refer to parent Set ID | 4 digits number |  |
 
@@ -517,7 +517,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 ::: {style="margin-left:40px"}
 | Element          | Requirement | Description |    Format     | Input value |
-|:-----------------|:-----------:|:------------|:-------------:|:-----------:|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Type code        |      M      |             | **Code** from [Light Types](#lightTypes) |  e.g., CL   |
 | Colour code      |      M      |             | **Code** from [Light Colours](#lightColours) |  e.g., BU   |
 | Number of lights |      M      |             |    Integer    |             |
@@ -527,8 +527,8 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Observed trip ID |  | M | Refer to parent observed trip |  |
-| Set ID | M | Refer to parent Set ID | 4 digits number |  |
+| Observed trip ID | M | Refer to parent observed trip |||
+| Set ID | M | Refer to parent Set ID | 4 digits number ||
 
 ## Mitigation Measures
 
