@@ -218,6 +218,8 @@ SPECIES_1DR           = merge(SPECIES_1DR_CODES, SPECIES, by.x = "CODE", by.y = 
 
 SPECIES_TARGET        = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_TARGET")
 
+SPECIES_PREDATORS     = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_PREDATORS")
+
 RETAIN_REASONS        = read_codelist(domain = "biology", schema = "biology", codelist = "RETAIN_REASONS")
 
 DISCARD_REASONS       = read_codelist(domain = "biology", schema = "biology", codelist = "DISCARD_REASONS")
