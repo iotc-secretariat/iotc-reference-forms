@@ -41,10 +41,14 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g.,1996 |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 |
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |e.g., ABW |
 | Reporting flag / Chartering state | M | The reporting flag or chartering state **OR** three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., FRA |
 | Data source | M | The source of data provided  | Observer data or EM data |  |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
+| Reporting flag / Chartering state | M | The reporting flag or chartering state **OR** three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |  |
+| Data source | M | The source of data provided (Observer data or EM DATA) |  |  |
 
 # (O-INFO) Observer and Observed Trip Information
 
@@ -61,7 +65,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 ## Observer Trip Details
 
-| **Embarkation:** The starting port. If the first observation is available after the departure form the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure) , record “at sea”.
+| **Embarkation:** The starting port. If the first observation is available after the departure form the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure), record "at sea".
 
 ::: {style="margin-left:40px"}
 | **In port**
