@@ -191,8 +191,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Licensed target species | O | Licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all. | **CODE** from [Target Species](#targetSpecies) | e.g., AL |
-| Main Fishing Gear | M | Vessel main fishing gear | **CODE** from [Fishing Gear](#fishingGear) | e.g., DL |
+| Licensed target species | O | Licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all. | **Code** from [Target Species](#targetSpecies) | e.g., AL |
+| Main Fishing Gear | M | Vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., DL |
 **!!!!MAKE SURE THAT CODELIST IS CORRECT!!!**
 
 | Vessel Personnel: insert description here
@@ -625,7 +625,7 @@ Note: If the vessel was equipped with a tori line, provide tori line details bel
 |  |  |  |  |  |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Offal management | O | Fate given to the offal (fish heads, guts, etc.) and bait produced during the observed set. Indicate if these are retained for batch disposal (BD) at a later stage and/or disposed of ad hoc (AH) as they accumulate | **Code** from [Offal Management Types](#offalManagementTypes) | e.g., AH |
-| Position of offal disposal - position code | O | The position where offal and used bait was disposed. Indicate if these are disposed at port side (BB), starboard (SB) or aft (AF) | **MISSING CODES- DEFINE** |  |
+| Position of offal disposal - position code | O | The position where offal and used bait was disposed. Indicate if these are disposed at port side (BB), starboard (SB) or aft (AF) | **Code** from [Vessel Section](#vesselSection) |e.g., BW  |
 | Bird scaring device at hauler | M | Yes if a bird scaring device was deployed during hauling operations and No if not. | Yes/No |  |
 | Number of branchline haulings observed | M | The number of branchline haulings observed | Integer |  |
 | Number of hooks retrieved during observation | M | The number of hooks retrieved during observation | Integer |  |
@@ -752,9 +752,9 @@ Weight: The catch weight corresponding to the specified product type recorded in
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description |            Format            | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Scale   |      O      |             | \*\* MISSING CODES TO DEFINE |             |
-| Stage   |      O      |             | \*\* MISSING CODES TO DEFINE |             |
-**I dont see maturity codelists in the metadata table**
+| Scale   |      O      |             | **code list being developed** |             |
+| Stage   |      O      |             | **code list being developed**|             |
+
 :::
 
 | Sample collected: The following details on the collection of samples: a) type (e.g. otoliths, spine clippings, and genetic samples) b) preservation method (e.g. alcohol, frozen, etc.) c) destination (i.e. location to be sent/stored)
@@ -762,9 +762,10 @@ Weight: The catch weight corresponding to the specified product type recorded in
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Type | O |  | [Sampling Type](#samplingMethodsForSamplingCollections) |  |
-| Preservation method | O |  | [Sample Preservation Method](#fishPreservationMethods) |  |
-**I dont see proper codelists for these sections, are these correct?**
+| Type | O |  | [Sampling Type](#samplingMethodsForSamplingCollections) |**NOTE: alternative codelist being developed**  |
+| Preservation method | O |  | [Sample Preservation Method](#fishPreservationMethods) |**NOTE: alternative codelist being developed**   |
+**Destination** - needs to be added to the form, codelist needs to be developed
+
 :::
 
 | Depredation method:
@@ -1071,6 +1072,20 @@ out_dt(SPECIES_BAITS, "SPECIES_BAITS")
 ```{r collapse = TRUE}
 out_dt(OFFAL_MANAGEMENT_TYPES, "OFFAL_MANAGEMENT_TYPES")
 ```
+
+
+
+## Vessel Sections {#vesselSections}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#vesselSections)
+-   **Version**: `r version_number("VESSEL_SECTIONS")`
+-   **Last update**: `r last_update("VESSEL_SECTIONS")`
+
+```{r collapse = TRUE}
+out_dt(VESSEL_SECTIONS, "VESSEL_SECTIONS")
+```
+
+
 
 ## Sampling protocols {#samplingProtocols}
 
