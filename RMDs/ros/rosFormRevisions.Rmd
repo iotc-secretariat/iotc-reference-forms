@@ -1,0 +1,47 @@
+---
+title: "rosFormRevisions"
+output: html_document
+---
+
+This document is a review of errors, inconsistencies, and updates needed in the ros reporting forms and ros form descriptions. 
+
+
+Section: Vessel Attributes
+- for the subsection fish storage capacity, add another field to report units (m3 or t)
+
+
+Section: Setting Operations
+- description for sighting cues says " sighting cues and types of schools detected". Add another field for Types of Schools Detected
+
+Section: Vessel Attributes
+- autonomy range unit - needs revising
+
+Section: E-SET-TUNA --> Setting Operations
+- after school sighting cues, add a field or subsection for "bait type"
+
+
+Section: E-SET-CATCHES-TUNA-FISHING-TRIP
+- Catch Details section seems to be duplicated in the E-SET-TUNA-CATCHES section. Is this intentional? Which one should be kept?
+
+Section: E-SET-CATCHES-BIOMETRIC
+- need to develop maturity codelists. Same on other forms
+- need to develop codelists for "sample collected" subsection
+
+
+Section: E-SET-BAIT
+- in the file from the scientific committee, the first section is event number. Is that the same as Set ID? Do we have specific definitions for a "set" or "event"? In the reporting form it only has Set ID. 
+
+
+Section: DAILY-ACTIVITY
+- typo on the form: Dailiy --> Daily
+
+
+
+
+
+
+
+
+
+
+
