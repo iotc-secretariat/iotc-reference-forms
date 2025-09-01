@@ -147,7 +147,7 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Name | M | Record the vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or EM records | Plain text |  |
+| Name | M | Record the vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or EM records | Plain text | e.g., CAP EST  |
 | Flag or chartering code | M  |Record the name of country in which vessel is registered. Where chartering occurs, record name of the chartering country  | **Code** from [Countries](#countries) | e.g., FRA |
 | IOTC number  | M  | Vessel IOTC number as per the IOTC Record of Authorized Vessels and crosschecked with the number recorded on vessel certificates. | Free entry, alphanumeric code   | e.g., IOTC008460 |
 | IMO number  | O  | Record the vessel IMO number  | Seven-digit number  |  |
@@ -183,7 +183,7 @@ Fill out organization information (name, email)
 
 ## Trip Details
 
-| Vessel departure: Record the name and/or geographical coordinates of the port from where the vessel sailed – also include the country.  If the vessel started a new trip at sea following transshipment record ‘at-sea’ plus the geographical coordinates corresponding to the location the trip started
+| Vessel departure: Record the name and/or geographical coordinates of the port from where the vessel sailed – also include the country.  If the vessel started a new trip at sea following transhipment record ‘at-sea’ plus the geographical coordinates corresponding to the location the trip started
 ::: {style="margin-left:40px"}
 | In port
 :::
@@ -261,7 +261,7 @@ Fill out organization information (name, email)
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Tonnage (TG) | O |The vessel tonnage as specified in vessel registration documents  |Float  |  |
 | Length (M) | O |The vessel overall length (LOA) as specified in vessel registration documents  |Floats  |  |
-| Hull material code | O |Record the vessel hull material  | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., AL ||
+| Hull material code | O |Record the vessel hull material  | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., AL |
 | Main engines: The make (brand) and power of the main engines 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
@@ -460,6 +460,7 @@ FAD equipped with artificial lights
 | Value | M  |  | Float  |  |
 | KG/T | M |  | Indicate unites (KG or T)  |  |
 | Estimation method code | M | Specify the weight estimation method used to obtain the weight |**Code** from [Total Catch Estimation](#totalCatchEstimation) | e.g., EP|
+**I do not think this is the right codelist**
 
 
 
