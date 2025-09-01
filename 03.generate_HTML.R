@@ -10,7 +10,7 @@ render("./RMDs/Form-summary_fr.Rmd",
        output_file = "index_fr.html",
        output_dir = "./out/HTML/")
 
-# NEW FORMS (EN) ####
+# IOTC STATISTICAL FORMS ####
 
 ## Species presence in the catch ####
 
@@ -125,53 +125,16 @@ render("./RMDs/Form-2FC.Rmd",
 #       output_file ="Form_7PR.html", 
 #       output_dir = "./out/HTML/")
 
-# LEGACY FORMS ####
+# ROS REPORTING FORMS ####
 
-# render("./RMDs/legacy/Form-1DI.Rmd", 
-#        output_format = "html_document2",
-#        output_file = "Form-1DI-legacy.html", 
-#        output_dir = "./out/HTML/legacy/")
-# 
-# render("./RMDs/legacy/Form-1DR.Rmd", 
-#        output_format = "html_document2",
-#        output_file ="Form-1DR-legacy.html", 
-#        output_dir = "./out/HTML/legacy/")
-# 
-# render("./RMDs/legacy/Form-1RC.Rmd", 
-#        output_format = "html_document2",
-#        output_file = "Form-1RC-legacy.html", 
-#        output_dir = "./out/HTML/legacy/")
-# 
-# render("./RMDs/legacy/Form-3CE.Rmd", 
-#        output_format = "html_document2",
-#        output_file ="Form-3CE-legacy.html", 
-#        output_dir = "./out/HTML/legacy/")
-# 
-# render("./RMDs/legacy/Form-2FC.Rmd", 
-#        output_format = "html_document2",
-#        output_file = "Form-2FC-legacy.html", 
-#        output_dir = "./out/HTML/legacy/")
-# 
-# render("./RMDs/legacy/Form-4SF.Rmd", 
-#        output_format = "html_document2",
-#        output_file = "Form-4SF-legacy.html", 
-#        output_dir = "./out/HTML/legacy/")
-# 
-# render("./RMDs/legacy/Form-7PR.rmd", 
-#        output_format = "html_document2",
-#        output_file = "Form-7PR-legacy.html", 
-#        output_dir = "./out/HTML/legacy/")
-
-# ROS FORMS
-
-## LONGLINE
+## LONGLINE ####
 
 render("./RMDs/ros/ROS-LL.rmd", 
        output_format = "html_document2",
        output_file ="Form-ROS-LL.html", 
        output_dir = "./out/HTML/ros/")
 
-## POLE AND LINE
+## POLE-AND-LINE ####
 
 render("./RMDs/ros/ROS-PL.rmd", 
        output_format = "html_document2",
