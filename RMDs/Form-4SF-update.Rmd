@@ -128,7 +128,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 ## IOTC 5° grids {#5x5Grids}
 
 ```{r collapse = TRUE}
-out_dt(IOTC_GRIDS_SF, "AREAS_IOTC_05")
+out_dt(IOTC_GRIDS_05x05, "AREAS_IOTC_05")
 ```
 
 ## Fisheries {#fisheries}
