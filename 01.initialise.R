@@ -210,6 +210,10 @@ HULL_MATERIAL_TYPES = read_codelist(domain = "fisheries", schema = "fishery", co
 
 DEHOOKER_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", codelist = "DEHOOKER_TYPES")
 
+POLE_MATERIAL_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "POLE_MATERIAL_TYPES")
+
+SCHOOL_SIGHTING_CUES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SCHOOL_SIGHTING_CUES")
+
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
 SPECIES               = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
@@ -261,6 +265,8 @@ SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS = read_codelist(domain = "biology", co
 TAG_TYPES = read_codelist(domain = "biology", schema = "biology", codelist = "TAG_TYPES")
 
 DEPREDATION_SOURCES = read_codelist(domain = "biology", schema = "biology", codelist = "DEPREDATION_SOURCES")
+
+WEIGHT_ESTIMATION_METHODS = MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE  == "WG", -c("TYPE_OF_MEASUREMENT_CODE")]
 
 # SOCIO-ECONOMIC DOMAIN ####
 

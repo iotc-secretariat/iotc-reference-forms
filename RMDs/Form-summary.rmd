@@ -30,7 +30,7 @@ All IOTC code lists required by the forms are distributed through the [IOTC Refe
 
 At its 26^th^ session, the IOTC Scientific Committee endorsed the adoption of new reporting forms to streamline data flow and improve the quality of dataset submissions to the Secretariat. The use of these forms for submitting fisheries statistics to the IOTC became **mandatory** as of 2025.
 
-The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts. You can download all current form templates for submitting data to the IOTC [here](../forms/IOTC-forms.zip). They are also available on the Zenodo platform, which is used to manage their different versions and to maintain links with the corresponding IOTC code list versions [https://doi.org/10.5281/zenodo.16941787](https://zenodo.org/records/16941788).
+The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts. You can download all current form templates for submitting data to the IOTC [here](../forms/IOTC-stats-forms.zip). They are also available on the Zenodo platform, which is used to manage their different versions and to maintain links with the corresponding IOTC code list versions [https://doi.org/10.5281/zenodo.16941787](https://zenodo.org/records/16941788).
 
 We welcome your feedback on these forms and encourage you to direct any questions to the IOTC Secretariat via email at [IOTC-Statistics@fao.org](mailto:IOTC-Statistics@fao.org).
 
@@ -155,16 +155,18 @@ The ROS data reporting forms were revised during the 20^th^ Session of the Worki
 
 ## Form ROS-GN | Gillnets
 
-+ [Form template](./Form-ROS-GN.xlsx)
++ [Form template](./ros/Form-ROS-GN.xlsx)
+
 
 ## Form ROS-LL | Longlines
 
-+ [Form template](./Form-ROS-LL.xlsx)
++ [Form template](./ros/Form-ROS-LL.xlsx)
++ [Form description](./ros/Form-ROS-LL.html)
 
 ## Form ROS-PL | Pole-and-Lines
 
-+ [Form template](./Form-ROS-PL.xlsx)
++ [Form template](./ros/Form-ROS-PL.xlsx)
 
 ## Form ROS-PS | Purse Seines
 
-+ [Form template](./Form-ROS-PS.xlsx)
++ [Form template](./ros/Form-ROS-PS.xlsx)

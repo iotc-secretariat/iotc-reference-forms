@@ -4,6 +4,7 @@ SERVER_ROOT = "/reference"
 FORMS_FOLDER         = "forms"
 INTERIM_FORMS_FOLDER = paste0(FORMS_FOLDER, "/interim")
 LEGACY_FORMS_FOLDER  = paste0(FORMS_FOLDER, "/legacy")
+ROS_FORMS_FOLDER     = paste0(FORMS_FOLDER, "/ros")
 
 DATA_IOTC_SERVER_IP = Sys.getenv("DATA_IOTC_SERVER_IP")
 DATA_IOTC_USERNAME  = Sys.getenv("DATA_IOTC_USERNAME")
@@ -115,66 +116,107 @@ upload_forms = function(version) {
     )
   }
   
-  print(paste0("Uploading all forms as a zipped archive in ", folder, "..."))
+  print(paste0("Uploading all statistical forms as a zipped archive in ", folder, "..."))
   
-  zip::zip(zipfile = "./form_reporting_templates/IOTC-forms.zip", 
+  zip::zip(zipfile = "./form_reporting_templates/IOTC-stats-forms.zip", 
            files = list.files("./form_reporting_templates/", pattern = "Form-.+.xlsx", full.names = TRUE),
            mode = "cherry-pick")
   
   CURL_FTPu(
-    filename   = "./form_reporting_templates/IOTC-forms.zip",
-    target_url = ftp_url(paste0(folder, "/IOTC-forms.zip"))
+    filename   = "./form_reporting_templates/IOTC-stats-forms.zip",
+    target_url = ftp_url(paste0(folder, "/IOTC-stats-forms.zip"))
   )
 }
 
-upload_interim_forms = function(version) {
-  for(form in list.files("./form_reporting_templates/interim", pattern = "*.xlsx")) {
-    folder = full_folder(version, INTERIM_FORMS_FOLDER)
+# upload_interim_forms = function(version) {
+#   for(form in list.files("./form_reporting_templates/interim", pattern = "*.xlsx")) {
+#     folder = full_folder(version, INTERIM_FORMS_FOLDER)
+#     
+#     print(paste0("Uploading form '", form, "' in ", folder, "..."))
+#     
+#     CURL_FTPu(
+#       filename   = paste0("./form_reporting_templates/interim/", form),
+#       target_url = ftp_url(paste0(folder, "/", form))
+#     )
+#   }
+# }
+
+upload_ros_forms = function(version) {
+  for(form in list.files("./form_reporting_templates/ros", pattern = "*.xlsx")) {
+    folder = full_folder(version, ROS_FORMS_FOLDER)
     
     print(paste0("Uploading form '", form, "' in ", folder, "..."))
     
     CURL_FTPu(
-      filename   = paste0("./form_reporting_templates/interim/", form),
+      filename   = paste0("./form_reporting_templates/ros/", form),
       target_url = ftp_url(paste0(folder, "/", form))
     )
   }
+
+  print(paste0("Uploading all ROS forms as a zipped archive in ", folder, "..."))
+  
+  zip::zip(zipfile = "./form_reporting_templates/ros/IOTC-ROS-forms.zip", 
+           files = list.files("./form_reporting_templates/ros/", pattern = "Form-.+.xlsx", full.names = TRUE),
+           mode = "cherry-pick")
+  
+  CURL_FTPu(
+    filename   = "./form_reporting_templates/ros/IOTC-ROS-forms.zip",
+    target_url = ftp_url(paste0(folder, "/IOTC-ROS-forms.zip"))
+  )
 }
 
-upload_legacy_form_docs = function(version) {
-  folder = full_folder(version)
-  
-  folder = paste0(full_folder(version, "forms/legacy"))
-  
-  for(form in list.files(paste0("./out/HTML/legacy/"), pattern = "*.html")) {
-    print(paste0("Uploading form document '", form, "' in ", folder, "..."))
-    
-    CURL_FTPu(
-      filename   = paste0("./out/HTML/legacy/", form), 
-      target_url = paste0(ftp_url(folder), "/", form) 
-    )
-  }
-}
+# upload_legacy_form_docs = function(version) {
+#   folder = full_folder(version)
+#   
+#   folder = paste0(full_folder(version, "forms/legacy"))
+#   
+#   for(form in list.files(paste0("./out/HTML/legacy/"), pattern = "*.html")) {
+#     print(paste0("Uploading form document '", form, "' in ", folder, "..."))
+#     
+#     CURL_FTPu(
+#       filename   = paste0("./out/HTML/legacy/", form), 
+#       target_url = paste0(ftp_url(folder), "/", form) 
+#     )
+#   }
+# }
 
 upload_form_docs = function(version) {
   folder = full_folder(version)
-  
+
   folder = paste0(full_folder(version, "forms"))
-  
+
   for(form in list.files(paste0("./out/HTML/"), pattern = "*.html")) {
     print(paste0("Uploading form document '", form, "' in ", folder, "..."))
-    
+
     CURL_FTPu(
-      filename   = paste0("./out/HTML/", form), 
-      target_url = paste0(ftp_url(folder), "/", form) 
+      filename   = paste0("./out/HTML/", form),
+      target_url = paste0(ftp_url(folder), "/", form)
     )
   }
  }
 
+upload_ros_form_docs = function(version) {
+  folder = full_folder(version)
+  
+  folder = paste0(full_folder(version, "forms/ros"))
+  
+  for(formdoc in list.files(paste0("./out/HTML/ros"), pattern = "*.html")) {
+    print(paste0("Uploading form document '", formdoc, "' in ", folder, "..."))
+    
+    CURL_FTPu(
+      filename   = paste0("./out/HTML/ros/", formdoc),
+      target_url = paste0(ftp_url(folder), "/", formdoc)
+    )
+  }
+}
+
 disseminate = function(version) {
   upload_forms(version)
+  upload_ros_forms(version)
   #upload_interim_forms(version)
-  upload_legacy_form_docs(version)
+  #upload_legacy_form_docs(version)
   upload_form_docs(version)
+  upload_ros_form_docs(version)
 }
 
 form_version = "1.0.0"
