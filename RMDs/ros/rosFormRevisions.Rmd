@@ -5,39 +5,41 @@ output: html_document
 
 This document is a review of errors, inconsistencies, and updates needed in the ros reporting forms and ros form descriptions. 
 
-
-Section: Vessel Attributes
-- for the subsection fish storage capacity, add another field to report units (m3 or t)
+# Pole and Line form
 
 
-Section: Setting Operations
-- description for sighting cues says " sighting cues and types of schools detected". Add another field for Types of Schools Detected
+| Line of Code|Section | Update needed | Status |
+|:-------|:-------|:-----------------------------------:|:---------:|
+| 25 - 31 | Description | review text for Description and data content | noted | 
+| 60 | O-INFO --> Observer Identification | "Full Name"is optional in the reporting form, but mandatory in the form description | noted| 
+| 223 - 238 | Trip Details --> vessel departure | In the form description I have IN PORT and AT SEA, but the form has no AT SEA section. | noted  | 
+| 256 - 269 | Trip Details --> vessel return | In the form description I have IN PORT and AT SEA, but the form has no AT SEA section. | noted  | 
+| 290 | V-ATTRIBUTES | On the form their are two sections for "main engine", assuming there are 2 main engines. In the form description, there is 1. Duplicate section? | noted |
+| 296 | V-ATTRIBUTES | ADD NEW FIELD TO FORM -for the subsection fish storage capacity, add another field to report units (m3 or t) | noted |
+| 321 | V-ATTRIBUTES | CHANGE FORM - change field of the DAYS|NM column to "Autonomy range units"under Autonomy Range |  notes|
+| 328 | V-ATTRIBUTES | CHANGE -FORM - GPS column needs to be changed to GNSS | noted | 
+| 341 - 376 | V-ATTRIBUTES | Waste management - there is a subcolumn called OTHER. Not sure what it is. ADD TO DESCRIPTION? | noted |
+| 457 - 461 | E-SET-TUNA | ADD NEW FIELD : Setting Operations - description for sighting cues says " sighting cues and types of schools detected". Add another field for Types of Schools Detected | noted |
+| 480 | E-SET-TUNA | ADD NEW FIELD:  after school sighting cues, add a field or subsection for "bait type" | noted|
+| 515 | E-SET-TUNA-CATCHES-FISHING-TRIP | ADD NEW FIELD - add a "weight code" section before the value section | noted |
+| 530 - 552 | E-SET-CATCHES-TUNA-FISHING-TRIP Catch Details|  section seems to be duplicated in the E-SET-TUNA-CATCHES section. Is this intentional? Which one should be kept? | noted |
+| 625 - 626 | E-SET_CATHCES-BIOMETRIC | ADD NEW FIELD - for the WEIGHT section, the description form has a value column and a unit column. The reporting form just has one column |noted|
+| 627 | E-SET-CATCHES-BIOMETRIC | check codelist - the reporting form has weight "measurement tool code" and the form description has weight "estimation methods" | noted |
+| 635 - 636 | E-SET-CATCHES-BIOMETRIC | need to develop maturity codelists. Same on other forms | noted  |
+| 638 - 645 | E-SET-CATCHES-BIOMETRIC | need to develop codelists for "sample collected" subsection |noted  |
+| 663 | | E-SET-BAIT | in the file from the scientific committee, the first section is event number. Is that the same as Set ID? Do we have specific definitions for a "set" or "event"? In the reporting form it only has Set ID. | noted   | 
+| 705 | E-SET-BAIT | CHANGE FIELD - to keep things consistent, FT|M --> UNITS | noted |
+| 716 - 725 | E-SET-BAIT-CATCHES | field names do not match. Verify which is correct and amend accordingly | noted| 
+| 725 | E-SET-BAIT-CATCHES | Ammend link to codelists for weight estimations. code list added to PgAdmin? | noted| 
+|DAILY-ACTIVITY | typo on the form: Dailiy --> Daily |   | 
 
-Section: Vessel Attributes
-- autonomy range unit - needs revising
-
-Section: E-SET-TUNA --> Setting Operations
-- after school sighting cues, add a field or subsection for "bait type"
+ 
 
 
-Section: E-SET-CATCHES-TUNA-FISHING-TRIP
-- Catch Details section seems to be duplicated in the E-SET-TUNA-CATCHES section. Is this intentional? Which one should be kept?
+## Longline Form
 
-Section: E-SET-CATCHES-BIOMETRIC
-- need to develop maturity codelists. Same on other forms
-- need to develop codelists for "sample collected" subsection
-
-
-Section: E-SET-BAIT
-- in the file from the scientific committee, the first section is event number. Is that the same as Set ID? Do we have specific definitions for a "set" or "event"? In the reporting form it only has Set ID. 
-
-
-Section: DAILY-ACTIVITY
-- typo on the form: Dailiy --> Daily
-
-
-
-
+SECTION: VESSEL INFORMATION: 
+- IMO: update definition??: The International Maritime Organisation (IMO) unique vessel identifier Scheme (use NE if the vessel is Not Eligible, or PENDING if an IMO number has been requested but not yet assigned).
 
 
 
