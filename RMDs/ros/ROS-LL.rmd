@@ -38,11 +38,11 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 ## General Information
 
 | Element | Requirement | Description | Format | Input value |
-|:----------- |:----:|:-------------------------|:-------:|:---------:|
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., `1996` |
+|:--------- |:----:|:-------------------------|:-------:|:---------:|
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g., `1996` |
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `ABW` |
 | Flag / Chartering state | M | The country registration of the fishing vessels or chartering flag in case of chartering agreement | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Data source | M | The source of data provided | Observer data or EM data | e.g., `OAS` |
+| Data source | M | The source of data provided: 'OAS' for data collected by Observers at sea and 'EMS' for data derived from Electronic Monitoring Systems | String | e.g., `OAS` |
 
 <!-- Code list of data sources to define: OAS/EMS -->
 
