@@ -33,44 +33,44 @@ Number or live weight of discards by species, including their condition at relea
 
 ## General Information
 
-| Element | Requirement | Description | Format | Input value  |
-| :-------- | :-----: | :----------------------- | :----- | :-------: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 | 
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code** from [Countries](#countries) |
+| Element | Requirement | Description | Format | Input value |
+| :------ | :-----: | :----------------------- | :----------- | :-----: |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g., `1996` | 
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` | 
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., `FRA` |
 
 ## Main Data Elements
 
-| Element | Requirement | Description | Format | Input value  |
-| :-------- | :-----: | :----------------------- | :----- | :---------------------: |
-| Quarter | M | Gregorian calendar quarter of the fishing activities reported through the dataset | Integer | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
-| Fisheries | M | [IOTC fishery](../guidelines/#Fisheries) derived from the combination of several factors | String | **Code** from [Fisheries](#fisheries) |
-| IOTC main areas | M | Main IOTC areas of competence   | String | **Code** from  [IOTC main areas](#IOTCareasMain)  |
-| Reasons for discarding | M | Reasons why the species was discarded | String | **Code** from [Reasons for discarding](#discardReasons) |
-| Species | M | Species caught and discarded | String | **Code** from [Species](#allSpecies)           |
-| Condition of species | M | Conditions of species being discarded at sea  | String | **Code** from  [Conditions](#individualConditions)|
-| Data raising | M | Level of raising (i.e., extrapolation) | String | **Code** from [Raisings](#dataRaising)| 
-| Catch unit | M | Units used to report the level of catches of a given species | String | **Code** from [Catch units](#catchUnits) |
+| Element | Requirement | Description | Format | Input value |
+| :------ | :-----: | :----------------------- | :----------- | :-----: |
+| Quarter | M | Gregorian calendar quarter of the fishing activities reported through the dataset. **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec | 1-digit integer | e.g., `1` |
+| Fisheries | M | [IOTC fishery](../guidelines/#Fisheries) derived from the combination of several factors | **Code** from [Fisheries](#fisheries) | e.g., `PS-DF[IN]TR` |
+| IOTC main areas | M | Main IOTC areas of competence | **Code** from  [IOTC main areas](#IOTCareasMain) | e.g., `IOTC_EAST` |
+| Reasons for discarding | M | Reasons why the species was discarded | **Code** from [Reasons for discarding](#discardReasons) | e.g., `PQ` |
+| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) | e.g., `YFT` |
+| Condition of species | M | Conditions of species being discarded at sea  | **Code** from  [Conditions](#individualConditions) | e.g., `A0` |
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising)| e.g., `RT` |
+| Catch unit | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) | e.g., `KG` | 
 
 ## Original Data
 
 | Element | Requirement | Description | Format | Input value  |
-| :-------- | :-----: | :------------------ | :------ | :-------: |
-| Original data type  | M | Preliminary/final status of the data | String | **Code** from [Types of data](#datatypes) |
-| Original data source     | M | Source of information | String | **Code** from [Discards data sources](#dataSourcesDI) |
-| Original data processing | M | Processing applied to the data  | String | **Code** from [Discards data processings](#dataProcessingsDI) |
-| Source coverage type     | M | Variable used for data coverage | String | **Code** from [Types of coverage](#coverageTypes) |
+| :------ | :-----: | :----------------------- | :----------- | :-----: |
+| Original data type  | M | Preliminary/final status of the data | **Code** from [Types of data](#datatypes) | e.g., `FI` | 
+| Original data source | M | Source of information | **Code** from [Discards data sources](#dataSourcesDI) | e.g., `OB` |
+| Original data processing | M | Processing applied to the data  | **Code** from [Discards data processings](#dataProcessingsDI) | e.g., `TE` | 
+| Source coverage type | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) | e.g., `HK` |
 
 # Reporting Metadata
 
 | Element | Requirement | Description | Format | Input value |
-| :-------- | :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | e.g., John Doe |
-| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | e.g., National Institute of Fisheries |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., [nif\@gov.sc](mailto:nif@gov.sc){.email} |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., 1996-03-27 |
-| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., 1997-03-21 |
+| :------ | :-----: | :----------------------- | :----------- | :-----: |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `National Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
 
 # Reporting Deadlines
 
