@@ -41,6 +41,36 @@ This document is a review of errors, inconsistencies, and updates needed in the 
 SECTION: VESSEL INFORMATION: 
 - IMO: update definition??: The International Maritime Organisation (IMO) unique vessel identifier Scheme (use NE if the vessel is Not Eligible, or PENDING if an IMO number has been requested but not yet assigned).
 
+| Line of Code|Section | Update needed | Status |
+|:-------|:-------|:-----------------------------------:|:---------:|
+| 303-308| V-ATTRIBUTES | DESCRIPTION CHANGE? - on the form their are sections for main engine 1 and main engine 2. Duplicate or form description? | noted |
+| 315| V-ATTRIBUTES | UPDATE REPORTING FORM - change fish storage capacity column to be Storage capacity units | noted |
+| 337 | V-ATTRIBUTES | UPDATE REPORTING FORM - Autonomy range unit column instead of DAYS | NM | noted| 
+| 346 | V-ATTRIBUTES | UPDATE REPORTING FORM - change GPS column to GNSS to match description form | noted | 
+| 362 - 398 | V-ATTRIBUTES | UPDATE REPORTING FORM - remove "other" column for waste management
+| 423 - 430 | G-CONFIG-BRANCHLINES| UPDATE REPORTING FORM - need to have 4 sections of Material type code, Length, and Diameter | noted| 
+| 423 - 430 | G-CONFIG-BRANCHLINES| UPDATE REPORTING FORM - change "CONFIGURATION NUMBER AND SECTION NUMBER TO CONFIGURATION IDENTIFIER AND SECTION IDENTIFIER, RESPECTIVELY | noted| 
+| 461 - 462 | G-CONFIG-MITIGATION-DEVICES | CHANGE REPORTING FORM - column: LINE_LENGTH_MAX should be one column, as there is already a second column for minimum. and they should each be called "STREAMER_LINE_LENGHT (min/max) | noted| 
+| 471 -472 | G-CONFIG-MITIGATION-DEVICES | CHANGE DESCRIPTION FORM - towed objects number and type. Develop codelist for towed objects type or add code list to meta on PgAdmin | noted| 
+| 529 | E-SET | UPDATE REPORTING FORM - mainline "value" should read "Mainline length value" | noted |
+| 530 | E-SET | UPDATED REPORTING FORM - mainline "KM|NM" should read "Mainline length units" | noted |
+| 563 | E-SET | VERIFY - LEADER MATERIAL - description says "each" leader type, but reporting form only has one field. Change to multiple? | noted|   
+|574 - 580| E-SET | UPDATE REPORTING FORM - "Branchline Length: should have fields for minimum and maximum length. 4 fields total | noted| 
+| 589 | E-SET | I added a new field in description to match reporting form, but unsure of contents | noted |
+| 600 | E-SET-LIGHTS | Should their be multiple fields for different types of lights? | noted |
+| 607| E-SET-LIGHTS | UPDATE REPORTING FORM - NUM_LIGHTS looks like a hyperlink - very pedantic | noted |
+| 645 - 650| E-SET-MITIGATION_MEASURES | should all mitigation measure codes (4) be mandatory? Or should 2-4 be optional? All mandatory in reporting form | noted | 
+| 679 | E-SET-BAITS | percentage description: "The approximate proportion (%) of bait species and condition used across all hooks in the set" need a new field for bait condition? | noted|
+| 750 | E-SET-HAULING-BITEOFFS |  Configuration number to change to configuration identifier? | noted| 
+| 789 | E-SET-CATCHES | CHANGE FORM - change weight "KG|T" to "Units" | noted |
+
+
+
+
+
+
+
+
 
 
 
