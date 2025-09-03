@@ -101,7 +101,7 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Country code | O | The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., FRA |
+| Country code | O | The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g.,`FRA` |
 | Port code | O | The port of the observation ending location | **Code** from [Ports](#ports) | e.g., `REUREU` |
 :::
 
@@ -161,26 +161,26 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 ## Vessel Information
 
-| Identification: **INSERT DESCRIPTION HERE, maybe explain guidelines or why we need vessel identification**
+| **Identification:** **INSERT DESCRIPTION HERE, maybe explain guidelines or why we need vessel identification**
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or Electronic Monitoring records | String | e.g., `HAWWA` |
 | Flag or chartering code | M | The country code of registration or chartering | **Code** from [Countries](#countries) | e.g., `OMN` |
-| IOTC number | M | The vessel IOTC number as per the IOTC Record of Authorized Vessels | Alphanumeric code | e.g., `IOTC003810` |
-| IMO number | O | The vessel IMO number | Seven-digit number | `9359698` |
-| International radio call sign (IRCS) | O | The vessel radio call sign (when available) | Alphanumeric code | e.g., `A4DP6` |
+| IOTC number | M | The vessel IOTC number as per the IOTC Record of Authorized Vessels | Alphanumeric | e.g., `IOTC003810` |
+| IMO number | O | The vessel IMO number | Seven-digit number | e.g., `9359698` |
+| International radio call sign (IRCS) | O | The vessel radio call sign (when available) | Alphanumeric | e.g., `A4DP6` |
 :::
 
-| Registration: **Insert description or explanation here**
+| **Registration:** **Insert description or explanation here**
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Country code | O | The code of vessel's country of registry | **Code** from [Countries](#countries) | e.g., `FRA` |
 | Port code | O | The code of vessel's port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship's hull | **Code** from [Ports](#ports) | e.g., `REUREU` |
-| Reg number | O | The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel | Alphanumeric or numeric code according to CPC standards | e.g., `CBG303` |
+| Reg number | O | The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel | Alphanumeric or numeric entry according to CPC standards | e.g., `CBG303` |
 :::
 
 | Element | Requirement | Description | Format | Input value |
@@ -188,14 +188,14 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 | Licensed target species | O | The licensed target species as specified in vessel licences or permit conditions | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
 | Main Fishing Gear | M | The vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
-| Vessel Personnel: INSERT DESCRIPTION HERE
+| **Vessel Personnel:** INSERT DESCRIPTION HERE
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Fishing master | M | The fishing master name and nationality in full | String | e.g., `John Doe, FRA` |
-| Skipper/captain | M | Skipper name and nationality in full | String | e.g., John Doe, `FRA` |
-| Crew number | O | The number of crew onboard the vessel | Integer | `26` |
+| Skipper/captain | M | Skipper name and nationality in full | String | e.g., `John Doe, FRA` |
+| Crew number | O | The number of crew onboard the vessel | Integer | e.g., `26` |
 :::
 
 # (V-TRIP) Vessel \> Trip details
@@ -206,10 +206,10 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 ## Trip Details
 
-| Vessel departure: The name and/or geographical coordinates of the port from where the vessel sailed – also include the country. If the vessel started a new trip at sea following transshipment record 'at-sea’ plus the geographical coordinates corresponding to the location the trip started
+| **Vessel departure:** The name and/or geographical coordinates of the port from where the vessel sailed – also include the country. If the vessel started a new trip at sea following transshipment record 'at-sea’ plus the geographical coordinates corresponding to the location the trip started
 
 ::: {style="margin-left:40px"}
-| In port
+| **In port**
 :::
 
 ::: {style="margin-left:80px"}
@@ -228,7 +228,7 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 :::
 
 ::: {style="margin-left:40px"}
-| At sea
+| **At sea**
 :::
 
 ::: {style="margin-left:80px"}
@@ -245,10 +245,10 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 | Date/time UTC | O | The date and time the vessel departed from port or from a transshipment location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
-| Vessel return: The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record 'at-sea' plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
+| **Vessel return:** The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record 'at-sea' plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
 
 ::: {style="margin-left:40px"}
-| In port
+| **In port**
 :::
 
 ::: {style="margin-left:80px"}
@@ -267,7 +267,7 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 :::
 
 ::: {style="margin-left:40px"}
-| At sea
+| **At sea**
 :::
 
 ::: {style="margin-left:80px"}
@@ -294,30 +294,39 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Tonnage | O | The vessel gross tonnage (no unit) as specified in vessel registration documents | Float | `2319` |
-| Length | O | The vessel overall length (m) as specified in vessel registration documents | Floats | `84.1` |
+| Tonnage | O | The vessel gross tonnage (no unit) as specified in vessel registration documents | Float | e.g., `2319` |
+| Length | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
 | Hull material code | O | The vessel hull material | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
 
-| Main engines: The make (brand) and power of the main engines
+| **Main engines:** The make (brand) and power of the main engines
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Make | O | **DESCRIPTION TO ADD** | String | e.g., `MAN Energy Solutions`  |
 | Power value | O | **DESCRIPTION TO ADD** | Float | e.g., `5000` |
-| KW/HP/BHP | O | **DESCRIPTION TO ADD** | Power units code: kilowatts (kW), horsepower (hp), or break horsepower (hp) | e.g., `kW` |
+| Power unit | O | **DESCRIPTION TO ADD** | Power units: kilowatts (kW), horsepower (hp), or break horsepower (hp) | e.g., `kW` |
 :::
 
-<!-- KW/HP/BHP to change to "power unit" -->
 
 |  |  |  |  |  |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Fish storage capacity | O | The vessel total maximum capacity to store catches | Float | e.g., `1100` |
-| Fish storage capacity unit | O | The standard measurement units for fish storage capacity | **Code** from [Vessel Size Types](#vesselSizeTypes) | 
-| Fish preservation methods | O | The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
-| Fish storage types | O | The type of structure(s) present on-board used by the vessel to store the catch | **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+| Fish storage capacity unit | O | The standard measurement units for fish storage capacity | **Code** from [Vessel Size Types](#vesselSizeTypes) | e.g., `CC` |
 
-| Autonomy range: Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nm). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric ton (nm/t)\> : \<Tonnage of fuel carried (t)\> Note: specify units (days or nautical miles)" **- original ROS description form**
+| **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen
+| Preservation method 1 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| Preservation method 2 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| Preservation method 3 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| Preservation method 4 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+
+| **Fish storage types:** The type of structure(s) present on-board used by the vessel to store the catch
+| Storage type 1 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+| Storage type 2 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+| Storage type 3 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+
+
+| **Autonomy range:** Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nm). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric ton (nm/t)\> : \<Tonnage of fuel carried (t)\> Note: specify units (days or nautical miles)"
 
 <!-- Fish storage capacity unit TO ADD IN REPORTING FORMS -->
 
@@ -350,12 +359,44 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 <!-- GNSS to replace GPS -->
 
-## Waste Management
-
+## Waste Management Detail
+::: {style="margin-left:40px"}
+| Waste Management Detail 1
+:::
+::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Waste category | O | The category of the waste produced by the vessel | **Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
-| Storage/disposal method | O | The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+:::
+::: {style="margin-left:40px"}
+| Waste Management Detail 2
+:::
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+:::
+::: {style="margin-left:40px"}
+| Waste Management Detail 3
+:::
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+:::
+::: {style="margin-left:40px"}
+| Waste Management Detail 4
+:::
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+:::
+
 
 # (G-GENERAL) Longline General Gear Specifications
 
@@ -394,7 +435,11 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Storage codes | O | The code of the storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` |
+| Storage code 1 | O | The code of the storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` |
+| Storage code 2 | O | The code of the storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` |
+| Storage code 3 | O | The code of the storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` |
+| Storage code 4 | O | The code of the storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` |
+
 
 # (G-CONFIG-MITIGATION-DEVICES) Longline Gear Specifications > Mitigation Devices
 
@@ -410,23 +455,34 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Tori line length | M | The total length (m??) of the tori line, excluding streamers | Float | **EXAMPLE TO ADD** |
+| Tori line length | M | The total length (m) of the tori line, excluding streamers | Float | **EXAMPLE TO ADD** |
 | Streamer type code | M | The type of streamers which are used with the tori line | **Code** from [Streamer Types](#streamerTypes) | e.g., `MU` |
 | Reach surface | O | Indicates whether or not the streamers are long enough to touch the surface of the water in calm conditions (Yes/No/Unk) | String | `No` |
 | Streamer line length (max) | M | The value of the maximum length (m??) of individual streamer lines | Float | **EXAMPLE TO ADD** |
 | Streamer line length (min) | O | The value of the minimum length (m??) of individual streamer lines | Float | **EXAMPLE TO ADD** |
 | No. streamers per line | M | The number of streamers that are attached to a single tori line | Integer | **EXAMPLE TO ADD** |
-| Distance between streamers | O | The distance (m??) between streamers | Float | **EXAMPLE TO ADD** |
+| Distance between streamers | O | The distance (m) between streamers | Float | **EXAMPLE TO ADD** |
 | Attached height | M | The height that the tori line is attached above the water level | Float | **EXAMPLE TO ADD** |
-| Towed objects | O | The total number and type of towed objects used to maintain tori line tension and achieve aerial extent when deployed | Total number: String | **EXAMPLE TO ADD** |
 
-<!-- The type of towed objects should be an additional field - To check in the database model whether there is a field for that -->
+| **Towed objects:** The total number and type of towed objects used to maintain tori line tension and achieve aerial extent when deployed 
+::: {style="margin-left:40px"}
+| Element | Requirement | Description | Format | Input value |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Number | O |  | Integer | e.g.,  |
+| Type | O |  | **Code list being developed** |  | 
+:::
+
 
 ## Other Mitigation Devices
 
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Device codes | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| Device 1 code | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| Device 2 code | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| Device 3 code | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| Device 4 code | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| Device 5 code | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+
 
 # (E-SET) Longline Fishing Events > Setting Operations
 
@@ -464,13 +520,13 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 | Vessel speed | M | The vessel's average speed (knots) during setting | Float | **EXAMPLE TO ADD** |
 | Line setter speed | M | The speed setting (m/s) of the line setter | Float | **EXAMPLE TO ADD** |
 
-| Mainline: Mainline material and total set length, i.e., the total deployed length of the mainline for the specific set. Usually calculated by multiplying the total time to set the line and the average line setter speed, taking into account any interruption times |||||
+| Mainline: Mainline material and total set length, i.e., the total deployed length of the mainline for the specific set. Usually calculated by multiplying the total time to set the line and the average line setter speed, taking into account any interruption times 
 
 ::: {style="margin-left:40px"}
 | Element       | Requirement | Description |          Format          | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Material code | O | **DESCRIPTION TO ADD** | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
-| Value         | O | **DESCRIPTION TO ADD** | Float | **EXAMPLE TO ADD** |
+| Mainline length value         | O | **DESCRIPTION TO ADD** | Float | **EXAMPLE TO ADD** |
 | Mainline length unit | O | **DESCRIPTION TO ADD** | Indicates the unit of (kilometres (km) or nautical miles (nm) | **EXAMPLE TO ADD** |
 :::
 
@@ -504,7 +560,7 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Material code | M | Each leader type used in the set | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
+| Material type code | M | Each leader type used in the set | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
 | Percentage | M | The percentage of total branchlines in the set estimated for each leader type used | Float | **EXAMPLE TO ADD** |
 :::
 
@@ -523,11 +579,14 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 | Branchline length maximum unit | M | The unit of measurement of the maximum value of branchline length (cm or m) | Float | **EXAMPLE TO ADD** | 
 :::
 
-<!-- ADD 2 fields in the form as min and max should be reported here. TO BE RENAMED TO BE ACCURATE AND DISTINGUISH MIN AND MAX VALUES-->
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Target species | M | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| Target species 1 | M | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| Target species 2 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| Target species 3 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| Target species 4 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| VMS_ON | O | **ADD DESCRIPTION | String | e.g., `Yes` | 
 
 # (E-SET-LIGHTS) Longline Fishing Events > Setting Operations > Attached Lights
 
@@ -553,7 +612,7 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Observed trip ID | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
-| Set ID | M | The parent set identifier | 4-digit number | **EXAMPLE TO ADD** |
+| Set ID | M | The parent set identifier | 4-digit number | e.g., `0001` |
 
 ## Mitigation Measures
 
@@ -566,7 +625,7 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 | Average branchline weight | M | The average weight (g) of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) | Float | **EXAMPLE TO ADD** |
 | Percent branchline weighted | M | The proportion of branchlines weighted (%) | Float | **EXAMPLE TO ADD** |
 | Hook sinker distance | M | The distance (cm) of the weights/sinkers from the eye of the hook | Float | **EXAMPLE TO ADD** |
-| Hook pods | M | Indicates whether or not the bait is protected on the branchlines until they are a certain depth below the surface (Yes/No/Unl) | String | e.g., `No` |
+| Hook pods | M | Indicates whether or not the bait is protected on the branchlines until they are a certain depth below the surface (Yes/No/Unk) | String | e.g., `No` |
 
 <!-- #### ALERT: check reporting format for the minimum deck lighting used -->
 
@@ -583,7 +642,11 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Measure codes | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| Measure 1 code  | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| Measure 2 code  | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| Measure 3 code  | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| Measure 4 code  | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+
 
 # (E-SET-HOOKS)
 
@@ -651,12 +714,20 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 | Longitude | O | The longitude of the position at the end of the hauling operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
-<!-- CHANGED POSITION TO EXPLICITLY INCLUDE LONGITUDE AND LATITUDE -->
 
 ||||||
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Offal management | O | The fate given to the offal (fish heads, guts, etc.) and bait produced during the observed set | **Code** from [Offal Management Types](#offalManagementTypes) | e.g., `AH` |
-| Position of offal disposal | O | The position where offal and used bait was disposed | **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  |
+| **Position of offal disposal:** The position where offal and used bait was disposed
+::: {style="margin-left:40px"}
+| Element              | Requirement | Description | Format  | Input value |
+|:---------------------|:-----------:|:------------|:-------:|:-----------:|
+| Position 1 code | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  |
+| Position 2 code | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  |
+| Position 3 code | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  |
+| Position 4 code | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  |
+:::
+
 | Bird scaring device at hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String  | e.g., `No`  |
 | Number of branchline haulings observed | M | The number of branchline haulings observed | Integer | **EXAMPLE TO ADD** |
 | Number of hooks retrieved during observation | M | The number of hooks retrieved during observation | Integer | **EXAMPLE TO ADD** |
@@ -715,16 +786,10 @@ Weight: The catch weight corresponding to the specified product type recorded in
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Processing type code | O | **DESCRIPTION TO ADD** | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
 | Value | O | **DESCRIPTION TO ADD** | Float | **EXAMPLE TO ADD** |
-| KG/T | O | **DESCRIPTION TO ADD** | Indicate units (kg or tonnes) | e.g., `kg`  |
+| Weight units | O | **DESCRIPTION TO ADD** | Indicate units (kg or tonnes) | e.g., `kg`  |
 | Estimation method code | O | **DESCRIPTION TO ADD** | **Code** from [Total Catch Estimation](#totalCatchEstimation) | e.g., `EP` |
 :::
 
-<!-- Name "KG/T" to change to  -->
-
-|  |  |  |  |  |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Sampling period code | M | **DESCRIPTION TO ADD** | **Code** from [Sampling Period](#samplingPeriod) | e.g., `BS` |
-| Sampling method code | M | The sampling method used for the collection of biological sub-sample(s) | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
 
 # (E-SET-CATCHES-SPECIMEN)
 
@@ -739,7 +804,10 @@ Weight: The catch weight corresponding to the specified product type recorded in
 
 | Element | Requirement | Description | Format | Input value |
 |:------------|:-----------:|:----------------------|:-----------:|:-----------:|
-| Length 1: Length of individual specimen |||||
+| Sampling period code | M | **DESCRIPTION TO ADD** | **Code** from [Sampling Period](#samplingPeriod) | e.g., `BS` |
+| Sampling method code | M | The sampling method used for the collection of biological sub-sample(s) | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
+
+| Length 1: Length of individual specimen
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
