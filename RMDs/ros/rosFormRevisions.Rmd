@@ -57,7 +57,8 @@ SECTION: VESSEL INFORMATION:
 |574 - 580| E-SET | UPDATE REPORTING FORM - "Branchline Length: should have fields for minimum and maximum length. 4 fields total | noted | **yes**
 | 589 | E-SET | I added a new field in description to match reporting form, but unsure of contents | noted | **To clarify**
 | 607| E-SET-LIGHTS | UPDATE REPORTING FORM - NUM_LIGHTS looks like a hyperlink - very pedantic | noted | **Format to change in the form**
-| 645 - 650| E-SET-MITIGATION_MEASURES | should all mitigation measure codes (4) be mandatory? Or should 2-4 be optional? All mandatory in reporting form | noted | 
+| 645 - 650| E-SET-MITIGATION_MEASURES | should all mitigation measure codes (4) be mandatory? Or should 2-4 be optional? All mandatory in reporting form | noted | **Yes, captured by the code list - need to check with Tony**
+
 | 679 | E-SET-BAITS | percentage description: "The approximate proportion (%) of bait species and condition used across all hooks in the set" need a new field for bait condition? | noted | **Check if in description form**
 | 750 | E-SET-HAULING-BITEOFFS |  Configuration number to change to configuration identifier? | noted | **YES**
 | 789 | E-SET-CATCHES | CHANGE FORM - change weight "KG|T" to "Unit" | noted | **YES**
