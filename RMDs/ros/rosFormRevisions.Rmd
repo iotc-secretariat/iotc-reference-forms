@@ -60,9 +60,9 @@ SECTION: VESSEL INFORMATION:
 | 600 | E-SET-LIGHTS | Should their be multiple fields for different types of lights? | noted |
 | 607| E-SET-LIGHTS | UPDATE REPORTING FORM - NUM_LIGHTS looks like a hyperlink - very pedantic | noted |
 | 645 - 650| E-SET-MITIGATION_MEASURES | should all mitigation measure codes (4) be mandatory? Or should 2-4 be optional? All mandatory in reporting form | noted | 
-| 679 | E-SET-BAITS | percentage description: "The approximate proportion (%) of bait species and condition used across all hooks in the set" need a new field for bait condition? | noted|
-| 750 | E-SET-HAULING-BITEOFFS |  Configuration number to change to configuration identifier? | noted| 
-| 789 | E-SET-CATCHES | CHANGE FORM - change weight "KG|T" to "Units" | noted |
+| 679 | E-SET-BAITS | percentage description: "The approximate proportion (%) of bait species and condition used across all hooks in the set" need a new field for bait condition? | noted | **Check if in description form**
+| 750 | E-SET-HAULING-BITEOFFS |  Configuration number to change to configuration identifier? | noted | **YES**
+| 789 | E-SET-CATCHES | CHANGE FORM - change weight "KG|T" to "Unit" | noted | **YES**
 
 
 
