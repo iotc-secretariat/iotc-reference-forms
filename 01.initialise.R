@@ -212,6 +212,8 @@ DEHOOKER_TYPES     = read_codelist(domain = "fisheries", schema = "fishery", cod
 
 POLE_MATERIAL_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "POLE_MATERIAL_TYPES")
 
+SCHOOL_DETECTION_METHODS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SCHOOL_DETECTION_METHODS")
+
 SCHOOL_SIGHTING_CUES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SCHOOL_SIGHTING_CUES")
 
 SCHOOL_TYPE_CATEGORIES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SCHOOL_TYPE_CATEGORIES")
