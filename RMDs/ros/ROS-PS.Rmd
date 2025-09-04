@@ -21,7 +21,7 @@ output:
 
 # Description
 
-This form provides for the reporting of operational and catch data from purse seine fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with purse seine operations, including IOTC species, and other bycatch species.The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of longline fisheries on associated and dependent species.Observers are required to complete the form for longline operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected.
+INSERT DESCRIPTION
 
 Click [here](./Form-1RC.xlsx) to download a blank version of Form 1RC, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
@@ -40,98 +40,98 @@ Fill out organization information (name, email)
 ## General Information
 
 | Element | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g.,1996 |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |e.g., ABW |
-| Reporting flag / Chartering state | M | The reporting flag or chartering state **OR** three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., FRA |
-| Data source | M | The source of data provided  | Observer data or EM data |  |
+|:--------- |:----:|:-------------------------|:-------:|:---------:|
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g., `1996` |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `ABW` |
+| Flag / Chartering state | M | The country registration of the fishing vessels or chartering flag in case of chartering agreement | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Data source | M | The source of data provided: 'OAS' for data collected by Observers at sea and 'EMS' for data derived from Electronic Monitoring Systems | String | e.g., `OAS` |
 
 
 # (O-INFO) Observer and observed trip information
 | Element | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-|Observed trip ID |M |Record trip unique identifier. This should begin with the observation or trip start date (YYYY-MM-DD), followed by, IOTC observer number,  IOTC vessel identifier as per RAV (Register of Active Vessels) and vessel main gear code as per IOTC classification.|  | e.g. 2024-01-23/IOTCFRA001/IOTC012345/PS | 
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Observed trip ID | M | Unique identifier of the fishing trip defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer number, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
+
 
 ## Observer identification
 | Element | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| IOTC ID | M | Record observer registration number allocated by the IOTC Secretariat. CPCs report the list of the name and nationality of all observers, port samplers/ inspectors to the Secretariat in order obtain the allocated registration number.  | Alphanumeric code | e.g. IOTC_0976| 
-| Full name | M | Record the name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer |Free entry. Plain text | e.g., John Doe|
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| IOTC ID | M | The unique registration identifier assigned to each observer by the IOTC Secretariat | Alphanumeric | e.g., `IOTC_0976` |
+| Full name | M | The name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer | String | e.g., `John Doe` |
 
 ## Observer trip details
 
 | **Embarkation:** Record the starting port. If the first observation is available after the departure form the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure) , record “at sea”.
 ::: {style="margin-left:40px"}
-| In port
+| **In port**
 :::
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | M | Record the country or EEZ of the observation starting location.  | **Code** from [Countries](#countries) | e.g., FRA |
-| Port code | M | Record the port of the observation starting location  |**Code** from [Ports](#ports) | e.g., RE REU |
+| Country | M | The country or EEZ of the observation starting location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Port| M | The port of the observation starting location  |**Code** from [Ports](#ports) | e.g., `REREU` |
 :::
 
 ::: {style="margin-left:40px"}
-| At sea
+| **At sea**
 :::
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Latitude | M | Record the latitude of the observation starting location.  |dd°mm,m’ N/S | e.g., -20.88 |
-| Longitude | M | Record the longitude of the observation starting location.|dd°mm,m’ N/S | e.g., 55.53|
+| Latitude | M | The latitude of the observation starting location.  |Decimal degrees (two decimal places) | e.g., `-20.88` |
+| Longitude | M | The longitude of the observation starting location.|Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 ::: {style="margin-left:40px"}
-| Date/time UTC | M | Record the date and time of the start of observations  | YYYY-MM-DDThh:mm  | 2025-09-15 12:00 |
+| Date/time UTC | M | The date and time of the start of observations  | YYYY-MM-DDThh:mm  | e.g., `2025-09-15 12:00` |
 :::
-| **Disembarkation:** Record the ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still recorded as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking boarding the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , record “at sea”.
+| **Disembarkation:** The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still considered as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking boarding the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , it is considered “at sea”.
 ::: {style="margin-left:40px"}
-| In port
+| **In port**
 :::
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O | Record the country or EEZ of the observation ending location.  |**Code** from [Countries](#countries) | e.g., FRA |
-| Port code | O | Record the port of the observation ending location  |**Code** from [Ports](#ports) | e.g., RE REU |
+| Country | O | The country or EEZ of the observation ending location.  |**Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | O | The port of the observation ending location  |**Code** from [Ports](#ports) | e.g., `REREU` |
 :::
 ::: {style="margin-left:40px"}
-|At sea
+|**At sea**
 :::
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Latitude | M | Record the latitude of the observation ending location.  |dd°mm,m’ N/S |  e.g., -20.88 |
-| Longitude | M | Record the longitude of the observation ending location.|dd°mm,m’ N/S |  e.g., 55.53|
+| Latitude | M | The latitude of the observation ending location.  |Decimal degrees (two decimal places) | e.g., `-20.88` |
+| Longitude | M | The longitude of the observation ending location.|Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 ::: {style="margin-left:40px"}
-| Date/time UTC | M | Record the date and time of the end of observations  | YYYY-MM-DDThh:mm  | e.g., 2025-09-15 12:00|
+| Date/time UTC | M | The date and time of the end of observations  | YYYY-MM-DDThh:mm  | e.g., `2025-09-15 12:00` |
 
 ## Observed trip summary
 
-| Number of fishing events
+| **Number of fishing events**
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Conducted | M | Record the total number of fishing events/sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities.  |Integer | |
-| Observed | M | Record the total number of fishing sets/events monitored by the observer. In the case of EM, only processed events to be included |Integer | |
+| Conducted | M | The total number of fishing events/sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities.  |Integer |e.g., **ADD** |
+| Observed | M | The total number of fishing sets/events monitored by the observer. In the case of EM, only processed events to be included |Integer |e.g., **ADD** |
 :::
 
-| Number of days 
+| **Number of days** 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Searching | M | Number of hours/days searching during the observation period |Integer | |
-| Actively fishing | M | Number of active fishing hours/days during the observation period |Integer | |
-| In fishing area | O | Number of hours in the fishing area during the observation period | Integer | |
-| Transiting | O | Number of hours transiting during the observation period | Integer | |
-| Lost | M | Number of hours/days lost during the observation period | Integer|  | 
+| Searching | M | The number of hours/days searching during the observation period |Integer |e.g., **ADD** |
+| Actively fishing | M | The number of active fishing hours/days during the observation period |Integer |e.g., **ADD**  |
+| In fishing area | O | The number of hours in the fishing area during the observation period | Integer | e.g., **ADD** |
+| Transiting | O | The number of hours transiting during the observation period | Integer |e.g., **ADD** |
+| Lost | M | The number of hours/days lost during the observation period | Integer| e.g., **ADD**  | 
 :::
 
 | **Reasons for lost days:**Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Reason codes | O | Reason(s) of hours lost |  **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., AW |
+| Reasons | O | Reason(s) of hours lost |  **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
 
 
 
@@ -139,7 +139,7 @@ Fill out organization information (name, email)
 # (V-INFO) Vessel > General information
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Observed trip ID| | M | Refer to parent observed trip | | |
+| Observed trip ID| | M |The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 
 ## Vessel information
 
@@ -147,164 +147,224 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Name | M | Record the vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or EM records | Plain text | e.g., CAP EST  |
-| Flag or chartering code | M  |Record the name of country in which vessel is registered. Where chartering occurs, record name of the chartering country  | **Code** from [Countries](#countries) | e.g., FRA |
-| IOTC number  | M  | Vessel IOTC number as per the IOTC Record of Authorized Vessels and crosschecked with the number recorded on vessel certificates. | Free entry, alphanumeric code   | e.g., IOTC008460 |
-| IMO number  | O  | Record the vessel IMO number  | Seven-digit number  |  |
-| International radio call sign (IRCS)  | O | Record vessel radio call sign if available. This is the number displayed prominently on the vessel’s side or superstructure | Alphanumeric code |  |
+| Name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or EM records | Plain text | e.g., `Playa De Laida`   |
+| Flag or chartering code | M  |Record the name of country in which vessel is registered. Where chartering occurs, record name of the chartering country  | **Code** from [Countries](#countries) | e.g., `SYC` |
+| IOTC number  | M  | Vessel IOTC number as per the IOTC Record of Authorized Vessels and crosschecked with the number recorded on vessel certificates. | Free entry, alphanumeric code   | e.g., `IOTC008460` |
+| IMO number  | O  | Record the vessel IMO number  | Seven-digit number  | e.g., `9719812` |
+| International radio call sign (IRCS)  | O | Record vessel radio call sign if available. This is the number displayed prominently on the vessel’s side or superstructure | Alphanumeric code | e.g., `S7TO` |
 :::
 | Registration 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |Record the code of vessel's country of registry  |**Code** from [Countries](#countries) | e.g., FRA |
-| Port code | O | Record the code of vessel's port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship's hull – also include the country. |**Code** from [Ports](#ports) | e.g., RE REU |
-| Reg number | O | Record the number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel. This may be a combination of characters and numbers; record them all  | Alphanumeric or numeric code according to CPC standards |e.g., CBG303|
+| Country | O | The code of vessel's country of registry  |**Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | O | The code of vessel's port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship's hull – also include the country. |**Code** from [Ports](#ports) | e.g., `REREU` |
+| Reg number | O | The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel. This may be a combination of characters and numbers; record them all  | Alphanumeric or numeric code according to CPC standards |e.g., `CBG303`|
 :::
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-|Licensed target species  | O | Record licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all | **Code** from [Target Species](#targetSpecies) | e.g., AL |
-| Gear (main fishing gear) | M | Record vessel main fishing gear |**Code** from [Fishing Gear](#fishingGear) | e.g., DL |
+|Licensed target species  | O | The licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| Gear (main fishing gear) | M |The main vessel fishing gear |**Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
-| Vessel Personnel
+| **Vessel Personnel**
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Fishing master  | M | Record the fishing master name and nationality in full | Full name: Plain text ; Nationality code [Countries](#countries) | e.g., John Doe ; FRA |
-| Skipper/captain | M | Record skipper name and nationality in full | Full name: Plain text: [Countries](#countries)  | e.g., John Doe; FRA |
-| Crew number | O | Record the number of crew. This should be cross checked against the vessel's crew list | Integer |  |
+| Fishing master:  The fishing master name and nationality in full
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Full name | M |  |  Plain text | e.g., `John Doe` |
+| Nationality | M |  | Nationality code [Countries](#countries) | e.g., `FRA` |
+:::
+::: {style="margin-left:40px"}
+| Skipper/captain: The skipper name and nationality in full 
+:::
+
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Full name | M |  |  Plain text | e.g., `John Doe` |
+| Nationality | M |  | Nationality code [Countries](#countries) | e.g., `FRA` |
+:::
+| Crew number | O | The number of crew. This should be cross checked against the vessel's crew list | Integer |  |
 :::
 
 
 # (V-TRIP) Vessel > Trip details
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Observed trip ID| | M | Refer to parent observed trip | | |
+| Observed trip ID| | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 
 ## Trip Details
 
-| Vessel departure: Record the name and/or geographical coordinates of the port from where the vessel sailed – also include the country.  If the vessel started a new trip at sea following transhipment record ‘at-sea’ plus the geographical coordinates corresponding to the location the trip started
+| **Vessel departure:** The name and/or geographical coordinates of the port from where the vessel sailed – also include the country. If the vessel started a new trip at sea following transshipment record 'at-sea’ plus the geographical coordinates corresponding to the location the trip started
 ::: {style="margin-left:40px"}
-| In port
+| **In port**
 :::
 
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |Record the country of the port from where the vessel started its new trip.  If the vessel started a new trip at sea following transhipment of the catch record the EEZ of the transhipment location. |**Code** from [Countries](#countries) | e.g., FRA |
-| Port code | M  |Record the name of the port from where the vessel started its new trip.  If the vessel started a new trip at sea following transhipment of the catch record ‘at-sea’. |**Code** from [Ports](#ports) | e.g., RE REU |
-| Latitude  | M  |Record the latitude of the port from where the vessel started its new trip.  If the vessel started a new trip at sea following transhipment of the catch record the latitude of the transhipment location. | dd°mm,m' N/S | e.g., -20.88 |
-| Longitude | M  |Record the longitude of the port from where the vessel started its new trip.  If the vessel started a new trip at sea following transhipment of the catch record the longitude of the transhipment location. | dd°mm,m’ N/S | e.g., 55.53 |
+| Country | O |The country or EEZ of the observation starting location |**Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | M  |The port of the observation starting location |**Code** from [Ports](#ports) | e.g., `REREU` |
+| Latitude  | M  |The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| Longitude | M  |The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53`|
 :::
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |M | Record the date and time the vessel departed from port or from a transhipment location. |  YYYY-MM-DDThh:mm  | 2025-09-15 12:00|
+| Date/time UTC |M | The date and time the vessel departed from port |  YYYY-MM-DDThh:mm  | e.g., `2025-09-15 12:00` |
 
-| At sea
+| **At sea**
 :::
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |Record the country of the port from where the vessel started its new trip.  If the vessel started a new trip at sea following transhipment of the catch record the EEZ of the transhipment location. | **Code** from [Countries](#countries) | e.g., FRA |
-| Latitude  | M  |Record the latitude of the port from where the vessel started its new trip.  If the vessel started a new trip at sea following transhipment of the catch record the latitude of the transhipment location. | dd°mm,m’ N/S | e.g., -20.88 |
-| Longitude | M  | Record the longitude of the port from where the vessel started its new trip.  If the vessel started a new trip at sea following transhipment of the catch record the longitude of the transhipment location. | dd°mm,m’ N/S | e.g., 55.53 |
+| Country | O | The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Latitude  | M | The latitude of the observation starting location| Decimal degrees (two decimal places) | e.g., `-20.88` |
+| Longitude | M  | The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |M |  Record the date and time the vessel departed from port or from a transshipment location |  YYYY-MM-DDThh:mm |2025-09-15 12:00 |
+| Date/time UTC |M |  The date and time the vessel departed from port or from a transshipment location |  YYYY-MM-DDThh:mm |e.g., `2025-09-15 12:00` |
 :::
 
-| Vessel return: Record the name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record ‘at-sea’ plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
+| **Vessel return:** The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record 'at-sea' plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
 ::: {style="margin-left:40px"}
-| In port
+| **In port**
 :::
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |Record the country of the port from where the vessel ended its trip.  If the vessel ended the trip at sea following transhipment of the catch record the EEZ of the transhipment location. | **Code** from [Countries](#countries) | e.g., FRA |
-| Port code | M  |  Record the name of the port where the vessel returned. If the vessel arrived at a transhipment location record ‘at-sea’. If the observation ended before the vessel reached its return location, then record expected vessel trip port of return as provided by the vessel, the logbook or VMS records. |**Code** from [Ports](#ports) | e.g., RE REU |
-| Latitude  | M  | Record the latitude of the port from where the vessel ended its trip.  If the vessel ended the trip at sea following transhipment of the catch record the latitude of the transhipment location.  | dd°mm,m’ N/S | e.g., -20.88 |
-| Longitude | M  | Record the longitude of the port from where the vessel ended its trip.  If the vessel ended its trip at sea following transhipment of the catch record the longitude of the transhipment location.  | dd°mm,m’ N/S | e.g., 55.53 |
+| Country | O |The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | M  |   The port of the observation ending location |**Code** from [Ports](#ports) | e.g., `REREU` |
+| Latitude  | M  | The latitude of the observation ending location  | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| Longitude | M  | The longitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |M | Record the date and time the vessel returned to port or to a transhipment location. |  YYYY-MM-DDThh:mm | 2025-09-15 12:00|
+| Date/time UTC |M | The date and time the vessel returned to port  |  YYYY-MM-DDThh:mm | e.g., `2025-09-15 12:00`|
 
-| At sea
+| **At sea**
 :::
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |Record the country of the port from where the vessel ended its trip.  If the vessel ended the trip at sea following transhipment of the catch record the EEZ of the transhipment location. |**Code** from [Countries](#countries) | e.g., FRA |
-| Latitude  | M  |Record the latitude of the port from where the vessel ended its trip.  If the vessel ended the trip at sea following transhipment of the catch record the latitude of the transhipment location. | dd°mm,m’ N/S |e.g., -20.88  |
-| Longitude | M  |Record the longitude of the port from where the vessel ended its trip.  If the vessel ended its trip at sea following transhipment of the catch record the longitude of the transhipment location. | dd°mm,m’ N/S |e.g., 55.53 | 
+| Country | O |The country or EEZ of the observation ending location |**Code** from [Countries](#countries) | e.g., `FRA` |
+| Latitude  | M  |The latitude of the observation ending location | Decimal degrees (two decimal places) |e.g., `-20.88`  |
+| Longitude | M  |The longitude of the observation ending location |Decimal degrees (two decimal places) |e.g., `55.53` | 
 :::
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |M |  Record the date and time the fishing vessel finishes its fishing campaign. i.e. returns to port or to a transshipment location for unloading. If the observer disembarks before the vessel returns then record expected date and time of arrival (ETA) as provided by the vessel |  YYYY-MM-DDThh:mm  | 2025-09-15 12:00|
+| Date/time UTC |M | The date and time the fishing vessel finishes its fishing campaign, i.e., returns to port or to a transshipment location for unloading. If is the expected date and time of arrival (ETA) if the observer disembarks before the vessel returns | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
-
-
 
 
 # (V-ATTRIBUTES) Vessel > Vessel attributes
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Observed trip ID| | M | Refer to parent observed trip | | |
+| Observed trip ID| | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 
 ## Vessel attributes
 | Element | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Tonnage (TG) | O |The vessel tonnage as specified in vessel registration documents  |Float  |  |
-| Length (M) | O |The vessel overall length (LOA) as specified in vessel registration documents  |Floats  |  |
-| Hull material code | O |Record the vessel hull material  | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., AL |
-| Main engines: The make (brand) and power of the main engines 
-::: {style="margin-left:40px"}
-| Element | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Make |O  |  |Free entry. Plain text  |  |
-| Power value |O  |  |Float  |  |
-| KW/HP/BHP |O  |  |Power units code (KW, HP, or BHP)  |  |
-:::
-| Fish storage capacity |O  | The vessel total maximum capacity to store catches. This should include blast freezer(s) capacity. Note: specify units (metric Tons (mT.) or cubic meters (m3)) - from original ROS description form** | Float |  |
-| Fish preservation methods | O | Fish preservation methods: Record the method(s) used by the vessel to preserve the catch (e.g. iced, frozen in brine, deep-frozen) |**Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., BR |
-| Fish storage types |O  | Record the type of structure(s) present on-board used by the vessel to store the catch  | **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., BF |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Tonnage | O | The vessel gross tonnage (no unit) as specified in vessel registration documents | Float | e.g., `2319` |
+| Length | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
+| Hull material code | O | The vessel hull material | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
 
-| Autonomy range: Record vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nautical miles). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: <Vessel range (nm)> = <Vessel average cruising distance per metric ton (nm/mT)> : <Tonnage of fuel carried (mT)> Note: specify units( days or nautical miles)"  - from original ROS description form** 
+|** Main engines:** The make (brand) and power of the main engines 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Value  | O |  |Float  |  |
-| Days/NM |  |  |Select DAYS or NM  |  |
+| Make | O | **DESCRIPTION TO ADD** | String | e.g., `MAN Energy Solutions`  |
+| Power value | O | **DESCRIPTION TO ADD** | Float | e.g., `5000` |
+| Power unit | O | **DESCRIPTION TO ADD** | Power units: kilowatts (kW), horsepower (hp), or break horsepower (hp) | e.g., `kW` |
+:::
+|  |  |  |  |  |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Fish storage capacity | O | The vessel total maximum capacity to store catches (measued in cubic meters) | Float | e.g., `1100` |
+
+| **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen
+| Preservation method 1 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| Preservation method 2 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| Preservation method 3 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| Preservation method 4 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+
+| **Fish storage types:** The type of structure(s) present on-board used by the vessel to store the catch
+::: {style="margin-left:40px"}
+| Element | Requirement | Description | Format | Input value |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Storage type 1 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+| Storage type 2 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+| Storage type 3 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+
+| **Autonomy range:** Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nm). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric ton (nm/t)\> : \<Tonnage of fuel carried (t)\> Note: specify units (days or nautical miles)
+
+::: {style="margin-left:40px"}
+| Element | Requirement | Description |      Format       | Input value |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Value   | O | **DESCRIPTION TO ADD** | Float | e.g., `30` |
+| Autonomy range unit | O | The unit used to describe the value of autonomy range | days or nm | e.g., `days` |
 :::
 
 ## Vessel electronics
 | Element | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| GPS | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| VMS | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| AIS | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| Radars | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| Track Plotter | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| Depth sounder | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| Sonar | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| Doppler current meter |O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| XBT | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| VHF radios | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| HF radios | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| Satellite comms | O | Indicate Yes if on board No if not sighted. | Yes/No |  |
-| FIS | O | Indicate Yes of No if the vessel has access to a Fisheries Information service  | Yes/No |  |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| GNSS | O | Indicates whether or not one or more Global Navigation Satellite System systems (GNSS) such as the US Global Positioning System (GPS) were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
+| VMS | O | Indicates whether or not one or more Vessel Monitoring Systems (VMS) were present on the vessel (Yes/No/Unk)  | String | e.g., `Yes` |
+| AIS | O | Indicates whether or not one or more Automatic Identification Systems (AIS) were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
+| Radars | O | Indicates whether or not one or more radars were present on the vessel (Yes/No/Unk) | String | e.g., `Yes`  |
+| Track plotter | O | Indicates whether or not one or more track plotters were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
+| Depth sounder | O | Indicates whether or not one or more depth sounders were present on the vessel (Yes/No/Unk)| String | e.g., `Yes` |
+| Sonar | O | Indicates whether one or more sonars were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
+| Doppler current meter | O | Indicates whether one or more doppler current meters were present on the vessel | String | e.g., `Yes` |
+| XBT | O | Indicates whether or not one or more expendable bathythermographs (XBT) were present on the vessel | String | e.g., `Yes` |
+| VHF radios | O | Indicates whether or not one or more VHF radios weere present on the vessel | String | e.g., `Yes` |
+| HF radios | O | Indicates whether one or more HF radios were present or not on the vessel | String | e.g., `Yes` |
+| Satellite comms | O | Indicate whether or not one or more satellite communication systems were present on the vessel | String | e.g., `Yes` |
+| FIS | O | Indicates whether or not one or more Fisheries Information Services were present on the vessel | String | e.g., `Yes` |
 
-## Waste management
+## Waste Management Detail
+::: {style="margin-left:40px"}
+| Waste Management Detail 1
+:::
+::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Waste category  |O  |Record the category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., CP |
-| Storage/disposal method | O | Record how the waste was disposed of  | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., AS |
-
+| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+:::
+::: {style="margin-left:40px"}
+| Waste Management Detail 2
+:::
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+:::
+::: {style="margin-left:40px"}
+| Waste Management Detail 3
+:::
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+:::
+::: {style="margin-left:40px"}
+| Waste Management Detail 4
+:::
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+:::
 
 
 
@@ -463,7 +523,7 @@ FAD equipped with artificial lights
 **I do not think this is the right codelist**
 
 
-
+ 
 
 # (E-CATCHES-SPECIMEN)
 | Element | Requirement | Description | Format | Input value |
@@ -583,10 +643,8 @@ FAD equipped with artificial lights
 
 
 # Reporting deadlines
-
-- **Longline fisheries**: 30 June (preliminary), 30 December (final)
 - **Surface fisheries**: 30 June (final)
-- **Coastal fisheries**: 30 June (final)
+
 
 # Reference Code Lists
 

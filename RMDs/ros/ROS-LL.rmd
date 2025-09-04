@@ -193,7 +193,9 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Fishing master | M | The fishing master name and nationality in full | String | e.g., `John Doe, FRA` |
+| Fishing master: The fishing master name and nationality in full 
+|---> FULL NAME | M | | |plain text | e.g., 
+| --> NATIONALITY |M| | link to nationality code | String | e.g., `John Doe, FRA` |
 | Skipper/captain | M | Skipper name and nationality in full | String | e.g., `John Doe, FRA` |
 | Crew number | O | The number of crew onboard the vessel | Integer | e.g., `26` |
 :::
@@ -312,17 +314,35 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 |  |  |  |  |  |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Fish storage capacity | O | The vessel total maximum capacity to store catches | Float | e.g., `1100` |
+<<<<<<< HEAD
 | Fish storage capacity unit | O | The standard measurement units for fish storage capacity | **Code** from [Vessel Size Types](#vesselSizeTypes) | e.g., `CC` |
+=======
+
 | **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen
+::: {style="margin-left:40px"}
+| Element | Requirement | Description | Format | Input value |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Preservation method 1 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
 | Preservation method 2 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
 | Preservation method 3 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
 | Preservation method 4 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+<<<<<<< HEAD
+=======
+::: 
+
 | **Fish storage types:** The type of structure(s) present on-board used by the vessel to store the catch
+::: {style="margin-left:40px"}
+| Element | Requirement | Description | Format | Input value |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Storage type 1 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
 | Storage type 2 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
 | Storage type 3 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+<<<<<<< HEAD
 | **Autonomy range:** Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nm). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric ton (nm/t)\> : \<Tonnage of fuel carried (t)\> Note: specify units (days or nautical miles)"
+=======
+:::
+
+| **Autonomy range:** Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nm). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric ton (nm/t)\> : \<Tonnage of fuel carried (t)\> Note: specify units (days or nautical miles)
 
 <!-- Fish storage capacity unit TO ADD IN REPORTING FORMS -->
 
@@ -406,7 +426,7 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Line setter/ line shooter | M | Indicates whether of not the vessel is equipped with this technology (Yes/No/Unk) | String | e.g., `Yes` |
 | Line hauler | M | Indicates whether or not the vessel is equipped with this technology (Yes/No/Unk) | String | e.g., `Yes` |
-| Bait casting machine | M | Indicates whether or not the vessel is equipped with this technology (Yes/No/Unk) | String |  e.g., `Yes` |
+| Bait casting machine | M | Indicates whether or not the vessel is equipped with this technology (Yes/No/Unk) | String | e.g., `Yes` |
 
 # (G-CONFIG-BRANCHLINES) Longline General Gear Specifications > Branchline Configurations
 

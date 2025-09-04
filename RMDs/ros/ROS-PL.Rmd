@@ -19,10 +19,9 @@ output:
     smooth_scroll: FALSE 
 ---
 
-
 # Description
 
-This form provides for the reporting of operational and catch data from pole-and-line fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with pole and line operations, including IOTC species, and other bycatch species.The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of pole and line fisheries on associated and dependent species. CPCs are required to complete the form for pole and line operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers at sea or reviewing data collected with Electronic Monitoring Systems.
+This form provides for the reporting of operational and catch data from pole and line fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with pole and line operations, including IOTC species, and other bycatch species.The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of pole and line fisheries on associated and dependent species. CPCs are required to complete the form for pole and line operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers or with Electronic Monitoring Systems.
 
 Click [here](./Form-ROS-PL.xlsx) to download a blank version of Form ROS-PL, or [return](../index.html) to the list of all IOTC data reporting forms.
 
@@ -222,7 +221,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |O |**DESCRIPTION TO ADD**  |  YYYY-MM-DD hh:mm |e.g., `2025-09-15 12:00`|
+| Date/time UTC |O | **DESCRIPTION TO ADD**  |  YYYY-MM-DD hh:mm |e.g., `2025-09-15 12:00`|
 :::
 
 ::: {style="margin-left:40px"}
@@ -233,14 +232,14 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Country code | O |	The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Latitude  | O  |The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| Longitude | O  | The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
+| Latitude  | O |The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| Longitude | O | The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |O |  	The date and time the vessel departed from port or from a transshipment location |  YYYY-MM-DD hh:mm |  e.g., `2025-09-15 12:00` |
+| Date/time UTC |O | The date and time the vessel departed from port or from a transshipment location |  YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
 | **Vessel return:** The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record ‘at-sea’ plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
@@ -333,7 +332,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Value  | O |**DESCRIPTION TO ADD**  |Float  |e.g., `30`  |
+| Value  | O | **DESCRIPTION TO ADD** | Float | e.g., `30` |
 | Autonomy range unit |O  |The unit used to describe the value of autonomy range  | Days or NM  | e.g., `days` |
 :::
 
@@ -352,7 +351,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | XBT | O | Indicates whether or not one or more expendable bathythermographs (XBT) were present on the vessel | String | e.g., `Yes` |
 | VHF radios | O |Indicates whether or not one or more VHF radios were present on the vessel | String | e.g., `Yes` |
 | HF radios | O |Indicates whether one or more HF radios were present or not on the vessel | String | e.g., `Yes` |
-| Satellite comms | O | 	Indicate whether or not one or more satellite communication systems were present on the vessel | String | e.g., `Yes` |
+| Satellite comms | O | Indicate whether or not one or more satellite communication systems were present on the vessel | String | e.g., `Yes` |
 | FIS | O |	Indicates whether or not one or more Fisheries Information Services were present on the vessel | String | e.g., `Yes` |
 
 ## Waste Management Detail
@@ -374,7 +373,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Category   |O  |	The category of the waste produced by the vessel  | **Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
 | Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
 :::
 ::: {style="margin-left:40px"}
@@ -383,7 +382,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Category   |O  |	The category of the waste produced by the vessel  | **Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
 | Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
 :::
 ::: {style="margin-left:40px"}
@@ -392,43 +391,43 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| Category | O |	The category of the waste produced by the vessel  | **Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
 | Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
 :::
 
 # (G-GENERAL)
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Observed trip ID| | M | The parent observed trip identifier | Alphanumeric |e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
+| Observed trip ID | | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
 
 ## Special equipment or machinery
 | Field | Requirement | Description | format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Live bait tank capacity (m3) | M  |The vessel total maximum capacity to store live bait, in cubic metres (m3) | Float  | e.g., **ADD** |
-| Number of automatic poles | M  | The total number of automatic poles fixed on a vessel. | Integer | e.g., **ADD**  |
+| Live bait tank capacity (m3) | M |The vessel total maximum capacity to store live bait, in cubic metres (m3) | Float | e.g., **ADD** |
+| Number of automatic poles | M | The total number of automatic poles fixed on a vessel | Integer | e.g., **ADD**  |
 
 ## General Gear Attributes
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Number of anglers | M |The maximum number of anglers observed during the trip  | Integer  | e.g., `25` |
+| Number of anglers | M |The maximum number of anglers observed during the trip | Integer | e.g., `25` |
 | Pole material: The material the pole is made of, including, but not limited to bamboo, fibre glass or carbon
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Material code | O  |  | **Code** from [Pole Material Types](#poleMaterialTypes)  |e.g., `BM`  |
-| Description | O  | Description of alternative pole material | Free entry. Plain text  | **ADD** |
+| Material code | O  | | **Code** from [Pole Material Types](#poleMaterialTypes) |e.g., `BM` |
+| Description | O | Description of alternative pole material | Free entry. Plain text  | **ADD** |
 :::
 
 | Hook: The type of hooks used for the observed trip
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Type codes | O  |  | **Code** from [Hook Types](#hookTypes)  |e.g., `C11`  |
-| Hook type 2 code | O  |  |**Code** from [Hook Types](#hookTypes)  |e.g., `C11`  |
-| Hook type 3 code | O  |  | **Code** from [Hook Types](#hookTypes)  |e.g., `C11` |
-| Hook type 4 code | O  |  | **Code** from [Hook Types](#hookTypes)  |e.g., `C11`  |
+| Type codes | O | | **Code** from [Hook Types](#hookTypes) | e.g., `C11`  |
+| Hook type 2 code | O  | |**Code** from [Hook Types](#hookTypes) | e.g., `C11`  |
+| Hook type 3 code | O  | | **Code** from [Hook Types](#hookTypes) |e.g., `C11` |
+| Hook type 4 code | O  | | **Code** from [Hook Types](#hookTypes) |e.g., `C11`  |
 :::
 
 # (E-SET-TUNA)
@@ -446,7 +445,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | M  | For the observed event, the date and time the first line enters the water.  |  YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00`| |
+| Date/time UTC | M  | For the observed event, the date and time the first line enters the water | YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00`| |
 
 | **Position** 
 :::
@@ -454,7 +453,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Latitude | M |The latitude at the start of the setting operation  | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| Latitude | M |The latitude at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
 | Longitude |M | The longitude at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |  
 :::
 
@@ -463,7 +462,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | M  |  For the observed event, the time the last line comes out of the water. |  YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00`  |
+| Date/time UTC | M  |  For the observed event, the time the last line comes out of the water |  YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00` |
 :::
 
 | **School sighting cues:** The cues that lead the vessel to detect the presence of a tuna school
@@ -471,9 +470,9 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Cue 1 code | O  |  | **Code** from [School Sighting Cues](#schoolSightingCues) |e.g., `AF`  |
-| Cue 2 code | O  |  | **Code** from [School Sighting Cues](#schoolSightingCues) |e.g., `AF`  |
-| Cue 3 code | O  |  | **Code** from [School Sighting Cues](#schoolSightingCues) |e.g., `AF` |
+| Cue 1 code | O  | | **Code** from [School Sighting Cues](#schoolSightingCues) | e.g., `AF` |
+| Cue 2 code | O  | | **Code** from [School Sighting Cues](#schoolSightingCues) | e.g., `AF` |
+| Cue 3 code | O  | | **Code** from [School Sighting Cues](#schoolSightingCues) | e.g., `AF` |
 :::
 
 Type of school detected **ADD TO FORM** **MAKE CODE LISTS?**
@@ -482,19 +481,19 @@ Type of school detected **ADD TO FORM** **MAKE CODE LISTS?**
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 **INSERT RELEVANT INFORMATION** -- NEEDS TO BE ADDED TO FORM
 
-| Target species: For the observed event, Record the species in the school being targeted using FAO three figure alpha
+| Target species: For the observed event, the species in the school being targeted
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Species 1 code | M |  | **Code** from [Target Species](#targetSpecies)  |e.g., `AG01`  |
-| Species 2 code | M |  | **Code** from [Target Species](#targetSpecies)  |e.g., `AG01`  |
-| Species 3 code | M |  | **Code** from [Target Species](#targetSpecies)  |e.g., `AG01`  |
-| Species 4 code | M |  | **Code** from [Target Species](#targetSpecies)  |e.g., `AG01`  |
+| Species 1 code | M | | **Code** from [Target Species](#targetSpecies) | e.g., `AG01`  |
+| Species 2 code | M | | **Code** from [Target Species](#targetSpecies) | e.g., `AG01`  |
+| Species 3 code | M | | **Code** from [Target Species](#targetSpecies) | e.g., `AG01`  |
+| Species 4 code | M | | **Code** from [Target Species](#targetSpecies) | e.g., `AG01`  |
 :::
 
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Max lines fishing at the same time | M | For the observed event, the maximum number of lines fishing at the same time. These should include lines deployed from manual and automatic poles. If other lines are deployed, it should be specified, and then included in the total count | Integer | e.g., `150` |
+| Maximum lines fishing at the same time | M | For the observed event, the maximum number of lines fishing at the same time. These should include lines deployed from manual and automatic poles. If other lines are deployed, it should be specified, and then included in the total count | Integer | e.g., `150` |
 
 | Bait
 
@@ -502,45 +501,49 @@ Type of school detected **ADD TO FORM** **MAKE CODE LISTS?**
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Used | O  | Indicates whether any bait was used during the fishing event (Yes/No) | String |e.g., `Yes`  |
-| Type code | O  | Indicates the bait types used during the fishing event | **Code** from [Bait Types](#baitTypes)  |e.g., `FF`   | **This needs to be added to reporting form**
-| Condition code | O  |Indicates the bait condition used during the fishing event  | **Code** from [Bait Conditions](#baitConditions) |e.g., `DE`  |
-| Species code | O  | The species of bait used during the fishing event | **Code** from [Bait Species](#baitSpecies)  |e.g., `ANX`  |
-| Weight (kg) | O  |The estimated quantity of bait used in the poling operation (in kg). If no bait, then would be zero (0)  | Float  |e.g., **ADD**  | **CHECK- NOT AN INTEGER?**
+| Type code | O | Indicates the bait types used during the fishing event | **Code** from [Bait Types](#baitTypes) | e.g., `FF` | **This needs to be added to reporting form**
+| Condition code | O | Indicates the bait condition used during the fishing event  | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE` |
+| Species code | O | The species of bait used during the fishing event | **Code** from [Bait Species](#baitSpecies) | e.g., `ANX` |
+| Weight | O | The estimated quantity (kg) of bait used in the poling operation. If no bait, then would be zero (0)  | Float | e.g., **ADD** | ** CHECK- NOT AN INTEGER?**
 :::
 
-| Number of hooks lost | O  | The total number of hooks lost during the poling operation. | Integer  | e.g., `10` |
-| Object ID | O | For every activity involving artificial FAD (DFAD/AFAD), there is a  FAD identifier. This includes FAD markings, beacon IDs,  or any information that can be used to identify the owner  |Alphanumeric |e.g., **ADD**  |
+<!-- Changed "Weight (kg)" to "Weight" -->
+
+| Number of hooks lost | O | The total number of hooks lost during the poling operation | Integer | e.g., `10` |
+| Object ID | O | For every activity involving artificial FAD (DFAD/AFAD), there is a  FAD identifier. This includes FAD markings, beacon IDs, or any information that can be used to identify the owner | Alphanumeric | e.g., **ADD**  |
 
 # (E-SET-TUNA-CATCHES-FISHING-TRIP)
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Observed trip ID| | M | The parent observed trip identifier | Alphanumeric |e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
+| Observed trip ID | | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
 
 ## Catch details
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Species code | M  | 	The species/species group of bait used (FAO spp. 3-alpha code) | **Code** from [All Species](#allSpecies)  |e.g., `ABL`  |
+| Species code | M  | The species/species group of bait used | **Code** from [All Species](#allSpecies)  | e.g., `ABL`  |
 | Fate: The fate which includes whether an individual was retained or discarded and the reason
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Type | M | **ADD DESCRIPTION**  | **Code** from [Types of Fate](#typesOfFate)  | e.g., `DI` |
-| Code | M | **ADD DESCRIPTION** | **Code** from [Fates](#fates)  |e.g., `DL`  |
+| Type | M | **ADD DESCRIPTION** | **Code** from [Types of Fate](#typesOfFate)  | e.g., `DI` |
+| Code | M | **ADD DESCRIPTION** | **Code** from [Fates](#fates) | e.g., `DL` |
 :::
-| Sampling method | M  | The sampling method used to obtain total catch estimates per species for the event | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsForCatchEstimation)  |e.g., `EP`  |
-| Number of fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level)   |  Integer |e.g., **ADD**  |
+| Sampling method | M  | The sampling method used to obtain total catch estimates per species for the event | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsForCatchEstimation) | e.g., `EP`  |
+| Number of fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level)  | Integer |e.g., **ADD**  |
 
-| Weight: The catch weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, record the unprocessed weight
+| Weight: The catch weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, it corresponds to the unprocessed weight.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Weight code | ? | The type of processing the species underwent prior to weighing.  If the species has not been processed, record the code for unprocessed (or round, whole, live) weight (i.e. RD)  | ? | ?  | **MISSING FIELD- ADD TO FORM**
-| Value | M  | **ADD DESCRIPTION** | Float  |  |
-| KG/T | M  | **ADD DESCRIPTION**  |Indicate unites (KG or T)  |  |
-| Estimation method code | M  |Specify the weight estimation method used to obtain the weight |**Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BA` |
+| Weight code | **?** | The type of processing the species underwent prior to weighing. If the species has not been processed, record the code for unprocessed (or round, whole, live) weight | **?** | **?**  | **MISSING FIELD- ADD TO FORM**
+| Value | M  | **ADD DESCRIPTION** | Float |  |
+| KG/T | M  | **ADD DESCRIPTION**  | Unit of weight (KG or T)  |  |
+| Estimation method code | M | Specify the weight estimation method used to obtain the weight | **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BA` |
 :::
+
+<!-- Changed KG/T to Weight -->
 
 # (E-SET-TUNA-CATCHES)
 
@@ -579,16 +582,16 @@ ________________________________________________________________________________
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Depredation source | O  | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
-| Observed predator | O  | For depredated specimens/or catch, record the predator species directly observed and identified (FAO spp. 3-alpha code). If the predator was not observed record UNK (unknown). For non-depredated specimens record NA |  **Code** from [Predator Species](#predatorSpecies)| e.g., `AG15` |
+| Depredation source | O | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
+| Observed predator | O  | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed record UNK (unknown). For non-depredated specimens record NA |  **Code** from [Predator Species](#predatorSpecies)| e.g., `AG15` |
 :::
 
 | Additional details
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Condition at capture | O | 	The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions)  | e.g., `A0` |
-| Condition at release | O  | 	The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
+| Condition at capture | O | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions)  | e.g., `A0` |
+| Condition at release | O  | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
 :::
 
 # (E-SET-TUNA-CATCHES-SSI)
@@ -596,24 +599,24 @@ ________________________________________________________________________________
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | The parent observed trip identifier | Alphanumeric |e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
-| Set ID | M  | **ADD DETAILS** |Alphanumeric   |  |
+| Set ID | M | **ADD DETAILS** | Alphanumeric   |  |
 | Specimen ID | M  | The parent specimen identifier | 4-digit number |e.g., `0005`  |
 
 ## Specimen details - additionl catch details SSI
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Gear interaction code | O  | The type of interaction of the specimen with the fishing gear (“UK” if unknown as not possible to collect)  | **Code** from [Gear Interactions](#gearInteractions) | e.g., `EF` |
-| Brought onboard | O  | 	Indicates whether or not the specimen was brought onboard (Yes/No/Unk) | String  |e.g., `Yes`   |
-| Handling method code | O  | Details how the specimen was brought onboard | **Code** from [Handling Methods](#handlingMethods) |e.g., `AN`  |
-| Revival | O  | 	Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String |e.g., `Yes`  |
-| Photo ID | O  | The unique identifier of the photo taken of a specimen | Alphanumeric  | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png`  |
+| Gear interaction code | O  | The type of interaction of the specimen with the fishing gear ("UK" if unknown as not possible to collect) | **Code** from [Gear Interactions](#gearInteractions) | e.g., `EF` |
+| Brought onboard | O | Indicates whether or not the specimen was brought onboard (Yes/No/Unk) | String | e.g., `Yes`   |
+| Handling method code | O | Details how the specimen was brought onboard | **Code** from [Handling Methods](#handlingMethods) | e.g., `AN`  |
+| Revival | O  | 	Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String |e.g., `Yes` |
+| Photo ID | O  | The unique identifier of the photo taken of a specimen | Alphanumeric  | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
 
 # (E-SET-CATCHES-BIOMETRIC)
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Observed trip ID| | M | The parent observed trip identifier | Alphanumeric |e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
+| Observed trip ID| | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
 | Set ID | M  | **ADD DETAILS** |Alphanumeric   |  |
 | Specimen ID | M  | The parent specimen identifier | 4-digit number |e.g., `0005`  |
 
@@ -627,21 +630,25 @@ ________________________________________________________________________________
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Type code |M  |The length code used for the measurement  |**Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
-| Value (cm) |M  |The length corresponding to the length type taken rounded to the lower centimetre  | Float  | e.g., 34  |
-| Measuring tool code |M  | Specify the tool code used for the measurement  |**Code** from [Length Measurement Tools](#lengthMeasurementTools)  |e.g., `CA`  |
-| Is straight |M  |Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes`  |
+| Type code | M |The length code used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
+| Value | M | The length (cm) corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
+| Measuring tool code |M  | Specify the tool code used for the measurement  |**Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
+| Is straight |M  |Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
 :::
+
+<!-- Changed "Value (cm)" to "Value" -->
 
 | **Length 2:** ADD DESCRIPTION
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Type code |O  |	The length code used for the measurement  | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `FL` |
-| Value (cm) |O  |	The value of length (cm) corresponding to the length type taken rounded to the lower centimetre |Float  | e.g., `86` |
-| Measuring tool code |O  | 	The tool code used for the measurement  |**Code** from [Length Measurement Tools](#lengthMeasurementTools)  |e.g., `CA`  |
-| Is straight |O  |Indicates whether the size measurement was made straight (Yes/No/Unk) |String| e.g., `No`  |
+| Type code | O |	The length code used for the measurement  | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `FL` |
+| Value | O |	The value of length (cm) corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `86` |
+| Measuring tool code | O | The tool code used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA` |
+| Is straight | O |Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `No` |
 :::
+
+<!-- Changed "Value (cm)" to "Value" -->
 
 | **Weight:** The specimen’s weight corresponding to the specified product type recorded in ‘weight code’. Unprocessed weight when the fish has not been processed
 ::: {style="margin-left:40px"}
@@ -746,8 +753,8 @@ ________________________________________________________________________________
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Processing type code |O  | The processing code used for the weight measurement |**Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
 | Value |O  | The weight corresponding to the measurement type code | Float |e.g., `43.2`  |
-| KG/T | O  | Unit of weight (kg or t) | String |e.g., `kg`  |
-| Estimation method code |O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` |
+| Unit | O  | Unit of weight (kg or t) | String |e.g., `kg`  |
+| Estimation method code |O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` | **MATCH THE FORM** **CLARIFY TOMORROW**
 :::
 
 # (E-SET-BAIT-CATCHES-SPECIMEN-SSI)
@@ -785,8 +792,13 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________________________________________________________________________________________
 
 # Reporting deadlines
+<<<<<<< HEAD
 
 - **Surface fisheries**: 30 June (final)
+=======
+- **Surface fisheries**: 30 June (final)
+
+>>>>>>> f0b96ccedf481f408599a37ac86c2a33a58af709
 
 # Reference Code Lists
 
