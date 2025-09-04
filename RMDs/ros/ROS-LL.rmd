@@ -31,9 +31,9 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 # Metadata
 
-## Submission Information
+<!-- ## Submission Information -->
 
-<!-- Focal point (full name, email, finalisation date, and submission date) and organisation information (name, email). -->
+<!-- short section to introduce the informaiton Focal point (full name, email, finalisation date, and submission date) and organisation information (name, email). -->
 
 ## General Information
 
@@ -61,7 +61,7 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 ## Observer Trip Details
 
-| **Embarkation:** The starting port. If the first observation is available after the departure form the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure), record "at sea".
+| **Embarkation:** The starting port. If the first observation is available after the departure from the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure), record "at sea".
 
 ::: {style="margin-left:40px"}
 | **In port**
@@ -296,7 +296,7 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Tonnage | O | The vessel gross tonnage (no unit) as specified in vessel registration documents | Float | e.g., `2319` |
+| Tonnage | O | Gross tonnage (GT), a dimensionless measure of vessel's internal volume from registration documents | Integer | e.g., `2319` |
 | Length | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
 | Hull material code | O | The vessel hull material | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
 
@@ -305,29 +305,26 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Make | O | **DESCRIPTION TO ADD** | String | e.g., `MAN Energy Solutions`  |
-| Power value | O | **DESCRIPTION TO ADD** | Float | e.g., `5000` |
-| Power unit | O | **DESCRIPTION TO ADD** | Power units: kilowatts (kW), horsepower (hp), or break horsepower (hp) | e.g., `kW` |
-:::
+| Make | O | The manufacturer or brand name of the vessel's engine, as specified in the official vessel registration or engine documentation | String | e.g., `MAN Energy Solutions`  |
+| Power value | O | The rated power output of the vessel's main engine as specified in the official vessel registration or engine documentation | Integer | e.g., `5000` |
+| Power unit | O | Rated output of the vessel's main engine, as specified in official registration or engine documentation in kilowatts (kW), horsepower (hp), or break horsepower (hp) | String | e.g., `kW` |
 
+<!-- I think we should remove BHP from the possibilities following Res. [19/04](https://www.iotc.org/cmm/resolution-1904-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence) -->
+:::
 
 |  |  |  |  |  |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Fish storage capacity | O | The vessel total maximum capacity to store catches | Float | e.g., `1100` |
-<<<<<<< HEAD
+| Fish storage capacity | O | The vessel total maximum capacity to store catches | Float | e.g., `1100.` |
 | Fish storage capacity unit | O | The standard measurement units for fish storage capacity | **Code** from [Vessel Size Types](#vesselSizeTypes) | e.g., `CC` |
-=======
 
 | **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Preservation method 1 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
-| Preservation method 2 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
-| Preservation method 3 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
-| Preservation method 4 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
-<<<<<<< HEAD
-=======
+| Preservation method 1 | O |  | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| Preservation method 2 | O |  | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| Preservation method 3 | O |  | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| Preservation method 4 | O |  | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
 ::: 
 
 | **Fish storage types:** The type of structure(s) present on-board used by the vessel to store the catch
