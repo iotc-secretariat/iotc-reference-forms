@@ -218,6 +218,14 @@ SCHOOL_SIGHTING_CUES = read_codelist(domain = "fisheries", schema = "fishery", c
 
 SCHOOL_TYPE_CATEGORIES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SCHOOL_TYPE_CATEGORIES")
 
+FAD_RAFT_DESIGNS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FAD_RAFT_DESIGNS")
+
+FAD_TAIL_DESIGNS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FAD_TAIL_DESIGNS")
+
+
+
+
+
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
 SPECIES               = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
@@ -264,13 +272,15 @@ SAMPLING_PERIODS      = read_codelist(domain = "biology", schema = "biology", co
 
 SAMPLING_METHODS_FOR_CATCH_ESTIMATION = read_codelist(domain = "biology", codelist = "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
 
-SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS = read_codelist(domain = "biology", codelist = "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
+SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS = read_codelist(domain = "biology", codelist = "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
 
 TAG_TYPES = read_codelist(domain = "biology", schema = "biology", codelist = "TAG_TYPES")
 
 DEPREDATION_SOURCES = read_codelist(domain = "biology", schema = "biology", codelist = "DEPREDATION_SOURCES")
 
 WEIGHT_ESTIMATION_METHODS = MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE  == "WG", -c("TYPE_OF_MEASUREMENT_CODE")]
+
+SPECIES_CETACEANS     = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_CETACEANS")
 
 # SOCIO-ECONOMIC DOMAIN ####
 
