@@ -222,9 +222,7 @@ FAD_RAFT_DESIGNS = read_codelist(domain = "fisheries", schema = "fishery", codel
 
 FAD_TAIL_DESIGNS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FAD_TAIL_DESIGNS")
 
-
-
-
+SURFACE_FISHERY_ACTIVITIES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SURFACE_FISHERY_ACTIVITIES")
 
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
@@ -281,6 +279,8 @@ DEPREDATION_SOURCES = read_codelist(domain = "biology", schema = "biology", code
 WEIGHT_ESTIMATION_METHODS = MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE  == "WG", -c("TYPE_OF_MEASUREMENT_CODE")]
 
 SPECIES_CETACEANS     = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_CETACEANS")
+
+BAIT_TYPES = read_codelist(domain = "biology", schema = "biology", codelist = "BAIT_TYPES")
 
 # SOCIO-ECONOMIC DOMAIN ####
 
