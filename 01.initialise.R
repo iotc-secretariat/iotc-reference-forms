@@ -268,7 +268,9 @@ TAG_TYPES = read_codelist(domain = "biology", schema = "biology", codelist = "TA
 
 DEPREDATION_SOURCES = read_codelist(domain = "biology", schema = "biology", codelist = "DEPREDATION_SOURCES")
 
-WEIGHT_ESTIMATION_METHODS = MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE  == "WG", -c("TYPE_OF_MEASUREMENT_CODE")]
+#WEIGHT_ESTIMATION_METHODS = MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE  == "WG", -c("TYPE_OF_MEASUREMENT_CODE")]
+
+WEIGHT_MEASUREMENT_TOOLS = read_codelist(domain = "biology", schema = "biology", codelist = "WEIGHT_MEASUREMENT_TOOLS")
 
 BAIT_TYPES = read_codelist(domain = "biology", schema = "biology", codelist = "BAIT_TYPES")
 
