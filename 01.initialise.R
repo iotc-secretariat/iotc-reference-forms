@@ -214,6 +214,8 @@ POLE_MATERIAL_TYPES = read_codelist(domain = "fisheries", schema = "fishery", co
 
 SCHOOL_SIGHTING_CUES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SCHOOL_SIGHTING_CUES")
 
+SURFACE_FISHERY_ACTIVITIES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SURFACE_FISHERY_ACTIVITIES")
+
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
 SPECIES               = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
@@ -267,6 +269,8 @@ TAG_TYPES = read_codelist(domain = "biology", schema = "biology", codelist = "TA
 DEPREDATION_SOURCES = read_codelist(domain = "biology", schema = "biology", codelist = "DEPREDATION_SOURCES")
 
 WEIGHT_ESTIMATION_METHODS = MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE  == "WG", -c("TYPE_OF_MEASUREMENT_CODE")]
+
+BAIT_TYPES = read_codelist(domain = "biology", schema = "biology", codelist = "BAIT_TYPES")
 
 # SOCIO-ECONOMIC DOMAIN ####
 

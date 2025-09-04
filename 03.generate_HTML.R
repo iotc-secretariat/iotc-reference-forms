@@ -1,3 +1,6 @@
+### Limit all interactive tables to a number of rows
+options(DT.options = list(pageLength = 3))
+
 # FORM Summary (EN) ####
 render("./RMDs/Form-summary.Rmd",
        output_format = "html_document2",
@@ -128,22 +131,18 @@ render("./RMDs/Form-2FC.Rmd",
 # ROS REPORTING FORMS ####
 
 ## LONGLINE ####
-
 render("./RMDs/ros/ROS-LL.rmd", 
        output_format = "html_document2",
        output_file ="Form-ROS-LL.html", 
        output_dir = "./out/HTML/ros/")
 
 ## POLE-AND-LINE ####
-
 render("./RMDs/ros/ROS-PL.rmd", 
        output_format = "html_document2",
        output_file ="Form-ROS-PL.html", 
        output_dir = "./out/HTML/ros/")
 
-
 ## Purse Seine
-
 render("./RMDs/ros/ROS-PS.rmd", 
        output_format = "html_document2",
        output_file ="Form-ROS-PS.html", 
