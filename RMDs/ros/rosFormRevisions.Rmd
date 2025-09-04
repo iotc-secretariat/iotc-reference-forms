@@ -65,14 +65,42 @@ SECTION: VESSEL INFORMATION:
 
 
 
+Meeting with Shimal about revisions to the PL reporting form
+- change sheet names
+      - should not be "SET", but instead by "TRIP" or "EVENT" level
+During the meeting Cynthia changed the names of headings. Change form description to match updated headings
+- for each sheet
+      - specify specimen level or event level
+      - write in the description if it is species/event level and define what that level means (ie. what is an event?)
+E-SET-TUNA-CATCHES - remove specimen ID
+E-SET-TUNA-CATCHES
+      - remove specimen ID because not on a specimen level, should be an event level
+      - change EVENT NUMBER to EVENT_ID
+      - removed depredation details  ---> consider this revision for purse seine as well
+E-SET-TUNA
+      - this section should comes after E-SET-TUNA-CATCHES-FISHING-TRIP
+      - in each of these sheets have a description explaining what that sheet is supposed to do within the structure of the form. 
+                - ex: This sheet gives a summary of the catch from the event. The next sheet will give details on a proportion/subsample of the catch from the set etc. 
+                - clarify which sheets are trip level vs. event level vs. specimen level
+Ensure that optional fields can still be applied to PL fisheries. Do not include just for uniformity. It is still confusing observers/reporters. Can also give better descriptions to clarify
+V-ATTRIBUTES - which preservation methods are on board. If needed is there an NA category. 
 
+E-SET-TUNA-CATCHES needs to come before BIOMETRIC sheet in the reporting form
+      - make a clear description that the first form is detailing total catch and the BIOMATRIC form is a subsample of the catch from an event
+      - are catches from PL homogenous? How many subsamples should be/ will be taken from an event
 
+CATCH ID -> change to SUBSAMPLE ID?
+      
+BIOMETRIC sheet needs to be moved to before E-SET-TUNA-CATCHES-SSI
+E-SET-TUNA-CATCHES-SSI - add fields: condition at capture and condition at release
 
+BAIT-CATCHES
+- add field for Bait conditions to clarify if bait is live bait
 
+SET LEVEL --> EVENT LEVEL throughout form and DEFINE EVENT
 
+E-SET-TUNA: school sighting cues: the form description for this field is confusing. Should divide into two sections, create new codelists, and add new fields to reporting form
 
+NOTE: SHIMAL would like previously submitted data shared so he can make prior data usable
 
-
-
-
-
+OBSERVER ID - description - clarify that this identifier is issued by IOTC. Same for IOTC_ID. 
