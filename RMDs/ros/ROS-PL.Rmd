@@ -23,7 +23,7 @@ output:
 
 This form provides for the reporting of operational and catch data from pole and line fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with pole and line operations, including IOTC species, and other bycatch species.The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of pole and line fisheries on associated and dependent species. CPCs are required to complete the form for pole and line operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers or with Electronic Monitoring Systems.
 
-Click [here](./Form-ROS-PL.xlsx) to download a blank version of Form ROS-PL, or [return](../index.html) to the list of all IOTC data reporting forms.
+Click [here](./Form-ROS-PL.xlsx) to download a blank version of the ROS-PL form, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 
@@ -69,8 +69,8 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O | The country or EEZ of the observation starting location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Port code | O | The port of the observation starting location  | **Code** from [Ports](#ports)  | e.g., `REREU` |
+| Country| O | The country or EEZ of the observation starting location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | O | The port of the observation starting location  | **Code** from [Ports](#ports)  | e.g., `REREU` |
 :::
 
 ::: {style="margin-left:40px"}
@@ -99,8 +99,8 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O | The country or EEZ of the observation ending location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Port code | O | The port of the observation ending location  |**Code** from [Ports](#ports)  | e.g., `REREU` |
+| Country | O | The country or EEZ of the observation ending location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | O | The port of the observation ending location  |**Code** from [Ports](#ports)  | e.g., `REREU` |
 :::
 
 ::: {style="margin-left:40px"}
@@ -165,7 +165,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or Electronic Monitoring records| Strong | e.g., `PELICAN`  |
-| Flag or chartering code | M  |The country code of registration or chartering | **Code** from [Countries](#countries) | e.g., `MDV` |
+| Flag or chartering | M  |The country code of registration or chartering | **Code** from [Countries](#countries) | e.g., `MDV` |
 | IOTC number  | M  | The vessel IOTC number as per the IOTC Record of Authorized Vessels | Free entry, alphanumeric code   | e.g., `IOTC016711` |
 | IMO number  | O  | The International Maritime Organisation (IMO) unique vessel identifier Scheme (use NE if the vessel is Not Eligible, or PENDING if an IMO number has been requested but not yet assigned). | Seven-digit number  |e.g., `8541701`  |
 | International radio call sign (IRCS)  | O | The vessel radio call sign (when available) | Alphanumeric code |e.g., `8QE2264`  |
@@ -175,9 +175,9 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |	The code of vessel’s country of registry  |**Code** from [Countries](#countries) | e.g., `FRA` |
-| Port code | O | The code of vessel’s port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship’s hull |**Code** from [Ports](#ports) | e.g., `REREU` |
-| Reg number | O |	The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel | Alphanumeric or numeric code according to CPC standards |e.g., `CBG303`|
+| Country | O |	The code of vessel’s country of registry  |**Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | O | The code of vessel’s port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship’s hull |**Code** from [Ports](#ports) | e.g., `REREU` |
+| Reg number | O |	The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel | Alphanumeric or numeric according to CPC standards |e.g., `CBG303`|
 :::
 
 | Field | Requirement | Description | Format | Input value |
@@ -185,14 +185,33 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 |Licensed target species  | O | The licensed target species as specified in vessel licences or permit conditions | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
 | Gear (main fishing gear) | M | The vessel main fishing gear |**Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
+| **Vessel Personnel**
+::: {style="margin-left:40px"}
+| **Fishing master:**  The fishing master name and nationality in full
+:::
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Full name | M |  |  Plain text | e.g., `John Doe` |
+| Nationality | M |  | Nationality code [Countries](#countries) | e.g., `FRA` |
+:::
+::: {style="margin-left:40px"}
+| **Skipper/captain:** The skipper name and nationality in full 
+:::
+
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Full name | M |  |  Plain text | e.g., `John Doe` |
+| Nationality | M |  | Nationality code [Countries](#countries) | e.g., `FRA` |
+:::
+
 | **Vessel Personnel:** INSERT DECRIPTION HERE OR LINK TO GLOSSARY
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Fishing master  | M | Record the fishing master name and nationality in full | Full name: Plain text ; Nationality code [Countries](#countries) | e.g., `John Doe , FRA` |
-| Skipper/captain | M | Record skipper name and nationality in full | Full name: Plain text: [Countries](#countries)  | e.g., `John Doe, FRA` |
-| Crew number | O | Record the number of crew. This should be cross checked against the vessel's crew list | Integer | e.g., `26` |
+| Crew number | O | The number of crew. This should be cross checked against the vessel's crew list | Integer |e.g., `25`  |
 :::
 
 # (V-TRIP) Vessel > Trip details
@@ -212,8 +231,8 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |The country or EEZ of the observation starting location |**Code** from [Countries](#countries) | e.g., `FRA` |
-| Port code | O  | The port of the observation starting location |**Code** from [Ports](#ports) | e.g., `REREU` |
+| Country | O |The country or EEZ of the observation starting location |**Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | O  | The port of the observation starting location |**Code** from [Ports](#ports) | e.g., `REREU` |
 | Latitude  | O  |	The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
 | Longitude | O  |The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
@@ -251,8 +270,8 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Port code | M  |  	The port of the observation ending location |**Code** from [Ports](#ports) | e.g., `REREU` |
+| Country | O |The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | M  |  	The port of the observation ending location |**Code** from [Ports](#ports) | e.g., `REREU` |
 | Latitude  | M  |	The latitude of the observation ending location  | Decimal degrees (two decimal places) | e.g., `-20.88` |
 | Longitude | M  | The longitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
@@ -260,7 +279,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |O | The date and time the vessel returned to port or to a transhipment location. |  YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00`|
+| Date/time UTC |O |  The date and time the fishing vessel finishes its fishing campaign, i.e., returns to port or to a transshipment location for unloading. If is the expected date and time of arrival (ETA) if the observer disembarks before the vessel returns |  YYYY-MM-DDThh:mm | e.g., `2025-09-15 12:00` |
 
 |**At sea**
 :::
@@ -305,8 +324,8 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 
 | |  | |  |  |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Fish storage capacity |O  |	The vessel total maximum capacity to store catches | Float |e.g., `1100`  |
-| Fish storage capacity unit |O  |		The standard measurement units for fish storage capacity | **Code** from [Vessel Size Types](#vesselSizeTypes) |  |e.g., `CC`  |
+| Fish storage capacity |O  |	The vessel total maximum capacity (in cubic meters) to store catches | Float |e.g., `1100`  |
+
 | **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen
 
 ::: {style="margin-left:40px"}
