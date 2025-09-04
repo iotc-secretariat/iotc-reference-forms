@@ -24,11 +24,11 @@ output:
 
 This form provides for the reporting of operational and catch data from pole and line fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with pole and line operations, including IOTC species, and other bycatch species.The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of pole and line fisheries on associated and dependent species. CPCs are required to complete the form for pole and line operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers or with Electronic Monitoring Systems.
 
-REPLACE WITH PROPER FORM LINK     Click [here](./Form-1RC.xlsx) to download a blank version of the ROS-PL form, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](./Form-ROS-PL.xlsx) to download a blank version of the ROS-PL form, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 
-REPLACE WITH POLE AND LINE DESCRIPTION:   Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sighting cues); operational details of each event, catch and bycatch by species in number and weight; fate (retained/discarded). This form also includes details on bait fishing operations (gear, handling, weight).
+Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sighting cues); operational details of each event, catch and bycatch by species in number and weight; fate (retained/discarded). This form also includes details on bait fishing operations (gear, handling, weight).
 
 # Metadata
 
@@ -70,8 +70,8 @@ Fill out organization information (name, email)
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O | The country or EEZ of the observation starting location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Port code | O | The port of the observation starting location  | **Code** from [Ports](#ports)  | e.g., `REREU` |
+| Country| O | The country or EEZ of the observation starting location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | O | The port of the observation starting location  | **Code** from [Ports](#ports)  | e.g., `REREU` |
 :::
 
 ::: {style="margin-left:40px"}
@@ -88,7 +88,7 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | O | Record the date and time of the start of observations  | YYYY-MM-DDThh:mm  | 2025-09-15 12:00 |
+| Date/time UTC | O | Record the date and time of the start of observations  | YYYY-MM-DDThh:mm  | e.g., `2025-09-15 12:00` |
 :::
 
 
@@ -101,8 +101,8 @@ Fill out organization information (name, email)
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O | The country or EEZ of the observation ending location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Port code | O | The port of the observation ending location  |**Code** from [Ports](#ports)  | e.g., `REREU` |
+| Country | O | The country or EEZ of the observation ending location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | O | The port of the observation ending location  |**Code** from [Ports](#ports)  | e.g., `REREU` |
 :::
 
 ::: {style="margin-left:40px"}
@@ -167,7 +167,7 @@ Fill out organization information (name, email)
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or Electronic Monitoring records| Strong | e.g., `PELICAN`  |
-| Flag or chartering code | M  |The country code of registration or chartering | **Code** from [Countries](#countries) | e.g., `MDV` |
+| Flag or chartering | M  |The country code of registration or chartering | **Code** from [Countries](#countries) | e.g., `MDV` |
 | IOTC number  | M  | The vessel IOTC number as per the IOTC Record of Authorized Vessels | Free entry, alphanumeric code   | e.g., `IOTC016711` |
 | IMO number  | O  | The International Maritime Organisation (IMO) unique vessel identifier Scheme (use NE if the vessel is Not Eligible, or PENDING if an IMO number has been requested but not yet assigned). | Seven-digit number  |e.g., `8541701`  |
 | International radio call sign (IRCS)  | O | The vessel radio call sign (when available) | Alphanumeric code |e.g., `8QE2264`  |
@@ -177,24 +177,40 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |	The code of vessel’s country of registry  |**Code** from [Countries](#countries) | e.g., `FRA` |
-| Port code | O | The code of vessel’s port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship’s hull |**Code** from [Ports](#ports) | e.g., `REREU` |
-| Reg number | O |	The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel | Alphanumeric or numeric code according to CPC standards |e.g., `CBG303`|
+| Country | O |	The code of vessel’s country of registry  |**Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | O | The code of vessel’s port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship’s hull |**Code** from [Ports](#ports) | e.g., `REREU` |
+| Reg number | O |	The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel | Alphanumeric or numeric according to CPC standards |e.g., `CBG303`|
 :::
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 |Licensed target species  | O | The licensed target species as specified in vessel licences or permit conditions | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
 | Gear (main fishing gear) | M | The vessel main fishing gear |**Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
-| **Vessel Personnel:** INSERT DECRIPTION HERE OR LINK TO GLOSSARY
+| **Vessel Personnel**
+::: {style="margin-left:40px"}
+| **Fishing master:**  The fishing master name and nationality in full
+:::
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Full name | M |  |  Plain text | e.g., `John Doe` |
+| Nationality | M |  | Nationality code [Countries](#countries) | e.g., `FRA` |
+:::
+::: {style="margin-left:40px"}
+| **Skipper/captain:** The skipper name and nationality in full 
+:::
+
+::: {style="margin-left:80px"}
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:------------:|:------------------------|:------------:|:------------:|
+| Full name | M |  |  Plain text | e.g., `John Doe` |
+| Nationality | M |  | Nationality code [Countries](#countries) | e.g., `FRA` |
+:::
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Fishing master  | M | Record the fishing master name and nationality in full | Full name: Plain text ; Nationality code [Countries](#countries) | e.g., `John Doe , FRA` |
-| Skipper/captain | M | Record skipper name and nationality in full | Full name: Plain text: [Countries](#countries)  | e.g., `John Doe, FRA` |
-| Crew number | O | Record the number of crew. This should be cross checked against the vessel's crew list | Integer | e.g., `26` |
+| Crew number | O | The number of crew. This should be cross checked against the vessel's crew list | Integer |e.g., `25`  |
 :::
-
 
 # (V-TRIP) Vessel > Trip details
 | Element | Requirement | Description | Format | Input value |
@@ -209,26 +225,12 @@ Fill out organization information (name, email)
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |The country or EEZ of the observation starting location |**Code** from [Countries](#countries) | e.g., `FRA` |
-| Port code | O  | The port of the observation starting location |**Code** from [Ports](#ports) | e.g., `REREU` |
+| Country | O |The country or EEZ of the observation starting location |**Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | O  | The port of the observation starting location |**Code** from [Ports](#ports) | e.g., `REREU` |
 | Latitude  | O  |	The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
 | Longitude | O  |The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
-::: {style="margin-left:40px"}
-| Element | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |O |**DESCRIPTION TO ADD**  |  YYYY-MM-DDThh:mm |e.g., `2025-09-15 12:00`|
-:::
-::: {style="margin-left:40px"}
-| **At sea**
-:::
-::: {style="margin-left:80px"}
-| Element | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |	The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Latitude  | O  |The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| Longitude | O  | The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
-:::
+
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
@@ -242,26 +244,12 @@ Fill out organization information (name, email)
 ::: {style="margin-left:80px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Port code | M  |  	The port of the observation ending location |**Code** from [Ports](#ports) | e.g., `REREU` |
+| Country | O |The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Port | M  |  	The port of the observation ending location |**Code** from [Ports](#ports) | e.g., `REREU` |
 | Latitude  | M  |	The latitude of the observation ending location  | Decimal degrees (two decimal places) | e.g., `-20.88` |
 | Longitude | M  | The longitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
-::: {style="margin-left:40px"}
-| Element | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC |O | The date and time the vessel returned to port or to a transhipment location. |  YYYY-MM-DDThh:mm | e.g., `2025-09-15 12:00`|
-
-|**At sea**
-:::
-::: {style="margin-left:80px"}
-| Element | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Country code | O |The country or EEZ of the observation ending location |**Code** from [Countries](#countries) | e.g., `FRA` |
-| Latitude  | O  |The latitude of the observation ending location | Decimal degrees (two decimal places) |e.g., `-20.88`  |
-| Longitude | O  |The longitude of the observation ending location | Decimal degrees (two decimal places) |e.g., `55.53` | 
-:::
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
@@ -292,8 +280,8 @@ Fill out organization information (name, email)
 
 | |  | |  |  |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Fish storage capacity |O  |	The vessel total maximum capacity to store catches | Float |e.g., `1100`  |
-| Fish storage capacity unit |O  |		The standard measurement units for fish storage capacity | **Code** from [Vessel Size Types](#vesselSizeTypes) |  |e.g., `CC`  |
+| Fish storage capacity |O  |	The vessel total maximum capacity (in cubic meters) to store catches | Float |e.g., `1100`  |
+
 | **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
@@ -973,8 +961,6 @@ out_dt(BAIT_TYPES, "BAIT_TYPES")
 out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 ```
 
-
-
 ## Bait Species {#baitSpecies}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#baits)
@@ -984,8 +970,6 @@ out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 ```{r collapse = TRUE}
 out_dt(SPECIES_BAITS, "SPECIES_BAITS")
 ```
-
-
 
 ## All Species {#allSpecies}
 
@@ -1009,7 +993,6 @@ out_dt(SPECIES, "SPECIES")
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```
 
-
 ##Fates {#fates}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#fates)
@@ -1019,7 +1002,6 @@ out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```{r collapse = TRUE}
 out_dt(FATES, "FATES")
 ```
-
 
 ## Sampling Methods for Total Catch Estimation {#samplingMethodsForTotalCatchEstimation}
 
@@ -1031,7 +1013,6 @@ out_dt(FATES, "FATES")
 out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
 ```
 
-
 ## Weight Estimation Methods {weightEstimationMethods}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightEstimationMethods)
@@ -1039,11 +1020,9 @@ out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMA
 -   **Last update**: `r last_update("ESTIMATIONS")`
 
 ```{r collapse = TRUE}
-out_dt(ESTIMATIONS, "ESTIMATIONS")
+out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
 ```
 **not sure if this is the right PgAdmin codelist reference**
-
-
 
 ## Depredation Sources {#depredationSources}
 
@@ -1064,7 +1043,6 @@ out_dt(DEPREDATION_SOURCES, "DEPREDATION_SOURCES")
 ```{r collapse = TRUE}
 out_dt(SPECIES_PREDATORS, "SPECIES_PREDATORS")
 ```
-
 
 
 ## Individual Conditions {#individualConditions}
