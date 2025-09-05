@@ -39,12 +39,9 @@ Questions for TC:
 - `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` to rename to `ros_common.vessel_attributes_fish_storage_type.fst_code`?
 - 
 
+# Pole and Line Form
 
-
-# Pole and Line form
-
-
-| Line of Code|Section | Update needed | Status |
+| Line of Code | Section | Update needed | Status |
 |:-------|:-------|:-----------------------------------:|:---------:|
 | 25 - 31 | Description | review text for Description and data content | noted | DONE
 | 60 | O-INFO --> Observer Identification | "Full Name"is optional in the reporting form, but mandatory in the form description | noted|- should be OPTIONAL 
@@ -69,10 +66,7 @@ Questions for TC:
 | 725 | E-SET-BAIT-CATCHES | Ammend link to codelists for weight estimations. code list added to PgAdmin? | noted| **NEED TO ADD WEIGHT CODE** **WEIGHT MEASUREMENT CODE IS THE SAME AS WEIGHT ESTIMATION CODE**
 |DAILY-ACTIVITY | typo on the form: Dailiy --> Daily |   | 
 
- 
-
-
-<<<<<<< HEAD:RMDs/ros/rosFormRevisions.Rmd
+<!--
 ## Longline Form
 
 SECTION: VESSEL INFORMATION: 
@@ -100,12 +94,10 @@ SECTION: VESSEL INFORMATION:
 | 750 | E-SET-HAULING-BITEOFFS |  Configuration number to change to configuration identifier? | noted | **YES**
 | 789 | E-SET-CATCHES | CHANGE FORM - change weight "KG|T" to "Unit" | noted | **YES**
 
-
+-->
 
 # Meeting with Shimal about revisions to the PL reporting form
-=======
-Meeting with Shimal about revisions to the PL reporting form
->>>>>>> f010a72846ff4a44f1e2112d03c3a937b8b8f968:RMDs/ros/rosFormRevisions.md
+
 - change sheet names
       - should not be "SET", but instead by "TRIP" or "EVENT" level
 During the meeting Cynthia changed the names of headings. Change form description to match updated headings
@@ -152,7 +144,6 @@ E-SET-TUNA: school sighting cues: the form description for this field is confusi
 NOTE: SHIMAL would like previously submitted data shared so he can make prior data usable
 
 OBSERVER ID - description - clarify that this identifier is issued by IOTC. Same for IOTC_ID. 
-
 
 ## Changes to be made to the PS reporting form
 

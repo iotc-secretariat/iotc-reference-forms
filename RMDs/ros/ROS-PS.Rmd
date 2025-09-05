@@ -39,7 +39,7 @@ Fill out organization information (name, email)
 
 ## General Information
 
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:--------- |:----:|:-------------------------|:-------:|:---------:|
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g., `1996` |
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `ABW` |
@@ -48,13 +48,13 @@ Fill out organization information (name, email)
 
 
 # (O-INFO) Observer and observed trip information
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Observed trip ID | M | Unique identifier of the fishing trip defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer number, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 
 
 ## Observer identification
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | IOTC ID | M | The unique registration identifier assigned to each observer by the IOTC Secretariat | Alphanumeric | e.g., `IOTC_0976` |
 | Full name | O | The name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer | String | e.g., `John Doe` |
@@ -66,7 +66,7 @@ Fill out organization information (name, email)
 | **In port**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Country | M | The country or EEZ of the observation starting location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
 | Port| M | The port of the observation starting location  |**Code** from [Ports](#ports) | e.g., `REREU` |
@@ -76,7 +76,7 @@ Fill out organization information (name, email)
 | **At sea**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Latitude | M | The latitude of the observation starting location.  |Decimal degrees (two decimal places) | e.g., `-20.88` |
 | Longitude | M | The longitude of the observation starting location.|Decimal degrees (two decimal places) | e.g., `55.53` |
@@ -90,7 +90,7 @@ Fill out organization information (name, email)
 | **In port**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Country | O | The country or EEZ of the observation ending location.  |**Code** from [Countries](#countries) | e.g., `FRA` |
 | Port | O | The port of the observation ending location  |**Code** from [Ports](#ports) | e.g., `REREU` |
@@ -99,7 +99,7 @@ Fill out organization information (name, email)
 | **At sea**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Latitude | M | The latitude of the observation ending location.  |Decimal degrees (two decimal places) | e.g., `-20.88` |
 | Longitude | M | The longitude of the observation ending location.|Decimal degrees (two decimal places) | e.g., `55.53` |
@@ -111,7 +111,7 @@ Fill out organization information (name, email)
 
 | **Number of fishing events**
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Conducted | M | The total number of fishing events/sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities.  |Integer |e.g., **ADD** |
 | Observed | M | The total number of fishing sets/events monitored by the observer. In the case of EM, only processed events to be included |Integer |e.g., **ADD** |
@@ -119,7 +119,7 @@ Fill out organization information (name, email)
 
 | **Number of days** 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Searching | M | The number of hours/days searching during the observation period |Integer |e.g., **ADD** |
 | Actively fishing | M | The number of active fishing hours/days during the observation period |Integer |e.g., **ADD**  |
@@ -130,7 +130,7 @@ Fill out organization information (name, email)
 
 | **Reasons for lost days:**Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Reason 1 | O | Reason(s) of hours lost |  **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
 | Reason 2 | O | Reason(s) of hours lost |  **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
@@ -141,7 +141,7 @@ Fill out organization information (name, email)
 
 
 # (V-INFO) Vessel > General information
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M |The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 
@@ -149,7 +149,7 @@ Fill out organization information (name, email)
 
 | **Identification** ADD DESCRIPTION
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or EM records | Plain text | e.g., `Playa De Laida`   |
 | Flag or chartering code | M  |Record the name of country in which vessel is registered. Where chartering occurs, record name of the chartering country  | **Code** from [Countries](#countries) | e.g., `SYC` |
@@ -159,13 +159,13 @@ Fill out organization information (name, email)
 :::
 | **Registration** ADD DESCRIPTION
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Country | O | The code of vessel's country of registry  |**Code** from [Countries](#countries) | e.g., `FRA` |
 | Port | O | The code of vessel's port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship's hull – also include the country. |**Code** from [Ports](#ports) | e.g., `REREU` |
 | Reg number | O | The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel. This may be a combination of characters and numbers; record them all  | Alphanumeric or numeric according to CPC standards |e.g., `CBG303`|
 :::
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 |Licensed target species  | O | The licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
 | Gear (main fishing gear) | M |The main vessel fishing gear |**Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
@@ -175,7 +175,7 @@ Fill out organization information (name, email)
 | **Fishing master:**  The fishing master name and nationality in full
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Full name | M |  |  Plain text | e.g., `John Doe` |
 | Nationality | M |  | Nationality code [Countries](#countries) | e.g., `FRA` |
@@ -185,20 +185,20 @@ Fill out organization information (name, email)
 :::
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Full name | M |  |  Plain text | e.g., `John Doe` |
 | Nationality | M |  | Nationality code [Countries](#countries) | e.g., `FRA` |
 :::
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Crew number | O | The number of crew. This should be cross checked against the vessel's crew list | Integer |e.g., `25`  |
 :::
 
 
 # (V-TRIP) Vessel > Trip details
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 
@@ -210,7 +210,7 @@ Fill out organization information (name, email)
 :::
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Country | O |The country or EEZ of the observation starting location |**Code** from [Countries](#countries) | e.g., `FRA` |
 | Port | M  |The port of the observation starting location |**Code** from [Ports](#ports) | e.g., `REREU` |
@@ -218,7 +218,7 @@ Fill out organization information (name, email)
 | Longitude | M  |The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53`|
 :::
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Date/time UTC |M | The date and time the vessel departed from port |  YYYY-MM-DDThh:mm  | e.g., `2025-09-15 12:00` |
 
@@ -228,7 +228,7 @@ Fill out organization information (name, email)
 | **In port**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Country | O |The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
 | Port | M  |   The port of the observation ending location |**Code** from [Ports](#ports) | e.g., `REREU` |
@@ -237,19 +237,19 @@ Fill out organization information (name, email)
 :::
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Date/time UTC |M | The date and time the fishing vessel finishes its fishing campaign, i.e., returns to port or to a transshipment location for unloading. If is the expected date and time of arrival (ETA) if the observer disembarks before the vessel returns | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
 
 # (V-ATTRIBUTES) Vessel > Vessel attributes
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID| | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 
 ## Vessel attributes
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Tonnage | O | The vessel gross tonnage (no unit) as specified in vessel registration documents | Float | e.g., `2319` |
 | Length | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
@@ -257,7 +257,7 @@ Fill out organization information (name, email)
 
 | **Main engines:** The make (brand) and power of the main engines
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Make | O | **DESCRIPTION TO ADD** | String | e.g., `MAN Energy Solutions`  |
 | Power value | O | **DESCRIPTION TO ADD** | Float | e.g., `5000` |
@@ -270,7 +270,7 @@ Fill out organization information (name, email)
 
 | **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Preservation method 1 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
 | Preservation method 2 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
@@ -280,7 +280,7 @@ Fill out organization information (name, email)
 
 | **Fish storage types:** The type of structure(s) present on-board used by the vessel to store the catch
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Storage type 1 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
 | Storage type 2 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
@@ -289,14 +289,14 @@ Fill out organization information (name, email)
 | **Autonomy range:** Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nm). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric ton (nm/t)\> : \<Tonnage of fuel carried (t)\> Note: specify units (days or nautical miles)
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description |      Format       | Input value |
+| Element | Requirement | Description |      Format       | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Value   | O | **DESCRIPTION TO ADD** | Float | e.g., `30` |
 | Autonomy range unit | O | The unit used to describe the value of autonomy range | Days or NM | e.g., `days` |
 :::
 
 ## Vessel electronics
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | GNSS | O | Indicates whether or not one or more Global Navigation Satellite System systems (GNSS) such as the US Global Positioning System (GPS) were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
 | VMS | O | Indicates whether or not one or more Vessel Monitoring Systems (VMS) were present on the vessel (Yes/No/Unk)  | String | e.g., `Yes` |
@@ -317,7 +317,7 @@ Fill out organization information (name, email)
 | **Waste Management Detail 1**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
 | Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
@@ -326,7 +326,7 @@ Fill out organization information (name, email)
 | **Waste Management Detail 2**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
 | Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
@@ -335,7 +335,7 @@ Fill out organization information (name, email)
 | **Waste Management Detail 3**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
 | Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
@@ -344,7 +344,7 @@ Fill out organization information (name, email)
 | **Waste Management Detail 4**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
 | Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
@@ -354,7 +354,7 @@ Fill out organization information (name, email)
 
 # (G-GENERAL) Purse Seine Gear Specifications
 ## Special equipment or machinery
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Power block  | O  | Indicates whether or not the vessel is equipped with this technology (Yes/No/Unk)  | String | e.g., `Yes` |
 | Purse winch  | O  | Indicates whether or not the vessel is equipped with this technology (Yes/No/Unk)  | String | e.g., `Yes` |
@@ -366,7 +366,7 @@ Fill out organization information (name, email)
 | **Max length:** The maximum length of the net according to the net specifications. This corresponds to the length of the topline. 
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Value | O  |  | Float  |  |
 | Unit | O | Indicates units (M or KM)  | String   |e.g., `KM`  |
@@ -375,19 +375,19 @@ Fill out organization information (name, email)
 | **Max depth:** The maximum fishing depth according to the net specifications
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Value | O  |  | Float  |  |
 | Unit | O |Indicates units (M or KM)  | String   |e.g., `KM` |
 :::
 | **Mesh size:** The mesh average stretched lengths (knot to knot) of the bag of the net. Usually calculated by measuring 3 stretched mesh lengths and calculating the average.
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Bunt stretched | O | Indicates whether or not the bunt is stretched (Yes/No) | String  | e.g., `Yes`  |
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Value  | O |  | Float  |  |
 | Unit | O  | Indicates units (MM or CM or M) | String |e.g., `MM`  |
@@ -396,12 +396,12 @@ Fill out organization information (name, email)
 | **Mid net stretched:** The mesh average stretched lengths (knot to knot) of the mid-net. Usually calculated by measuring 3 stretched mesh lengths and calculating the average
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Value  | O |  | Float  |  |
 | Unit | O  | Indicate units (MM or CM or M) | String  | e.g., `MM`  |
 :::
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Max brail capacity (MT) | O  |Record the maximum weight capacity of a full brail in metric tonnes (MT)  | Float  | e.g., **ADD** |
 
@@ -411,28 +411,28 @@ Fill out organization information (name, email)
 # (E-SET)
 
 ## Setting Operations
-| Field | Requirement | Description | Reporting format | Input value |
+| Element | Requirement | Description | Reporting format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Set ID | M | The unique four-digit numerical code for each fishing set, beginning with 0001 and assigned consecutively from the first to the last line set of the observed trip | 4-digit number | e.g, `0007` |
 
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Start setting |||||
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Date and time | M | The date and the time in GMT/UTC the first dhan buoy and / or radio buoy is deployed to start the setting of the line | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 | Latitude | M | The latitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
 | Longitude | M | The longitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 | **School sighting cues:** Up to the first three cues which lead the vessel to detect the presence of the tuna school 
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Cue 1 | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
-| Cue 2 | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
-| Cue 3 | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
-| Cue 4 | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
+| Cue 1 code | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
+| Cue 2 code | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
+| Cue 3 code | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
+| Cue 4 code | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -443,7 +443,7 @@ Fill out organization information (name, email)
 
 | **Brailing** 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Date time start UTC | O  | The time that brailing starts (hh:mm) |  YYYY-MM-DDThh:mm   |e.g., `2025-09-15 12:00`  |
 | Date time end UTC  | O | The time that brailing ends (hh:mm) |  YYYY-MM-DDThh:mm   | e.g., `2025-09-15 14:00` |
@@ -455,14 +455,14 @@ Fill out organization information (name, email)
 
 | Object details 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Buoy ID | O  |  For every activity involving artificial or a natural FADs equipped with a buoy report BUOY ID (i.e. Buoy marking or any information allowing identifying the owner).  | Alphanumeric | e.g., **ADD** |
 | 
 **FAD equipped with artificial lights**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | At deploy | O  | Indicates whether or not artificial lights were present at this time (Yes/No) | String  | e.g., `Yes` |
 | On retrieval | O| Indicates whether or not artificial lights were present at this time (Yes/No) | String  | e.g., `Yes` |
@@ -471,10 +471,10 @@ Fill out organization information (name, email)
 | **FAD design:** Characterizes FAD design using fields of current version of reporting forms on activities with FOBs and instrumented buoys
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Raft design | O |  | **Code** from [FAD Raft Designs](#fadRaftDesigns) |e.g., `EM`  |
-| Tail design | O |  | **Code** from [FAD Tail Designs](#fadTailsDesigns) | e.g., `NL` |
+| Raft design code | O |  | **Code** from [FAD Raft Designs](#fadRaftDesigns) |e.g., `EM`  |
+| Tail design code | O |  | **Code** from [FAD Tail Designs](#fadTailsDesigns) | e.g., `NL` |
 :::
 
 
@@ -482,7 +482,7 @@ Fill out organization information (name, email)
 # (E-SET-CETACEANS)
 
 ## Setting operations - Sighting details
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Sighting before setting | M  | Indicates whether or not a sighting occurred before setting (Yes/No). If a sighting occurred after, consider as "No" | String | e.g., `Yes` |
 | Species code | M  |The species code for the sighted specimen/s (FAO spp. 3-alpha code). If species FAO code is not available, the species scientific name  | **Code** from [Cetacean Species](#speciesCetaceans)  |e.g., `BAW`  | 
@@ -493,20 +493,20 @@ Fill out organization information (name, email)
 
 
 # (E-SET-CATCHES)
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID |M  |The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 | Set ID  | M | The parent set identifier | 4-digit number | e.g, `0007` | |
 | Catch ID |M  | Unique within a specific set  |Alphanumeric  | e.g., **ADD** |
 
 ## Catch Details
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Species | M | The species code for each specimen observed. If species FAO code is not available, record the species scientific name |**Code** from [All Species](#allSpecies)  |e.g., ABL  | **IS this the right codelist? or IOTC species?**
 
 | **Fate:**  The fate which includes whether it was retained or discarded and the reason
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Type | M  |  | **Code** from [Types of Fate](#fateTypes)  |e.g., `DI`  |
 | Code | M |  |  **Codes** from [Fates](#fates) |e.g., `DL`  |
@@ -519,7 +519,7 @@ Fill out organization information (name, email)
 
 | **Weight:** Record the catch weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, record the unprocessed weight
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Processing type code | M  | Record the type of processing the species underwent prior to weighing.  If the species has not been processed, record the code for unprocessed (or round, whole, live) weight (i.e. RD). |**Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
 | Value | M  |  | Float  |  |
@@ -531,31 +531,31 @@ Fill out organization information (name, email)
  
 
 # (E-CATCHES-SPECIMEN)
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID |M  |The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 | Set ID  | M | The parent set identifier | 4-digit number | e.g, `0007` | |
 | Catch ID |M  | Unique within a specific set  |Alphanumeric  | e.g., **ADD** |
 | Specimen ID |M  | **ADD DESCRIPTION** |Alphanumeric  |e.g., **ADD**  |
 
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Sampling method code |M  | Indicates the sampling method used for the collection of biometric information on specimens |  **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
 
 | **Length 1:** **ADD DESCRIPTION**
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Type | M | Specify the length code used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
+| Type codes | M | Specify the length code used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | Value (cm) | M  |Record the length corresponding to the length type taken rounded to the lower centimetre  | Float  |  |
 | Measuring tool code |M  | Specify the tool code used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools)  |e.g., `CA`  |
 | Is straight |M  | Indicate if true (Yes/No) | String |e.g., `Yes`  |
 :::
 | **Length 2:** **ADD DESCRIPTION**
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Type | O | The length code used for the measurement |**Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
+| Type codes | O | The length code used for the measurement |**Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | Value (cm) | O  | Record the length corresponding to the length type taken rounded to the lower centimetre | Float  |  |
 | Measuring tool code |O  | Specify the tool code used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools)  |e.g., `CA`  |
 | Is straight |O  |  Indicate if true (Yes/No) | String |e.g., `Yes`  |
@@ -563,7 +563,7 @@ Fill out organization information (name, email)
 
 | **Weight:** Tthe specimen’s weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, record the unprocessed weight
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Processing type | O | The type of processing the specimen underwent prior to weighing |  **Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
 | Value | O  | The weight (in kg) corresponding to the length type code | Float |  |
@@ -577,7 +577,7 @@ Fill out organization information (name, email)
 
 | **Maturity:** The stage of maturity of the specimen according to standard maturity scales approved by the IOTC. If unknown record UNK. 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Scale | O  |  |**Code lists being developed**  |  |
 | Stage | O  |  |**Code lists being developed**  |  |
@@ -585,7 +585,7 @@ Fill out organization information (name, email)
 
 | **Sample collected:** The details on the collection of samples:a) type (e.g. otoliths, spine clippings, and genetic samples) b) preservation method (e.g. alcohol, frozen, etc.)  c) destination (i.e. location to be sent/stored)
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Type | O  |  | Code lists being developed |  |
 | Preservation method | O  |  | Code lists being developed  |  |
@@ -594,7 +594,7 @@ Fill out organization information (name, email)
 
 | **Depredation details**
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Depredation source | O  |For depredated specimens/or catch, this indicates the depredation source based on depredation scar characteristics. For non-depredated specimens record NA  |**Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
 | Observed predator | O | For depredated specimens/or catch, this indicates the predator species directly observed and identified. If the predator was not observed record UNK (unknown). For non-depredated specimens record NA | **Code** from [Predator Species](#predatorSpecies)| e.g., `AG15` |
@@ -604,7 +604,7 @@ Fill out organization information (name, email)
 # (E-SET-CATCHES-SPECIMEN-SSI)
 This section of the ROS form is for the reporting of catches of species of special interest. As defined by IOTC in the WPDCS14 report, this includes (1) all marine turtles, (2) all cetaceans, (3) all seabirds, (4) designated shark species, and more specifically those species subject to a retention ban (i.e., whale sharks, oceanic whitetip shark, and thresher sharks), (5) designated billfish species, and more specifically those included in Res. 18/05 (i.e., striped marlin, black marlin, blue marlin, and Indo-Pacific sailfish), and all mobulid rays
 
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID |M  |The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 | Set ID  | M | The parent set identifier | 4-digit number | e.g, `0007` | |
@@ -612,7 +612,7 @@ This section of the ROS form is for the reporting of catches of species of speci
 | Specimen ID |M  |  |Alphanumeric  |e.g., **ADD**  |
 
 ## Specimen details SSI
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Condition at capture | M  | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions)  | e.g., `A0` |
 | Condition at release | M  | The condition of the specimen at the time of release  | **Code** from [Individual Conditions](#individualConditions) |e.g., `A0` |
@@ -628,7 +628,7 @@ This section of the ROS form is for the reporting of catches of species of speci
 
 
 # (E-SET-TAG-DETAILS)
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Observed trip ID |M  |The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 | Set ID  | M | The parent set identifier | 4-digit number | e.g, `0007` | |
@@ -636,11 +636,11 @@ This section of the ROS form is for the reporting of catches of species of speci
 | Specimen ID |M  |  |Alphanumeric  |e.g., **ADD**  |
 
 ## Tag details
-| Field | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Release | O |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
 | Recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
-| Type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
+| Type code | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
 | Tag number | O | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
 | Finder name | O | **DESCRIPTION TO ADD** | String | e.g., `Jane Doe` |
 | Finder contact details | O | **DESCRIPTION TO ADD** | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
