@@ -146,13 +146,11 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 | lost | O | The number of hours/days lost during the observation period | Integer | **EXAMPLE TO ADD** |
 :::
 
-<<<<<<< HEAD
 | **Reasons for lost days:**  Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
-=======
+
 <!-- iI removed HOURS from the definitions -->
 
 | **Reasons for lost days:** Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
->>>>>>> f010a72846ff4a44f1e2112d03c3a937b8b8f968
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
@@ -190,13 +188,10 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 | registration_number | O | The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel | Alphanumeric or numeric entry according to CPC standards | e.g., `CBG303` |
 :::
 
-<<<<<<< HEAD
 | Element | Requirement | Description | Format | Input value |
-=======
 <!-- Change Reg number to registration number? -->
 
 | Field | Requirement | Description | Format | Input value |
->>>>>>> f010a72846ff4a44f1e2112d03c3a937b8b8f968
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | licensed_target_species | O | The licensed target species as specified in vessel licences or permit conditions | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
 | Main Fishing Gear | M | The vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
@@ -309,15 +304,12 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-<<<<<<< HEAD
 | Tonnage | O | The vessel gross tonnage (no unit) as specified in vessel registration documents | Float | e.g., `2319` |
 | Length | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
 | Hull material code | O | The vessel hull material | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
-=======
 | gross_tonnage | O | Gross tonnage (GT), a dimensionless measure of vessel's internal volume from registration documents | Integer | e.g., `2319` |
 | LOA_m | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
 | Hull material | O | The primary material used in the construction of the vessel's hull | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
->>>>>>> f010a72846ff4a44f1e2112d03c3a937b8b8f968
 
 | **Main engines:** The make (brand) and power of the two main engines.
 
@@ -350,10 +342,8 @@ Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, 
 | Storage type 1 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
 | Storage type 2 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
 | Storage type 3 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
-<<<<<<< HEAD
-=======
+
 | **Autonomy range:** Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nm). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric tonne (nm/t)\> : \<Tonnage of fuel carried (t)\> Note: specify units (days or nautical miles)"
->>>>>>> f010a72846ff4a44f1e2112d03c3a937b8b8f968
 :::
 
 | **Autonomy range:** Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nm). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric tonne (nm/t)\> : \<Tonnage of fuel carried (t)\> Note: specify units (days or nautical miles)
