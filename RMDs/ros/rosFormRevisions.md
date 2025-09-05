@@ -39,12 +39,9 @@ Questions for TC:
 - `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` to rename to `ros_common.vessel_attributes_fish_storage_type.fst_code`?
 - 
 
+# Pole and Line Form
 
-
-# Pole and Line form
-
-
-| Line of Code|Section | Update needed | Status |
+| Line of Code | Section | Update needed | Status |
 |:-------|:-------|:-----------------------------------:|:---------:|
 | 25 - 31 | Description | review text for Description and data content | noted | DONE
 | 60 | O-INFO --> Observer Identification | "Full Name"is optional in the reporting form, but mandatory in the form description | noted|- should be OPTIONAL 
@@ -69,16 +66,48 @@ Questions for TC:
 | 725 | E-SET-BAIT-CATCHES | Ammend link to codelists for weight estimations. code list added to PgAdmin? | noted| **NEED TO ADD WEIGHT CODE** **WEIGHT MEASUREMENT CODE IS THE SAME AS WEIGHT ESTIMATION CODE**
 |DAILY-ACTIVITY | typo on the form: Dailiy --> Daily |   | 
 
- 
+<!--
+## Longline Form
 
+SECTION: VESSEL INFORMATION: 
+- IMO: update definition??: The International Maritime Organisation (IMO) unique vessel identifier Scheme (use NE if the vessel is Not Eligible, or PENDING if an IMO number has been requested but not yet assigned). __ ** DONT CHANGE**
 
-Meeting with Shimal about revisions to the PL reporting form
+| Line of Code|Section | Update needed | Status | Comment | 
+|:-------|:-------|:-----------------------------------:|:---------:|:----:| 
+| 303-308| V-ATTRIBUTES | DESCRIPTION CHANGE? - on the form their are sections for main engine 1 and main engine 2. Duplicate or form description? | noted | **2 rows**
+| 315| V-ATTRIBUTES | UPDATE REPORTING FORM - change fish storage capacity column to be Storage capacity units | noted | **m3 by default - remove unit column**
+| 337 | V-ATTRIBUTES | UPDATE REPORTING FORM - Autonomy range unit column instead of DAYS | NM | noted | **Agreed**
+| 346 | V-ATTRIBUTES | UPDATE REPORTING FORM - change GPS column to GNSS to match description form | noted | **YES MANU!**
+| 362 - 398 | V-ATTRIBUTES | UPDATE REPORTING FORM - remove "other" column for waste management | **Agreed**
+| 423 - 430 | G-CONFIG-BRANCHLINES| UPDATE REPORTING FORM - need to have 4 sections of Material type code, Length, and Diameter | noted | **no** 
+| 423 - 430 | G-CONFIG-BRANCHLINES| UPDATE REPORTING FORM - change "CONFIGURATION NUMBER AND SECTION NUMBER TO CONFIGURATION IDENTIFIER AND SECTION IDENTIFIER, RESPECTIVELY | noted | **Agreed**
+| 461 - 462 | G-CONFIG-MITIGATION-DEVICES | CHANGE REPORTING FORM - column: LINE_LENGTH_MAX should be one column, as there is already a second column for minimum. and they should each be called "STREAMER_LINE_LENGTH (min/max) | noted | **Remove empty column**
+| 471 -472 | G-CONFIG-MITIGATION-DEVICES | CHANGE DESCRIPTION FORM - towed objects number and type. Develop codelist for towed objects type or add code list to meta on PgAdmin | noted | **Get information on potential code list of towed objects**
+| 529 | E-SET | UPDATE REPORTING FORM - mainline "value" should read "Mainline length value" | noted | **Keep VALUE and UNIT in the form but expand in Description** 
+| 530 | E-SET | UPDATED REPORTING FORM - mainline "KM|NM" should read "Mainline length units" | noted | **UNIT**
+|574 - 580| E-SET | UPDATE REPORTING FORM - "Branchline Length: should have fields for minimum and maximum length. 4 fields total | noted | **yes**
+| 589 | E-SET | I added a new field in description to match reporting form, but unsure of contents | noted | **To clarify**
+| 607| E-SET-LIGHTS | UPDATE REPORTING FORM - NUM_LIGHTS looks like a hyperlink - very pedantic | noted | **Format to change in the form**
+| 645 - 650| E-SET-MITIGATION_MEASURES | should all mitigation measure codes (4) be mandatory? Or should 2-4 be optional? All mandatory in reporting form | noted | **Yes, captured by the code list - need to check with Tony**
+
+| 679 | E-SET-BAITS | percentage description: "The approximate proportion (%) of bait species and condition used across all hooks in the set" need a new field for bait condition? | noted | **Check if in description form**
+| 750 | E-SET-HAULING-BITEOFFS |  Configuration number to change to configuration identifier? | noted | **YES**
+| 789 | E-SET-CATCHES | CHANGE FORM - change weight "KG|T" to "Unit" | noted | **YES**
+
+-->
+
+# Meeting with Shimal about revisions to the PL reporting form
+
 - change sheet names
       - should not be "SET", but instead by "TRIP" or "EVENT" level
 During the meeting Cynthia changed the names of headings. Change form description to match updated headings
 - for each sheet
       - specify specimen level or event level
       - write in the description if it is species/event level and define what that level means (ie. what is an event?)
+O-INFO : number of days
+      - Searching : is OPTIONAL should be MANDATORY
+      - Actively Fishing: is OPTIONAL, should be MANDATORY
+      - Lost: is OPTIONAL, should be MANDATORY
 E-SET-TUNA-CATCHES - remove specimen ID
 E-SET-TUNA-CATCHES
       - remove specimen ID because not on a specimen level, should be an event level
@@ -89,6 +118,7 @@ E-SET-TUNA
       - in each of these sheets have a description explaining what that sheet is supposed to do within the structure of the form. 
                 - ex: This sheet gives a summary of the catch from the event. The next sheet will give details on a proportion/subsample of the catch from the set etc. 
                 - clarify which sheets are trip level vs. event level vs. specimen level
+       - BAIT - add NEW FIELD after "Used" called "Type code"          
 Ensure that optional fields can still be applied to PL fisheries. Do not include just for uniformity. It is still confusing observers/reporters. Can also give better descriptions to clarify
 V-ATTRIBUTES - which preservation methods are on board. If needed is there an NA category. 
 
@@ -99,15 +129,27 @@ E-SET-TUNA-CATCHES needs to come before BIOMETRIC sheet in the reporting form
 CATCH ID -> change to SUBSAMPLE ID?
       
 BIOMETRIC sheet needs to be moved to before E-SET-TUNA-CATCHES-SSI
-E-SET-TUNA-CATCHES-SSI - add fields: condition at capture and condition at release
+E-SET-TUNA-CATCHES-SSI
+      - add fields: condition at capture and condition at release
+      - change "Set ID" to "Event ID"
+      
+E-SET-CATCHES-BIOMETRIC
+      - change "Set ID" to "Event ID"
 
 BAIT-CATCHES
 - add field for Bait conditions to clarify if bait is live bait
-
-SET LEVEL --> EVENT LEVEL throughout form and DEFINE EVENT
 
 E-SET-TUNA: school sighting cues: the form description for this field is confusing. Should divide into two sections, create new codelists, and add new fields to reporting form
 
 NOTE: SHIMAL would like previously submitted data shared so he can make prior data usable
 
 OBSERVER ID - description - clarify that this identifier is issued by IOTC. Same for IOTC_ID. 
+
+## Changes to be made to the PS reporting form
+
+VESSEL-ATTRIBUTES : Autonomy range "DAYS | NM " --> change to "Autonomy range unit"
+VESSEL-ATTRIBUTES : Vessel Electronics GPS --> GNSS
+G-GENERAL : General gear attributes - for "net size" and "mesh size", change columns to be "unit"
+E-SET-CATCHES : Weight --> change KG | T to be "unit"
+E-SET-CATCHES-SPECIMEN : Sample Collected --> add a NEW FIELD called "Destination" 
+
