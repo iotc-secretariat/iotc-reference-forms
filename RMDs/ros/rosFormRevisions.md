@@ -1,9 +1,45 @@
----
-title: "rosFormRevisions"
-output: html_document
----
+This document is a review of errors, inconsistencies, and updates needed in the ROS reporting forms and ROS form descriptions. 
 
-This document is a review of errors, inconsistencies, and updates needed in the ros reporting forms and ros form descriptions. 
+## Longline Form
+
+|Section | Reporting Form | Database | 
+|:-------|:-----------------------------------|:----:| 
+| V-INFO | 'REG_NUMBER' changed to 'REGISTRATION_NUMBER' | `ros_common.vessel_identification.registration_number` 
+| V-ATTRIBUTES | 'TONNAGE' changed to 'GROSS_TONNAGE' - remove values reported in "GRT" from database | `ros_common.tonnages.value` |
+| V-ATTRIBUTES | 'LENGTH' changed to 'LOA_M' - Remove unit and data reported in "KM" from database| `ros_common.lengths.value` |
+| V-ATTRIBUTES | 'FISH_STORAGE_CAPACITY_VALUE' changed to "FISH_STORAGE_CAPACITY_M3" | `ros_common.capacities.value` |
+| V-ATTRIBUTES | 'FISH_STORAGE_CAPACITY_UNIT' to remove - remove values reported in "MT" from database | `ros_common.capacities.unit` |
+| V-ATTRIBUTES | 'METHOD_X_CODES' changed to 'METHOD_X' | `ros_common.vessel_attributes_fish_preservation_method.fish_preservation_method_code` |
+| V-ATTRIBUTES | 'FISH_STORAGE_TYPE_X_CODE' changed to 'FISH_STORAGE_TYPE_X' | `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` |
+| V-ATTRIBUTES | 'DAYS \| NM" changed to 'AUTONOMY_RANGE_UNIT' | `ros_common.ranges.unit` |
+| V-ATTRIBUTES | 'GPS' changed to 'GNSS' |  `ros_common.vessel_electronics.gps` |
+| V-ATTRIBUTES | 'SATELLITE_COMS' changed to 'SATCOM' | `ros_common.vessel_electronics/satellite_communication_systems` |
+| V-ATTRIBUTES | 'CATEGORY_X_CODE' changed to 'CATEGORY_X' | |
+| V-ATTRIBUTES | 
+
+
+| V-ATTRIBUTES | UPDATE REPORTING FORM - remove "other" column for waste management | **Agreed**
+
+| G-CONFIG-BRANCHLINES| UPDATE REPORTING FORM - need to have 4 sections of Material type code, Length, and Diameter | noted | **no** 
+| G-CONFIG-BRANCHLINES| UPDATE REPORTING FORM - change "CONFIGURATION NUMBER AND SECTION NUMBER TO CONFIGURATION IDENTIFIER AND SECTION IDENTIFIER, RESPECTIVELY | noted | **Agreed**
+| G-CONFIG-MITIGATION-DEVICES | CHANGE REPORTING FORM - column: LINE_LENGTH_MAX should be one column, as there is already a second column for minimum. and they should each be called "STREAMER_LINE_LENGTH (min/max) | noted | **Remove empty column**
+| G-CONFIG-MITIGATION-DEVICES | CHANGE DESCRIPTION FORM - towed objects number and type. Develop codelist for towed objects type or add code list to meta on PgAdmin | noted | **Get information on potential code list of towed objects**
+| E-SET | UPDATE REPORTING FORM - mainline "value" should read "Mainline length value" | noted | **Keep VALUE and UNIT in the form but expand in Description** 
+| E-SET | UPDATED REPORTING FORM - mainline "KM|NM" should read "Mainline length units" | noted | **UNIT**
+| E-SET | UPDATE REPORTING FORM - "Branchline Length: should have fields for minimum and maximum length. 4 fields total | noted | **yes**
+| E-SET | I added a new field in description to match reporting form, but unsure of contents | noted | **To clarify**
+| E-SET-LIGHTS | UPDATE REPORTING FORM - NUM_LIGHTS looks like a hyperlink - very pedantic | noted | **Format to change in the form**
+| E-SET-MITIGATION_MEASURES | should all mitigation measure codes (4) be mandatory? Or should 2-4 be optional? All mandatory in reporting form | noted | **Yes, captured by the code list - need to check with Tony**
+| E-SET-BAITS | percentage description: "The approximate proportion (%) of bait species and condition used across all hooks in the set" need a new field for bait condition? | noted | **Check if in description form**
+| E-SET-HAULING-BITEOFFS |  Configuration number to change to configuration identifier? | noted | **YES**
+| E-SET-CATCHES | CHANGE FORM - change weight "KG|T" to "Unit" | noted | **YES**
+
+Questions for TC:
+- `ros_common.vessel_attributes_fish_preservation_method.fish_preservation_method_code`  - To rename to `ros_common.vessel_attributes_fish_preservation_method.fpm_code`?
+- `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` to rename to `ros_common.vessel_attributes_fish_storage_type.fst_code`?
+- 
+
+
 
 # Pole and Line form
 
@@ -36,6 +72,7 @@ This document is a review of errors, inconsistencies, and updates needed in the 
  
 
 
+<<<<<<< HEAD:RMDs/ros/rosFormRevisions.Rmd
 ## Longline Form
 
 SECTION: VESSEL INFORMATION: 
@@ -66,6 +103,9 @@ SECTION: VESSEL INFORMATION:
 
 
 # Meeting with Shimal about revisions to the PL reporting form
+=======
+Meeting with Shimal about revisions to the PL reporting form
+>>>>>>> f010a72846ff4a44f1e2112d03c3a937b8b8f968:RMDs/ros/rosFormRevisions.md
 - change sheet names
       - should not be "SET", but instead by "TRIP" or "EVENT" level
 During the meeting Cynthia changed the names of headings. Change form description to match updated headings

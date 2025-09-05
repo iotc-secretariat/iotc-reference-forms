@@ -563,7 +563,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | Weight code | **?** | The type of processing the species underwent prior to weighing. If the species has not been processed, record the code for unprocessed (or round, whole, live) weight | **?** | **?**  | **MISSING FIELD- ADD TO FORM**
 | Value | M  | **ADD DESCRIPTION** | Float |  |
 | KG/T | M  | **ADD DESCRIPTION**  | Unit of weight (KG or T)  |  |
-| Estimation method code | M | Specify the weight estimation method used to obtain the weight | **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BA` |
+| Estimation method | M | The estimation method used to obtain the fish weight | **Code** from [Weight Measurement Tools](#weightMeasurementTools) | e.g., `BA` |
 :::
 
 <!-- Changed KG/T to Weight -->
@@ -589,10 +589,17 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
+<<<<<<< HEAD
 | Weight code | **?** | The type of processing the species underwent prior to weighing. If the species has not been processed, record the code for unprocessed (or round, whole, live) weight | **?** | **?**  | **MISSING FIELD- ADD TO FORM**
 | Value | O  | **ADD DESCRIPTION** | Float |  |
 | KG/T | O  | **ADD DESCRIPTION**  | Unit of weight (KG or T)  |  |
 | Estimation method code | O | Specify the weight estimation method used to obtain the weight | **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BA` :::
+=======
+| Value | O  |  | Float  |  |
+| KG/T | O |  | Indicate units (KG or T)  |  |
+:::
+| Estimation method | O  | The estimation method used to obtain the fish weight | **Code** from [Weight Measurement Tools](#weightMeasurementTools) | e.g., `BA` |
+>>>>>>> f010a72846ff4a44f1e2112d03c3a937b8b8f968
 
 | **Depredation details**
 ::: {style="margin-left:40px"}
@@ -649,7 +656,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | Type code | M |The length code used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | Value | M | The length (cm) corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
 | Measuring tool code |M  | Specify the tool code used for the measurement  |**Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
-| Is straight |M  |Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
+| Is straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
 :::
 
 <!-- Changed "Value (cm)" to "Value" -->
@@ -658,9 +665,9 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Type code | O |	The length code used for the measurement  | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `FL` |
+| Type | O |	The length code used for the measurement  | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `FL` |
 | Value | O |	The value of length (cm) corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `86` |
-| Measuring tool code | O | The tool code used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA` |
+| Measuring tool | O | The tool code used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA` |
 | Is straight | O |Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `No` |
 :::
 
@@ -670,10 +677,10 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Processing type code |O  | The processing code used for the weight measurement |**Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
-| Value |O  | The weight corresponding to the measurement type code | Float |e.g., `43.2`  |
-| KG/T | O  | Unit of weight (kg or t) | String |e.g., `kg`  |
-| Estimation method code |O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` |
+| Processing type | O | The processing code used for the weight measurement | **Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
+| Value | O | The weight corresponding to the measurement type code | Float | e.g., `43.2`  |
+| KG/T | O | Unit of weight (kg or t) | String | e.g., `kg` |
+| Estimation method | O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` |
 :::
 
 | | |  |  ||
@@ -684,8 +691,8 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Scale |O  | **DESCRIPTION TO ADD** | String |**Code list being developed**  |
-| Stage |O  | **DESCRIPTION TO ADD** | String |**Code list being developed**  |
+| Scale | O | **DESCRIPTION TO ADD** | String | **Code list being developed** |
+| Stage | O | **DESCRIPTION TO ADD** | String | **Code list being developed** |
 :::
 | **Sample collected:** The following details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
 
@@ -714,8 +721,8 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Observed trip ID| | O | The parent observed trip identifier | Alphanumeric |e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` | 
-| Set ID | O  |The parent Set ID |   |  |
+| Observed trip ID | | O | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` | 
+| Set ID | O | The parent set identifier |||
 
 ## Setting operations
 
@@ -723,7 +730,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | O  |Record the data and time when chumming for bait starts  |  YYYY-MM-DD hh:mm   | e.g., `2025-09-15 12:00` |
+| Date/time UTC | O |Record the data and time when chumming for bait starts | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 | 
 
 | **Position:** Record the data and time when chumming for bait starts
@@ -732,8 +739,8 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Latitude | O | The latitude of the position at the start of the setting operation |  Decimal degrees (two decimal places) | e.g., `-20.88` |
-| Longitude |O | The longitude of the position at the start of the setting operation |  Decimal degrees (two decimal places) | e.g., `55.53` |
+| Latitude | O | The latitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| Longitude |O | The longitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 | **End setting**
@@ -809,7 +816,10 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | Activity type code | O  | Record vessel activity at the start of every fishing activity and every two hours from sunrise to sunset |**Code** from [Surface Fishery Activities](#surfaceFisheryActivities)  | e.g., `BA` |
 | Comments | O  |  |Free entry. Plain text.  |  |
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f010a72846ff4a44f1e2112d03c3a937b8b8f968
 # Reporting deadlines
 
 - **Surface fisheries**: 30 June (final)
@@ -856,8 +866,6 @@ out_dt(PORTS[, -c("POINT")], "PORTS")
 out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
 ```
 
-
-
 ## Target Species {#targetSpecies}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#targetSpecies)
@@ -880,8 +888,6 @@ out_dt(SPECIES_TARGET, "SPECIES_TARGET")
 out_dt(GEAR_TYPES, "GEAR_TYPES")
 ```
 
-
-
 ## Hull Material Types {#hullMaterialTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#hullMaterialTypes)
@@ -891,8 +897,6 @@ out_dt(GEAR_TYPES, "GEAR_TYPES")
 ```{r collapse = TRUE}
 out_dt(HULL_MATERIAL_TYPES, "HULL_MATERIAL_TYPES")
 ```
-
-
 
 ## Vessel Size Types
 
@@ -904,7 +908,6 @@ out_dt(HULL_MATERIAL_TYPES, "HULL_MATERIAL_TYPES")
 out_dt(VESSEL_SIZE_TYPES, "VESSEL_SIZE_TYPES")
 ```
 
-
 ## Fish Preservation Methods {#fishPreservationMethods}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishPreservationMethods)
@@ -915,7 +918,6 @@ out_dt(VESSEL_SIZE_TYPES, "VESSEL_SIZE_TYPES")
 out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```
 
-
 ## Fish Storage Types {#fishStorageTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
@@ -925,7 +927,6 @@ out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```{r collapse = TRUE}
 out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 ```
-
 
 ## Waste Categories {#wasteCategories}
 
@@ -947,8 +948,6 @@ out_dt(WASTE_CATEGORIES, "WASTE_CATEGORIES")
 out_dt(WASTE_DISPOSAL_METHODS, "WASTE_DISPOSAL_METHODS")
 ```
 
-
-
 ## Pole Material Types {#poleMaterialTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#poleMaterialTypes)
@@ -958,7 +957,6 @@ out_dt(WASTE_DISPOSAL_METHODS, "WASTE_DISPOSAL_METHODS")
 ```{r collapse = TRUE}
 out_dt(POLE_MATERIAL_TYPES, "POLE_MATERIAL_TYPES")
 ```
-
 
 ## Hook Types {#hookTypes}
 
@@ -970,8 +968,6 @@ out_dt(POLE_MATERIAL_TYPES, "POLE_MATERIAL_TYPES")
 out_dt(HOOK_TYPES, "HOOK_TYPES")
 ```
 
-
-
 ## School Sighting Cues {#schoolSightingCues}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#schoolSightingCues)
@@ -981,8 +977,6 @@ out_dt(HOOK_TYPES, "HOOK_TYPES")
 ```{r collapse = TRUE}
 out_dt(SCHOOL_SIGHTING_CUES, "SCHOOL_SIGHTING_CUES")
 ```
-
-
 
 ## Target Species {#targetSpecies}
 
@@ -1034,8 +1028,6 @@ out_dt(SPECIES_BAITS, "SPECIES_BAITS")
 out_dt(SPECIES, "SPECIES")
 ```
 
-
-
 ## Types of Fate {#typesOfFate}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#typesOfFate)
@@ -1066,14 +1058,14 @@ out_dt(FATES, "FATES")
 out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
 ```
 
-## Weight Estimation Methods {weightEstimationMethods}
+## Weight Measurement Tools {#weightMeasurementTools}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightEstimationMethods)
--   **Version**: `r version_number("WEIGHT_ESTIMATION_METHODS")`
--   **Last update**: `r last_update("WEIGHT_ESTIMATION_METHODS")`
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightMeasurementTools)
+-   **Version**: `r version_number("WEIGHT_MEASUREMENT_TOOLS")`
+-   **Last update**: `r last_update("WEIGHT_MEASUREMENT_TOOLS")`
 
 ```{r collapse = TRUE}
-out_dt(WEIGHT_ESTIMATION_METHODS, "WEIGHT_ESTIMATION_METHODS")
+out_dt(WEIGHT_MEASUREMENT_TOOLS, "WEIGHT_MEASUREMENT_TOOLS")
 ```
 
 ## Depredation Sources {#depredationSources}
@@ -1166,16 +1158,6 @@ out_dt(MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE == "LN", -c("TYPE_OF_MEASUREME
 out_dt(MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CODE")], "MEASUREMENTS")
 ```
 
-## Weight Estimation Methods {#weightEstimationMethods}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightEstimationMethods)
--   **Version**: `r version_number("MEASUREMENT_TOOLS")`
--   **Last update**: `r last_update("MEASUREMENTS_TOOLS")`
-
-```{r collapse = TRUE}
-out_dt(MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CODE")], "WEIGHT_MEASUREMENT_TOOLS")
-```
-
 ## Sex {#sex}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#sex)
@@ -1205,4 +1187,3 @@ out_dt(TAG_TYPES, "TAG_TYPES")
 ```{r collapse = TRUE}
 out_dt(SURFACE_FISHERY_ACTIVITIES, "SURFACE_FISHERY_ACTIVITIES")
 ```
-
