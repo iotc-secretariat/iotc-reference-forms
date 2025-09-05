@@ -65,7 +65,7 @@ SECTION: VESSEL INFORMATION:
 
 
 
-Meeting with Shimal about revisions to the PL reporting form
+# Meeting with Shimal about revisions to the PL reporting form
 - change sheet names
       - should not be "SET", but instead by "TRIP" or "EVENT" level
 During the meeting Cynthia changed the names of headings. Change form description to match updated headings
@@ -104,3 +104,13 @@ E-SET-TUNA: school sighting cues: the form description for this field is confusi
 NOTE: SHIMAL would like previously submitted data shared so he can make prior data usable
 
 OBSERVER ID - description - clarify that this identifier is issued by IOTC. Same for IOTC_ID. 
+
+
+## Changes to be made to the PS reporting form
+
+VESSEL-ATTRIBUTES : Autonomy range "DAYS | NM " --> change to "Autonomy range unit"
+VESSEL-ATTRIBUTES : Vessel Electronics GPS --> GNSS
+G-GENERAL : General gear attributes - for "net size" and "mesh size", change columns to be "unit"
+E-SET-CATCHES : Weight --> change KG | T to be "unit"
+E-SET-CATCHES-SPECIMEN : Sample Collected --> add a NEW FIELD called "Destination" 
+
