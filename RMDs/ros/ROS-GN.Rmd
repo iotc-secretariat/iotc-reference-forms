@@ -23,9 +23,9 @@ editor_options:
 
 # Description
 
-This form provides for the reporting of operational and catch data from longline fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with longline operations, including IOTC species, and other bycatch species. The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of longline fisheries on associated and dependent species. CPCs are required to complete the form for longline operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers at sea or reviewing data collected with Electronic Monitoring Systems.
+This form provides for the reporting of operational and catch data from gillnet fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with gillnet operations, including IOTC species, and other bycatch species. The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of gillnet fisheries on associated and dependent species. CPCs are required to complete the form for gillnet operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers at sea or reviewing data collected with Electronic Monitoring Systems.
 
-REPLACE WITH PROPER FORM LINK Click [here](./Form-ROS-GN.xlsx) to download a blank version of Form 1RC, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+REPLACE WITH PROPER FORM LINK Click [here](./Form-ROS-GN.xlsx) to download a blank version of Form-ROS-GN, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 
@@ -156,10 +156,6 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 # (V-INFO) Vessel \> General Information
 
-| Field | Requirement | Description | Format | Input value |
-|:-------------|:------------:|:----------------|:------------:|:------------:|
-| Observed trip ID |  | M | refer to parent observed trip |  |
-
 ## Vessel information
 
 
@@ -192,9 +188,20 @@ Fill out focal point information (full name, email, finalization date, and submi
 | registration_number | O | The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel | Alphanumeric or numeric entry according to CPC standards | e.g., `CBG303` |
 :::
 
+<!-- FORM UPDATES:  Fields for Contact ( phone 1, phone 2, fax 1, fax 2, email 1, email 2 should all be removed) -->
+
+| **Licensed target species**
+::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| licensed_target_species | O | The licensed target species as specified in vessel licences or permit conditions | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| species 1 | M | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| species 2 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| species 3 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| species 4 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+:::
+
+<!--VMS_ON | O | **ADD DESCRIPTION | String | e.g., `Yes` |--> this field is not in form or table from scientific committee
+
 | Main Fishing Gear | M | The vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
 
@@ -797,8 +804,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| Transhipment_number | M  | **ADD DESCRIPTION** |   |e.g., **ADD**  |
+| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| transhipment_number | M  | **ADD DESCRIPTION** |   |e.g., **ADD**  |
 
 
 ## Product transhipped
