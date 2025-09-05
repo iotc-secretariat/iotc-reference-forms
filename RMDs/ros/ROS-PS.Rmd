@@ -429,10 +429,10 @@ Fill out organization information (name, email)
 | **School sighting cues:** Up to the first three cues which lead the vessel to detect the presence of the tuna school 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Cue 1 code | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
-| Cue 2 code | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
-| Cue 3 code | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
-| Cue 4 code | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
+| Cue 1 | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
+| Cue 2 | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
+| Cue 3 | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
+| Cue 4 | O | | **Code** from [Sighting Cues](#sightingCues)  |e.g., `AF`|
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -473,8 +473,8 @@ Fill out organization information (name, email)
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Raft design code | O |  | **Code** from [FAD Raft Designs](#fadRaftDesigns) |e.g., `EM`  |
-| Tail design code | O |  | **Code** from [FAD Tail Designs](#fadTailsDesigns) | e.g., `NL` |
+| Raft design | O |  | **Code** from [FAD Raft Designs](#fadRaftDesigns) |e.g., `EM`  |
+| Tail design | O |  | **Code** from [FAD Tail Designs](#fadTailsDesigns) | e.g., `NL` |
 :::
 
 
@@ -546,7 +546,7 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Type codes | M | Specify the length code used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
+| Type | M | Specify the length code used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | Value (cm) | M  |Record the length corresponding to the length type taken rounded to the lower centimetre  | Float  |  |
 | Measuring tool code |M  | Specify the tool code used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools)  |e.g., `CA`  |
 | Is straight |M  | Indicate if true (Yes/No) | String |e.g., `Yes`  |
@@ -555,7 +555,7 @@ Fill out organization information (name, email)
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Type codes | O | The length code used for the measurement |**Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
+| Type | O | The length code used for the measurement |**Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | Value (cm) | O  | Record the length corresponding to the length type taken rounded to the lower centimetre | Float  |  |
 | Measuring tool code |O  | Specify the tool code used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools)  |e.g., `CA`  |
 | Is straight |O  |  Indicate if true (Yes/No) | String |e.g., `Yes`  |
@@ -640,7 +640,7 @@ This section of the ROS form is for the reporting of catches of species of speci
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | Release | O |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
 | Recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
-| Type code | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
+| Type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
 | Tag number | O | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
 | Finder name | O | **DESCRIPTION TO ADD** | String | e.g., `Jane Doe` |
 | Finder contact details | O | **DESCRIPTION TO ADD** | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
