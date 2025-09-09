@@ -21,7 +21,9 @@ output:
 
 # Description
 
-This form provides for the reporting of operational and catch data from longline fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with longline operations, including IOTC species, and other bycatch species. The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of longline fisheries on associated and dependent species. CPCs are required to complete the form for longline operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers at sea or reviewing data collected with Electronic Monitoring Systems.
+This form provides for the reporting of operational and catch data collected by scientific observers at sea, or from data reviewed through Electronic Monitoring Systems, for longline fisheries under the IOTC Regional Observer Scheme (ROS). It is designed to capture verified information on fishing activities, catch composition, bycatch associated with longline operations, and the implementation of mitigation measures. The reporting format follows standards adopted by the IOTC Scientific Committee (SC) and incorporates multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records.
+
+<!-- CPCs are required to complete the form for longline operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers at sea or reviewing data collected with Electronic Monitoring Systems. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of longline fisheries on associated and dependent species. -->
 
 Click [here](./Form-ROS-LL.xlsx) to download a blank version of Form ROS-LL, or [return](../index.html) to the list of all IOTC data reporting forms.
 
@@ -29,17 +31,17 @@ Click [here](./Form-ROS-LL.xlsx) to download a blank version of Form ROS-LL, or 
 
 <!-- Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, set position); operational details of each set; catch and bycatch by species in number and weight; fate of catch (retained/discarded); interactions with sharks, seabirds, turtles, and other species; mitigation measures used; size measurements of catch as well as some biological samples. -->
 
-The Form ROS-LL is an XLSX workbook composed of XX sheets. Green/blue colours 
+Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the mandatory (M; blue cells) and optional (O; green cells) data fields defined by the SC. The current version builds on the most recent revision of ROS fields endorsed at the 27^th^ session of the SC ([IOTC-2024-SC27-DATA01](https://iotc.org/documents/SC/27/DATA01)). The sheets are interconnected through technical identifiers (e.g., observer trip ID, set ID), enabling the hierarchical organisation of the observations to be maintained.
 
 | Sheet | Level | Description |
 | :--------- | :----------: | :--------------------------- |
-| [META](#meta) | - | Descriptive metadata elements related to data submission and management |
-| [O-INFO](#oInfo) | Observer | Observer identification and observed trip information |
-| [V-INFO](#vInfo) | Vessel | General vessel information |
-| [V-TRIP](#vTrip) | Trip | |
-| [V-ATTRIBUTES](#vAttributes) | Vessel | |
-| [G-GENERAL](#gGeneral) | Trip | Longline General Gear Specifications | 
-| [G-CONFIG-BRANCHLINES](#gConfigBranchlines) | Branchline | |
+| [META](#meta) | | Information on data submission and main characteristics |
+| [O-INFO](#oInfo) | Observer | Information on the observer and the fishing trip observed |
+| [V-INFO](#vInfo) | Vessel | Information on the fishing vessel, its gear, and personnel |
+| [V-TRIP](#vTrip) | Trip | Information on the fishing trip's departure and return |
+| [V-ATTRIBUTES](#vAttributes) | Vessel | Information on the vessel's attributes and equipment |
+| [G-GENERAL](#gGeneral) | Gear | Information on the fishing gear's equipment and machinery | 
+| [G-CONFIG-BRANCHLINES](#gConfigBranchlines) | Gear | Information on branchline configurations  |
 | [G-CONFIG-MITIGATION-DEVICES](#gConfigMitigationDevices) | | |
 | [E-SET](#eSet) | Set | |
 | [E-SET-LIGHTS](#eSetLight) | Set | |
@@ -49,16 +51,14 @@ The Form ROS-LL is an XLSX workbook composed of XX sheets. Green/blue colours
 | [E-SET-HAULING](#eSetHauling) | Set ||
 | [E-SET-HAULING-BITEOFFS](#eSetHaulingBiteoffs) | Hauling operation/Catch? ||
 | [E-SET-CATCHES](#eSetCatches) | Set/Catch? | |
-| [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Fish | |
-| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Fish | |
-| [E-SET-TAG-DETAILS](#eSetTagDetails) | Individual | |
+| [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Specimen | |
+| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Specimen | |
+| [E-SET-TAG-DETAILS](#eSetTagDetails) | Specimen | |
 
 <!-- SPECIMEN to SPECIMENS in the sheet names -->
 <!-- CATCHES_SPECIMENS to CATCH_SPECIMENS -->
 
-# META | Reporting Metadata {#meta}
-
-Some mandatory (M) and optional (O) descriptive metadata elements have been identified to provide key information related to the submission and management of the data.
+# META {#meta}
 
 ## General Information
 
@@ -82,7 +82,7 @@ Some mandatory (M) and optional (O) descriptive metadata elements have been iden
 
 <!-- Code list of data sources to define: OAS/EMS -->
 
-# O-INFO | Observer Identification and Observed Trip Information {#oInfo}
+# O-INFO {#oInfo}
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -191,7 +191,7 @@ Some mandatory (M) and optional (O) descriptive metadata elements have been iden
 | reason | O | The main reasons for days at sea lost to fishing activity | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
 :::
 
-# V-INFO | Vessel General Information {#vInfo}
+# V-INFO {#vInfo}
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -238,7 +238,7 @@ Some mandatory (M) and optional (O) descriptive metadata elements have been iden
 | crew_number | O | The number of crew onboard the vessel | Integer | e.g., `26` |
 :::
 
-# V-TRIP | Vessel Trip Details {#vTrip}
+# V-TRIP {#vTrip}
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -324,7 +324,7 @@ Some mandatory (M) and optional (O) descriptive metadata elements have been iden
 | date_time_utc | O | The date and time the fishing vessel finishes its fishing campaign, i.e., returns to port or to a transshipment location for unloading. If is the expected date and time of arrival (ETA) if the observer disembarks before the vessel returns | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
-# V-ATTRIBUTES | Vessel Attributes {#vAttributes}
+# V-ATTRIBUTES {#vAttributes}
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -354,25 +354,16 @@ Some mandatory (M) and optional (O) descriptive metadata elements have been iden
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | fish_storage_capacity_m3 | O | The vessel total maximum capacity (cubic metres; m^3^) to store catches | Float | e.g., `1100` |
 
-| **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen. Up to four preservation methods may be reported on the form.
-
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| preservation_method | O |  | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
-<!-- | preservation_method_2 | O |  | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` | -->
-<!-- | preservation_method_3 | O |  | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` | -->
-<!-- | preservation_method_4 | O |  | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` | -->
+| preservation_method | O | The fish preservation methods used by the vessel to preserve the catch. Up to four preservation methods may be reported on the form | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
 ::: 
 
-| **Fish storage types:** The type of structure(s) onboard used by the vessel to store its catch. Up to three storage types may be reported on the form.
-
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| storage_type | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
-<!-- | storage_type_2 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` | -->
-<!-- | storage_type_3 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` | -->
+| storage_type | O | The type of structure(s) onboard used by the vessel to store its catch. Up to three storage types may be reported on the form. |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
 :::
 
 | **Autonomy range:** Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nm). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric tonne (nm/t)\> : \<Tonnage of fuel carried (t)\> Note: specify units (days or nautical miles)
@@ -415,35 +406,7 @@ Some mandatory (M) and optional (O) descriptive metadata elements have been iden
 | waste_storage_disposal_method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
 :::
 
-<!-- ::: {style="margin-left:40px"} -->
-<!-- | Waste Management Detail 2 -->
-<!-- ::: -->
-<!-- ::: {style="margin-left:80px"} -->
-<!-- | Field | Requirement | Description | Format | Input value | -->
-<!-- |:-----------------|:------------:|:------------------------|:------------:|:------------:| -->
-<!-- | category  | O  |	The category of the waste produced by the vessel | **Code** from [Waste Categories](#wasteCategories) | e.g., `CP` | -->
-<!-- | storage_disposal_method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` | -->
-<!-- ::: -->
-<!-- ::: {style="margin-left:40px"} -->
-<!-- | Waste Management Detail 3 -->
-<!-- ::: -->
-<!-- ::: {style="margin-left:80px"} -->
-<!-- | Field | Requirement | Description | Format | Input value | -->
-<!-- |:-----------------|:------------:|:------------------------|:------------:|:------------:| -->
-<!-- | category | O |	The category of the waste produced by the vessel | **Code** from [Waste Categories](#wasteCategories) | e.g., `CP` | -->
-<!-- | storage_disposal_method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` | -->
-<!-- ::: -->
-<!-- ::: {style="margin-left:40px"} -->
-<!-- | Waste Management Detail 4 -->
-<!-- ::: -->
-<!-- ::: {style="margin-left:80px"} -->
-<!-- | Field | Requirement | Description | Format | Input value | -->
-<!-- |:-----------------|:------------:|:------------------------|:------------:|:------------:| -->
-<!-- | category | O |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` | -->
-<!-- | storage_disposal_method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` | -->
-<!-- ::: -->
-
-# G-GENERAL | Longline General Gear Specifications {#gGeneral}
+# G-GENERAL {#gGeneral}
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -457,7 +420,7 @@ Some mandatory (M) and optional (O) descriptive metadata elements have been iden
 | line_hauler | M | Indicates whether or not the vessel is equipped with a line hauler (Yes/No/Unk) | String | e.g., `Yes` |
 | bait_casting_machine | M | Indicates whether or not the vessel is equipped with a bait cast machine (Yes/No/Unk) | String | e.g., `Yes` |
 
-# G-CONFIG-BRANCHLINES | Longline General Gear Specifications > Branchline Configurations {#gConfigBranchlines}
+# G-CONFIG-BRANCHLINES {#gConfigBranchlines}
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -467,9 +430,9 @@ Some mandatory (M) and optional (O) descriptive metadata elements have been iden
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| configuration_id | O | The unique number for a specific branchline specification as detailed based on the fields below | Integer | **EXAMPLE TO ADD** |
+| configuration_id | O | The identifier for a specific branchline specification as detailed based on the fields below | Integer | **EXAMPLE TO ADD** |
 | section_id | O | **DESCRIPTION TO ADD**  | Integer | **EXAMPLE TO ADD** |
-| material_type | O | The branchline material for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
+| material_type | O | The type of material used in each of the four sections of the branchline, where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
 | branchline_length_m | O | The value of the length (m) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | **EXAMPLE TO ADD** |
 | branchline_diameter_cm | O | The value of the diameter (cm) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | **EXAMPLE TO ADD** |
 
@@ -478,20 +441,18 @@ Some mandatory (M) and optional (O) descriptive metadata elements have been iden
 
 ## Additional Branchline Details
 
-Up to four storage methods may be reported on the form.
-
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| storage | O | The storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` |
+| storage | O | The storage method for the branchlines. Up to four storage methods may be reported on the form | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` |
 <!-- | storage_2 | O | The storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` | -->
 <!-- | storage_3 | O | The storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` | -->
 <!-- | storage_4 | O | The storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` | -->
 
-# G-CONFIG-MITIGATION-DEVICES | Longline Gear Specifications > Mitigation Devices {#gConfigMitigationDevices}
+# G-CONFIG-MITIGATION-DEVICES {#gConfigMitigationDevices}
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_ _trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 
 ## Tori Line Details
 
@@ -518,17 +479,15 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 
 ## Other Mitigation Devices
 
-Up to five additional bycatch mitigation devices may be reported on the form.
-
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| device | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| device | O | Equipment used onboard to minimise bycatch. Up to five additional devices may be reported on the form | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
 <!-- | device_2 | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
 <!-- | device 3 | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
 <!-- | device 4 | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
 <!-- | device 5 | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
 
-# E-SET | Longline Fishing Events > Setting Operations
+# E-SET
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -561,77 +520,84 @@ Up to five additional bycatch mitigation devices may be reported on the form.
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| vessel_speed | M | The vessel's average speed (knots) during setting | Float | **EXAMPLE TO ADD** |
-| line_setter_speed | M | The speed setting (m/s) of the line setter | Float | **EXAMPLE TO ADD** |
+| vessel_speed_kn | M | The vessel's average speed expressed in knots (kn) during setting | Float | `5.5` |
+| line_setter_speed_ms | M | The speed setting (m/s) of the line setter | Float | `0.4` |
 
-| Mainline: Mainline material and total set length, i.e., the total deployed length of the mainline for the specific set. Usually calculated by multiplying the total time to set the line and the average line setter speed, taking into account any interruption times 
-
-::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| material | O | **DESCRIPTION TO ADD** | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
-| mainline_length_value | O | **DESCRIPTION TO ADD** | Float | **EXAMPLE TO ADD** |
-| mainline_length_unit | O | **DESCRIPTION TO ADD** | Indicates the unit of (kilometres (km) or nautical miles (nm) | **EXAMPLE TO ADD** |
-:::
-
-<!-- Value should read "Mainline length value"? -->
-
-| Clip on time
+<!-- 'VALUE_KNOTS' to 'VESSEL_SPEED_KN -->
+<!-- 'VALUE_MS' to 'LINE_SETTER_SPEED_MS' -->
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| branchline | O | The average time interval in seconds between the "beeps" that indicate to the crew to clip on a branchline | Float | **EXAMPLE TO ADD** |
-| buoys | O | The average time interval in seconds between the "beeps" that indicate to the crew to clip on a buoy | Float | **EXAMPLE TO ADD** |
+| mainline_material | O | The type of material used to construct the mainline of the longline gear | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
+| mainline_length_value | O | The total deployed length of the mainline for the specific set. Usually calculated by multiplying the total time to set the line and the average line setter speed, taking into account any interruption times | Float | `120.2` |
+| mainline_length_unit | O | The unit used to report the length of the mainline, expressed in kilometres (km) or nautical miles (nm) | `km` |
 :::
+
+<!-- VALUE to LENGTH_VALUE -->
+
+::: {style="margin-left:40px"}
+| Field | Requirement | Description | Format | Input value |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| clip_on_time_branchline | O | The average time interval, in seconds (s), between the audible signals ('beeps') that indicate to the crew when to clip on a branchline | Float | `10` |
+| clip_on_time_buoys | O | The average time interval, in seconds (s), between the audible signals ('beeps') that indicate to the crew when to clip on a buoy | Float | `850` |
+:::
+
+<!-- BRANCHLINE to CLIP_ON_TIME_BRANCHLINE -->
+<!-- BUOYS to CLIP_ON_TIME_BUOYS -->
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Number of total hooks set | M | The total number of hooks deployed for the set. Usually calculated by multiplying number of baskets by the average number of hooks between the baskets | Integer | **EXAMPLE TO ADD** |
-| Number of total floats on set | O | The total number of floats deployed during the set, excluding radio/dhan buoys. Usually calculated by subtracting the number of buoys in their holders before setting by the number of buoys in their holders after setting | Integer | **EXAMPLE TO ADD** |
-| Number of hooks between floats | M | The number of hooks set between floats. This will correspond to the number of hooks stored in each basket/tub, or on a reel and will be equivalent to the number of branchlines set | Integer | **EXAMPLE TO ADD** |
-| Shark lines |  |  |  |  |
+| number_of_total_hooks_set | M | The total number of hooks deployed for the set. Usually calculated by multiplying number of baskets by the average number of hooks between the baskets | Integer | e.g., `3000` |
+| number_of_total_floats_on_set | O | The total number of floats deployed during the set, excluding radio/dhan buoys. Usually calculated by subtracting the number of buoys in their holders before setting by the number of buoys in their holders after setting | Integer | e.g., `6` |
+| number_of_hooks_between_floats | M | The number of hooks set between floats, corresponding to the number of hooks stored in each basket, tub, or reel, and equivalent to the number of branchlines deployed | Integer | e.g., `1000` |
+| shark_lines | XXXXXX |  XXXXX | XXXX  | XXX |
+
+<!-- SHARK_LINES_SET??? -->
+
+<!-- NUM_TOTAL_HOOKS_SET to NUMBER_TOTAL_HOOKS_SET -->
+<!-- NUM_TOTAL_FLOATS_SET to NUMBER_TOTAL_FLOATS_SET -->
+<!-- NUM_HOOKS_BETWEEN_FLOATS to NUMBER_HOOKS_BETWEEN_FLOATS -->
+
+| **Shark lines**
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Set | M | Indicates whether or not one or more shark lines were set during the operation (Yes/No/Unk) | String | `Yes` |
-| Number of lines | O | The number of shark lines set during the operation. If no shark lines are set then record zero (0) | Integer | e.g., `23` |
+| set | M | Indicates whether or not one or more shark lines were set during the operation (Yes/No/Unk) | String | `Yes` |
+| number_of_lines | O | The number of shark lines set during the operation. If no shark lines are set then record zero (0) | Integer | e.g., `23` |
 :::
 
-| Leader material
-
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Material type | M | Each leader type used in the set | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
-| Percentage | M | The percentage of total branchlines in the set estimated for each leader type used | Float | **EXAMPLE TO ADD** |
+| leader_material_type | M | The type of material used to construct the leader type used in the set | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
+| leader_material_percentage | M | The percentage of total branchlines in the set estimated for each leader type used | Float | **EXAMPLE TO ADD** |
 :::
 
 <!-- Why "Each" leader type? Check reporting form -->
 
 <!-- Estimate by counting the number of branchlines in a basket by leader type and dividing each count by the total hooks in the basket. This assumes uniform use of leader types across baskets in a set. Estimates should be adjusted if there is variation across baskets (within a set) in leader proportions  -->
 
-| Branchline length max: specify the minimum and maximum total branchline lengths observed in the set. Total branchline length is measured (in meters) from the mainline clip to the hook. If total branchline lengths are uniform across the set, write the same number in the minimum and maximum fields
+<!-- | Branchline length max: specify the minimum and maximum total branchline lengths observed in the set. Total branchline length is measured (in meters) from the mainline clip to the hook. If total branchline lengths are uniform across the set, write the same number in the minimum and maximum fields -->
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Branchline length minimum | M | The minimum value of the total lengths of the branchlines deployed during the fishing set | Float | **EXAMPLE TO ADD** |
-| Branchline length minimum unit | M | The unit of measurement of the minimum value of branchline length (cm or m) | Float | **EXAMPLE TO ADD** | 
-| Branchline length maximum | M | The maximum value of the total lengths of the branchlines deployed during the fishing set | Float | **EXAMPLE TO ADD** |
-| Branchline length maximum unit | M | The unit of measurement of the maximum value of branchline length (cm or m) | Float | **EXAMPLE TO ADD** | 
+| branchline_length_minimum | M | The minimum value of the total lengths of the branchlines deployed during the fishing set | Float | **EXAMPLE TO ADD** |
+| branchline_length_minimum_unit | M | The unit of measurement of the minimum value of branchline length (cm or m) | Float | `m` | 
+| branchline_length_maximum | M | The maximum value of the total lengths of the branchlines deployed during the fishing set | Float | **EXAMPLE TO ADD** |
+| branchline_length_maximum_unit | M | The unit of measurement of the maximum value of branchline length (cm or m) | Float | `m` | 
 :::
+
+<!-- addition of BRANCHLINE_LENGTH_MINIMUM: VALUE + UNIT -->
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Target species 1 | M | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| Target species 2 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| Target species 3 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| Target species 4 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| VMS_ON | O | **ADD DESCRIPTION | String | e.g., `Yes` | 
+| target_species | M | The list of species that are intentionally targeted in the fishery. Up to four target species may be reported on the form | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| VMS_ON | O | Indicates whether the Vessel Monitoring System was active (Yes/No/Unk) | String | e.g., `Yes` | 
 
-# E-SET-LIGHTS | Setting Operations Attached Lights {#eSetLights}
+# E-SET-LIGHTS {#eSetLights}
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -652,7 +618,7 @@ Up to five additional bycatch mitigation devices may be reported on the form.
 
 <!-- | 'NUM_LIGHTS' to 'NUMBER_OF_LIGHTS' -->
 
-# E-SET-MITIGATION-MEASURES | Setting Operations Mitigation Measures {#eSetMitigationMeasures}
+# E-SET-MITIGATION-MEASURES {#eSetMitigationMeasures}
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -665,12 +631,17 @@ Up to five additional bycatch mitigation devices may be reported on the form.
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | number_of_tori_lines_deployed | M | The total number of tori lines deployed during the setting operation | Integer | e.g., `8` |
 | minimum_deck_lighting_used | M | Indicates whether or not minimum deck lighting was used during night setting (Yes/No/Unk) | String | e.g., `Yes` |
-| hooks_set_between_dusk_dawn | M | **DESCRIPTION TO ADD** | Integer | **EXAMPLE TO ADD**  |
 | branchline_weighted | O | Indicates whether or not the branchline was weighted (Yes/No/Unk) | String | `No` |
-| average_branchline_weight | M | The average weight (g) of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) | Float | **EXAMPLE TO ADD** |
+| average_branchline_weight_g | M | The average weight (g) of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) | Float | **EXAMPLE TO ADD** |
 | percent_branchline_weighted | M | The proportion of branchlines weighted (%) | Float | **EXAMPLE TO ADD** |
 | hook_sinker_distance | M | The distance (cm) of the weights/sinkers from the eye of the hook | Float | **EXAMPLE TO ADD** |
 | hook_pods | M | Indicates whether or not the bait is protected by hook pods on the branchlines until they are a certain depth below the surface (Yes/No/Unk) | String | e.g., `No` |
+
+<!-- 'NUM_TORI_LINES_DEPLOYED' to 'NUMBER_TORI_LINES_DEPLOYED' -->
+<!-- 'MIN_DECK_LIGHTING_USED' to 'MINIMUM_DECK_LIGHTING_USED' -->
+<!-- 'HOOKS_SET_BETWEEN_DUSK_DAWN' to remove -->
+<!-- 'AVG_BRANCHLINE_WEIGHT_G' changed to 'AVERAGE_BRANCHLINE_WEIGHT_G' -->
+<!-- 'PERC_BRANCHLINE_WEIGHTED' to 'PERCENT_BRANCHLINE_WEIGHTED' -->
 
 ## Branchline Details
 
@@ -681,23 +652,21 @@ Up to five additional bycatch mitigation devices may be reported on the form.
 
 ## Other Mitigation Measures Used
 
-Up to four mitigation measures can be reported on the form.
-
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| measure | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
+| measure | M | Any other mitigation measures observed. Up to four measures can be reported on the form | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
 <!-- | Measure 2 | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
 <!-- | Measure 3 | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
 <!-- | Measure 4 | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
 
-# E-SET-HOOKS | Setting operations Hooks details {#eSetHooks}
+# E-SET-HOOKS {#eSetHooks}
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0004` |
 
-## Setting Operations > Hook Details > Hooks
+## Hook Details
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -705,21 +674,21 @@ Up to four mitigation measures can be reported on the form.
 | percentage | O | The percentage (%) of hooks set by type | Float | **100** |
 | variations | O | Indicates any variations in hook type, hook material, and presence/absence of hook ring where possible | String | **EXAMPLE TO ADD** |
 
-# E-SET-BAITS | Setting operations > Baits details
+# E-SET-BAITS
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0095` |
 
-## Setting Operations > Bait Details > Bait
+## Bait Details
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | condition | M | The bait type condition used | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE`  |
 | species | M | The species/species group of bait used | **Code** from [Bait Species](#baitSpecies) | e.g., `ANX` |
 | percentage | M | The approximate proportion (%) of bait species and condition used across all hooks in the set | Float | **EXAMPLE TO ADD** |
-| dye_colour | O | The colour or colours that the different baits are dyed | String | e.g., `blue`  |
+| dye_colour | O | The colour(s) that the different baits are dyed | String | e.g., `blue`  |
 
 <!-- DO NOT UNDERSTAND THE ABOVE DEFINITION OF PERCENTAGE, WHICH INCLUDES REFERENCE TO "CONDITION"?? -->
 
@@ -757,11 +726,10 @@ Up to four mitigation measures can be reported on the form.
 ||||||
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | offal_management | O | The fate given to the offal (fish heads, guts, etc.) and bait produced during the observed set | **Code** from [Offal Management Types](#offalManagementTypes) | e.g., `AH` |
-| **Positions of offal disposal:** The position(s) where offal and used bait was disposed. Up to four positions of offal and bait disposal may be reported on the form.
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format  | Input value |
 |:---------------------|:-----------:|:------------|:-------:|:-----------:|
-| position | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  |
+| position | O | The position(s) where offal and used bait was disposed. Up to four positions of offal and bait disposal may be reported on the form |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  |
 <!-- | Position 2 | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  | -->
 <!-- | Position 3 | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  | -->
 <!-- | Position 4 | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  | -->
@@ -772,22 +740,22 @@ Up to four mitigation measures can be reported on the form.
 | number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved during observation | Integer | **EXAMPLE TO ADD** |
 | sampling_protocol | M | Sampling protocol followed by the observer | **CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
-# E-SET-HAULING-BITEOFFS | Hauling Operations Biteoff Details {#eSetHaulingBiteoffs}
+# E-SET-HAULING-BITEOFFS {#eSetHaulingBiteoffs}
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| observed_trip_id | M | Refers to parent observed trip | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
-| set_id | M | Refers to parent set_id | 4-digit number | e.g., `0023` |
+| observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0023` |
 
 ## Biteoff Details - Branchline
 
-For each branchline configuration setup previously identified how many have had the hook bitten off. This only includes biteoffs observed while the observer was in a position to observe and record the hooks coming directly out of the water.
+For each branchline configuration set-up previously identified how many have had the hook bitten off. This only includes biteoffs observed while the observer was in a position to observe and record the hooks coming directly out of the water.
 
 ::: {style="margin-left:40px"}
 | Field              | Requirement | Description | Format  | Input value |
 |:---------------------|:-----------:|:------------|:-------:|:-----------:|
 | branchline_configuration_id | O | The identifier of the branchline configuration | Integer | `-` |
-| hauling_operation_id | O | The technical identifier of the hauling operation | `-` | 
+| hauling_operation_id | O | The identifier of the hauling operation | `-` | 
 | number_of_biteoffs | O | The number of biteoffs observed | Integer | `1680` |
 :::
 
@@ -797,8 +765,8 @@ For each branchline configuration setup previously identified how many have had 
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| observed_trip_id | M | Refers to parent observed trip | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
-| set_id | M | Refers to parent set_id | 4-digit number | e.g., `0285` |
+| observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
 | catch_id | M | Unique within a specific set, as a branch of set_id representing an observed part of the catch | Alphanumeric code | **EXAMPLE TO ADD** |
 
 <!-- I added "representing an observed part of the catch" -->
