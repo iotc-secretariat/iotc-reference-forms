@@ -152,7 +152,7 @@ MECHANISATION_TYPES   = read_codelist(domain = "fisheries", schema = "fishery", 
 
 FISH_PRESERVATION_METHODS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PRESERVATION_METHODS")
 
-FISH_PROCESSING_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")
+# FISH_PROCESSING_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")   #too baue
 
 FISH_STORAGE_TYPES  = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_STORAGE_TYPES")
 
@@ -248,7 +248,13 @@ INDIVIDUAL_CONDITIONS = read_codelist(domain = "biology", schema = "biology", co
 
 MEASUREMENTS          = read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENTS")
 
+WEIGHT_MEASUREMENTS = MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CODE")]
+
+LENGTH_MEASUREMENTS = MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "LN", -c("TYPE_OF_MEASUREMENT_CODE")]
+
 MEASUREMENT_TOOLS     = read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENT_TOOLS")
+
+LENGTH_MEASUREMENT_TOOLS = read_codelist(domain = "biology", schema = "biology", codelist = "LENGTH_MEASUREMENT_TOOLS")
 
 TYPES_OF_MEASUREMENT  = read_codelist(domain = "biology", schema = "biology", codelist = "TYPES_OF_MEASUREMENT")
 
@@ -275,8 +281,6 @@ SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS = read_codelist(domain = "biology", co
 TAG_TYPES = read_codelist(domain = "biology", schema = "biology", codelist = "TAG_TYPES")
 
 DEPREDATION_SOURCES = read_codelist(domain = "biology", schema = "biology", codelist = "DEPREDATION_SOURCES")
-
-#WEIGHT_ESTIMATION_METHODS = MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE  == "WG", -c("TYPE_OF_MEASUREMENT_CODE")]
 
 WEIGHT_MEASUREMENT_TOOLS = read_codelist(domain = "biology", schema = "biology", codelist = "WEIGHT_MEASUREMENT_TOOLS")
 

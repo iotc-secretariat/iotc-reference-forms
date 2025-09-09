@@ -4,23 +4,23 @@ This document is a review of errors, inconsistencies, and updates needed in the 
 
 |Section | Form | Database | Comment |
 |:-------|:--------------------------------|:---------:|:------ |
-| V-INFO | 'REG_NUMBER' to 'REGISTRATION_NUMBER' | `ros_common.vessel_identification.registration_number` |  | 
+| V-INFO | 'REG_NUMBER' to 'REGISTRATION_NUMBER' | `ros_common.vessel_identification.registration_number` | ok | 
 | V-ATTRIBUTES | 'TONNAGE' to 'GROSS_TONNAGE' | `ros_common.tonnages.value` | Remove values reported in "GRT" |
 | V-ATTRIBUTES | 'LENGTH' to 'LOA_M'| `ros_common.lengths.value` | Remove unit - loss of data reported in "KM" | 
 | V-ATTRIBUTES | 'FISH_STORAGE_CAPACITY_VALUE' to "FISH_STORAGE_CAPACITY_M3" | `ros_common.capacities.value` | |
 | V-ATTRIBUTES | 'FISH_STORAGE_CAPACITY_UNIT' to remove | `ros_common.capacities.unit` | To do - loss of values reported in "MT" |
-| V-ATTRIBUTES | 'METHOD_X_CODES' to 'METHOD_X' | `ros_common.vessel_attributes_fish_preservation_method.fish_preservation_method_code` | |
-| V-ATTRIBUTES | 'FISH_STORAGE_TYPE_X_CODE' to 'FISH_STORAGE_TYPE_X' | `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` | |
-| V-ATTRIBUTES | 'DAYS \| NM" to 'AUTONOMY_RANGE_UNIT' | `ros_common.ranges.unit` | |
+| V-ATTRIBUTES | 'METHOD_X_CODES' to 'METHOD_X' | `ros_common.vessel_attributes_fish_preservation_method.fish_preservation_method_code` | ok |
+| V-ATTRIBUTES | 'FISH_STORAGE_TYPE_X_CODE' to 'FISH_STORAGE_TYPE_X' | `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` | ok |
+| V-ATTRIBUTES | 'DAYS \| NM" to 'AUTONOMY_RANGE_UNIT' | `ros_common.ranges.unit` | ok |
 | V-ATTRIBUTES | 'GPS' to 'GNSS' |  `ros_common.vessel_electronics.gps` | To do |
 | V-ATTRIBUTES | 'SATELLITE_COMS' to 'SATCOM' | `ros_common.vessel_electronics/satellite_communication_systems` | To do |
 | V-ATTRIBUTES | 'CATEGORY_X_CODE' to 'CATEGORY_X' | `ros_common.waste_managements.waste_category_code` | |
-| V-ATTRIBUTES | 'STORAGE_DISPOSAL_METHOD_X_CODE' to STORAGE_DISPOSAL_METHOD_X' | `ros_common.waste_managements.waste_storage_or_disposal_method_code` | |
-| V-ATTRIBUTES | Four fields "OTHER" removed for waste management details | | |
+| V-ATTRIBUTES | 'STORAGE_DISPOSAL_METHOD_X_CODE' to STORAGE_DISPOSAL_METHOD_X' | `ros_common.waste_managements.waste_storage_or_disposal_method_code` | ok |
+| V-ATTRIBUTES | Four fields "OTHER" removed for waste management details | | ok |
 | G-CONFIG-BRANCHLINES | 'CONFIGURATION NUMBER' to 'CONFIGURATION_ID' | `ros_ll.branchline_configurations.configuration_number` | To do |
-| G-CONFIG-BRANCHLINES | 'SECTION NUMBER' to 'SECTION_ID' | ?? | |
-| G-GENERAL | 'LINE_SETTER/HAULER' to 'LINE_SETTER_HAULER' | | |
-| G-CONFIG-BRANCHLINES | 'LENGTH' to 'BRANCHLINE_LENGTH_M' | | |
+| G-CONFIG-BRANCHLINES | 'SECTION NUMBER' to 'SECTION_ID' | `ros_ll.branchline_sections.section_number` | To do |
+| G-GENERAL | 'LINE_SETTER/SHOOTER' to 'LINE_SETTER' | `ros_ll.special_equipment.line_setter` | ok |
+| G-CONFIG-BRANCHLINES | 'LENGTH' to 'BRANCHLINE_LENGTH_M' |  | ok |
 | G-CONFIG-BRANCHLINES | 'DIAMETER' to 'BRANCHLINE_DIAMETER_CM' | | |
 | G-CONFIG-BRANCHLINES | 'STORAGE_X_CODE' to 'STORAGE_X' | | |
 | G-CONFIG-MITIGATION-DEVICES | 'LINE_LENGTH_MAX (M)' to 'STREAMER_LINE_LENGTH_MAX_M' | | |
@@ -37,8 +37,17 @@ This document is a review of errors, inconsistencies, and updates needed in the 
 | E-SET-LIGHTS | UPDATE REPORTING FORM - NUM_LIGHTS looks like a hyperlink - very pedantic | noted | **Format to change in the form**
 | E-SET-MITIGATION_MEASURES | should all mitigation measure codes (4) be mandatory? Or should 2-4 be optional? All mandatory in reporting form | noted | **Yes, captured by the code list - need to check with Tony**
 | E-SET-BAITS | percentage description: "The approximate proportion (%) of bait species and condition used across all hooks in the set" need a new field for bait condition? | noted | **Check if in description form**
+| E-SET-HAULING-BITEOFFS |  'CONFIGURATION_NUMBER' to 'CONFIGURATION_ID' | `` | ok |
+| E-SET-HAULING-BITEOFFS |  'NUM_BITEOFFS' to 'NUMBER_OF_BITEOFFS' | `ros_ll.biteoffs_by_branchlines_set.number_of_biteoffs` | ok |
 | E-SET-HAULING-BITEOFFS |  Configuration number to change to configuration identifier | noted | **YES**
+
+<!-- | E-SET-HAULING | 'NUM_BRANCHLINE_HAULINGS_OBSERVED' to 'NUMBER_BRANCHLINE_HAULINGS_OBSERVED' -->
+<!-- | E-SET-HAULING | 'NUM_HOOKS_RETRIEVED_DURING_OBSERVATION' to 'NUMBER_HOOKS_RETRIEVED_DURING_OBSERVATION' -->
+
+
 | E-SET-CATCHES | 'KG|T' to "UNIT" |  |  | 
+
+<!-- NUM_BITEOFFS to NUMBER_OF_BITEOFFS in form -->
 
 <!--| G-CONFIG-MITIGATION-DEVICES | CHANGE REPORTING FORM - column: LINE_LENGTH_MAX should be one column, as there is already a second column for minimum. and they should each be called "STREAMER_LINE_LENGTH (min/max) | noted | **Remove empty column**
 
@@ -48,6 +57,17 @@ Questions for TC:
 - `ros_common.vessel_attributes_fish_preservation_method.fish_preservation_method_code`  - To rename to `ros_common.vessel_attributes_fish_preservation_method.fpm_code`?
 - `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` - To rename to `ros_common.vessel_attributes_fish_storage_type.fst_code`?
 - `ros_common.waste_managements.waste_category_code` To rename to `ros_common.waste_managements.wcc`
+
+Question for Yes/No/Unk? Which casing to record in the form?
+
+General Information - code list for observer data source
+
+Vessel attributes - Tonnage as integer instead of float (to impose no decimals)
+Vessel attributes - Engine power value as integer and not float (to impose no decimals)
+Vessel attributes - Removed column fish storage unit - should be in m3 by default consistently with Res. 19/04 – Remove column unit from ros_common.capacities – What about previous data? We drop them! Fuck off!
+
+G-CONFIG-MITIGATION-DEVICES: be careful, there was 2 columns instead of 1 for LINE_LENGTH_MAX: issue for the importer?
+
 
 # Pole and Line Form
 
