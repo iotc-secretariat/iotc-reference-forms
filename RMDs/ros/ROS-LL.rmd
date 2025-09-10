@@ -33,27 +33,27 @@ Click [here](./Form-ROS-LL.xlsx) to download a blank version of Form ROS-LL, or 
 
 Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the mandatory (M; blue cells) and optional (O; green cells) data fields defined by the SC. The current version builds on the most recent revision of ROS fields endorsed at the 27^th^ session of the SC ([IOTC-2024-SC27-DATA01](https://iotc.org/documents/SC/27/DATA01)). The sheets are interconnected through technical identifiers (e.g., observer trip ID, set ID), enabling the hierarchical organisation of the observations to be maintained.
 
-| Sheet | Level | Description |
+| Sheet | Component | Resolution |  Description |
 | :--------- | :----------: | :--------------------------- |
-| [META](#meta) | | Information on data submission and main characteristics |
-| [O-INFO](#oInfo) | Observer | Information on the observer and the fishing trip observed |
-| [V-INFO](#vInfo) | Vessel | Information on the fishing vessel, its gear, and personnel |
-| [V-TRIP](#vTrip) | Trip | Information on the fishing trip's departure and return |
-| [V-ATTRIBUTES](#vAttributes) | Vessel | Information on the vessel's attributes and equipment |
-| [G-GENERAL](#gGeneral) | Gear | Information on the fishing gear's equipment and machinery | 
-| [G-CONFIG-BRANCHLINES](#gConfigBranchlines) | Gear | Information on branchline configurations  |
-| [G-CONFIG-MITIGATION-DEVICES](#gConfigMitigationDevices) | | |
-| [E-SET](#eSet) | Set | |
-| [E-SET-LIGHTS](#eSetLight) | Set | |
-| [E-SET_MITIGATION_MEASURES](#eSetMitigationDevices) | Set ||
-| [E-SET-HOOKS](#eSetHooks) | Set | |
-| [E-SET-BAITS](#eSetBaits) | Set | |
-| [E-SET-HAULING](#eSetHauling) | Set ||
-| [E-SET-HAULING-BITEOFFS](#eSetHaulingBiteoffs) | Hauling operation/Catch? ||
-| [E-SET-CATCHES](#eSetCatches) | Set/Catch? | |
-| [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Specimen | |
-| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Specimen | |
-| [E-SET-TAG-DETAILS](#eSetTagDetails) | Specimen | |
+| [META](#meta) | Dataset | Trip | Information on data submission and main characteristics |
+| [O-INFO](#oInfo) | Observer \& trip | Trip | Information on the observer and the fishing trip observed |
+| [V-INFO](#vInfo) | Vessel | Trip | Information on the fishing vessel, its gear, and personnel |
+| [V-TRIP](#vTrip) | Trip | Trip | Information on the fishing trip's departure and return |
+| [V-ATTRIBUTES](#vAttributes) | Vessel | Vessel | Information on the vessel's attributes and equipment |
+| [G-GENERAL](#gGeneral) | Equipments | Trip | Information on the fishing gear's equipment and machinery | 
+| [G-CONFIG-BRANCHLINES](#gConfigBranchlines) | Branchline sections | Trip | Information on branchline configurations  |
+| [G-CONFIG-MITIGATION-DEVICES](#gConfigMitigationDevices) | Devices | Trip | Information on mitigation devices | 
+| [E-SET](#eSet) |  | Set | |
+| [E-SET-LIGHTS](#eSetLight) | | Set | |
+| [E-SET_MITIGATION_MEASURES](#eSetMitigationDevices) |  | Set | |
+| [E-SET-HOOKS](#eSetHooks) |  | Set | |
+| [E-SET-BAITS](#eSetBaits) |  | Set ||
+| [E-SET-HAULING](#eSetHauling) |  | Set | | 
+| [E-SET-HAULING-BITEOFFS](#eSetHaulingBiteoffs) | Hauling operation/Catch? |||
+| [E-SET-CATCHES](#eSetCatches) | Set/Catch? | ||
+| [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Specimen | ||
+| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Specimen | ||
+| [E-SET-TAG-DETAILS](#eSetTagDetails) | Specimen | ||
 
 <!-- SPECIMEN to SPECIMENS in the sheet names -->
 <!-- CATCHES_SPECIMENS to CATCH_SPECIMENS -->
@@ -165,8 +165,8 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | **EXAMPLE TO ADD**  |
-| observed | M | The total number of fishing sets monitored by the observer. In the case of Electronic Monitoring, only processed sets to be included | Integer | **EXAMPLE TO ADD** |
+| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | `tbd`  |
+| observed | M | The total number of fishing sets monitored by the observer. In the case of Electronic Monitoring, only processed sets to be included | Integer | `tbd` |
 :::
 
 | **Number of days:** The total number of calendar days the vessel is on a fishing trip, with each day defined as a 24-hour period. These days can be further categorised by activity type (e.g. searching, transiting, actively fishing, or present in fishing areas).
@@ -174,11 +174,11 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| searching | O | The number of days searching during the observation period | Integer | **EXAMPLE TO ADD** |
-| actively fishing | O | The number of active fishing days during the observation period | Integer | **EXAMPLE TO ADD** |
-| in_fishing_area | O | The number of days in the fishing area during the observation period | Integer | **EXAMPLE TO ADD** |
-| transiting | O | The number of days transiting during the observation period | Integer | **EXAMPLE TO ADD** |
-| lost | O | The number of days lost during the observation period | Integer | **EXAMPLE TO ADD** |
+| searching | O | The number of days searching during the observation period | Integer | `tbd` |
+| actively fishing | O | The number of active fishing days during the observation period | Integer | `tbd` |
+| in_fishing_area | O | The number of days in the fishing area during the observation period | Integer | `tbd` |
+| transiting | O | The number of days transiting during the observation period | Integer | `tbd` |
+| lost | O | The number of days lost during the observation period | Integer | `tbd` |
 :::
 
 <!-- All fields are defined with days (e.g., number of days_lost, etc.). I removed HOURS from the definitions and mentioned that there are 24 hours within a day -->
@@ -194,7 +194,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 # V-INFO {#vInfo}
 
 | Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 
 ## Vessel Information
@@ -241,7 +241,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 # V-TRIP {#vTrip}
 
 | Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |  
 
 ## Trip Details
@@ -327,8 +327,8 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 # V-ATTRIBUTES {#vAttributes}
 
 | Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 
 ## Vessel Attributes
 
@@ -403,7 +403,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
 | waste_management_category | O | The category of the waste produced by the vessel | **Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
-| waste_storage_disposal_method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+| waste_storage_disposal_method | O |	The method used to dispose of the waste | **Code** from [Storage / Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
 :::
 
 # G-GENERAL {#gGeneral}
@@ -423,18 +423,18 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 # G-CONFIG-BRANCHLINES {#gConfigBranchlines}
 
 | Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 
 ## Branchline Configurations
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| configuration_id | O | The identifier for a specific branchline specification as detailed based on the fields below | Integer | **EXAMPLE TO ADD** |
-| section_id | O | **DESCRIPTION TO ADD**  | Integer | **EXAMPLE TO ADD** |
+| configuration_id | O | The identifier for a specific branchline specification as detailed based on the fields below | Integer | `tbd` |
+| section_id | O | **DESCRIPTION TO ADD**  | Integer | `tbd` |
 | material_type | O | The type of material used in each of the four sections of the branchline, where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
-| branchline_length_m | O | The value of the length (m) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | **EXAMPLE TO ADD** |
-| branchline_diameter_cm | O | The value of the diameter (cm) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | **EXAMPLE TO ADD** |
+| branchline_length_m | O | The value of the length (m) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | `tbd` |
+| branchline_diameter_cm | O | The value of the diameter (cm) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | `tbd` |
 
 <!-- CHANGE "CONFIGURATION NUMBER AND SECTION NUMBER TO CONFIGURATION IDENTIFIER AND SECTION IDENTIFIER, RESPECTIVELY?? -->
 <!-- SO I GUESS WE NEED 4 FIELDS HERE FOR THE LENGTHS AND DIAMETERS -->
@@ -451,7 +451,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 # G-CONFIG-MITIGATION-DEVICES {#gConfigMitigationDevices}
 
 | Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 
 ## Tori Line Details
@@ -460,22 +460,18 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| tori_line_length | M | The total length (m) of the tori line, excluding streamers | Float | **EXAMPLE TO ADD** |
+| tori_line_length | M | The total length (m) of the tori line, excluding streamers | Float | `tbd` |
 | streamer_type | M | The type of streamers which are used with the tori line | **Code** from [Streamer Types](#streamerTypes) | e.g., `MU` |
 | reach_surface | O | Indicates whether or not the streamers are long enough to touch the surface of the water in calm conditions (Yes/No/Unk) | String | `No` |
-| streamer_line_length_max_m | M | The value of the maximum length (m) of individual streamer lines | Float | **EXAMPLE TO ADD** |
-| streamer_line_length_min_m | O | The value of the minimum length (m) of individual streamer lines | Float | **EXAMPLE TO ADD** |
-| streamer_number_per_line | M | The number of streamers that are attached to a single tori line | Integer | **EXAMPLE TO ADD** |
-| distance_between_streamers_m | O | The distance (m) between streamers | Float | **EXAMPLE TO ADD** |
-| tori_line_attached_height_m | M | The height that the tori line is attached above the water level | Float | **EXAMPLE TO ADD** |
+| streamer_line_length_max_m | M | The value of the maximum length (m) of individual streamer lines | Float | `tbd` |
+| streamer_line_length_min_m | O | The value of the minimum length (m) of individual streamer lines | Float | `tbd` |
+| streamer_number_per_line | M | The number of streamers that are attached to a single tori line | Integer | `tbd` |
+| distance_between_streamers_m | O | The distance (m) between streamers | Float | `tbd` |
+| tori_line_attached_height_m | M | The height that the tori line is attached above the water level | Float | `tbd` |
+| towed_objects_type | O | The type of object used to maintain tori line tension and to achieve aerial extent when deployed | `tbd` | `tbd` |
+| towed_objects_number | O | Number of objects used to maintain tori line tension and to achieve aerial extent when deployed | Integer | Integer | `tbd` |
 
-| **Towed objects:** The total number and type of towed objects used to maintain tori line tension and achieve aerial extent when deployed 
-::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| number | O || Integer ||
-| type | O || **Code list to develop based on CPC feedback** || 
-:::
+<!-- Inversion of type and number in the form for the towed objects -->
 
 ## Other Mitigation Devices
 
@@ -551,9 +547,10 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | number_of_total_hooks_set | M | The total number of hooks deployed for the set. Usually calculated by multiplying number of baskets by the average number of hooks between the baskets | Integer | e.g., `3000` |
 | number_of_total_floats_on_set | O | The total number of floats deployed during the set, excluding radio/dhan buoys. Usually calculated by subtracting the number of buoys in their holders before setting by the number of buoys in their holders after setting | Integer | e.g., `6` |
 | number_of_hooks_between_floats | M | The number of hooks set between floats, corresponding to the number of hooks stored in each basket, tub, or reel, and equivalent to the number of branchlines deployed | Integer | e.g., `1000` |
-| shark_lines | XXXXXX |  XXXXX | XXXX  | XXX |
+| shark_lines_set | Indicates whether or not shark lines were set during the operation (Yes/No/Unk) | String | e.g., `No` |
+| shark_lines_number | The number of shark lines set during the operation | Integer | e.g., `0` |
 
-<!-- SHARK_LINES_SET??? -->
+<!-- 'NUMBER_LINES' to 'NUMBER' -->
 
 <!-- NUM_TOTAL_HOOKS_SET to NUMBER_TOTAL_HOOKS_SET -->
 <!-- NUM_TOTAL_FLOATS_SET to NUMBER_TOTAL_FLOATS_SET -->
@@ -572,7 +569,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | leader_material_type | M | The type of material used to construct the leader type used in the set | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
-| leader_material_percentage | M | The percentage of total branchlines in the set estimated for each leader type used | Float | **EXAMPLE TO ADD** |
+| leader_material_percentage | M | The percentage of total branchlines in the set estimated for each leader type used | Float | `tbd` |
 :::
 
 <!-- Why "Each" leader type? Check reporting form -->
@@ -584,9 +581,9 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| branchline_length_minimum | M | The minimum value of the total lengths of the branchlines deployed during the fishing set | Float | **EXAMPLE TO ADD** |
+| branchline_length_minimum | M | The minimum value of the total lengths of the branchlines deployed during the fishing set | Float | `tbd` |
 | branchline_length_minimum_unit | M | The unit of measurement of the minimum value of branchline length (cm or m) | Float | `m` | 
-| branchline_length_maximum | M | The maximum value of the total lengths of the branchlines deployed during the fishing set | Float | **EXAMPLE TO ADD** |
+| branchline_length_maximum | M | The maximum value of the total lengths of the branchlines deployed during the fishing set | Float | `tbd` |
 | branchline_length_maximum_unit | M | The unit of measurement of the maximum value of branchline length (cm or m) | Float | `m` | 
 :::
 
@@ -595,7 +592,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | target_species | M | The list of species that are intentionally targeted in the fishery. Up to four target species may be reported on the form | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| VMS_ON | O | Indicates whether the Vessel Monitoring System was active (Yes/No/Unk) | String | e.g., `Yes` | 
+| vms_on | O | Indicates whether the Vessel Monitoring System was active (Yes/No/Unk) | String | e.g., `Yes` | 
 
 # E-SET-LIGHTS {#eSetLights}
 
@@ -606,14 +603,14 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 
 ## Attached Lights
 
-| Attached lights: Number of lights attached to the branchlines per type and colour.
+| Attached lights: Lights attached to the branchlines.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | light_type | M | The type of lights attached to the longline when deployed, classified according to their source of illumination | **Code** from [Light Types](#lightTypes) | e.g., `CL` |
 | light_colour | M | The colour of lights attached to the longline when deployed, recorded according to the dominant visible light colour | **Code** from [Light Colours](#lightColours) | e.g., `BU` |
-| number_of_lights | M | The number of lights deployed | Integer | **EXAMPLE TO ADD** |
+| number_of_lights | M | The number of lights deployed | Integer | `tbd` |
 :::
 
 <!-- | 'NUM_LIGHTS' to 'NUMBER_OF_LIGHTS' -->
@@ -632,9 +629,9 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | number_of_tori_lines_deployed | M | The total number of tori lines deployed during the setting operation | Integer | e.g., `8` |
 | minimum_deck_lighting_used | M | Indicates whether or not minimum deck lighting was used during night setting (Yes/No/Unk) | String | e.g., `Yes` |
 | branchline_weighted | O | Indicates whether or not the branchline was weighted (Yes/No/Unk) | String | `No` |
-| average_branchline_weight_g | M | The average weight (g) of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) | Float | **EXAMPLE TO ADD** |
-| percent_branchline_weighted | M | The proportion of branchlines weighted (%) | Float | **EXAMPLE TO ADD** |
-| hook_sinker_distance | M | The distance (cm) of the weights/sinkers from the eye of the hook | Float | **EXAMPLE TO ADD** |
+| average_branchline_weight_g | M | The average weight (g) of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) | Float | `tbd` |
+| percent_branchline_weighted | M | The proportion of branchlines weighted (%) | Float | `tbd` |
+| hook_sinker_distance | M | The distance (cm) of the weights/sinkers from the eye of the hook | Float | `tbd` |
 | hook_pods | M | Indicates whether or not the bait is protected by hook pods on the branchlines until they are a certain depth below the surface (Yes/No/Unk) | String | e.g., `No` |
 
 <!-- 'NUM_TORI_LINES_DEPLOYED' to 'NUMBER_TORI_LINES_DEPLOYED' -->
@@ -647,8 +644,8 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| configuration_id | O | Identifier of the branchline configuration | Alphanumeric code | **EXAMPLE TO ADD** |
-| number_of_branchlines_set | O | The number of branchlines set by type | Integer | **EXAMPLE TO ADD**  |
+| configuration_id | O | Identifier of the branchline configuration | Alphanumeric code | `tbd` |
+| number_of_branchlines_set | O | The number of branchlines set by type | Integer | `tbd`  |
 
 ## Other Mitigation Measures Used
 
@@ -672,7 +669,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | hook_type | M | The type of hooks used | **Code** from [Hook Types](#hookTypes) | e.g., `C13` |
 | percentage | O | The percentage (%) of hooks set by type | Float | **100** |
-| variations | O | Indicates any variations in hook type, hook material, and presence/absence of hook ring where possible | String | **EXAMPLE TO ADD** |
+| variations | O | Indicates any variations in hook type, hook material, and presence/absence of hook ring where possible | String | `tbd` |
 
 # E-SET-BAITS
 
@@ -687,7 +684,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | condition | M | The bait type condition used | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE`  |
 | species | M | The species/species group of bait used | **Code** from [Bait Species](#baitSpecies) | e.g., `ANX` |
-| percentage | M | The approximate proportion (%) of bait species and condition used across all hooks in the set | Float | **EXAMPLE TO ADD** |
+| percentage | M | The approximate proportion (%) of bait species and condition used across all hooks in the set | Float | `tbd` |
 | dye_colour | O | The colour(s) that the different baits are dyed | String | e.g., `blue`  |
 
 <!-- DO NOT UNDERSTAND THE ABOVE DEFINITION OF PERCENTAGE, WHICH INCLUDES REFERENCE TO "CONDITION"?? -->
@@ -736,8 +733,8 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 :::
 
 | bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
-| number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | **EXAMPLE TO ADD** |
-| number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved during observation | Integer | **EXAMPLE TO ADD** |
+| number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | `tbd` |
+| number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved during observation | Integer | `tbd` |
 | sampling_protocol | M | Sampling protocol followed by the observer | **CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
 # E-SET-HAULING-BITEOFFS {#eSetHaulingBiteoffs}
@@ -767,7 +764,7 @@ For each branchline configuration set-up previously identified how many have had
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
-| catch_id | M | Unique within a specific set, as a branch of set_id representing an observed part of the catch | Alphanumeric code | **EXAMPLE TO ADD** |
+| catch_id | M | Unique within a specific set, as a branch of set_id representing an observed part of the catch | Alphanumeric code | `tbd` |
 
 <!-- I added "representing an observed part of the catch" -->
 
@@ -787,7 +784,7 @@ For each branchline configuration set-up previously identified how many have had
 :::
 
 | sampling_method | M | **DESCRIPTION TO ADD** |  **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
-| number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | **EXAMPLE TO ADD** |
+| number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | `tbd` |
 
 <!-- NUM_FISH to 'NUMBER_OF_FISH' -->
 
@@ -797,7 +794,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | processing_type | O | **DESCRIPTION TO ADD** | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
-| value | O | **DESCRIPTION TO ADD** | Float | **EXAMPLE TO ADD** |
+| value | O | **DESCRIPTION TO ADD** | Float | `tbd` |
 | weight_unit | O | **DESCRIPTION TO ADD** | Indicate units (kg or tonnes) | e.g., `kg`  |
 | estimation_method | O | **DESCRIPTION TO ADD** | **Code** from [Total Catch Estimation](#totalCatchEstimation) | e.g., `EP` |
 :::
@@ -808,7 +805,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0003` |
-| catch_id | M | The parent catch identifier | Alphanumeric code | **EXAMPLE TO ADD** |
+| catch_id | M | The parent catch identifier | Alphanumeric code | `tbd` |
 | specimen_id | M | A unique four-digit numerical code for each specimen, beginning with 0001, assigned consecutively within the same catch detail of a set during the observed trip | 4-digit number | e.g., `0005` |
 
 ## Specimen Details
@@ -879,9 +876,9 @@ Weight: The catch weight corresponding to the specified product type recorded in
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| sample_type | O | **DESCRIPTION TO ADD** | Code from [Sampling Type](#samplingMethodsForSamplingCollections) | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD** |
-| sample_preservation_method | O | **DESCRIPTION TO ADD** | Code from [Sample Preservation Method](#fishPreservationMethods) | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD** |
-| sample_destination** | **DESCRIPTION TO ADD** | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD** |
+| sample_type | O | **DESCRIPTION TO ADD** | Code from [Sampling Type](#samplingMethodsForSamplingCollections) | **CODE LIST TO DEVELOP** | `tbd` |
+| sample_preservation_method | O | **DESCRIPTION TO ADD** | Code from [Sample Preservation Method](#fishPreservationMethods) | **CODE LIST TO DEVELOP** | `tbd` |
+| sample_destination** | **DESCRIPTION TO ADD** | **CODE LIST TO DEVELOP** | `tbd` |
 :::
 
 <!-- ADD destination FIELD TO THE FORMS and database ->>
@@ -902,8 +899,8 @@ Weight: The catch weight corresponding to the specified product type recorded in
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0004` |
-| catch_id | M | The parent catch identifier | Alphanumeric code | **EXAMPLE TO ADD** |
-| specimen_id | M | The parent specimen identifier | 4-digit code | **EXAMPLE TO ADD** |
+| catch_id | M | The parent catch identifier | Alphanumeric code | `tbd` |
+| specimen_id | M | The parent specimen identifier | 4-digit code | `tbd` |
 
 ## Additional Catch Details on SSI
 
@@ -953,8 +950,8 @@ Weight: The catch weight corresponding to the specified product type recorded in
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` | 
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0023` |
-| catch_id | M | The parent catch identifier | Alphanumeric | **EXAMPLE TO ADD** |
-| specimen_id | M | The parent specimen identifier | 4-digit number | **EXAMPLE TO ADD** |
+| catch_id | M | The parent catch identifier | Alphanumeric | `tbd` |
+| specimen_id | M | The parent specimen identifier | 4-digit number | `tbd` |
 
 ## Tag Details
 
@@ -1087,7 +1084,7 @@ out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 out_dt(WASTE_CATEGORIES, "WASTE_CATEGORIES")
 ```
 
-## Storage/Disposal Methods {#storageDisposalMethods}
+## Storage / Disposal Methods {#storageDisposalMethods}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#wasteDisposalMethods)
 -   **Version**: `r version_number("WASTE_DISPOSAL_METHODS")`
