@@ -59,6 +59,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | observer_iotc_id | M | The unique registration identifier assigned to each observer by the IOTC Secretariat | Alphanumeric | e.g., `IOTC_0976` |
 | observer_full_name | M | The full name of the scientific observer who collected the data onboard the fishing vessel, or of the Electronic Monitoring reviewer, recorded as first and last names | String | e.g., `John Doe` |
 
+
 ## Observer trip details
 
 | **Embarkation:** The starting port. If the first observation is available after the departure form the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure), record "at sea".
@@ -147,12 +148,14 @@ Fill out focal point information (full name, email, finalization date, and submi
 | lost | O | The number of hours/days lost during the observation period | Integer | **EXAMPLE TO ADD** |
 :::
 
-| **Reasons for lost days:** Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
+| **Reasons for lost days:** Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify). Fields designated for up to 4 reasons for lost days. If applicable, fill following the format described below. 
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| reason | O | The main reasons for days at sea lost to fishing activity | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
+| reason 1 | O | The main reasons for days at sea lost to fishing activity | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
+
+
 
 # (V-INFO) Vessel \> General Information
 
@@ -194,7 +197,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| species 1 | M | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| species 1 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
 | species 2 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
 | species 3 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
 | species 4 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
@@ -314,44 +317,38 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Tonnage | O | The vessel gross tonnage (no unit) as specified in vessel registration documents | Float | e.g., `2319` |
-| Length | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
-| Hull material code | O | The vessel hull material | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
-| gross_tonnage | O | Gross tonnage (GT), a dimensionless measure of vessel's internal volume from registration documents | Integer | e.g., `2319` |
-| LOA_m | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
-| Hull material | O | The primary material used in the construction of the vessel's hull | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
+| tonnage | O | Gross tonnage (GT), a dimensionless measure of vessel's internal volume from registration documents | Integer | e.g., `2319` |
+| length_overall | O | The vessel overall length (LOA) (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
+| hull_material | O | The primary material used in the construction of the vessel's hull | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
 
 | **Main engines:** The make (brand) and power of the two main engines.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Make | O | **DESCRIPTION TO ADD** | String | e.g., `MAN Energy Solutions`  |
-| Power value | O | **DESCRIPTION TO ADD** | Float | e.g., `5000` |
-| Power unit | O | **DESCRIPTION TO ADD** | Power units: kilowatts (kW), horsepower (hp), or break horsepower (hp) | e.g., `kW` |
+| make | O | **DESCRIPTION TO ADD** | String | e.g., `MAN Energy Solutions`  |
+| power_value | O | **DESCRIPTION TO ADD** | Float | e.g., `5000` |
+| power_unit | O | **DESCRIPTION TO ADD** | Power units: kilowatts (kW), horsepower (hp), or break horsepower (hp) | e.g., `kW` |
 :::
 
 
 |  |  |  |  |  |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Fish storage capacity | O | The vessel total maximum capacity to store catches | Float | e.g., `1100` |
+| Fish storage capacity | O | The vessel total maximum capacity (m3) to store catches | Float | e.g., `1100` |
 
 | **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Preservation method 1 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
-| Preservation method 2 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
-| Preservation method 3 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
-| Preservation method 4 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| method_1 | O | form has fields designated for up to 4 different fish preservation methods |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+
 ::: 
 | **Fish storage types:** The type of structure(s) present on-board used by the vessel to store the catch
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Storage type 1 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
-| Storage type 2 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
-| Storage type 3 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+| type_1 | O | form has fields designated for up to 3 different fish storage types |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+
 
 
 
@@ -373,53 +370,26 @@ Fill out focal point information (full name, email, finalization date, and submi
 | VMS | O | Indicates whether or not one or more Vessel Monitoring Systems (VMS) were present on the vessel (Yes/No/Unk)  | String | e.g., `Yes` |
 | AIS | O | Indicates whether or not one or more Automatic Identification Systems (AIS) were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
 | Radars | O | Indicates whether or not one or more radars were present on the vessel (Yes/No/Unk) | String | e.g., `Yes`  |
-| Track plotter | O | Indicates whether or not one or more track plotters were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
-| Depth sounder | O | Indicates whether or not one or more depth sounders were present on the vessel (Yes/No/Unk)| String | e.g., `Yes` |
+| Track_plotter | O | Indicates whether or not one or more track plotters were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
+| Depth_sounder | O | Indicates whether or not one or more depth sounders were present on the vessel (Yes/No/Unk)| String | e.g., `Yes` |
 | Sonar | O | Indicates whether one or more sonars were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
-| Doppler current meter | O | Indicates whether one or more doppler current meters were present on the vessel | String | e.g., `Yes` |
+| Doppler_current_meter | O | Indicates whether one or more doppler current meters were present on the vessel | String | e.g., `Yes` |
 | XBT | O | Indicates whether or not one or more expendable bathythermographs (XBT) were present on the vessel | String | e.g., `Yes` |
-| VHF radios | O | Indicates whether or not one or more VHF radios weere present on the vessel | String | e.g., `Yes` |
-| HF radios | O | Indicates whether one or more HF radios were present or not on the vessel | String | e.g., `Yes` |
-| Satellite comms | O | Indicate whether or not one or more satellite communication systems were present on the vessel | String | e.g., `Yes` |
+| VHF_radios | O | Indicates whether or not one or more VHF radios weere present on the vessel | String | e.g., `Yes` |
+| HF_radios | O | Indicates whether one or more HF radios were present or not on the vessel | String | e.g., `Yes` |
+| Satellite_comms | O | Indicate whether or not one or more satellite communication systems were present on the vessel | String | e.g., `Yes` |
 | FIS | O | Indicates whether or not one or more Fisheries Information Services were present on the vessel | String | e.g., `Yes` |
 
 
 ## Waste Management Detail
 ::: {style="margin-left:40px"}
-| Waste Management Detail 1
+| Waste Management Detail: The reporting form has designated fields for up to 4 different waste management details. Follow format and code lists described below.
 :::
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Category | O | The category of the waste produced by the vessel |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
-| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
-:::
-::: {style="margin-left:40px"}
-| Waste Management Detail 2
-:::
-::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Category  | O  |	The category of the waste produced by the vessel | **Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
-| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
-:::
-::: {style="margin-left:40px"}
-| Waste Management Detail 3
-:::
-::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Category | O |	The category of the waste produced by the vessel | **Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
-| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
-:::
-::: {style="margin-left:40px"}
-| Waste Management Detail 4
-:::
-::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Category   |O  |	The category of the waste produced by the vessel  |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
-| Storage/disposal method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+| category | O | The category of the waste produced by the vessel |**Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
+| storage_disposal_method | O |	The method used to dispose of the waste | **Code** from [Storage/Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
 :::
 
 
@@ -435,80 +405,102 @@ Fill out focal point information (full name, email, finalization date, and submi
 |:----------------|:-----------:|:------------|:----------------:|:-----------:|
 | Net drum/hauler | M | Indicates if present on board. Vessels are normally equipped with a hydraulic net hauler; However they can also use net drums to both haul and store the net (Yes/NO/Unk)| String | e.g., `Yes` |
 
+# (G-CONFIG-GILLNETS)
+
+| Field | Requirement | Description | Format | Input value |
+|:-------------|:------------:|:----------------|:------------:|:------------:|
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| Gillnet sequential number | M | Specifies the gillnet sequential number  | Integer  |e.g., **ADD**  |
+
 ## Gillnet attributes (on the reporting form called GILLNET_CONFIGURATIONS) --- is it one entry per gillnet? that is what is insinuated by descriptions...
 
+## Gillnet configurations
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Gillnet sequential number | M | Specifies the gillnet sequential number  | Integer  |e.g., **ADD**  |
-| Total number of panels | M | The number of panels making up the net | Integer  | e.g., **ADD**  |
-| Panels stacked | M | Indicates whether or not any of the panels are stacked (Yes/No/Unk)  | String  | e.g., `Yes`  |
-| Net length | M | The net string length. Usually calculated by multiplying the panel average length by the number of panels used in the net |   |  |
-| Net depth | O  | The vertical height of the net (depth). Usually obstained by measuring the length of the end-line, or up-and-down the line, on the end of a net where the meshes are attached. This information may be used to cross check information provided by the crew  | Float  | e.g., **ADD**  |
-| Net material | O | The material of the net webbing  |**Code** from _____  | e.g., **ADD** |
+| total_number_of_panels | M | The number of panels making up the net | Integer  | e.g., **ADD**  |
+| panels_stacked | M | Indicates whether or not any of the panels are stacked (Yes/No/Unk)  | String  | e.g., `Yes`  |
+| net_length_value | M | The net string length. Usually calculated by multiplying the panel average length by the number of panels used in the net |   |  |
+| net_length_unit | M | Indicates units (m or km) | String | e.g., `km` |
+| net_depth | O  | The vertical height of the net (depth). Usually obstained by measuring the length of the end-line, or up-and-down the line, on the end of a net where the meshes are attached. This information may be used to cross check information provided by the crew  | Float  | e.g., **ADD**  |
+| net_material | O | The material of the net webbing  |**Code** from _____  | e.g., **ADD** |
 
-| **Stretched mesh size(s):** The average stretched lengths (knot to knot) and range of the mesh. Usually calculated by measuring at least 10 meshes from 5 panels in different areas of the net
-::: {style="margin-left:80px"}
+| **Stretched mesh size(s):** The average stretched lengths (knot to knot) and range of the mesh. Usually calculated by measuring at least 10 meshes from 5 panels in different areas of the net. Designated fields for up to 4 stretched mesh sizes and units. 
+::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| value 1 | M |  | Float | e.g., **ADD** |
+| value_1 | M |  | Float | e.g., **ADD** |
 | unit | M | Indicates units (mm or cm) | String | e.g., `mm`
-| value 2 | O |  | Float | e.g., **ADD** |
-| unit | O | Indicates units (mm or cm) | String | e.g., `mm`
-| value 3 | O |  | Float | e.g., **ADD** |
-| unit | O | Indicates units (mm or cm) | String | e.g., `mm`
-| value 4 | O |  | Float | e.g., **ADD** |
-| unit | O | Indicates units (mm or cm) | String | e.g., `mm`
+
 :::
+|  |  |  |  |  |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| vertical_mesh_count | O |The number of vertical meshes of a net in this gear. Usually obtained by counting the number of meshes of the end-line, or up and down line, on the end of a net where the meshes are attached. This information may be used to cross check information provided by the crew  | Integer | e.g., **ADD** |
+| hanging_ratio_perc | M | The ratio between the length of the float line and the length of the stretched mesh hanging on the float line. Usually obtained by the following process: 1) counting 10 or 12 meshes horizontally, 2) multiplying the number of counted meshes by average stretched mesh length; 3) measuring the length of the floatline they are attached to, 3) dividing the length of the floatline the meshes are attached to by the length of the stretched meshes counted | Float  |e.g., **ADD**  |
 
-| Mesh count, vertical | O |The number of vertical meshes of a net in this gear. Usually obtained by counting the number of meshes of the end-line, or up and down line, on the end of a net where the meshes are attached. This information may be used to cross check information provided by the crew  | Integer | e.g., **ADD** |
-| Hanging ratio (%) | M | The ratio between the length of the float line and the length of the stretched mesh hanging on the float line. Usually obtained by the following process: 1) counting 10 or 12 meshes horizontally, 2) multiplying the number of counted meshes by average stretched mesh length; 3) measuring the length of the floatline they are attached to, 3) dividing the length of the floatline the meshes are attached to by the length of the stretched meshes counted | Float  |e.g., **ADD**  |
-
-| **Net web colour:** The colour of the net webbing
-::: {style="margin-left:80px"}
+| **Net web colour:** The colour of the net webbing.Reporting form has designated fields for up to 4 net web coulours. Fill out as it applies following format described below.
+::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| colour 1 | M |  Indicates colour| **Code** from _____ | e.g., **ADD** |
-| colour 2 | O |  Indicates colour| **Code** from _____ | e.g., **ADD** |
-| colour 3 | O |  Indicates colour| **Code** from _____ | e.g., **ADD** |
-| colour 4 | O |  Indicates colour| **Code** from _____ | e.g., **ADD** |
-:::
+| colour_1 | M |  Indicates colour| **Code** from [Net Colours](#netColours) | e.g., `BL` |
 
+:::
+**Floats**
+::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Floats type | O | The type of buoyancy aid that is attached to the head-rope | **Code** from ____  | e.g., **ADD**  |
-| Float number | O | The approximate total number of floats used on this gillnet. This number must include the number of floats across a space that may occur at the bridle at the end of a net. This information may be obtained from the crew | Integer  | e.g., **ADD**  |
-| Distance between floats | O | The average distance (measured along the head-rope) between the floats used on this gillnet | Float | e.g., **ADD** |
-| Droplines used | O | Indicates whether or not droplines were used (Yes/No/Unk) | String  | e.g., `Yes`  |
-| Droplines length | O | If droplines were used in this gillnet, indicates the length of the droplines. Usually obtained by measuring the distance from the floats (at the water's surface) to the float-line. This information can be used to cross check information provided by the crew  |Float | e.g., **ADD** |
-| Sinker type | O | The sinker type attached to the footrope. The type is defined by the material it is made of | **Code** from ____  | e.g., **ADD** |
-| Sinker number |O  |Indicates an approximate total number of sinkers attached to the footrope. If more than one type of sinker is used, the indicates approximate total numer of sinker/weghts per sinker type. This information may be obtained from the crew  |Integer |e.g., **ADD**  |
-| Sinker average weight | O | The average sinker weight. If more than one type of sinker is used, then is an average weight per sinker type | Float  | e.g., **ADD**  |
-- do we need a units column? or is the unit for the sinker always consistent? ^^
+| type | O | The type of buoyancy aid that is attached to the head-rope | **Code** from [Float Types](#float)  | e.g., `FO`  |
+| number | O | The approximate total number of floats used on this gillnet. This number must include the number of floats across a space that may occur at the bridle at the end of a net. This information may be obtained from the crew | Integer  | e.g., **ADD**  |
+| distance_between_floats | O | The average distance (measured along the head-rope) between the floats used on this gillnet | Float | e.g., **ADD** |
+:::
 
-# Gillnet Fishing Event
+**Droplines**
+::: {style="margin-left:40px"}
+||||||
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| used | O | Indicates whether or not droplines were used (Yes/No/Unk) | String  | e.g., `Yes`  |
+| length | O | If droplines were used in this gillnet, indicates the length of the droplines. Usually obtained by measuring the distance from the floats (at the water's surface) to the float-line. This information can be used to cross check information provided by the crew  |Float | e.g., **ADD** |
+| unit | O | Indicates units (cm or m) | String | e.g., `cm`
+:::
+
+
+# (G-CONFIG-SINKERS)
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| Set number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
-| Gillnet sequential number | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
-**Change Set number to SET ID?**
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| gillnet_sequential_number | M | Specifies the gillnet sequential number  | Integer  |e.g., **ADD**  |
+
+**Sinkers**
+||||||
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| type | O | The sinker type attached to the footrope. The type is defined by the material it is made of | **Code** from [Sinker Material Types](#sinkerMaterialTypes)  | e.g., `CM` |
+| number |O  |Indicates an approximate total number of sinkers attached to the footrope. If more than one type of sinker is used, the indicates approximate total number of sinker/weights per sinker type. This information may be obtained from the crew  |Integer |e.g., **ADD**  |
+| average_weight_value | O | The average sinker weight. If more than one type of sinker is used, then is an average weight per sinker type | Float  | e.g., **ADD**  |
+ <!-- do we need a units column? or is the unit for the sinker always consistent? ^^ -->
+ 
 
 
 # (E-SET) Gillnet setting operations
 
+| Field | Requirement | Description | Format | Input value |
+|:-------------|:------------:|:----------------|:------------:|:------------:|
+| Observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| gillnet_sequential_number  | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
+**Change Set number to SET ID?**
+
+
 ## Setting operations
 
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+
 | **Start setting:** The time that the first panel enters the water (ie. start of the setting of the net)
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Date and time | M | The date and the time in GMT/UTC at the start of the setting operation | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| Latitude | O | The latitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| Longitude | O | The longitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| date_time_utc | M | The date and the time in GMT/UTC at the start of the setting operation | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| latitude | M | The latitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| longitude | M | The longitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 | **End setting:** The time that the gillnet is secured to the vessel, to an anchoring device, or completely deployed (i.e. end of net setting). Gillnet vessels often set dusk and the setting operation may continue beyond midnight into the following day
@@ -516,27 +508,32 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Date and time | M | The date and the time in GMT/UTC at the end of the setting operation | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| Latitude | O | The latitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| Longitude | O | The longitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| date_time_UTC | M | The date and the time in GMT/UTC at the end of the setting operation | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| latitude | O | The latitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| longitude | O | The longitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Vessel speed | O | Record the vessel’s average speed during setting (knots) | Float | e.g., **ADD** |
-| Vertical set | M  | Indicates the level the gillnet is set at vertically in the water column, (i.e. if the net is set at the surface or sub-surface)  | **UNSURE OF FORMAT** |  |
-| Setting strategy | M  |  | **Code** from ____  |e.g., **ADD**  |
-| Setting shape | O |  | **Code** from _____  | e.g., **ADD** |
+| vessel_speed | O | Record the vessel’s average speed during setting (knots) | Float | e.g., **ADD** |
 
-# Gillnet mitigation measures
+**Setting**
+::: {style="margin-left:40px"}
+| Element | Requirement | Description | Format | Input value |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| vertical | M  | Indicates the level the gillnet is set at vertically in the water column, (i.e. if the net is set at the surface or sub-surface)  | **UNSURE OF FORMAT** |  |
+| strategy | M  |  | **Code** from [Setting Strategy](#settingStrategy)  |e.g., `DA`  |
+| shape | O |  | **Code** from [Configurations](#configurations)  | e.g., `CI` |
+:::
+<!-- Setting Strategy and Shape (configurations) code lists are not in Meta on PgAdmin -->
+
+
+**Mitigation measures:** Designated fields for up to 4 different mitigation measures. If applicable, fill out subsequent device codes in format described below.
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Mititgation measures | M | Indicates whether of not any bycatch mitigation devices were used during the set (Yes/No/Unk) | String | e.g., `Yes`  |
-| Mitigation device 1 | O | Indicates any mitigation devices used during the set | **Code** from ____ | e.g., **ADD**  |
-| Mitigation device 2 | O | Indicates any mitigation devices used during the set | **Code** from ____ | e.g., **ADD**  |
-| Mitigation device 3 | O | Indicates any mitigation devices used during the set | **Code** from ____ | e.g., **ADD**  |
-| Mitigation device 4 | O | Indicates any mitigation devices used during the set | **Code** from ____ | e.g., **ADD**  |
+| used | M | Indicates whether of not any bycatch mitigation devices were used during the set (Yes/No/Unk) | String | e.g., `Yes`  |
+| device_1 | O | Indicates any mitigation devices used during the set | **Code** from [Mitigation Devices](#migitationDevices) | e.g., `AA`  |
 
 
 
@@ -544,8 +541,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| Set number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
 
 ## Hauling operations
 
@@ -555,9 +552,9 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Date and time | M | The date and the time in GMT/UTC  of the start of the hauling operation | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| Latitude | M | The latitude of the position at the start of the hauling operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| Longitude | M | The longitude of the position at the start of the hauling operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| date_time_UTC | M | The date and the time in GMT/UTC  of the start of the hauling operation | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| latitude | M | The latitude of the position at the start of the hauling operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| longitude | M | The longitude of the position at the start of the hauling operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 | **End hauling:** The time when the gillnet is completely retrieved and onboard the vessel
@@ -565,55 +562,55 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Date and time | O | The date and the time when the gillnet is hauled back on-board | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| Latitude | O | The latitude of the position at the end of the hauling operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| Longitude | O | The longitude of the position at the end of the hauling operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| date_time_UTC | O | The date and the time when the gillnet is hauled back on-board | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| latitude | O | The latitude of the position at the end of the hauling operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| longitude | O | The longitude of the position at the end of the hauling operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 ||||||
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Net condition | M | Indicated the condition of the net at haul-back, even if the condition was the same as at setting |**Code** from ____  | e.g., **ADD**  |
-| Number of net panels retrieved | M | The total number of net panels retrieved at haul | Integer |  |
-| Number of net panels observed | M | The total number of hauled net panels that are observed | Integer |  |
-| Sampling protocol | M | Indicates the sampling protocol followed by the observer to select which net panels to observe |**Code* from ___ |e.g., **ADD**  |
+| net_condition | M | Indicated the condition of the net at haul-back, even if the condition was the same as at setting |**Code** from [Net Conditions](#netConditions) | e.g., `HI`  |
+| net_panels_number_retrieved | M | The total number of net panels retrieved at haul | Integer |  |
+| net_panels_number_observed | M | The total number of hauled net panels that are observed | Integer |  |
+| sampling_protocol | M | Indicates the sampling protocol followed by the observer to select which net panels to observe |**CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
 
 # (E-SET-CATCHES) Gillnet catch details
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| Set number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
-| Gillnet sequential number | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
+| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| catch_number | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
 **Change Set number to SET ID?**
 
 ## Catch details
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Species code | M | The species for each specimen observed | **Code** from [All Species](#allSpecies)| e.g., `ABL` |
+| species | M | The species for each specimen observed | **Code** from [All Species](#allSpecies)| e.g., `ABL` |
 
 | **Fate:** The fate which includes whether it was retained or discarded and the reason
 
 ::: {style="margin-left:40px"}
 | Element              | Requirement | Description | Format  | Input value |
 |:---------------------|:-----------:|:------------|:-------:|:-----------:|
-| Type | M | **DESCRIPTION TO ADD** | **Code** from [Types of Fate](#fateType) | e.g., `DI` |
-| Code | M | **DESCRIPTION TO ADD** | **Code** from [Fates](#fates) | e.g., `DL` |
+| type | M | **DESCRIPTION TO ADD** | **Code** from [Types of Fate](#fateType) | e.g., `DI` |
+| code | M | **DESCRIPTION TO ADD** | **Code** from [Fates](#fates) | e.g., `DL` |
 :::
 
-| Sampling method code | M | **DESCRIPTION TO ADD** |  **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
-| Number of fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | **EXAMPLE TO ADD** |
+| sampling_method | M | Indicate the sampling method used to obtain total catch estimates per species |  **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
+| num_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | **EXAMPLE TO ADD** |
 
 **Weight:** The catch weight corresponding to the specified product type recorded in 'weight code’. If the fish has not been processed, record the unprocessed weight
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Processing type | O | **DESCRIPTION TO ADD** | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
-| Value | O | **DESCRIPTION TO ADD** | Float | **EXAMPLE TO ADD** |
-| Weight units | O | **DESCRIPTION TO ADD** | Indicate units (kg or tonnes) | e.g., `kg`  |
-| Estimation method | O | **DESCRIPTION TO ADD** | **Code** from [Total Catch Estimation](#totalCatchEstimation) | e.g., `EP` |
+| processing_type | M | **DESCRIPTION TO ADD** | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
+| value | M | **DESCRIPTION TO ADD** | Float | **EXAMPLE TO ADD** |
+| unit | M | **DESCRIPTION TO ADD** | Indicate units (kg or tonnes) | e.g., `kg`  |
+| estimation_method | M | **DESCRIPTION TO ADD** | **Code** from [Total Catch Estimation](#totalCatchEstimation) | e.g., `EP` |
 :::
 
 
@@ -621,18 +618,20 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| Set number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
 | catch_number | M  |  |   |  |
 | specimen_number | M  |  |   |  |
-**Change Set number to SET ID?** And same for catch and specimen number?
+
+<!--Change Set number to SET ID?** And same for catch and specimen number?-->
+
 
 ## Specimen details > Non-target species
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Condition at capture | M | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
-| Condition at release | M | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
+| condition_at_capture | O | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
+| condition_at_release | O | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
 
 **It is a bit strange to report non-target species BEFORE target species, no?**
 
@@ -640,8 +639,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Depredation source | O | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
-| Observed predatory | O | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed, the value is 'UNK' (unknown). For non-depredated specimens record, the value is NA (not available) | **Code** from [Predator Species](#predatorSpecies)| e.g., AG15 |
+| depredation_source | M | For depredated specimens/or catch, record the depredation source based on depredation scar characteristics. For non-depredated specimens record NA | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
+| observed_predator | M | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed, the value is 'UNK' (unknown). For non-depredated specimens record, the value is NA (not available) | **Code** from [Predator Species](#predatorSpecies)| e.g., AG15 |
 
 
 | Field | Requirement | Description | Format | Input value |
@@ -653,10 +652,10 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Type | M | The type of length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
-| Value | M | The value of length corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
-| Measuring tool | M | Specify the tool code used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools)  |e.g., `CA`  |
-| Is straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
+| type | M | The type of length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
+| value | M | The value of length corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
+| measuring_tool | M | Specify the tool code used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools)  |e.g., `CA`  |
+| is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
 :::
 <!-- I would remove the "Is straight" field since the type of length measurements indicates how the measurement was taken (straight, curved), and the guidelines for observers should include that the measurements should be taken straight for fish (fork length, total length, etc.) -->
 
@@ -665,10 +664,10 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Type | O | The length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements)| e.g., `FL` |
-| Value | O | The value of length (cm) corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `86` |
-| Measuring tool | O | The tool used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
-| Is straight | O | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `No`  |
+| type | O | The length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements)| e.g., `FL` |
+| value | O | The value of length (cm) corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `86` |
+| measuring_tool | O | The tool used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
+| is_straight | O | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `No`  |
 :::
 <!-- I would remove the "Is straight" field since the type of length measurements indicates how the measurement was taken (straight, curved), and the guidelines for observers should include that the measurements should be taken straight for fish (fork length, total length, etc.) -->
 
@@ -677,35 +676,34 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Processing type | O | The processing used for the weight measurement | **Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
-| Value | O | The weight corresponding to the measurement type code | Float | e.g., `43.2` |
-| KG/T  | O | Unit of weight (kg or t) | String | e.g., `kg` |
-| Estimation method code | O | Method used to estimate weight of specimen | **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` |
+| processing_type | O | The processing used for the weight measurement | **Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
+| value | O | The weight corresponding to the measurement type code | Float | e.g., `43.2` |
+| unit | O | Unit of weight (kg or t) | String | e.g., `kg` |
+| estimation_method_code | O | Method used to estimate weight of specimen | **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` |
 :::
-<!-- PROPOSAL TO RENAME 'KG/T' to "Weight unit" or "Unit" -->
+<!-- PROPOSAL TO RENAME 'KG/T' to "Weight unit" or "Unit", or is the unit always consistent? -->
 
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | Sex | O | The sex of the sampled fish specimen. If unknown record "U" | **Code** from [Sex](#sex) | e.g., `F` |
 
-| Maturity: optional reporting
-| The stage of maturity of the specimen according to standard maturity scales approved by the IOTC. If unknown record UNK.
+| **Maturity:** The stage of maturity of the specimen according to standard maturity scales approved by the IOTC. If unknown record UNK.
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Scale | O | **DESCRIPTION TO ADD** | String | **Code list being developed** |
-| Stage | O | **DESCRIPTION TO ADD** | String | **Code list being developed** |
+| scale | O | **DESCRIPTION TO ADD** | String | **Code list being developed** |
+| stage | O | **DESCRIPTION TO ADD** | String | **Code list being developed** |
 :::
 
-| Sample collected: The following details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
+| **Sample collected:** The following details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Type | O | **DESCRIPTION TO ADD** | Code from [Sampling Type](#samplingMethodsForSamplingCollections) | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD**|
-| Preservation method | O | **DESCRIPTION TO ADD** | Code from [Sample Preservation Method](#fishPreservationMethods) | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD** |
+| type | O | **DESCRIPTION TO ADD** | Code from [Sampling Type](#samplingMethodsForSamplingCollections) | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD**|
+| preservation_method | O | **DESCRIPTION TO ADD** | Code from [Sample Preservation Method](#fishPreservationMethods) | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD** |
 | **Destination** | **DESCRIPTION TO ADD & ADD FIELD TO THE FORMS** | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD** |
 :::
 
@@ -714,22 +712,22 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Release | O |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
-| Recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
-| Type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
-| Tag number 1 | O | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
+| Release | M |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
+| Recovery | M | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
+| Type | M | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
+| Tag number 1 | M | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
 | Tag number 2 | O | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
-| Finder name | O | **DESCRIPTION TO ADD** | String | e.g., `Jane Doe` |
-| Finder contact details | O | **DESCRIPTION TO ADD** | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
+| Finder name | M | The name of the person who recovered the tag | String | e.g., `Jane Doe` |
+| Finder contact details | M | The contact details for the person who recovered the tag | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
 
 
 
-# E-SET-CATCHES-SPECIMEN-SSI
+# (E-SET-CATCHES-SPECIMEN-SSI) 
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| Set number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
 | catch_number | M  |  |   |  |
 | specimen_number | M  |  |   |  |
 **Change Set number to SET ID?** And same for catch and specimen number?
@@ -739,7 +737,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
 | Gear interaction code | O | Specify the type of interaction of the specimen with the fishing gear. In the case of difficulty to collect this information, use the code "UNK" | Two letters code |  |
-| Brought onboard | M | Indicate Yes or No, if the specimen was brought onboard | Yes/No |  |
+| Brought onboard | O | Indicate Yes or No, if the specimen was brought onboard | Yes/No |  |
 | Handling method code | O | Detail how the specimen was brought onboard | Two letters code |  |
 | Revival | O | For turtles indicate Yes if the release took place with resuscitation and No if not | Yes/No |  |
 | Photo ID | O | If a photo is taken, record photo number/code so that it can be linked back to the specimen for onshore examination | Photo code |  |
@@ -811,23 +809,397 @@ Fill out focal point information (full name, email, finalization date, and submi
 ## Product transhipped
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| species_code | O | description | **Code** from ___ | e.g., **ADD**
-| processing_type_code | O | description | **Code** from ___ | e.g., **ADD**
+| species_code | O | description | **Code** from [All Species](#allSpecies)| e.g., `ABL` |
+| processing_type_code | O | description | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
 
 | **Quantity**
 | value | O | description | float | e.g., 
 | units | O | Indicates units (kg or t) | String | e.g., `kg` | 
 
 
+# Reporting Deadlines
+- 30 June
+
+# Reference Code Lists
+
+## Entities {#entities}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
+-   **Version**: `r version_number("ENTITIES")`
+-   **Last update**: `r last_update("ENTITIES")`
+
+```{r collapse = TRUE}
+out_dt(ENTITIES, "ENTITIES")
+```
+
+## Countries {#countries}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
+-   **Version**: `r version_number("COUNTRIES")`
+-   **Last update**: `r last_update("COUNTRIES")`
+
+```{r collapse = TRUE}
+out_dt(COUNTRIES, "COUNTRIES")
+```
+
+## Ports {#ports}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/admin/#Ports)
+-   **Version**: `r version_number("PORTS")`
+-   **Last update**: `r last_update("PORTS")`
+
+```{r collapse = TRUE, warning = FALSE}
+out_dt(PORTS[, -c("POINT")], "PORTS")
+```
+
+## Reasons for Days Lost {#reasonsDaysLost}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#reasonsDaysLost)
+-   **Version**: `r version_number("REASONS_DAYS_LOST")`
+-   **Last update**: `r last_update("REASONS_DAYS_LOST")`
+
+```{r collapse = TRUE}
+out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
+```
+
+## Target Species {#targetSpecies}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#targetSpecies)
+-   **Version**: `r version_number("SPECIES_TARGET")`
+-   **Last update**: `r last_update("SPECIES_TARGET")`
+
+```{r collapse = TRUE}
+out_dt(SPECIES_TARGET, "SPECIES_TARGET")
+```
+
+<!-- Code list to remove from IOTC Reference Data Catalogue to put in LEGACY?: https://data.iotc.org/reference/latest/domain/biology/#targetSpecies. Replaced by the following code list (https://data.iotc.org/reference/latest/domain/biology/#targetSpecies) used to define fisheries identifiers and developed in collaboration with CPCs through IOTC Data Reporting Workshops -->
+
+## Fishing Gears {#fishingGear}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#gears)
+-   **Version**: `r version_number("GEAR_TYPES")`
+-   **Last update**: `r last_update("GEAR_TYPES")`
+
+```{r collapse = TRUE}
+out_dt(GEAR_TYPES, "GEAR_TYPES")
+```
+
+## Hull Material Types {#hullMaterialTypes}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#hullMaterialTypes)
+-   **Version**: `r version_number("HULL_MATERIAL_TYPES")`
+-   **Last update**: `r last_update("HULL_MATERIAL_TYPES")`
+
+```{r collapse = TRUE}
+out_dt(HULL_MATERIAL_TYPES, "HULL_MATERIAL_TYPES")
+```
+
+## Fish Preservation Methods {#fishPreservationMethods}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishPreservationMethods)
+-   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
+-   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
+
+```{r collapse = TRUE}
+out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
+```
+
+## Fish Storage Types {#fishStorageTypes}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
+-   **Version**: `r version_number("FISH_STORAGE_TYPES")`
+-   **Last update**: `r last_update("FISH_STORAGE_TYPES")`
+
+```{r collapse = TRUE}
+out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
+```
 
 
+## Waste Categories {#wasteCategories}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#wasteCategories)
+-   **Version**: `r version_number("WASTE_CATEGORIES")`
+-   **Last update**: `r last_update("WASTE_CATEGORIES")`
+
+```{r collapse = TRUE}
+out_dt(WASTE_CATEGORIES, "WASTE_CATEGORIES")
+```
+
+## Storage/Disposal Methods {#storageDisposalMethods}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#wasteDisposalMethods)
+-   **Version**: `r version_number("WASTE_DISPOSAL_METHODS")`
+-   **Last update**: `r last_update("WASTE_DISPOSAL_METHODS")`
+
+```{r collapse = TRUE}
+out_dt(WASTE_DISPOSAL_METHODS, "WASTE_DISPOSAL_METHODS")
+```
+
+## Net Colours {#netColours}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#netColours)
+-   **Version**: `r version_number("NET_COLOURS")`
+-   **Last update**: `r last_update("NET_COLOURS")`
+
+```{r collapse = TRUE}
+out_dt(NET_COLOURS, "NET_COLOURS")
+```
+
+## Float Types {#floatTypes}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#floatTypes)
+-   **Version**: `r version_number("FLOAT_TYPES")`
+-   **Last update**: `r last_update("FLOAT_TYPES")`
+
+```{r collapse = TRUE}
+out_dt(FLOAT_TYPES, "FLOAT_TYPES")
+```
+
+## Sinker Material Types {#sinkerMaterialTypes}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#sinkerMaterialTypes)
+-   **Version**: `r version_number("SINKER_MATERIAL_TYPES")`
+-   **Last update**: `r last_update("SINKER_MATERIAL_TYPES")`
+
+```{r collapse = TRUE}
+out_dt(SINKER_MATERIAL_TYPES, "SINKER_MATERIAL_TYPES")
+```
+
+## Setting Strategy {#settingStrategy}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#netSettingStrategies)
+-   **Version**: `r version_number("_____________")`
+-   **Last update**: `r last_update("_____________")`
+
+```{r collapse = TRUE}
+#out_dt(_____________, "_____________")
+```
+
+Configurations {#configurations}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#netConfigurations)
+-   **Version**: `r version_number("_____________")`
+-   **Last update**: `r last_update("_____________")`
+
+```{r collapse = TRUE}
+#out_dt(_____________, "_____________")
+```
+
+## Mitigation Devices {#mitigationDevices}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#mitigationDevices)
+-   **Version**: `r version_number("MITIGATION_DEVICES")`
+-   **Last update**: `r last_update("MITIGATION_DEVICES")`
+
+```{r collapse = TRUE}
+out_dt(MITIGATION_DEVICES, "MITIGATION_DEVICES")
+```
+
+## Net Conditions {#netConditions}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#netConditions)
+-   **Version**: `r version_number("NET_CONDITIONS")`
+-   **Last update**: `r last_update("NET_CONDITIONS")`
+
+```{r collapse = TRUE}
+out_dt(NET_CONDITIONS, "NET_CONDITIONS")
+```
+
+## Sampling protocols {#samplingProtocols}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingProtocols)
+-   **Version**: `r version_number("SAMPLING_PROTOCOLS")`
+-   **Last update**: `r last_update("SAMPLING_PROTOCOLS")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
+```
 
 
+## All Species {#allSpecies}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
+-   **Version**: `r version_number("SPECIES")`
+-   **Last update**: `r last_update("SPECIES")`
+
+```{r collapse = TRUE}
+out_dt(SPECIES, "SPECIES")
+```
+
+## Types of Fate {#fateType}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#typesOfFate)
+-   **Version**: `r version_number("TYPES_OF_FATE")`
+-   **Last update**: `r last_update("TYPES_OF_FATE")`
+
+```{r collapse = TRUE}
+out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
+```
+
+## Fates {#fates}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#fates)
+-   **Version**: `r version_number("FATES")`
+-   **Last update**: `r last_update("FATES")`
+
+```{r collapse = TRUE}
+out_dt(FATES, "FATES")
+```
+
+## Sampling Method for Catch Estimation {#samplingMethodCatchEstimation}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForCatchEstimation)
+-   **Version**: `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
+-   **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
+```
 
 
+## Fish Processing Types {#fishProcessingTypes}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishProcessingTypes)
+-   **Version**: `r version_number("FISH_PROCESSING_TYPES")`
+-   **Last update**: `r last_update("FISH_PROCESSING_TYPES")`
+
+```{r collapse = TRUE}
+out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
+```
+
+## Total Catch Estimation {#totalCatchEstimation}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForCatchEstimation)
+-   **Version**: `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
+-   **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
+```
 
 
+## Individual Conditions {#individualConditions}
 
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#individualConditions)
+-   **Version**: `r version_number("INDIVIDUAL_CONDITIONS")`
+-   **Last update**: `r last_update("INDIVIDUAL_CONDITIONS")`
+
+```{r collapse = TRUE}
+out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
+```
+
+
+## Depredation Sources {#depredationSources}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#depredationSources)
+-   **Version**: `r version_number("DEPREDATION_SOURCES")`
+-   **Last update**: `r last_update("DEPREDATION_SOURCES")`
+
+```{r collapse = TRUE}
+out_dt(DEPREDATION_SOURCES, "DEPREDATION_SOURCES")
+```
+
+## Predator Species {#predatorSpecies}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#predators)
+-   **Version**: `r version_number("SPECIES_PREDATORS")`
+-   **Last update**: `r last_update("SPECIES_PREDATORS")`
+
+```{r collapse = TRUE}
+out_dt(SPECIES_PREDATORS, "SPECIES_PREDATORS")
+```
+
+## Biological Sampling Method {#biologicalSamplingMethod}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForSamplingCollection)
+-   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+-   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
+```
+
+
+## Length Measurements {#lengthMeasurements}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#lengthMeasurements)
+-   **Version**: `r version_number("MEASUREMENTS")`
+-   **Last update**: `r last_update("MEASUREMENTS")`
+
+```{r collapse = TRUE}
+out_dt(MEASUREMENTS, "MEASUREMENTS")
+```
+**I do not see a more specific schema in the pgAdmin codelists**
+
+## Length Measurement Tools {#lengthMeasurementTools}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#lengthMeasurementTools)
+-   **Version**: `r version_number("MEASUREMENT_TOOLS")`
+-   **Last update**: `r last_update("MEASUREMENTS_TOOLS")`
+
+```{r collapse = TRUE}
+out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
+```
+
+## Weight Measurements {#weightMeasurememts}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightMeasurements)
+-   **Version**: `r version_number("MEASUREMENTS")`
+-   **Last update**: `r last_update("MEASUREMENTS")`
+
+```{r collapse = TRUE}
+out_dt(MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CODE")], "MEASUREMENTS")
+```
+
+## Weight Estimation Methods {#weightEstimationMethods}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightEstimationMethods)
+-   **Version**: `r version_number("MEASUREMENT_TOOLS")`
+-   **Last update**: `r last_update("MEASUREMENTS_TOOLS")`
+
+```{r collapse = TRUE}
+out_dt(MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CODE")], "MEASUREMENT_TOOLS")
+```
+
+## Sex {#sex}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#sex)
+-   **Version**: `r version_number("SEX")`
+-   **Last update**: `r last_update("SEX")`
+
+```{r collapse = TRUE}
+out_dt(SEX, "SEX")
+```
+
+## Sampling Type {#samplingMethodsForSamplingCollections}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForSamplingCollection)
+-   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+-   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
+```
+
+## Sample Preservation Methods{#fishPreservationMethods}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
+-   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
+-   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
+
+```{r collapse = TRUE}
+out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
+```
+
+## Tag Types {#tagTypes}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#tagTypes)
+-   **Version**: `r version_number("TAG_TYPES")`
+-   **Last update**: `r last_update("TAG_TYPES")`
+
+```{r collapse = TRUE}
+out_dt(TAG_TYPES, "TAG_TYPES")
+```
 
 
 
