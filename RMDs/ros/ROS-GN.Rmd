@@ -249,23 +249,6 @@ Fill out focal point information (full name, email, finalization date, and submi
 | date_time_utc |  O  | The date and time (in Coordinated Universal Time, UTC) corresponding to the start of the observation period at the reported location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
-::: {style="margin-left:40px"}
-| **At sea**
-:::
-
-::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O | The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | e.g., `FRA` |
-| latitude | O | The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
-:::
-
-::: {style="margin-left:40px"}
-|  |  |  |  |  |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_UTC | O | The date and time the vessel departed from port or from a transshipment location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-:::
 
 | **Vessel return:** The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record 'at-sea' plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
 
@@ -286,24 +269,6 @@ Fill out focal point information (full name, email, finalization date, and submi
 |               |     |     |                  |                        |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | date_time_UTC |  O  | The date and time (in Coordinated Universal Time, UTC) corresponding to the end of the observation period at the reported location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-:::
-
-::: {style="margin-left:40px"}
-| **At sea**
-:::
-
-::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O | The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
-| latitude | O | The latitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `55.53` |
-:::
-
-::: {style="margin-left:40px"}
-|  |  |  |  |  |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | O | The date and time the fishing vessel finishes its fishing campaign, i.e., returns to port or to a transshipment location for unloading. If is the expected date and time of arrival (ETA) if the observer disembarks before the vessel returns | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
 
@@ -477,7 +442,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | number |O  |Indicates an approximate total number of sinkers attached to the footrope. If more than one type of sinker is used, the indicates approximate total number of sinker/weights per sinker type. This information may be obtained from the crew  |Integer |e.g., **ADD**  |
 | average_weight_value | O | The average sinker weight. If more than one type of sinker is used, then is an average weight per sinker type | Float  | e.g., **ADD**  |
  <!-- do we need a units column? or is the unit for the sinker always consistent? ^^ -->
- 
+| units | O | indicates units (g or kg) | String | e.g., `kg`|
 
 
 # (E-SET) Gillnet setting operations
@@ -580,9 +545,10 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
 | observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
-| catch_number | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
-**Change Set number to SET ID?**
+| set_ID | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| catch_ID  | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
+
+**ISN'T CATCH NUMBER SUPPOSED TO BE GILLNET SEQUENTIAL NUMBER?**
 
 ## Catch details
 
@@ -749,6 +715,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 |:-------------|:------------:|:----------------|:------------:|:------------:|
 | Observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
 | Transhipment_number | M  | **ADD DESCRIPTION** |   |e.g., **ADD**  |
+***CHANGE TO TRANSHIPMENT ID**
 
 
 ## Vessel Transhipment Event
