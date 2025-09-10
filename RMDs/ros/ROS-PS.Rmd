@@ -856,6 +856,18 @@ out_dt(SPECIES_CETACEANS, "SPECIES_CETACEANS")
 ```
 
 
+## All Species {#allSpecies}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
+-   **Version**: `r version_number("SPECIES")`
+-   **Last update**: `r last_update("SPECIES")`
+
+```{r collapse = TRUE}
+out_dt(SPECIES, "SPECIES")
+```
+
+
+
 ## Types of Fate {#fateTypes}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#typesOfFate)
