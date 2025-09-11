@@ -124,6 +124,8 @@ DATA_SOURCES_SF = read_codelist(domain = "data", codelist = "DATA_SOURCES_SF")
 
 DATA_SOURCES_FC = read_codelist(domain = "data", codelist = "DATA_SOURCES_FC")
 
+DATA_SOURCES_RO = read_codelist(domain = "data", codelist = "DATA_SOURCES_RO")
+  
 DATA_PROCESSINGS_DI = read_codelist(domain = "data", codelist = "DATA_PROCESSINGS_DI")
 
 DATA_PROCESSINGS_RC = read_codelist(domain = "data", codelist = "DATA_PROCESSINGS_RC")

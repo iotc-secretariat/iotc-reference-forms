@@ -1,57 +1,67 @@
 This document is a review of errors, inconsistencies, and updates needed in the ROS reporting forms and ROS form descriptions. 
 
+# Missing code lists
+
+The following code lists should be built and added to the IOTCReferenceData and ROS databases:
+
+| Sheet | Field | Database | Comment |
+|:------------|:--------------------------------|:---------:|:------ |
+| E-SET-CATCH-SPECIMENS | Sample type | `ros_common.sample_collection_details.sample_type` | Code list to develop |
+| E-SET-CATCH-SPECIMENS | Sample Preservation Method | `ros_common.sample_collection_details.preservation_method` | To develop |
+| E-SET-CATCH-SPECIMENS | Sample destination | `ros_common.sample_collection_details.destination` | Code list to develop |
+| E-SET-CATCH-SPECIMENS | Maturity scale | `ros_common.maturity_stages.scale` | Code list to develop |
+| E-SET-CATCH-SPECIMENS | Maturity stage | `ros_common.maturity_stages.maturity_level` | Code list to develop - rename table to maturity and field to maturity_stage |
+| G-CONFIG-MITIGATION-DEVICES | Towed object type | Code list of types of towed objects |
+
 ## Longline Form
 
-|Section | Form | Database | Comment |
-|:-------|:--------------------------------|:---------:|:------ |
-| V-INFO | 'REG_NUMBER' to 'REGISTRATION_NUMBER' | `ros_common.vessel_identification.registration_number` | ok | 
-| V-ATTRIBUTES | 'TONNAGE' to 'GROSS_TONNAGE' | `ros_common.tonnages.value` | Remove values reported in "GRT" |
-| V-ATTRIBUTES | 'LENGTH' to 'LOA_M'| `ros_common.lengths.value` | Remove unit - loss of data reported in "KM" | 
-| V-ATTRIBUTES | 'FISH_STORAGE_CAPACITY_VALUE' to "FISH_STORAGE_CAPACITY_M3" | `ros_common.capacities.value` | |
-| V-ATTRIBUTES | 'FISH_STORAGE_CAPACITY_UNIT' to remove | `ros_common.capacities.unit` | To do - loss of values reported in "MT" |
-| V-ATTRIBUTES | 'METHOD_X_CODES' to 'METHOD_X' | `ros_common.vessel_attributes_fish_preservation_method.fish_preservation_method_code` | ok |
-| V-ATTRIBUTES | 'FISH_STORAGE_TYPE_X_CODE' to 'FISH_STORAGE_TYPE_X' | `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` | ok |
-| V-ATTRIBUTES | 'DAYS \| NM" to 'AUTONOMY_RANGE_UNIT' | `ros_common.ranges.unit` | ok |
-| V-ATTRIBUTES | 'GPS' to 'GNSS' |  `ros_common.vessel_electronics.gps` | To do |
-| V-ATTRIBUTES | 'SATELLITE_COMS' to 'SATCOM' | `ros_common.vessel_electronics/satellite_communication_systems` | To do |
-| V-ATTRIBUTES | 'CATEGORY_X_CODE' to 'CATEGORY_X' | `ros_common.waste_managements.waste_category_code` | |
+| Section | Old field | New field | Database | Comment |
+|:--------------| :--------- | :--------- |:--------- | :------ |
+| V-INFO | 'REG_NUMBER' | 'REGISTRATION_NUMBER' | `ros_common.vessel_identification.registration_number` | ok | 
+| V-ATTRIBUTES | 'TONNAGE' | 'GROSS_TONNAGE' | `ros_common.tonnages.value` | Remove values reported in "GRT" |
+| V-ATTRIBUTES | 'LENGTH' | 'LOA_M'| `ros_common.lengths.value` | Remove unit - loss of data reported in "KM" | 
+| V-ATTRIBUTES | 'FISH_STORAGE_CAPACITY_VALUE' | "FISH_STORAGE_CAPACITY_M3" | `ros_common.capacities.value` | |
+| V-ATTRIBUTES | 'FISH_STORAGE_CAPACITY_UNIT' | remove | `ros_common.capacities.unit` | To do - loss of values reported in "MT" |
+| V-ATTRIBUTES | 'METHOD_X_CODES' | 'METHOD_X' | `ros_common.vessel_attributes_fish_preservation_method.fish_preservation_method_code` | ok |
+| V-ATTRIBUTES | 'FISH_STORAGE_TYPE_X_CODE' | 'FISH_STORAGE_TYPE_X' | `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` | ok |
+| V-ATTRIBUTES | 'DAYS \| NM" | 'AUTONOMY_RANGE_UNIT' | `ros_common.ranges.unit` | ok |
+| V-ATTRIBUTES | 'GPS' | 'GNSS' |  `ros_common.vessel_electronics.gps` | To do |
+| V-ATTRIBUTES | 'SATELLITE_COMS' | 'SATCOM' | `ros_common.vessel_electronics/satellite_communication_systems` | To do |
+| V-ATTRIBUTES | 'CATEGORY_X_CODE' | 'CATEGORY_X' | `ros_common.waste_managements.waste_category_code` | ok |
 | V-ATTRIBUTES | 'STORAGE_DISPOSAL_METHOD_X_CODE' to STORAGE_DISPOSAL_METHOD_X' | `ros_common.waste_managements.waste_storage_or_disposal_method_code` | ok |
-| V-ATTRIBUTES | Four fields "OTHER" removed for waste management details | | ok |
-| G-CONFIG-BRANCHLINES | 'CONFIGURATION NUMBER' to 'CONFIGURATION_ID' | `ros_ll.branchline_configurations.configuration_number` | To do |
-| G-CONFIG-BRANCHLINES | 'SECTION NUMBER' to 'SECTION_ID' | `ros_ll.branchline_sections.section_number` | To do |
-| G-GENERAL | 'LINE_SETTER/SHOOTER' to 'LINE_SETTER' | `ros_ll.special_equipment.line_setter` | ok |
-| G-CONFIG-BRANCHLINES | 'LENGTH' to 'BRANCHLINE_LENGTH_M' |  | ok |
-| G-CONFIG-BRANCHLINES | 'DIAMETER' to 'BRANCHLINE_DIAMETER_CM' | | |
-| G-CONFIG-BRANCHLINES | 'STORAGE_X_CODE' to 'STORAGE_X' | | |
-| G-CONFIG-MITIGATION-DEVICES | 'LINE_LENGTH_MAX (M)' to 'STREAMER_LINE_LENGTH_MAX_M' | | |
-| G-CONFIG-MITIGATION-DEVICES | 'LINE_LENGTH_MIN (M)' to 'STREAMER_LINE_LENGTH_MIN_M' | | |
-| G-CONFIG-MITIGATION-DEVICES | 'LINE_LENGTH_MIN (M)' to 'STREAMER_LINE_LENGTH_MIN_M' | | |
-| G-CONFIG-MITIGATION-DEVICES | 'NUMBER_PER_LINE' to 'STREAMER_NUMBER_PER_LINE' | | | 
-| G-CONFIG-MITIGATION-DEVICES | 'TORI_LINE_ATTACHED_HEIGHT (M)' to 'TORI_LINE_ATTACHED_HEIGHT_M' |||
-| G-CONFIG-MITIGATION-DEVICES | 'DEVICE_X_CODE' to 'DEVICE_X' ||| 
+| V-ATTRIBUTES | 4 fields "OTHER" removed for waste management details | NA | `-` | ok |
+| G-CONFIG-BRANCHLINES | 'CONFIGURATION NUMBER' | 'CONFIGURATION_ID' | `ros_ll.branchline_configurations.configuration_number` | to do |
+| G-CONFIG-BRANCHLINES | 'SECTION NUMBER' | 'SECTION_ID' | `ros_ll.branchline_sections.section_number` | to do |
+| G-GENERAL | 'LINE_SETTER/SHOOTER' | 'LINE_SETTER' | `ros_ll.special_equipment.line_setter` | ok |
+| G-CONFIG-BRANCHLINES | 'LENGTH' | 'BRANCHLINE_LENGTH_M' | `ros_ll.branchline_sections.lengths.value` | unit given in `ros_common.lengths.unit` |
+| G-CONFIG-BRANCHLINES | 'DIAMETER' | 'BRANCHLINE_DIAMETER_CM' | `ros_ll.branchline_sections.diameters.value` | unit given in `ros_ll.branchline_sections.diameters.unit` |
+| G-CONFIG-BRANCHLINES | 'STORAGE_X_CODE' | 'STORAGE_X' | | missing from `ros_ll.branchline_sections`? |
+| G-CONFIG-MITIGATION-DEVICES | 'LINE_LENGTH_MAX (M)' | 'STREAMER_LINE_LENGTH_MAX_M' | `ros_ll.tori_line_details.streamer_line_length_max_id` | value and unit given in `ros_common.lengths.unit` (unit set to m?) |
+| G-CONFIG-MITIGATION-DEVICES | 'LINE_LENGTH_MIN (M)' | 'STREAMER_LINE_LENGTH_MIN_M' | `ros_ll.tori_line_details.streamer_line_length_min_id` | value and unit given in `ros_common.lengths.unit` (unit set to m?)  |
+| G-CONFIG-MITIGATION-DEVICES | 'NUMBER_PER_LINE' | 'STREAMER_NUMBER_PER_LINE' | `ros_ll.tori_line_details.number_of_streamers_per_line` | ok | 
+| G-CONFIG-MITIGATION-DEVICES | 'TORI_LINE_ATTACHED_HEIGHT (M)' | 'TORI_LINE_ATTACHED_HEIGHT_M' | `ros_ll.tori_line_details.attached_height_id` | value and unit given in `ros_common.heights` (unit set to m?) |
+| G-CONFIG-MITIGATION-DEVICES | 'DEVICE_X_CODE' | 'DEVICE_X' | `ros_ll.gear_specifications_mitigation_device.mitigation_device_code` | ok | 
+| E-SET | 'MAINLINE VALUE' | "MAINLINE_LENGTH_VALUE' | `ros_ll.setting_operations.mainline_set_length_id` | value given in `ros_common.lengths.value` | 
+| E-SET | 'KM|NM' to 'MAINLINE_LENGTH_UNIT' | `ros_ll.setting_operations.mainline_set_length_id` | value given in `ros_common.lengths.unit` |
+| E-SET | 'NA' | 'BRANCHLINE_LENGTH_MINIMUM_VALUE' | missing from `ros_ll.setting_operations`? | To do |
+| E-SET | 'NA' | 'BRANCHLINE_LENGTH_MINIMUM_UNIT' | missing from `ros_ll.setting_operations`? | To do |
+| E-SET | 'NA' | 'BRANCHLINE_LENGTH_MAXIMUM_VALUE' | missing from `ros_ll.setting_operations`? | To do |
+| E-SET | 'NA' | 'BRANCHLINE_LENGTH_MAXIMUM_UNIT' | missing from `ros_ll.setting_operations`? | To do |
+| E-SET | 'VALUE_KNOTS' | 'VESSEL_SPEED_KN | `ros_ll.setting_operations.vessel_speed` |  |
+| E-SET | 'VALUE_MS' | 'LINE_SETTER_SPEED_MS' | To do | 
+| E-SET-HAULING-BITEOFFS | 'CONFIGURATION_NUMBER' | 'CONFIGURATION_ID' | `x` | ok |
+| E-SET-HAULING-BITEOFFS | 'NUM_BITEOFFS' | 'NUMBER_OF_BITEOFFS' | `ros_ll.biteoffs_by_branchlines_set.number_of_biteoffs` | ok |
+| E-SET-HAULING-BITEOFFS | 'CONFIGURATION_NUMBER' | 'CONFIGURATION_ID' |  | **YES**
+| E-SET-HAULING | 'NUM_BRANCHLINE_HAULINGS_OBSERVED' to 'NUMBER_BRANCHLINE_HAULINGS_OBSERVED'
+| E-SET-HAULING | 'NUM_HOOKS_RETRIEVED_DURING_OBSERVATION' to 'NUMBER_HOOKS_RETRIEVED_DURING_OBSERVATION'
+| E-SET-CATCHES | 'KG\|T' | "UNIT" |  |  | 
 
-| E-SET | "mainline value" to "Mainline length value" | noted | **Keep VALUE and UNIT in the form but expand in Description** 
-| E-SET | UPDATED REPORTING FORM - mainline "KM|NM" should read "Mainline length units" | noted | **UNIT**
-| E-SET | UPDATE REPORTING FORM - "Branchline Length: should have fields for minimum and maximum length. 4 fields total | noted | **yes**
-| E-SET | I added a new field in description to match reporting form, but unsure of contents | noted | **To clarify**
-| E-SET-LIGHTS | UPDATE REPORTING FORM - NUM_LIGHTS looks like a hyperlink - very pedantic | noted | **Format to change in the form**
+<!-- NB1: Inversion of type and number in the form for the towed objects in G-CONFIG-MITIGATION-DEVICES -->
+<!-- NB2: One empty column removed from LINE_LENGTH_MAX in G-CONFIG-MITIGATION-DEVICES 
+<!-- NB3: Changes in sheet names: E-SET-CATCHES-SPECIMEN to E-SET-CATCH-SPECIMENS and E-SET-CATCHES-SPECIMEN-SSI to E-SET-CATCH-SPECIMENS-SSI -->
+
 | E-SET-MITIGATION_MEASURES | should all mitigation measure codes (4) be mandatory? Or should 2-4 be optional? All mandatory in reporting form | noted | **Yes, captured by the code list - need to check with Tony**
-| E-SET-BAITS | percentage description: "The approximate proportion (%) of bait species and condition used across all hooks in the set" need a new field for bait condition? | noted | **Check if in description form**
-| E-SET-HAULING-BITEOFFS |  'CONFIGURATION_NUMBER' to 'CONFIGURATION_ID' | `` | ok |
-| E-SET-HAULING-BITEOFFS |  'NUM_BITEOFFS' to 'NUMBER_OF_BITEOFFS' | `ros_ll.biteoffs_by_branchlines_set.number_of_biteoffs` | ok |
-| E-SET-HAULING-BITEOFFS |  Configuration number to change to configuration identifier | noted | **YES**
 
-<!-- | E-SET-HAULING | 'NUM_BRANCHLINE_HAULINGS_OBSERVED' to 'NUMBER_BRANCHLINE_HAULINGS_OBSERVED' -->
-<!-- | E-SET-HAULING | 'NUM_HOOKS_RETRIEVED_DURING_OBSERVATION' to 'NUMBER_HOOKS_RETRIEVED_DURING_OBSERVATION' -->
-
-
-| E-SET-CATCHES | 'KG|T' to "UNIT" |  |  | 
-
-<!-- NUM_BITEOFFS to NUMBER_OF_BITEOFFS in form -->
-
-<!--| G-CONFIG-MITIGATION-DEVICES | CHANGE REPORTING FORM - column: LINE_LENGTH_MAX should be one column, as there is already a second column for minimum. and they should each be called "STREAMER_LINE_LENGTH (min/max) | noted | **Remove empty column**
-
-| G-CONFIG-MITIGATION-DEVICES | CHANGE DESCRIPTION FORM - towed objects number and type. Develop codelist for towed objects type or add code list to meta on PgAdmin | noted | **Get information on potential code list of towed objects** -->
 
 Questions for TC:
 - `ros_common.vessel_attributes_fish_preservation_method.fish_preservation_method_code`  - To rename to `ros_common.vessel_attributes_fish_preservation_method.fpm_code`?
@@ -64,10 +74,17 @@ General Information - code list for observer data source
 
 Vessel attributes - Tonnage as integer instead of float (to impose no decimals)
 Vessel attributes - Engine power value as integer and not float (to impose no decimals)
-Vessel attributes - Removed column fish storage unit - should be in m3 by default consistently with Res. 19/04 – Remove column unit from ros_common.capacities – What about previous data? We drop them! Fuck off!
 
-G-CONFIG-MITIGATION-DEVICES: be careful, there was 2 columns instead of 1 for LINE_LENGTH_MAX: issue for the importer?
 
+G-CONFIG-MITIGATION-DEVICES: be careful, there were 2 columns instead of 1 for LINE_LENGTH_MAX: issue for the importer?
+
+## Changes to be made to the PS reporting form
+
+VESSEL-ATTRIBUTES : Autonomy range "DAYS | NM " --> change to "Autonomy range unit"
+VESSEL-ATTRIBUTES : Vessel Electronics GPS --> GNSS
+G-GENERAL : General gear attributes - for "net size" and "mesh size", change columns to be "unit"
+E-SET-CATCHES : Weight --> change KG | T to be "unit"
+E-SET-CATCHES-SPECIMEN : Sample Collected --> add a NEW FIELD called "Destination" 
 
 # Pole and Line Form
 
@@ -97,35 +114,6 @@ G-CONFIG-MITIGATION-DEVICES: be careful, there was 2 columns instead of 1 for LI
 |DAILY-ACTIVITY | typo on the form: Dailiy --> Daily |   | 
 
 <!--
-## Longline Form
-
-SECTION: VESSEL INFORMATION: 
-- IMO: update definition??: The International Maritime Organisation (IMO) unique vessel identifier Scheme (use NE if the vessel is Not Eligible, or PENDING if an IMO number has been requested but not yet assigned). __ ** DONT CHANGE**
-
-| Line of Code|Section | Update needed | Status | Comment | 
-|:-------|:-------|:-----------------------------------:|:---------:|:----:| 
-| 303-308| V-ATTRIBUTES | DESCRIPTION CHANGE? - on the form their are sections for main engine 1 and main engine 2. Duplicate or form description? | noted | **2 rows**
-| 315| V-ATTRIBUTES | UPDATE REPORTING FORM - change fish storage capacity column to be Storage capacity units | noted | **m3 by default - remove unit column**
-| 337 | V-ATTRIBUTES | UPDATE REPORTING FORM - Autonomy range unit column instead of DAYS | NM | noted | **Agreed**
-| 346 | V-ATTRIBUTES | UPDATE REPORTING FORM - change GPS column to GNSS to match description form | noted | **YES MANU!**
-| 362 - 398 | V-ATTRIBUTES | UPDATE REPORTING FORM - remove "other" column for waste management | **Agreed**
-| 423 - 430 | G-CONFIG-BRANCHLINES| UPDATE REPORTING FORM - need to have 4 sections of Material type code, Length, and Diameter | noted | **no** 
-| 423 - 430 | G-CONFIG-BRANCHLINES| UPDATE REPORTING FORM - change "CONFIGURATION NUMBER AND SECTION NUMBER TO CONFIGURATION IDENTIFIER AND SECTION IDENTIFIER, RESPECTIVELY | noted | **Agreed**
-| 461 - 462 | G-CONFIG-MITIGATION-DEVICES | CHANGE REPORTING FORM - column: LINE_LENGTH_MAX should be one column, as there is already a second column for minimum. and they should each be called "STREAMER_LINE_LENGTH (min/max) | noted | **Remove empty column**
-| 471 -472 | G-CONFIG-MITIGATION-DEVICES | CHANGE DESCRIPTION FORM - towed objects number and type. Develop codelist for towed objects type or add code list to meta on PgAdmin | noted | **Get information on potential code list of towed objects**
-| 529 | E-SET | UPDATE REPORTING FORM - mainline "value" should read "Mainline length value" | noted | **Keep VALUE and UNIT in the form but expand in Description** 
-| 530 | E-SET | UPDATED REPORTING FORM - mainline "KM|NM" should read "Mainline length units" | noted | **UNIT**
-|574 - 580| E-SET | UPDATE REPORTING FORM - "Branchline Length: should have fields for minimum and maximum length. 4 fields total | noted | **yes**
-| 589 | E-SET | I added a new field in description to match reporting form, but unsure of contents | noted | **To clarify**
-| 607| E-SET-LIGHTS | UPDATE REPORTING FORM - NUM_LIGHTS looks like a hyperlink - very pedantic | noted | **Format to change in the form**
-| 645 - 650| E-SET-MITIGATION_MEASURES | should all mitigation measure codes (4) be mandatory? Or should 2-4 be optional? All mandatory in reporting form | noted | **Yes, captured by the code list - need to check with Tony**
-
-| 679 | E-SET-BAITS | percentage description: "The approximate proportion (%) of bait species and condition used across all hooks in the set" need a new field for bait condition? | noted | **Check if in description form**
-| 750 | E-SET-HAULING-BITEOFFS |  Configuration number to change to configuration identifier? | noted | **YES**
-| 789 | E-SET-CATCHES | CHANGE FORM - change weight "KG|T" to "Unit" | noted | **YES**
-
--->
-
 # Meeting with Shimal about revisions to the PL reporting form
 
 - change sheet names
@@ -142,7 +130,7 @@ E-SET-TUNA-CATCHES - remove specimen ID
 E-SET-TUNA-CATCHES
       - remove specimen ID because not on a specimen level, should be an event level
       - change EVENT NUMBER to EVENT_ID
-      - removed depredation details  ---> consider this revision for purse seine as well
+      - removed depredation details  -> consider this revision for purse seine as well
 E-SET-TUNA
       - this section should comes after E-SET-TUNA-CATCHES-FISHING-TRIP
       - in each of these sheets have a description explaining what that sheet is supposed to do within the structure of the form. 
@@ -175,11 +163,5 @@ NOTE: SHIMAL would like previously submitted data shared so he can make prior da
 
 OBSERVER ID - description - clarify that this identifier is issued by IOTC. Same for IOTC_ID. 
 
-## Changes to be made to the PS reporting form
-
-VESSEL-ATTRIBUTES : Autonomy range "DAYS | NM " --> change to "Autonomy range unit"
-VESSEL-ATTRIBUTES : Vessel Electronics GPS --> GNSS
-G-GENERAL : General gear attributes - for "net size" and "mesh size", change columns to be "unit"
-E-SET-CATCHES : Weight --> change KG | T to be "unit"
-E-SET-CATCHES-SPECIMEN : Sample Collected --> add a NEW FIELD called "Destination" 
+-->
 
