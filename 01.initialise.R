@@ -226,6 +226,8 @@ SURFACE_FISHERY_ACTIVITIES = read_codelist(domain = "fisheries", schema = "fishe
 
 NET_SETTING_STRATEGIES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "NET_SETTING_STRATEGIES")
 
+NET_CONFIGURATIONS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "NET_CONFIGURATIONS")
+
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
 SPECIES               = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
