@@ -33,34 +33,43 @@ Click [here](./Form-ROS-LL.xlsx) to download a blank version of Form ROS-LL, or 
 
 Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the mandatory (M; blue cells) and optional (O; green cells) data fields defined by the SC. The current version builds on the most recent revision of ROS fields endorsed at the 27^th^ session of the SC ([IOTC-2024-SC27-DATA01](https://iotc.org/documents/SC/27/DATA01)). The sheets are interconnected through technical identifiers (e.g., observer trip ID, set ID), enabling the hierarchical organisation of the observations to be maintained.
 
-| Sheet | Component | Resolution |  Description |
-| :--------- | :----------: | :--------------------------- |
-| [META](#meta) | Dataset | Trip | Information on data submission and main characteristics |
-| [O-INFO](#oInfo) | Observer \& trip | Trip | Information on the observer and the fishing trip observed |
-| [V-INFO](#vInfo) | Vessel | Trip | Information on the fishing vessel, its gear, and personnel |
-| [V-TRIP](#vTrip) | Trip | Trip | Information on the fishing trip's departure and return |
-| [V-ATTRIBUTES](#vAttributes) | Vessel | Vessel | Information on the vessel's attributes and equipment |
-| [G-GENERAL](#gGeneral) | Equipments | Trip | Information on the fishing gear's equipment and machinery | 
-| [G-CONFIG-BRANCHLINES](#gConfigBranchlines) | Branchline sections | Trip | Information on branchline configurations  |
-| [G-CONFIG-MITIGATION-DEVICES](#gConfigMitigationDevices) | Devices | Trip | Information on mitigation devices | 
-| [E-SET](#eSet) |  | Set | |
-| [E-SET-LIGHTS](#eSetLight) | | Set | |
-| [E-SET_MITIGATION_MEASURES](#eSetMitigationDevices) |  | Set | |
-| [E-SET-HOOKS](#eSetHooks) |  | Set | |
-| [E-SET-BAITS](#eSetBaits) |  | Set ||
-| [E-SET-HAULING](#eSetHauling) |  | Set | | 
-| [E-SET-HAULING-BITEOFFS](#eSetHaulingBiteoffs) | Hauling operation/Catch? |||
-| [E-SET-CATCHES](#eSetCatches) | Set/Catch? | ||
-| [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Specimen | ||
-| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Specimen | ||
-| [E-SET-TAG-DETAILS](#eSetTagDetails) | Specimen | ||
+<!-- The data components captured in each spreadsheet can be categorised into (i) Metadata, (ii) Effort, (iii) Technology / equipment, and (iv) Catch. -->
 
+<!-- Effort -->
+<!-- Quantitative measures of fishing activity, such as the number of sets, hooks, lines, hours fished, or other metrics that reflect the amount of fishing undertaken. -->
+
+<!-- Technology / equipment -->
+<!-- Qualitative and design features of the vessel and gear that influence fishing power, including configuration, materials, and the use of devices or aids (e.g. branchline specifications, bait treatments, artificial lights, navigation or detection systems, bycatch mitigation devices). -->
+
+| Sheet | Data Components | Resolution |  Description |
+| :------------- | :----------: | :--------: | :--------------------------- |
+| [META](#meta) | Metadata | Trip | Information on the data submission and main characteristics |
+| [O-INFO](#oInfo) | Metadata | Observer & Trip | Information on the observer and the fishing trip observed |
+| [V-INFO](#vInfo) | Technology / Equipment | Trip | Information on the fishing vessel, its gear, and personnel |
+| [V-TRIP](#vTrip) | Effort | Trip | Information on the fishing trip's departure and return |
+| [V-ATTRIBUTES](#vAttributes) | Technology / Equipment | Vessel | Information on the vessel's attributes and equipment |
+| [G-GENERAL](#gGeneral) | Technology / Equipment | Trip | Information on the fishing gear's equipment and machinery | 
+| [G-CONFIG-BRANCHLINES](#gConfigBranchlines) | Technology / Equipment | Branchline section | Information on longline branchline configurations |
+| [G-CONFIG-MITIGATION-DEVICES](#gConfigMitigationDevices) | Technology / Equipment | Trip | Information on mitigation devices | 
+| [E-SET](#eSet) | Effort \& Technology / Equipment | Set | Information on effort (sets) and gear characteristics (materials, targeting) |
+| [E-SET-LIGHTS](#eSetLight) | Technology / Equipment | Set | Information on the lights used for fish attraction |
+| [E-SET_MITIGATION_MEASURES](#eSetMitigationMeasures) | Technology / Equipment | Set | Information on materials and configuration of mitigation devices |
+| [E-SET-HOOKS](#eSetHooks) | Technology / Equipment | Set | Information on fishing hooks |
+| [E-SET-BAITS](#eSetBaits) | Technology / Equipment | Set | Information on fishing bait and treatment (e.g., dye) |
+| [E-SET-HAULING](#eSetHauling) | Effort \& Technology / Equipment | Set | Information on effort, mitigation measure, and offal management | 
+| [E-SET-HAULING-BITEOFFS](#eSetHaulingBiteoffs) | Depredation | Set | Information on depredation events during hauling |
+| [E-SET-CATCHES](#eSetCatches) | Catch | Set | Information on magnitude, composition, and fate of catch |
+| [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Catch | Specimen | Information on fish biology (size, sex, maturity), samples, and depredation |
+| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Catch & Technology / Equipment | Specimen | Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest |
+| [E-SET-TAG-DETAILS](#eSetTagDetails) | Catch | Specimen | Information on specimen condition and tag details |
+
+<!-- the resolution of E-SET-CATCHES should read catch sample for other gears, unless raised to the set?  -->
 <!-- SPECIMEN to SPECIMENS in the sheet names -->
 <!-- CATCHES_SPECIMENS to CATCH_SPECIMENS -->
 
 # META {#meta}
 
-## General Information
+## Submission Information
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -71,7 +80,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
 
-## Data Characteristics
+## General Information
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -224,7 +233,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | licensed_target_species | O | The licensed target species as specified in vessel licences or permit conditions | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| Main Fishing Gear | M | The vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
+| main_fishing_gear | M | The vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
 | **Vessel Personnel:** Details of the individuals working onboard during the fishing trip as well as the total number of crew members onboard.
 
@@ -267,24 +276,6 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | date_time_utc |  O  | The date and time (in Coordinated Universal Time, UTC) corresponding to the start of the observation period at the reported location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
-::: {style="margin-left:40px"}
-| **At sea**
-:::
-
-::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O | The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | e.g., `FRA` |
-| latitude | O | The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
-:::
-
-::: {style="margin-left:40px"}
-|  |  |  |  |  |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_UTC | O | The date and time the vessel departed from port or from a transshipment location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-:::
-
 | **Vessel return:** The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record 'at-sea' plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel.
 
 ::: {style="margin-left:40px"}
@@ -306,24 +297,6 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | date_time_UTC |  O  | The date and time (in Coordinated Universal Time, UTC) corresponding to the end of the observation period at the reported location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
-::: {style="margin-left:40px"}
-| **At sea**
-:::
-
-::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O | The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
-| latitude | O | The latitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `55.53` |
-:::
-
-::: {style="margin-left:40px"}
-|  |  |  |  |  |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | O | The date and time the fishing vessel finishes its fishing campaign, i.e., returns to port or to a transshipment location for unloading. If is the expected date and time of arrival (ETA) if the observer disembarks before the vessel returns | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-:::
-
 # V-ATTRIBUTES {#vAttributes}
 
 | Field | Requirement | Description | Format | Input value |
@@ -336,7 +309,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | gross_tonnage | O | Gross tonnage (GT), a dimensionless measure of vessel's internal volume from registration documents | Integer | e.g., `2319` |
 | loa_m | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
-| Hull material | O | The primary material used in the construction of the vessel's hull | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
+| hull_material | O | The primary material used in the construction of the vessel's hull | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
 
 | **Main engines:** The make (brand) and power of the two main engines.
 
@@ -444,9 +417,6 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | storage | O | The storage method for the branchlines. Up to four storage methods may be reported on the form | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` |
-<!-- | storage_2 | O | The storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` | -->
-<!-- | storage_3 | O | The storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` | -->
-<!-- | storage_4 | O | The storage method for the branchlines | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` | -->
 
 # G-CONFIG-MITIGATION-DEVICES {#gConfigMitigationDevices}
 
@@ -478,10 +448,6 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | device | O | Equipment used onboard to minimise bycatch. Up to five additional devices may be reported on the form | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
-<!-- | device_2 | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
-<!-- | device 3 | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
-<!-- | device 4 | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
-<!-- | device 5 | O | **DESCRIPTION TO ADD** | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
 
 # E-SET
 
@@ -500,8 +466,8 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | date_time_utc | M | The date and the time in GMT/UTC the first dhan buoy and / or radio buoy is deployed to start the setting of the line | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| latitude | O | The latitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | M | The latitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| longitude | M | The longitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 | End setting
@@ -510,8 +476,8 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | date_time_utc | M | The date and the time in GMT/UTC that the last dhan buoy and / or radio buoy is deployed | YYYY-MM-DD hh:mm | e.g., `2023-07-01 12:00` |
-| latitude | O | The latitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | M | The latitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| longitude | M | The longitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 ||||||
@@ -652,9 +618,6 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | measure | M | Any other mitigation measures observed. Up to four measures can be reported on the form | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
-<!-- | Measure 2 | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
-<!-- | Measure 3 | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
-<!-- | Measure 4 | M | Any other mitigation measures observed | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` | -->
 
 # E-SET-HOOKS {#eSetHooks}
 
@@ -688,6 +651,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | dye_colour | O | The colour(s) that the different baits are dyed | String | e.g., `blue`  |
 
 <!-- DO NOT UNDERSTAND THE ABOVE DEFINITION OF PERCENTAGE, WHICH INCLUDES REFERENCE TO "CONDITION"?? -->
+<!-- develop code list for bait colors -->
 
 # E-SET-HAULING {#eSetHauling}
 
@@ -727,9 +691,6 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | Field | Requirement | Description | Format  | Input value |
 |:---------------------|:-----------:|:------------|:-------:|:-----------:|
 | position | O | The position(s) where offal and used bait was disposed. Up to four positions of offal and bait disposal may be reported on the form |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  |
-<!-- | Position 2 | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  | -->
-<!-- | Position 3 | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  | -->
-<!-- | Position 4 | O |  |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  | -->
 :::
 
 | bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
@@ -752,11 +713,11 @@ For each branchline configuration set-up previously identified how many have had
 | Field              | Requirement | Description | Format  | Input value |
 |:---------------------|:-----------:|:------------|:-------:|:-----------:|
 | branchline_configuration_id | O | The identifier of the branchline configuration | Integer | `-` |
-| hauling_operation_id | O | The identifier of the hauling operation | `-` | 
+<!-- | hauling_operation_id | O | The identifier of the hauling operation | `-` |  -->
 | number_of_biteoffs | O | The number of biteoffs observed | Integer | `1680` |
 :::
 
-<!-- hauling operation_id in the database but missing from the form `ros_ll.biteoffs_by_branchlines_set.hauling_operation_id` -->
+<!-- Check with Tony hauling operation_id in the database but missing from the form `ros_ll.biteoffs_by_branchlines_set.hauling_operation_id` -->
 
 # E-SET-CATCHES
 
@@ -788,7 +749,7 @@ For each branchline configuration set-up previously identified how many have had
 
 <!-- NUM_FISH to 'NUMBER_OF_FISH' -->
 
-Weight: The catch weight corresponding to the specified product type recorded in 'weight code’. If the fish has not been processed, record the unprocessed weight
+Weight: The catch weight corresponding to the specified product type recorded in 'weight code’. If the fish has not been processed, it corresponds to the unprocessed weight.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -828,19 +789,9 @@ Weight: The catch weight corresponding to the specified product type recorded in
 
 <!-- value -> value_cm -->
 
+<!-- How do you identify the species for each specimen?? -->
+
 <!-- Proposal: I would remove the "Is straight" field since the type of length measurements indicates how the measurement was taken (straight, curved), and the guidelines for observers should include that the measurements should be taken straight for fish (fork length, total length, etc.) -->
-
-<!-- | Length 2: **DEFINITION TO ADD?** -->
-
-<!-- ::: {style="margin-left:40px"} -->
-<!-- | Field | Requirement | Description | Format | Input value | -->
-<!-- |:--------------|:-------------:|:--------------|:-------------:|:-------------:| -->
-<!-- | length_type | O | The type of length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements)| e.g., `FL` | -->
-<!-- | length_value | O | The value of length (cm) corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `86` | -->
-<!-- | length_measuring_tool | O | The tool used for the measurement of the fish length | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  | -->
-<!-- | is_straight | O | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `No`  | -->
-<!-- ::: -->
-
 | **Weight**: The specimen's individual weight corresponding to the specified product type. Unprocessed weight when the fish has not been processed.
 
 ::: {style="margin-left:40px"}
@@ -848,15 +799,13 @@ Weight: The catch weight corresponding to the specified product type recorded in
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | weight_processing_type | O | The processing/dressing used for the weight measurement | **Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
 | weight_value_kg | O | The weight corresponding to the weight measurement type code | Float | e.g., `43.2` |
-<!-- | weight_unit  | O | The unit of weight (kg or t) | String | e.g., `kg` | -->
 | weight_estimation_method | O | The method used to estimate the weight of the specimen | **Code** from [Weight Measurement Tools](#weightMeasurementTools) | e.g., `BR` |
 :::
 
 <!-- rename weight_processing_type to weight_type | -->
 <!-- Remove weight_unit as the weight should be reported in kg
 <!-- weight_value to weight_value_kg -->
-<!-- weight and length measurement tools to change to length/weight estimation methods
-
+<!-- weight and length measurement tools to change to length/weight estimation methods -->
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
