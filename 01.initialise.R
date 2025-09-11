@@ -224,6 +224,8 @@ FAD_TAIL_DESIGNS = read_codelist(domain = "fisheries", schema = "fishery", codel
 
 SURFACE_FISHERY_ACTIVITIES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SURFACE_FISHERY_ACTIVITIES")
 
+NET_SETTING_STRATEGIES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "NET_SETTING_STRATEGIES")
+
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
 SPECIES               = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
