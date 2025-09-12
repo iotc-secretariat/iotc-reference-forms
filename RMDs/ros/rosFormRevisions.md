@@ -1,8 +1,8 @@
-This document is a review of errors, inconsistencies, and updates needed in the ROS reporting forms and ROS form descriptions. 
+This document is a review of the updates done in the ROS reporting forms and ROS form descriptions and required changed to be made in the ROS 3.3.0 database. 
 
-# Missing code lists
+# Missing Code Lists
 
-The following code lists should be built and added to the IOTCReferenceData and ROS databases:
+The following code lists should be built by the Secretariat and added to the IOTCReferenceData and ROS databases:
 
 | Sheet | Field | Database | Comment |
 |:------------|:--------------------------------|:---------:|:------ |
@@ -10,7 +10,7 @@ The following code lists should be built and added to the IOTCReferenceData and 
 | E-SET-CATCH-SPECIMENS | Sample Preservation Method | `ros_common.sample_collection_details.preservation_method` | To develop |
 | E-SET-CATCH-SPECIMENS | Sample destination | `ros_common.sample_collection_details.destination` | Code list to develop |
 | E-SET-CATCH-SPECIMENS | Maturity scale | `ros_common.maturity_stages.scale` | Code list to develop |
-| E-SET-CATCH-SPECIMENS | Maturity stage | `ros_common.maturity_stages.maturity_level` | Code list to develop - rename table to maturity and field to maturity_stage |
+| E-SET-CATCH-SPECIMENS | Maturity stage | `ros_common.maturity_stages.maturity_level` | Code list to develop - rename table to maturity and field to `maturity_stage` |
 | G-CONFIG-MITIGATION-DEVICES | Towed object type | Code list of types of towed objects |
 
 ## Longline Form
