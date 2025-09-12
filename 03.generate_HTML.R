@@ -142,7 +142,7 @@ render("./RMDs/ros/ROS-PL.rmd",
        output_file ="Form-ROS-PL.html", 
        output_dir = "./out/HTML/ros/")
 
-## Purse Seine
+## PURSE SEINE
 render("./RMDs/ros/ROS-PS.rmd", 
        output_format = "html_document2",
        output_file ="Form-ROS-PS.html", 

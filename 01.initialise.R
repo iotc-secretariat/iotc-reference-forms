@@ -230,6 +230,8 @@ NET_SETTING_STRATEGIES = read_codelist(domain = "fisheries", schema = "fishery",
 
 NET_CONFIGURATIONS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "NET_CONFIGURATIONS")
 
+FISH_PROCESSING_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")
+
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
 SPECIES               = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
@@ -254,9 +256,9 @@ INDIVIDUAL_CONDITIONS = read_codelist(domain = "biology", schema = "biology", co
 
 MEASUREMENTS          = read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENTS")
 
-WEIGHT_MEASUREMENTS = MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CODE")]
-
 LENGTH_MEASUREMENTS = MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "LN", -c("TYPE_OF_MEASUREMENT_CODE")]
+
+WEIGHT_MEASUREMENTS = read_codelist(domain = "biology", schema = "biology", codelist = "WEIGHT_MEASUREMENTS")
 
 MEASUREMENT_TOOLS     = read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENT_TOOLS")
 
