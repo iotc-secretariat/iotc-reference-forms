@@ -16,19 +16,19 @@ The following code lists should be built by the Secretariat and added to the IOT
 # Renaming Fields in Database
 
 | Schema | Field | Old | New | Comment |
-| :---------- | :-------- | :-------------- | :--------------- |
+| :---------- | :-------- | :-------------- | :--------------- |:-------------- |
 | ros_common | maturity_stages    | maturity_level | maturity_stage | Rename table to maturity | 
-| ros_common | vessel_attributes_fish_preservation_method | fish_preservation_method_code | fpm_code | ? |
-| ros_common | vessel_attributes_fish_storage_type | fish_storage_type_code | fst_code | ? |
-| ros_common | waste_managements  | waste_category_code | wc_code | ? |
-| ros_common | vessel_electronics | gps | gnss | |
+| ros_common | vessel_attributes_fish_preservation_method | fish_preservation_method_code | fpm_code | to discuss |
+| ros_common | vessel_attributes_fish_storage_type | fish_storage_type_code | fst_code | to discuss |
+| ros_common | waste_managements  | waste_category_code | wc_code | to discuss |
+| ros_common | vessel_electronics | gps | gnss | to do |
 | ros_common | vessel_electronics | satellite_communication_systems | satcom | |
-| ros_ll     | branchline_configurations | configuration_number | configuration_id | may be mixed with id? in branchline_configurations? | 
-| ros_ll     | branchline_sections | section_number | section_id | |
-| ros_ll     | branchlines_set     | branchline_configuration_number | branchline_configuration_id | ? |
-| ros_ll     | setting_operations | vessel_speed | vessel_speed_kn | |
-| ros_ll     | setting_operations | line_setter_speed | line_setter_speed_ms | |
-| ros_ll     | branchlines_set    | branchline_configuration_number | branchline_configuration_identifier | may be mixed with id? | 
+| ros_ll     | branchline_configurations | configuration_number | configuration_id | may be mixed with id in branchline_configurations | 
+| ros_ll     | branchline_sections | section_number | section_id | to do |
+| ros_ll     | branchlines_set     | branchline_configuration_number | branchline_configuration_id | to discuss |
+| ros_ll     | setting_operations | vessel_speed | vessel_speed_kn | to do |
+| ros_ll     | setting_operations | line_setter_speed | line_setter_speed_ms | to do |
+| ros_ll     | branchlines_set    | branchline_configuration_number | branchline_configuration_identifier | may be mixed with id | 
 
 ## Longline Form
 
@@ -37,7 +37,7 @@ The following code lists should be built by the Secretariat and added to the IOT
 | V-INFO | REG_NUMBER | REGISTRATION_NUMBER | `ros_common.vessel_identification.registration_number` | ok | 
 | V-ATTRIBUTES | TONNAGE | GROSS_TONNAGE | `ros_common.tonnages.value` | Remove values reported in "GRT" |
 | V-ATTRIBUTES | LENGTH | LOA_M | `ros_common.lengths.value` | Remove unit - loss of data reported in "KM" | 
-| V-ATTRIBUTES | FISH_STORAGE_CAPACITY_VALUE | "FISH_STORAGE_CAPACITY_M3" | `ros_common.capacities.value` | |
+| V-ATTRIBUTES | FISH_STORAGE_CAPACITY_VALUE | FISH_STORAGE_CAPACITY_M3 | `ros_common.capacities.value` | |
 | V-ATTRIBUTES | FISH_STORAGE_CAPACITY_UNIT | remove | `ros_common.capacities.unit` | to do - loss of values reported in "MT" |
 | V-ATTRIBUTES | METHOD_X_CODES | METHOD_X | `ros_common.vessel_attributes_fish_preservation_method.fish_preservation_method_code` | ok |
 | V-ATTRIBUTES | FISH_STORAGE_TYPE_X_CODE | FISH_STORAGE_TYPE_X | `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` | ok |
@@ -58,7 +58,7 @@ The following code lists should be built by the Secretariat and added to the IOT
 | G-CONFIG-MITIGATION-DEVICES | NUMBER_PER_LINE | STREAMER_NUMBER_PER_LINE | `ros_ll.tori_line_details.number_of_streamers_per_line` | ok | 
 | G-CONFIG-MITIGATION-DEVICES | TORI_LINE_ATTACHED_HEIGHT (M) | TORI_LINE_ATTACHED_HEIGHT_M | `ros_ll.tori_line_details.attached_height_id` | value and unit given in `ros_common.heights` (unit set to m?) |
 | G-CONFIG-MITIGATION-DEVICES | DEVICE_X_CODE | DEVICE_X | `ros_ll.gear_specifications_mitigation_device.mitigation_device_code` | ok | 
-| E-SET | MAINLINE VALUE | "MAINLINE_LENGTH_VALUE | `ros_ll.setting_operations.mainline_set_length_id` | value given in `ros_common.lengths.value` | 
+| E-SET | MAINLINE VALUE | MAINLINE_LENGTH_VALUE | `ros_ll.setting_operations.mainline_set_length_id` | value given in `ros_common.lengths.value` | 
 | E-SET | KM|NM to MAINLINE_LENGTH_UNIT | `ros_ll.setting_operations.mainline_set_length_id` | value given in `ros_common.lengths.unit` |
 | E-SET | NA | BRANCHLINE_LENGTH_MINIMUM_VALUE | missing from `ros_ll.setting_operations`? | to add |
 | E-SET | NA | BRANCHLINE_LENGTH_MINIMUM_UNIT | missing from `ros_ll.setting_operations`? | to add |
