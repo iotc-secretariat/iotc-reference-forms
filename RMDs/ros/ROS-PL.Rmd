@@ -641,7 +641,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | finder_contact_details | O | **DESCRIPTION TO ADD** | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
 :::
 
-# (E-SET-BAIT)
+# E-SET-BAIT {#eSetBait}
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
@@ -694,7 +694,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | fishing_gear | O  |The fishing gear during the specific bait fishing event  | **Code** from [Fishing Gear](#fishingGear) |  e.g., `DL`  |
 | number_of_fishers  | O  | The number of fishers that participate to the bait fishing event | Integer |e.g., `25` |
 
-# (E-SET-BAIT-CATCHES)
+# E-SET-BAIT-CATCHES {#eSetBaitCatches}
 
  
 ::: {style="margin-left:40px"}
@@ -708,7 +708,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | estimation_method |O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` | 
 :::
 
-# (E-SET-BAIT-CATCHES-SPECIMEN-SSI)
+# E-SET-BAIT-CATCHES-SPECIMEN-SSI {#eSetBaitcatchsSpecimenSSI}
 
 ## Specimen details - Additional catch details SSI
 
@@ -722,7 +722,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | revival | O  | 	Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String |e.g., `Yes`  |
 | photo_ID | O  | The unique identifier of the photo taken of a specimen | Alphanumeric  | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png`  |
 
-# (D-ACTIVITIES)
+# D-ACTIVITIES {#dActivities}
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
