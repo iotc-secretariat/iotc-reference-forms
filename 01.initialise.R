@@ -124,6 +124,8 @@ DATA_SOURCES_SF = read_codelist(domain = "data", codelist = "DATA_SOURCES_SF")
 
 DATA_SOURCES_FC = read_codelist(domain = "data", codelist = "DATA_SOURCES_FC")
 
+DATA_SOURCES_RO = read_codelist(domain = "data", codelist = "DATA_SOURCES_RO")
+  
 DATA_PROCESSINGS_DI = read_codelist(domain = "data", codelist = "DATA_PROCESSINGS_DI")
 
 DATA_PROCESSINGS_RC = read_codelist(domain = "data", codelist = "DATA_PROCESSINGS_RC")
@@ -224,6 +226,12 @@ FAD_TAIL_DESIGNS = read_codelist(domain = "fisheries", schema = "fishery", codel
 
 SURFACE_FISHERY_ACTIVITIES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SURFACE_FISHERY_ACTIVITIES")
 
+NET_SETTING_STRATEGIES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "NET_SETTING_STRATEGIES")
+
+NET_CONFIGURATIONS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "NET_CONFIGURATIONS")
+
+FISH_PROCESSING_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")
+
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
 SPECIES               = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
@@ -248,9 +256,9 @@ INDIVIDUAL_CONDITIONS = read_codelist(domain = "biology", schema = "biology", co
 
 MEASUREMENTS          = read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENTS")
 
-WEIGHT_MEASUREMENTS = MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CODE")]
-
 LENGTH_MEASUREMENTS = MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "LN", -c("TYPE_OF_MEASUREMENT_CODE")]
+
+WEIGHT_MEASUREMENTS = read_codelist(domain = "biology", schema = "biology", codelist = "WEIGHT_MEASUREMENTS")
 
 MEASUREMENT_TOOLS     = read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENT_TOOLS")
 
