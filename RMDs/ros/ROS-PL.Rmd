@@ -632,21 +632,21 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| Release | O |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
-| Recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
-| Type code | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
-| Tag number 1 | O | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
-| Tag number 2 | O | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
-| Finder name | O | **DESCRIPTION TO ADD** | String | e.g., `Jane Doe` |
-| Finder contact details | O | **DESCRIPTION TO ADD** | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
+| release | O |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
+| recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
+| type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
+| tag_number_1 | O | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
+| tag_number_2 | O | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
+| finder_name | O | **DESCRIPTION TO ADD** | String | e.g., `Jane Doe` |
+| finder_contact_details | O | **DESCRIPTION TO ADD** | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
 :::
 
 # (E-SET-BAIT)
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Observed trip ID | | O | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` | 
-| Set ID | O | The parent set identifier |||
+| observed_trip_ID | | O | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` | 
+| set_ID | O | The parent set identifier |||
 
 ## Setting operations
 
@@ -654,7 +654,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | O |Record the data and time when chumming for bait starts | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_UTC | O |Record the data and time when chumming for bait starts | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 | 
 
 | **Position:** Record the data and time when chumming for bait starts
@@ -663,36 +663,36 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Latitude | O | The latitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| Longitude |O | The longitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | O | The latitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
+| longitude |O | The longitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 | **End setting**
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | O  | The date and time at the end of the bait fishing event, when the last brail is scooped from the net |  YYYY-MM-DD hh:mm   |e.g., `2025-09-15 12:00`|
+| date_time_UTC | O  | The date and time at the end of the bait fishing event, when the last brail is scooped from the net |  YYYY-MM-DD hh:mm   |e.g., `2025-09-15 12:00`|
 
 | **Position:** ADD DESCRIPTION
 :::
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Latitude | O |	The latitude of the position at the end of the setting operation  |  Decimal degrees (two decimal places) | e.g.,`-20.88` |
-| Longitude |O | The longitude of the position at the end of the setting operation |  Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | O |	The latitude of the position at the end of the setting operation  |  Decimal degrees (two decimal places) | e.g.,`-20.88` |
+| longitude |O | The longitude of the position at the end of the setting operation |  Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 | **Depth:** The depth of the place where the net is being deployed.
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Value | O  |  | Float  |  |
-| FT / M | O  |Indicate units (FT or M)  | String | e.g., `ft`  |
+| value | O  |  | Float  |  |
+| unit | O  |Indicate units (FT or M)  | String | e.g., `ft`  |
 :::
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Fishing gear | O  |The fishing gear during the specific bait fishing event  | **Code** from [Fishing Gear](#fishingGear) |  e.g., `DL`  |
-| Number of fishers  | O  | The number of fishers that participate to the bait fishing event | Integer |e.g., `25` |
+| fishing_gear | O  |The fishing gear during the specific bait fishing event  | **Code** from [Fishing Gear](#fishingGear) |  e.g., `DL`  |
+| number_of_fishers  | O  | The number of fishers that participate to the bait fishing event | Integer |e.g., `25` |
 
 # (E-SET-BAIT-CATCHES)
 
@@ -702,10 +702,10 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Processing type code |O  | The processing code used for the weight measurement |**Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
+| processing_type |O  | The processing code used for the weight measurement |**Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
 | Value |O  | The weight corresponding to the measurement type code | Float |e.g., `43.2`  |
-| Unit | O  | Unit of weight (kg or t) | String |e.g., `kg`  |
-| Estimation method code |O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` | 
+| unit | O  | Unit of weight (kg or t) | String |e.g., `kg`  |
+| estimation_method |O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` | 
 :::
 
 # (E-SET-BAIT-CATCHES-SPECIMEN-SSI)
@@ -714,19 +714,19 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Gear interaction code | O  | The type of interaction of the specimen with the fishing gear (“UK” if unknown as not possible to collect)  | **Code** from [Gear Interactions](#gearInteractions) | e.g., `EF` |
-| Brought onboard | O  | 	Indicates whether or not the specimen was brought onboard (Yes/No/Unk) | String  |e.g., `Yes`   |
-| Handling method code | O  | Details how the specimen was brought onboard | **Code** from [Handling Methods](#handlingMethods) |e.g., `AN`  |
-| Condition at capture | O | 	The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions)  | e.g., `A0` |
-| Condition at release | O  | 	The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
-| Revival | O  | 	Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String |e.g., `Yes`  |
-| Photo ID | O  | The unique identifier of the photo taken of a specimen | Alphanumeric  | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png`  |
+| gear_interaction | O  | The type of interaction of the specimen with the fishing gear (“UK” if unknown as not possible to collect)  | **Code** from [Gear Interactions](#gearInteractions) | e.g., `EF` |
+| brought_onboard | O  | 	Indicates whether or not the specimen was brought onboard (Yes/No/Unk) | String  |e.g., `Yes`   |
+| handling_method | O  | Details how the specimen was brought onboard | **Code** from [Handling Methods](#handlingMethods) |e.g., `AN`  |
+| condition_at_capture| O | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions)  | e.g., `A0` |
+| condition_at_release | O  | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
+| revival | O  | 	Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String |e.g., `Yes`  |
+| photo_ID | O  | The unique identifier of the photo taken of a specimen | Alphanumeric  | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png`  |
 
 # (D-ACTIVITIES)
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Observed trip ID |M  | The parent observed trip identifier | Alphanumeric |e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
+| observed_trip_ID |M  | The parent observed trip identifier | Alphanumeric |e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
 
 ## Activity details 
 
@@ -734,16 +734,12 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| Date/time UTC | M  |  |  YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00`  |
-| Latitude | M |  |  Decimal degrees (two decimal places) | e.g.,`-20.88` |
-| Longitude |M |  |  Decimal degrees (two decimal places) | e.g., `55.53` |
+| date_time_UTC | M  |  |  YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00`  |
+| latitude | M |  |  Decimal degrees (two decimal places) | e.g.,`-20.88` |
+| longitude |M |  |  Decimal degrees (two decimal places) | e.g., `55.53` |
 | Activity type code | O  | Record vessel activity at the start of every fishing activity and every two hours from sunrise to sunset |**Code** from [Surface Fishery Activities](#surfaceFisheryActivities)  | e.g., `BA` |
 | Comments | O  |  |Free entry. Plain text.  |  |
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f010a72846ff4a44f1e2112d03c3a937b8b8f968
 # Reporting deadlines
 
 - **Surface fisheries**: 30 June (final)
