@@ -166,9 +166,9 @@ The ROS data reporting forms were revised during the 20^th^ Session of the Worki
 ## Form ROS-PL | Pole-and-Lines
 
 + [Form template](./ros/Form-ROS-PL.xlsx)
-<!-- + [Form description](./ros/Form-ROS-PL.html) -->
++ [Form description](./ros/Form-ROS-PL.html)
 
 ## Form ROS-PS | Purse Seines
 
 + [Form template](./ros/Form-ROS-PS.xlsx)
-<!-- + [Form description](./ros/Form-ROS-PS.html) -->
++ [Form description](./ros/Form-ROS-PS.html)
