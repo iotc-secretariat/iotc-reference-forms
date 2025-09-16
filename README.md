@@ -11,13 +11,13 @@ Therefore, this repository addresses points 1. and 2. above by:
 
 -   providing authoritative access to the (empty) templates for each new IOTC form
 -   including the RMD files that describe each new form and the provisions to convert these into HTML documents
--   automatically uploading the artifacts (forms and HTML documents) to `data.iotc.org`
+-   automatically uploading the artefacts (forms and HTML documents) to `data.iotc.org`
 
 ## How do I get set up?
 
 ### Environment variables
 
-Two sets of system environment variables are required in order to be able to properly build this project and its artifacts:
+Two sets of system environment variables are required in order to be able to properly build this project and its artefacts:
 
 #### Data access credentials
 
@@ -43,24 +43,33 @@ The process will take care of:
 1.  Processing the RMD files for each IOTC form (see the content of the `RMDs` folder) and produce an HTML document for each of these, that will be placed under the `out\HTML` folder
 2.  Connect to the sFTP server and transfer these HTML documents to `/var/www/static/reference/latest/forms`, from where they will eventually be accessed either directly, through their specific URLs, or through a [summary page](https://data.iotc.org/reference/latest/forms/).
 
-> Descriptive documents for the *multiple* versions of forms `3CE` and `4SF` still need to be provided, as are those for forms `1DR`, `1IN`, `3AA`, and `3DA`, and those for the *interim* versions of form `1RC`, `1DI`, `2FC`, `3CE`, `3CE-multiple`, `4SF`, and `4SF-multiple` (which are not strictly required)
+<!-- > Descriptive documents for the *multiple* versions of forms `3CE` and `4SF` still need to be provided, as are those for forms `1DR`, `1IN`, `3AA`, and `3DA`, and those for the *interim* versions of form `1RC`, `1DI`, `2FC`, `3CE`, `3CE-update`, `4SF`, and `4SF-update` (which are not strictly required) -->
 
-3.  Connect to the sFTP server and upload the (empty) Microsoft Excel™ templates for each form to `/var/www/static/reference/latest/forms` and `/var/www/static/reference/latest/forms/interim`, from where they will eventually be accessed through the following URLs (which are also provided under the **Form template** link for each form in the [summary page](https://data.iotc.org/reference/latest/forms/)):
+3.  Connect to the sFTP server and upload the (empty) Microsoft Excel™ templates for each form to `/var/www/static/reference/latest/forms`, from where they will eventually be accessed through the following URLs (which are also provided under the **Form template** link for each form in the [summary page](https://data.iotc.org/reference/latest/forms/)):
 
--   <https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-1DI.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-2FC.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-3BU.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-3CE-update.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-3AA-update.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-3DA.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-4SF.xlsx>
--   <https://data.iotc.org/reference/latest/forms/Form-4SF-update.xlsx>
+- Statistical Data Forms:
+
+    + <https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-1DI.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-1IN.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-2FC.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-3BU.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-3CE-update.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-3AA-update.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-3DA.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-4SF.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/Form-4SF-update.xlsx>
+
+- ROS Data Forms:
+
+    + <https://data.iotc.org/reference/latest/forms/ros/Form-ROS-GN.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/ros/Form-ROS-LL.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/ros/Form-ROS-PL.xlsx>
+    + <https://data.iotc.org/reference/latest/forms/ros/Form-ROS-PS.xlsx>
 
 ### Contribution guidelines
 
@@ -72,7 +81,7 @@ For this reason, the `01.initialize.R` script takes care of:
 -   Fetching the codelist CSV from its remote location, whose URLs is built as: `https://data.iotc.org/reference/latest/domain/<_domain_>/codelists/<_codelist_name_>_<_codelist_version_>.csv` (e.g.: <https://data.iotc.org/reference/latest/domain/admin/codelists/COUNTRIES_1.0.0.csv>)
 -   Converting the CSV to a data table and assigning it to a variable in the current R session
 
-> The `01.initialize.R` script is currently reading / importing the definition of a few codelists only, and namely those required by the RMD files for the 6 major IOTC forms (`1RC`, `1DI`, `2FC`, `3BU`, `3CE`, `4SF`).
+> The `01.initialize.R` script reads and imports the definition of the codelists for both statistical (`1RC`, `1DI`, `2FC`, `3BU`, `3CE`, `4SF`) and ROS (`GN`, `LL`, `PL`, `PS`) data reporting forms.
 
 In order for these steps to work, and for the proper variables to be assigned a value within the current R session, the initialization script reads the content of:
 
@@ -132,8 +141,8 @@ In order for these steps to work, and for the proper variables to be assigned a 
 
 By combining these two datasets it is possible to determine the latest version (and hence the resource name) of all codelists - both *physical* and *virtual* - and therefore allow the initialization script to download all codelist elements from its remote location.
 
-The initialization script takes also care of resolving issues related to the mapping between database schemata (on `IOTC_master`) and codelist domains being not as trivial as they should have been.
+The initialisation script takes also care of resolving issues related to the mapping between database schemas (on `IOTC_master`) and codelist domains being not as trivial as they should have been.
 
-For instance, codelists under the `admin` domain are currently stored as tables under either the `refs_admin` or the `refs_gis` schemata (depending on the case) whereas the vast majority of other codelists directly maps its domain to the corresponding database schema (`_domain_` -\> `refs_<domain>`).
+For instance, codelists under the `admin` domain are currently stored as tables under either the `refs_admin` or the `refs_gis` schemas (depending on the case) whereas the vast majority of other codelists directly maps its domain to the corresponding database schema (`_domain_` -\> `refs_<domain>`).
 
-Additionally, some *derived* codelists (e.g., [IOTC main areas](https://data.iotc.org/reference/latest/domain/admin/#IOTC_areas_(GISIOIAA)) which are modeled as *views* in the `IOTC_master` database, need to see their version updated anytime a change to the underlying reference table (`[refs_gis].AREAS` in this example) is detected, and this requires modeling the *derived* tables accordingly in the reference codelist mapping file described earlier.
+Additionally, some *derived* codelists (e.g., [IOTC main areas](https://data.iotc.org/reference/latest/domain/admin/#IOTC_areas_(GISIOIAA)) which are modelled as *views* in the `IOTC_master` database, need to see their version updated any time a change to the underlying reference table (`[refs_gis].AREAS` in this example) is detected, and this requires modelling the *derived* tables accordingly in the reference codelist mapping file described earlier.
