@@ -98,7 +98,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 ::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time of the start of observations  | YYYY-MM-DDThh:mm  | e.g., `2025-09-15 12:00` |
+| date_time_utc | M | The date and time of the start of observations  | YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00` |
 :::
 
 
@@ -125,7 +125,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 ::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time of the end of observations  | YYYY-MM-DDThh:mm  | e.g., `2025-09-15 12:00` |
+| date_time_utc | M | The date and time of the end of observations  | YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00` |
 :::
 
 ## Observed Trip Summary
@@ -173,8 +173,8 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or EM records | Plain text | e.g., `Playa De Laida`   |
 | flag_or_chartering_state | M  |Record the name of country in which vessel is registered. Where chartering occurs, record name of the chartering country  | **Code** from [Countries](#countries) | e.g., `SYC` |
-| iotc_number  | M  | Vessel IOTC number as per the IOTC Record of Authorized Vessels and crosschecked with the number recorded on vessel certificates. | Alphanumeric   | e.g., `IOTC008460` |
-| imo_number | O  | Record the vessel IMO number  | Seven-digit number  | e.g., `9719812` |
+| iotc_number  | M  | The unique identification number assigned to the vessel by the IOTC when it is included in the Record of Authorised Vessels| Free entry, alphanumeric code   | e.g., `IOTC016711` |
+| imo_number  | O  | The unique vessel identification number assigned by the International Maritime Organization | Seven-digit number  |e.g., `8541701`  |
 | ircs  | O | Record vessel International Radio Call Sign (IRCS) if available. This is the number displayed prominently on the vessel’s side or superstructure | Alphanumeric | e.g., `S7TO` |
 :::
 
@@ -244,7 +244,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc |M | The date and time the vessel departed from port |  YYYY-MM-DDThh:mm  | e.g., `2025-09-15 12:00` |
+| date_time_utc |M | The date and time the vessel departed from port |  YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
 | **Vessel return:** The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transhipment location record 'at-sea' plus the geographical coordinates corresponding to the location the transhipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
@@ -443,19 +443,19 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 | school_types  | M | The type of tuna school encountered | **Code** from [School Types](#schoolTypes) | e.g., `FS`  |
 | first_detection_method | O  | How the vessel first detects the tuna school, floating object or birds. If more than one method, this field only indicates what first made the vessel change course.  | **Code** from [Detection Methods](#schoolDetectionMethods) | e.g., `AS` |
 | school_size_t | O | Provides an estimation of the size of the tuna school being targeted (in tonnes). This information can be requested from the bridge officers | Float |e.g., `tbd`  |
-| date_time_net_pursed_utc | O  | The time (hh:mm) when the net is fully pursed. All rings are up.  |   YYYY-MM-DDThh:mm  |e.g., `2025-09-15 12:00`  |
+| date_time_net_pursed_utc | O  | The time (hh:mm) when the net is fully pursed. All rings are up.  |  YYYY-MM-DD hh:mm  |e.g., `2025-09-15 12:00`  |
 
 | **Brailing** 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_start_utc | O  | The time that brailing starts (hh:mm) |  YYYY-MM-DDThh:mm   |e.g., `2025-09-15 12:00`  |
-| date_time_end_utc | O | The time that brailing ends (hh:mm) |  YYYY-MM-DDThh:mm   | e.g., `2025-09-15 14:00` |
+| date_time_start_utc | O  | The time that brailing starts (hh:mm) |  YYYY-MM-DD hh:mm  |e.g., `2025-09-15 12:00`  |
+| date_time_end_utc | O | The time that brailing ends (hh:mm) |  YYYY-MM-DD hh:mm | e.g., `2025-09-15 14:00` |
 :::
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_skiff_onboard_utc | M  | The time when the skiff comes on board and the set is over (hh:mm) |  YYYY-MM-DDThh:mm  |e.g., `2025-09-15 12:00`  |
+| date_time_skiff_onboard_utc | M  | The time when the skiff comes on board and the set is over (hh:mm) |  YYYY-MM-DD hh:mm |e.g., `2025-09-15 12:00`  |
 | maximum_closing_net_depth_m | O  | The real, measured, closed net depth (m). Only record if depth gauge is used. Use information from middle gauge if more than one gauge is present  | Float |e.g., `tbd`  |
 
 | **Object details** 
@@ -628,8 +628,8 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id |M  |The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PS` |
 | set_id  | M | The parent set identifier | 4-digit number | e.g, `0007` | |
-| catch_id |M  | Unique within a specific set  |Alphanumeric  | e.g., **ADD** |
-| specimen_id |M  |  |Alphanumeric  |e.g., **ADD**  |
+| catch_id |M  | Unique within a specific set  |Alphanumeric  | e.g., `tbd` |
+| specimen_id |M  |  |Alphanumeric  |e.g., `tbd`   |
 
 ## Specimen details SSI
 | Field | Requirement | Description | Format | Input value |
@@ -676,7 +676,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | O | The date and time of the activity |  YYYY-MM-DDThh:mm  | e.g., `2025-09-15 12:00` |
+| date_time_utc | O | The date and time of the activity |  YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00` |
 | latitude  | O  | The latitude of the activity location  | Decimal degrees (two decimal places) | e.g., `-20.88` |
 | longitude | O  | The longitude of the activity location | Decimal degrees (two decimal places) | e.g., `55.53` |
 | activity_type | O |Record vessel activity at the start of every fishing activity and every two hours from sunrise to sunset |**Code** from [Surface Fishery Activities](#surfaceFisheryActivities)  | e.g., `BA` |
