@@ -268,7 +268,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 
 # V-ATTRIBUTES {#vAttributes}
 
-This section of the reporting form describes the attributes of the vessel
+<!-- This section of the reporting form describes the attributes of the vessel -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -350,7 +350,7 @@ This section of the reporting form describes the attributes of the vessel
 
 # G-GENERAL {#gGeneral}
 
-This section of the reporting form describes the purse seine fishing gear present on the vessel
+<!-- This section of the reporting form describes the purse seine fishing gear present on the vessel -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -413,7 +413,7 @@ This section of the reporting form describes the purse seine fishing gear presen
 
 # E-SET {#eSet}
 
-This section describes details of each of the setting operations within the fishing trip
+<!-- This section describes details of each of the setting operations within the fishing trip -->
 
 ## Setting Operations
 
@@ -488,7 +488,7 @@ This section describes details of each of the setting operations within the fish
 :::
 
 # E-SET-CETACEANS {#eSetCetaceans}
-| Within each purse seine fishing trip, this section outlines the cetacean sightings prior to and during each of the setting operations. 
+<!-- | Within each purse seine fishing trip, this section outlines the cetacean sightings prior to and during each of the setting operations.  -->
 
 
 | Field | Requirement | Description | Reporting format | Input value |
@@ -505,7 +505,7 @@ This section describes details of each of the setting operations within the fish
 | caught_inside_net | M  | Indicates whether or not any individuals where caught inside the net (Yes/No) | String | e.g., `Yes`  |
 
 # E-SET-CATCHES {#eSetCatches}
-This section of the form is for the reporting of catches details for each set 
+<!-- This section of the form is for the reporting of catches details for each set  -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -547,7 +547,7 @@ This section of the form is for the reporting of catches details for each set
 
 # E-CATCH-SPECIMENS
 
-In this section, the form outlines fields for specimens details from a proportion of catch from one of the sets from the fishing trip
+<!-- In this section, the form outlines fields for specimens details from a proportion of catch from one of the sets from the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -622,7 +622,7 @@ In this section, the form outlines fields for specimens details from a proportio
 
 # E-SET-CATCHES-SPECIMEN-SSI {#eSetCatchesSpecimenSSI}
 
-This section of the ROS form is for the reporting of catches of species of special interest. As defined by IOTC in the WPDCS14 report, this includes (1) all marine turtles, (2) all cetaceans, (3) all seabirds, (4) designated shark species, and more specifically those species subject to a retention ban (i.e., whale sharks, oceanic whitetip shark, and thresher sharks), (5) designated billfish species, and more specifically those included in Res. 18/05 (i.e., striped marlin, black marlin, blue marlin, and Indo-Pacific sailfish), and all mobulid rays
+<!-- This section of the ROS form is for the reporting of catches of species of special interest. As defined by IOTC in the WPDCS14 report, this includes (1) all marine turtles, (2) all cetaceans, (3) all seabirds, (4) designated shark species, and more specifically those species subject to a retention ban (i.e., whale sharks, oceanic whitetip shark, and thresher sharks), (5) designated billfish species, and more specifically those included in Res. 18/05 (i.e., striped marlin, black marlin, blue marlin, and Indo-Pacific sailfish), and all mobulid rays -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -666,7 +666,7 @@ This section of the ROS form is for the reporting of catches of species of speci
 
 # D-ACTIVITIES {#dActivities}
 
-This section of the reporting form describes the activities conducted throughout the fishing trip
+<!-- This section of the reporting form describes the activities conducted throughout the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
