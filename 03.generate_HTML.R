@@ -147,3 +147,11 @@ render("./RMDs/ros/ROS-PS.rmd",
        output_format = "html_document2",
        output_file ="Form-ROS-PS.html", 
        output_dir = "./out/HTML/ros/")
+
+
+## GILLNET
+render("./RMDs/ros/ROS-GN.rmd", 
+       output_format = "html_document2",
+       output_file ="Form-ROS-GN.html", 
+       output_dir = "./out/HTML/ros/")
+
