@@ -365,17 +365,7 @@ side controls (e.g., Microsoft Excel™ macros) in favour of online
 validators, while leveraging the new <a href="https://data.iotc.org/reference/latest/">IOTC reference data
 catalogue</a></li>
 <li>Systematically describing the form structure and provide guidelines
-on how to fill their content</li>
-<li>Accounting for the <em>interim</em> period during which two versions
-of the major IOTC forms (1RC, 1DI, 3CE, 4SF) will coexist, one still
-referencing the <em>old</em> <a href="https://data.iotc.org/reference/latest/domain/legacy/#fisheries">fishery</a>
-and <a href="https://data.iotc.org/reference/latest/domain/legacy/#species">species</a>
-codes as found in the IOTC data reporting guidelines (2014) and in the
-<code>IOTCStatistics</code> database, including the provision of target
-species as a side element to the fishery, and one fully adopting the
-<em>new</em> <a href="https://data.iotc.org/reference/latest/domain/fisheries/#fisheries">fisheries</a>
-and <a href="https://data.iotc.org/reference/latest/domain/biological/#species">species</a>
-codes as found in the <code>IOTC_master</code> database.</li>
+on how to fill their content.</li>
 </ol>
 <p>Therefore, this repository addresses points 1. and 2. above by:</p>
 <ul>
@@ -383,7 +373,7 @@ codes as found in the <code>IOTC_master</code> database.</li>
 IOTC form</li>
 <li>including the RMD files that describe each new form and the
 provisions to convert these into HTML documents</li>
-<li>automatically uploading the artifacts (forms and HTML documents) to
+<li>automatically uploading the artefacts (forms and HTML documents) to
 <code>data.iotc.org</code></li>
 </ul>
 </div>
@@ -392,7 +382,7 @@ provisions to convert these into HTML documents</li>
 <div id="environment-variables" class="section level3">
 <h3>Environment variables</h3>
 <p>Two sets of system environment variables are required in order to be
-able to properly build this project and its artifacts:</p>
+able to properly build this project and its artefacts:</p>
 <div id="data-access-credentials" class="section level4">
 <h4>Data access credentials</h4>
 <ul>
@@ -428,7 +418,8 @@ the sFTP server on this same machine and transfer all process artifacts
 <ul>
 <li>Ensure that all environment variables are properly set (in case,
 contact the <a href="mailto:francis.kilindo@fao.org" class="email">IOTC
-IT manager</a> to retrieve all sensitive information above)</li>
+IT manager</a> to retrieve the user credentials and other sensitive
+information)</li>
 <li>Run the <code>00.run.R</code> script and wait for its
 completion</li>
 </ul>
@@ -445,25 +436,18 @@ will eventually be accessed either directly, through their specific
 URLs, or through a <a href="https://data.iotc.org/reference/latest/forms/">summary
 page</a>.</li>
 </ol>
-<blockquote>
-<p>Descriptive documents for the <em>multiple</em> versions of forms
-<code>3CE</code> and <code>4SF</code> still need to be provided, as are
-those for forms <code>1DR</code>, <code>1IN</code>, <code>3AA</code>,
-and <code>3DA</code>, and those for the <em>interim</em> versions of
-form <code>1RC</code>, <code>1DI</code>, <code>2FC</code>,
-<code>3CE</code>, <code>3CE-multiple</code>, <code>4SF</code>, and
-<code>4SF-multiple</code> (which are not strictly required)</p>
-</blockquote>
+<!-- > Descriptive documents for the *multiple* versions of forms `3CE` and `4SF` still need to be provided, as are those for forms `1DR`, `1IN`, `3AA`, and `3DA`, and those for the *interim* versions of form `1RC`, `1DI`, `2FC`, `3CE`, `3CE-update`, `4SF`, and `4SF-update` (which are not strictly required) -->
 <ol start="3" style="list-style-type: decimal">
 <li>Connect to the sFTP server and upload the (empty) Microsoft Excel™
 templates for each form to
-<code>/var/www/static/reference/latest/forms</code> and
-<code>/var/www/static/reference/latest/forms/interim</code>, from where
-they will eventually be accessed through the following URLs (which are
-also provided under the <strong>Form template</strong> link for each
-form in the <a href="https://data.iotc.org/reference/latest/forms/">summary
+<code>/var/www/static/reference/latest/forms</code>, from where they
+will eventually be accessed through the following URLs (which are also
+provided under the <strong>Form template</strong> link for each form in
+the <a href="https://data.iotc.org/reference/latest/forms/">summary
 page</a>):</li>
 </ol>
+<ul>
+<li><p>Statistical Data Forms:</p>
 <ul>
 <li><a href="https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-1DR.xlsx</a></li>
 <li><a href="https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-1RC.xlsx</a></li>
@@ -472,35 +456,29 @@ page</a>):</li>
 <li><a href="https://data.iotc.org/reference/latest/forms/Form-2FC.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-2FC.xlsx</a></li>
 <li><a href="https://data.iotc.org/reference/latest/forms/Form-3BU.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-3BU.xlsx</a></li>
 <li><a href="https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-3CE.xlsx</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/Form-3CE-multiple.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-3CE-multiple.xlsx</a></li>
+<li><a href="https://data.iotc.org/reference/latest/forms/Form-3CE-update.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-3CE-update.xlsx</a></li>
 <li><a href="https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-3AA.xlsx</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/Form-3AA-multiple.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-3AA-multiple.xlsx</a></li>
+<li><a href="https://data.iotc.org/reference/latest/forms/Form-3AA-update.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-3AA-update.xlsx</a></li>
 <li><a href="https://data.iotc.org/reference/latest/forms/Form-3DA.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-3DA.xlsx</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/Form-3DA-multiple.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-3DA-multiple.xlsx</a></li>
+<li><a href="https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-3DA-update.xlsx</a></li>
 <li><a href="https://data.iotc.org/reference/latest/forms/Form-4SF.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-4SF.xlsx</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/Form-4SF-multiple.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-4SF-multiple.xlsx</a></li>
-</ul>
-<p>and</p>
+<li><a href="https://data.iotc.org/reference/latest/forms/Form-4SF-update.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/Form-4SF-update.xlsx</a></li>
+</ul></li>
+<li><p>ROS Data Forms:</p>
 <ul>
-<li><a href="https://data.iotc.org/reference/latest/forms/interim/Form-1RC_interim.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/interim/Form-1RC_interim.xlsx</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/interim/Form-1DI_interim.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/interim/Form-1DI_interim.xlsx</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/interim/Form-2FC_interim.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/interim/Form-2FC_interim.xlsx</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/interim/Form-3CE_interim.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/interim/Form-3CE_interim.xlsx</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/interim/Form-3CE_interim-multiple.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/interim/Form-3CE_interim-multiple.xlsx</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/interim/Form-4SF_interim.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/interim/Form-4SF_interim.xlsx</a></li>
-<li><a href="https://data.iotc.org/reference/latest/forms/interim/Form-4SF_interim-multiple.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/interim/Form-4SF_interim-multiple.xlsx</a></li>
+<li><a href="https://data.iotc.org/reference/latest/forms/ros/Form-ROS-GN.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/ros/Form-ROS-GN.xlsx</a></li>
+<li><a href="https://data.iotc.org/reference/latest/forms/ros/Form-ROS-LL.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/ros/Form-ROS-LL.xlsx</a></li>
+<li><a href="https://data.iotc.org/reference/latest/forms/ros/Form-ROS-PL.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/ros/Form-ROS-PL.xlsx</a></li>
+<li><a href="https://data.iotc.org/reference/latest/forms/ros/Form-ROS-PS.xlsx" class="uri">https://data.iotc.org/reference/latest/forms/ros/Form-ROS-PS.xlsx</a></li>
+</ul></li>
 </ul>
-<p>for the <em>interim</em> versions of the forms above, which include a
-<em>target species</em> element, and still reference the <em>legacy</em>
-IOTC codelists for <a href="https://data.iotc.org/reference/latest/domain/legacy/#fisheries">fishery</a>
-and <a href="https://data.iotc.org/reference/latest/domain/legacy/#species">species</a>.</p>
 </div>
 <div id="contribution-guidelines" class="section level3">
 <h3>Contribution guidelines</h3>
 <p>The RMD files might need to embed some of the <a href="https://data.iotc.org/reference/latest/">IOTC reference
 codelists</a> in order to provide specific summary information to the
 end users.</p>
-<p>For this reason, the <code>01.initialize.R</code> scripts takes care
+<p>For this reason, the <code>01.initialize.R</code> script takes care
 of:</p>
 <ul>
 <li>Building the mapping between a given codelist and the remote
@@ -513,11 +491,11 @@ built as:
 the current R session</li>
 </ul>
 <blockquote>
-<p>The <code>01.initialize.R</code> script is currently reading /
-importing the definition of a few codelists only, and namely those
-required by the RMD files for the 6 major IOTC forms (<code>1RC</code>,
+<p>The <code>01.initialize.R</code> script reads and imports the
+definition of the codelists for both statistical (<code>1RC</code>,
 <code>1DI</code>, <code>2FC</code>, <code>3BU</code>, <code>3CE</code>,
-<code>4SF</code>).</p>
+<code>4SF</code>) and ROS (<code>GN</code>, <code>LL</code>,
+<code>PL</code>, <code>PS</code>) data reporting forms.</p>
 </blockquote>
 <p>In order for these steps to work, and for the proper variables to be
 assigned a value within the current R session, the initialization script
@@ -538,7 +516,7 @@ schema</li>
 <table>
 <colgroup>
 <col width="24%" />
-<col width="27%" />
+<col width="26%" />
 <col width="24%" />
 <col width="24%" />
 </colgroup>
@@ -656,11 +634,11 @@ of a new record, or the deletion / update of an existing record) for
 that codelist</li>
 </ul>
 <p>e.g.:</p>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col width="23%" />
-<col width="28%" />
-<col width="23%" />
+<col width="24%" />
+<col width="27%" />
+<col width="24%" />
 <col width="24%" />
 </colgroup>
 <thead>
@@ -761,21 +739,21 @@ latest version (and hence the resource name) of all codelists - both
 <em>physical</em> and <em>virtual</em> - and therefore allow the
 initialization script to download all codelist elements from its remote
 location.</p>
-<p>The initialization script takes also care of resolving issues related
-to the mapping between database schemata (on <code>IOTC_master</code>)
+<p>The initialisation script takes also care of resolving issues related
+to the mapping between database schemas (on <code>IOTC_master</code>)
 and codelist domains being not as trivial as they should have been.</p>
 <p>For instance, codelists under the <code>admin</code> domain are
 currently stored as tables under either the <code>refs_admin</code> or
-the <code>refs_gis</code> schemata (depending on the case) whereas the
+the <code>refs_gis</code> schemas (depending on the case) whereas the
 vast majority of other codelists directly maps its domain to the
 corresponding database schema (<code>_domain_</code> -&gt;
 <code>refs_&lt;domain&gt;</code>).</p>
 <p>Additionally, some <em>derived</em> codelists (e.g., <a href="https://data.iotc.org/reference/latest/domain/admin/#IOTC_areas_(GISIOIAA)">IOTC
-main areas</a> which are modeled as <em>views</em> in the
-<code>IOTC_master</code> database, need to see their version updated
-anytime a change to the underlying reference table
+main areas</a> which are modelled as <em>views</em> in the
+<code>IOTC_master</code> database, need to see their version updated any
+time a change to the underlying reference table
 (<code>[refs_gis].AREAS</code> in this example) is detected, and this
-requires modeling the <em>derived</em> tables accordingly in the
+requires modelling the <em>derived</em> tables accordingly in the
 reference codelist mapping file described earlier.</p>
 </div>
 </div>
