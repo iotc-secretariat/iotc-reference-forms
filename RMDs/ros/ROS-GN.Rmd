@@ -7,6 +7,7 @@ output:
     number_sections: FALSE
     reference_num: TRUE
     fig_caption: TRUE
+    
   html_document2:
     css: "../templates/html_template.css"
     includes: 
@@ -16,9 +17,6 @@ output:
     toc_float:
       collapsed: FALSE
     smooth_scroll: FALSE
-editor_options: 
-  markdown: 
-    wrap: 72
 ---
 
 # Description
@@ -31,13 +29,30 @@ REPLACE WITH PROPER FORM LINK Click [here](./Form-ROS-GN.xlsx) to download a bla
 
 Vessel and trip identifiers; effort and gear characteristics (nets, drop lines, sinkers); operational details of each set; catch and bycatch by species in number and weight; fate of catch (retained/discarded); interactions with sharks, seabirds, turtles, and other species; mitigation measures used; size measurements of catch as well as some biological samples.
 
+| Sheet | Component | Resolution | Description |
+| :------- | :--------: | :--------: |:---------------------------- |
+| [META](#meta) | Dataset | Trip | Information on data submission and main characteristics |
+| [O-INFO](#oInfo) | Observer \& trip | Trip | Information on the observer and the fishing trip observed |
+| [V-INFO](#vInfo) | Vessel | Trip | Information on the fishing vessel, its gear, and personnel |
+| [V-TRIP](#vTrip) | Trip | Trip | Information on the fishing trip's departure and return |
+| [V-ATTRIBUTES](#vAttributes) | Vessel | Vessel | Information on the vessel's attributes and equipment |
+| [G-GENERAL](#gGeneral) | Equipments | Trip | Information on the fishing gear's equipment and machinery |
+| [G-CONFIG-GILLNETS](#gConfigGillnets) | Equipments | Trip | Information on the configuration of gillnets |
+| [G-CONFIG-SINKERS](#gConfigSinkers) | Equipments | Trip | Information on the configuration of sinkers  |
+| [E-SET](#eSet) | Effort  | Set | Information on effort (sets) and gear characteristics (materials, targeting)  |
+| [E-SET-HAULING](#eSetHauling) |Effort | Set | Information on effort (sets) from the overall fishing trip |
+| [E-SET-CATCHES](#eSetTunaCatches) | Effort |Set |Information on magnitude, composition, and fate of tuna catch|
+| [E-SET-CATCHES-SPECIMEN](#eSetCatchesSpecimen) | Catch |Specimen |Information on specimen condition, depredation, and technical details
+| [E-SET-CATCHES-SPECIMEN-SSI](#eSetCatchesSpecimenSSI) | Catch | Specimen | Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest during tuna fishing events|
+
+
 # Metadata
 
-## Submission information
+## Submission Information
 
 Fill out focal point information (full name, email, finalization date, and submission date) Fill out organization information (name, email)
 
-## General information
+## General Information
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
@@ -46,7 +61,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Flag / Chartering state | M | 	The country registration of the fishing vessels or chartering flag in case of chartering agreement | **Code** from [Countries](#countries) |e.g., `FRA`  |
 | Data source | M | The source of data provided: ‘OAS’ for data collected by Observers at sea and ‘EMS’ for data derived from Electronic Monitoring Systems | String |e.g., `OAS`  |
 
-# (O-INFO) Observer and observed trip information
+# O-INFO {#oInfo}
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
@@ -60,7 +75,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | observer_full_name | M | The full name of the scientific observer who collected the data onboard the fishing vessel, or of the Electronic Monitoring reviewer, recorded as first and last names | String | e.g., `John Doe` |
 
 
-## Observer trip details
+## Observer Trip Details
 
 | **Embarkation:** The starting port. If the first observation is available after the departure form the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure), record "at sea".
 
@@ -89,7 +104,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_UTC | O | The date and time of the start of observations | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc | O | The date and time of the start of observations | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
 
@@ -120,11 +135,11 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_UTC | O | The date and time of the end of observations | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc | O | The date and time of the end of observations | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
 
-## Observed trip summary
+## Observed Trip Summary
 
 
 | **Number of fishing sets:** The total number of gillnet sets deployed by the vessel or observed by the scientific observer during a single fishing trip. Each set corresponds to one complete deployment of the gillnet gear.
@@ -132,8 +147,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | **EXAMPLE TO ADD**  |
-| observed | M | The total number of fishing sets/events monitored by the observer. In the case of Electronic Monitoring, only processed events to be included | Integer | **EXAMPLE TO ADD** |
+| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | e.g., `tbd`  |
+| observed | M | The total number of fishing sets/events monitored by the observer. In the case of Electronic Monitoring, only processed events to be included | Integer | e.g., `tbd` |
 :::
 
 | **Number of days:** The total number of hours or calendar days the vessel is on a fishing trip. This can be further categorised by type of activity (e.g., searching, transiting, actively fishing, or present in fishing areas).
@@ -141,11 +156,11 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| searching | M | The number of hours/days searching during the observation period | Integer | **EXAMPLE TO ADD** |
-| actively fishing | M | The number of active fishing hours/days during the observation period | Integer | **EXAMPLE TO ADD** |
-| in_fishing_area | O | The number of hours/days in the fishing area during the observation period | Integer | **EXAMPLE TO ADD** |
-| transiting | O | The number of hours/days transiting during the observation period | Integer | **EXAMPLE TO ADD** |
-| lost | O | The number of hours/days lost during the observation period | Integer | **EXAMPLE TO ADD** |
+| searching | M | The number of hours/days searching during the observation period | Integer | e.g., `tbd` |
+| actively fishing | M | The number of active fishing hours/days during the observation period | Integer | e.g., `tbd` |
+| in_fishing_area | O | The number of hours/days in the fishing area during the observation period | Integer | e.g., `tbd` |
+| transiting | O | The number of hours/days transiting during the observation period | Integer | e.g., `tbd` |
+| lost | O | The number of hours/days lost during the observation period | Integer | e.g., `tbd` |
 :::
 
 | **Reasons for lost days:** Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify). Fields designated for up to 4 reasons for lost days. If applicable, fill following the format described below. 
@@ -153,13 +168,13 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| reason 1 | O | The main reasons for days at sea lost to fishing activity | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
+| reason_1 | O | The main reasons for days at sea lost to fishing activity | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
 
 
 
-# (V-INFO) Vessel \> General Information
+# V-INFO {#vInfo}
 
-## Vessel information
+## Vessel Information
 
 
 | Field | Requirement | Description | Format | Input value |
@@ -193,19 +208,19 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 <!-- FORM UPDATES:  Fields for Contact ( phone 1, phone 2, fax 1, fax 2, email 1, email 2 should all be removed) -->
 
-| **Licensed target species**
+| **Licensed target species:** Up to 4 licensed target species can be reported on this form
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| species 1 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| species 2 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| species 3 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| species 4 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| species_1 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+<!-- | species 2 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` | -->
+<!-- | species 3 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` | -->
+<!-- | species 4 | O | The list of species that are intentionally targeted in the fishery | **Code** from [Target Species](#targetSpecies) | e.g., `AL` | -->
 :::
 
-<!--VMS_ON | O | **ADD DESCRIPTION | String | e.g., `Yes` |--> this field is not in form or table from scientific committee
+<!-- VMS_ON | O | **ADD DESCRIPTION | String | e.g., `Yes` this field is not in form or table from scientific committee -->
 
-| Main Fishing Gear | M | The vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
+| main_fishing_gear | M | The vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
 
 | **Vessel Personnel:** Details of the individuals working onboard during the fishing trip as well as the total number of crew members onboard.
@@ -220,7 +235,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | crew_number | O | The number of crew onboard the vessel | Integer | e.g., `26` |
 :::
 
-# (V-TRIP) Vessel \> Trip details
+# V-TRIP {#vTrip}
 
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -268,11 +283,11 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 |               |     |     |                  |                        |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_UTC |  O  | The date and time (in Coordinated Universal Time, UTC) corresponding to the end of the observation period at the reported location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc |  O  | The date and time (in Coordinated Universal Time, UTC) corresponding to the end of the observation period at the reported location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 :::
 
 
-# (V-ATTRIBUTES) Vessel \> Vessel attributes
+# V-ATTRIBUTES {#vAttributes}
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
@@ -282,38 +297,37 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| tonnage | O | Gross tonnage (GT), a dimensionless measure of vessel's internal volume from registration documents | Integer | e.g., `2319` |
-| length_overall | O | The vessel overall length (LOA) (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
-| hull_material | O | The primary material used in the construction of the vessel's hull | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
+| gross_tonnage | O |The vessel gross tonnage (no unit) as specified in vessel registration documents |Float  | e.g., `33.09` |
+| loa_m | O |	The vessel overall length (m) as specified in vessel registration documents  |Floats  |e.g., `27.38`  |
+| hull_material | O |The vessel hull material  | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
 
 | **Main engines:** The make (brand) and power of the two main engines.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| make | O | **DESCRIPTION TO ADD** | String | e.g., `MAN Energy Solutions`  |
-| power_value | O | **DESCRIPTION TO ADD** | Float | e.g., `5000` |
-| power_unit | O | **DESCRIPTION TO ADD** | Power units: kilowatts (kW), horsepower (hp), or break horsepower (hp) | e.g., `kW` |
+| make | O |  | String | e.g., `MAN Energy Solutions`  |
+| power_value | O |  | Float | e.g., `5000` |
+| power_unit | O |  | Indicates power units: kilowatts (kW), horsepower (hp), or break horsepower (bhp) | e.g., `kW` |
 :::
 
 
 |  |  |  |  |  |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Fish storage capacity | O | The vessel total maximum capacity (m3) to store catches | Float | e.g., `1100` |
+| fish_storage_capacity_m3 | O | The vessel total maximum capacity (m3) to store catches | Float | e.g., `1100` |
 
-| **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen
+| **Fish preservation methods:** Up to 4 fish preservation methods can be reported on this form
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| method_1 | O | form has fields designated for up to 4 different fish preservation methods |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| method_1 | O | The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
 
 ::: 
-| **Fish storage types:** The type of structure(s) present on-board used by the vessel to store the catch
+| **Fish storage types:** Up to 3 different fish storage types can be reported on this form 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| type_1 | O | form has fields designated for up to 3 different fish storage types |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
-
+| type_1 | O | The type of structure(s) present on-board used by the vessel to store the catch |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
 
 
 
@@ -322,8 +336,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description |      Format       | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Autonomy_range_value | O | The vessel's operational endurance, expressed either as the maximum number of days it can remain at sea without resupply, or as the maximum distance it can cover (in nautical miles, nm) | Float | e.g., `30` |
-| Autonomy_range_unit  | O | The unit used to describe the value of autonomy range | days or nm | e.g., `days` |
+| autonomy_range_value | O | The vessel's operational endurance, expressed either as the maximum number of days it can remain at sea without resupply, or as the maximum distance it can cover (in nautical miles, nm) | Float | e.g., `30` |
+| autonomy_range_unit  | O | The unit used to describe the value of autonomy range | days or nm | e.g., `days` |
 :::
 
 
@@ -331,24 +345,24 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| GNSS | O | Indicates whether or not one or more Global Navigation Satellite System systems (GNSS) such as the US Global Positioning System (GPS) were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
-| VMS | O | Indicates whether or not one or more Vessel Monitoring Systems (VMS) were present on the vessel (Yes/No/Unk)  | String | e.g., `Yes` |
-| AIS | O | Indicates whether or not one or more Automatic Identification Systems (AIS) were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
-| Radars | O | Indicates whether or not one or more radars were present on the vessel (Yes/No/Unk) | String | e.g., `Yes`  |
-| Track_plotter | O | Indicates whether or not one or more track plotters were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
-| Depth_sounder | O | Indicates whether or not one or more depth sounders were present on the vessel (Yes/No/Unk)| String | e.g., `Yes` |
-| Sonar | O | Indicates whether one or more sonars were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
-| Doppler_current_meter | O | Indicates whether one or more doppler current meters were present on the vessel | String | e.g., `Yes` |
-| XBT | O | Indicates whether or not one or more expendable bathythermographs (XBT) were present on the vessel | String | e.g., `Yes` |
-| VHF_radios | O | Indicates whether or not one or more VHF radios weere present on the vessel | String | e.g., `Yes` |
-| HF_radios | O | Indicates whether one or more HF radios were present or not on the vessel | String | e.g., `Yes` |
-| Satellite_comms | O | Indicate whether or not one or more satellite communication systems were present on the vessel | String | e.g., `Yes` |
-| FIS | O | Indicates whether or not one or more Fisheries Information Services were present on the vessel | String | e.g., `Yes` |
+| gnss | O | Indicates whether or not one or more Global Navigation Satellite System systems (GNSS) such as the US Global Positioning System (GPS) were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
+| vma | O | Indicates whether or not one or more Vessel Monitoring Systems (VMS) were present on the vessel (Yes/No/Unk)  | String | e.g., `Yes` |
+| ais | O | Indicates whether or not one or more Automatic Identification Systems (AIS) were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
+| radars | O | Indicates whether or not one or more radars were present on the vessel (Yes/No/Unk) | String | e.g., `Yes`  |
+| track_plotter | O | Indicates whether or not one or more track plotters were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
+| depth_sounder | O | Indicates whether or not one or more depth sounders were present on the vessel (Yes/No/Unk)| String | e.g., `Yes` |
+| sonar | O | Indicates whether one or more sonars were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
+| doppler_current_meter | O | Indicates whether one or more doppler current meters were present on the vessel | String | e.g., `Yes` |
+| xbt | O | Indicates whether or not one or more expendable bathythermographs (XBT) were present on the vessel | String | e.g., `Yes` |
+| vhf_radios | O | Indicates whether or not one or more VHF radios weere present on the vessel | String | e.g., `Yes` |
+| hf_radios | O | Indicates whether one or more HF radios were present or not on the vessel | String | e.g., `Yes` |
+| satellite_comms | O | Indicate whether or not one or more satellite communication systems were present on the vessel | String | e.g., `Yes` |
+| fis | O | Indicates whether or not one or more Fisheries Information Services were present on the vessel | String | e.g., `Yes` |
 
 
 ## Waste Management Detail
 ::: {style="margin-left:40px"}
-| Waste Management Detail: The reporting form has designated fields for up to 4 different waste management details. Follow format and code lists described below.
+| Waste Management Detail: Up to 4 different waste management details can be reported on this form 
 :::
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
@@ -358,7 +372,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 :::
 
 
-# (G-GENERAL)
+# G-GENERAL {#gGeneral}
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
@@ -368,45 +382,46 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:----------------|:-----------:|:------------|:----------------:|:-----------:|
-| Net drum/hauler | M | Indicates if present on board. Vessels are normally equipped with a hydraulic net hauler; However they can also use net drums to both haul and store the net (Yes/NO/Unk)| String | e.g., `Yes` |
+| net_drum_hauler | M | Indicates if present on board. Vessels are normally equipped with a hydraulic net hauler; However they can also use net drums to both haul and store the net (Yes/NO/Unk)| String | e.g., `Yes` |
 
-# (G-CONFIG-GILLNETS)
+# G-CONFIG-GILLNETS {#gConfigGillnets}
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| Gillnet sequential number | M | Specifies the gillnet sequential number  | Integer  |e.g., **ADD**  |
+| gillnet_sequential_number | M | Specifies the gillnet sequential number  | Integer  |e.g., `tbd`  |
 
-## Gillnet attributes (on the reporting form called GILLNET_CONFIGURATIONS) --- is it one entry per gillnet? that is what is insinuated by descriptions...
+<!-- Gillnet attributes (on the reporting form called GILLNET_CONFIGURATIONS) --- is it one entry per gillnet? that is what is insinuated by descriptions... -->
 
 ## Gillnet configurations
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| total_number_of_panels | M | The number of panels making up the net | Integer  | e.g., **ADD**  |
+| total_number_of_panels | M | The number of panels making up the net | Integer  | e.g., `tbd`  |
 | panels_stacked | M | Indicates whether or not any of the panels are stacked (Yes/No/Unk)  | String  | e.g., `Yes`  |
 | net_length_value | M | The net string length. Usually calculated by multiplying the panel average length by the number of panels used in the net |   |  |
 | net_length_unit | M | Indicates units (m or km) | String | e.g., `km` |
-| net_depth | O  | The vertical height of the net (depth). Usually obstained by measuring the length of the end-line, or up-and-down the line, on the end of a net where the meshes are attached. This information may be used to cross check information provided by the crew  | Float  | e.g., **ADD**  |
-| net_material | O | The material of the net webbing  |**Code** from _____  | e.g., **ADD** |
+| net_depth | O  | The vertical height of the net (depth). Usually obstained by measuring the length of the end-line, or up-and-down the line, on the end of a net where the meshes are attached. This information may be used to cross check information provided by the crew  | Float  | e.g., `tbd`  |
+| net_material | O | The material of the net webbing  |**Code** from _____  | e.g., `tbd`  |
+<!-- codelist for net material??? -->
 
 | **Stretched mesh size(s):** The average stretched lengths (knot to knot) and range of the mesh. Usually calculated by measuring at least 10 meshes from 5 panels in different areas of the net. Designated fields for up to 4 stretched mesh sizes and units. 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| value_1 | M |  | Float | e.g., **ADD** |
+| value_1 | M |  | Float | e.g., `tbd`  |
 | unit | M | Indicates units (mm or cm) | String | e.g., `mm`
 
 :::
 |  |  |  |  |  |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| vertical_mesh_count | O |The number of vertical meshes of a net in this gear. Usually obtained by counting the number of meshes of the end-line, or up and down line, on the end of a net where the meshes are attached. This information may be used to cross check information provided by the crew  | Integer | e.g., **ADD** |
-| hanging_ratio_perc | M | The ratio between the length of the float line and the length of the stretched mesh hanging on the float line. Usually obtained by the following process: 1) counting 10 or 12 meshes horizontally, 2) multiplying the number of counted meshes by average stretched mesh length; 3) measuring the length of the floatline they are attached to, 3) dividing the length of the floatline the meshes are attached to by the length of the stretched meshes counted | Float  |e.g., **ADD**  |
+| vertical_mesh_count | O |The number of vertical meshes of a net in this gear. Usually obtained by counting the number of meshes of the end-line, or up and down line, on the end of a net where the meshes are attached. This information may be used to cross check information provided by the crew  | Integer | e.g., `tbd`  |
+| hanging_ratio_perc | M | The ratio between the length of the float line and the length of the stretched mesh hanging on the float line. Usually obtained by the following process: 1) counting 10 or 12 meshes horizontally, 2) multiplying the number of counted meshes by average stretched mesh length; 3) measuring the length of the floatline they are attached to, 3) dividing the length of the floatline the meshes are attached to by the length of the stretched meshes counted | Float  |e.g., `tbd`  |
 
 | **Net web colour:** The colour of the net webbing.Reporting form has designated fields for up to 4 net web coulours. Fill out as it applies following format described below.
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| colour_1 | M |  Indicates colour| **Code** from [Net Colours](#netColours) | e.g., `BL` |
+| colour_1 | M |  Indicates the colour of the net web | **Code** from [Net Colours](#netColours) | e.g., `BL` |
 
 :::
 **Floats**
@@ -414,8 +429,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | type | O | The type of buoyancy aid that is attached to the head-rope | **Code** from [Float Types](#float)  | e.g., `FO`  |
-| number | O | The approximate total number of floats used on this gillnet. This number must include the number of floats across a space that may occur at the bridle at the end of a net. This information may be obtained from the crew | Integer  | e.g., **ADD**  |
-| distance_between_floats | O | The average distance (measured along the head-rope) between the floats used on this gillnet | Float | e.g., **ADD** |
+| number | O | The approximate total number of floats used on this gillnet. This number must include the number of floats across a space that may occur at the bridle at the end of a net. This information may be obtained from the crew | Integer  | e.g., `tbd`  |
+| distance_between_floats | O | The average distance (measured along the head-rope) between the floats used on this gillnet | Float |e.g., `tbd`  |
 :::
 
 **Droplines**
@@ -423,33 +438,33 @@ Fill out focal point information (full name, email, finalization date, and submi
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | used | O | Indicates whether or not droplines were used (Yes/No/Unk) | String  | e.g., `Yes`  |
-| length | O | If droplines were used in this gillnet, indicates the length of the droplines. Usually obtained by measuring the distance from the floats (at the water's surface) to the float-line. This information can be used to cross check information provided by the crew  |Float | e.g., **ADD** |
-| unit | O | Indicates units (cm or m) | String | e.g., `cm`
+| length | O | If droplines were used in this gillnet, indicates the length of the droplines. Usually obtained by measuring the distance from the floats (at the water's surface) to the float-line. This information can be used to cross check information provided by the crew  |Float | e.g., `tbd`  |
+| unit | O | Indicates units (cm or m) | String | e.g., `cm` |
 :::
 
 
-# (G-CONFIG-SINKERS)
+# G-CONFIG-SINKERS {gConfigSinkers}
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| gillnet_sequential_number | M | Specifies the gillnet sequential number  | Integer  |e.g., **ADD**  |
+| gillnet_sequential_number | M | Specifies the gillnet sequential number  | Integer  |e.g., `tbd`  |
 
 **Sinkers**
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| type | O | The sinker type attached to the footrope. The type is defined by the material it is made of | **Code** from [Sinker Material Types](#sinkerMaterialTypes)  | e.g., `CM` |
-| number |O  |Indicates an approximate total number of sinkers attached to the footrope. If more than one type of sinker is used, the indicates approximate total number of sinker/weights per sinker type. This information may be obtained from the crew  |Integer |e.g., **ADD**  |
-| average_weight_value | O | The average sinker weight. If more than one type of sinker is used, then is an average weight per sinker type | Float  | e.g., **ADD**  |
+| type | O | The sinker type attached to the foot rope. The type is defined by the material it is made of | **Code** from [Sinker Material Types](#sinkerMaterialTypes)  | e.g., `CM` |
+| number |O  |Indicates an approximate total number of sinkers attached to the foot rope. If more than one type of sinker is used, the indicates approximate total number of sinker/weights per sinker type. This information may be obtained from the crew  |Integer |e.g., `tbd`  |
+| average_weight_value | O | The average sinker weight. If more than one type of sinker is used, then is an average weight per sinker type | Float  | e.g., `tbd`  |
  <!-- do we need a units column? or is the unit for the sinker always consistent? ^^ -->
 | units | O | indicates units (g or kg) | String | e.g., `kg`|
 
 
-# (E-SET) Gillnet setting operations
+# E-SET {#eSet}
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
-| Observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
 | set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
 | gillnet_sequential_number  | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
 **Change Set number to SET ID?**
@@ -480,7 +495,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| vessel_speed | O | Record the vessel’s average speed during setting (knots) | Float | e.g., **ADD** |
+| vessel_speed | O | Record the vessel’s average speed during setting (knots) | Float | e.g., `tbd` |
 
 **Setting**
 ::: {style="margin-left:40px"}
@@ -490,10 +505,12 @@ Fill out focal point information (full name, email, finalization date, and submi
 | strategy | M  |  | **Code** from [Setting Strategy](#settingStrategy)  |e.g., `DA`  |
 | shape | O |  | **Code** from [Configurations](#configurations)  | e.g., `CI` |
 :::
+
+<!-- VERTICAL setting strategy - unsure of the format of that field -->
 <!-- Setting Strategy and Shape (configurations) code lists are not in Meta on PgAdmin -->
 
 
-**Mitigation measures:** Designated fields for up to 4 different mitigation measures. If applicable, fill out subsequent device codes in format described below.
+**Mitigation measures:** up to 4 mitigation measures can be reported on the form
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
@@ -502,7 +519,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 
 
-# (E-SET-HAULING) Gillnet hauling operations
+# E-SET-HAULING {#eSetHauling}
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
@@ -540,7 +557,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | sampling_protocol | M | Indicates the sampling protocol followed by the observer to select which net panels to observe |**CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
 
-# (E-SET-CATCHES) Gillnet catch details
+# E-SET-CATCHES {#eSetCatches}
 
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
