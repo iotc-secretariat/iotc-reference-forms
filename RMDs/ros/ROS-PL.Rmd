@@ -635,9 +635,9 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| type | O | **DESCRIPTION TO ADD** |  | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD**|
-| preservation_method | O | **DESCRIPTION TO ADD** | | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD** |
-| **Destination** | **DESCRIPTION TO ADD & ADD FIELD TO THE FORMS** | **CODE LIST TO DEVELOP** | **EXAMPLE TO ADD** |
+| type | O |  |  | **code list being developed** | |
+| preservation_method | O | |  | **code list being developed** | |
+| **Destination** |O |  |  | **code list being developed** | |
 
 :::
 | **Tag details**
@@ -717,7 +717,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | processing_type | O  | The processing code used for the weight measurement |**Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
 | Value | O  | The weight corresponding to the measurement type code | Float |e.g., `43.2`  |
 | unit | O  | Unit of weight (kg or t) | String |e.g., `kg`  |
-| estimation_method | O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` | 
+| measurement_tool | O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` | 
 :::
 
 # E-SET-BAIT-CATCHES-SPECIMEN-SSI {#eSetBaitcatchsSpecimenSSI}
