@@ -935,21 +935,21 @@ out_dt(SINKER_MATERIAL_TYPES, "SINKER_MATERIAL_TYPES")
 ## Setting Strategy {#settingStrategy}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#netSettingStrategies)
--   **Version**: `r version_number("_____________")`
--   **Last update**: `r last_update("_____________")`
+-   **Version**: `r version_number("NET_SETTING_STRATEGIES")`
+-   **Last update**: `r last_update("NET_SETTING_STRATEGIES")`
 
 ```{r collapse = TRUE}
-#out_dt(_____________, "_____________")
+#out_dt(NET_SETTING_STRATEGIES, "NET_SETTING_STRATEGIES")
 ```
 
 Configurations {#configurations}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#netConfigurations)
--   **Version**: `r version_number("_____________")`
--   **Last update**: `r last_update("_____________")`
+-   **Version**: `r version_number("NET_CONFIGURATIONS")`
+-   **Last update**: `r last_update("NET_CONFIGURATIONS")`
 
 ```{r collapse = TRUE}
-#out_dt(_____________, "_____________")
+out_dt(NET_CONFIGURATIONS, "NET_CONFIGURATIONS")
 ```
 
 ## Mitigation Devices {#mitigationDevices}

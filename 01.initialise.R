@@ -230,7 +230,15 @@ NET_SETTING_STRATEGIES = read_codelist(domain = "fisheries", schema = "fishery",
 
 NET_CONFIGURATIONS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "NET_CONFIGURATIONS")
 
+NET_COLOURS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "NET_COLOURS")
+
+NET_CONDITIONS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "NET_CONDITIONS")
+
 FISH_PROCESSING_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")
+
+FLOAT_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FLOAT_TYPES")
+
+SINKER_MATERIAL_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "SINKER_MATERIAL_TYPES")
 
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
