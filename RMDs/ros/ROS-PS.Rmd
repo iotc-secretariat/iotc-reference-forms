@@ -505,7 +505,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 | caught_inside_net | M  | Indicates whether or not any individuals where caught inside the net (Yes/No) | String | e.g., `Yes`  |
 
 # E-SET-CATCHES {#eSetCatches}
-<!-- This section of the form is for the reporting of catches details for each set  -->
+<!-- This section of the form is for the reporting the details of a subsample of the catch for each set  -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
