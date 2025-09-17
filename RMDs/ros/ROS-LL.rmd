@@ -928,7 +928,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 -   **Version**: `r version_number("PORTS")`
 -   **Last update**: `r last_update("PORTS")`
 
-```{r collapse = TRUE, warning = FALSE}
+```{r collapse = TRUE, warning = FALSE, message = FALSE}
 out_dt(PORTS[, -c("POINT")], "PORTS")
 ```
 
