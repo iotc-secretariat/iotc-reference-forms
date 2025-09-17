@@ -870,7 +870,8 @@ For each branchline configuration set-up previously identified how many have had
 | handling_method | O | Detail how the specimen was brought onboard | **Code** from [Handling Methods](#handlingMethods) | e.g., `AN` |
 | revival | O | Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String | e.g., `Yes`  |
 | photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric code | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
-| depredation_details |||||
+
+| **Depredation details**
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
