@@ -540,7 +540,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | target_species | M | The list of species that are intentionally targeted in the fishery. Up to four target species may be reported on the form | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| vms_on | O | Indicates whether the Vessel Monitoring System was active (Yes/No/Unk) | String | e.g., `Yes` | 
+
 
 # E-SET-LIGHTS {#eSetLights}
 
