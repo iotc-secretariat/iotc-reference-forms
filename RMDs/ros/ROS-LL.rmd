@@ -78,7 +78,8 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | Data source | M | The source of the data, i.e., collected by observers at sea or derived from Electronic Monitoring Systems | **Code** from [Sources]() | e.g., `OS` |
 
 # O-INFO {#oInfo}
-<!-- This section of the form includes information about the observer and an overview of the fishing trip they observed -->
+
+This section of the form includes information about the observer and an overview of the fishing trip they observed.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -188,7 +189,8 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 :::
 
 # V-INFO {#vInfo}
-<!-- This section of the form includes specific vessel information -->
+
+This section of the form includes specific vessel information.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -236,7 +238,8 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 :::
 
 # V-TRIP {#vTrip}
-<!-- This section of the form includes information about the overall fishing trip of the vessel -->
+
+This section of the form includes information about the overall fishing trip of the vessel.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -287,7 +290,8 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 :::
 
 # V-ATTRIBUTES {#vAttributes}
-<!-- This section of the form includes specific vessel details -->
+
+This section of the form includes specific vessel details.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -372,7 +376,8 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 :::
 
 # G-GENERAL {#gGeneral}
-<!-- This section of the form includes general longline gear information -->
+
+This section of the form includes general longline gear information.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -402,9 +407,6 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | branchline_length_m | O | The value of the length (m) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | `tbd` |
 | branchline_diameter_cm | O | The value of the diameter (cm) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | `tbd` |
 
-<!-- CHANGE "CONFIGURATION NUMBER AND SECTION NUMBER TO CONFIGURATION IDENTIFIER AND SECTION IDENTIFIER, RESPECTIVELY?? -->
-<!-- SO I GUESS WE NEED 4 FIELDS HERE FOR THE LENGTHS AND DIAMETERS -->
-
 ## Additional Branchline Details
 
 | Field | Requirement | Description | Format | Input value |
@@ -412,7 +414,8 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | storage | O | The storage method for the branchlines. Up to four storage methods may be reported on the form | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` |
 
 # G-CONFIG-MITIGATION-DEVICES {#gConfigMitigationDevices}
-<!-- This section of the form includes information about the mitigation devices present on the vessel -->
+
+This section of the form includes information about the mitigation devices present on the vessel.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -442,7 +445,8 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | device | O | Equipment used onboard to minimise bycatch. Up to five additional devices may be reported on the form | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
 
 # E-SET
-<!-- This section of the form includes information regarding individual sets that occurred during the fishing trip -->
+
+This section of the form includes information regarding individual sets that occurred during the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -486,8 +490,6 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | mainline_length_unit | O | The unit used to report the length of the mainline, expressed in kilometres (km) or nautical miles (nm) | `km` |
 :::
 
-<!-- VALUE to LENGTH_VALUE -->
-
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -495,29 +497,17 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | clip_on_time_buoys | O | The average time interval, in seconds (s), between the audible signals ('beeps') that indicate to the crew when to clip on a buoy | Float | `850` |
 :::
 
-<!-- BRANCHLINE to CLIP_ON_TIME_BRANCHLINE -->
-<!-- BUOYS to CLIP_ON_TIME_BUOYS -->
-
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | number_of_total_hooks_set | M | The total number of hooks deployed for the set. Usually calculated by multiplying number of baskets by the average number of hooks between the baskets | Integer | e.g., `3000` |
 | number_of_total_floats_on_set | O | The total number of floats deployed during the set, excluding radio/dhan buoys. Usually calculated by subtracting the number of buoys in their holders before setting by the number of buoys in their holders after setting | Integer | e.g., `6` |
 | number_of_hooks_between_floats | M | The number of hooks set between floats, corresponding to the number of hooks stored in each basket, tub, or reel, and equivalent to the number of branchlines deployed | Integer | e.g., `1000` |
-| shark_lines_set | Indicates whether or not shark lines were set during the operation (Yes/No/Unk) | String | e.g., `No` |
-| shark_lines_number | The number of shark lines set during the operation | Integer | e.g., `0` |
-
-<!-- 'NUMBER_LINES' to 'NUMBER' -->
-
-<!-- NUM_TOTAL_HOOKS_SET to NUMBER_TOTAL_HOOKS_SET -->
-<!-- NUM_TOTAL_FLOATS_SET to NUMBER_TOTAL_FLOATS_SET -->
-<!-- NUM_HOOKS_BETWEEN_FLOATS to NUMBER_HOOKS_BETWEEN_FLOATS -->
-
-| **Shark lines**
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| set | M | Indicates whether or not one or more shark lines were set during the operation (Yes/No/Unk) | String | The number of shark lines set during the operation. If no shark lines are set, the value should be zero (0) | Integer | e.g., `23` |
+| shark_lines_set | M | Indicates whether or not shark lines were set during the operation (Yes/No/Unk) | String | e.g., `No` |
+| shark_lines_number | O | The number of shark lines set during the operation | Integer | e.g., `0` |
 :::
 
 ::: {style="margin-left:40px"}
@@ -542,15 +532,13 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | branchline_length_maximum_unit | M | The unit of measurement of the maximum value of branchline length (cm or m) | Float | `m` | 
 :::
 
-<!-- addition of BRANCHLINE_LENGTH_MINIMUM: VALUE + UNIT -->
-
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | target_species | M | The list of species that are intentionally targeted in the fishery. Up to four target species may be reported on the form | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
 
-
 # E-SET-LIGHTS {#eSetLights}
-<!-- This section of the form includes information about the lights present for each set that occurred during the fishing trip -->
+
+This section of the form includes information about the lights present for each set that occurred during the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -569,10 +557,9 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | number_of_lights | M | The number of lights deployed | Integer | `tbd` |
 :::
 
-<!-- | 'NUM_LIGHTS' to 'NUMBER_OF_LIGHTS' -->
-
 # E-SET-MITIGATION-MEASURES {#eSetMitigationMeasures}
-<!-- This section of the form includes information about the mitigation measures used in each set of the fishing trip -->
+
+This section of the form includes information about the mitigation measures used in each set of the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -586,16 +573,10 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | number_of_tori_lines_deployed | M | The total number of tori lines deployed during the setting operation | Integer | e.g., `8` |
 | minimum_deck_lighting_used | M | Indicates whether or not minimum deck lighting was used during night setting (Yes/No/Unk) | String | e.g., `Yes` |
 | branchline_weighted | O | Indicates whether or not the branchline was weighted (Yes/No/Unk) | String | `No` |
-| average_branchline_weight_g | M | The average weight (g) of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) | Float | `tbd` |
+| average_sinker_weight_g | M | The average weight (g) of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) | Float | `tbd` |
 | percent_branchline_weighted | M | The proportion of branchlines weighted (%) | Float | `tbd` |
 | hook_sinker_distance | M | The distance (cm) of the weights/sinkers from the eye of the hook | Float | `tbd` |
 | hook_pods | M | Indicates whether or not the bait is protected by hook pods on the branchlines until they are a certain depth below the surface (Yes/No/Unk) | String | e.g., `No` |
-
-<!-- 'NUM_TORI_LINES_DEPLOYED' to 'NUMBER_TORI_LINES_DEPLOYED' -->
-<!-- 'MIN_DECK_LIGHTING_USED' to 'MINIMUM_DECK_LIGHTING_USED' -->
-<!-- 'HOOKS_SET_BETWEEN_DUSK_DAWN' to remove -->
-<!-- 'AVG_BRANCHLINE_WEIGHT_G' changed to 'AVERAGE_BRANCHLINE_WEIGHT_G' -->
-<!-- 'PERC_BRANCHLINE_WEIGHTED' to 'PERCENT_BRANCHLINE_WEIGHTED' -->
 
 ## Branchline Details
 
@@ -611,7 +592,8 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | measure | M | Any other mitigation measures observed. Up to four measures can be reported on the form | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
 
 # E-SET-HOOKS {#eSetHooks}
-<!-- This section of the form includes information about the specific hooks used in each set of the fishing trip -->
+
+This section of the form includes information about the specific hooks used in each set of the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -627,7 +609,8 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | variations | O | Indicates any variations in hook type, hook material, and presence/absence of hook ring where possible | String | `tbd` |
 
 # E-SET-BAITS
-<!-- This section of the form includes information about the specific baits used in each set of the trip -->
+
+This section of the form includes information about the specific baits used in each set of the trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -647,7 +630,8 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 <!-- develop code list for bait colors -->
 
 # E-SET-HAULING {#eSetHauling}
-<!-- This section includes specific hauling information for each set of the fishing trip -->
+
+This section includes specific hauling information for each set of the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -691,11 +675,11 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
 | number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | `tbd` |
-<!-- | number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved during observation | Integer | `tbd` | -->
 | sampling_protocol | M | Sampling protocol followed by the observer | **CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
 # E-SET-HAULING-BITEOFFS {#eSetHaulingBiteoffs}
-<!-- This section of the form includes information about individual biteoffs for each set within a fishing trip -->
+
+This section of the form includes information about individual biteoffs for each set within a fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -712,14 +696,18 @@ For each branchline configuration set-up previously identified how many have had
 | branchline_configuration_id | O | The identifier of the branchline configuration | Integer | e.g.,`-` |
 | number_of_biteoffs | O | The number of biteoffs observed | Integer | e.g., `1680` |
 :::
+
 <!-- | hauling_operation_id | O | The identifier of the hauling operation | `-` |  -->
 <!-- Check with Tony hauling operation_id in the database but missing from the form `ros_ll.biteoffs_by_branchlines_set.hauling_operation_id` -->
 
 # E-SET-CATCHES
-<!-- DESCRIPTION: This section of the reporting form includes information on individual species from a subset of a set that is observed. Is this section just for reporting target species? -->
+
+This section of the reporting form includes information on individual species from a subset of a set that is observed.
+
+<!-- Is this section just for reporting target species? -->
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
 | catch_id | M | Unique within a specific set, as a branch of set_id representing an observed part of the catch | Alphanumeric code | `tbd` |
@@ -729,37 +717,36 @@ For each branchline configuration set-up previously identified how many have had
 ## Catch Details
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | species | M | The species for each specimen observed | **Code** from [All Species](#allSpecies)| e.g., `ABL` |
 
 | **Fate**: The fate which includes whether it was retained or discarded and the reason.
 
 ::: {style="margin-left:40px"}
-| Field              | Requirement | Description | Format  | Input value |
-|:---------------------|:-----------:|:------------|:-------:|:-----------:|
+| Field | Requirement | Description | Format  | Input value |
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | fate_type | M | The outcome of the catch, indicating whether a fish was retained on board or discarded | **Code** from [Types of Fate](#fateType) | e.g., `DI` |
 | fate | M | The final disposition of the catch or sampled portion of the catch, indicating whether it was retained on board or discarded, with specification of the reason where applicable | **Code** from [Fates](#fates) | e.g., `DL` |
 :::
 
 ||||||
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | sampling_method | M | **DESCRIPTION TO ADD** |  **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
 | number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | `tbd` |
-
-<!-- NUM_FISH to 'NUMBER_OF_FISH' -->
 
 **Weight:** The catch weight corresponding to the specified product type recorded in 'weight code’. If the fish has not been processed, it corresponds to the unprocessed weight.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | processing_type | O | **DESCRIPTION TO ADD** | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
 | value_kg | O | **DESCRIPTION TO ADD** | Float | `tbd` |
 | estimation_method | O | **DESCRIPTION TO ADD** | **Code** from [Total Catch Estimation](#totalCatchEstimation) | e.g., `EP` |
 :::
 
 # E-SET-CATCH-SPECIMENS {#eSetCatchSpecimens}
-<!-- This section of the form is for the recording of specimens caught during individual sets. Data reported is a sampled proportion of each observed set from the fishing trip -->
+
+This section of the form is for the recording of specimens caught during individual sets. Data reported is a sampled proportion of each observed set from the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -771,7 +758,7 @@ For each branchline configuration set-up previously identified how many have had
 ## Specimen Details
 
 | Field | Requirement | Description | Format | Input value |
-|:------------|:-----------:|:----------------------|:-----------:|:-----------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | sampling_period | M | **DESCRIPTION TO ADD** | **Code** from [Sampling Period](#samplingPeriod) | e.g., `BS` |
 | sampling_method | M | The sampling method used for the collection of biological sub-sample(s) | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
 
@@ -779,14 +766,12 @@ For each branchline configuration set-up previously identified how many have had
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | length_type | M | The type of length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | length_value_cm | M | The value of length corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
 | length_measuring_tool tool | M | The tool used for the measurement of the fish length | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
 | is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
 :::
-
-<!-- value -> value_cm -->
 
 <!-- How do you identify the species for each specimen?? -->
 
@@ -795,26 +780,21 @@ For each branchline configuration set-up previously identified how many have had
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | weight_processing_type | O | The processing/dressing used for the weight measurement | **Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
 | weight_value_kg | O | The weight corresponding to the weight measurement type code | Float | e.g., `43.2` |
 | weight_estimation_method | O | The method used to estimate the weight of the specimen | **Code** from [Weight Measurement Tools](#weightMeasurementTools) | e.g., `BR` |
 :::
 
-<!-- rename weight_processing_type to weight_type | -->
-<!-- Remove weight_unit as the weight should be reported in kg
-<!-- weight_value to weight_value_kg -->
-<!-- weight and length measurement tools to change to length/weight estimation methods -->
-
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | sex | O | The sex of the sampled fish specimen | **Code** from [Sex](#sex) | e.g., `F` |
 
 | Maturity: The stage of maturity of the specimen according to standard maturity scales approved by the IOTC.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | maturity_scale | O | The standardised system used to classify the reproductive development of fish | String | **Code list being developed** |
 | maturity_stage | O | The reproductive stage of a fish determined through visual inspection of the gonads without the aid of a microscope | String | **Code list being developed** |
 :::
@@ -823,26 +803,25 @@ For each branchline configuration set-up previously identified how many have had
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | sample_type | O | **DESCRIPTION TO ADD** | Code from [Sampling Type](#samplingMethodsForSamplingCollections) | **CODE LIST TO DEVELOP** | `tbd` |
 | sample_preservation_method | O | **DESCRIPTION TO ADD** | Code from [Sample Preservation Method](#fishPreservationMethods) | **CODE LIST TO DEVELOP** | `tbd` |
-| sample_destination** | **DESCRIPTION TO ADD** | **CODE LIST TO DEVELOP** | `tbd` |
+| sample_destination** | O | **DESCRIPTION TO ADD** | **CODE LIST TO DEVELOP** | `tbd` |
 :::
-
-<!-- ADD destination FIELD TO THE FORMS and database -->
 
 | Depredation method:
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | depredation_source | O | For depredated specimens/or catch, the depredation source should be based on depredation scar characteristics. For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
-| observed_predator | O | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed, the value is 'UNK' (unknown). For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Predator Species](#predatorSpecies)| e.g., AG15 |
+| observed_predator | O | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed, the value is 'UNK' (unknown). For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Predator Species](#predatorSpecies) | e.g., AG15 |
 :::
 <!-- **Is the predator codelist right? is not a 3-alpha code** -->
 
 # E-SET-CATCHES-SSI  {#eSetCatchSpecimensSSI}
-<!-- This section of the form includes information about SSI species observed within the subset of each observed set -->
+
+This section of the form includes information about SSI species observed within the subset of each observed set.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -854,7 +833,7 @@ For each branchline configuration set-up previously identified how many have had
 ## Additional Catch Details on SSI
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | condition_at_capture | M | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
 | condition_at_release | M | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
 | gear_interaction | M | The type of interaction of the specimen with the fishing gear ("UK" if unknown as not possible to collect) | **Code** from [Gear Interactions](#gearInteractions) | e.g., `EF` |
@@ -864,7 +843,7 @@ For each branchline configuration set-up previously identified how many have had
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | bait_condition | O | | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE` |
 | bait_type | O |   | **Code** from [Bait Types](#baitTypes) | e.g., `FF` | 
 :::
@@ -873,13 +852,13 @@ For each branchline configuration set-up previously identified how many have had
 ::: {style="margin-left:40px"}
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | material | M | The leader material the SSI individual was hauled on | **Code** from [Line Material Types](#lineMaterialTypes)| e.g., `MN` |
 | diameter | O | The thickness (mm) of the leader the SSI individual was hauled on | Float |  |
 :::
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | dehooker_device | O | The dehooking or line cutting device used to extract the hook | **Code** [Dehooker Types](#dehookerTypes) from | e.g., HD  |
 | brought_onboard | O | Indicates whether or not the specimen was brought onboard (Yes/No/Unk) | String | e.g., `Yes` |
 | handling_method | O | Detail how the specimen was brought onboard | **Code** from [Handling Methods](#handlingMethods) | e.g., `AN` |
@@ -890,13 +869,14 @@ For each branchline configuration set-up previously identified how many have had
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | depredation_source | O | The depredation source based on depredation scar characteristics for depredated specimens (NA for non-depredated specimens) | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
 | observed_predator | O | The predator species directly observed and identified or unknown (UNK) when not observed (NA for non-depredated specimens) | **CODE** from [Predator Species](#predatorSpecies) | e.g., `AG15` |
 :::
 
 # E-SET-TAG-DETAILS {#eSetTagDetails}
-<!-- This section of the form is for the reporting of each of the tags recovered during the fishing trip -->
+
+This section of the form is for the reporting of each of the tags recovered during the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -908,15 +888,13 @@ For each branchline configuration set-up previously identified how many have had
 ## Tag Details
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | release | O |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
 | recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
 | type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
-| tag_id | O | The tag identifier(s) | Alphanumeric | e.g., `AA19051` |
+| tag_id | O | The tag identifier(s). Up to two identifier may be reported on the form | Alphanumeric | e.g., `AA19051` |
 | finder_name | O | The full name of the person who found the tag, recorded as first and last names | String | e.g., `Jane Doe` |
 | finder_contact_details | O | The contact details (e.g., address, email, telephone) of the person who found the tag | String | e.g., `jane.doe@fishing.org | (650) 214-6369` |
-
-<!-- TAG_NUMBER to TAG_ID -->
 
 # Reporting Deadlines
 

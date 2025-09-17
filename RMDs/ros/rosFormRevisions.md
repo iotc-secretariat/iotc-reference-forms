@@ -15,20 +15,21 @@ The following code lists should be built by the Secretariat and added to the IOT
 
 # Renaming Fields in Database
 
-| Schema | Field | Old | New | Comment |
+| Schema | Table | Old | New | Comment |
 | :---------- | :-------- | :-------------- | :--------------- |:-------------- |
-| ros_common | maturity_stages    | maturity_level | maturity_stage | Rename table to maturity | 
+| ros_common | | maturity_stages    | maturity_level | maturity_stage | Rename table to maturity | 
 | ros_common | vessel_attributes_fish_preservation_method | fish_preservation_method_code | fpm_code | to discuss |
 | ros_common | vessel_attributes_fish_storage_type | fish_storage_type_code | fst_code | to discuss |
 | ros_common | waste_managements  | waste_category_code | wc_code | to discuss |
 | ros_common | vessel_electronics | gps | gnss | to do |
-| ros_common | vessel_electronics | satellite_communication_systems | satcom | |
+| ros_common | vessel_electronics | satellite_communication_systems | satcom | to do |
 | ros_ll     | branchline_configurations | configuration_number | configuration_id | may be mixed with id in branchline_configurations | 
 | ros_ll     | branchline_sections | section_number | section_id | to do |
 | ros_ll     | branchlines_set     | branchline_configuration_number | branchline_configuration_id | to discuss |
 | ros_ll     | setting_operations | vessel_speed | vessel_speed_kn | to do |
 | ros_ll     | setting_operations | line_setter_speed | line_setter_speed_ms | to do |
 | ros_ll     | branchlines_set    | branchline_configuration_number | branchline_configuration_identifier | may be mixed with id | 
+| ros_ll     | lights_by_type_and_colour | number_of_lights_by_type_and_colour | number of lights |
 
 ## Longline Form
 
@@ -37,7 +38,7 @@ The following code lists should be built by the Secretariat and added to the IOT
 | V-INFO | REG_NUMBER | REGISTRATION_NUMBER | `ros_common.vessel_identification.registration_number` | ok | 
 | V-ATTRIBUTES | TONNAGE | GROSS_TONNAGE | `ros_common.tonnages.value` | Remove values reported in "GRT" |
 | V-ATTRIBUTES | LENGTH | LOA_M | `ros_common.lengths.value` | Remove unit - loss of data reported in "KM" | 
-| V-ATTRIBUTES | FISH_STORAGE_CAPACITY_VALUE | FISH_STORAGE_CAPACITY_M3 | `ros_common.capacities.value` | |
+| V-ATTRIBUTES | FISH_STORAGE_CAPACITY_VALUE | FISH_STORAGE_CAPACITY_M3 | `ros_common.capacities.value` | ok |
 | V-ATTRIBUTES | FISH_STORAGE_CAPACITY_UNIT | remove | `ros_common.capacities.unit` | to do - loss of values reported in "MT" |
 | V-ATTRIBUTES | METHOD_X_CODES | METHOD_X | `ros_common.vessel_attributes_fish_preservation_method.fish_preservation_method_code` | ok |
 | V-ATTRIBUTES | FISH_STORAGE_TYPE_X_CODE | FISH_STORAGE_TYPE_X | `ros_common.vessel_attributes_fish_storage_type.fish_storage_type_code` | ok |
@@ -59,11 +60,17 @@ The following code lists should be built by the Secretariat and added to the IOT
 | G-CONFIG-MITIGATION-DEVICES | TORI_LINE_ATTACHED_HEIGHT (M) | TORI_LINE_ATTACHED_HEIGHT_M | `ros_ll.tori_line_details.attached_height_id` | value and unit given in `ros_common.heights` (unit set to m?) |
 | G-CONFIG-MITIGATION-DEVICES | DEVICE_X_CODE | DEVICE_X | `ros_ll.gear_specifications_mitigation_device.mitigation_device_code` | ok | 
 | E-SET | MAINLINE VALUE | MAINLINE_LENGTH_VALUE | `ros_ll.setting_operations.mainline_set_length_id` | value given in `ros_common.lengths.value` | 
+| E-SET | BRANCHLINE | CLIP_ON_TIME_BRANCHLINE | `ros_ll.setting_operations.branchline_clip_on_time` | ok | 
+| E-SET | BUOYS | CLIP_ON_TIME_BUOYS | `ros_ll.setting_operations.buoys_clip_on_time` | ok | 
 | E-SET | KM|NM to MAINLINE_LENGTH_UNIT | `ros_ll.setting_operations.mainline_set_length_id` | value given in `ros_common.lengths.unit` |
-| E-SET | NA | BRANCHLINE_LENGTH_MINIMUM_VALUE | missing from `ros_ll.setting_operations`? | to add |
-| E-SET | NA | BRANCHLINE_LENGTH_MINIMUM_UNIT | missing from `ros_ll.setting_operations`? | to add |
-| E-SET | NA | BRANCHLINE_LENGTH_MAXIMUM_VALUE | missing from `ros_ll.setting_operations`? | to add |
-| E-SET | NA | BRANCHLINE_LENGTH_MAXIMUM_UNIT | missing from `ros_ll.setting_operations`? | to add |
+| E-SET | **NA** | BRANCHLINE_LENGTH_MINIMUM_VALUE | missing from `ros_ll.setting_operations`? | to add |
+| E-SET | **NA** | BRANCHLINE_LENGTH_MINIMUM_UNIT | missing from `ros_ll.setting_operations`? | to add |
+| E-SET | **NA** | BRANCHLINE_LENGTH_MAXIMUM_VALUE | missing from `ros_ll.setting_operations`? | to add |
+| E-SET | **NA** | BRANCHLINE_LENGTH_MAXIMUM_UNIT | missing from `ros_ll.setting_operations`? | to add |
+| E-SET | SHARK_LINES_NUMBER_LINES | SHARK_LINES_NUMBER | `ros_ll.setting_operations.number_of_shark_lines_set` | ok | 
+| E-SET | NUM_TOTAL_HOOKS_SET | NUMBER_TOTAL_HOOKS_SET | `ros_ll.setting_operations.total_number_of_hooks_set` | ok | 
+| E-SET | NUM_TOTAL_FLOATS_SET | NUMBER_TOTAL_FLOATS_SET | `ros_ll.setting_operations.total_number_of_floats_set` | ok | 
+| E-SET | NUM_HOOKS_BETWEEN_FLOATS | NUMBER_HOOKS_BETWEEN_FLOATS | `ros_ll.setting_operations.number_of_hooks_set_between_floats` | ok |
 | E-SET | VALUE_KNOTS | VESSEL_SPEED_KN | `ros_ll.setting_operations.vessel_speed` | rename field |
 | E-SET | VALUE_MS | LINE_SETTER_SPEED_MS | `ros_ll.setting_operations.line_setter_speed` | rename field | 
 | E-SET | VMS ON   | Removed by SC | `-` | ok | 
@@ -71,7 +78,19 @@ The following code lists should be built by the Secretariat and added to the IOT
 | E-SET-HAULING | NUM_BRANCHLINE_HAULINGS_OBSERVED | missing | `ros_ll.hauling_operations.number_of_branchline_haulings_observed` | to add |
 | E-SET-HAULING-BITEOFFS | CONFIGURATION_NUMBER | CONFIGURATION_ID | `ros_ll.branchlines_set.branchline_configuration_number` | rename field |
 | E-SET-HAULING-BITEOFFS | NUM_BITEOFFS | NUMBER_OF_BITEOFFS | `ros_ll.biteoffs_by_branchlines_set.number_of_biteoffs` | ok |
-| E-SET-CATCHES | KG\|T | "UNIT" | `ros_ll.catch_details.estimated_weight_id` | unit given in `ros_common.estimated_weights`  | ok | 
+| E-SET-LIGHTS | NUM_LIGHTS | NUMBER_OF_LIGHTS | `ros_ll.lights_by_type_and_colour.number_of_lights_by_type_and_colour` | rename field |
+| E-SET-CATCHES | NUM_FISH | NUMBER_OF_FISH | `ros_ll.catch_details.estimated_catch_in_numbers` | ok |  
+| E-SET-CATCHES | KG\|T | "UNIT" | `ros_ll.catch_details.estimated_weight_id` | unit given in `ros_common.estimated_weights` | 
+| E-SET-MITIGATION-MEASURES | NUM_TORI_LINES_DEPLOYED | NUMBER_TORI_LINES_DEPLOYED | `ros_ll.mitigation_measures.number_of_tori_lines_deployed` | ok | 
+| E-SET-MITIGATION-MEASURES | MIN_DECK_LIGHTING_USED | MINIMUM_DECK_LIGHTING_USED | `ros_ll.mitigation_measures.minimum_deck_light_used` | ok | 
+| E-SET-MITIGATION-MEASURES | HOOKS_SET_BETWEEN_DUSK_DAWN | Removed | `ros_ll.mitigation_measures.hooks_set_between_dusk_and_dawn` | to remove | 
+| E-SET-MITIGATION-MEASURES | AVG_BRANCHLINE_WEIGHT_G | AVERAGE_SINKER_WEIGHT_G | `ros_ll.mitigation_measures.average_sinker_weight_id` | value and unit given in `ros_common.estimated_weights` |
+| E-SET-MITIGATION-MEASURES | PERC_BRANCHLINE_WEIGHTED | PERCENT_BRANCHLINE_WEIGHTED | `ros_ll.mitigation_measures.percentage_of_branchlines_weighted` | ok | 
+| E-SET-CATCH-SPECIMENS | LENGTH_X_VALUE | LENGTH_X_VALUE_CM | `ros_ll.specimens.biometric_information_id` | value in `ros_common.lengths` through `ros_common.bioletric_information.measured_length_id` | 
+| E-SET-CATCH-SPECIMENS | WEIGHT_VALUE | WEIGHT_VALUE_KG | `ros_common.biometric_information.estimated_weight_id` | value in `ros.common.weights.value` | 
+| E-SET-CATCH-SPECIMENS | WEIGHT UNIT | Removed | `ros_ll.specimens.biometric_information_id` | unit given in `ros_common.weights.unit`  | 
+| E-SET-CATCH-SPECIMENS | **NA** | SAMPLE_DESTINATION | `ros_common.sample_collection_details` | ok | 
+| E-SET-TAG_DETAILS     | TAG_X_NUMBER | TAG_X_ID | | |
 
 <!-- 
 ## Purse Seine Form
