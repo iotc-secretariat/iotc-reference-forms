@@ -675,6 +675,8 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | position | O | The position(s) where offal and used bait was disposed. Up to four positions of offal and bait disposal may be reported on the form |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  |
 :::
 
+||||||
+|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
 | number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | `tbd` |
 <!-- | number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved during observation | Integer | `tbd` | -->
