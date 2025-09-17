@@ -44,8 +44,7 @@ Vessel and trip identifiers; effort and gear characteristics (nets, drop lines, 
 | [E-SET-CATCHES](#eSetTunaCatches) | Effort |Set |Information on magnitude, composition, and fate of tuna catch|
 | [E-SET-CATCHES-SPECIMEN](#eSetCatchesSpecimen) | Catch |Specimen |Information on specimen condition, depredation, and technical details
 | [E-SET-CATCHES-SPECIMEN-SSI](#eSetCatchesSpecimenSSI) | Catch | Specimen | Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest during tuna fishing events|
-| [T-EVENTS](#tEvents) | Transhipment | Trip | Information on transhipment events
-| [T-PRODUCTS](#tProducts) | Transhipment | Trip | Information on transhipped products
+
 
 # Metadata
 
@@ -792,28 +791,6 @@ Fill out focal point information (full name, email, finalization date, and submi
 :::
 
 
-# T-PRODUCTS {#tProducts}
-
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| transhipment_number | M  | **ADD DESCRIPTION** |   |e.g., **ADD**  |
-
-
-## Product transhipped
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| species_code | O | description | **Code** from [All Species](#allSpecies)| e.g., `ABL` |
-| processing_type_code | O | description | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
-
-| **Quantity**
-
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| value | O | description | float | e.g., 
-| units | O | Indicates units (kg or t) | String | e.g., `kg` | 
-
-<!-- TRANSHIPMENTS NEEDS UPDATING/MORE INFORMATION -->
 
 # Reporting Deadlines
 - 30 June
