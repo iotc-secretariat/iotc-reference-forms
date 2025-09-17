@@ -703,6 +703,7 @@ For each branchline configuration set-up previously identified how many have had
 <!-- Check with Tony hauling operation_id in the database but missing from the form `ros_ll.biteoffs_by_branchlines_set.hauling_operation_id` -->
 
 # E-SET-CATCHES
+<!-- DESCRIPTION: This section of the reporting form includes information on individual sepcies from a subset of a set that is observed. Is this section just for reporting target species -->
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -727,12 +728,14 @@ For each branchline configuration set-up previously identified how many have had
 | fate | M | The final disposition of the catch or sampled portion of the catch, indicating whether it was retained on board or discarded, with specification of the reason where applicable | **Code** from [Fates](#fates) | e.g., `DL` |
 :::
 
+||||||
+|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | sampling_method | M | **DESCRIPTION TO ADD** |  **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
 | number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | `tbd` |
 
 <!-- NUM_FISH to 'NUMBER_OF_FISH' -->
 
-Weight: The catch weight corresponding to the specified product type recorded in 'weight code’. If the fish has not been processed, it corresponds to the unprocessed weight.
+**Weight:** The catch weight corresponding to the specified product type recorded in 'weight code’. If the fish has not been processed, it corresponds to the unprocessed weight.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -816,12 +819,12 @@ Weight: The catch weight corresponding to the specified product type recorded in
 
 | Depredation method:
 
-::::: {style="margin-left:40px"}
+::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | depredation_source | O | For depredated specimens/or catch, the depredation source should be based on depredation scar characteristics. For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
-| observed_predatory | O | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed, the value is 'UNK' (unknown). For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Predator Species](#predatorSpecies)| e.g., AG15 |
-
+| observed_predator | O | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed, the value is 'UNK' (unknown). For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Predator Species](#predatorSpecies)| e.g., AG15 |
+:::
 <!-- **Is the predator codelist right? is not a 3-alpha code** -->
 
 # E-SET-CATCHES-SSI  {#eSetCatchSpecimensSSI}
@@ -841,7 +844,8 @@ Weight: The catch weight corresponding to the specified product type recorded in
 | condition_at_release | M | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
 | gear_interaction | M | The type of interaction of the specimen with the fishing gear ("UK" if unknown as not possible to collect) | **Code** from [Gear Interactions](#gearInteractions) | e.g., `EF` |
 | hook_type | O | The type of hook the individual was hauled on | **Code** [Hook Types](#hookTypes) from | e.g., `C11` |
-| bait | O | The type and condition of the bait the individual was hauled on 
+
+| **Bait:** The type and condition of the bait the individual was hauled on 
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -850,7 +854,7 @@ Weight: The catch weight corresponding to the specified product type recorded in
 | bait_type | O |  **DESCRIPTION TO ADD** | **Code** from [Bait Types](#baitTypes) | e.g., `FF` | 
 :::
 
-| Leader ||||
+| **Leader**
 ::: {style="margin-left:40px"}
 
 | Field | Requirement | Description | Format | Input value |
