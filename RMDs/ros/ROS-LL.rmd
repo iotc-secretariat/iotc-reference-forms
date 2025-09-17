@@ -696,11 +696,10 @@ For each branchline configuration set-up previously identified how many have had
 ::: {style="margin-left:40px"}
 | Field              | Requirement | Description | Format  | Input value |
 |:---------------------|:-----------:|:------------|:-------:|:-----------:|
-| branchline_configuration_id | O | The identifier of the branchline configuration | Integer | `-` |
-<!-- | hauling_operation_id | O | The identifier of the hauling operation | `-` |  -->
-| number_of_biteoffs | O | The number of biteoffs observed | Integer | `1680` |
+| branchline_configuration_id | O | The identifier of the branchline configuration | Integer | e.g.,`-` |
+| number_of_biteoffs | O | The number of biteoffs observed | Integer | e.g., `1680` |
 :::
-
+<!-- | hauling_operation_id | O | The identifier of the hauling operation | `-` |  -->
 <!-- Check with Tony hauling operation_id in the database but missing from the form `ros_ll.biteoffs_by_branchlines_set.hauling_operation_id` -->
 
 # E-SET-CATCHES
