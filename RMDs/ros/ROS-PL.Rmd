@@ -72,6 +72,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | Data source | M |The source of data provided  | Observer data or EM data | e.g., `OAS` |
 
 # O-INFO {#oInfo}
+<!-- This section of the form includes information about the observer and an overview of the fishing trip they observed -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -177,6 +178,8 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 :::
 
 # V-INFO {#vInfo}
+<!-- This section of the form includes specific vessel information -->
+
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier |Alphanumeric code |e.g., `2024-01-23/IOTCFRA001/IOTC012345/PL` |
@@ -223,6 +226,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 
 
 # V-TRIP {#vTrip}
+<!-- This section of the form includes information about the overall fishing trip of the vessel -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -274,6 +278,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 
 
 # V-ATTRIBUTES {#vAttributes}
+<!-- This section of the form includes specific vessel details -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -354,6 +359,8 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 :::
 
 # G-GENERAL {#gGeneral}
+<!-- This section of the reporting form describes the pole and line fishing gear present on the vessel -->
+
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
@@ -387,6 +394,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 :::
 
 # E-SET-TUNA {#eSetTuna}
+<!-- This section describes details of each of the setting operations within the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -462,6 +470,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | object_id | O | For every activity involving artificial FAD (DFAD/AFAD), there is a  FAD identifier. This includes FAD markings, beacon IDs, or any information that can be used to identify the owner | Alphanumeric | e.g., **ADD**  |
 
 # E-SET-TUNA-CATCHES-FISHING-TRIP {#eSetTunaCatchesFishingTrip}
+<!-- This section of the form includes information summarizing the tuna catches associated with the fishing trip  -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -505,7 +514,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 
 # E-SET-TUNA-CATCHES {#eSetTunaCatches}
 
-<!-- This section of the form is for the reporting the details of a subsample of the catch for each set  -->
+<!-- This section of the form is for the reporting the details of a subsample of the catch for each set within the fishing trip -->
 
 
 | Field | Requirement | Description | Format | Input value |

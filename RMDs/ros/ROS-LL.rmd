@@ -78,6 +78,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | Data source | M | The source of the data, i.e., collected by observers at sea or derived from Electronic Monitoring Systems | **Code** from [Sources]() | e.g., `OS` |
 
 # O-INFO {#oInfo}
+<!-- This section of the form includes information about the observer and an overview of the fishing trip they observed -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -187,6 +188,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 :::
 
 # V-INFO {#vInfo}
+<!-- This section of the form includes specific vessel information -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -234,6 +236,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 :::
 
 # V-TRIP {#vTrip}
+<!-- This section of the form includes information about the overall fishing trip of the vessel -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -284,6 +287,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 :::
 
 # V-ATTRIBUTES {#vAttributes}
+<!-- This section of the form includes specific vessel details -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -368,6 +372,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 :::
 
 # G-GENERAL {#gGeneral}
+<!-- This section of the form includes general longline gear information -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -407,6 +412,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | storage | O | The storage method for the branchlines. Up to four storage methods may be reported on the form | **Code** from [Branchline Storages](#branchlineStorages) | e.g., `BA` |
 
 # G-CONFIG-MITIGATION-DEVICES {#gConfigMitigationDevices}
+<!-- This section of the form includes information about the mitigation devices present on the vessel -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -436,6 +442,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | device | O | Equipment used onboard to minimise bycatch. Up to five additional devices may be reported on the form | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
 
 # E-SET
+<!-- This section of the form includes information regarding individual sets that occurred during the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -543,6 +550,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 
 
 # E-SET-LIGHTS {#eSetLights}
+<!-- This section of the form includes information about the lights present for each set that occurred during the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -564,6 +572,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 <!-- | 'NUM_LIGHTS' to 'NUMBER_OF_LIGHTS' -->
 
 # E-SET-MITIGATION-MEASURES {#eSetMitigationMeasures}
+<!-- This section of the form includes information about the mitigation measures used in each set of the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -602,6 +611,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | measure | M | Any other mitigation measures observed. Up to four measures can be reported on the form | **Code** from [Mitigation Devices](#mitigationDevices) | e.g., `AA` |
 
 # E-SET-HOOKS {#eSetHooks}
+<!-- This section of the form includes information about the specific hooks used in each set of the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -617,6 +627,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | variations | O | Indicates any variations in hook type, hook material, and presence/absence of hook ring where possible | String | `tbd` |
 
 # E-SET-BAITS
+<!-- This section of the form includes information about the specific baits used in each set of the trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -636,6 +647,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 <!-- develop code list for bait colors -->
 
 # E-SET-HAULING {#eSetHauling}
+<!-- This section includes specific hauling information for each set of the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -683,6 +695,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | sampling_protocol | M | Sampling protocol followed by the observer | **CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
 # E-SET-HAULING-BITEOFFS {#eSetHaulingBiteoffs}
+<!-- This section of the form includes information about individual biteoffs for each set within a fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -703,7 +716,7 @@ For each branchline configuration set-up previously identified how many have had
 <!-- Check with Tony hauling operation_id in the database but missing from the form `ros_ll.biteoffs_by_branchlines_set.hauling_operation_id` -->
 
 # E-SET-CATCHES
-<!-- DESCRIPTION: This section of the reporting form includes information on individual sepcies from a subset of a set that is observed. Is this section just for reporting target species -->
+<!-- DESCRIPTION: This section of the reporting form includes information on individual species from a subset of a set that is observed. Is this section just for reporting target species? -->
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -746,6 +759,7 @@ For each branchline configuration set-up previously identified how many have had
 :::
 
 # E-SET-CATCH-SPECIMENS {#eSetCatchSpecimens}
+<!-- This section of the form is for the recording of specimens caught during individual sets. Data reported is a sampled proportion of each observed set from the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -828,6 +842,7 @@ For each branchline configuration set-up previously identified how many have had
 <!-- **Is the predator codelist right? is not a 3-alpha code** -->
 
 # E-SET-CATCHES-SSI  {#eSetCatchSpecimensSSI}
+<!-- This section of the form includes information about SSI species observed within the subset of each observed set -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -850,8 +865,8 @@ For each branchline configuration set-up previously identified how many have had
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| bait_condition | O | **DESCRIPTION TO ADD** | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE` |
-| bait_type | O |  **DESCRIPTION TO ADD** | **Code** from [Bait Types](#baitTypes) | e.g., `FF` | 
+| bait_condition | O | | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE` |
+| bait_type | O |   | **Code** from [Bait Types](#baitTypes) | e.g., `FF` | 
 :::
 
 | **Leader**
@@ -881,6 +896,7 @@ For each branchline configuration set-up previously identified how many have had
 :::
 
 # E-SET-TAG-DETAILS {#eSetTagDetails}
+<!-- This section of the form is for the reporting of each of the tags recovered during the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|

@@ -61,6 +61,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 | Data source | M | The source of data provided: 'OAS' for data collected by Observers at sea and 'EMS' for data derived from Electronic Monitoring Systems | String | e.g., `OAS` |
 
 # O-INFO {#oInfo}
+<!-- This section of the form includes information about the observer and an overview of the fishing trip they observed -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -158,6 +159,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 :::
 
 # V-INFO {#vInfo}
+<!-- This section of the form includes specific vessel information -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -221,6 +223,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 :::
 
 # V-TRIP {#vTrip}
+<!-- This section of the form includes information about the overall fishing trip of the vessel -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
