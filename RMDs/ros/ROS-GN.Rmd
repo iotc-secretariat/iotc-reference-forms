@@ -336,8 +336,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description |      Format       | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| autonomy_range_value | O | The vessel's operational endurance, expressed either as the maximum number of days it can remain at sea without resupply, or as the maximum distance it can cover (in nautical miles, nm) | Float | e.g., `30` |
-| autonomy_range_unit  | O | The unit used to describe the value of autonomy range | days or nm | e.g., `days` |
+| value | O | The vessel's operational endurance, expressed either as the maximum number of days it can remain at sea without resupply, or as the maximum distance it can cover (in nautical miles, nm) | Float | e.g., `30` |
+| unit  | O | The unit used to describe the value of autonomy range | days or nm | e.g., `days` |
 :::
 
 
@@ -415,9 +415,9 @@ Fill out focal point information (full name, email, finalization date, and submi
 |  |  |  |  |  |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | vertical_mesh_count | O |The number of vertical meshes of a net in this gear. Usually obtained by counting the number of meshes of the end-line, or up and down line, on the end of a net where the meshes are attached. This information may be used to cross check information provided by the crew  | Integer | e.g., `tbd`  |
-| hanging_ratio_perc | M | The ratio between the length of the float line and the length of the stretched mesh hanging on the float line. Usually obtained by the following process: 1) counting 10 or 12 meshes horizontally, 2) multiplying the number of counted meshes by average stretched mesh length; 3) measuring the length of the floatline they are attached to, 3) dividing the length of the floatline the meshes are attached to by the length of the stretched meshes counted | Float  |e.g., `tbd`  |
+| hanging_ratio_percent | M | The ratio between the length of the float line and the length of the stretched mesh hanging on the float line. Usually obtained by the following process: 1) counting 10 or 12 meshes horizontally, 2) multiplying the number of counted meshes by average stretched mesh length; 3) measuring the length of the floatline they are attached to, 3) dividing the length of the floatline the meshes are attached to by the length of the stretched meshes counted | Float  |e.g., `tbd`  |
 
-| **Net web colour:** The colour of the net webbing.Reporting form has designated fields for up to 4 net web coulours. Fill out as it applies following format described below.
+| **Net web colour:** The colour of the net webbing.Reporting form has designated fields for up to 4 net web colours. Fill out as it applies following format described below.
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
@@ -467,7 +467,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
 | set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
 | gillnet_sequential_number  | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
-**Change Set number to SET ID?**
+**what is the gillnet sequential number?**
 
 
 ## Setting operations
@@ -515,7 +515,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Field | Requirement | Description | Format | Input value |
 |:-------------|:------------:|:----------------|:------------:|:------------:|
 | used | M | Indicates whether of not any bycatch mitigation devices were used during the set (Yes/No/Unk) | String | e.g., `Yes`  |
-| device_1 | O | Indicates any mitigation devices used during the set | **Code** from [Mitigation Devices](#migitationDevices) | e.g., `AA`  |
+| device_1 | O | The mitigation devices used during the set | **Code** from [Mitigation Devices](#migitationDevices) | e.g., `AA`  |
 
 
 
@@ -551,10 +551,10 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 ||||||
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| net_condition | M | Indicated the condition of the net at haul-back, even if the condition was the same as at setting |**Code** from [Net Conditions](#netConditions) | e.g., `HI`  |
+| net_condition | M | The condition of the net at haul-back, even if the condition was the same as at setting |**Code** from [Net Conditions](#netConditions) | e.g., `HI`  |
 | net_panels_number_retrieved | M | The total number of net panels retrieved at haul | Integer |  |
 | net_panels_number_observed | M | The total number of hauled net panels that are observed | Integer |  |
-| sampling_protocol | M | Indicates the sampling protocol followed by the observer to select which net panels to observe |**CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
+| sampling_protocol | M | The sampling protocol followed by the observer to select which net panels to observe |**CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
 
 # E-SET-CATCHES {#eSetCatches}
@@ -578,22 +578,22 @@ Fill out focal point information (full name, email, finalization date, and submi
 ::: {style="margin-left:40px"}
 | Element              | Requirement | Description | Format  | Input value |
 |:---------------------|:-----------:|:------------|:-------:|:-----------:|
-| type | M | **DESCRIPTION TO ADD** | **Code** from [Types of Fate](#fateType) | e.g., `DI` |
-| code | M | **DESCRIPTION TO ADD** | **Code** from [Fates](#fates) | e.g., `DL` |
+| type | M |  | **Code** from [Types of Fate](#fateType) | e.g., `DI` |
+| code | M |  | **Code** from [Fates](#fates) | e.g., `DL` |
 :::
 
-| sampling_method | M | Indicate the sampling method used to obtain total catch estimates per species |  **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
-| num_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | **EXAMPLE TO ADD** |
+| sampling_method | M | The sampling method used to obtain total catch estimates per species |  **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
+| number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | e.g., `tbd` |
 
 **Weight:** The catch weight corresponding to the specified product type recorded in 'weight code’. If the fish has not been processed, record the unprocessed weight
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| processing_type | M | **DESCRIPTION TO ADD** | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
-| value | M | **DESCRIPTION TO ADD** | Float | **EXAMPLE TO ADD** |
-| unit | M | **DESCRIPTION TO ADD** | Indicate units (kg or tonnes) | e.g., `kg`  |
-| estimation_method | M | **DESCRIPTION TO ADD** | **Code** from [Total Catch Estimation](#totalCatchEstimation) | e.g., `EP` |
+| processing_type | M | The type of processing the species underwent prior to weighing.  If the species has not been processed, record the code for unprocessed (or round, whole, live) weight (i.e. RD). | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
+| value | M | The weight value | Float | e.g., `tbd` |
+| unit | M |Indicate units (kg or tonnes) | String | e.g., `kg`  |
+| estimation_method | M | The weight estimation method used to obtain the weight | **Code** from [Total Catch Estimation](#totalCatchEstimation) | e.g., `EP` |
 :::
 
 
@@ -832,7 +832,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 -   **Version**: `r version_number("PORTS")`
 -   **Last update**: `r last_update("PORTS")`
 
-```{r collapse = TRUE, warning = FALSE}
+```{r collapse = TRUE, warning = FALSE, message = FALSE}
 out_dt(PORTS[, -c("POINT")], "PORTS")
 ```
 
