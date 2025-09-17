@@ -66,6 +66,7 @@ The following code lists should be built by the Secretariat and added to the IOT
 | E-SET | NA | BRANCHLINE_LENGTH_MAXIMUM_UNIT | missing from `ros_ll.setting_operations`? | to add |
 | E-SET | VALUE_KNOTS | VESSEL_SPEED_KN | `ros_ll.setting_operations.vessel_speed` | rename field |
 | E-SET | VALUE_MS | LINE_SETTER_SPEED_MS | `ros_ll.setting_operations.line_setter_speed` | rename field | 
+| E-SET | VMS ON   | Removed by SC | `-` | ok | 
 | E-SET-HAULING | NUM_HOOKS_RETRIEVED_DURING_OBSERVATION | Removed by SC | `ros_ll.hauling_operations.number_of_hooks_observed` | to remove - loss of data |
 | E-SET-HAULING | NUM_BRANCHLINE_HAULINGS_OBSERVED | missing | `ros_ll.hauling_operations.number_of_branchline_haulings_observed` | to add |
 | E-SET-HAULING-BITEOFFS | CONFIGURATION_NUMBER | CONFIGURATION_ID | `ros_ll.branchlines_set.branchline_configuration_number` | rename field |
