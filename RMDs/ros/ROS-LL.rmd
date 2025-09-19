@@ -247,7 +247,7 @@ This section of the form includes specific vessel information.
 
 # V-TRIP {#vTrip}
 
-This section of the form includes information about the overall fishing trip of the vessel.
+This section of the form includes information on the course and duration of the vessel's fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -299,7 +299,7 @@ This section of the form includes information about the overall fishing trip of 
 
 # V-ATTRIBUTES {#vAttributes}
 
-This section of the form includes specific vessel details.
+This section of the form includes details on vessel attributes.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -322,12 +322,13 @@ This section of the form includes specific vessel details.
 | power_value | O | The rated power output of the vessel's main engine as specified in the official vessel registration or engine documentation | Integer | e.g., `5000` |
 | power_unit | O | Rated output of the vessel's main engine, as specified in official registration or engine documentation in kilowatts (kW), horsepower (hp), or break horsepower (hp) | String | e.g., `kW` |
 
-<!-- I think we should remove BHP from the possibilities following Res. [19/04](https://www.iotc.org/cmm/resolution-1904-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence) -->
+<!-- I think we should remove BHP from the possibilities following Res. [19/04](https://www.iotc.org/cmm/resolution-1904-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence) --> <!-- AGREE-->
+
 :::
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| fish_storage_capacity_m3 | O | The vessel total maximum capacity (cubic metres; m^3^) to store catches | Float | e.g., `1100` |
+| fish_storage_capacity_m3 | O | Total volume of fish hold(s)(cubic metres; m^3^) | Float | e.g., `1100` |
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
@@ -385,7 +386,7 @@ This section of the form includes specific vessel details.
 
 # G-GENERAL {#gGeneral}
 
-This section of the form includes general longline gear information.
+This section of the form includes general longline gear configuration.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -455,6 +456,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 # E-SET
 
 This section of the form includes information regarding individual sets that occurred during the fishing trip.
+<!-- observed trip , not fishing trip-->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -526,6 +528,7 @@ This section of the form includes information regarding individual sets that occ
 :::
 
 <!-- Why "Each" leader type? Check reporting form -->
+<!-- because the longline fisheries could use different types of leaders (mostly nylon monofilament vs wire) and the leader type as some effect in the catchability-->
 
 <!-- Estimate by counting the number of branchlines in a basket by leader type and dividing each count by the total hooks in the basket. This assumes uniform use of leader types across baskets in a set. Estimates should be adjusted if there is variation across baskets (within a set) in leader proportions  -->
 
@@ -548,6 +551,8 @@ This section of the form includes information regarding individual sets that occ
 
 This section of the form includes information about the lights present for each set that occurred during the fishing trip.
 
+<!-- observed trip, not fishing trip-->
+
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
@@ -568,6 +573,7 @@ This section of the form includes information about the lights present for each 
 # E-SET-MITIGATION-MEASURES {#eSetMitigationMeasures}
 
 This section of the form includes information about the mitigation measures used in each set of the fishing trip.
+<!-- observed trip , not fishing trip-->
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -602,6 +608,7 @@ This section of the form includes information about the mitigation measures used
 # E-SET-HOOKS {#eSetHooks}
 
 This section of the form includes information about the specific hooks used in each set of the fishing trip.
+<!-- observed trip, not fishing trip-->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -619,6 +626,7 @@ This section of the form includes information about the specific hooks used in e
 # E-SET-BAITS
 
 This section of the form includes information about the specific baits used in each set of the trip.
+<!-- observed trip, not fishing trip-->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -635,11 +643,15 @@ This section of the form includes information about the specific baits used in e
 | dye_colour | O | The colour(s) that the different baits are dyed | String | e.g., `blue`  |
 
 <!-- DO NOT UNDERSTAND THE ABOVE DEFINITION OF PERCENTAGE, WHICH INCLUDES REFERENCE TO "CONDITION"?? -->
+<!--e.g. 25% live sardina and 50% frozen/chopped squid in the same set. Some studies explore the bait effect affecting pelagic longline catches in terms of efficiency and species targeting. Are several papers presented on the WPEB sessions-->
+
 <!-- develop code list for bait colors -->
+<!-- dye bait colors, some references (https://www.acap.aq/bycatch-mitigation/bycatch-mitigation-fact-sheets/770-fs-10-pelagic-longline-blue-dyded-bait-squid/file), (https://www.researchgate.net/publication/392706107_Meta-analysis_of_standardised_interaction_rates_reveals_relative_performance_of_seabird_bycatch_mitigation_methods_for_pelagic_longline_fisheries_in_the_light_of_the_review_of_CMM_2018-03)-->
 
 # E-SET-HAULING {#eSetHauling}
 
 This section includes specific hauling information for each set of the fishing trip.
+<!-- observed trip, not fishing trip-->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -683,6 +695,8 @@ This section includes specific hauling information for each set of the fishing t
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
 | number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | `tbd` |
+| number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved observed | Integer | `tbd` |
+<!-- ADEDD as totally necessary to calculate observer coverage. Was already included in the form I presented and discussed at the WGEMS, and in the ROS data standard excel file -->
 | sampling_protocol | M | Sampling protocol followed by the observer | **CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
 # E-SET-HAULING-BITEOFFS {#eSetHaulingBiteoffs}
@@ -707,12 +721,14 @@ For each branchline configuration set-up previously identified how many have had
 
 <!-- | hauling_operation_id | O | The identifier of the hauling operation | `-` |  -->
 <!-- Check with Tony hauling operation_id in the database but missing from the form `ros_ll.biteoffs_by_branchlines_set.hauling_operation_id` -->
+<!-- you can refer to the set id as will be only one hauling operation for each set, maybe in the database is just to parenting this table with the set id, repeating the set ID as hauling operation_id-->
 
 # E-SET-CATCHES
 
 This section of the reporting form includes information on individual species from a subset of a set that is observed.
 
 <!-- Is this section just for reporting target species? -->
+<!-- no, all the catches-->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -727,6 +743,7 @@ This section of the reporting form includes information on individual species fr
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | species | M | The species for each specimen observed | **Code** from [All Species](#allSpecies)| e.g., `ABL` |
+<!-- is not at specimen level, is the part of the catch aggregated by species" I suggest "the species presented in the observed part of the catch -->
 
 | **Fate**: The fate which includes whether it was retained or discarded and the reason.
 
@@ -742,7 +759,7 @@ This section of the reporting form includes information on individual species fr
 | sampling_method | M | **DESCRIPTION TO ADD** |  **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
 | number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | `tbd` |
 
-**Weight:** The catch weight corresponding to the specified product type recorded in 'weight code’. If the fish has not been processed, it corresponds to the unprocessed weight.
+**Weight:** The catch weight corresponding to the specified species and product type recorded in 'weight code’. If the fish has not been processed, it corresponds to the unprocessed weight.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -754,7 +771,7 @@ This section of the reporting form includes information on individual species fr
 
 # E-SET-CATCH-SPECIMENS {#eSetCatchSpecimens}
 
-This section of the form is for the recording of specimens caught during individual sets. Data reported is a sampled proportion of each observed set from the fishing trip.
+This section of the form is for the recording of biological information of the specimens sampled during individual sets.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -782,9 +799,12 @@ This section of the form is for the recording of specimens caught during individ
 :::
 
 <!-- How do you identify the species for each specimen?? -->
+<!-- the species are inferred from catch ID, as already refers to samples by species from which a number of specimens are taken for biological sampling and identified as specimen id-->
 
 <!-- Proposal: I would remove the "Is straight" field since the type of length measurements indicates how the measurement was taken (straight, curved), and the guidelines for observers should include that the measurements should be taken straight for fish (fork length, total length, etc.) -->
-| **Weight**: The specimen's individual weight corresponding to the specified product type. Unprocessed weight when the fish has not been processed.
+<!-- the guide is a recommendation, but don't means that always happens, We need to keep it, mostly for some fisheries with minimum conditions for the observer sampling  and for later relationships on measurements-->
+
+| **Weight**: The specimen's individual weight corresponding to the specified specie and product type. Unprocessed weight when the fish has not been processed.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -807,7 +827,7 @@ This section of the form is for the recording of specimens caught during individ
 | maturity_stage | O | The reproductive stage of a fish determined through visual inspection of the gonads without the aid of a microscope | String | **Code list being developed** |
 :::
 
-| Sample collected: The following details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
+| Sample collected: Details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -826,6 +846,7 @@ This section of the form is for the recording of specimens caught during individ
 | observed_predator | O | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed, the value is 'UNK' (unknown). For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Predator Species](#predatorSpecies) | e.g., AG15 |
 :::
 <!-- **Is the predator codelist right? is not a 3-alpha code** -->
+<!-- its right, although sometimes could be identified as species level, the list contains several aggregated species--> 
 
 # E-SET-CATCHES-SSI  {#eSetCatchSpecimensSSI}
 
@@ -875,6 +896,8 @@ This section of the form includes information about SSI species observed within 
 
 | **Depredation details**
 
+<!--Depredation details for SSi are not included in the SC document-->
+
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -885,6 +908,7 @@ This section of the form includes information about SSI species observed within 
 # E-SET-TAG-DETAILS {#eSetTagDetails}
 
 This section of the form is for the reporting of each of the tags recovered during the fishing trip.
+<!-- observed trip, not fishing trip-->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -907,6 +931,7 @@ This section of the form is for the reporting of each of the tags recovered duri
 # Reporting Deadlines
 
 -   **Longline fisheries**: 30 June (preliminary), 30 December (final)
+<!-- not sure if preliminary ROS data applies-->
 
 # Reference Code Lists
 
