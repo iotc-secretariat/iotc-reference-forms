@@ -31,6 +31,9 @@ Click [here](./Form-ROS-LL.xlsx) to download a blank version of Form ROS-LL, or 
 
 Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the mandatory (<span style="color: blue;">M; blue cells</span>) and optional (<span style="color: green;">O; green cells</span>) data fields defined by the SC. The current version builds on the most recent revision of ROS fields endorsed at the 27^th^ session of the SC ([IOTC-2024-SC27-DATA01](https://iotc.org/documents/SC/27/DATA01)). The sheets are interconnected through technical identifiers (e.g., observer trip ID, set ID), enabling the hierarchical organisation of the observations to be maintained.
 
+<!---see the proposed changes in the main structure defined below in the file "Forms_main_general_sections.xlsx"--->
+
+
 | Sheet | Data Components | Resolution |  Description |
 | :------------- | :----------: | :--------: | :--------------------------- |
 | [META](#meta) | Metadata | Trip | Information on the data submission and main characteristics |
