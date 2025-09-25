@@ -458,8 +458,8 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 
 # E-SET
 
-This section of the form includes information regarding individual sets that occurred during the fishing trip.
-<!-- observed trip , not fishing trip-->
+This section of the form includes information regarding individual sets that were observed during the fishing trip.
+
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -552,9 +552,8 @@ This section of the form includes information regarding individual sets that occ
 
 # E-SET-LIGHTS {#eSetLights}
 
-This section of the form includes information about the lights present for each set that occurred during the fishing trip.
+This section of the form includes information about the lights present for each set that were observed during the fishing trip.
 
-<!-- observed trip, not fishing trip-->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -575,8 +574,7 @@ This section of the form includes information about the lights present for each 
 
 # E-SET-MITIGATION-MEASURES {#eSetMitigationMeasures}
 
-This section of the form includes information about the mitigation measures used in each set of the fishing trip.
-<!-- observed trip , not fishing trip-->
+This section of the form includes information about the mitigation measures observed in each set of the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -610,8 +608,7 @@ This section of the form includes information about the mitigation measures used
 
 # E-SET-HOOKS {#eSetHooks}
 
-This section of the form includes information about the specific hooks used in each set of the fishing trip.
-<!-- observed trip, not fishing trip-->
+This section of the form includes information about the specific hooks observed in each set of the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -628,8 +625,7 @@ This section of the form includes information about the specific hooks used in e
 
 # E-SET-BAITS
 
-This section of the form includes information about the specific baits used in each set of the trip.
-<!-- observed trip, not fishing trip-->
+This section of the form includes information about the specific baits observed in each set of the trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -653,8 +649,7 @@ This section of the form includes information about the specific baits used in e
 
 # E-SET-HAULING {#eSetHauling}
 
-This section includes specific hauling information for each set of the fishing trip.
-<!-- observed trip, not fishing trip-->
+This section includes specific hauling information observed for each set of the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
@@ -697,8 +692,8 @@ This section includes specific hauling information for each set of the fishing t
 ||||||
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
-| number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | `tbd` |
-| number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved observed | Integer | `tbd` |
+| number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | e.g., `tbd` |
+| number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved observed | Integer | e.g., `tbd` |
 <!-- ADEDD as totally necessary to calculate observer coverage. Was already included in the form I presented and discussed at the WGEMS, and in the ROS data standard excel file -->
 | sampling_protocol | M | Sampling protocol followed by the observer | **CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
@@ -730,23 +725,19 @@ For each branchline configuration set-up previously identified how many have had
 
 This section of the reporting form includes information on individual species from a subset of a set that is observed.
 
-<!-- Is this section just for reporting target species? -->
-<!-- no, all the catches-->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
-| catch_id | M | Unique within a specific set, as a branch of set_id representing an observed part of the catch | Alphanumeric code | `tbd` |
+| catch_id | M | Unique within a specific set, as a branch of set_id representing an observed part of the catch | Alphanumeric code | e.g., `tbd` |
 
-<!-- I added "representing an observed part of the catch" -->
 
 ## Catch Details
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| species | M | The species for each specimen observed | **Code** from [All Species](#allSpecies)| e.g., `ABL` |
-<!-- is not at specimen level, is the part of the catch aggregated by species" I suggest "the species presented in the observed part of the catch -->
+| species | M | The species in the observed portion of the catch | **Code** from [All Species](#allSpecies)| e.g., `ABL` |
 
 | **Fate**: The fate which includes whether it was retained or discarded and the reason.
 
@@ -910,8 +901,7 @@ This section of the form includes information about SSI species observed within 
 
 # E-SET-TAG-DETAILS {#eSetTagDetails}
 
-This section of the form is for the reporting of each of the tags recovered during the fishing trip.
-<!-- observed trip, not fishing trip-->
+This section of the form is for the reporting of each of the tags recovered during the observed portion of the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
