@@ -27,7 +27,6 @@ Click [here](./Form-ROS-LL.xlsx) to download a blank version of Form ROS-LL, or 
 
 # Data Content
 
-<!-- Vessel and trip identifiers; effort and gear characteristics (hooks, soak time, set position); operational details of each set; catch and bycatch by species in number and weight; fate of catch (retained/discarded); interactions with sharks, seabirds, turtles, and other species; mitigation measures used; size measurements of catch as well as some biological samples. -->
 
 Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the mandatory (<span style="color: blue;">M; blue cells</span>) and optional (<span style="color: green;">O; green cells</span>) data fields defined by the SC. The current version builds on the most recent revision of ROS fields endorsed at the 27^th^ session of the SC ([IOTC-2024-SC27-DATA01](https://iotc.org/documents/SC/27/DATA01)). The sheets are interconnected through technical identifiers (e.g., observer trip ID, set ID), enabling the hierarchical organisation of the observations to be maintained.
 
@@ -58,7 +57,7 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Catch & Technology / Equipment | Specimen | Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest |
 | [E-SET-TAG-DETAILS](#eSetTagDetails) | Catch | Specimen | Information on specimen condition and tag details |
 
-<!-- NB: the resolution of E-SET-CATCHES should read catch sample for other gears, unless raised to the set?  -->
+
 
 # META {#meta}
 
@@ -80,8 +79,8 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g., `1996` |
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `ABW` |
 | Flag / Chartering state | M | The country registration of the fishing vessels or chartering flag in case of chartering agreement | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Data source | M | The source of the data, i.e., collected by observers at sea or derived from Electronic Monitoring Systems | **Code** from [Sources]() | e.g., `OS` |
-<!-- for consistency with other reporting forms code OB when the source of data is observers-->
+| Data source | M | The source of the data, i.e., collected by observers at sea or derived from Electronic Monitoring Systems | **Code** from [Sources](#observerSources) | e.g., `OB` |
+
 
 # O-INFO {#oInfo}
 
@@ -177,15 +176,13 @@ This section of the form includes information about the observer and an overview
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| searching | O | The number of days searching during the observation period | Integer | `tbd` |
-| actively fishing | O | The number of active fishing days during the observation period | Integer | `tbd` |
-| in_fishing_area | O | The number of days in the fishing area during the observation period | Integer | `tbd` |
-| transiting | O | The number of days transiting during the observation period | Integer | `tbd` |
-| lost | O | The number of days lost during the observation period | Integer | `tbd` |
+| searching | O | The number of days searching during the observation period | Integer | e.g., `31.2` |
+| actively_fishing | O | The number of active fishing days during the observation period | Integer | e.g., `43.1` |
+| in_fishing_area | O | The number of days in the fishing area during the observation period | Integer | e.g., `45.8` |
+| transiting | O | The number of days transiting during the observation period | Integer | e.g., `5.0` |
+| lost | O | The number of days lost during the observation period | Integer | e.g., `1.1` |
 :::
 
-<!-- All fields are defined with days (e.g., number of days_lost, etc.). I removed HOURS from the definitions and mentioned that there are 24 hours within a day -->
-<!-- we'll need to review the reason, but the hours were aggregated in the last revision fields, so seems that they want to include it, which means that maybe we have to give the two options ( days/hours) what also means two columns !!!to discuss-->
 
 | **Reasons for lost days:** Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
 
@@ -207,17 +204,14 @@ This section of the form includes specific vessel information.
 
 | **Identification:** Unique identifiers and key details of the vessel to uniquely identify the vessel in fisheries and observer records.
 
-<!-- For line 205 I propose  just keep "vessel unique identifiers", the observer records are linked to the TRIP_ID, that already embed the vessel identification-->
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or Electronic Monitoring records | String | e.g., `HAWWA` |
-<!-- The vessel's full name as it appears in the official vessel registry, on the vessel itself or in Electronic Monitoring records-->
 | flag_or_chartering_state | M | The country code of registration or chartering | **Code** from [Countries](#countries) | e.g., `OMN` |
 | iotc_ID | M | The unique identification number assigned to the vessel by the IOTC when it is included in the Record of Authorised Vessels | Alphanumeric | e.g., `IOTC003810` |
 | imo_number | O | The unique vessel identification number assigned by the International Maritime Organization | Seven-digit number | e.g., `9359698` |
-<!-- The proper IMO identification should be IMO9359698 but in the RAV only the number is recorded, so i think we should keep imo_number here-->
 | ircs | O | The unique alphanumeric code (International Radio Call Sign; IRCS) assigned to the vessel for radio communications, as recorded in official registration documents radio call sign (when available) | Alphanumeric | e.g., `A4DP6` |
 :::
 
@@ -323,10 +317,7 @@ This section of the form includes details on vessel attributes.
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | make | O | The manufacturer or brand name of the vessel's engine, as specified in the official vessel registration or engine documentation | String | e.g., `MAN Energy Solutions`  |
 | power_value | O | The rated power output of the vessel's main engine as specified in the official vessel registration or engine documentation | Integer | e.g., `5000` |
-| power_unit | O | Rated output of the vessel's main engine, as specified in official registration or engine documentation in kilowatts (kW), horsepower (hp), or break horsepower (hp) | String | e.g., `kW` |
-
-<!-- I think we should remove BHP from the possibilities following Res. [19/04](https://www.iotc.org/cmm/resolution-1904-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence) --> <!-- AGREE-->
-
+| power_unit | O | Rated output of the vessel's main engine, as specified in official registration or engine documentation in kilowatts (kW), horsepower (hp), or break horsepower (bhp) | String | e.g., `kW` |
 :::
 
 ||||||
@@ -347,7 +338,7 @@ This section of the form includes details on vessel attributes.
 
 | **Autonomy range:** Vessel autonomy, expressed as the number of days a vessel can remain at sea without refuelling. If this information is not available, autonomy may be expressed as cruising distance (nm).
 
-<!-- If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric tonne (nm/t)\> : \<Tonnage of fuel carried (t)\> -->
+<!--FOR OBSEVER GUIDELINES -  If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric tonne (nm/t)\> : \<Tonnage of fuel carried (t)\> -->
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -530,12 +521,6 @@ This section of the form includes information regarding individual sets that wer
 | leader_material_percentage | M | The percentage of total branchlines in the set estimated for each leader type used | Float | `tbd` |
 :::
 
-<!-- Why "Each" leader type? Check reporting form -->
-<!-- because the longline fisheries could use different types of leaders (mostly nylon monofilament vs wire) and the leader type as some effect in the catchability-->
-
-<!-- Estimate by counting the number of branchlines in a basket by leader type and dividing each count by the total hooks in the basket. This assumes uniform use of leader types across baskets in a set. Estimates should be adjusted if there is variation across baskets (within a set) in leader proportions  -->
-
-<!-- | Branchline length max: specify the minimum and maximum total branchline lengths observed in the set. Total branchline length is measured (in meters) from the mainline clip to the hook. If total branchline lengths are uniform across the set, write the same number in the minimum and maximum fields -->
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -641,11 +626,6 @@ This section of the form includes information about the specific baits observed 
 | percentage | M | The approximate proportion (%) of bait species and condition used across all hooks in the set | Float | `tbd` |
 | dye_colour | O | The colour(s) that the different baits are dyed | String | e.g., `blue`  |
 
-<!-- DO NOT UNDERSTAND THE ABOVE DEFINITION OF PERCENTAGE, WHICH INCLUDES REFERENCE TO "CONDITION"?? -->
-<!--e.g. 25% live sardina and 50% frozen/chopped squid in the same set. Some studies explore the bait effect affecting pelagic longline catches in terms of efficiency and species targeting. Are several papers presented on the WPEB sessions-->
-
-<!-- develop code list for bait colors -->
-<!-- dye bait colors, some references (https://www.acap.aq/bycatch-mitigation/bycatch-mitigation-fact-sheets/770-fs-10-pelagic-longline-blue-dyded-bait-squid/file), (https://www.researchgate.net/publication/392706107_Meta-analysis_of_standardised_interaction_rates_reveals_relative_performance_of_seabird_bycatch_mitigation_methods_for_pelagic_longline_fisheries_in_the_light_of_the_review_of_CMM_2018-03)-->
 
 # E-SET-HAULING {#eSetHauling}
 
@@ -668,7 +648,6 @@ This section includes specific hauling information observed for each set of the 
 | longitude | O | The longitude of the position at the start of the hauling operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
-<!-- CHANGED POSITION TO EXPLICITLY INCLUDE LONGITUDE AND LATITUDE -->
 
 | **End hauling**
 
@@ -693,7 +672,7 @@ This section includes specific hauling information observed for each set of the 
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
 | number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | e.g., `tbd` |
-| number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved observed | Integer | e.g., `tbd` |
+| **number_of_hooks_retrieved_during_observation** | M | The number of hooks retrieved observed | Integer | e.g., `tbd` |
 <!-- ADEDD as totally necessary to calculate observer coverage. Was already included in the form I presented and discussed at the WGEMS, and in the ROS data standard excel file -->
 | sampling_protocol | M | Sampling protocol followed by the observer | **CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
@@ -717,9 +696,6 @@ For each branchline configuration set-up previously identified how many have had
 | number_of_biteoffs | O | The number of biteoffs observed | Integer | e.g., `1680` |
 :::
 
-<!-- | hauling_operation_id | O | The identifier of the hauling operation | `-` |  -->
-<!-- Check with Tony hauling operation_id in the database but missing from the form `ros_ll.biteoffs_by_branchlines_set.hauling_operation_id` -->
-<!-- you can refer to the set id as will be only one hauling operation for each set, maybe in the database is just to parenting this table with the set id, repeating the set ID as hauling operation_id-->
 
 # E-SET-CATCHES
 
@@ -778,6 +754,7 @@ This section of the form is for the recording of biological information of the s
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
+**ADD SPECIES CODE LIST**
 | sampling_period | M | **DESCRIPTION TO ADD** | **Code** from [Sampling Period](#samplingPeriod) | e.g., `BS` |
 | sampling_method | M | The sampling method used for the collection of biological sub-sample(s) | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
 
@@ -792,11 +769,6 @@ This section of the form is for the recording of biological information of the s
 | is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
 :::
 
-<!-- How do you identify the species for each specimen?? -->
-<!-- the species are inferred from catch ID, as already refers to samples by species from which a number of specimens are taken for biological sampling and identified as specimen id-->
-
-<!-- Proposal: I would remove the "Is straight" field since the type of length measurements indicates how the measurement was taken (straight, curved), and the guidelines for observers should include that the measurements should be taken straight for fish (fork length, total length, etc.) -->
-<!-- the guide is a recommendation, but don't means that always happens, We need to keep it, mostly for some fisheries with minimum conditions for the observer sampling  and for later relationships on measurements-->
 
 | **Weight**: The specimen's individual weight corresponding to the specified specie and product type. Unprocessed weight when the fish has not been processed.
 
@@ -839,8 +811,7 @@ This section of the form is for the recording of biological information of the s
 | depredation_source | O | For depredated specimens/or catch, the depredation source should be based on depredation scar characteristics. For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
 | observed_predator | O | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed, the value is 'UNK' (unknown). For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Predator Species](#predatorSpecies) | e.g., AG15 |
 :::
-<!-- **Is the predator codelist right? is not a 3-alpha code** -->
-<!-- its right, although sometimes could be identified as species level, the list contains several aggregated species--> 
+
 
 # E-SET-CATCHES-SSI  {#eSetCatchSpecimensSSI}
 
@@ -888,16 +859,16 @@ This section of the form includes information about SSI species observed within 
 | revival | O | Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String | e.g., `Yes`  |
 | photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric code | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
 
-| **Depredation details**
+<!-- | **Depredation details** -->
 
 <!--Depredation details for SSi are not included in the SC document-->
 
-::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:------------------------|:---------:|:----------------:|
-| depredation_source | O | The depredation source based on depredation scar characteristics for depredated specimens (NA for non-depredated specimens) | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
-| observed_predator | O | The predator species directly observed and identified or unknown (UNK) when not observed (NA for non-depredated specimens) | **CODE** from [Predator Species](#predatorSpecies) | e.g., `AG15` |
-:::
+<!-- ::: {style="margin-left:40px"} -->
+<!-- | Field | Requirement | Description | Format | Input value | -->
+<!-- |:------- |:-----:|:------------------------|:---------:|:----------------:| -->
+<!-- | depredation_source | O | The depredation source based on depredation scar characteristics for depredated specimens (NA for non-depredated specimens) | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` | -->
+<!-- | observed_predator | O | The predator species directly observed and identified or unknown (UNK) when not observed (NA for non-depredated specimens) | **CODE** from [Predator Species](#predatorSpecies) | e.g., `AG15` | -->
+<!-- ::: -->
 
 # E-SET-TAG-DETAILS {#eSetTagDetails}
 
@@ -923,8 +894,7 @@ This section of the form is for the reporting of each of the tags recovered duri
 
 # Reporting Deadlines
 
--   **Longline fisheries**: 30 June (preliminary), 30 December (final)
-<!-- not sure if preliminary ROS data applies-->
+-   **Longline fisheries**: 30 June
 
 # Reference Code Lists
 
