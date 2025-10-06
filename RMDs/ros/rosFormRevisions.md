@@ -90,6 +90,7 @@ The following code lists should be built by the Secretariat and added to the IOT
 | E-SET-CATCH-SPECIMENS | WEIGHT_VALUE | WEIGHT_VALUE_KG | `ros_common.biometric_information.estimated_weight_id` | value in `ros.common.weights.value` | 
 | E-SET-CATCH-SPECIMENS | WEIGHT UNIT | Removed | `ros_ll.specimens.biometric_information_id` | unit given in `ros_common.weights.unit`  | 
 | E-SET-CATCH-SPECIMENS | **NA** | SAMPLE_DESTINATION | `ros_common.sample_collection_details` | ok | 
+| E-SET-CATCH-SPECIMENS | **NA** | SPECIES | NA | to add to the table `ros_ll.specimens` - currently present `ros_ll.catch_details` | 
 | E-SET-TAG_DETAILS     | TAG_X_NUMBER | TAG_X_ID | | |
 
 <!-- 
