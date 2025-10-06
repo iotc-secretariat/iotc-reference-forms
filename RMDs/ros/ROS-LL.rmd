@@ -165,8 +165,8 @@ This section of the form includes information about the observer and an overview
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | `tbd`  |
-| observed | M | The total number of fishing sets monitored by the observer. In the case of Electronic Monitoring, only processed sets to be included | Integer | `tbd` |
+| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | `20`  |
+| observed | M | The total number of fishing sets monitored by the observer. In the case of Electronic Monitoring, only processed sets to be included | Integer | `17` |
 :::
 
 | **Number of days:** The total number of calendar days the vessel is on a fishing trip, with each day defined as a 24-hour period. These days can be further categorised by activity type (e.g. searching, transiting, actively fishing, or present in fishing areas).
@@ -402,11 +402,11 @@ This section of the form includes general longline gear configuration.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| configuration_id | O | The identifier for a specific branchline specification as detailed based on the fields below | Integer | `tbd` |
-| section_id | O | The identifier for a specific branchline section  | Integer | `tbd` |
+| configuration_id | O | The identifier for a specific branchline specification as detailed based on the fields below | Integer | e.g., `BL_1` |
+| section_id | O | The identifier for a specific branchline section  | Integer | e.g., `BL_1#1` |
 | material_type | O | The type of material used in each of the four sections of the branchline, where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
-| branchline_length_m | O | The value of the length (m) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | `tbd` |
-| branchline_diameter_cm | O | The value of the diameter (cm) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | `tbd` |
+| branchline_length_m | O | The value of the length (m) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | e.g., `15.3` |
+| branchline_diameter_cm | O | The value of the diameter (cm) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | e.g., `1.2` |
 
 ## Additional Branchline Details
 
@@ -428,14 +428,14 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| tori_line_length | M | The total length (m) of the tori line, excluding streamers | Float | `tbd` |
+| tori_line_length | M | The total length (m) of the tori line, excluding streamers | Float | e.g.,`150` |
 | streamer_type | M | The type of streamers which are used with the tori line | **Code** from [Streamer Types](#streamerTypes) | e.g., `MU` |
 | reach_surface | O | Indicates whether or not the streamers are long enough to touch the surface of the water in calm conditions (Yes/No/Unk) | String | `No` |
-| streamer_line_length_max_m | M | The value of the maximum length (m) of individual streamer lines | Float | `tbd` |
-| streamer_line_length_min_m | O | The value of the minimum length (m) of individual streamer lines | Float | `tbd` |
-| streamer_number_per_line | M | The number of streamers that are attached to a single tori line | Integer | `tbd` |
-| distance_between_streamers_m | O | The distance (m) between streamers | Float | `tbd` |
-| tori_line_attached_height_m | M | The height that the tori line is attached above the water level | Float | `tbd` |
+| streamer_line_length_max_m | M | The value of the maximum length (m) of individual streamer lines | Float |e.g., `10` |
+| streamer_line_length_min_m | O | The value of the minimum length (m) of individual streamer lines | Float | e.g.,`1` |
+| streamer_number_per_line | M | The number of streamers that are attached to a single tori line | Integer | e.g., `20` |
+| distance_between_streamers_m | O | The distance (m) between streamers | Float | e.g., `5` |
+| tori_line_attached_height_m | M | The height that the tori line is attached above the water level | Float | e.g., `8` |
 | towed_objects_type | O | The type of object used to maintain tori line tension and to achieve aerial extent when deployed | `tbd` | `tbd` |
 | towed_objects_number | O | Number of objects used to maintain tori line tension and to achieve aerial extent when deployed | Integer | Integer | `tbd` |
 
@@ -516,16 +516,16 @@ This section of the form includes information regarding individual sets that wer
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | leader_material_type | M | The type of material used to construct the leader type used in the set | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
-| leader_material_percentage | M | The percentage of total branchlines in the set estimated for each leader type used | Float | `tbd` |
+| leader_material_percentage | M | The percentage of total branchlines in the set estimated for each leader type used | Float |  e.g., `25` |
 :::
 
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| branchline_length_minimum | M | The minimum value of the total lengths of the branchlines deployed during the fishing set | Float | `tbd` |
+| branchline_length_minimum | M | The minimum value of the total lengths of the branchlines deployed during the fishing set | Float | e.g., `12` |
 | branchline_length_minimum_unit | M | The unit of measurement of the minimum value of branchline length (cm or m) | Float | `m` | 
-| branchline_length_maximum | M | The maximum value of the total lengths of the branchlines deployed during the fishing set | Float | `tbd` |
+| branchline_length_maximum | M | The maximum value of the total lengths of the branchlines deployed during the fishing set | Float | e.g., `20` |
 | branchline_length_maximum_unit | M | The unit of measurement of the maximum value of branchline length (cm or m) | Float | `m` | 
 :::
 
@@ -552,7 +552,7 @@ This section of the form includes information about the lights present for each 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | light_type | M | The type of lights attached to the longline when deployed, classified according to their source of illumination | **Code** from [Light Types](#lightTypes) | e.g., `CL` |
 | light_colour | M | The colour of lights attached to the longline when deployed, recorded according to the dominant visible light colour | **Code** from [Light Colours](#lightColours) | e.g., `BU` |
-| number_of_lights | M | The number of lights deployed | Integer | `tbd` |
+| number_of_lights | M | The number of lights deployed | Integer |  e.g., `546` |
 :::
 
 # E-SET-MITIGATION-MEASURES {#eSetMitigationMeasures}
@@ -571,17 +571,17 @@ This section of the form includes information about the mitigation measures obse
 | number_of_tori_lines_deployed | M | The total number of tori lines deployed during the setting operation | Integer | e.g., `8` |
 | minimum_deck_lighting_used | M | Indicates whether or not minimum deck lighting was used during night setting (Yes/No/Unk) | String | e.g., `Yes` |
 | branchline_weighted | O | Indicates whether or not the branchline was weighted (Yes/No/Unk) | String | `No` |
-| average_sinker_weight_g | M | The average weight (g) of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) | Float | `tbd` |
-| percent_branchline_weighted | M | The proportion of branchlines weighted (%) | Float | `tbd` |
-| hook_sinker_distance | M | The distance (cm) of the weights/sinkers from the eye of the hook | Float | `tbd` |
+| average_sinker_weight_g | M | The average weight (g) of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) | Float |  e.g., `60` |
+| percent_branchline_weighted | M | The proportion of branchlines weighted (%) | Float |  e.g., `100` |
+| hook_sinker_distance | M | The distance (cm) of the weights/sinkers from the eye of the hook | Float |  e.g., `765` |
 | hook_pods | M | Indicates whether or not the bait is protected by hook pods on the branchlines until they are a certain depth below the surface (Yes/No/Unk) | String | e.g., `No` |
 
 ## Branchline Details
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| configuration_id | O | Identifier of the branchline configuration | Alphanumeric code | `tbd` |
-| number_of_branchlines_set | O | The number of branchlines set by type | Integer | `tbd`  |
+| configuration_id | O | Identifier of the branchline configuration | Alphanumeric code | e.g., `BL_1` |
+| number_of_branchlines_set | O | The number of branchlines set by type | Integer | e.g.,`20`  |
 
 ## Other Mitigation Measures Used
 
@@ -621,7 +621,7 @@ This section of the form includes information about the specific baits observed 
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | condition | M | The bait type condition used | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE`  |
 | species | M | The species/species group of bait used | **Code** from [Bait Species](#baitSpecies) | e.g., `ANX` |
-| percentage | M | The approximate proportion (%) of bait species and condition used across all hooks in the set | Float | `tbd` |
+| percentage | M | The approximate proportion (%) of bait species and condition used across all hooks in the set | Float | e.g., `70` |
 | dye_colour | O | The colour(s) that the different baits are dyed | String | e.g., `blue`  |
 
 
@@ -669,8 +669,8 @@ This section includes specific hauling information observed for each set of the 
 ||||||
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
-| number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | e.g., `tbd` |
-| number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved observed | Integer | e.g., `tbd` |
+| number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | e.g., `800` |
+| number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved observed | Integer | e.g., `1274` |
 | sampling_protocol | M | Sampling protocol followed by the observer | **CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
 # E-SET-HAULING-BITEOFFS {#eSetHaulingBiteoffs}
@@ -703,7 +703,7 @@ This section of the reporting form includes information on individual species fr
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
-| catch_id | M | Unique within a specific set, as a branch of set_id representing an observed part of the catch | Alphanumeric code | e.g., `tbd` |
+| catch_id | M | Unique within a specific set, as a branch of set_id representing an observed part of the catch | Alphanumeric code | e.g., `0285#1` |
 
 
 ## Catch Details
@@ -724,7 +724,7 @@ This section of the reporting form includes information on individual species fr
 ||||||
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | sampling_method | M | **DESCRIPTION TO ADD** |  **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
-| number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | `tbd` |
+| number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | e.g., `7` |
 
 **Weight:** The catch weight corresponding to the specified species and product type recorded in 'weight code’. If the fish has not been processed, it corresponds to the unprocessed weight.
 
@@ -819,8 +819,8 @@ This section of the form includes information about SSI species observed within 
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0004` |
-| catch_id | M | The parent catch identifier | Alphanumeric code | `tbd` |
-| specimen_id | M | The parent specimen identifier | 4-digit code | `tbd` |
+| catch_id | M | The parent catch identifier | Alphanumeric code | e.g., `0004#1` |
+| specimen_id | M | The parent specimen identifier | 4-digit code | e.g., `01` |
 
 ## Additional Catch Details on SSI
 
@@ -876,8 +876,8 @@ This section of the form is for the reporting of each of the tags recovered duri
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` | 
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0023` |
-| catch_id | M | The parent catch identifier | Alphanumeric | `tbd` |
-| specimen_id | M | The parent specimen identifier | 4-digit number | `tbd` |
+| catch_id | M | The parent catch identifier | Alphanumeric | e.g., `0023#1` |
+| specimen_id | M | The parent specimen identifier | 4-digit number | e.g., `02` |
 
 ## Tag Details
 
