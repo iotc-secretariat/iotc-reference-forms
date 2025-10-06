@@ -35,27 +35,25 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 
 | Sheet | Data Components | Resolution |  Description |
 | :------------- | :----------: | :--------: | :--------------------------- |
-| [META](#meta) | Metadata | Trip | Information on the data submission and main characteristics |
-| [O-INFO](#oInfo) | Metadata | Observer & Trip | Information on the observer and the fishing trip observed |
-| [V-INFO](#vInfo) | Technology / Equipment | Trip | Information on the fishing vessel, its gear, and personnel |
-<!-- V-INFO  Data components should be Metadata. The information provided is mostly for the identification of the vessel, also main gear and licensed target species are usually included in the vessel registry documents. No information about vessel technology is included. I propose the description as "Identification of the fishing vessel and personnel information"-->
-| [V-TRIP](#vTrip) | Effort | Trip | Information on the fishing trip's departure and return |
-<!-- Although the location and dates of the trip starting and return provides information related, I' not agree to define the data components as effort, we really can't derive any effort from that. The information provided  in O-INFO ( fishing events and number of days)is related with the potential elements to estimate the effort "-->
-| [V-ATTRIBUTES](#vAttributes) | Technology / Equipment | Vessel | Information on the vessel's attributes and equipment |
-| [G-GENERAL](#gGeneral) | Technology / Equipment | Trip | Information on the fishing gear's equipment and machinery | 
-| [G-CONFIG-BRANCHLINES](#gConfigBranchlines) | Technology / Equipment | Branchline section | Information on longline branchline configurations |
-| [G-CONFIG-MITIGATION-DEVICES](#gConfigMitigationDevices) | Technology / Equipment | Trip | Information on mitigation devices | 
-| [E-SET](#eSet) | Effort \& Technology / Equipment | Set | Information on effort (sets) and gear characteristics (materials, targeting) |
-| [E-SET-LIGHTS](#eSetLight) | Technology / Equipment | Set | Information on the lights used for fish attraction |
-| [E-SET_MITIGATION_MEASURES](#eSetMitigationMeasures) | Technology / Equipment | Set | Information on materials and configuration of mitigation devices |
-| [E-SET-HOOKS](#eSetHooks) | Technology / Equipment | Set | Information on fishing hooks |
-| [E-SET-BAITS](#eSetBaits) | Technology / Equipment | Set | Information on fishing bait and treatment (e.g., dye) |
-| [E-SET-HAULING](#eSetHauling) | Effort \& Technology / Equipment | Set | Information on effort, mitigation measure, and offal management | 
-| [E-SET-HAULING-BITEOFFS](#eSetHaulingBiteoffs) | Depredation | Set | Information on depredation events during hauling |
-| [E-SET-CATCHES](#eSetCatches) | Catch | Set | Information on magnitude, composition, and fate of catch |
-| [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Catch | Specimen | Information on fish biology (size, sex, maturity), samples, and depredation |
-| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Catch & Technology / Equipment | Specimen | Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest |
-| [E-SET-TAG-DETAILS](#eSetTagDetails) | Catch | Specimen | Information on specimen condition and tag details |
+| [META](#meta) |    Metadata | Trip | Information on the data submission by reporting fleet |
+| [O-INFO](#oInfo) | Metadata | Trip | Observer identification and information of the observed fishing trip |
+| [V-INFO](#vInfo) | Metadata | Trip | Identification of the fishing vessel and personnel information |
+| [V-TRIP](#vTrip) | Metadata | Trip | Information on the fishing trip’s course |
+| [V-ATTRIBUTES](#vAttributes) | Technology / Equipment | Trip | Information on the vessel’s attributes and equipment |
+| [G-GENERAL](#gGeneral) | Gear configuration | Trip | Information on the fishing gear’s equipment and machinery | 
+| [G-CONFIG-BRANCHLINES](#gConfigBranchlines) | Gear configuration | Trip | Information on longline branchline configurations |
+| [G-CONFIG-MITIGATION-DEVICES](#gConfigMitigationDevices) | Gear configuration | Trip | Information on mitigation devices | 
+| [E-SET](#eSet) | Gear Technology / Equipment | Operation | Information on setting by operations |
+| [E-SET-LIGHTS](#eSetLight) | Gear Technology / Equipment | Operation | Information on the lights used for fish attraction |
+| [E-SET_MITIGATION_MEASURES](#eSetMitigationMeasures) | Gear Technology / Equipment | Operation | Information on  configuration of mitigation devices |
+| [E-SET-HOOKS](#eSetHooks) | Gear Technology / Equipment | Operation | Information on fishing hooks by operation |
+| [E-SET-BAITS](#eSetBaits) | Gear Technology / Equipment | Operation | Information on fishing bait use by operation |
+| [E-SET-HAULING](#eSetHauling) | Gear Technology / Equipment | Operation | Hauling  information by operation | 
+| [E-SET-HAULING-BITEOFFS](#eSetHaulingBiteoffs) | Catch | Operation | Information on depredation events recorded during hauling |
+| [E-SET-CATCHES](#eSetCatches) | Catch | Operation | Information on magnitude, composition, and fate of catch |
+| [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Catch | Species| Information on fish biology (size, sex, maturity), samples, and depredation |
+| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Catch | Species | Information Species of Special Interest (SSI) caught in the observed trip |
+| [E-SET-TAG-DETAILS](#eSetTagDetails) | Catch | Species | Information on tag release or recovery by specimen |
 
 
 
@@ -672,8 +670,7 @@ This section includes specific hauling information observed for each set of the 
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
 | number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | e.g., `tbd` |
-| **number_of_hooks_retrieved_during_observation** | M | The number of hooks retrieved observed | Integer | e.g., `tbd` |
-<!-- ADEDD as totally necessary to calculate observer coverage. Was already included in the form I presented and discussed at the WGEMS, and in the ROS data standard excel file -->
+| number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved observed | Integer | e.g., `tbd` |
 | sampling_protocol | M | Sampling protocol followed by the observer | **CODE** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
 
 # E-SET-HAULING-BITEOFFS {#eSetHaulingBiteoffs}
@@ -755,6 +752,7 @@ This section of the form is for the recording of biological information of the s
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 **ADD SPECIES CODE LIST**
+| species | M | Species of individual specimen | **Code** from [All Species](#allSpecies) | e.g., `ABL`
 | sampling_period | M | **DESCRIPTION TO ADD** | **Code** from [Sampling Period](#samplingPeriod) | e.g., `BS` |
 | sampling_method | M | The sampling method used for the collection of biological sub-sample(s) | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
 
@@ -917,6 +915,13 @@ out_dt(ENTITIES, "ENTITIES")
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
+
+## Observer Sources {#oberverSources}
+-   [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesRO)
+-   **Version**: `r version_number("SOURCES")`
+-   **Last update**: `r last_update("SOURCES")`
+
+
 
 ## Ports {#ports}
 
