@@ -751,9 +751,8 @@ This section of the form is for the recording of biological information of the s
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-**ADD SPECIES CODE LIST**
 | species | M | Species of individual specimen | **Code** from [All Species](#allSpecies) | e.g., `ABL`
-| sampling_period | M | **DESCRIPTION TO ADD** | **Code** from [Sampling Period](#samplingPeriod) | e.g., `BS` |
+| sampling_period | M | Stage period when the specimen was sampled | **Code** from [Sampling Period](#samplingPeriod) | e.g., `BS` |
 | sampling_method | M | The sampling method used for the collection of biological sub-sample(s) | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
 
 | Length : The specimen's individual length corresponding to the specified length type. Up to two length measurements may be reported on the form.
