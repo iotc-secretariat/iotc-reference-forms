@@ -703,15 +703,13 @@ This section of the reporting form includes information on individual species fr
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
-| catch_id | M | Unique within a specific set, as a branch of set_id representing an observed part of the catch | Alphanumeric code | e.g., `0285#1` |
+| catch_id | M | Unique identifier for the trip, as a branch of set_id representing an observed part of the catch | Alphanumeric code | e.g., `02851` |
 
 
 ## Catch Details
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| species | M | The species in the observed portion of the catch | **Code** from [All Species](#allSpecies)| e.g., `ABL` |
-
 | **Fate**: The fate which includes whether it was retained or discarded and the reason.
 
 ::: {style="margin-left:40px"}
@@ -786,7 +784,7 @@ This section of the form is for the recording of biological information of the s
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| maturity_scale | O | The standardised system used to classify the reproductive development of fish | String | **Code list being developed** |
+| maturity_scale | O | The standardised system used to classify the reproductive development of fish (i.e., source) | String | e.g., `ICCAT` |
 | maturity_stage | O | The reproductive stage of a fish determined through visual inspection of the gonads without the aid of a microscope | String | **Code list being developed** |
 :::
 
@@ -795,9 +793,9 @@ This section of the form is for the recording of biological information of the s
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| sample_type | O | **DESCRIPTION TO ADD** | Code from [Sampling Type](#samplingMethodsForSamplingCollections) | **CODE LIST TO DEVELOP** | `tbd` |
-| sample_preservation_method | O | **DESCRIPTION TO ADD** | Code from [Sample Preservation Method](#fishPreservationMethods) | **CODE LIST TO DEVELOP** | `tbd` |
-| sample_destination** | O | **DESCRIPTION TO ADD** | **CODE LIST TO DEVELOP** | `tbd` |
+| sample_type | O | The type of sample collected by observer | **Code** from [Sampling Type](#samplingMethodsForSamplingCollections) | e.g., `WM`|
+| sample_preservation_method | O | The type of preservation method used to preserve the sample collected by the observer | **Code** from [Sample Preservation Method](#fishPreservationMethods) | `tbd` |
+| sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` |
 :::
 
 | Depredation method:
