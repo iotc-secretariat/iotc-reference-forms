@@ -27,11 +27,7 @@ Click [here](./Form-ROS-LL.xlsx) to download a blank version of Form ROS-LL, or 
 
 # Data Content
 
-
 Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the mandatory (<span style="color: blue;">M; blue cells</span>) and optional (<span style="color: green;">O; green cells</span>) data fields defined by the SC. The current version builds on the most recent revision of ROS fields endorsed at the 27^th^ session of the SC ([IOTC-2024-SC27-DATA01](https://iotc.org/documents/SC/27/DATA01)). The sheets are interconnected through technical identifiers (e.g., observer trip ID, set ID), enabling the hierarchical organisation of the observations to be maintained.
-
-<!---see the proposed changes in the main structure defined below in the file "Forms_main_general_sections.xlsx"--->
-
 
 | Sheet | Data Components | Resolution |  Description |
 | :------------- | :----------: | :--------: | :--------------------------- |
@@ -55,8 +51,6 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Catch | Species | Information Species of Special Interest (SSI) caught in the observed trip |
 | [E-SET-TAG-DETAILS](#eSetTagDetails) | Catch | Species | Information on tag release or recovery by specimen |
 
-
-
 # META {#meta}
 
 ## Submission Information
@@ -78,7 +72,6 @@ Form ROS-LL is an XLSX workbook comprising 19 sheets, designed to report the man
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `ABW` |
 | Flag / Chartering state | M | The country registration of the fishing vessels or chartering flag in case of chartering agreement | **Code** from [Countries](#countries) | e.g., `FRA` |
 | Data source | M | The source of the data, i.e., collected by observers at sea or derived from Electronic Monitoring Systems | **Code** from [Sources](#observerSources) | e.g., `OB` |
-
 
 # O-INFO {#oInfo}
 
@@ -181,7 +174,6 @@ This section of the form includes information about the observer and an overview
 | lost | O | The number of days lost during the observation period | Integer | e.g., `1.1` |
 :::
 
-
 | **Reasons for lost days:** Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
 
 ::: {style="margin-left:40px"}
@@ -201,7 +193,6 @@ This section of the form includes specific vessel information.
 ## Vessel Information
 
 | **Identification:** Unique identifiers and key details of the vessel to uniquely identify the vessel in fisheries and observer records.
-
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -449,7 +440,6 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 
 This section of the form includes information regarding individual sets that were observed during the fishing trip.
 
-
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` | 
@@ -519,7 +509,6 @@ This section of the form includes information regarding individual sets that wer
 | leader_material_percentage | M | The percentage of total branchlines in the set estimated for each leader type used | Float |  e.g., `25` |
 :::
 
-
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -536,7 +525,6 @@ This section of the form includes information regarding individual sets that wer
 # E-SET-LIGHTS {#eSetLights}
 
 This section of the form includes information about the lights present for each set that were observed during the fishing trip.
-
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -624,7 +612,6 @@ This section of the form includes information about the specific baits observed 
 | percentage | M | The approximate proportion (%) of bait species and condition used across all hooks in the set | Float | e.g., `70` |
 | dye_colour | O | The colour(s) that the different baits are dyed | String | e.g., `blue`  |
 
-
 # E-SET-HAULING {#eSetHauling}
 
 This section includes specific hauling information observed for each set of the fishing trip.
@@ -645,7 +632,6 @@ This section includes specific hauling information observed for each set of the 
 | latitude | O | The latitude of the position at the start of the hauling operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
 | longitude | O | The longitude of the position at the start of the hauling operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
-
 
 | **End hauling**
 
@@ -693,18 +679,15 @@ For each branchline configuration set-up previously identified how many have had
 | number_of_biteoffs | O | The number of biteoffs observed | Integer | e.g., `1680` |
 :::
 
-
 # E-SET-CATCHES
 
 This section of the reporting form includes information on individual species from a subset of a set that is observed.
-
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
 | catch_id | M | Unique identifier for the trip, as a branch of set_id representing an observed part of the catch | Alphanumeric code | e.g., `02851` |
-
 
 ## Catch Details
 
@@ -764,7 +747,6 @@ This section of the form is for the recording of biological information of the s
 | is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
 :::
 
-
 | **Weight**: The specimen's individual weight corresponding to the specified specie and product type. Unprocessed weight when the fish has not been processed.
 
 ::: {style="margin-left:40px"}
@@ -806,7 +788,6 @@ This section of the form is for the recording of biological information of the s
 | depredation_source | O | For depredated specimens/or catch, the depredation source should be based on depredation scar characteristics. For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
 | observed_predator | O | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed, the value is 'UNK' (unknown). For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Predator Species](#predatorSpecies) | e.g., AG15 |
 :::
-
 
 # E-SET-CATCHES-SSI  {#eSetCatchSpecimensSSI}
 
@@ -918,8 +899,6 @@ out_dt(COUNTRIES, "COUNTRIES")
 -   **Version**: `r version_number("SOURCES")`
 -   **Last update**: `r last_update("SOURCES")`
 
-
-
 ## Ports {#ports}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/admin/#Ports)
@@ -949,8 +928,6 @@ out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
 ```{r collapse = TRUE}
 out_dt(SPECIES_TARGET, "SPECIES_TARGET")
 ```
-
-<!-- Code list to remove from IOTC Reference Data Catalogue to put in LEGACY?: https://data.iotc.org/reference/latest/domain/biology/#targetSpecies. Replaced by the following code list (https://data.iotc.org/reference/latest/domain/biology/#targetSpecies) used to define fisheries identifiers and developed in collaboration with CPCs through IOTC Data Reporting Workshops -->
 
 ## Fishing Gears {#fishingGear}
 
@@ -1107,8 +1084,6 @@ out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#baits)
 -   **Version**: `r version_number("SPECIES_BAITS")`
 -   **Last update**: `r last_update("SPECIES_BAITS")`
-
-**just to double check, we don't want "bait type", but we do want "bait species"** 
 
 ```{r collapse = TRUE}
 out_dt(SPECIES_BAITS, "SPECIES_BAITS")
@@ -1284,7 +1259,7 @@ out_dt(SEX, "SEX")
 out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
 ```
 
-## Sample Preservation Methods{#fishPreservationMethods}
+## Sample Preservation Methods {#fishPreservationMethods}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
 -   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
