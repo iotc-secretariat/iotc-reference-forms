@@ -567,11 +567,9 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_ID | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
-| catch_ID  | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
-
-<!-- **ISN'T CATCH NUMBER SUPPOSED TO BE GILLNET SEQUENTIAL NUMBER?** -->
+| observed_trip_number | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| set_id | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| catch_id  | M  | Unique identifier of the species-specific part of the catch, within a trip | Integer | e.g., `15` |
 
 ## Catch details
 

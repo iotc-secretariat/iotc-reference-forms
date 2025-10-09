@@ -687,7 +687,7 @@ This section of the reporting form includes information on individual species fr
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
-| catch_id | M | Unique identifier for the trip, as a branch of set_id representing an observed part of the catch | Alphanumeric code | e.g., `02851` |
+| catch_id | M | Unique identifier of the species-specific part of the catch, within a trip | Alphanumeric code | e.g., `02851` |
 
 ## Catch Details
 
