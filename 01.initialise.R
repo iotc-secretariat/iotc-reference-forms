@@ -250,8 +250,6 @@ setnames(SPECIES_1DR_CODES, old = "Code", new = "CODE")
 
 SPECIES_1DR           = merge(SPECIES_1DR_CODES, SPECIES, by.x = "CODE", by.y = "CODE", all.x = TRUE)
 
-SPECIES_TARGET        = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_TARGET")
-
 SPECIES_PREDATORS     = read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_PREDATORS")
 
 RETAIN_REASONS        = read_codelist(domain = "biology", schema = "biology", codelist = "RETAIN_REASONS")
@@ -279,6 +277,8 @@ TYPES_OF_FATE         = read_codelist(domain = "biology", schema = "biology", co
 FATES                 = read_codelist(domain = "biology", schema = "biology", codelist = "FATES")
 
 SEX                   = read_codelist(domain = "biology", schema = "biology", codelist = "SEX")
+
+MATURITY_STAGES       = read_codelist(domain = "biology", schema = "biology", codelist = "MATURITY_STAGES")
 
 BAIT_CONDITIONS       = read_codelist(domain = "biology", schema = "biology", codelist = "BAIT_CONDITIONS")
 

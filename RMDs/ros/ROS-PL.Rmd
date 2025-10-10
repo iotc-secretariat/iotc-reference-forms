@@ -511,23 +511,22 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 <!-- Changed KG/T to Weight -->
 <!-- removed unit column -->
 
-
 # E-SET-TUNA-CATCHES {#eSetTunaCatches}
 
 <!-- This section of the form is for the reporting the details of a subsample of the catch for each set within the fishing trip -->
 
-
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
-| event_id | M |  The event identifier of the observed event. This should be a four digit numerical code 0001. A unique identifier should be allocated to each individual event | 4-digit-number   | e.g., `0004`  | 
-| specimen_id | M  | The parent specimen identifier | 4-digit number |e.g., `0005`  |
+| event_id | M |  The event identifier of the observed event. This should be a four digit numerical code 0001. A unique identifier should be allocated to each individual event | 4-digit-number  | e.g., `0004`  | 
+| specimen_id | M | The parent specimen identifier | 4-digit number |e.g., `0005`  |
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | species | O  | The species/species group of bait used | **Code** from [All Species](#allSpecies)  | e.g., `ABL`  |
 
 | **Fate:** The fate which includes whether an individual was retained or discarded and the reason
+
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
