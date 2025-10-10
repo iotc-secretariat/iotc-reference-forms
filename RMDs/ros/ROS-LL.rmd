@@ -1265,6 +1265,16 @@ out_dt(WEIGHT_MEASUREMENT_TOOLS, "WEIGHT_MEASUREMENT_TOOLS")
 out_dt(SEX, "SEX")
 ```
 
+## Maturity Stages {#maturityStages}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#Maturity_Stages)
+-   **Version**: `r version_number("MATURIY_STAGES")`
+-   **Last update**: `r last_update("MATURITY_STAGES")`
+
+```{r collapse = TRUE}
+out_dt(MATURITY_STAGES, "MATURITY_STAGES")
+```
+
 ## Sampling Type {#samplingMethodsForSamplingCollections}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForSamplingCollection)

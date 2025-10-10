@@ -639,21 +639,21 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | sex | O | 	The sex of the sampled fish specimen. If unknown record “U” | **Code** from [Sex](#sex) | e.g., `F` |
 
-| **Maturity:** The stage of maturity of the specimen according to standard maturity scales approved by the IOTC. If unknown record UNK.. 
+| **Maturity:** The stage of maturity of the specimen according to standard maturity scales approved by the IOTC.
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| scale | O |  | Code list being developed |  |
-| stage | O |  | Code list being developed |  |
+|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+| maturity_scale | O | The standardised system used to classify the reproductive development of fish (i.e., source) | String | e.g., `ICCAT` |
+| maturity_stage | O | The reproductive stage of a fish determined through visual inspection of the gonads without the aid of a microscope | **Code** from [Maturity Stages](#maturityStages) | e.g., `DEV` | 
 :::
 | **Sample collected:** The following details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| type | O |  |  | code list being developed | |
-| preservation_method | O | |  | code list being developed | |
-| Destination |O |  |  | code list being developed | |
+|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+| sample_type | O | The type of sample collected by the observer | **Code** from [Sampling Type](#samplingMethodsForSamplingCollections) | e.g., `WM`|
+| sample_preservation_method | O | The type of preservation method used to preserve the sample collected by the observer | **Code** from [Sample Preservation Method](#fishPreservationMethods) | e.g., `FR20` |
+| sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` 
 <!-- destination field added to reporting form  -->
 
 :::
@@ -664,10 +664,10 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | release | O |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
 | recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
 | type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
-| tag_number_1 | O | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
-| tag_number_2 | O | The tag identifier(s) | Alphanumeric | **EXAMPLE TO ADD** |
-| finder_name | O | **DESCRIPTION TO ADD** | String | e.g., `Jane Doe` |
-| finder_contact_details | O | **DESCRIPTION TO ADD** | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
+| tag_ID_1 | O | The tag identifier(s) | Alphanumeric | e.g., `tbd` |
+| tag_ID_2 | O | The tag identifier(s) | Alphanumeric | e.g., `tbd` |
+| finder_name | O | The details of the person that found the tag | String | e.g., `Jane Doe` |
+| finder_contact_details | O | The contact details of the person that found the tag | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
 :::
 
 # E-SET-BAIT {#eSetBait}
@@ -1121,6 +1121,36 @@ out_dt(MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CO
 
 ```{r collapse = TRUE}
 out_dt(SEX, "SEX")
+```
+
+## Maturity Stages {#maturityStages}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#Maturity_Stages)
+-   **Version**: `r version_number("MATURIY_STAGES")`
+-   **Last update**: `r last_update("MATURITY_STAGES")`
+
+```{r collapse = TRUE}
+out_dt(MATURITY_STAGES, "MATURITY_STAGES")
+```
+
+## Sampling Type {#samplingMethodsForSamplingCollections}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForSamplingCollection)
+-   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+-   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
+```
+
+## Sample Preservation Methods {#fishPreservationMethods}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
+-   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
+-   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
+
+```{r collapse = TRUE}
+out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```
 
 ## Tag Types {#tagTypes}
