@@ -76,7 +76,7 @@ Information on the recovery of abandoned, lost or discarded fishing gears (ADLFG
 | Identifier | M | Unique identifier of the drifting floating object | Plain text |
 | Fishing_gear | M | The identified fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 | Gear component | M | the identified gear component | *XXX* |
-
+| Gear material | M | the identified gear component material | *XXX* |
 
 ##Impact area evaluation
 
