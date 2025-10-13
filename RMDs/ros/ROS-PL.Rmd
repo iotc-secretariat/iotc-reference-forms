@@ -210,7 +210,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 |licensed_target_species  | O | The licensed target species as specified in vessel licences or permit conditions | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
-| main_fishing_gear | M | The vessel main fishing gear |**Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
+| main_fishing_gear | M | The vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
 | **Vessel Personnel:** Details of the individuals working onboard during the fishing trip as well as the total number of crew members onboard.
 
@@ -443,7 +443,7 @@ Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sigh
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| species_1 | M | For the observed event, the species in the school being targeted. Up to 4 target species can be reported on the form | **Code** from [Target Species](#targetSpecies) | e.g., `AG01`  |
+| species_1 | M | For the observed event, the species in the school being targeted. Up to 4 target species can be reported on the form | **Code** from [All Species](#allSpecies) | e.g., `SKJ`  |
 :::
 
 | | | | | |
@@ -824,14 +824,12 @@ out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
 ## Target Species {#targetSpecies}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#targetSpecies)
--   **Version**: `r version_number("SPECIES_TARGET")`
--   **Last update**: `r last_update("SPECIES_TARGET")`
+-   **Version**: `r version_number("TARGET_SPECIES")`
+-   **Last update**: `r last_update("TARGET_SPECIES")`
 
 ```{r collapse = TRUE}
-out_dt(SPECIES_TARGET, "SPECIES_TARGET")
+out_dt(TARGET_SPECIES, "TARGET_SPECIES")
 ```
-
-<!-- To replace with the code list of target species used for fishery definition (https://data.iotc.org/reference/latest/domain/fisheries/#targetSpecies) -->
 
 ## Fishing Gear {#fishingGear}
 
@@ -931,16 +929,6 @@ out_dt(HOOK_TYPES, "HOOK_TYPES")
 
 ```{r collapse = TRUE}
 out_dt(SCHOOL_SIGHTING_CUES, "SCHOOL_SIGHTING_CUES")
-```
-
-## Target Species {#targetSpecies}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#targetSpecies)
--   **Version**: `r version_number("SPECIES_TARGET")`
--   **Last update**: `r last_update("SPECIES_TARGET")`
-
-```{r collapse = TRUE}
-out_dt(SPECIES_TARGET, "SPECIES_TARGET")
 ```
 
 ## Bait Types {#baitTypes}

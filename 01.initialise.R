@@ -164,6 +164,8 @@ FISHERIES           = read_codelist(domain = "fisheries", schema = "fishery", co
 
 FISHERY_CATEGORIES  = read_codelist(domain = "fisheries", schema = "fishery_config", codelist = "FISHERY_CATEGORIES")
 
+TARGET_SPECIES      = read_codelist(domain = "fisheries", schema = "fishery_config", codelist = "TARGET_SPECIES")
+
 CATCH_UNITS         = read_codelist(domain = "fisheries", schema = "fishery", codelist = "CATCH_UNITS")
 
 GEAR_TYPES         = read_codelist(domain = "fisheries", schema = "fishery", codelist = "GEAR_TYPES")
