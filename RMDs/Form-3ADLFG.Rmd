@@ -1,0 +1,99 @@
+---
+title: "IOTC statistical data reporting:Form-3ADLFG"
+author: "[IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)"
+date: "2025-10-13"
+output:
+  word_document2:
+    reference_docx: "../templates/doc_template.docx"
+    number_sections: FALSE
+    reference_num: TRUE
+    fig_caption: TRUE
+
+  html_document2:
+    css: "../templates/html_template.css"
+    includes: 
+      in_header: "../templates/google-analytics.html"
+    number_sections: FALSE
+    toc: yes
+    toc_float:
+      collapsed: FALSE
+    smooth_scroll: FALSE
+---
+  
+# Description
+
+This form provides for the voluntary reporting of data on recovery of abandoned, lost or discarded fishing gears (ADLFG), including specifications for FADs and buoys. Data include information on the recovery location, gear specifications, information to assess the impact of the area, presence of species entanglements and reuse or place of disposal information. For FADs data also include identifiers, and information of the FAD structure and materials.
+
+# Data content
+
+Information on the recovery of abandoned, lost or discarded fishing gears (ADLFG), including recovered gear characteristics and dimensions, along with estimates of the impacted area and presence of species entanglements.
+
+| Sheet | Data Components | Description |
+| :------------- | :----------: | :--------: | :--------------------------- |
+| [META](#meta) | Metadata | Information on the data submission by reporting fleet |
+| [GEAR](#gear) | Data | Information on recovery of gears other than FADs |
+| [FAD](#fad) | Data | Information on recovery of FADs and buoys |
+
+
+# META {#meta}
+
+## Submission Information
+
+| Field | Requirement | Description | Format | Input value |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data  | String | e.g., `John Doe`  |
+| Liaison officer email | M | Email address of the liaison officer in charge of the compilation of the data | String | e.g., `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
+| Organisation email | M | Email address of the organisation in charge of the compilation of the data | String | e.g., `nif@gov.sc` |
+
+## General Information
+
+| Element | Requirement | Description | Format | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 |
+| Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUESP` |
+| Flag state | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) | e.g., `EUESP` |
+
+<!--wondering if define it as annual submission or indicating month, for reporting just when is recovered-->
+
+# GEAR {#gear}
+
+##Recovery data
+
+| Element | Requirement | Description | Format | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Month | M | Month of year of the gear recovery reported through the dataset | Integer | e.g., `10` |
+| Day of month | M | Day of the month of the gear recovery reported through the dataset | Integer | `31` |
+| Latitude | M | Horizontal distances north or south of the Equator | Decimal degrees  | e.g., `-25.60`
+| Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees | e.g, `60.10`
+| Depth | M | Length of a straight line measured downwards from the sea surface in meters | Decimal degrees | `3.5`  |
+| Habitat type | M | *to describe and add codes* | *xxxx* |
+
+##Gear data
+
+| Element | Requirement | Description | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Identifier | M | Unique identifier of the drifting floating object | Plain text |
+| Fishing_gear | M | The identified fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
+| Gear component | M | the identified gear component | *XXX* |
+
+
+##Impact area evaluation
+
+| Element | Requirement | Description | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+
+| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
+| Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](#typesOfFate) |
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | 
+| Catch unit   | M | Unit used to report the value of catch of a given species | **Code** from [Catch units](#catchUnits) |
+
+Gear interaction 
+
+
+| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
+Recovered gear data
+
+
+
+| Buoy ID  | M | Unique identifier of buoy monitored| (e.g., ISD+, M3+, T8E) followed by 5-9 digits |
