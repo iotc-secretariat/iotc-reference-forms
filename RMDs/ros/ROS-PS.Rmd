@@ -735,11 +735,11 @@ out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
 ## Target Species {#targetSpecies}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#targetSpecies)
--   **Version**: `r version_number("SPECIES_TARGET")`
--   **Last update**: `r last_update("SPECIES_TARGET")`
+-   **Version**: `r version_number("TARGET_SPECIES")`
+-   **Last update**: `r last_update("TARGET_SPECIES")`
 
 ```{r collapse = TRUE}
-out_dt(SPECIES_TARGET, "SPECIES_TARGET")
+out_dt(TARGET_SPECIES, "TARGET_SPECIES")
 ```
 
 ## Fishing Gears {#fishingGear}

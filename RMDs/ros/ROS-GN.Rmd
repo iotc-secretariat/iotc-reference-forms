@@ -838,11 +838,11 @@ out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
 ## Target Species {#targetSpecies}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#targetSpecies)
--   **Version**: `r version_number("SPECIES_TARGET")`
--   **Last update**: `r last_update("SPECIES_TARGET")`
+-   **Version**: `r version_number("TARGET_SPECIES")`
+-   **Last update**: `r last_update("TARGET_SPECIES")`
 
 ```{r collapse = TRUE}
-out_dt(SPECIES_TARGET, "SPECIES_TARGET")
+out_dt(TARGET_SPECIES, "TARGET_SPECIES")
 ```
 
 <!-- Code list to remove from IOTC Reference Data Catalogue to put in LEGACY?: https://data.iotc.org/reference/latest/domain/biology/#targetSpecies. Replaced by the following code list (https://data.iotc.org/reference/latest/domain/biology/#targetSpecies) used to define fisheries identifiers and developed in collaboration with CPCs through IOTC Data Reporting Workshops -->
