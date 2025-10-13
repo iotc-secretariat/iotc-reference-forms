@@ -71,29 +71,31 @@ Information on the recovery of abandoned, lost or discarded fishing gears (ADLFG
 
 ##Gear data
 
-| Element | Requirement | Description | Input value  |
+| Element | Requirement | Description | Format | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Identifier | M | Unique identifier of the drifting floating object | Plain text |
 | Fishing_gear | M | The identified fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
-| Gear component | M | the identified gear component | *XXX* |
-| Gear material | M | the identified gear component material | *XXX* |
+| Gear component | M | The identified gear component | String | e.g., `net`|
+| Gear material | M | The identified gear component material | String | e.g., `monofilament` |
+| Gear weight | M | the identified gear component weight in kilograms | Decimal | e.g., `50.40` |
 
 ##Impact area evaluation
 
-| Element | Requirement | Description | Input value  |
+| Element | Requirement | Description | Format | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
+|Substrate | M | The substrate of the bottom in which the gear was found | **Code** | e.g. |
+|Reef zone | M | The reef zone in which the gear was found | **Code** | e.g. |
+|Coral type | M | The type of coral in which the gear was found | **Code** | e.g. |
+|Damage type | M | The type of damage caused by the gear found | **Code** | e.g. |
+|Area | M | The damaged area in m2 in which the gear was found | Decimal | e.g., `3.6`|
+| Coral species | M | Coral species identified in the damaged area| **Code** | e.g, |
 
-| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
-| Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](#typesOfFate) |
-| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | 
-| Catch unit   | M | Unit used to report the value of catch of a given species | **Code** from [Catch units](#catchUnits) |
+##Entaglements
+| Species | M | Species entangled with the gear found | **Code** from [Species](#allSpecies) |
 
-Gear interaction 
-
-
-| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
-Recovered gear data
-
+##Recovered gear data
+| Reused | M | Indicate if the gear component found be re utilized | String | e.g, `Yes` |
+| Place of disposal | M | indicate the place of disposal if the gear its not re utilized| String | e.g,  |
 
 
 | Buoy ID  | M | Unique identifier of buoy monitored| (e.g., ISD+, M3+, T8E) followed by 5-9 digits |
