@@ -22,11 +22,7 @@ output:
   
 # Description
 
-This form provides for the voluntary reporting of data on recovery of abandoned, lost or discarded fishing gears (ADLFG), including specifications for FADs and buoys. Data include information on the recovery location, gear specifications, information to assess the impact of the area, presence of species entanglements and reuse or place of disposal information. For FADs data also include identifiers, and information of the FAD structure and materials.
-
-# Data content
-
-Information on the recovery of abandoned, lost or discarded fishing gears (ADLFG), including recovered gear characteristics and dimensions, along with estimates of the impacted area and presence of species entanglements.
+This form provides for the voluntary reporting of data on recovery of abandoned, lost or discarded fishing gears (ADLFG), including specifications for FADs and buoys. Data includes information on the recovery location, gear specifications, information to assess the impact of the area, presence of species entanglements and reuse or place of disposal information. For FADs data also include unique identifiers, and information of the FAD structure and materials.
 
 | Sheet | Data Components | Description |
 | :------------- | :----------: | :--------: | :--------------------------- |
@@ -67,13 +63,13 @@ Information on the recovery of abandoned, lost or discarded fishing gears (ADLFG
 | Latitude | M | Horizontal distances north or south of the Equator | Decimal degrees  | e.g., `-25.60`
 | Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees | e.g, `60.10`
 | Depth | M | Length of a straight line measured downwards from the sea surface in meters | Decimal degrees | `3.5`  |
-| Habitat type | M | *to describe and add codes* | *xxxx* |
+| Habitat type | M | *To develop codelist* | e.g., `seagrass meadow` |
 
 ##Gear data
 
 | Element | Requirement | Description | Format | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Identifier | M | Unique identifier of the drifting floating object | Plain text |
+| Identifier | M | Unique identifier of the of the gear or gear component found | Plain text |
 | Fishing_gear | M | The identified fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 | Gear component | M | The identified gear component | String | e.g., `net`|
 | Gear material | M | The identified gear component material | String | e.g., `monofilament` |
@@ -83,15 +79,15 @@ Information on the recovery of abandoned, lost or discarded fishing gears (ADLFG
 
 | Element | Requirement | Description | Format | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-|Substrate | M | The substrate of the bottom in which the gear was found | **Code** | e.g. |
-|Reef zone | M | The reef zone in which the gear was found | **Code** | e.g. |
-|Coral type | M | The type of coral in which the gear was found | **Code** | e.g. |
-|Damage type | M | The type of damage caused by the gear found | **Code** | e.g. |
-|Area | M | The damaged area in m2 in which the gear was found | Decimal | e.g., `3.6`|
-| Coral species | M | Coral species identified in the damaged area| **Code** | e.g, |
+<!--| Substrate | M | The substrate of the bottom in which the gear was found | **To develop codelist** | e.g.,  |-->
+| Damage type | M | The type of damage caused by the gear found | **To develop codelist** | e.g. `abrasion` |
+| Area | M | The damaged area in m2 in which the gear was found | Decimal | e.g., `3.6`|
+| Reef zone | M | If the gear was found on the reef indicate the area | **To develop codelist** | e.g. `reef bank` |
+| Coral type | M | If the gear was found on corals indicate the coral type | **To develop codelist** | e.g. `soft` |
+| Coral species | M | If the gear was found on corals, indicate the coral species identified in the damaged area| **To develop codelist** | e.g,  |
 
 ##Entaglements
-| Species | M | Species entangled with the gear found | **Code** from [Species](#allSpecies) |
+| Species | M | Species entangled with the gear found | **Code** from [Species](#allSpecies) | e.g, `LKV` |
 
 ##Recovered gear data
 | Reused | M | Indicate if the gear component found be re utilized | String | e.g, `Yes` |
@@ -103,17 +99,18 @@ Information on the recovery of abandoned, lost or discarded fishing gears (ADLFG
 
 | Element | Requirement | Description | Format | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Month | M | Month of year of the gear recovery reported through the dataset | Integer | e.g., `10` |
-| Day of month | M | Day of the month of the gear recovery reported through the dataset | Integer | `31` |
+| Month | M | Month of year of the FAD recovery reported through the dataset | Integer | e.g., `10` |
+| Day of month | M | Day of the month of the FAD recovery reported through the dataset | Integer | `31` |
 | Latitude | M | Horizontal distances north or south of the Equator | Decimal degrees  | e.g., `-25.60`
-| Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees | e.g, `60.10`
-| Depth | M | Length of a straight line measured downwards from the sea surface in meters | Decimal degrees | `3.5`  |
-| Habitat type | M | *to describe and add codes* | *xxxx* |
+| Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees | e.g, `60.10` |
+| Depth | M | Length of a straight line measured downwards from the sea surface in meters when the FADor FAD component was found | Decimal degrees | e.g., `3.5`  |
+| Habitat type | M | *To develop codelist* | e.g., `seagrass meadow` |
 
 ##Fad data
+
 | Element | Requirement | Description | Format | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](#FOBtypes) |
+| Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](#FOBtypes) | e.g., `DFAD` |
 | FAD ID | M | Unique identifier of the drifting floating object found |Alphanumeric | e.g., `xxx` |
 | Buoy ID  | M | Unique identifier of buoy model found (e.g., ISD+, M3+, T8E) followed by 5-9 digits | Alphanumeric | e.g.,`xxx` |
 
@@ -122,38 +119,38 @@ Information on the recovery of abandoned, lost or discarded fishing gears (ADLFG
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Material | M | The identified floating element material | String | e.g., `monofilament` |
 | Number | M | The number of floating elements found by material | Integer | e.g., `2` |
-| Rope length | M | The length of rope in meters | Decimal | e.g., `5.40` |
+| Rope length | M | The length of rope in meters (m) | Decimal | e.g., `5.40` |
 
 ##Surface (raft) 
-| Element | Requirement | Description | Format | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Shape | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | - | Boolean (Y/N) |
-| Dimension  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | - | Boolean (Y/N) |
-| Structure material| M | Length of the surface or near-surface structure of the drifting floating object | cm | Decimal |
-| Coverage material  | O |  Width of the surface or near-surface structure of the drifting floating object  | cm | Decimal |
-| Location| O | Height of the surface or near-surface structure of the drifting floating object | cm | Decimal |
 
-## Subsurface (tail)
 | Element | Requirement | Description | Format | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Structure type | M | Indicates whether the tail of the drifting floating object contains some plastic materials | - | Boolean (Y/N) |
-| Material | M | Indicates whether the tail of the drifting floating object contains some metal materials | - | Boolean (Y/N) |
+| Shape | M |  **ADD DESCRPTION** | **To develop codelist** | - |
+| Dimension  | M |  **ADD DESCRPTION** | **To develop codelist** | - |
+| Structure material| M |  **ADD DESCRPTION** | **To develop codelist** | - |
+| Coverage material  | M |   **ADD DESCRPTION** | **To develop codelist** | - |
+
+## Submerged structure
+| Element | Requirement | Description | Format | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Structure type | M | **ADD DESCRPTION** | **To develop codelist** | - |
+| Material | M | **ADD DESCRPTION** | **To develop codelist** | - |
 | Length | M |  Length of the subsurface structure of the drifting floating object | cm | Decimal |
-| Mesh size | O | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) | mm | Decimal |
-| Type of atractors |
-| Location |
-| Length laying |
-| Weight |
+| Mesh size | M | Size of the main net mesh used on the subsurface structure of the drifting floating object | mm | Decimal |
+| Type of atractors | M | **ADD DESCRPTION** | **To develop codelist** | 
+| Length laying | M | **ADD DESCRPTION** | **To develop codelist** | 
+##
+| Weight | M | Weight in kilograms (KG) of the gear or gear element found | Decimal |e.g., `25.10` |
 
 ##Impact area evaluation
 | Element | Requirement | Description | Format | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-|Substrate | M | The substrate of the bottom in which the gear was found | **Code** | e.g. |
-|Reef zone | M | The reef zone in which the gear was found | **Code** | e.g. |
-|Coral type | M | The type of coral in which the gear was found | **Code** | e.g. |
-|Damage type | M | The type of damage caused by the gear found | **Code** | e.g. |
-|Area | M | The damaged area in m2 in which the gear was found | Decimal | e.g., `3.6`|
-| Coral species | M | Coral species identified in the damaged area| **Code** | e.g, |
+<!--| Substrate | M | The substrate of the bottom in which the gear was found | **To develop codelist** | e.g.,  |-->
+| Damage type | M | The type of damage caused by the gear found | **To develop codelist** | e.g. `abrasion` |
+| Area | M | The damaged area in m2 in which the gear was found | Decimal | e.g., `3.6`|
+| Reef zone | M | If the gear was found on the reef indicate the area | **To develop codelist** | e.g. `reef bank` |
+| Coral type | M | If the gear was found on corals indicate the coral type | **To develop codelist** | e.g. `soft` |
+| Coral species | M | If the gear was found on corals, indicate the coral species identified in the damaged area| **To develop codelist** | e.g,  |
 
 ##Entaglements
 | Species | M | Species entangled with the gear found | **Code** from [Species](#allSpecies) |
