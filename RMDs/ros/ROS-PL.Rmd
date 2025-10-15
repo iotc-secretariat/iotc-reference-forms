@@ -30,22 +30,23 @@ Click [here](./Form-ROS-PL.xlsx) to download a blank version of the ROS-PL form,
 Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sighting cues); operational details of each event, catch and bycatch by species in number and weight; fate (retained/discarded). This form also includes details on bait fishing operations (gear, handling, weight).
 
 
-| Sheet | Component | Resolution | Description |
+| Sheet | Data Components | Resolution | Description |
 | :------- | :--------: | :--------: |:---------------------------- |
-| [META](#meta) | Dataset | Trip | Information on data submission and main characteristics |
-| [O-INFO](#oInfo) | Observer \& trip | Trip | Information on the observer and the fishing trip observed |
-| [V-INFO](#vInfo) | Vessel | Trip | Information on the fishing vessel, its gear, and personnel |
-| [V-TRIP](#vTrip) | Trip | Trip | Information on the fishing trip's departure and return |
-| [V-ATTRIBUTES](#vAttributes) | Vessel | Vessel | Information on the vessel's attributes and equipment |
-| [G-GENERAL](#gGeneral) | Equipments | Trip | Information on the fishing gear's equipment and machinery |
-| [E-SET-TUNA](#eSetTuna) | Effort  | Set | Information on effort (sets) and gear characteristics (materials, targeting)  |
-| [E-SET-TUNA-FISHING-TRIP](#eSetTunaFishingTrip) |Effort | Set | Information on effort (sets) from the overall fishing trip |
-| [E-SET-TUNA-CATCH](#eSetTunaCatch) | Effort |Set |Information on magnitude, composition, and fate of tuna catch|
-| [E-SET-TUNA-CATCH-SSI](#eSetTunaCatchSSI) | Catch | Specimen | Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest during tuna fishing events|
-| [E-SET-CATCH-BIOMETRIC](#eSetCatchBiometric) | Catch |Specimen | Information on specimen details from a subsample of the catch |
-| [E-SET-BAIT](#eSetBait) | Effort | Set | Information on effort (sets) and gear characteristics (materials, targeting) for bait fishing events |
-| [E-SET-BAIT-CATCH](#eSetBaitCatch) | Catch | Set  | Information on magnitude, composition, and fate of bait catch|
-| [E-SET-BAIT-CATCH-SPECIMEN-SSI](#eSetBaitCatchSpecimenSSI) | Catch |Specimen |Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest during bait fishing events|
+| [META](#meta)    | Metadata | Trip | Information on the data submission by reporting fleet |
+| [O-INFO](#oInfo) | Metadata | Trip | Observer identification and information of the observed fishing trip |
+| [V-INFO](#vInfo) | Metadata | Trip | Information on the fishing vessel and personnel information |
+| [V-TRIP](#vTrip) | Metadata | Trip | Information on the fishing trip's course |
+| [V-ATTRIBUTES](#vAttributes) | Vessel Technology / Equipment | Trip | Information on the vessel's attributes and equipment |
+| [G-GENERAL](#gGeneral)       | Gear Configuration | Trip | Information on the fishing gear's equipment and machinery |
+| [E-SET-TUNA](#eSetTuna)      | Gear Technology / Equipment | Operations | Information on tuna setting by operations  |
+| [E-SET-TUNA-CATCHES-FISHING-TRIP](#eSetTunaFishingTrip) | Catch | Operations | Information on effort (sets) from the overall fishing trip |
+| [E-SET-TUNA-CATCH](#eSetTunaCatch)              | Catch | Operations |Information on magnitude, composition, and fate of tuna catch|
+| [E-SET-TUNA-CATCH-SSI](#eSetTunaCatchSSI)       | Catch  | Species | Information on specimen condition, depredation, and technical details associated with the catch for 
+Species of Special Interest during tuna fishing events|
+| [E-SET-CATCH-BIOMETRIC](#eSetCatchBiometric)    | Catch  |Species | Information on fish biology (size, sex, maturity) and samples |
+| [E-SET-BAIT](#eSetBait) | Gear Technology / Equipment | Operations | Information on bait use by operation |
+| [E-SET-BAIT-CATCH](#eSetBaitCatch) | Catch | Operations  | Information on magnitude, composition, and fate of bait catch|
+| [E-SET-BAIT-CATCH-SPECIMEN-SSI](#eSetBaitCatchSpecimenSSI) | Catch |Species |Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest during bait fishing events|
 | [DAILY-ACTIVITY](#DailyActivity) | Trip | Trip | Information on the activities occurring throughout the fishing trip observed|
 
 # META {#meta}
