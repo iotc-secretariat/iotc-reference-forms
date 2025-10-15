@@ -128,6 +128,12 @@ render("./RMDs/Form-2FC.Rmd",
 #       output_file ="Form_7PR.html", 
 #       output_dir = "./out/HTML/")
 
+### Form 3-ADLFG #####
+render("./RMDs/Form-3ADLFG.Rmd", 
+       output_format = "html_document2",
+       output_file ="Form-3ADLFG.html", 
+       output_dir = "./out/HTML/")
+
 # ROS REPORTING FORMS ####
 
 ## LONGLINE ####

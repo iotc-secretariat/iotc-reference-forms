@@ -147,6 +147,13 @@ For the submission of data on _prices of fish products for tuna and tuna-like sp
 + [Legacy form template](./legacy/Form-7PR-legacy.xlsm)
 + [Legacy form description](./legacy/Form-7PR-legacy.html)
 
+## Form 3LG
+
+For the submission of data on information of the recovery of abandoned, lost or discarded fishing gear in accordance with IOTC Recommendation [24/11](https://iotc.org/cmm/recommendation-2411-conservation-and-management-measure-marine-pollution) on _conservation and management measure on marine pollution_.
+
++ [Form template](./Form-3LG.xlsx)
++ [Form description](./Form-3LG.html)
+
 # Regional Observer Scheme Datasets
 
 The IOTC Regional Observer Scheme (ROS) was established to collect verified catch and scientific data on tuna and tuna-like species within the IOTC area. Its implementation, which began on 1 July 2010, is carried out entirely at the national level by IOTC Contracting Parties and Cooperating Non-Contracting Parties (CPCs). Information on the ROS, including programme standards and observer training materials, is available on the [ROS page](https://iotc.org/science/regional-observer-scheme-science) of the IOTC website.
@@ -172,3 +179,6 @@ The ROS data reporting forms were revised during the 20^th^ Session of the Worki
 
 + [Form template](./ros/Form-ROS-PS.xlsx)
 + [Form description](./ros/Form-ROS-PS.html)
+
+
+
