@@ -32,19 +32,19 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 
 | Sheet | Data Components | Resolution |  Description |
 | :---------- | :----------: | :--------: | :----------------------------- |
-| [META](#meta) | Metadata | Trip | Information on the data submission and main characteristics |
-| [O-INFO](#oInfo) | Metadata | Observer & Trip | Information on the observer and the fishing trip observed |
-| [V-INFO](#vInfo) | Technology / Equipment | Trip | Information on the fishing vessel, its gear, and personnel |
-| [V-TRIP](#vTrip) | Effort | Trip | Information on the fishing trip's departure and return |
+| [META](#meta) | Metadata | Trip | Information on the data submission by reporting fleet |
+| [O-INFO](#oInfo) | Metadata |  Trip | Observer identification and information of the observed fishing trip |
+| [V-INFO](#vInfo) | Metadata | Trip | Identification of the fishing vessel and personnel information |
+| [V-TRIP](#vTrip) | Metadata | Trip | Information on the fishing trip's course |
 | [V-ATTRIBUTES](#vAttributes) | Technology / Equipment | Vessel | Information on the vessel's attributes and equipment |
-| [G-GENERAL](#gGeneral) | Technology / Equipment | Trip | Information on the fishing gear's equipment and machinery | 
-| [E-SET](#eSet) | Effort \& Technology / Equipment | Set | Information on effort (sets) and gear characteristics (materials, targeting) |
-| [E-SET-CETACEANS](#eSetCetaceans) | Effort | Set | Information on cetacean sightings and interactions |
-| [E-SET-CATCHES](#eSetCatches) | Catch | Set | Information on magnitude, composition, and fate of catch |
-| [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Catch | Specimen | Information on fish biology (size, sex, maturity), samples, and depredation |
-| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Catch & Technology / Equipment | Specimen | Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest |
-| [E-SET-TAG-DETAILS](#eSetTagDetails) | Catch | Specimen | Information on specimen condition and tag details |
-| [DAILY-ACTIVITIES](#dailyActivities) | Activities | Trip | Information on the locations of various trip activities |
+| [G-GENERAL](#gGeneral) | Gear configuration | Trip | Information on the fishing gear's equipment and machinery | 
+| [E-SET](#eSet) | Gear Technology / Equipment | Operations | Information on setting by operations |
+| [E-SET-CETACEANS](#eSetCetaceans) | Effort | Operations | Information on cetacean sightings and interactions |
+| [E-SET-CATCHES](#eSetCatches) | Catch | Operations | Information on magnitude, composition, and fate of catch |
+| [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Catch | Species | Information on fish biology (size, sex, maturity), samples, and depredation |
+| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Catch  | Species | Information on Species of Special Interest (SSI) caught in the observed trip |
+| [E-SET-TAG-DETAILS](#eSetTagDetails) | Catch | Species | Information on specimen condition and tag details |
+| [DAILY-ACTIVITIES](#dailyActivities) | Metadata | Trip | Information on the locations of various trip activities |
 
 
 # Metadata {#meta}
@@ -84,8 +84,8 @@ This section of the form includes information about the observer and an overview
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | M | The country or EEZ of the observation starting location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
-| port| M | The port of the observation starting location  |**Code** from [Ports](#ports) | e.g., `REREU` |
+| country | O | The country or EEZ of the observation starting location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
+| port| O | The port of the observation starting location  |**Code** from [Ports](#ports) | e.g., `REREU` |
 :::
 
 ::: {style="margin-left:40px"}
@@ -197,6 +197,7 @@ This section of the form includes specific vessel information.
 | main_fishing_gear | M |The main vessel fishing gear |**Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
 | **Vessel Personnel**
+
 ::: {style="margin-left:40px"}
 | **Fishing master:**  The fishing master name and nationality in full
 :::
@@ -287,7 +288,7 @@ This section of the reporting form describes the attributes of the vessel.
 | loa_m | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
 | hull_material | O | The vessel hull material | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
 
-| **Main engines:** The make (brand) and power of the main engines
+| **Main engines:** The make (brand) and power of the two main engines
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -299,18 +300,19 @@ This section of the reporting form describes the attributes of the vessel.
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | fish_storage_capacity_m3 | O | The vessel total maximum capacity to store catches (measued in cubic meters) | Float | e.g., `1100` |
 
-| **Fish preservation methods:** The fish preservation methods used by the vessel to preserve the catch, e.g., iced, frozen in brine, deep-frozen. Up to 4 different preservation methods can be reported on the form
-::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| method_1 | O |  |  **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
-:::
 
-| **Fish storage types:** The type of structure(s) present on-board used by the vessel to store the catch. Up to 3 different storage types can be reported on the form
+**Fish preservation method**
+::: {style="margin-left:40px"}
+| Element | Requirement | Description | Format | Input value |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| method | O | The fish preservation methods used by the vessel to preserve the catch. Up to four preservation methods may be reported on the form | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+::: 
+
+| **Fish storage types:** 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| type_1 | O |  |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+| type_1 | O | The type of structure(s) onboard used by the vessel to store its catch. Up to three storage types may be reported on the form. |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
 :::
 
 | **Autonomy range:** Vessel autonomy, expressed by the time (days) a vessel can spend at sea without refuelling. If this information is not available then record vessel range expressed in cruising distance (nm). If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric ton (nm/t)\> : \<Tonnage of fuel carried (t)\> Note: specify units (days or nautical miles)
@@ -601,19 +603,20 @@ In this section, the form outlines fields for specimens details from a proportio
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Scale | O || Code list being developed ||
-| Stage | O || Code list being developed ||
+|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+| maturity_scale | O | The standardised system used to classify the reproductive development of fish (i.e., source) | String | e.g., `ICCAT` |
+| maturity_stage | O | The reproductive stage of a fish determined through visual inspection of the gonads without the aid of a microscope | **Code** from [Maturity Stages](#maturityStages) | e.g., `DEV` | 
 :::
 
-| **Sample collected:** The details on the collection of samples: a) type (e.g. otoliths, spine clippings, and genetic samples) b) preservation method (e.g. alcohol, frozen, etc.), and c) destination (i.e., location to be sent/stored).
+
+| **Sample collected:** Details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| type | O || Code list being developed ||
-| preservation_method | O || Code list being developed ||
-| destination  | O || Code list being developed ||
+|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+| sample_type | O | The type of sample collected by the observer | **Code** from [Sampling Type](#samplingMethodsForSamplingCollections) | e.g., `WM`|
+| sample_preservation_method | O | The type of preservation method used to preserve the sample collected by the observer | **Code** from [Sample Preservation Method](#fishPreservationMethods) | e.g., `FR20` |
+| sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` |
 :::
 
 | **Depredation details**
@@ -664,7 +667,8 @@ This section of the ROS form is for the reporting of catches of species of speci
 | release | O |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
 | recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
 | type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
-| tag_number | O | The tag identifier(s) | Alphanumeric | e.g., `tbd` |
+| tag_id_1 | O | The tag identifier(s) | Alphanumeric | e.g., `tbd` |
+| tag_id_2 | O | The tag identifier(s) | Alphanumeric | e.g., `tbd` |
 | finder_name | O | the full name of the person who found the tag | String | e.g., `Jane Doe` |
 | finder_contact_details | O | the contact details of the person who found the tag | String | e.g., `(650) 214-6369 | jane.doe@fishing.org` |
 
@@ -980,6 +984,36 @@ out_dt(WEIGHT_MEASUREMENT_TOOLS, "WEIGHT_MEASUREMENT_TOOLS")
 
 ```{r collapse = TRUE}
 out_dt(SEX, "SEX")
+```
+
+## Maturity Stages {#maturityStages}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#Maturity_Stages)
+-   **Version**: `r version_number("MATURIY_STAGES")`
+-   **Last update**: `r last_update("MATURITY_STAGES")`
+
+```{r collapse = TRUE}
+out_dt(MATURITY_STAGES, "MATURITY_STAGES")
+```
+
+## Sampling Type {#samplingMethodsForSamplingCollections}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForSamplingCollection)
+-   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+-   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
+```
+
+## Sample Preservation Methods {#fishPreservationMethods}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
+-   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
+-   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
+
+```{r collapse = TRUE}
+out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```
 
 ## Depredation Sources {#depredationSources}
