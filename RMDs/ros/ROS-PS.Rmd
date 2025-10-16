@@ -619,13 +619,6 @@ In this section, the form outlines fields for specimens details from a proportio
 | sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` |
 :::
 
-| **Depredation details**
-::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| depredation_source | O  |For depredated specimens/or catch, this indicates the depredation source based on depredation scar characteristics. For non-depredated specimens record NA  |**Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
-| observed_predator | O | For depredated specimens/or catch, this indicates the predator species directly observed and identified. If the predator was not observed record UNK (unknown). For non-depredated specimens record NA | **Code** from [Predator Species](#predatorSpecies)| e.g., `AG15` |
-:::
 
 # E-SET-CATCHES-SPECIMEN-SSI {#eSetCatchesSpecimenSSI}
 
@@ -648,8 +641,7 @@ This section of the ROS form is for the reporting of catches of species of speci
 | handling_method  | O  | Details how the specimen was brought on-board |  **Code** from [Handling Methods](#handlingMethods) | e.g., `AN` |
 | revival | O |  Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String | e.g., `Yes`  |
 | photo_id | O  |  The unique identifier of the photo taken of a specimen | Alphanumeric code | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
-| depredation_source | O | For depredated specimens/or catch, this indicates the depredation source based on depredation scar characteristics. For non-depredated specimens record NA |**Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
-| observed_predator | O | For depredated specimens/or catch, this indicates the predator species directly observed and identified. If the predator was not observed record UNK (unknown). For non-depredated specimens record NA | **Code** from [Predator Species](#predatorSpecies)| e.g., `AG15` |
+
 
 # E-SET-TAG-DETAILS {#eSetTagDetails}
 
@@ -671,7 +663,7 @@ This section of the ROS form is for the reporting of catches of species of speci
 | tag_id_2 | O | The tag identifier(s) | Alphanumeric | e.g., `tbd` |
 | finder_name | O | the full name of the person who found the tag | String | e.g., `Jane Doe` |
 | finder_contact_details | O | the contact details of the person who found the tag | String | e.g., `(650) 214-6369 | jane.doe@fishing.org` |
-
+| well | O | The well number from which the tagged fish has been recovered, if the fish is recovered during shifting, transhipping or unloading. (Note: this information will allow tracing back tagged fish to the location where it was caught). | Free entry. Plain text. | e.g., `tbd` | 
 # D-ACTIVITIES {#dActivities}
 
 This section of the reporting form describes the activities conducted throughout the fishing trip
