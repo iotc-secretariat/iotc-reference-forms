@@ -6,21 +6,21 @@ The following code lists should be built by the Secretariat and added to the IOT
 
 | Sheet | Field | Database | Comment |
 |:---------------------|:----------------- |:----------------------|:------ |
-| E-SET-CATCH-SPECIMENS | Sample type | `ros_common.sample_collection_details.sample_type` | to do |
-| E-SET-CATCH-SPECIMENS | Sample Preservation Method | `ros_common.sample_collection_details.preservation_method` | to do |
-| E-SET-CATCH-SPECIMENS | Sample destination | `ros_common.sample_collection_details.destination` | to do |
-| E-SET-CATCH-SPECIMENS | Maturity scale | `ros_common.maturity_stages.scale` | to do |
-| E-SET-CATCH-SPECIMENS | Maturity stage | `ros_common.maturity_stages.maturity_level` | to do |
-| G-CONFIG-MITIGATION-DEVICES | Towed object type | Code list of types of towed objects | to do |
+| E-SET-CATCH-SPECIMENS | Sample type | `ros_common.sample_collection_details.sample_type` | done |
+| E-SET-CATCH-SPECIMENS | Sample Preservation Method | `ros_common.sample_collection_details.preservation_method` | done |
+| E-SET-CATCH-SPECIMENS | Sample destination | `ros_common.sample_collection_details.destination` | free text |
+| E-SET-CATCH-SPECIMENS | Maturity scale | `ros_common.maturity_stages.scale` | free text |
+| E-SET-CATCH-SPECIMENS | Maturity stage | `ros_common.maturity_stages.maturity_level` | done |
+| G-CONFIG-MITIGATION-DEVICES | Towed object type | Code list of types of towed objects | free text |
 
 # Renaming Fields in Database
 
 | Schema | Table | Old | New | Comment |
 | :---------- | :-------- | :-------------- | :--------------- |:-------------- |
 | ros_common | | maturity_stages    | maturity_level | maturity_stage | Rename table to maturity | 
-| ros_common | vessel_attributes_fish_preservation_method | fish_preservation_method_code | fpm_code | to discuss |
-| ros_common | vessel_attributes_fish_storage_type | fish_storage_type_code | fst_code | to discuss |
-| ros_common | waste_managements  | waste_category_code | wc_code | to discuss |
+| ros_common | vessel_attributes_fish_preservation_method | fish_preservation_method_code | fpm_code | keep full name |
+| ros_common | vessel_attributes_fish_storage_type | fish_storage_type_code | fst_code | keep full name |
+| ros_common | waste_managements  | waste_category_code | wc_code | keep full name |
 | ros_common | vessel_electronics | gps | gnss | to do |
 | ros_common | vessel_electronics | satellite_communication_systems | satcom | to do |
 | ros_ll     | branchline_configurations | configuration_number | configuration_id | may be mixed with id in branchline_configurations | 
