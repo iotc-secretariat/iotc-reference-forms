@@ -31,19 +31,19 @@ Vessel and trip identifiers; effort and gear characteristics (nets, drop lines, 
 
 | Sheet | Component | Resolution | Description |
 | :------- | :--------: | :--------: |:---------------------------- |
-| [META](#meta) | Dataset | Trip | Information on data submission and main characteristics |
-| [O-INFO](#oInfo) | Observer \& trip | Trip | Information on the observer and the fishing trip observed |
-| [V-INFO](#vInfo) | Vessel | Trip | Information on the fishing vessel, its gear, and personnel |
-| [V-TRIP](#vTrip) | Trip | Trip | Information on the fishing trip's departure and return |
-| [V-ATTRIBUTES](#vAttributes) | Vessel | Vessel | Information on the vessel's attributes and equipment |
-| [G-GENERAL](#gGeneral) | Equipments | Trip | Information on the fishing gear's equipment and machinery |
-| [G-CONFIG-GILLNETS](#gConfigGillnets) | Equipments | Trip | Information on the configuration of gillnets |
-| [G-CONFIG-SINKERS](#gConfigSinkers) | Equipments | Trip | Information on the configuration of sinkers  |
-| [E-SET](#eSet) | Effort  | Set | Information on effort (sets) and gear characteristics (materials, targeting)  |
-| [E-SET-HAULING](#eSetHauling) |Effort | Set | Information on effort (sets) from the overall fishing trip |
-| [E-SET-CATCHES](#eSetTunaCatches) | Effort |Set |Information on magnitude, composition, and fate of tuna catch|
-| [E-SET-CATCHES-SPECIMEN](#eSetCatchesSpecimen) | Catch |Specimen |Information on specimen condition, depredation, and technical details
-| [E-SET-CATCHES-SPECIMEN-SSI](#eSetCatchesSpecimenSSI) | Catch | Specimen | Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest during tuna fishing events|
+| [META](#meta) | Metadata | Trip | Information on the data submission by reporting fleet |
+| [O-INFO](#oInfo) | Metadata | Trip | Observer identification and information of the observed trip |
+| [V-INFO](#vInfo) | Metadata | Trip | Identification of the fishing vessel and personnel information |
+| [V-TRIP](#vTrip) | Metadata | Trip | Information on the fishing trip's course |
+| [V-ATTRIBUTES](#vAttributes) | Vessel Technology / Equipment | Trip | Information on the vessel's attributes and equipment |
+| [G-GENERAL](#gGeneral) | Gear Configuration | Trip | Information on the fishing gear's equipment and machinery |
+| [G-CONFIG-GILLNETS](#gConfigGillnets) | Gear Configuration | Trip | Information on gillnet configurations |
+| [G-CONFIG-SINKERS](#gConfigSinkers) | Gear Configuration | Trip | Information on gillnet sinkers  |
+| [E-SET](#eSet) | Gear Technology / Equipment | Operations | Information on setting operations  |
+| [E-SET-HAULING](#eSetHauling) | Gear Technology / Equipment | Operations | Hauling information by operation |
+| [E-SET-CATCHES](#eSetTunaCatches) | Catch | Operations |Information on magnitude, composition, and fate of catch  |
+| [E-SET-CATCHES-SPECIMEN](#eSetCatchesSpecimen) | Catch |Species |Information on fish biology (sex, size, maturity), samples, and depredation |
+| [E-SET-CATCHES-SPECIMEN-SSI](#eSetCatchesSpecimenSSI) | Catch | Specimen | Information Species of Species Interest (SSI) caught in the observed trip|
 
 
 # Metadata
@@ -403,7 +403,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | net_length_value | M | The net string length. Usually calculated by multiplying the panel average length by the number of panels used in the net |   |  |
 | net_length_unit | M | Indicates units (m or km) | String | e.g., `km` |
 | net_depth | O  | The vertical height of the net (depth). Usually obstained by measuring the length of the end-line, or up-and-down the line, on the end of a net where the meshes are attached. This information may be used to cross check information provided by the crew  | Float  | e.g., `tbd`  |
-| net_material | O | The material of the net webbing  | Code list being developed  | e.g., `tbd`  |
+| net_material | O | The material of the net webbing  | **Code** from [Material Type Code](#materialTypeCode) | e.g., `BR`  |
 <!-- codelist for net material??? -->
 
 | **Stretched mesh size(s):** The average stretched lengths (knot to knot) and range of the mesh. Usually calculated by measuring at least 10 meshes from 5 panels in different areas of the net. Designated fields for up to 4 stretched mesh sizes and units. 
@@ -469,8 +469,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| observed_trip_id | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| set_id | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
 | gillnet_sequential_number  | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
 <!-- **what is the gillnet sequential number?** -->
 
@@ -529,8 +529,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| observed_trip_id | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| set_id | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
 
 ## Hauling operations
 
@@ -608,10 +608,10 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
-| catch_number | M  |  |   |  |
-| specimen_number | M  |  |   |  |
+| observed_trip_id | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| set_id | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| catch_number | M  | The parent catch identifier | Alphanumeric code | `C188` |
+| specimen_number | M  | A unique four-digit numerical code for each specimen, beginning with 0001, assigned consecutively within the same catch detail of a set during the observed trip | 4-digit number | e.g., `0005` |
 
 <!--Change Set number to SET ID?** And same for catch and specimen number?-->
 
@@ -674,29 +674,28 @@ Fill out focal point information (full name, email, finalization date, and submi
 <!-- PROPOSAL TO RENAME 'KG/T' to "Weight unit" or "Unit", or is the unit always consistent? -->
 
 
-| Element | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Sex | O | The sex of the sampled fish specimen. If unknown record "U" | **Code** from [Sex](#sex) | e.g., `F` |
+| Field | Requirement | Description | Format | Input value |
+|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+| sex | O | The sex of the sampled fish specimen | **Code** from [Sex](#sex) | e.g., `F` |
 
-| **Maturity:** The stage of maturity of the specimen according to standard maturity scales approved by the IOTC. If unknown record UNK.
-
-::: {style="margin-left:40px"}
-| Element | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| scale | O |  | code list being developed |e.g., `tbd`  |
-| stage | O |  | code list being developed |e.g., `tbd`  |
-:::
-
-| **Sample collected:** The following details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
+| Maturity: The stage of maturity of the specimen according to standard maturity scales approved by the IOTC.
 
 ::: {style="margin-left:40px"}
-| Element | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| type | O |  | code list being developed |e.g., `tbd`  |
-| preservation_method | O |  | code list being developed |e.g., `tbd`  |
-| Destination |  | code list being developed |e.g., `tbd`  |
+| Field | Requirement | Description | Format | Input value |
+|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+| maturity_scale | O | The standardised system used to classify the reproductive development of fish (i.e., source) | String | e.g., `ICCAT` |
+| maturity_stage | O | The reproductive stage of a fish determined through visual inspection of the gonads without the aid of a microscope | **Code** from [Maturity Stages](#maturityStages) | e.g., `DEV` | 
 :::
-<!-- revise reporting form to match above section -->
+
+| Sample collected: Details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
+
+::: {style="margin-left:40px"}
+| Field | Requirement | Description | Format | Input value |
+|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+| sample_type | O | The type of sample collected by the observer | **Code** from [Sampling Type](#samplingMethodsForSamplingCollections) | e.g., `WM`|
+| sample_preservation_method | O | The type of preservation method used to preserve the sample collected by the observer | **Code** from [Sample Preservation Method](#fishPreservationMethods) | e.g., `FR20` |
+| sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` |
+:::
 
 ## Tag details 
 
@@ -705,8 +704,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Release | M |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
 | Recovery | M | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
 | Type | M | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
-| Tag number 1 | M | The tag identifier(s) | Alphanumeric | e.g., `tbd` |
-| Tag number 2 | O | The tag identifier(s) | Alphanumeric | e.g., `tbd` |
+| tag_id | O | The tag identifier(s). Up to two identifier may be reported on the form | Alphanumeric | e.g., `AA19051` |
 | Finder name | M | The name of the person who recovered the tag | String | e.g., `Jane Doe` |
 | Finder contact details | M | The contact details for the person who recovered the tag | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
 
@@ -731,62 +729,6 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Handling method code | O | Detail how the specimen was brought onboard | Two letters code |  |
 | Revival | O | For turtles indicate Yes if the release took place with resuscitation and No if not | Yes/No |  |
 | Photo ID | O | If a photo is taken, record photo number/code so that it can be linked back to the specimen for onshore examination | Photo code |  |
-
-
-# T-EVENTS {#tEvents}
-
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| Transhipment_number | M  | **ADD DESCRIPTION** |   |e.g., **ADD**  |
-***CHANGE TO TRANSHIPMENT ID**
-
-
-## Vessel Transhipment Event
-
-
-| **Start event:** 
-
-::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Date and time | M | The date and the time in GMT/UTC  of the start of the transhipment operation | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| Latitude | M | The latitude of the position at the start of the transhipment operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| Longitude | M | The longitude of the position at the start of the transhipment operation | Decimal degrees (two decimal places) | e.g., `55.53` |
-:::
-
-| **End event:** 
-
-::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Date and time | O | The date and the time at the end of the transhipment event | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| Latitude | O | The latitude of the position at the end of the transhipment operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| Longitude | O | The longitude of the position at the end of the transhipment operation | Decimal degrees (two decimal places) | e.g., `55.53` |
-:::
-
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Category code | O |   | **Code** from ___ | e.g., **ADD**
-
-
-| **Carrier or fishing vessel** 
-
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or Electronic Monitoring records | String | e.g., `HAWWA` |
-| flag_or_chartering_state | M | The country code of registration or chartering | **Code** from [Countries](#countries) | e.g., `OMN` |
-| ircs | O | The unique alphanumeric code (International Radio Call Sign; IRCS) assigned to the vessel for radio communications, as recorded in official registration documents radio call sign (when available) | Alphanumeric | e.g., `A4DP6` |
-
-| **Registration:** Official vessel registration details to uniquely identify the vessel within the national or regional registry.
-
-::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O | The vessel's country of registry | **Code** from [Countries](#countries) | e.g., `FRA` |
-| port | O | The vessel's port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship's hull | **Code** from [Ports](#ports) | e.g., `REUREU` |
-| number | O | registration number?? | Alphanumeric or numeric entry according to CPC standards | e.g., `CBG303` |
-:::
 
 
 
@@ -907,6 +849,16 @@ out_dt(WASTE_CATEGORIES, "WASTE_CATEGORIES")
 ```{r collapse = TRUE}
 out_dt(WASTE_DISPOSAL_METHODS, "WASTE_DISPOSAL_METHODS")
 ```
+
+## Material Type Code {#materialTypeCode}
+
+-   [Permalink](https://data.iotc.org/reference/1.0.0/domain/fisheries/#gillnetMaterialTypes)
+-   **Version**: `r version_number("GILLNET_MATERIAL_TYPES")`
+-   **Last update**: `r last_update("GILLNET_MATERIAL_TYPES")`
+```{r collapse = TRUE}
+out_dt(GILLNET_MATERIAL_TYPES, "GILLNET_MATERIAL_TYPES")
+```
+
 
 ## Net Colours {#netColours}
 
@@ -1144,6 +1096,16 @@ out_dt(MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREME
 out_dt(SEX, "SEX")
 ```
 
+## Maturity Stages {#maturityStages}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#Maturity_Stages)
+-   **Version**: `r version_number("MATURIY_STAGES")`
+-   **Last update**: `r last_update("MATURITY_STAGES")`
+
+```{r collapse = TRUE}
+out_dt(MATURITY_STAGES, "MATURITY_STAGES")
+```
+
 ## Sampling Type {#samplingMethodsForSamplingCollections}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForSamplingCollection)
@@ -1154,7 +1116,7 @@ out_dt(SEX, "SEX")
 out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
 ```
 
-## Sample Preservation Methods{#fishPreservationMethods}
+## Sample Preservation Methods {#fishPreservationMethods}
 
 -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
 -   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
