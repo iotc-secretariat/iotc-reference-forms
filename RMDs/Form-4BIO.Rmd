@@ -154,41 +154,41 @@ out_dt(FISHERIES, "FISHERIES")
 ## Types of Weight Measurement {#weightMeasurement}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#Weight_Measurements)
-+ **Version:** `r version_number("TYPES_OF_MEASUREMENT")`
-+ **Last update**: `r last_update("TYPES_OF_MEASUREMENT")`
++ **Version:** `r version_number("WEIGHT_MEASUREMENTS")`
++ **Last update**: `r last_update("WEIGHT_MEASUREMENTS")`
 
 ```{r collapse = TRUE}
-out_dt(Weight_MEASUREMENT, "Weight_MEASUREMENT")
+out_dt(WEIGHT_MEASUREMENTS, "WEIGHT_MEASUREMENTS")
 ```
 
 ## Weight Measurement tools {#weightMeasurementTools}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightMeasurementTools)
-+ **Version:** `r version_number("MEASUREMENT_TOOLS")`
-+ **Last update**: `r last_update("MEASUREMENT_TOOLS")`
++ **Version:** `r version_number("WEIGHT_MEASUREMENT_TOOLS")`
++ **Last update**: `r last_update("WEIGHT_MEASUREMENT_TOOLS")`
 
 ```{r collapse = TRUE}
-out_dt(Weight_MEASUREMENT_TOOLS, "Weight_MEASUREMENT_TOOLS")
+out_dt(WEIGHT_MEASUREMENT_TOOLS, "WEIGHT_MEASUREMENT_TOOLS")
 ```
 
 ## Types of Length Measurement {#lengthMeasurement}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#lengthMeasurements)
-+ **Version:** `r version_number("TYPES_OF_MEASUREMENT")`
-+ **Last update**: `r last_update("TYPES_OF_MEASUREMENT")`
++ **Version:** `r version_number("LENGTH_MEASUREMENTS")`
++ **Last update**: `r last_update("LENGTH_MEASUREMENTS")`
 
 ```{r collapse = TRUE}
-out_dt(Length_MEASUREMENT, "Length_MEASUREMENT")
+out_dt(LENGTH_MEASUREMENTS, "LENGTH_MEASUREMENTS")
 ```
 
 ## Length Measurement tools {#LengtnMeasurementTools}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#lengthMeasurementTools)
-+ **Version:** `r version_number("MEASUREMENT_TOOLS")`
-+ **Last update**: `r last_update("MEASUREMENT_TOOLS")`
++ **Version:** `r version_number("LENGTH_MEASUREMENT_TOOLS")`
++ **Last update**: `r last_update("LENGTH_MEASUREMENT_TOOLS")`
 
 ```{r collapse = TRUE}
-out_dt(Length_MEASUREMENT_TOOLS, "Length_MEASUREMENT_TOOLS")
+out_dt(LENGTH_MEASUREMENT_TOOLS, "LENGTH_MEASUREMENT_TOOLS")
 ```
 
 ## Types of Fate {#typesOfFate}
@@ -234,11 +234,11 @@ out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyl
 ## Type of Sample protocol {#sampleprotocol}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingProtocols)
-+ **Version:** `r version_number("SAMPLE_PROTOCOL")`
-+ **Last update**: `r last_update("SAMPLE_PROTOCOL")`
++ **Version:** `r version_number("SAMPLING_PROTOCOLS")`
++ **Last update**: `r last_update("SAMPLING_PROTOCOLS")`
 
 ```{r collapse = TRUE}
-out_dt(SAMPLE_PROTOCOL, "SAMPLE_PROTOCOL")
+out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
 ```
 
 
@@ -255,11 +255,11 @@ out_dt(MATURITY_STAGES, "MATURITY_STAGES")
 ## Type of Sample preservation {#samplepreservation}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplePreservationMethods)
-+ **Version:** `r version_number("SAMPLE_PRESERVATION")`
-+ **Last update**: `r last_update("SAMPLE_PRESERVATION")`
++ **Version:** `r version_number("SAMPLE_PRESERVATION_METHODS")`
++ **Last update**: `r last_update("SAMPLE_PRESERVATION_METHODS")`
 
 ```{r collapse = TRUE}
-out_dt(SAMPLE_PRESERVATION, "SAMPLE_PRESERVATION")
+out_dt(SAMPLE_PRESERVATION_METHODS, "SAMPLE_PRESERVATION_METHODS")
 ```
 
 ## Data Sources {#sourcesSF}
@@ -285,8 +285,8 @@ out_dt(DATA_PROCESSINGS_SF, "DATA_PROCESSINGS_SF")
 ## Types of sample/tissue {#sampleTypes}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#sampleTypes)
-+ **Version:** `r version_number("COVERAGE_TYPES")`
-+ **Last update**: `r last_update("COVERAGE_TYPES")`
++ **Version:** `r version_number("SAMPLE_TYPES")`
++ **Last update**: `r last_update("SAMPLE_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(SAMPLE_TYPES, "SAMPLE_TYPES")
@@ -295,9 +295,9 @@ out_dt(SAMPLE_TYPES, "SAMPLE_TYPES")
 ## Total Catch Estimation {#catchestimation}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForCatchEstimation)
-+ **Version:** `r version_number("CATCH_ESTIMATIONS")`
-+ **Last update**: `r last_update("CATCH_ESTIMATIONS")`
++ **Version:** `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
++ **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
 
 ```{r collapse = TRUE}
-out_dt(CATCH_ESTIMATIONS, "CATCH_ESTIMATIONS")
+out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
 ```
