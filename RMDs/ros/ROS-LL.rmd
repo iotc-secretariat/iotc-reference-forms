@@ -79,7 +79,7 @@ This section of the form includes information about the observer and an overview
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | Unique identifier of the fishing trip defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | Unique identifier of the fishing trip defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 
 ## Observer Identification
 
@@ -110,14 +110,14 @@ This section of the form includes information about the observer and an overview
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| latitude  | O | The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude  | O | The latitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | O | The longitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_UTC | O | The date and time of the start of observations | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc | O | The date and time of the start of observations in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 :::
 
 | **Disembarkation:** The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still recorded as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , record "at sea"
@@ -141,14 +141,14 @@ This section of the form includes information about the observer and an overview
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| latitude | O | The latitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | O | The latitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | O | The longitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
 |  |  |  |  |  |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_UTC | O | The date and time of the end of observations | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc | O | The date and time corresponding to the end of observations in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 :::
 
 ## Observed Trip Summary
@@ -188,7 +188,7 @@ This section of the form includes specific vessel information.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 
 ## Vessel Information
 
@@ -237,7 +237,7 @@ This section of the form includes information on the course and duration of the 
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |  
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |  
 
 ## Trip Details
 
@@ -252,14 +252,14 @@ This section of the form includes information on the course and duration of the 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | country | O | The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | e.g., `FRA` |
 | port | O | The port of the observation starting location | **Code** from [Ports](#ports) | e.g., `REUREU` |
-| latitude | O | The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | O | The latitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) |  [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | O | The longitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
-|               |     |     |                  |                       |
+||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc |  O  | The date and time (in Coordinated Universal Time, UTC) corresponding to the start of the observation period at the reported location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc | O | The date and time corresponding to the start of the observation period at the reported location in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 :::
 
 | **Vessel return:** The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transshipment location record 'at-sea' plus the geographical coordinates corresponding to the location the transshipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel.
@@ -273,14 +273,14 @@ This section of the form includes information on the course and duration of the 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | country | O | The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
 | port | O | The port of the observation ending location | **Code** from [Ports](#ports) | e.g., `REUREU` |
-| latitude | O | The latitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | O | The latitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | O | The longitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
 |               |     |     |                  |                        |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_UTC |  O  | The date and time (in Coordinated Universal Time, UTC) corresponding to the end of the observation period at the reported location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc | O | The date and time corresponding to the end of the observation period at the reported location in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 :::
 
 # V-ATTRIBUTES {#vAttributes}
@@ -289,7 +289,7 @@ This section of the form includes details on vessel attributes.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 
 ## Vessel Attributes
 
@@ -311,7 +311,7 @@ This section of the form includes details on vessel attributes.
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| fish_storage_capacity_m3 | O | Total volume of fish hold(s)(cubic metres; m^3^) | Float | e.g., `1100` |
+| fish_storage_capacity_m3 | O | Total volume of fish hold(s) (cubic metres; m^3^) | Float | e.g., `1100` |
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
@@ -327,7 +327,7 @@ This section of the form includes details on vessel attributes.
 
 | **Autonomy range:** Vessel autonomy, expressed as the number of days a vessel can remain at sea without refuelling. If this information is not available, autonomy may be expressed as cruising distance (nm).
 
-<!--FOR OBSEVER GUIDELINES -  If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric tonne (nm/t)\> : \<Tonnage of fuel carried (t)\> -->
+<!--FOR OBSERVER GUIDELINES -  If a figure for the range cannot be obtained, the observer should calculate vessel range as follows: Vessel range (nm)\> = \<Vessel average cruising distance per metric tonne (nm/t)\> : \<Tonnage of fuel carried (t)\> -->
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -373,7 +373,7 @@ This section of the form includes general longline gear configuration.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/LL` |
 
 ## Special Equipment or Machinery
 
@@ -387,7 +387,7 @@ This section of the form includes general longline gear configuration.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 
 ## Branchline Configurations
 
@@ -411,7 +411,7 @@ This section of the form includes information about the mitigation devices prese
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 
 ## Tori Line Details
 
@@ -442,7 +442,7 @@ This section of the form includes information regarding individual sets that wer
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` | 
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` | 
 | set_id | M | The unique four-digit numerical code for each fishing set, beginning with 0001 and assigned consecutively from the first to the last line set of the observed trip | 4-digit number | e.g, `0007` |
 
 ## Setting Operations
@@ -454,9 +454,9 @@ This section of the form includes information regarding individual sets that wer
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time (in Coordinated Universal Time, UTC) the first dhan buoy and / or radio buoy is deployed to start the setting of the line | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| latitude | M | The latitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | M | The longitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| date_time_utc | M | The date and time when the first dhan buoy and / or radio buoy is deployed to start the setting of the line in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| latitude | M | The latitude of the position at the start of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | M | The longitude of the position at the start of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 | End setting
@@ -464,9 +464,9 @@ This section of the form includes information regarding individual sets that wer
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and the time (in Coordinated Universal Time, UTC) that the last dhan buoy and / or radio buoy is deployed | YYYY-MM-DD hh:mm | e.g., `2023-07-01 12:00` |
-| latitude | M | The latitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | M | The longitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| date_time_utc | M | The date and the time when the last dhan buoy and / or radio buoy is deployed in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2023-07-01T12:00:00Z` |
+| latitude | M | The latitude of the position at the end of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | M | The longitude of the position at the end of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ||||||
@@ -528,12 +528,12 @@ This section of the form includes information about the lights present for each 
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0001` |
 
 ## Attached Lights
 
-| Attached lights: Lights attached to the branchlines.
+| **Attached lights:** Lights attached to the branchlines.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -549,7 +549,7 @@ This section of the form includes information about the mitigation measures obse
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0001` |
 
 ## Mitigation Measures
@@ -583,7 +583,7 @@ This section of the form includes information about the specific hooks observed 
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0004` |
 
 ## Hook Details
@@ -600,7 +600,7 @@ This section of the form includes information about the specific baits observed 
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0095` |
 
 ## Bait Details
@@ -618,7 +618,7 @@ This section includes specific hauling information observed for each set of the 
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0084` |
 
 ## Hauling Operations
@@ -628,9 +628,9 @@ This section includes specific hauling information observed for each set of the 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and the time (in Coordinated Universal Time, UTC) when the first dhan buoy and / or radio buoy is hauled back on-board to start hauling the line | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| latitude | O | The latitude of the position at the start of the hauling operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the position at the start of the hauling operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| date_time_utc | M | The date and the time when the first dhan buoy and / or radio buoy is hauled back on-board to start hauling the line in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| latitude | O | The latitude of the position at the start of the hauling operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | O | The longitude of the position at the start of the hauling operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 | **End hauling**
@@ -638,18 +638,19 @@ This section includes specific hauling information observed for each set of the 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and the time (in Coordinated Universal Time, UTC) when the last component of the longline gear (dhan buoy and / or radio buoy) is hauled back on-board | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| latitude | O | The latitude of the position at the end of the hauling operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the position at the end of the hauling operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| date_time_utc | M | The date and the time when the last component of the longline gear (dhan buoy and / or radio buoy) is hauled back on-board in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| latitude | O | The latitude of the position at the end of the hauling operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | O | The longitude of the position at the end of the hauling operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ||||||
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | offal_management | O | The fate given to the offal (fish heads, guts, etc.) and bait produced during the observed set | **Code** from [Offal Management Types](#offalManagementTypes) | e.g., `AH` |
+
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format  | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| position | O | The position(s) where offal and used bait was disposed. Up to four positions of offal and bait disposal may be reported on the form |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW`  |
+| position | O | The position(s) where offal and used bait was disposed. Up to four positions of offal and bait disposal may be reported on the form |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW` |
 :::
 
 ||||||
@@ -665,7 +666,7 @@ This section of the form includes information about individual biteoffs for each
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0023` |
 
 ## Biteoff Details - Branchline
@@ -685,7 +686,7 @@ This section of the reporting form includes information on individual species fr
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
 | catch_id | M | Unique identifier of the species-specific part of the catch, within a trip | Alphanumeric code | e.g., `02851` |
 
@@ -706,17 +707,17 @@ This section of the reporting form includes information on individual species fr
 
 ||||||
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| sampling_method | M | Method applied to derive the total catch from the samples collected during observation | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
+| sampling_method | M | The method applied to derive the total catch from the samples collected during observation | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
 | number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | e.g., `7` |
 
-**Weight:** The catch weight corresponding to the specified species and product type recorded in processing type. If the fish has not been processed, it corresponds to the unprocessed weight.
+| **Weight:** The catch weight corresponding to the specified species and product type recorded in processing type. If the fish has not been processed, it corresponds to the unprocessed weight.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | processing_type | O | Form in which the fish is processed prior to storage | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
 | value_kg | O | The value of fish weight expressed in kilograms (kg) | Float | `153` |
-| estimation_method | O | Method applied to derive the weight from the samples collected during observation | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
+| estimation_method | O | The method applied to derive the weight from the samples collected during observation | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
 :::
 
 # E-SET-CATCH-SPECIMENS {#eSetCatchSpecimens}
@@ -725,7 +726,7 @@ This section of the form is for the recording of biological information of the s
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0003` |
 | catch_id | M | The parent catch identifier | Alphanumeric code | `C188` |
 | specimen_id | M | A unique four-digit numerical code for each specimen, beginning with 0001, assigned consecutively within the same catch detail of a set during the observed trip | 4-digit number | e.g., `0005` |
@@ -737,7 +738,7 @@ This section of the form is for the recording of biological information of the s
 | sampling_period | M | Stage period when the specimen was sampled | **Code** from [Sampling Period](#samplingPeriod) | e.g., `BS` |
 | sampling_method | M | The sampling method used for the collection of biological sub-sample(s) | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
 
-| Length : The specimen's individual length corresponding to the specified length type. Up to two length measurements may be reported on the form.
+| **Length:** The specimen's individual length corresponding to the specified length type. Up to two length measurements may be reported on the form.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -762,7 +763,7 @@ This section of the form is for the recording of biological information of the s
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | sex | O | The sex of the sampled fish specimen | **Code** from [Sex](#sex) | e.g., `F` |
 
-| Maturity: The stage of maturity of the specimen according to standard maturity scales approved by the IOTC.
+| **Maturity:** The stage of maturity of the specimen according to standard maturity scales approved by the IOTC.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -771,7 +772,7 @@ This section of the form is for the recording of biological information of the s
 | maturity_stage | O | The reproductive stage of a fish determined through visual inspection of the gonads without the aid of a microscope | **Code** from [Maturity Stages](#maturityStages) | e.g., `DEV` | 
 :::
 
-| Sample collected: Details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
+| **Sample collected:** Details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored)
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -781,22 +782,22 @@ This section of the form is for the recording of biological information of the s
 | sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` |
 :::
 
-| Depredation method:
+| **Depredation method:** The method by which depredation occurs, based on evidence observed during the fishing operation.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| depredation_source | O | For depredated specimens/or catch, the depredation source should be based on depredation scar characteristics. For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
-| observed_predator | O | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed, the value is 'UNK' (unknown). For non-depredated specimens, the value should be 'NA' (not available) | **Code** from [Predator Species](#predatorSpecies) | e.g., AG15 |
+| depredation_source | O | The depredation source based on depredation scar characteristics | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
+| observed_predator | O | The predator species when directly observed and identified | **Code** from [Predator Species](#predatorSpecies) | e.g., `AG15` |
 :::
 
-# E-SET-CATCHES-SSI  {#eSetCatchSpecimensSSI}
+# E-SET-CATCH-SPECIMENS-SSI {#eSetCatchSpecimensSSI}
 
-This section of the form includes information about SSI species observed within the subset of each observed set.
+This section of the form includes information about Species of Special Interest ([SSI](https://data.iotc.org/reference/latest/domain/biology/#SSIspecies)) sampled in selected sets.
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0004` |
 | catch_id | M | The parent catch identifier | Alphanumeric code | e.g., `0004#1` |
 | specimen_id | M | The parent specimen identifier | 4-digit code | e.g., `01` |
@@ -853,7 +854,7 @@ This section of the form is for the reporting of each of the tags recovered duri
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/LL` | 
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` | 
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0023` |
 | catch_id | M | The parent catch identifier | Alphanumeric | e.g., `0023#1` |
 | specimen_id | M | The parent specimen identifier | 4-digit number | e.g., `02` |
@@ -862,7 +863,7 @@ This section of the form is for the reporting of each of the tags recovered duri
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| release | O |  Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
+| release | O | Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
 | recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
 | type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
 | tag_id | O | The tag identifier(s). Up to two identifier may be reported on the form | Alphanumeric | e.g., `AA19051` |
