@@ -558,13 +558,7 @@ Species of Special Interest during tuna fishing events|
 | observed_predator | O  | For depredated specimens/or catch, the predator species directly observed and identified. If the predator was not observed record UNK (unknown). For non-depredated specimens record NA |  **Code** from [Predator Species](#predatorSpecies)| e.g., `AG15` |
 :::
 
-| **Additional details**
-::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| condition_at_capture | O | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions)  | e.g., `A0` |
-| condition_at_release | O  | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
-:::
+
 
 # E-SET-CATCHES-SPECIMEN {#eSetCatchesSpecimen}
 
@@ -670,6 +664,13 @@ Species of Special Interest during tuna fishing events|
 | revival | O  | 	Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String |e.g., `Yes` |
 | photo_id | O  | The unique identifier of the photo taken of a specimen | Alphanumeric  | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
 
+| **Additional details**
+::: {style="margin-left:40px"}
+| Field | Requirement | Description | Format | Input value |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| condition_at_capture | O | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions)  | e.g., `A0` |
+| condition_at_release | O  | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
+:::
 
 # E-SET-BAIT {#eSetBait}
 
@@ -738,7 +739,7 @@ Species of Special Interest during tuna fishing events|
 | processing_type | O  | The processing code used for the weight measurement |**Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
 | value | O  | The weight corresponding to the measurement type code | Float |e.g., `43.2`  |
 | unit | O  | Unit of weight (kg or t) | String |e.g., `kg`  |
-| measurement_tool | O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` | 
+| estimation_method | O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` | 
 :::
 
 # E-SET-BAIT-CATCHES-SPECIMEN-SSI {#eSetBaitcatchsSpecimenSSI}
@@ -771,7 +772,6 @@ Species of Special Interest during tuna fishing events|
 | date_time_utc | M  | The date and time of a specific vessel activity |  YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00`  |
 | latitude | M | The location of a specific vessel activity |  Decimal degrees (two decimal places) | e.g.,`-20.88` |
 | longitude |M | The location of a specific vessel activity |  Decimal degrees (two decimal places) | e.g., `55.53` |
-| activity_type | O  | The depth of the place where the net is being deployed vessel activity at the start of every fishing activity and every two hours from sunrise to sunset |**Code** from [Surface Fishery Activities](#surfaceFisheryActivities)  | e.g., `BA` |
 | Comments | O  |  |Free entry. Plain text.  |  |
 
 <!-- revise ACTIVITY TYPE description? seems confusing -->
