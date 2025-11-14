@@ -191,5 +191,22 @@ The ROS data reporting forms were revised during the 20^th^ Session of the Worki
 + [Form template](./ros/Form-ROS-PS.xlsx)
 + [Form description](./ros/Form-ROS-PS.html)
 
+# Vessel Registry Datasets {#5VE}
+
+Information and data on vessels involved in tuna and tuna-like fisheries in the IOTC Area of Competence must be collected and reported in line with the requirements set out in Resolutions [10/08](https://www.iotc.org/cmm/resolution-1008-concerning-record-active-vessels-fishing-tunas-and-swordfish-iotc-area) and [19/04](https://www.iotc.org/cmm/resolution-1904-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence).
+
+## Record of Authorised Vessels {#RAV}
+
+For the submission of data on vessels from longline and surface fisheries authorised to operate in the IOTC Area of Competence, including information on vessel identification, ownership, operator details, fishing gear, and vessel characteristics (e.g. type, length, and gross tonnage).
+
++ [Form template](https://iotc.org/sites/default/files/documents/compliance/erav/Res_19_04_-_Record_of_IOTC_AFVs_E-FULL_VESSEL.xlsx)
++ [Form description](https://iotc.org/e-rav)
+
+## Active Vessel List {#AVL}
+
+For the submission of data on vessels from longline and surface fisheries that operated in the IOTC Area of Competence in the year prior to reporting, including information on vessel identification, ownership, operator details, fishing gear, and vessel characteristics (e.g. type, length, and gross tonnage).
+
++ [Form template](https://iotc.org/sites/default/files/documents/compliance/report_templates/Res_10_08_-_Reporting_template_for_active_domestic_vessels_E_F.xlsx)
++ [Form description](https://iotc.org/compliance/reporting-templates)
 
 
