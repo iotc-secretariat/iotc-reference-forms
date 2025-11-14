@@ -1,0 +1,303 @@
+---
+title: "IOTC Statistical Data Reporting: Form 4BIO (v`r DOI_VERSION`)"
+author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+output:
+  word_document2:
+    reference_docx: "../templates/doc_template.docx"
+    number_sections: FALSE
+    reference_num: TRUE
+    fig_caption: TRUE
+      
+  html_document2:
+    css: "../templates/html_template.css"
+    includes: 
+      in_header: "../templates/google-analytics.html"
+    number_sections: FALSE
+    toc: yes
+    toc_float:
+      collapsed: FALSE
+    smooth_scroll: FALSE
+---
+
+# Description
+
+
+The form provides data fields for the collection and reporting of biological sample data for IOTC species, as well as for other species caught in association with IOTC fisheries.
+It is divided into four sections:
+
+1.	Metadata – information on the data collection and data sources;
+2.	Sample – details about individual species for which biological data are collected;
+3.	Morphometric Data – measurements and related biological parameters; and
+4.	Tissue Sampling – information on tissue samples collected for further analysis.
+
+
+Click [here](./Form-4SF.xlsx) to download a blank version of Form 4SF, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+
+
+# Stratification
+
+## General Information
+
+| Element | Requirement | Description | Input value |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |
+
+## Original Data
+
+| Element | Requirement | Description | Input value |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Original data source | M | Source of information | **Code** from [Size-frequency data sources](#sourcesSF) |
+| Sampling protocol | M | Type of sampling protocol used | **Code** from [sampling protocol](#protocolBIO) |
+| Total catch estimation | M |sampling methods used to obtain total catch estimates per species | **Code** from [Total catch estimation](#catchestimation)| 
+| Total catch| O |Catch data for which the sample were taken| **Code** from [Types of coverage](#coverageTypes) |
+
+
+## Main Data Elements
+
+| Element | Requirement | Description | Input value |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Month | M | Month of the fishing activities reported through the dataset | Integer 1..12 |
+| Fishery | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#fisheries) |
+| Grid | M | 5° grid area | **Code** from [Grid codes](#5x5Grids) |
+| Species | M | Species sampled | **Code** from [Species](#allSpecies) |
+| Sex | O | Sex of the fish sampled | **Code** from [Sex](#sex) |
+| Type of fate | M | Fate of fish caught | **Code** from [Types of fate](#typesOfFate) |
+| Fate | O | Reason for retention or discarding of the fish | **Code** from [Fate](#fates)  |
+| Condition | O |  conditions (at capture / at release) of individual sample |**Code** from [Conditions](#condition)  |
+
+
+## Morphometrics
+
+| Element | Requirement | Description | Input value |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Type of weight Measurement | M | General type of weight measurement | **Code** from [Types of weight measurement](#weightMeasurement) |
+| Measurement tool | O | Tool used to take the weight measurement | **Code** from [Measurement tools](#allMeasurementTools) |
+| Value | M | weight | *numerical value* |
+| Type of length Measurement | M | General type of length measurement | **Code** from [Types of length measurement](#lengthMeasurement) |
+| Measurement tool | O | Tool used to take the length measurement | **Code** from [Measurement tools](#allMeasurementTools) |
+| Value | M | length | *Integer* |
+
+<!-- | Size interval | M | Size interval between lowest and highest measurements of the fish sampled | Integer | -->
+
+## Tissue Sample
+
+| Element | Requirement | Description | Input value |
+| :----------------- | :-----: | :----------------------- | :-------: |
+| Sample type | M | The type sample/ tissue collected | **Code** from [sample type](#sampletype)  |
+| Preservation | M | The type of preservation of the sample | **Code** from [preservation type](#preservationtype) |
+| Aging structure | M | type of sample collected for aging | **Code** from [sample type](#sampletype)  |
+| Maturity stage | M | maturity stage derived from macroscopic exam of the gonads | **Code** from [maturity stage](#maturitystage)  |
+| Measurement type  | M | type of measurement collected from the sample type | **Code** from measurement sample](#samplemeasurement)  |
+| Mass | M | measurement mass value | integer  |
+
+# Reporting Metadata
+
+| Element | Requirement | Description | Format | Example |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
+| Submission date | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+
+
+
+# Reference Code Lists
+
+## Entities {#entities}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
++ **Version:** `r version_number("ENTITIES")`
++ **Last update**: `r last_update("ENTITIES")`
+
+```{r collapse = TRUE}
+out_dt(ENTITIES, "ENTITIES")
+```
+
+## Countries {#countries}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
++ **Version:** `r version_number("COUNTRIES")`
++ **Last update**: `r last_update("COUNTRIES")`
+
+```{r collapse = TRUE}
+out_dt(COUNTRIES, "COUNTRIES")
+```
+
+## IOTC 5° grids {#5x5Grids}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#IOTCgrids5x5)
++ **Version:** `r version_number("IOTC_GRIDS_05x05")`
++ **Last update**: `r last_update("IOTC_GRIDS_05x05")`
+
+```{r collapse = TRUE}
+out_dt(IOTC_GRIDS_05x05, "AREAS_IOTC_05")
+```
+
+<!-- Codes for all 1°x1° and 5°x5° grids that overlap - at least partially - with the IOTC convention area. -->
+
+<!-- Due to to the large size of the dataset, this is not included for filtering / browsing, but can be directly downloaded as a CSV from here: [IOTC_GRIDS_CE_SF](`r paste0("https://data.iotc.org/reference/latest/domain/admin/codelists/IOTC_GRIDS_CE_SF_", version_number("IOTC_GRIDS_CE_SF"), ".csv")`). -->
+
+## Fisheries {#fisheries}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries)
++ **Version:** `r version_number("FISHERIES")`
++ **Last update**: `r last_update("FISHERIES")`
+
+```{r collapse = TRUE}
+out_dt(FISHERIES, "FISHERIES")
+```
+
+## Types of Weight Measurement {#weightMeasurement}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#Weight_Measurements)
++ **Version:** `r version_number("WEIGHT_MEASUREMENTS")`
++ **Last update**: `r last_update("WEIGHT_MEASUREMENTS")`
+
+```{r collapse = TRUE}
+out_dt(WEIGHT_MEASUREMENTS, "WEIGHT_MEASUREMENTS")
+```
+
+## Weight Measurement tools {#weightMeasurementTools}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightMeasurementTools)
++ **Version:** `r version_number("WEIGHT_MEASUREMENT_TOOLS")`
++ **Last update**: `r last_update("WEIGHT_MEASUREMENT_TOOLS")`
+
+```{r collapse = TRUE}
+out_dt(WEIGHT_MEASUREMENT_TOOLS, "WEIGHT_MEASUREMENT_TOOLS")
+```
+
+## Types of Length Measurement {#lengthMeasurement}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#lengthMeasurements)
++ **Version:** `r version_number("LENGTH_MEASUREMENTS")`
++ **Last update**: `r last_update("LENGTH_MEASUREMENTS")`
+
+```{r collapse = TRUE}
+out_dt(LENGTH_MEASUREMENTS, "LENGTH_MEASUREMENTS")
+```
+
+## Length Measurement tools {#LengtnMeasurementTools}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#lengthMeasurementTools)
++ **Version:** `r version_number("LENGTH_MEASUREMENT_TOOLS")`
++ **Last update**: `r last_update("LENGTH_MEASUREMENT_TOOLS")`
+
+```{r collapse = TRUE}
+out_dt(LENGTH_MEASUREMENT_TOOLS, "LENGTH_MEASUREMENT_TOOLS")
+```
+
+## Types of Fate {#typesOfFate}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#typesOfFate)
++ **Version:** `r version_number("TYPES_OF_FATE")`
++ **Last update**: `r last_update("TYPES_OF_FATE")`
+
+```{r collapse = TRUE}
+out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
+```
+
+## Fates {#fates}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#fates)
++ **Version:** `r version_number("FATES")`
++ **Last update**: `r last_update("FATES")`
+
+```{r collapse = TRUE}
+out_dt(FATES, "FATES")
+```
+
+## Sexes {#sex}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#sex)
++ **Version:** `r version_number("SEX")`
++ **Last update**: `r last_update("SEX")`
+
+```{r collapse = TRUE}
+out_dt(SEX, "SEX")
+```
+
+## Species {#allSpecies}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
++ **Version:** `r version_number("SPECIES")`
++ **Last update**: `r last_update("SPECIES")`
+
+```{r collapse = TRUE}
+out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
+```
+
+## Type of Sample protocol {#sampleprotocol}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingProtocols)
++ **Version:** `r version_number("SAMPLING_PROTOCOLS")`
++ **Last update**: `r last_update("SAMPLING_PROTOCOLS")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
+```
+
+
+## Type of Maturity stage {#maturitystage}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#maturityStages)
++ **Version:** `r version_number("MATURITY_STAGES")`
++ **Last update**: `r last_update("MATURITY_STAGES")`
+
+```{r collapse = TRUE}
+out_dt(MATURITY_STAGES, "MATURITY_STAGES")
+```
+
+## Type of Sample preservation {#samplepreservation}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplePreservationMethods)
++ **Version:** `r version_number("SAMPLE_PRESERVATION_METHODS")`
++ **Last update**: `r last_update("SAMPLE_PRESERVATION_METHODS")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLE_PRESERVATION_METHODS, "SAMPLE_PRESERVATION_METHODS")
+```
+
+## Data Sources {#sourcesSF}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesSF)
++ **Version:** `r version_number("DATA_SOURCES_SF")`
++ **Last update**: `r last_update("DATA_SOURCES_SF")`
+
+```{r collapse = TRUE}
+out_dt(DATA_SOURCES_SF, "DATA_SOURCES_SF")
+```
+
+## Size-Frequency Data Processings {#processingsSF}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#processingsSF)
++ **Version:** `r version_number("DATA_PROCESSINGS_SF")`
++ **Last update**: `r last_update("DATA_PROCESSINGS_SF")`
+
+```{r collapse = TRUE}
+out_dt(DATA_PROCESSINGS_SF, "DATA_PROCESSINGS_SF")
+```
+
+## Types of sample/tissue {#sampleTypes}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#sampleTypes)
++ **Version:** `r version_number("SAMPLE_TYPES")`
++ **Last update**: `r last_update("SAMPLE_TYPES")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLE_TYPES, "SAMPLE_TYPES")
+```
+
+## Total Catch Estimation {#catchestimation}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForCatchEstimation)
++ **Version:** `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
++ **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
+
+```{r collapse = TRUE}
+out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
+```

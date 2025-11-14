@@ -160,3 +160,10 @@ render("./RMDs/ros/ROS-GN.rmd",
        output_file ="Form-ROS-GN.html", 
        output_dir = "./out/HTML/ros/")
 
+# ROS REPORTING FORMS ####
+
+## BIOLOGICAL DATA ####
+render("./RMDs/Form-4BIO.Rmd", 
+       output_format = "html_document2",
+       output_file ="Form-4BIO.html", 
+       output_dir = "./out/HTML/")
