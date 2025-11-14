@@ -1,5 +1,5 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 4BIO (v`r DOI_VERSION`)"
+title: "IOTC Statistical Data Reporting: Form 4MB (v`r DOI_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
   word_document2:
@@ -21,18 +21,14 @@ output:
 
 # Description
 
-
-The form provides data fields for the collection and reporting of biological sample data for IOTC species, as well as for other species caught in association with IOTC fisheries.
-It is divided into four sections:
+The form provides data fields for the collection and reporting of biological sample data for IOTC species, as well as for other species caught in association with IOTC fisheries. It is divided into four sections:
 
 1.	Metadata – information on the data collection and data sources;
 2.	Sample – details about individual species for which biological data are collected;
 3.	Morphometric Data – measurements and related biological parameters; and
 4.	Tissue Sampling – information on tissue samples collected for further analysis.
 
-
-Click [here](./Form-4SF.xlsx) to download a blank version of Form 4SF, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
-
+Click [here](./Form-4MB.xlsx) to download a blank version of Form 4MB, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
 # Stratification
 
