@@ -128,10 +128,10 @@ render("./RMDs/Form-2FC.Rmd",
 #       output_file ="Form_7PR.html", 
 #       output_dir = "./out/HTML/")
 
-### Form 3-ADLFG #####
-render("./RMDs/Form-3LG.Rmd", 
+### Form 6LG #####
+render("./RMDs/Form-6LG.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-3LG.html", 
+       output_file ="Form-6LG.html", 
        output_dir = "./out/HTML/")
 
 # ROS REPORTING FORMS ####
@@ -163,7 +163,7 @@ render("./RMDs/ros/ROS-GN.rmd",
 # ROS REPORTING FORMS ####
 
 ## BIOLOGICAL DATA ####
-render("./RMDs/Form-4BIO.Rmd", 
+render("./RMDs/Form-5MB.Rmd", 
        output_format = "html_document2",
-       output_file ="Form-4BIO.html", 
+       output_file ="Form-5MB.html", 
        output_dir = "./out/HTML/")

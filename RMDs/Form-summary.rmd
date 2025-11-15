@@ -83,6 +83,42 @@ A version of the form allows reporting **updated** data for a single fishery:
 + [Form description]( ./Form-3CE-update.html)
 + [Form validator](https://data.iotc.org/validators/ui/update/3CE/)
 
+### Form 3AA {#3AA}
+
+For the submission of data on [_activities related to anchored fish aggregating devices_](https://data.iotc.org/reference/latest/guidelines/#AFAD-related_activities).
+
+The unified form allows reporting data for multiple fisheries simultaneously:
+
++ [Form template](./Form-3AA.xlsx)
++ [Form description](./Form-3AA.html)
+
+A version of the form allows reporting **updated** data for a single fishery:
+
++ [Form template](./Form-3AA-update.xlsx)
++ [Form description](./Form-3AA_update.html)
+
+### Form 3BU {#3BU}
+
+For the submission of data on [_daily buoy positions_](https://data.iotc.org/reference/latest/guidelines/#Daily_buoy_positions).
+
++ [Form template](./Form-3BU.xlsx)
++ [Form description](./Form-3BU.html)
++ [Form validator](https://data.iotc.org/validators/ui/3BU/)
+
+### Form 3DA {#3DA}
+
+For the submission of data on [_interactions related to drifting floating objects_](https://data.iotc.org/reference/latest/guidelines/#DFOB-related_activities).
+
+The unified form addresses the shortcomings of the previous 3FA form and allows reporting data for multiple vessels simultaneously:
+
++ [Form template](./Form-3DA.xlsx)
++ [Form description](./Form-3DA.html)
+
+A version of the form allows reporting **updated** data for a single vessel:
+
++ [Form template](./Form-3DA-update.xlsx)
++ [Form description](./Form-3DA-update.html)
+
 ### Form 4SF {#4SF}
 
 For the submission of data on [_geo-referenced size frequencies_](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_size_frequencies).
@@ -99,42 +135,6 @@ A version of the form allows reporting **updated** data for a single fishery and
 + [Form description](./Form-4SF-update.html)
 + [Form validator](https://data.iotc.org/validators/ui/update/4SF/)
 
-### Form 3AA {#3AA}
-
-For the submission of data on [_activities related to anchored fish aggregating devices_](https://data.iotc.org/reference/latest/guidelines/#AFAD-related_activities).
-
-The unified form allows reporting data for multiple fisheries simultaneously:
-
-+ [Form template](./Form-3AA.xlsx)
-+ [Form description](./Form-3AA.html)
-
-A version of the form allows reporting **updated** data for a single fishery:
-
-+ [Form template](./Form-3AA-update.xlsx)
-+ [Form description](./Form-3AA_update.html)
-
-### Form 3DA {#3DA}
-
-For the submission of data on [_interactions related to drifting floating objects_](https://data.iotc.org/reference/latest/guidelines/#DFOB-related_activities).
-
-The unified form addresses the shortcomings of the previous 3FA form and allows reporting data for multiple vessels simultaneously:
-
-+ [Form template](./Form-3DA.xlsx)
-+ [Form description](./Form-3DA.html)
-
-A version of the form allows reporting **updated** data for a single vessel:
-
-+ [Form template](./Form-3DA-update.xlsx)
-+ [Form description](./Form-3DA-update.html)
-
-### Form 3BU {#3BU}
-
-For the submission of data on [_daily buoy positions_](https://data.iotc.org/reference/latest/guidelines/#Daily_buoy_positions).
-
-+ [Form template](./Form-3BU.xlsx)
-+ [Form description](./Form-3BU.html)
-+ [Form validator](https://data.iotc.org/validators/ui/3BU/)
-
 ## Voluntary Forms {#voluntary}
 
 ### Form 2FC {#2FC}
@@ -144,19 +144,19 @@ For the submission of data on [_fishing craft statistics_](https://data.iotc.org
 + [Form template](./Form-2FC.xlsx)
 + [Form description](./Form-2FC.html)
 
-### Form 3LG
-
-For the submission of data and information on the recovery of abandoned, lost or discarded fishing gear in accordance with IOTC Recommendation [24/11](https://iotc.org/cmm/recommendation-2411-conservation-and-management-measure-marine-pollution) on _Conservation and Management Measure on Marine Pollution_.
-
-+ [Form template](./Form-3LG.xlsx)
-+ [Form description](./Form-3LG.html)
-
-### Form 4MB {#4MB}
+### Form 5MB {#5MB}
 
 For the submission of individual-level morphometric (lengths and weights) and biological data, including sex, maturity stage, and samples of hard and soft tissues for further analysis.
 
-<!-- + [Form template](./Form-4MB.xlsx) -->
-<!-- + [Form description](./Form-4MB.html) -->
++ [Form template](./Form-5MB.xlsx)
++ [Form description](./Form-5MB.html)
+
+### Form 6LG
+
+For the submission of data and information on the recovery of abandoned, lost or discarded fishing gear in accordance with IOTC Recommendation [24/11](https://iotc.org/cmm/recommendation-2411-conservation-and-management-measure-marine-pollution) on _Conservation and Management Measure on Marine Pollution_.
+
++ [Form template](./Form-6LG.xlsx)
++ [Form description](./Form-6LG.html)
 
 ### Form 7PR {#7PR}
 
