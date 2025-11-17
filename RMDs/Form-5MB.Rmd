@@ -21,82 +21,57 @@ output:
 
 # Description
 
-The form provides data fields for the collection and reporting of biological sample data for IOTC species, as well as for other species caught in association with IOTC fisheries. It is divided into four sections:
-
-1.	Metadata – information on the data collection and data sources;
-2.	Sample – details about individual species for which biological data are collected;
-3.	Morphometric Data – measurements and related biological parameters; and
-4.	Tissue Sampling – information on tissue samples collected for further analysis.
+This form provides for the reporting of morphometric measurements and biological sample information for any species caught in association with IOTC fisheries.
 
 Click [here](./Form-5MB.xlsx) to download a blank version of Form 5MB, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
-# Stratification
+# Metadata
+
+## Submission Information
+
+| Element | Requirement | Description | Format | Input value |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
+| Liaison officer email	| M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
+| Submission date | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
 
 ## General Information
 
-| Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |
+| Element | Description | Format | Input value |
+|:------- |:-----------------------|:-------------:|:-------------:|
+| Reporting year | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer	 | e.g., `1996` | 
+| Reporting entity | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` | 
+| Flag state | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., `EUR.FRA` |
 
-## Original Data
+# Morphometric Data
 
-| Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Original data source | M | Source of information | **Code** from [Size-frequency data sources](#sourcesSF) |
-| Sampling protocol | M | Type of sampling protocol used | **Code** from [sampling protocol](#protocolBIO) |
-| Total catch estimation | M |sampling methods used to obtain total catch estimates per species | **Code** from [Total catch estimation](#catchestimation)| 
-| Total catch| O |Catch data for which the sample were taken| **Code** from [Types of coverage](#coverageTypes) |
+| Element | Description | Format | Input value |
+|:------- |:-----------------------|:-------------:|:-------------:|
+| SpecimenID | The unique identifier for the sampled fish specimen | String | e.g., `IFRFRI000142` |
+| Date start | The earliest date on which the fish could have been caught (start of the sampling period) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DD] | e.g., `2025-01-01` |
+| Date end | The latest date on which the fish could have been caught (end of the sampling period) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DD] | e.g., `2025-01-03` | 
+| Area | The area of origin of the sampled fish specimen | **Code** from [Areas](#areas) | e.g., `6100050` |
+| Gear group | The group of fishing gears that caught the sampled fish specimen | **Code** from [Gear groups](#gearGroups) | e.g., `PL` |
+| Species | The species of the sampled specimen | **Code** from [Species](#allSpecies) | e.g., `FRI` |
+| Sex | The sex of the sampled fish specimen | **Code** from [Sex](#sexes) | e.g., `F` |
+| Status | The preservation or processing condition of the sampled fish | **Code** from [Fish status](#fishStatus) | e.g., `DEF` |
+| Maturity | The reproductive stage of the fish determined by visual inspection of the gonads without a microscope | **Code** from [Maturity Stages](#maturityStages) | e.g., `DEV` |
+| Measurement | The type of morphometric measurement taken | **Code** from [Measurements](#measurements) | e.g., `FL` | 
+| Measurement tool | The tool used to take the morphometric measurement | **Code** from [Measurement tools](#allMeasurementTools) | e.g., `CA` | 
+| Value | The morphometric measurement expressed in the appropriate standard unit, i.e., centimetres (cm) for lengths and kilogrammes (kg) for weights | Numeric with one decimal place | e.g., `35.5` |
 
+# Sample Data
 
-## Main Data Elements
-
-| Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Month | M | Month of the fishing activities reported through the dataset | Integer 1..12 |
-| Fishery | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#fisheries) |
-| Grid | M | 5° grid area | **Code** from [Grid codes](#5x5Grids) |
-| Species | M | Species sampled | **Code** from [Species](#allSpecies) |
-| Sex | O | Sex of the fish sampled | **Code** from [Sex](#sex) |
-| Type of fate | M | Fate of fish caught | **Code** from [Types of fate](#typesOfFate) |
-| Fate | O | Reason for retention or discarding of the fish | **Code** from [Fate](#fates)  |
-| Condition | O |  conditions (at capture / at release) of individual sample |**Code** from [Conditions](#condition)  |
-
-## Morphometrics
-
-| Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Type of weight Measurement | M | General type of weight measurement | **Code** from [Types of weight measurement](#weightMeasurement) |
-| Measurement tool | O | Tool used to take the weight measurement | **Code** from [Measurement tools](#allMeasurementTools) |
-| Value | M | weight | *numerical value* |
-| Type of length Measurement | M | General type of length measurement | **Code** from [Types of length measurement](#lengthMeasurement) |
-| Measurement tool | O | Tool used to take the length measurement | **Code** from [Measurement tools](#allMeasurementTools) |
-| Value | M | length | *Integer* |
-
-<!-- | Size interval | M | Size interval between lowest and highest measurements of the fish sampled | Integer | -->
-
-## Tissue Sample
-
-| Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Sample type | M | The type sample/ tissue collected | **Code** from [sample type](#sampletype)  |
-| Preservation | M | The type of preservation of the sample | **Code** from [preservation type](#preservationtype) |
-| Aging structure | M | type of sample collected for aging | **Code** from [sample type](#sampletype)  |
-| Maturity stage | M | maturity stage derived from macroscopic exam of the gonads | **Code** from [maturity stage](#maturitystage)  |
-| Measurement type  | M | type of measurement collected from the sample type | **Code** from measurement sample](#samplemeasurement)  |
-| Mass | M | measurement mass value | integer  |
-
-# Reporting Metadata
-
-| Element | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
-| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| Submission date | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+| Element | Description | Format | Input value |
+|:------- |:-----------------------|:-------------:|:-------------:|
+| SampleID | Unique identifier for the sample | String | e.g., `LIV0018` | 
+| Materials | The type of biological materials collected | **Code** from [Biological Materials](#biologicalMaterials) | e.g., `LI` | 
+| Protocol  | The reference to the sampling protocol used | String (free entry text) | e.g., [protocols.io](https://www.protocols.io/view/c-elegans-worm-size-measurement-e6nvwke4wvmk/v1) | 
+| Preservation | The type of preservation of the sample | **Code** from [preservation type](#samplePreservationMethods) | e.g., `FR80` |
+| Location | The location of the sample | String (free entry text) | e.g., `Ifremer Freezer in room A5` | 
 
 # Reference Code Lists
 
@@ -120,98 +95,24 @@ out_dt(ENTITIES, "ENTITIES")
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## IOTC 5° grids {#5x5Grids}
+## Areas {#areas}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#IOTCgrids5x5)
-+ **Version:** `r version_number("IOTC_GRIDS_05x05")`
-+ **Last update**: `r last_update("IOTC_GRIDS_05x05")`
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#IOTCgridsCESFAR)
++ **Version:** `r version_number("IOTC_GRIDS_CE_SF_AR")`
++ **Last update**: `r last_update("IOTC_GRIDS_CE_SF_AR")`
 
-```{r collapse = TRUE}
-out_dt(IOTC_GRIDS_05x05, "AREAS_IOTC_05")
+```{r collapse = TRUE, warning = FALSE}
+out_dt(IOTC_GRIDS_CE_SF_AR, "IOTC_GRIDS_CE_SF_AR")
 ```
 
-<!-- Codes for all 1°x1° and 5°x5° grids that overlap - at least partially - with the IOTC convention area. -->
+## Gear Groups {#gearGroups}
 
-<!-- Due to to the large size of the dataset, this is not included for filtering / browsing, but can be directly downloaded as a CSV from here: [IOTC_GRIDS_CE_SF](`r paste0("https://data.iotc.org/reference/latest/domain/admin/codelists/IOTC_GRIDS_CE_SF_", version_number("IOTC_GRIDS_CE_SF"), ".csv")`). -->
-
-## Fisheries {#fisheries}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries)
-+ **Version:** `r version_number("FISHERIES")`
-+ **Last update**: `r last_update("FISHERIES")`
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups)
++ **Version:** `r version_number("GEAR_GROUPS")`
++ **Last update**: `r last_update("GEAR_GROUPS")`
 
 ```{r collapse = TRUE}
-out_dt(FISHERIES, "FISHERIES")
-```
-
-## Types of Weight Measurement {#weightMeasurement}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#Weight_Measurements)
-+ **Version:** `r version_number("WEIGHT_MEASUREMENTS")`
-+ **Last update**: `r last_update("WEIGHT_MEASUREMENTS")`
-
-```{r collapse = TRUE}
-out_dt(WEIGHT_MEASUREMENTS, "WEIGHT_MEASUREMENTS")
-```
-
-## Weight Measurement tools {#weightMeasurementTools}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightMeasurementTools)
-+ **Version:** `r version_number("WEIGHT_MEASUREMENT_TOOLS")`
-+ **Last update**: `r last_update("WEIGHT_MEASUREMENT_TOOLS")`
-
-```{r collapse = TRUE}
-out_dt(WEIGHT_MEASUREMENT_TOOLS, "WEIGHT_MEASUREMENT_TOOLS")
-```
-
-## Types of Length Measurement {#lengthMeasurement}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#lengthMeasurements)
-+ **Version:** `r version_number("LENGTH_MEASUREMENTS")`
-+ **Last update**: `r last_update("LENGTH_MEASUREMENTS")`
-
-```{r collapse = TRUE}
-out_dt(LENGTH_MEASUREMENTS, "LENGTH_MEASUREMENTS")
-```
-
-## Length Measurement tools {#LengtnMeasurementTools}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#lengthMeasurementTools)
-+ **Version:** `r version_number("LENGTH_MEASUREMENT_TOOLS")`
-+ **Last update**: `r last_update("LENGTH_MEASUREMENT_TOOLS")`
-
-```{r collapse = TRUE}
-out_dt(LENGTH_MEASUREMENT_TOOLS, "LENGTH_MEASUREMENT_TOOLS")
-```
-
-## Types of Fate {#typesOfFate}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#typesOfFate)
-+ **Version:** `r version_number("TYPES_OF_FATE")`
-+ **Last update**: `r last_update("TYPES_OF_FATE")`
-
-```{r collapse = TRUE}
-out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
-```
-
-## Fates {#fates}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#fates)
-+ **Version:** `r version_number("FATES")`
-+ **Last update**: `r last_update("FATES")`
-
-```{r collapse = TRUE}
-out_dt(FATES, "FATES")
-```
-
-## Sexes {#sex}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#sex)
-+ **Version:** `r version_number("SEX")`
-+ **Last update**: `r last_update("SEX")`
-
-```{r collapse = TRUE}
-out_dt(SEX, "SEX")
+out_dt(GEAR_GROUPS, "GEAR_GROUPS")
 ```
 
 ## Species {#allSpecies}
@@ -224,18 +125,27 @@ out_dt(SEX, "SEX")
 out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
 ```
 
-## Type of Sample protocol {#sampleprotocol}
+## Sexes {#sexes}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingProtocols)
-+ **Version:** `r version_number("SAMPLING_PROTOCOLS")`
-+ **Last update**: `r last_update("SAMPLING_PROTOCOLS")`
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#sex)
++ **Version:** `r version_number("SEX")`
++ **Last update**: `r last_update("SEX")`
 
 ```{r collapse = TRUE}
-out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
+out_dt(SEX, "SEX")
 ```
 
+## Fish Status {#fishStatus}
 
-## Type of Maturity stage {#maturitystage}
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#maturityStages)
++ **Version:** `r version_number("MATURITY_STAGES")`
++ **Last update**: `r last_update("MATURITY_STAGES")`
+
+```{r collapse = TRUE}
+out_dt(FISH_STATUS, "MATURITY_STAGES")
+```
+
+## Maturity Stages {#maturityStages}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#maturityStages)
 + **Version:** `r version_number("MATURITY_STAGES")`
@@ -245,7 +155,37 @@ out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
 out_dt(MATURITY_STAGES, "MATURITY_STAGES")
 ```
 
-## Type of Sample preservation {#samplepreservation}
+## Measurements {#measurements}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#lengthMeasurements)
++ **Version:** `r version_number("MEASUREMENTS")`
++ **Last update**: `r last_update("MEASUREMENTS")`
+
+```{r collapse = TRUE}
+out_dt(MEASUREMENTS, "MEASUREMENTS")
+```
+
+## Measurement Tools {#measurementTools}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#MeasurementTools)
++ **Version:** `r version_number("LENGTH_MEASUREMENT_TOOLS")`
++ **Last update**: `r last_update("LENGTH_MEASUREMENT_TOOLS")`
+
+```{r collapse = TRUE}
+out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
+```
+
+## Biological Materials {#biologicalMaterials}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#biologicalMaterials)
++ **Version:** `r version_number("BIOLOGICAL_MATERIALS")`
++ **Last update**: `r last_update("BIOLOGICAL_MATERIALS")`
+
+```{r collapse = TRUE}
+out_dt(BIOLOGICAL_MATERIALS, "BIOLOGICAL_MATERIALS")
+```
+
+## Sample preservation Methods {#samplePreservationMethods}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplePreservationMethods)
 + **Version:** `r version_number("SAMPLE_PRESERVATION_METHODS")`
@@ -253,44 +193,4 @@ out_dt(MATURITY_STAGES, "MATURITY_STAGES")
 
 ```{r collapse = TRUE}
 out_dt(SAMPLE_PRESERVATION_METHODS, "SAMPLE_PRESERVATION_METHODS")
-```
-
-## Data Sources {#sourcesSF}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesSF)
-+ **Version:** `r version_number("DATA_SOURCES_SF")`
-+ **Last update**: `r last_update("DATA_SOURCES_SF")`
-
-```{r collapse = TRUE}
-out_dt(DATA_SOURCES_SF, "DATA_SOURCES_SF")
-```
-
-## Size-Frequency Data Processings {#processingsSF}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/#processingsSF)
-+ **Version:** `r version_number("DATA_PROCESSINGS_SF")`
-+ **Last update**: `r last_update("DATA_PROCESSINGS_SF")`
-
-```{r collapse = TRUE}
-out_dt(DATA_PROCESSINGS_SF, "DATA_PROCESSINGS_SF")
-```
-
-## Types of sample/tissue {#sampleTypes}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#sampleTypes)
-+ **Version:** `r version_number("SAMPLE_TYPES")`
-+ **Last update**: `r last_update("SAMPLE_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(SAMPLE_TYPES, "SAMPLE_TYPES")
-```
-
-## Total Catch Estimation {#catchestimation}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForCatchEstimation)
-+ **Version:** `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
-+ **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
-
-```{r collapse = TRUE}
-out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
 ```

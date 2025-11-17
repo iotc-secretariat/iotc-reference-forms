@@ -288,6 +288,8 @@ SPECIES_BAITS         = read_codelist(domain = "biology", schema = "biology", co
 
 HANDLING_METHODS      = read_codelist(domain = "biology", schema = "biology", codelist = "HANDLING_METHODS")
 
+FISH_STATUS           = read_codelist(domain = "biology", schema = "biology", codelist = "FISH_STATUS")
+
 SAMPLING_PROTOCOLS    = read_codelist(domain = "biology", schema = "biology", codelist = "SAMPLING_PROTOCOLS")
 
 SAMPLING_PERIODS      = read_codelist(domain = "biology", schema = "biology", codelist = "SAMPLING_PERIODS")
@@ -295,6 +297,8 @@ SAMPLING_PERIODS      = read_codelist(domain = "biology", schema = "biology", co
 SAMPLING_METHODS_FOR_CATCH_ESTIMATION = read_codelist(domain = "biology", codelist = "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
 
 SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS = read_codelist(domain = "biology", codelist = "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
+
+BIOLOGICAL_MATERIALS = read_codelist(domain = "biology", schema = "biology", codelist = "BIOLOGICAL_MATERIALS")
 
 TAG_TYPES = read_codelist(domain = "biology", schema = "biology", codelist = "TAG_TYPES")
 
