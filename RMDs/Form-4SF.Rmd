@@ -34,7 +34,7 @@ Numbers of fish sampled and raised by size category and species, along with info
 ## General Information
 
 | Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |
@@ -42,7 +42,7 @@ Numbers of fish sampled and raised by size category and species, along with info
 ## Main Data Elements
 
 | Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
 | Month | M | Month of the fishing activities reported through the dataset | Integer 1..12 |
 | Fishery | M | Type of fishing practices based on several factors | **Code** from [Fisheries](#fisheries) |
 | Grid | M | 5° grid area | **Code** from [Grid codes](#5x5Grids) |
@@ -54,7 +54,7 @@ Numbers of fish sampled and raised by size category and species, along with info
 ## Original Data
 
 | Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
 | Estimation | M | Indicates whether the data were estimated | **Code** from [Estimations](#estimations) |
 | Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#datatypes) |
 | Original data source | M | Source of information | **Code** from [Size-frequency data sources](#sourcesSF) |
@@ -70,8 +70,6 @@ Numbers of fish sampled and raised by size category and species, along with info
 | Type of Measurement | M | General type of size measurement | **Code** from [Types of measurement](#typesOfMeasurement) |
 | Measurement | M | Nature of the size measurement | **Code** from [Measurements](#Measurement) |
 | Measurement tool | O | Tool used to take the measurement | **Code** from [Measurement tools](#allMeasurementTools) |
-
-<!-- | Size interval | M | Size interval between lowest and highest measurements of the fish sampled | Integer | -->
 
 ## Sample Data
 

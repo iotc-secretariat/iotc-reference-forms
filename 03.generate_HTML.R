@@ -105,7 +105,7 @@ render("./RMDs/Form-3DA-update.Rmd",
 
 ## Daily buoy positions ####
 
-### Form 3-BU ####
+### Form 3BU ####
 render("./RMDs/Form-3BU.Rmd", 
        output_format = "html_document2",
        output_file ="Form-3BU.html", 
@@ -113,15 +113,21 @@ render("./RMDs/Form-3BU.Rmd",
 
 ## Fishing craft statistics ####
 
-### Form 2-FC #####
+### Form 2FC #####
 render("./RMDs/Form-2FC.Rmd", 
        output_format = "html_document2",
        output_file ="Form-2FC.html", 
        output_dir = "./out/HTML/")
 
+## Form 5MB ####
+render("./RMDs/Form-5MB.Rmd", 
+       output_format = "html_document2",
+       output_file ="Form-5MB.html", 
+       output_dir = "./out/HTML/")
+
 ## Fish prices ####
 
-### Form 7-PR #####
+### Form 7PR #####
 
 #render("./RMDs/Form_7PR.Rmd", 
 #       output_format = "html_document2",
@@ -159,11 +165,3 @@ render("./RMDs/ros/ROS-GN.rmd",
        output_format = "html_document2",
        output_file ="Form-ROS-GN.html", 
        output_dir = "./out/HTML/ros/")
-
-# ROS REPORTING FORMS ####
-
-## BIOLOGICAL DATA ####
-render("./RMDs/Form-5MB.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-5MB.html", 
-       output_dir = "./out/HTML/")

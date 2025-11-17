@@ -67,7 +67,7 @@ Number or live weight of discards by species, including their condition at relea
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
 | Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
 | Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `National Institute of Fisheries` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
 | Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |

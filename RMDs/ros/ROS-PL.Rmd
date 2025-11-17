@@ -29,7 +29,6 @@ Click [here](./Form-ROS-PL.xlsx) to download a blank version of the ROS-PL form,
 
 Vessel and trip identifiers; effort and gear characteristics (poles, hooks, sighting cues); operational details of each event, catch and bycatch by species in number and weight; fate (retained/discarded). This form also includes details on bait fishing operations (gear, handling, weight).
 
-
 | Sheet | Data Components | Resolution | Description |
 | :------- | :--------: | :--------: |:---------------------------- |
 | [META](#meta)    | Metadata | Trip | Information on the data submission by reporting fleet |
@@ -61,7 +60,6 @@ Species of Special Interest during tuna fishing events|
 | Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
 | [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
-<!-- I THINK THE HEADINGS FOR GENERAL INFORMATION SHOULD BE SUBMISSION INFORMATION, AND DATA CHARACTERISTICS SHOULD BE GENERAL INFORMATION TO MATCH THE REPORTING FORM -->
 
 ## General Information
 
@@ -73,7 +71,8 @@ Species of Special Interest during tuna fishing events|
 | Data source | M |The source of data provided  | Observer data or EM data | e.g., `OAS` |
 
 # O-INFO {#oInfo}
-<!-- This section of the form includes information about the observer and an overview of the fishing trip they observed -->
+
+This section of the form includes information about the observer and an overview of the fishing trip they observed.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -108,14 +107,14 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| latitude | O |The latitude of the observation starting location.  |Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O |The longitude of the observation starting location.|Decimal degrees (two decimal places) | e.g., `55.53`|
+| latitude | O | The latitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | O | The longitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312`|
 :::
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | O | Record the date and time of the start of observations  | YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00` |
+| date_time_utc | O | The date and time of the start of observations in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 :::
 
 | **Disembarkation:** The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still recorded as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , record “at sea”
@@ -127,8 +126,8 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O | The country or EEZ of the observation ending location.  | **Code** from [Countries](#countries) | e.g., `FRA` |
-| port | O | The port of the observation ending location  |**Code** from [Ports](#ports)  | e.g., `REREU` |
+| country | O | The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
+| port | O | The port of the observation ending location | **Code** from [Ports](#ports) | e.g., `REREU` |
 :::
 
 ::: {style="margin-left:40px"}
@@ -138,14 +137,14 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| latitude | O | The latitude of the observation ending location.  | Decimal degrees (two decimal places)| e.g., `-20.88` |
-| longitude | O | The longitude of the observation ending location.| Decimal degrees (two decimal places)| e.g., `55.53` |
+| latitude | O | The latitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m)  | Decimal degrees (two decimal places) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | O | The longitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | O | The date and time of the end of observations  | YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00` |
+| date_time_utc | O | The date and time corresponding to the end of observations in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ]  | e.g., `2025-09-15T12:00Z` |
 :::
 
 ## Observed Trip Summary
@@ -154,23 +153,23 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description |Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities  |Integer |e.g., `tbd` |
-| observed | M | The total number of fishing sets/events monitored by the observer. In the case of Electronic Monitoring, only processed events to be included |Integer |e.g., `tbd` |
+| conducted | M | The total number of fishing events conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities  |Integer |e.g., `4` |
+| observed | M | The total number of fishing events monitored by the observer. In the case of Electronic Monitoring, only processed events to be included | Integer |e.g., `4` |
 :::
 
-| **Number of days**: The number of hours/days the vessel spent on the following activities
+| **Number of hours**: The number of hours the vessel spent on the following activities
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description |Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| searching | M | 	The number of hours/days searching during the observation period |Integer |e.g.,`tbd`  |
-| actively_fishing | M | The number of active fishing hours/days during the observation period |Integer |e.g.,`tbd`  |
-| in_fishing_area | O | 	The number of hours in the fishing area during the observation period | Integer |e.g.,`tbd`  |
-| transiting | O | The number of hours transiting during the observation period| Integer |e.g.,`tbd`  |
-| lost | M | 	The number of hours/days lost during the observation period | Integer|e.g., `tbd`  |
+| searching | M | The number of hours searching during the observation period | Integer | e.g.,`tbd`  |
+| actively_fishing | M | The number of active fishing hours during the observation period | Integer | e.g.,`tbd`  |
+| in_fishing_area | O | The number of hours in the fishing area during the observation period | Integer | e.g.,`tbd`  |
+| transiting | O | The number of hours transiting during the observation period| Integer | e.g.,`tbd`  |
+| lost | M | 	The number of hours lost during the observation period | Integer| e.g., `tbd`  |
 :::
 
-| **Reasons for lost days:** Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
+| **Reasons for lost days:** The reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
@@ -179,7 +178,8 @@ Species of Special Interest during tuna fishing events|
 :::
 
 # V-INFO {#vInfo}
-<!-- This section of the form includes specific vessel information -->
+
+This section of the form includes specific vessel information.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -227,7 +227,8 @@ Species of Special Interest during tuna fishing events|
 
 
 # V-TRIP {#vTrip}
-<!-- This section of the form includes information about the overall fishing trip of the vessel -->
+
+This section of the form includes information on the course and duration of the vessel's fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -279,7 +280,8 @@ Species of Special Interest during tuna fishing events|
 
 
 # V-ATTRIBUTES {#vAttributes}
-<!-- This section of the form includes specific vessel details -->
+
+This section of the form includes details on vessel attributes.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -298,14 +300,14 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| make | O  |  | String | e.g., `MAN Energy Solutions` |
-| power_value |O  |  |Float  |e.g., `5000`  |
-| power_unit |O  |  |Power units code: kilowatts (kW), horsepower (hp), or break horsepower (bhp)  | e.g., `kW` |
+| make | O | The manufacturer or brand name of the vessel's engine, as specified in the official vessel registration or engine documentation | String | e.g., `MAN Energy Solutions`  |
+| power_value | O | The rated power output of the vessel's main engine as specified in the official vessel registration or engine documentation | Integer | e.g., `5000` |
+| power_unit | O | Rated output of the vessel's main engine, as specified in official registration or engine documentation in kilowatts (kW), horsepower (hp), or break horsepower (bhp) | String | e.g., `kW` |
 :::
 
-| |  | |  |  |
+||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| fish_storage_capacity_m3 |O  |	The vessel total maximum capacity (in cubic meters) to store catches | Float |e.g., `1100`  |
+| fish_storage_capacity_m3 | O |	The vessel total maximum capacity (in cubic meters) to store catches | Float |e.g., `1100`  |
 
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
@@ -360,13 +362,15 @@ Species of Special Interest during tuna fishing events|
 :::
 
 # G-GENERAL {#gGeneral}
-<!-- This section of the reporting form describes the pole and line fishing gear present on the vessel -->
+
+This section of the form includes general longline gear configuration.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
 
 ## Special Equipment Or Machinery
+
 | Field | Requirement | Description | format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | live_bait_tank_capacity_m3 | M |The vessel total maximum capacity to store live bait, in cubic metres (m3) | Float | e.g., `tbd` |
@@ -395,12 +399,13 @@ Species of Special Interest during tuna fishing events|
 :::
 
 # E-SET-TUNA {#eSetTuna}
+
 <!-- This section describes details of each of the setting operations within the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
-| event_id | M |  The event identifier of the observed event. This should be a four digit numerical code 0001. A unique identifier should be allocated to each individual event | 4-digit-number   | e.g., `0004`  |  
+| event_id | M |  The event identifier of the observed event. This should be a four digit numerical code 0001. A unique identifier should be allocated to each individual event | 4-digit-number  | e.g., `0004`  |  
 
 ## Setting Operations
 
@@ -409,7 +414,7 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M  | For the observed event, the date and time the first line enters the water | YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00`| |
+| date_time_utc | M | The date and time when the first line enters the water in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ]  | e.g., `2025-09-15T12:00Z`| |
 
 | **Position** 
 :::
@@ -417,8 +422,8 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| latitude | M |The latitude at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude |M | The longitude at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |  
+| latitude | M | The latitude of the position at the start of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | M | The longitude of the position at the start of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |  
 :::
 
 | **End setting** 
@@ -426,7 +431,7 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M  |  For the observed event, the time the last line comes out of the water |  YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00` |
+| date_time_utc | M  | For the observed event, the time the last line comes out of the water | YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00` |
 :::
 
 | **School sighting cues:** 
@@ -434,7 +439,7 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| cue_1 | O  |The cues that lead the vessel to detect the presence of a tuna school. Up to 3 cues can be reported on the form | **Code** from [School Sighting Cues](#schoolSightingCues) | e.g., `AF` |
+| cue | O | The cues that lead the vessel to detect the presence of a tuna school. Up to 3 cues can be reported on the form | **Code** from [School Sighting Cues](#schoolSightingCues) | e.g., `AF` |
 :::
 
 <!-- Type of school detected - fields need to be added to the reporting form, code lists need to be made --> 
@@ -444,7 +449,7 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| species_1 | M | For the observed event, the species in the school being targeted. Up to 4 target species can be reported on the form | **Code** from [All Species](#allSpecies) | e.g., `SKJ`  |
+| species | M | For the observed event, the species in the school being targeted. Up to 4 target species can be reported on the form | **Code** from [All Species](#allSpecies) | e.g., `SKJ`  |
 :::
 
 | | | | | |
@@ -456,61 +461,60 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| used | O  | Indicates whether any bait was used during the fishing event (Yes/No) | String |e.g., `Yes`  |
+| used | O | Indicates whether any bait was used during the fishing event (Yes/No) | String | e.g., `Yes`  |
 | type | O | Indicates the bait types used during the fishing event | **Code** from [Bait Types](#baitTypes) | e.g., `FF` | 
-| condition | O | Indicates the bait condition used during the fishing event  | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE` |
+| condition | O | Indicates the bait condition used during the fishing event | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE` |
 | species | O | The species of bait used during the fishing event | **Code** from [Bait Species](#baitSpecies) | e.g., `ANX` |
 | weight | O | The estimated quantity (kg) of bait used in the poling operation. If no bait, then would be zero (0)  | Float | e.g., `tbd` | 
 :::
+
 <!-- bait type field added to the reporting form and linked to code list -->
 <!-- verify that "weight" is not supposed to be an integer --> 
 
-| | | | | |
+||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | number_of_hooks_lost | O | The total number of hooks lost during the poling operation | Integer | e.g., `10` |
 | object_id | O | For every activity involving artificial FAD (DFAD/AFAD), there is a  FAD identifier. This includes FAD markings, beacon IDs, or any information that can be used to identify the owner | Alphanumeric | e.g., `tbd` |
 
 # E-SET-TUNA-CATCHES-FISHING-TRIP {#eSetTunaCatchesFishingTrip}
+
 <!-- This section of the form includes information summarizing the tuna catches associated with the fishing trip  -->
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/PL` |
 
 ## Catch Details
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| species | M  | The species/species group of bait used | **Code** from [All Species](#allSpecies)  | e.g., `ABL`  |
+| species | M | The species/species group of bait used | **Code** from [All Species](#allSpecies) | e.g., `ABL`  |
 
 | **Fate:** The fate which includes whether an individual was retained or discarded and the reason
+
 <!-- is this the fate of individuals? -->
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| type | M | The type of fate | **Code** from [Types of Fate](#typesOfFate)  | e.g., `DI` |
+| type | M | The type of fate | **Code** from [Types of Fate](#typesOfFate) | e.g., `DI` |
 | code | M | Further description of the details associated with the type of fate | **Code** from [Fates](#fates) | e.g., `DL` |
 :::
 
-| | | | | |
+||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| sampling_method | M  | The sampling method used to obtain total catch estimates per species for the event | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsForCatchEstimation) | e.g., `EP`  |
+| sampling_method | M  | The sampling method used to obtain total catch estimates per species for the event | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsForCatchEstimation) | e.g., `EP` |
 | number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level)  | Integer |e.g., `tbd` |
 
-
-| **Weight:** The catch weight corresponding to the specified product type recorded in ‘weight code’. If the fish has not been processed, it corresponds to the unprocessed weight.
+| **Weight:** The catch weight corresponding to the specified species and product type recorded in processing type. If the fish has not been processed, it corresponds to the unprocessed weight.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| processing_type | O |  | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
-| value_kg | O |  | Float | `tbd` |
-| estimation_method | O |  | **Code** from [Total Catch Estimation](#totalCatchEstimation) | e.g., `EP` |
+|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+| processing_type | O | Form in which the fish is processed prior to storage | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
+| value_kg | O | The value of fish weight expressed in kilograms (kg) | Float | `153` |
+| estimation_method | O | The method applied to derive the weight from the samples collected during observation | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
 :::
-
-<!-- Changed KG/T to Weight -->
-<!-- removed unit column -->
 
 # E-SET-TUNA-CATCHES {#eSetTunaCatches}
 
@@ -574,33 +578,21 @@ Species of Special Interest during tuna fishing events|
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| sampling_method | M | 	The sampling method used for the collection of biological sub-sample(s) | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
+| sampling_method | M | The sampling method used for the collection of biological sub-sample(s) | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
 
-| **Length 1:** Length of individual specimen
+| **Length:** The specimen's individual length corresponding to the specified length type. Up to two length measurements may be reported on the form.
+
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| type | M |The length code used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
+| type | M | The length code used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | value | M | The length (cm) corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
-| measuring_tool |M  | Specify the tool code used for the measurement  |**Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
+| measuring_tool |M  | Specify the tool code used for the measurement  | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
 | is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
 :::
 
-<!-- Changed "Value (cm)" to "Value" -->
+| **Weight:** The specimen's weight corresponding to the specified product type recorded in ‘weight code’. Unprocessed weight when the fish has not been processed
 
-| **Length 2:** 
-::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
-|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| type | O |The length code used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
-| value | O | The length (cm) corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
-| measuring_tool | O | Specify the tool code used for the measurement  |**Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
-| is_straight | O | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
-:::
-
-<!-- Changed "Value (cm)" to "Value" -->
-
-| **Weight:** The specimen’s weight corresponding to the specified product type recorded in ‘weight code’. Unprocessed weight when the fish has not been processed
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -609,11 +601,12 @@ Species of Special Interest during tuna fishing events|
 | estimation_method | O  | 	Method used to estimate weight of specimen| **Code** from [Weight Estimation Methods](#weightEstimationMethods) | e.g., `BR` |
 :::
 
-| | |  |  ||
+||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| sex | O | 	The sex of the sampled fish specimen. If unknown record “U” | **Code** from [Sex](#sex) | e.g., `F` |
+| sex | O | The sex of the sampled fish specimen | **Code** from [Sex](#sex) | e.g., `F` |
 
 | **Maturity:** The stage of maturity of the specimen according to standard maturity scales approved by the IOTC.
+
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -627,8 +620,7 @@ Species of Special Interest during tuna fishing events|
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | sample_type | O | The type of sample collected by the observer | **Code** from [Sampling Type](#samplingMethodsForSamplingCollections) | e.g., `WM`|
 | sample_preservation_method | O | The type of preservation method used to preserve the sample collected by the observer | **Code** from [Sample Preservation Method](#fishPreservationMethods) | e.g., `FR20` |
-| sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` 
-<!-- destination field added to reporting form  -->
+| sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` |
 
 :::
 | **Tag details**
@@ -646,7 +638,7 @@ Species of Special Interest during tuna fishing events|
 
 # E-SET-TUNA-CATCHES-SSI {#eSetTunaCatchesSSI}
 
-<!-- This section of the ROS form is for the reporting of catches of species of special interest from tuna fishing events. As defined by IOTC in the WPDCS14 report, this includes (1) all marine turtles, (2) all cetaceans, (3) all seabirds, (4) designated shark species, and more specifically those species subject to a retention ban (i.e., whale sharks, oceanic whitetip shark, and thresher sharks), (5) designated billfish species, and more specifically those included in Res. 18/05 (i.e., striped marlin, black marlin, blue marlin, and Indo-Pacific sailfish), and all mobulid rays -->
+This section of the form includes information about Species of Special Interest ([SSI](https://data.iotc.org/reference/latest/domain/biology/#SSIspecies)) sampled in selected sets.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -654,7 +646,7 @@ Species of Special Interest during tuna fishing events|
 | event_id | M |  The event identifier of the observed event. This should be a four digit numerical code 0001. A unique identifier should be allocated to each individual event | 4-digit-number   | e.g., `0004`  | 
 | specimen_id | M  | The parent specimen identifier | 4-digit number |e.g., `0005`  |
 
-## Specimen Details > Additionl Catch Details SSI
+## Additionl Catch Details on SSI
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -687,10 +679,10 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | O |Record the data and time when chumming for bait starts | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc | O | The date and time when chumming for bait starts | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
 | 
 
-| **Position:** Record the data and time when chumming for bait starts
+| **Position:** 
 :::
 
 ::: {style="margin-left:80px"}
@@ -704,28 +696,28 @@ Species of Special Interest during tuna fishing events|
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | O  | The date and time at the end of the bait fishing event, when the last brail is scooped from the net |  YYYY-MM-DD hh:mm   |e.g., `2025-09-15 12:00`|
+| date_time_utc | O | The date and time at the end of the bait fishing event, when the last brail is scooped from the net |  YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00`|
 
 | **Position:**
 :::
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| latitude | O |	The latitude of the position at the end of the setting operation  |  Decimal degrees (two decimal places) | e.g.,`-20.88` |
-| longitude |O | The longitude of the position at the end of the setting operation |  Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | O | The latitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g.,`-20.88` |
+| longitude | O | The longitude of the position at the end of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
 :::
 
 | **Depth:** 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| value | O  | The depth of the place where the net is being deployed. | Float  | e.g., `tbd` |
-| unit | O  |Indicate units (FT or M)  | String | e.g., `ft`  |
+| value | O | The depth of the place where the net is being deployed| Float | e.g., `tbd` |
+| unit | O | Indicate units (FT or M) | String | e.g., `ft`  |
 :::
 |  |  |  |  |  |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| fishing_gear | O  |The fishing gear during the specific bait fishing event  | **Code** from [Fishing Gear](#fishingGear) |  e.g., `DL`  |
-| number_of_fishers  | O  | The number of fishers that participate to the bait fishing event | Integer |e.g., `25` |
+| fishing_gear | O | The fishing gear during the specific bait fishing event  | **Code** from [Fishing Gear](#fishingGear) |  e.g., `DL` |
+| number_of_fishers  | O | The number of fishers that participate to the bait fishing event | Integer |e.g., `25` |
 
 # E-SET-BAIT-CATCHES {#eSetBaitCatches}
 
@@ -759,6 +751,7 @@ Species of Special Interest during tuna fishing events|
 | photo_ID | O  | The unique identifier of the photo taken of a specimen | Alphanumeric  | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png`  |
 
 # D-ACTIVITIES {#dActivities}
+
 <!-- This section of the reporting form describes the activities conducted throughout the fishing trip -->
 
 | Field | Requirement | Description | Format | Input value |

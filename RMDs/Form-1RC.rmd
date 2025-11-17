@@ -34,15 +34,15 @@ Total live weight of retained catches by species, along with information on the 
 ## General Information
 
 | Element | Requirement | Description | Format | Input value |
-|:-----------------|:------------:|:------------------------|:----- |:------------:|
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer	| e.g., `1996` |
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
 | Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code** from [Countries](#countries) |
 
 ## Main Data Elements
 
 | Element | Requirement | Description | Format | Input value |
-|:-------------|:------------:|:-------------------- |:----- | :----------------------- |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
 | Quarter | O | Fishing time period | Integer | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
 | Fishery | M | IOTC-defined fisheries | String | **Code** from [Fisheries](#Fisheries) |
 | IOTC area | M | Main IOTC areas | String | **Code** from [IOTC main areas](#IOTCareasMain) |
@@ -51,8 +51,8 @@ Total live weight of retained catches by species, along with information on the 
 
 ## Original Data
 
-| Element | Requirement | Description  | Format | Input value |
-|:-----------------|:-------------:|:--------------------- |:----- | :------------------ |
+| Element | Requirement | Description | Format | Input value |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
 | Original data type  | M | Preliminary/final status of the data | String | **Code** from [Types of data](#types) |
 | Original data source  | M | Source of information | String | **Code** from [Retained catches data sources](#dataSourcesRC) |
 | Original data processing | M  | Processing applied to the data | String | **Code** from [Retained catches data processings](#dataProcessingsRC) |
@@ -62,12 +62,12 @@ Total live weight of retained catches by species, along with information on the 
 
 | Element | Requirement | Description | Format | Input value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | Plain text | e.g., John Doe |
-| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | e.g., National Institute of Fisheries |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g.,  [nif\@gov.sc](mailto:nif@gov.sc){.email} |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., 1996-03-27 |
-| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., 1997-03-21 |
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
 
 # Reporting Deadlines
 

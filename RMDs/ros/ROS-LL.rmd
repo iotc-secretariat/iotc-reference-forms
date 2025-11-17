@@ -174,12 +174,12 @@ This section of the form includes information about the observer and an overview
 | lost | O | The number of days lost during the observation period | Integer | e.g., `1.1` |
 :::
 
-| **Reasons for lost days:** Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
+| **Reasons for lost days:** The reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| reason | O | The main reasons for days at sea lost to fishing activity | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
+| reason | O | The main reasons for days at sea lost to fishing activity. Up to 4 reasons may be reported on the form | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
 :::
 
 # V-INFO {#vInfo}
@@ -682,7 +682,7 @@ For each branchline configuration set-up previously identified how many have had
 
 # E-SET-CATCHES {#eSetCatches}
 
-This section of the reporting form includes information on individual species from a subset of a set that is observed.
+This section of the reporting form includes information on a species-specific subset of a set that is observed.
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -694,7 +694,7 @@ This section of the reporting form includes information on individual species fr
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| species | M | Species of individual specimen | **Code** from [All Species](#allSpecies) | e.g., `ABL` |
+| species | M | The species of the portion of catch of interest | **Code** from [All Species](#allSpecies) | e.g., `ABL` |
 
 | **Fate**: The fate which includes whether it was retained or discarded and the reason.
 
@@ -745,7 +745,7 @@ This section of the form is for the recording of biological information of the s
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | length_type | M | The type of length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | length_value_cm | M | The value of length corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
-| length_measuring_tool tool | M | The tool used for the measurement of the fish length | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
+| length_measuring_tool | M | The tool used for the measurement of the fish length | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
 | is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
 :::
 

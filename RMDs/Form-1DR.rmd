@@ -33,28 +33,28 @@ For the combination of each taxon, gear group, and fishery category listed in th
 
 | Element | Requirement | Description | Format | Input value  |
 | :-------- | :-----: | :----------------------- | :----- | :-------: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g. 1996 |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code** from [Countries](#countries) |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g. `1996` |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` | 
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., `FRA` |
 
 ## Main Data Elements
 
 | Element | Description | Format | Input value |
 | :-------- | :-------------------------- | :----- | :-------: |
-| Species | Fish species caught, whether retained or discarded | String | **Code** from [Species](#1DRspecies) |
-| Gear groups | Classification of different types of fishing gear that share similar characteristics or functions | String | **Code** from [Gear groups](#gearGroups) |
-| Fishery categories | One of the three main IOTC fishery categories defined according to the main gear used by the vessel and their recording in the IOTC Record of Authorised Vessels | String | **Code** from [Fishery categories](#fisheryCategories)|
+| Species | Fish species caught, whether retained or discarded | **Code** from [Species](#1DRspecies) | e.g., `YFT` |
+| Gear groups | Classification of different types of fishing gear that share similar characteristics or functions | **Code** from [Gear groups](#gearGroups) | e.g., `PL` | 
+| Fishery categories | One of the three main IOTC fishery categories defined according to the main gear used by the vessel and their recording in the IOTC Record of Authorised Vessels | **Code** from [Fishery categories](#fisheryCategories) | e.g., `COASTAL` | 
 
 # Reporting Metadata
 
 | Element | Requirement | Description | Format | Input value |
 | :-------- | :----: | :----------------------- | :------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | e.g., John Doe |
-| Liaison officer email | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., [nif\@gov.sc](mailto:nif@gov.sc){.email} |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., 1996-03-27 |
-| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., 1997-03-21 |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
+| Liaison officer email | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
 
 # Reporting Deadlines
 

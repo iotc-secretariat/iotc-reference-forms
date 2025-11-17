@@ -82,7 +82,7 @@ This section of the form includes information about the observer and an overview
 
 ## Observer Trip Details
 
-| **Embarkation:** Record the starting port. If the first observation is available after the departure form the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure) , record “at sea”.
+| **Embarkation:** The starting port. If the first observation is available after the departure from the port while the vessel is within port limits, this is still recorded as the observation starting port. If the observation starts at sea outside port limits (onboard observer boarding the vessel via a vessel transfer or EM records not available at the trip starting date due to a recording failure), record "at sea".
 ::: {style="margin-left:40px"}
 
 | **In port**
@@ -100,16 +100,16 @@ This section of the form includes information about the observer and an overview
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| latitude | M | The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | M | The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | M | The latitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | M | The longitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 ::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time of the start of observations | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc | M | The date and time of the start of observations in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 :::
 
-| **Disembarkation:** The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still considered as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking boarding the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , it is considered “at sea”.
+| **Disembarkation:** The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still considered as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking boarding the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , it is considered "at sea".
 
 ::: {style="margin-left:40px"}
 | **In port**
@@ -127,43 +127,45 @@ This section of the form includes information about the observer and an overview
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| latitude | M | The latitude of the observation ending location.  |Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | M | The longitude of the observation ending location.|Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | M | The latitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | M | The longitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time of the end of observations  | YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00` |
+| date_time_utc | M | The date and time corresponding to the end of observations in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 :::
 
 ## Observed Trip Summary
 
-| **Number of fishing events**
+| **Number of fishing sets:**: The total number of purse seine sets deployed by the vessel or observed by the scientific observer during a single fishing trip. Each set corresponds to one complete deployment of the purse seine.
+
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| conducted | M | The total number of fishing events/sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities.  |Integer |e.g., `tbd` |
-| observed | M | The total number of fishing sets/events monitored by the observer. In the case of EM, only processed events to be included |Integer |e.g., `tbd` |
+| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | e.g., `45` |
+| observed | M | The total number of fishing sets monitored by the observer. In the case of EM, only processed sets to be included | Integer | e.g., `45` |
 :::
 
-| **Number of days** 
+| **Number of hours:** The total number of hours the vessel is on a fishing trip, with each day defined as a 24-hour period. These days can be further categorised by activity type (e.g. searching, transiting, actively fishing, or present in fishing areas). 
+
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| searching | M | The number of hours/days searching during the observation period |Integer | e.g., `tbd` |
-| actively_fishing | M | The number of active fishing hours/days during the observation period | Integer | e.g., `tbd` |
-| in_fishing_area | O | The number of hours in the fishing area during the observation period | Integer | e.g., `tbd` |
-| transiting | O | The number of hours transiting during the observation period | Integer |e.g., `tbd` |
-| lost | M | The number of hours/days lost during the observation period | Integer| e.g., `tbd` | 
+| searching | M | The number of hours searching during the observation period | Integer | e.g., `420` |
+| actively_fishing | M | The number of active fishing hours during the observation period | Integer | e.g., `75` |
+| in_fishing_area | O | The number of hours in the fishing area during the observation period | Integer | e.g., `480` |
+| transiting | O | The number of hours transiting during the observation period | Integer | e.g., `100` |
+| lost | M | The number of hours lost during the observation period | Integer | e.g., `5` | 
 :::
 
-| **Reasons for lost days:** Record the reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify). Up to 4 reasons can be reported on the form. 
+| **Reasons for lost days:** The reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).  
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| reason_1 | O | Reason(s) of hours lost |  **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
+| reason | O | The main reasons for days at sea lost to fishing activity. Up to 4 reasons may be reported on the form | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
 :::
 
 # V-INFO {#vInfo}
@@ -235,33 +237,35 @@ This section of the form includes information about the overall fishing trip of 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | country | O | The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | e.g., `FRA` |
 | port | O | The port of the observation starting location | **Code** from [Ports](#ports) | e.g., `REREU` |
-| latitude | M | The latitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | M  |The longitude of the observation starting location | Decimal degrees (two decimal places) | e.g., `55.53`|
+| latitude | M | The latitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | M | The longitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time the vessel departed from port | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc | M | The date and time the vessel departed from port in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 :::
 
 | **Vessel return:** The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transhipment location record 'at-sea' plus the geographical coordinates corresponding to the location the transhipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
+
 ::: {style="margin-left:40px"}
 | **In port**
 :::
+
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | country | O |The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
 | port | O | The port of the observation ending location | **Code** from [Ports](#ports) | e.g., `REREU` |
-| latitude  | M | The latitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | M | The longitude of the observation ending location | Decimal degrees (two decimal places) | e.g., `55.53` |
+| latitude | M | The latitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | M | The longitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time (in Coordinated Universal Time, UTC) corresponding to the end of the observation period at the reported location | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_utc | M | The date and time (in Coordinated Universal Time, UTC) corresponding to the end of the observation period at the reported location | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 :::
 
 # V-ATTRIBUTES {#vAttributes}
@@ -429,9 +433,9 @@ This section describes details of each of the setting operations within the fish
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and the time in GMT/UTC the first dhan buoy and / or radio buoy is deployed to start the setting of the line | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
-| latitude | M | The latitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | M | The longitude of the position at the start of the setting operation | Decimal degrees (two decimal places) | e.g., `55.53` |
+| date_time_utc | M | The date and the time the first dhan buoy and / or radio buoy is deployed to start the setting of the line in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| latitude | M | The latitude of the position at the start of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | M | The longitude of the position at the start of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 | **School Sighting Cues:** The visual or instrumental signs used to detect the presence of a tuna school before setting the net. These cues may include natural indicators such as bird activity, fish jumping or surface ripples, floating objects, discoloured water, or instrumental detections from sonar, echo sounders, or radars.
@@ -446,21 +450,21 @@ This section describes details of each of the setting operations within the fish
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | school_types | M | The type of tuna school encountered | **Code** from [School Types](#schoolTypes) | e.g., `FS`  |
 | first_detection_method | O | The method by which the vessel first detected the tuna school, floating object, or bird aggregation. If multiple cues were observed, this field records the one that first prompted the vessel to change course | **Code** from [Detection Methods](#schoolDetectionMethods) | e.g., `AS` |
-| school_size_t | O | The estimation of the size of the tuna school being targeted (in tonnes) | Float | e.g., `tbd`  |
-| date_time_net_pursed_utc | O | The time when the net is fully pursed, i.e., all rings are up | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| school_size_t | O | The estimation of the size of the tuna school being targeted (in tonnes) | Float | e.g., `60`  |
+| date_time_net_pursed_utc | O | The date and time when the net is fully pursed, i.e., all rings are up, in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 
 | **Brailing:** The operation of lifting fish from the bunt of a purse seine net into the vessel using a brail, a basket-shaped net. This concentrates the catch and transfers it on board for sorting and storage. 
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_start_utc | O | The time that brailing starts | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00`  |
-| date_time_end_utc | O | The time that brailing ends | YYYY-MM-DD hh:mm | e.g., `2025-09-15 14:00` |
+| date_time_start_utc | O | The date and time the brailing operation starts in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| date_time_end_utc | O | The date and time the brailing operation ends | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 :::
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_skiff_onboard_utc | M | The time when the skiff comes on board and the set is over | YYYY-MM-DD hh:mm | e.g., `2025-09-15 12:00` |
+| date_time_skiff_onboard_utc | M | The date and time the skiff comes on board and the set is over in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 | maximum_closing_net_depth_m | O | The real, measured, closed net depth in metres (m) | Float | e.g., `60` |
 
 | **Object details** 
@@ -570,7 +574,7 @@ This section of the form is for the recording of biological information of the s
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | length_type | M | The type of length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | length_value_cm | M | The value of length corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
-| length_measuring_tool tool | M | The tool used for the measurement of the fish length | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
+| length_measuring_tool | M | The tool used for the measurement of the fish length | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
 | is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
 :::
 
@@ -664,10 +668,10 @@ This section of the reporting form describes the activities conducted throughout
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| date_time_utc | O | The date and time of the activity | YYYY-MM-DD hh:mm  | e.g., `2025-09-15 12:00` |
-| latitude | O | The latitude of the activity location | Decimal degrees (two decimal places) | e.g., `-20.88` |
-| longitude | O | The longitude of the activity location | Decimal degrees (two decimal places) | e.g., `55.53` |
-| activity_type | O | Record vessel activity at the start of every fishing activity and every two hours from sunrise to sunset | **Code** from [Surface Fishery Activities](#surfaceFisheryActivities) | e.g., `BA` |
+| date_time_utc | O | The date and time of the activity in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| latitude | M | The latitude of the activity position, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | M | The longitude of the activity position, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
+| activity_type | O | The vessel activity at the start of every fishing activity and every two hours from sunrise to sunset | **Code** from [Surface Fishery Activities](#surfaceFisheryActivities) | e.g., `BA` |
 | comments | O | An open field for additional notes or observations that are not captured in other sections of the form. This may include unusual events, clarifications, or any relevant information the observer wishes to provide | String | `free text` |
 
 # Reporting deadlines

@@ -34,52 +34,51 @@ Total number and/or live weight of retained catches by species and effort by str
 ## General Information
 
 | Element | Requirement | Description | Format | Input value  |
-| :----------------- | :-----: | :----------------------- | :----- | :-------: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., 1996 |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | String | **Code** from [Countries](#countries) |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g., `1996` |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` | 
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) | e.g., `FRA` | 
 
 ## Main Data Elements
 
 | Element | Requirement | Description | Format | Input value |
-| :----------------- | :-----: | :----------------------- | :----- | :-------: |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
 | Month | M | Month of fishing activities | Integer | 1..12 |
-| Fisheries | M | [IOTC fishery](../guidelines/#Fisheries) derived from the combination of several factors | String | **Code** from [Fisheries](#fisheries) |
-| Grid | M | Fishing area | String | **Code** from [Grid codes](#fishingArea) |
-| Species | M | Species caught and retained | String | **Code** from [Species](#allSpecies) |
-| Data raising | M | Level of raising (i.e., extrapolation) | String | **Code** from [Raisings](#raisings) | 
-| Catch unit | M | Units used to report the level of catches of a given species | String | **Code** from [Catch units](#catchUnits) |
+| Fisheries | M | [IOTC fishery](../guidelines/#Fisheries) derived from the combination of several factors | **Code** from [Fisheries](#fisheries) | e.g., `PS-DF[IN]TR` | 
+| Grid | M | Fishing area | **Code** from [Grid codes](#fishingArea) | e.g., `6100040` | 
+| Species | M | Species caught and retained | **Code** from [Species](#allSpecies) | e.g., `YFT` | 
+| Catch unit | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) | e.g., `T` |
 
 ## Original Data
 
 | Element | Requirement | Description | Format | Input value  |
-| :------------- | :-----: | :----------------------- | :----- | :-----------: |
-| Estimation | M | Indicates whether the data were estimated or actual recorded data | String | **Code** from [Types of estimations](#estimations) |
-| Original data type | M | Preliminary/final status of the data | String | **Code** from [Types of data](#types)      |
-| Original data source | M | Source of information | String | **Code** from [Catch and effort data sources](#dataSourcesCE)          |
-| Original data processing | M | Processing applied to the data | String | **Code** from [Catch and effort data processings](#dataProcessingsCE) |
-| Data raising | M | Level of raising (i.e., extrapolation) | String | **Code** from [Raisings](#dataRaising)| 
-|source coverage type | M | Variable used for data coverage | String | **Code** from [Types of coverage](#coverageTypes) |
-|Source coverage value | M | Value of coverage | Numeric | e.g., 20% |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Estimation | M | Indicates whether the data were estimated or actual recorded data | **Code** from [Types of estimations](#estimations) | e.g., `AV` | 
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) | e.g., `FI` |
+| Original data source | M | Source of information | **Code** from [Catch and effort data sources](#dataSourcesCE) | e.g., `LG` | 
+| Original data processing | M | Processing applied to the data | **Code** from [Catch and effort data processings](#dataProcessingsCE) | e.g., `SB` |
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising) | e.g., `RT` |
+| source coverage type | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) | e.g., `FW` |
+| Source coverage value | M | Value of coverage | Numeric with two decimal places | e.g., `0.23` |
 
 ## Effort Units
 
 | Element | Requirement | Description | Format | Input value  |
-| :------------- | :-----: | :----------------------- | :----- | :-----------: |
-| Primary   | M | Primary effort unit | String | **Code** from [Effort units](#effortUnits) |
-| Secondary | O | Secondary effort unit (if any) | String | **Code** from [Effort units](#effortUnits) |
-| Tertiary  | O | Tertiary effort unit (if any) | String | **Code** from [Effort units](#effortUnits) |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Primary   | M | Primary effort unit | **Code** from [Effort units](#effortUnits) | e.g., `FH` | 
+| Secondary | O | Secondary effort unit (if any) | **Code** from [Effort units](#effortUnits) | e.g., `NS` |
+| Tertiary  | O | Tertiary effort unit (if any) | **Code** from [Effort units](#effortUnits) | e.g., `SR` |
 
 # Reporting Metadata
 
 | Element | Requirement | Description | Format | Input value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | e.g., John Doe |
-| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | e.g., National Institute of Fisheries |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., [nif\@gov.sc](mailto:nif@gov.sc){.email} |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., 1996-03-27 |
-| Submission date | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., 1997-03-21 |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
+| Submission date | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
 
 # Reporting Deadlines
 
@@ -89,7 +88,7 @@ Total number and/or live weight of retained catches by species and effort by str
 
 # Additional Information
 
-## Effort Units Recommended By Fishery
+## Effort Units Recommended By Gear Group
 
 Effort units must be consistent with the recording requirements established in Res. [15/01](https://www.iotc.org/cmm/resolution-1501-recording-catch-and-effort-data-fishing-vessels-iotc-area-competence) complemented by numbers of fishing operations for [longline fisheries](#iotclonglinefishery) and [surface fisheries](#iotcsurfacefishery) ([IOTC-2022-SC25-R](https://iotc.org/documents/SC/25/RE)). For coastal fisheries, it is recommended that effort data be submitted in the same units as those prescribed for longline fisheries and surface fisheries characterised by the same fishing gear. 
 

@@ -35,47 +35,47 @@ Number of fishing vessel by size category, along with information on the value (
 
 ## General Information
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
+| Element | Requirement | Description | Format | Input value  |
+|:-----------------|:-------------:|:--------------------- |:----- | :------------------ |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | | 
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` | 
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) | e.g., `FRA` |
 
 ## Main Data Elements
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Vessel type | M | Type of fishing vessel according to primary gear or operational function | **Code** from [Vessel types](#vesselTypes) |
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:-------------:|:--------------------- |:-----| :------------------ |
+| Vessel type | M | Type of fishing vessel according to primary gear or operational function | **Code** from [Vessel types](#vesselTypes) | e.g., `LP` | 
 
 ## Original Data
 
-| Element        | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
-| Original data source | M | Source of information | **Code** from [Fishing craft data sources](#sourcesFC) |
-| Original data processing | M | Processing applied to the data | **Code** from [Fishing craft data processings](#dataProcessingsFC) |
-| Source coverage type     | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) |
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:-------------:|:--------------------- |:-----| :------------------ |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#dataTypes) | e.g., `FI` | 
+| Original data source | M | Source of information | **Code** from [Fishing craft data sources](#sourcesFC) | e.g., `GV` |
+| Original data processing | M | Processing applied to the data | **Code** from [Fishing craft data processings](#dataProcessingsFC) | e.g., `OR` |
+| Source coverage type | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) | e.g., `BO` |
 
 ## Vessel Characteristics
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Architecture | M | Type fishing vessel based on structural design and construction type | **Code** from [Vessel architectures](#vesselArchitectures) |
-| Mechanisation type | M | Type of vessel mechanisation| **Code** from [Mechanisation types](#mechanisationTypes)          |
-| Vessel size class types | M | Categories of vessel size class | **Code** from [Vessel size class types](#vesselSizeClassTypes) |
-| Fish preservation method | M | Type of preservation methods being used for target species onboard vessels | **Code** from [Fish preservation methods](#fishPreservationMethods) |
-| Fish storage | M | Type of structures present on-board and used by the vessel to store the catch | **Code** from [Fish storage method](#fishStorageTypes) |
+| Element | Requirement | Description | Format | Input value |
+|:-----------------|:-------------:|:--------------------- |:-----| :------------------ |
+| Architecture | M | Type fishing vessel based on structural design and construction type | **Code** from [Vessel architectures](#vesselArchitectures) | e.g., `PIRG` |
+| Mechanisation type | M | Type of vessel mechanisation| **Code** from [Mechanisation types](#mechanisationTypes) | e.g., `MO` | 
+| Vessel size types | M | Type of vessel size | **Code** from [Vessel size types](#vesselSizeTypes) | e.g., `GT` |
+| Fish preservation method | M | Type of preservation methods being used for target species onboard vessels | **Code** from [Fish preservation methods](#fishPreservationMethods) | e.g., `IC` |
+| Fish storage | M | Type of structures present on-board and used by the vessel to store the catch | **Code** from [Fish storage method](#fishStorageTypes) | e.g., `IC` |
 
 # Reporting Metadata
 
-| Element | Requirement | Description | Format | Example |
+| Element | Requirement | Description | Format | Input value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
-| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `National Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | e.g., `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g. `1997-03-21` |
 
 # Reporting Deadlines
 
@@ -155,7 +155,7 @@ out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 ```
 
-## Types of Vessel Size {#vesselSizeClassTypes}
+## Types of Vessel Size {#vesselSizeTypes}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#vesselSizeTypes)
 + **Version**: `r version_number("VESSEL_SIZE_TYPES")`
@@ -165,7 +165,7 @@ out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 out_dt(VESSEL_SIZE_TYPES, "VESSEL_SIZE_TYPES")
 ```
 
-## Types of Data {#types}
+## Types of Data {#dataTypes}
 
 + [Permalink](https://data.iotc.org/reference/latest/domain/data/#types)
 + **Version**: `r version_number("DATA_TYPES")`
