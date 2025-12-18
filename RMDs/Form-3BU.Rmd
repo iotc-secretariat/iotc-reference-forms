@@ -33,40 +33,40 @@ Single positions (latitude and longitude in decimal degrees) by buoy and day for
 
 ## General information
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| Reporting month | M | Month of the fishing activities reported through the dataset | Integer 1..12 |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
-| Vessel name | M | Name of purse seine vessel monitoring the buoy as available from the IOTC Record of Authorised Vessel [RAV](https://rav.iotc.org/) | Plain text |
-| Vessel IOTC number | M | IOTC registered number of the purse seine vessel monitoring the buoy | Plain text (e.g., IOTC018542) |
+| Element | Requirement | Description | Format | Input value  |
+| :----------------- | :-----: | :----------------------- | :-------------:|:-------------:|
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g., `1996` |
+| Reporting month | M | Month of the fishing activities reported through the dataset | Integer (1--12) | e.g., `3` | 
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` | 
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) | e.g., `ESP` |
+| Vessel name | M | Name of purse seine vessel monitoring the buoy as available from the IOTC Record of Authorised Vessel [RAV](https://rav.iotc.org/) | String | e.g., `DRENNEC` | 
+| Vessel IOTC number | M | IOTC registered number of the purse seine vessel monitoring the buoy | String | e.g., `IOTC018542` |
 
 ## Data specifications
 
-| Element | Requirement | Description | Code list  |
+| Element | Requirement | Description | Format | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) | e.g., `FI` | 
 
 ## Main data elements
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
+| Element | Requirement | Description | Format | Input value |
+| :----------------- | :-----: | :----------------------- | :-------: | :-------: |
 | Day of month | M | Day of the month of the fishing activities reported through the dataset | Integer 1..31 |
 | Buoy ID  | M | Unique identifier of buoy monitored| (e.g., ISD+, M3+, T8E) followed by 5-9 digits |
-| Latitude | M | Horizontal distances north or south of the Equator | Decimal degrees  |
-| Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees |
+| Latitude | M | The latitude of the buoy location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| Longitude | M | The longitude of the buoy location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 
 # Reporting metadata
 
-| Element | Requirement | Description | Format | Example |
+| Element | Requirement | Description | Format | Input value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
-| Liaison officer email	| M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
+| Liaison officer email	| M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `National Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | e.g., `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
 
 # Reporting deadlines
 
