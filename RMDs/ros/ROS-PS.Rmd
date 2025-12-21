@@ -39,7 +39,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 | [E-SET-CETACEANS](#eSetCetaceans) | Effort | Operations | Information on cetacean sightings and interactions |
 | [E-SET-CATCHES](#eSetCatches) | Catch | Operations | Information on magnitude, composition, and fate of catch |
 | [E-SET-CATCH-SPECIMENS](#eSetCatchSpecimens) | Catch | Species | Information on fish biology (size, sex, maturity), samples, and depredation |
-| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Catch  | Species | Information on Species of Special Interest (SSI) caught in the observed trip |
+| [E-SET-CATCH-SPECIMENS-SSI](#eSetCatchSpecimensSSI) | Catch | Species | Information on Species of Special Interest (SSI) caught in the observed trip |
 | [E-SET-TAG-DETAILS](#eSetTagDetails) | Catch | Species | Information on specimen condition and tag details |
 | [DAILY-ACTIVITIES](#dailyActivities) | Metadata | Trip | Information on the locations of various trip activities |
 
