@@ -90,18 +90,24 @@ Total number and/or live weight of retained catches by species and effort by str
 
 ## Effort Units Recommended By Gear Group
 
-Effort units must be consistent with the recording requirements established in Res. [15/01](https://www.iotc.org/cmm/resolution-1501-recording-catch-and-effort-data-fishing-vessels-iotc-area-competence) complemented by numbers of fishing operations for [longline fisheries](#iotclonglinefishery) and [surface fisheries](#iotcsurfacefishery) ([IOTC-2022-SC25-R](https://iotc.org/documents/SC/25/RE)). For coastal fisheries, it is recommended that effort data be submitted in the same units as those prescribed for longline fisheries and surface fisheries characterised by the same fishing gear. 
+Estimates of fishing effort shall be expressed in units consistent with the recording requirements established by relevant IOTC Conservation and Management Measures and shall be complemented by the number of [fishing operations/sets](https://data.iotc.org/reference/latest/guidelines/#fishingOperation) for [longline fisheries](https://data.iotc.org/reference/latest/guidelines/#iotcLonglineFishery) and [surface fisheries](https://data.iotc.org/reference/latest/guidelines/#iotcSurfaceFishery).
+
+For most gears (e.g., purse seine, longline, gillnet, handline), a fishing operation corresponds to one complete deployment and retrieval of the gear. In [pole-and-line fisheries](https://data.iotc.org/reference/latest/guidelines/#poleAndLineFishery), multiple poles may be operated simultaneously while fishing on the same school. In such cases, the overall fishing activity may constitute a fishing event that includes several individual fishing operations/sets. However, for reporting purposes, effort should be standardised in a manner that ensures comparability across fisheries and consistency with observer coverage requirements.
+
+For coastal fisheries, it is recommended that effort data be submitted using the same effort units as those prescribed for longline and surface fisheries characterised by the same fishing gear.
+
+## Standard effort units by gear group
 
 | Gear group | Primary effort | Secondary effort | 
 | :------------ | :-------------------- | :------------------- |
-Gillnets (GI)        | Number of fishing days   | Number of fishing operations |
-Hooks and lines (HL) | Number of fishing days   | Number of fishing operations |
-Longlines (LL)       | Number of hooks deployed | Number of fishing operations |
-Other gears (OT)     | Number of days at sea    | Number of active gears/fishing operations |
-Pole-and-lines (PL)  | Number of fishing days   | Number of fishing operations |
-Purse seines (PS)    | Number of fishing hours  | Number of fishing operations |
+Gillnets (GI)        | Number of fishing days   | Number of fishing operations/sets |
+Hooks and lines (HL) | Number of fishing days   | Number of fishing operations/sets |
+Longlines (LL)       | Number of hooks deployed | Number of fishing operations/sets |
+Other gears (OT)     | Number of days at sea    | Number of active gears or fishing operations/sets |
+Pole-and-lines (PL)  | Number of fishing days   | Number of fishing operations/sets |
+Purse seines (PS)    | Number of fishing hours  | Number of fishing operations/sets |
 
-From a general perspective, using trips as a unit of effort is not recommended because trip duration can vary widely due to factors such as vessel size, fishing success, and technical considerations (e.g., fuel availability).
+## Additional effort indicators
 
 Additional units may be considered to refine and standardise the estimation of nominal fishing effort:
 
@@ -109,9 +115,13 @@ i. In gillnet fisheries, the surface area of the nets deployed may better reflec
 
 ii. In hooks and line fisheries, the number of hooks may be used as required for longline fisheries;
 
-iii. In pole-and-line fisheries, the number of day-poles used may help account for differences in the number of fishers onboard the vessels;
+iii. In purse seine fisheries, the numbers of successful and null fishing operations, searching time, and surface area explored may complement the information provided by fishing time and the total number of fishing sets. 
 
-iv. In purse seine fisheries, the numbers of successful and null fishing operations, searching time, and surface area explored may complement the information provided by fishing time and the total number of fishing sets. 
+## Units not recommended
+
+From a general perspective, the use of trips as a unit of effort is not recommended, as trip duration may vary widely due to vessel size, fishing success, environmental conditions, or operational constraints (e.g., fuel availability).
+
+Similarly, fishing events may not accurately reflect the level of effort exerted in pole-and-line fisheries where the number of poles operated simultaneously varies between events. For this reason, the fishing operation/set remains the preferred standardised unit for effort reporting wherever feasible.
 
 ## Other Dimensions
 
@@ -119,9 +129,9 @@ The spatial and temporal resolutions, catch units, and level of extrapolation va
 
 | Category | Temporal resolution | Spatial resolution | Catch unit | Extrapolation | 
 | :-------- | :--------- | :---------- | :------------- | :-------: |
-[Surface fisheries](#iotcsurfacefishery)  | Month | [1° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids1x1) | Live weight equivalent | M |
-[Longline fisheries](#iotclonglinefishery) | Month or finer for the SC | [5° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids5x5) or finer for the SC | Numbers or live weight equivalent | M |
-[Coastal fisheries](#iotccoastalfishery) | Year or finer | [Irregular areas](https://data.iotc.org/reference/latest/domain/admin/#IOTCareasAR) | Numbers or live weight equivalent | O |
+[Surface fisheries](https://data.iotc.org/reference/latest/guidelines/#iotcSurfaceFishery)  | Month | [1° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids1x1) | Live weight equivalent | M |
+[Longline fisheries](https://data.iotc.org/reference/latest/guidelines/#iotcLonglineFishery) | Month or finer for the SC | [5° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/#IOgrids5x5) or finer for the SC | Numbers or live weight equivalent | M |
+[Coastal fisheries](https://data.iotc.org/reference/latest/guidelines/#iotcCoastalFishery) | Year or finer | [Irregular areas](https://data.iotc.org/reference/latest/domain/admin/#IOTCareasAR) | Numbers or live weight equivalent | O |
 
 # Reference Code Lists
 
