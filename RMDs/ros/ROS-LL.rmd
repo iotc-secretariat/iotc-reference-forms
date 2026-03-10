@@ -589,7 +589,7 @@ This section of the form includes information about the specific hooks observed 
 ## Hook Details
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | hook_type | M | The type of hooks used | **Code** from [Hook Types](#hookTypes) | e.g., `C13` |
 | percentage | O | The percentage (%) of hooks set by type | Float | **100** |
 | variations | O | Indicates any variations in hook type, hook material, and presence/absence of hook ring where possible | String | `tbd` |
@@ -599,14 +599,14 @@ This section of the form includes information about the specific hooks observed 
 This section of the form includes information about the specific baits observed in each set of the trip.
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0095` |
 
 ## Bait Details
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | condition | M | The bait type condition used | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE`  |
 | species | M | The species/species group of bait used | **Code** from [Bait Species](#baitSpecies) | e.g., `ANX` |
 | percentage | M | The approximate proportion (%) of bait species and condition used across all hooks in the set | Float | e.g., `70` |
@@ -617,7 +617,7 @@ This section of the form includes information about the specific baits observed 
 This section includes specific hauling information observed for each set of the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0084` |
 
@@ -627,7 +627,7 @@ This section includes specific hauling information observed for each set of the 
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | date_time_utc | M | The date and the time when the first dhan buoy and / or radio buoy is hauled back on-board to start hauling the line in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 | latitude | O | The latitude of the position at the start of the hauling operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
 | longitude | O | The longitude of the position at the start of the hauling operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
@@ -637,24 +637,24 @@ This section includes specific hauling information observed for each set of the 
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | date_time_utc | M | The date and the time when the last component of the longline gear (dhan buoy and / or radio buoy) is hauled back on-board in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
 | latitude | O | The latitude of the position at the end of the hauling operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
 | longitude | O | The longitude of the position at the end of the hauling operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 :::
 
 ||||||
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | offal_management | O | The fate given to the offal (fish heads, guts, etc.) and bait produced during the observed set | **Code** from [Offal Management Types](#offalManagementTypes) | e.g., `AH` |
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format  | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | position | O | The position(s) where offal and used bait was disposed. Up to four positions of offal and bait disposal may be reported on the form |  **Code** from [Vessel Section](#vesselSection) | e.g., `BW` |
 :::
 
 ||||||
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
 | number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | e.g., `800` |
 | number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved observed | Integer | e.g., `1274` |
@@ -665,7 +665,7 @@ This section includes specific hauling information observed for each set of the 
 This section of the form includes information about individual biteoffs for each set within a fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0023` |
 
@@ -675,7 +675,7 @@ For each branchline configuration set-up previously identified how many have had
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format  | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | branchline_configuration_id | O | The identifier of the branchline configuration | Integer | e.g.,`-` |
 | number_of_biteoffs | O | The number of biteoffs observed | Integer | e.g., `1680` |
 :::
@@ -685,7 +685,7 @@ For each branchline configuration set-up previously identified how many have had
 This section of the reporting form includes information on a species-specific subset of a set that is observed.
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
 | catch_id | M | Unique identifier of the species-specific part of the catch, within a trip | Alphanumeric code | e.g., `02851` |
@@ -693,20 +693,20 @@ This section of the reporting form includes information on a species-specific su
 ## Catch Details
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | species | M | The species of the portion of catch of interest | **Code** from [All Species](#allSpecies) | e.g., `ABL` |
 
 | **Fate**: The fate which includes whether it was retained or discarded and the reason.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format  | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | fate_type | M | The outcome of the catch, indicating whether a fish was retained on board or discarded | **Code** from [Types of Fate](#fateType) | e.g., `DI` |
 | fate | M | The final disposition of the catch or sampled portion of the catch, indicating whether it was retained on board or discarded, with specification of the reason where applicable | **Code** from [Fates](#fates) | e.g., `DL` |
 :::
 
 ||||||
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | sampling_method | M | The method applied to derive the total catch from the samples collected during observation | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
 | number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | e.g., `7` |
 
@@ -714,7 +714,7 @@ This section of the reporting form includes information on a species-specific su
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | processing_type | O | Form in which the fish is processed prior to storage | **Code** from  [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
 | value_kg | O | The value of fish weight expressed in kilograms (kg) | Float | `153` |
 | estimation_method | O | The method applied to derive the weight from the samples collected during observation | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
@@ -725,7 +725,7 @@ This section of the reporting form includes information on a species-specific su
 This section of the form is for the recording of biological information of the specimens sampled during individual sets.
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0003` |
 | catch_id | M | The parent catch identifier | Alphanumeric code | `C188` |
@@ -734,7 +734,7 @@ This section of the form is for the recording of biological information of the s
 ## Specimen Details
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | sampling_period | M | Stage period when the specimen was sampled | **Code** from [Sampling Period](#samplingPeriod) | e.g., `BS` |
 | sampling_method | M | The sampling method used for the collection of biological sub-sample(s) | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
 
@@ -742,7 +742,7 @@ This section of the form is for the recording of biological information of the s
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | length_type | M | The type of length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | length_value_cm | M | The value of length corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
 | length_measuring_tool | M | The tool used for the measurement of the fish length | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
@@ -753,21 +753,21 @@ This section of the form is for the recording of biological information of the s
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | weight_processing_type | O | The processing/dressing used for the weight measurement | **Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
 | weight_value_kg | O | The weight corresponding to the weight measurement type code | Float | e.g., `43.2` |
 | weight_estimation_method | O | The method used to estimate the weight of the specimen | **Code** from [Weight Measurement Tools](#weightMeasurementTools) | e.g., `BR` |
 :::
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | sex | O | The sex of the sampled fish specimen | **Code** from [Sex](#sex) | e.g., `F` |
 
 | **Maturity:** The stage of maturity of the specimen according to standard maturity scales approved by the IOTC.
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | maturity_scale | O | The standardised system used to classify the reproductive development of fish (i.e., source) | String | e.g., `ICCAT` |
 | maturity_stage | O | The reproductive stage of a fish determined through visual inspection of the gonads without the aid of a microscope | **Code** from [Maturity Stages](#maturityStages) | e.g., `DEV` | 
 :::
@@ -776,7 +776,7 @@ This section of the form is for the recording of biological information of the s
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | sample_type | O | The type of sample collected by the observer | **Code** from [Sampling Type](#samplingMethodsForSamplingCollections) | e.g., `WM`|
 | sample_preservation_method | O | The type of preservation method used to preserve the sample collected by the observer | **Code** from [Sample Preservation Method](#fishPreservationMethods) | e.g., `FR20` |
 | sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` |
@@ -786,7 +786,7 @@ This section of the form is for the recording of biological information of the s
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | depredation_source | O | The depredation source based on depredation scar characteristics | **Code** from [Depredation Sources](#depredationSources) | e.g., `BA` |
 | observed_predator | O | The predator species when directly observed and identified | **Code** from [Predator Species](#predatorSpecies) | e.g., `AG15` |
 :::
@@ -796,7 +796,7 @@ This section of the form is for the recording of biological information of the s
 This section of the form includes information about Species of Special Interest ([SSI](https://data.iotc.org/reference/latest/domain/biology/#SSIspecies)) sampled in selected sets.
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0004` |
 | catch_id | M | The parent catch identifier | Alphanumeric code | e.g., `0004#1` |
@@ -805,7 +805,7 @@ This section of the form includes information about Species of Special Interest 
 ## Additional Catch Details on SSI
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | condition_at_capture | M | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
 | condition_at_release | M | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
 | gear_interaction | M | The type of interaction of the specimen with the fishing gear ("UK" if unknown as not possible to collect) | **Code** from [Gear Interactions](#gearInteractions) | e.g., `EF` |
@@ -815,7 +815,7 @@ This section of the form includes information about Species of Special Interest 
 
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | bait_condition | O | | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE` |
 | bait_type | O |   | **Code** from [Bait Types](#baitTypes) | e.g., `FF` | 
 :::
@@ -824,13 +824,13 @@ This section of the form includes information about Species of Special Interest 
 ::: {style="margin-left:40px"}
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | material | M | The leader material the SSI individual was hauled on | **Code** from [Line Material Types](#lineMaterialTypes)| e.g., `MN` |
 | diameter | O | The thickness (mm) of the leader the SSI individual was hauled on | Float |  |
 :::
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | dehooker_device | O | The dehooking or line cutting device used to extract the hook | **Code** [Dehooker Types](#dehookerTypes) from | e.g., HD  |
 | brought_onboard | O | Indicates whether or not the specimen was brought onboard (Yes/No/Unk) | String | e.g., `Yes` |
 | handling_method | O | Detail how the specimen was brought onboard | **Code** from [Handling Methods](#handlingMethods) | e.g., `AN` |
@@ -853,7 +853,7 @@ This section of the form includes information about Species of Special Interest 
 This section of the form is for the reporting of each of the tags recovered during the observed portion of the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` | 
 | set_id | M | The parent set identifier | 4-digit number | e.g., `0023` |
 | catch_id | M | The parent catch identifier | Alphanumeric | e.g., `0023#1` |
@@ -862,13 +862,13 @@ This section of the form is for the reporting of each of the tags recovered duri
 ## Tag Details
 
 | Field | Requirement | Description | Format | Input value |
-|:--------------|:-------------:|:--------------|:-------------:|:-------------:|
+|:------- |:-----:|:------------------------|:---------:|:----------------:|
 | release | O | Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
 | recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
 | type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
 | tag_id | O | The tag identifier(s). Up to two identifier may be reported on the form | Alphanumeric | e.g., `AA19051` |
 | finder_name | O | The full name of the person who found the tag, recorded as first and last names | String | e.g., `Jane Doe` |
-| finder_contact_details | O | The contact details (e.g., address, email, telephone) of the person who found the tag | String | e.g., `jane.doe@fishing.org | (650) 214-6369` |
+| finder_contact_details | O | The contact details (e.g., address, email, telephone) of the person who found the tag | String | e.g., `jane.doe@fishing.org` |
 
 # Reporting Deadlines
 
