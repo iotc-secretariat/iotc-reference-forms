@@ -25,13 +25,13 @@ This form provides for the monthly reporting of daily positions for each of the 
 
 Click [here](./Form-3BU.xlsx) to download a blank version of Form 3BU, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
-# Data content
+# Data Content
 
 Single positions (latitude and longitude in decimal degrees) by buoy and day for each purse seine vessel.
 
 # Stratification
 
-## General information
+## General Information
 
 | Element | Requirement | Description | Format | Input value  |
 | :-------- | :-----: | :----------------------- | :-------------:|:-------------:|
@@ -39,16 +39,16 @@ Single positions (latitude and longitude in decimal degrees) by buoy and day for
 | Reporting month | M | Month of the fishing activities reported through the dataset | Integer (1--12) | e.g., `3` | 
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` | 
 | Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) | e.g., `ESP` |
-| Vessel name | M | Name of purse seine vessel monitoring the buoy as available from the IOTC Record of Authorised Vessel [RAV](https://rav.iotc.org/) | String | e.g., `DRENNEC` | 
-| Vessel IOTC number | M | IOTC registered number of the purse seine vessel monitoring the buoy | String | e.g., `IOTC018542` |
+| Vessel name | M | Name of purse seine vessel monitoring the buoy as available from the IOTC Record of Authorised Vessel ([RAV](https://rav.iotc.org/)) | String | e.g., `DRENNEC` | 
+| Vessel IOTC number | M | IOTC registered number of the purse seine vessel monitoring the buoy as available from the IOTC Record of Authorised Vessel ([RAV](https://rav.iotc.org/)) | String | e.g., `IOTC018542` |
 
-## Data specifications
+## Data Specifications
 
 | Element | Requirement | Description | Format | Input value |
 | :-------- | :-----: | :------------------- | :-----------: | :-------: |
 | Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) | e.g., `FI` | 
 
-## Main data elements
+## Main Data Elements
 
 | Element | Requirement | Description | Format | Input value |
 | :-------- | :-----: | :----------------------- | :-------: | :-------: |
@@ -57,23 +57,23 @@ Single positions (latitude and longitude in decimal degrees) by buoy and day for
 | Latitude | M | The latitude of the buoy location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
 | Longitude | M | The longitude of the buoy location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 
-# Reporting metadata
+# Reporting Metadata
 
 | Element | Requirement | Description | Format | Input value |
 | :-------- | :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
 | Liaison officer email	| M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
 | Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
 | Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
 
-# Reporting deadlines
+# Reporting Deadlines
 
 - **Surface fisheries**: To be submitted with a 30–60 day delay (Para. 23 of Res. [24/02](https://www.iotc.org/cmm/resolution-2402-management-drifting-fish-aggregating-devices-fads-iotc-area-competence))
 or a 60-90 delay (Para. 24 of Res. [19/02](https://iotc.org/cmm/resolution-1902-procedures-fish-aggregating-devices-fads-management-plan), which remains binding on Oman)
 
-# Reference code lists
+# Reference Code Lists
 
 ## Entities {#entities}
 
@@ -87,7 +87,7 @@ out_dt(ENTITIES, "ENTITIES")
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## Types of data {#types}
+## Types of Data {#types}
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")

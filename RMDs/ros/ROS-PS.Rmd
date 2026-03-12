@@ -528,6 +528,7 @@ This section of the form is for reporting the details of the species-specific po
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | species | M | The species code for the portion of catch observed | **Code** from [All Species](#allSpecies) | e.g., `ABL` | 
+
 | **Fate:** The fate which includes whether it was retained or discarded and the reason.
 
 ::: {style="margin-left:40px"}

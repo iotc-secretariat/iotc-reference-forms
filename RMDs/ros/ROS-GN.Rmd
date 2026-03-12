@@ -1116,15 +1116,15 @@ out_dt(MATURITY_STAGES, "MATURITY_STAGES")
 out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
 ```
 
-## Sample Preservation Methods {#fishPreservationMethods}
+<!-- ## Sample Preservation Methods {#fishPreservationMethods} -->
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
--   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
--   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
+<!-- -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes) -->
+<!-- -   **Version**: `r version_number("FISH_PRESERVATION_METHODS")` -->
+<!-- -   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")` -->
 
-```{r collapse = TRUE}
-out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
-```
+<!-- ```{r collapse = TRUE} -->
+<!-- out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS") -->
+<!-- ``` -->
 
 ## Tag Types {#tagTypes}
 
@@ -1135,24 +1135,3 @@ out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```{r collapse = TRUE}
 out_dt(TAG_TYPES, "TAG_TYPES")
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

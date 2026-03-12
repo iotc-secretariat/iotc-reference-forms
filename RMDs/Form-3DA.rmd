@@ -25,102 +25,103 @@ This form provides for the reporting of data on operational activities conducted
 
 Click [here](./Form-3DA.xlsx) to download a blank version of Form 3DA, or [return](./index.html) to the list of all IOTC statistical data reporting forms. Click [here](./Form-3DA-update.xlsx) to download a blank version of Form 3DA which has been designed to report updated data for a single fishery.
 
-# Data content
+# Data Content
 
 Operational information on DFOB-related activities, including buoys and DFOB characteristics and dimensions, along with estimates of retained catches and discards (in numbers or live weight equivalent) by species, fate, raising status, and catch unit.
 
 # Stratification
 
-## General information
+## General Information
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer, e.g., 1996 |
-| Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
-| Flag state | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |
-| Reporting month | M | Calendar month of the fishing activities reported through the dataset | Integer 1..12 |
+| Element | Requirement | Description | Format | Input value  |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g., `1996` |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` | 
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) | e.g., `ESP` |
+| Reporting month | M | Month of the fishing activities reported through the dataset | Integer (1--12) | e.g., `3` | 
 
-## Data specifications
+## Data Specifications
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#datatypes) |
+| Element | Requirement | Description | Format | Input value | 
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) | e.g., `FI` | 
 
-## Main data elements
+## Main Data Elements
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Vessel name | M | Name of vessel monitoring the buoy | Plain text  |
-| Vessel IOTC number | M | IOTC registered number of the vessel monitoring the buoy | Plain text (e.g., IOTC013542) || Day of the month | M | Day of the month of the fishing activities reported through the dataset | Integer 1..31 |
-| UTC time  | M | Universal time at which the drifting floating object was visited | time (_hh:mm_) |
-| Latitude  | M | Horizontal distances north or south of the Equator | Decimal degrees  |
-| Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees |
-| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
-| Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](#typesOfFate) |
-| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | 
-| Catch unit   | M | Unit used to report the value of catch of a given species | **Code** from [Catch units](#catchUnits) |
+| Element | Requirement | Description | Format | Input value  |
+|:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Vessel name | M | Name of the purse seine vessel as available from the IOTC Record of Authorised Vessel ([RAV](https://rav.iotc.org/)) | String | e.g., `DRENNEC` | 
+| Vessel IOTC number | M | IOTC registered number of the purse seine vessel as available from the IOTC Record of Authorised Vessel ([RAV](https://rav.iotc.org/)) | String | e.g., `IOTC018542` |
+| Day of the month | M | Day of the month of the fishing activities reported through the dataset | Integer | e.g., `23` |
+| UTC time  | M | The date and time at which the drifting floating object was visited in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| Latitude  | M | The latitude of the drifting floating object location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| Longitude | M | The longitude of the drifting floating object location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
+| Species | M | Species caught and discarded | **Code** from [All Species](#allSpecies) | e.g., `YFT` | 
+| Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](#typesOfFate) | e.g., `DL` | 
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | e.g., `NR` | 
+| Catch unit   | M | Unit used to report the value of catch of a given species | **Code** from [Catch units](#catchUnits) | e.g., `T` | 
 
-## Buoy data
+## Buoy Data
 
-| Element | Requirement | Description | Input value |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Present | M | Indicates whether a buoy is attached to the drifting floating object | Boolean (Y/N) |
-| Identifier | M | Unique identifier of buoy monitored | (e.g., ISD+, M3+, T8E) followed by 5-9 digits | Plain text |
-| Position | M | Indicates whether the vessel have access/knowledge of the buoy position | Boolean (Y/N) |
-| Activity | M | Type of activities undertaken when visiting or deploying the drifting floating object | **Code** from [Buoy activity types](#DFOBbuoyActivityTypes) |
+| Element | Requirement | Description | Format | Input value |
+:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Present | M | Indicates whether a buoy is attached to the drifting floating object | Boolean (Y/N) | e.g., `N` | 
+| Identifier | M |  Unique identifier of buoy monitored generally composed of the concatenation of the buoy model with with 5-9 digits | String | e.g., `SLX328501` |
+| Position | M | Indicates whether the vessel have access/knowledge of the buoy position | Boolean (Y/N) | e.g., `Y` | 
+| Activity | M | Type of activities undertaken when visiting or deploying the drifting floating object | **Code** from [Buoy activity types](#DFOBbuoyActivityTypes) | e.g., `DE` | 
 
-## DFOB data
+## DFOB Data
 
-| Element | Requirement | Description | Input value  |
-| :----------------- | :-----: | :----------------------- | :-------: |
-| Identifier | M | Unique identifier of the drifting floating object | Plain text |
-| Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](#FOBtypes) |
-| Activity | M | Type of activity undertaken when visiting or deploying the drifting floating object | **Code** from [Types of DFOB activities](#FOBactivityTypes) |
+| Element | Requirement | Description | Format ¦ Input value  |
+:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Identifier | M | Unique identifier of the drifting floating object | String | e.g., `IOTC-ABC-123` | 
+| Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](#FOBtypes) | e.g., `DFAD` | 
+| Activity | M | Type of activity undertaken when visiting or deploying the drifting floating object | **Code** from [Types of DFOB activities](#DFOBactivityTypes) | e.g., `DE` | 
 
-### DFOB characteristics 
+## DFOB Characteristics 
 
 Description of the materials and dimensions of both *surface* and *subsurface* components of the drifting floating objects.
 
-#### Surface (raft)
+#### Surface (Raft)
 
-| Element | Requirement | Description | Unit  | Format  |
-|:---------------| :----: | :----------------------|:------------|:------------------|
-| Plastic  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | - | Boolean (Y/N) |
-| Metal  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | - | Boolean (Y/N) |
-| Length | M | Length of the surface or near-surface structure of the drifting floating object | cm | Decimal |
-| Width  | O |  Width of the surface or near-surface structure of the drifting floating object  | cm | Decimal |
-| Height | O | Height of the surface or near-surface structure of the drifting floating object | cm | Decimal | 
-| Mesh   | M | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | - | Boolean (Y/N) |
-| Mesh size | O | Size of the main net mesh used on the surface or near-surface structure of the drifting floating object (if any) | mm | Decimal |
+| Element | Requirement | Description | Format | Input value  |
+:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Plastic | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | Boolean (Y/N) | e.g., `Y` | 
+| Metal  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | Boolean (Y/N) | e.g., `Y` | 
+| Length | M | Length of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `150` |
+| Width  | O | Width of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | e.g. `120` |
+| Height | O | Height of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `50` |
+| Mesh   | M | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | Boolean (Y/N) | e.g., `Y` |
+| Mesh size | O | Size of the main net mesh used on the surface or near-surface structure of the drifting floating object (if any) in millimetres (mm) | Numeric | e.g., `5` |
 
-#### Subsurface (tail)
+#### Subsurface (Tail/Cage)
 
-| Element | Requirement | Description | Unit  | Format  |
-| :---------------| :---: | :----------------------|:------------|:------------------|
-| Plastic  | M | Indicates whether the tail of the drifting floating object contains some plastic materials | - | Boolean (Y/N) |
-| Metal | M | Indicates whether the tail of the drifting floating object contains some metal materials | - | Boolean (Y/N) |
-| Length | M |  Length of the subsurface structure of the drifting floating object | cm | Decimal |
-| Width  | O | Width of the subsurface structure of the drifting floating object  | cm | Decimal |
-| Height | O | Height of the subsurface structure of the drifting floating object | cm | Decimal |
-| Mesh | M | Indicates whether the subsurface structure of the drifting floating object contains mesh | - | Boolean (Y/N) |
-| Mesh size | O | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) | mm | Decimal |
+| Element | Requirement | Description | Format | Input value | 
+:------- |:-----:|:-----------------------|:-------------:|:-------------:|
+| Plastic | M | Indicates whether the tail of the drifting floating object contains some plastic materials | Boolean (Y/N) | e.g., `N` | 
+| Metal | M | Indicates whether the tail of the drifting floating object contains some metal materials | Boolean (Y/N) | e.g., `N` |
+| Length | M |  Length of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `100` | 
+| Width  | O | Width of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `100` |
+| Height | O | Height of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `80` | 
+| Mesh | M | Indicates whether the subsurface structure of the drifting floating object contains mesh | Boolean (Y/N) | e.g., `Y` | 
+| Mesh size | O | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) in millimetres (mm) | Numeric | e.g., `3` | 
 
-# Reporting metadata
+# Reporting Metadata
 
-| Element | Requirement | Description | Format | Example |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
-| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+| Element | Requirement | Description | Format | Input value |
+| :-------- | :----: | :----------------------- | :-------- | :------------ |
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
+| Liaison officer email	| M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
 
-# Reporting deadlines
+# Reporting Deadlines
 
 - **Surface fisheries**: 30 June (final)
 
-# Reference code lists
+# Reference Code Lists
 
 ## Entities {#entities}
 
@@ -134,7 +135,7 @@ out_dt(ENTITIES, "ENTITIES")
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
-## Types of data {#datatypes}
+## Types of Data {#datatypes}
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
@@ -152,25 +153,25 @@ out_dt(FISHERIES, "FISHERIES")
 out_dt(SPECIES, "SPECIES")
 ```
 
-## Types of buoy activities {#FOBbuoyActivityTypes}
+## Types of Buoy Activities {#DFOBbuoyActivityTypes}
 
 ```{r collapse = TRUE}
 out_dt(BUOY_ACTIVITIES, "BUOY_ACTIVITIES")
 ```
 
-## Types of drifting floating objects {#FOBtypes}
+## Types of Drifting Floating Objects {#FOBtypes}
 
 ```{r collapse = TRUE}
 out_dt(DFOB_TYPES, "DFOB_TYPES")
 ```
 
-## Types of activities on drifting floating objects {#DFOBactivityTypes}
+## Types of Activities on Drifting Floating Objects {#DFOBactivityTypes}
 
 ```{r collapse = TRUE}
 out_dt(DFOB_ACTIVITIES, "DFOB_ACTIVITIES")
 ```
 
-## Types of fates {#typesOfFate}
+## Types of Fates {#typesOfFate}
 
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
@@ -182,7 +183,7 @@ out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
-## Catch units {#catchUnits}
+## Catch Units {#catchUnits}
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
