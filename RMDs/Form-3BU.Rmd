@@ -9,7 +9,7 @@ output:
     fig_caption: TRUE
       
   html_document2:
-    css: "../templates/html_template.css"
+    css: "../templates/fao_template_simplified.css"
     includes: 
       in_header: "../templates/google-analytics.html"
     number_sections: FALSE
