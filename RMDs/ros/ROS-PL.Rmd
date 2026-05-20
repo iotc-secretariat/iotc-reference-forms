@@ -461,7 +461,7 @@ This section of the form includes general longline gear configuration.
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| used | O | Indicates whether any bait was used during the fishing event (Yes/No) | String | e.g., `Yes`  |
+| used | O | Indicates whether any bait was used during the fishing event (Yes/No/Unk) | String | e.g., `Yes`  |
 | type | O | Indicates the bait types used during the fishing event | **Code** from [Bait Types](#baitTypes) | e.g., `FF` | 
 | condition | O | Indicates the bait condition used during the fishing event | **Code** from [Bait Conditions](#baitConditions) | e.g., `DE` |
 | species | O | The species of bait used during the fishing event | **Code** from [Bait Species](#baitSpecies) | e.g., `ANX` |

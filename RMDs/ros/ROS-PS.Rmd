@@ -480,8 +480,8 @@ This section describes details of each of the setting operations within the fish
 ::: {style="margin-left:80px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| at_deploy | O | Indicates whether or not artificial lights were present at this time (Yes/No) | String | e.g., `Yes` |
-| on_retrieval | O | Indicates whether or not artificial lights were present at this time (Yes/No) | String | e.g., `Yes` |
+| at_deploy | O | Indicates whether or not artificial lights were present at this time (Yes/No/Unk) | String | e.g., `Yes` |
+| on_retrieval | O | Indicates whether or not artificial lights were present at this time (Yes/No/Unk) | String | e.g., `Yes` |
 :::
 
 ::: {style="margin-left:40px"}
@@ -508,10 +508,10 @@ Within each purse seine fishing trip, this section outlines the cetacean sightin
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| sighting_before_setting | M | Indicates whether or not a sighting occurred before setting (Yes/No) | String | e.g., `Yes` |
+| sighting_before_setting | M | Indicates whether or not a sighting occurred before setting (Yes/No/Unk) | String | e.g., `Yes` |
 | species | M | The species code for the sighted specimen/s | **Code** from [Cetacean Species](#speciesCetaceans) | e.g., `BAW` | 
 | number_sighted | M | The number of cetaceans sighted | Integer | e.g., `15` |
-| caught_inside_net | M | Indicates whether or not any individuals where caught inside the net (Yes/No) | String | e.g., `Yes` |
+| caught_inside_net | M | Indicates whether or not any individuals where caught inside the net (Yes/No/Unk) | String | e.g., `Yes` |
 
 # E-SET-CATCHES {#eSetCatches}
 
@@ -630,7 +630,7 @@ This section of the form includes information about Species of Special Interest 
 | condition_at_capture | M | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
 | condition_at_release | M | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
 | gear_interaction | M | The type of interaction of the specimen with the fishing gear | **Code** from [Gear Interactions](#gearInteractions) | e.g., `EF` |
-| brought_onboard | O | Indicates if the specimen was brought on board (Yes/No) | String | e.g., `Yes`  |
+| brought_onboard | O | Indicates if the specimen was brought on board (Yes/No/Unk) | String | e.g., `Yes`  |
 | handling_method  | O | Details how the specimen was brought on-board | **Code** from [Handling Methods](#handlingMethods) | e.g., `AN` |
 | revival | O | Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String | e.g., `Yes`  |
 | photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric code | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
@@ -651,8 +651,8 @@ This section of the form includes information about Species of Special Interest 
 | release | O | Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
 | recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
 | type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
-| tag_id_1 | O | The tag identifier(s) | Alphanumeric | e.g., `tbd` |
-| tag_id_2 | O | The tag identifier(s) | Alphanumeric | e.g., `tbd` |
+| tag_id_1 | O | The tag identifier(s) | Alphanumeric | e.g., `AA19051` |
+| tag_id_2 | O | The tag identifier(s) | Alphanumeric | e.g., `AA19052` |
 | finder_name | O | The full name of the person who found the tag | String | e.g., `Jane Doe` |
 | finder_contact_details | O | The contact details of the person who found the tag | String | e.g., `jane.doe@fishing.org` |
 | well | O | The well number from which the tagged fish has been recovered, if the fish is recovered during shifting, transhipping or unloading | String | e.g., `3ST` |

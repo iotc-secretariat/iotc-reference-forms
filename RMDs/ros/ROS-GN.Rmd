@@ -384,7 +384,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| net_drum_hauler | M | Indicates if present on board. Vessels are normally equipped with a hydraulic net hauler; However they can also use net drums to both haul and store the net (Yes/NO/Unk)| String | e.g., `Yes` |
+| net_drum_hauler | M | Indicates if present on board. Vessels are normally equipped with a hydraulic net hauler; However they can also use net drums to both haul and store the net (Yes/No/Unk)| String | e.g., `Yes` |
 
 # G-CONFIG-GILLNETS {#gConfigGillnets}
 
@@ -708,31 +708,29 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Finder name | M | The name of the person who recovered the tag | String | e.g., `Jane Doe` |
 | Finder contact details | M | The contact details for the person who recovered the tag | String | e.g., `345 Spear Street, San Francisco, CA 94105, USA | (650) 214-6369 | jane.doe@fishing.org` |
 
-
-
 # E-SET-CATCHES-SPECIMEN-SSI {#eSetCatchesSpecimenSSI} 
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_number | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
-| catch_number | M  |  |   |  |
-| specimen_number | M  |  |   |  |
-**Change Set number to SET ID?** And same for catch and specimen number?
+| set_number | M | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| catch_number | M | | | |
+| specimen_number | M | | | |
+
+<!-- **Change Set number to SET ID?** And same for catch and specimen number? -->
 
 ## Additional catch details on SSIs
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Gear interaction code | O | Specify the type of interaction of the specimen with the fishing gear. In the case of difficulty to collect this information, use the code "UNK" | Two letters code |  |
-| Brought onboard | O | Indicate Yes or No, if the specimen was brought onboard | Yes/No |  |
-| Handling method code | O | Detail how the specimen was brought onboard | Two letters code |  |
-| Revival | O | For turtles indicate Yes if the release took place with resuscitation and No if not | Yes/No |  |
-| Photo ID | O | If a photo is taken, record photo number/code so that it can be linked back to the specimen for onshore examination | Photo code |  |
-
-
+| gear_interaction | M | The type of interaction of the specimen with the fishing gear | **Code** from [Gear Interactions](#gearInteractions) | e.g., `EF` |
+| brought_onboard | O | Indicates if the specimen was brought on board (Yes/No/Unk) | String | e.g., `Yes`  |
+| handling_method  | O | Details how the specimen was brought on-board | **Code** from [Handling Methods](#handlingMethods) | e.g., `AN` |
+| revival | O | Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String | e.g., `Yes`  |
+| photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric code | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
 
 # Reporting Deadlines
+
 - 30 June
 
 # Reference Code Lists
