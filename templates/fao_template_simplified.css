@@ -1,4 +1,5 @@
 /* IOTC additions for display */
+/* ===== TOC HEADER IMAGE ===== */
 .tocify::before {
   content: "";
   display: block;
@@ -10,18 +11,33 @@
   background-repeat: no-repeat;
 }
 
+/* ===== TOC SIZE ===== */
+.tocify-wrapper {
+  width: 380px !important;
+}
+
 .tocify {
   font-size: 1em;
+  width: 100% !important;
 }
 
-.tocify .tocify-subheader {
-  font-size: 0.9em;
+/* Prevent wrapping */
+.tocify-item > a,
+.tocify-subheader .tocify-item > a {
+  white-space: nowrap;
 }
 
-.tocify-item {
-  line-height: 1.2;
+/* Optional stronger hierarchy */
+.tocify .tocify-item > a {
+  font-size: 1.1em;
 }
 
+/* ===== MAIN CONTENT SHIFT ===== */
+.toc-content {
+  margin-left: 400px !important;
+}
+
+/* ===== PAGE WIDTH ===== */
 .container,
 .container-lg,
 .container-md,
