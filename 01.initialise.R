@@ -1,22 +1,10 @@
-# C_MASTER =
-#   DBI::dbConnect(
-#     drv      = odbc::odbc(),
-#     Driver   = "SQL Server",
-#     Server   = Sys.getenv("DEFAULT_IOTC_LIBS_DB_SERVER"),
-#     Database = "IOTC_master",
-#     UID      = Sys.getenv("DEFAULT_IOTC_LIBS_DB_USER"),
-#     PWD      = Sys.getenv("DEFAULT_IOTC_LIBS_DB_PASSWORD"),
-#     encoding = "CP1252",
-#     clientcharset = "UTF-8"
-#   )
-
 C_REFERENCE_DATA = 
   DBI::dbConnect(drv = RPostgres::Postgres(),
-                 host = Sys.getenv("IOTC_REFERENCE_DATA_DB_SERVER"),
-                 dbname = 'IOTC_ReferenceData_2025_07_23',
-                 port = 5432,
+                 host = Sys.getenv("IOTC_DATA_DB_SERVER"),
+                 port = Sys.getenv("IOTC_DATA_DB_PORT"),
+                 dbname = Sys.getenv("IOTC_REFERENCE_DATA_DB_NAME"),
                  user = Sys.getenv("IOTC_REFERENCE_DATA_DB_USER"),
-                 password = Sys.getenv("IOTC_REFERENCE_DATA_DB_PWD")
+                 password = Sys.getenv("IOTC_REFERENCE_DATA_DB_PASSWORD")
   )
 
 # Version of the Published Code List
@@ -83,7 +71,7 @@ read_codelist = function(base_url = "https://data.iotc.org/reference/latest/doma
   CL_DATA = 
     as.data.table(
       read.csv2(
-        paste0(base_url, domain, "/codelists/", codelist, "_", BASE_VERSION, ".", CL$VERSION, ".csv"),
+        paste0(base_url, domain, "/codelists/", codelist, ".csv"),
         header = TRUE,
         sep = ","
       )
@@ -92,7 +80,7 @@ read_codelist = function(base_url = "https://data.iotc.org/reference/latest/doma
   return(CL_DATA)
 }
 
-# Reads all required codelists from the (remote) repository on https://data.iotc.org/reference/latest/domain/<domain>/codelists/<codelist>_<codelist_version>
+# Reads all required codelists from the (remote) repository on https://data.iotc.org/reference/latest/domain/<domain>/codelists/<codelist>
 
 # ADMINISTRATIVE AND GEOSPATIAL DOMAINS ####
 
@@ -322,21 +310,21 @@ FISH_PRODUCT_TYPES   = read_codelist(domain = "economics", schema = "socio_econo
 
 # LEGACY DOMAIN ####
 
-LEGACY_FISHERIES     = read_codelist(domain = "legacy", codelist = "FISHERIES")
-LEGACY_FLEETS        = read_codelist(domain = "legacy", codelist = "FLEETS")
-LEGACY_PROCESSINGS   = read_codelist(domain = "legacy", codelist = "DATA_PROCESSINGS")
-LEGACY_SPECIES       = read_codelist(domain = "legacy", codelist = "SPECIES")
-LEGACY_SOURCES       = read_codelist(domain = "legacy", codelist = "DATA_SOURCES")
-LEGACY_COVERAGE      = read_codelist(domain = "legacy", codelist = "COVERAGE_TYPES")
-LEGACY_ESTIMATION    = read_codelist(domain = "legacy", codelist = "ESTIMATION_TYPES")
-LEGACY_EFFORT_UNITS  = read_codelist(domain = "legacy", codelist = "EFFORT_UNITS")
-LEGACY_CATCH_UNITS   = read_codelist(domain = "legacy", codelist = "CATCH_UNITS")
-LEGACY_DATA_TYPES    = read_codelist(domain = "legacy", codelist = "DATA_TYPES")
-LEGACY_FATES         = read_codelist(domain = "legacy", codelist = "FATES")
-LEGACY_BOAT_TYPES    = read_codelist(domain = "legacy", codelist = "BOAT_TYPES")
-LEGACY_SAMPLED_CATCH = read_codelist(domain = "legacy", codelist = "SAMPLED_CATCH_TYPES")
-LEGACY_MEASUREMENT_TOOLS = read_codelist(domain = "legacy", codelist = "MEASUREMENT_TOOLS")
-LEGACY_MEASUREMENT_TYPES = read_codelist(domain = "legacy", codelist = "MEASUREMENT_TYPES")
+LEGACY_FISHERIES     = read_codelist(domain = "legacy", codelist = "LEGACY_FISHERIES")
+LEGACY_FLEETS        = read_codelist(domain = "legacy", codelist = "LEGACY_FLEETS")
+LEGACY_PROCESSINGS   = read_codelist(domain = "legacy", codelist = "LEGACY_DATA_PROCESSINGS")
+LEGACY_SPECIES       = read_codelist(domain = "legacy", codelist = "LEGACY_SPECIES")
+LEGACY_SOURCES       = read_codelist(domain = "legacy", codelist = "LEGACY_DATA_SOURCES")
+LEGACY_COVERAGE      = read_codelist(domain = "legacy", codelist = "LEGACY_DATA_COVERAGE_TYPES")
+LEGACY_ESTIMATION    = read_codelist(domain = "legacy", codelist = "LEGACY_ESTIMATION_TYPES")
+LEGACY_EFFORT_UNITS  = read_codelist(domain = "legacy", codelist = "LEGACY_EFFORT_UNITS")
+LEGACY_CATCH_UNITS   = read_codelist(domain = "legacy", codelist = "LEGACY_CATCH_UNITS")
+LEGACY_DATA_TYPES    = read_codelist(domain = "legacy", codelist = "LEGACY_DATA_TYPES")
+LEGACY_FATES         = read_codelist(domain = "legacy", codelist = "LEGACY_FATES")
+LEGACY_BOAT_TYPES    = read_codelist(domain = "legacy", codelist = "LEGACY_BOAT_TYPES")
+LEGACY_SAMPLED_CATCH = read_codelist(domain = "legacy", codelist = "LEGACY_SAMPLED_CATCH_TYPES")
+LEGACY_MEASUREMENT_TOOLS = read_codelist(domain = "legacy", codelist = "LEGACY_MEASUREMENT_TOOLS")
+LEGACY_MEASUREMENT_TYPES = read_codelist(domain = "legacy", codelist = "LEGACY_MEASUREMENT_TYPES")
 
 # Export function
 out_dt = function(data, name) {
