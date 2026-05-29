@@ -316,7 +316,7 @@ This section of the form includes details on vessel attributes.
 ::: {style="margin-left:40px"}
 | Element | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| preservation_method | O | The fish preservation methods used by the vessel to preserve the catch. Up to four preservation methods may be reported on the form | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| preservation_method | O | The fish preservation methods used by the vessel to preserve the catch during the trip. Up to four preservation methods may be reported on the form | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
 ::: 
 
 ::: {style="margin-left:40px"}
