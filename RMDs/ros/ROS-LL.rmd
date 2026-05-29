@@ -216,7 +216,7 @@ This section of the form includes specific vessel information.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| licensed_target_species | O | The licensed target species as specified in vessel licences or permit conditions | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| licensed_target_species | O | The licensed target species as specified in vessel licences or permit conditions | **Code** from [All Species](#allSpecies) | e.g., `AL` |
 | main_fishing_gear | M | The vessel main fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
 | **Vessel Personnel:** Details of the individuals working onboard during the fishing trip as well as the total number of crew members onboard.

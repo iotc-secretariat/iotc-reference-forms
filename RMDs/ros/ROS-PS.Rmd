@@ -202,7 +202,7 @@ This section of the form includes specific vessel information.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| licensed_target_species | O | The licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all | **Code** from [Target Species](#targetSpecies) | e.g., `AL` |
+| licensed_target_species | O | The licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all | **Code** from [All Species](#allSpecies) | e.g., `AL` |
 | main_fishing_gear | M |The main vessel fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
 
 | **Vessel Personnel:** Details of the individuals working onboard during the fishing trip as well as the total number of crew members onboard.
