@@ -65,9 +65,9 @@ Operational information on DFOB-related activities, including buoys and DFOB cha
 
 | Element | Requirement | Description | Format | Input value |
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Present | M | Indicates whether a buoy is attached to the drifting floating object | Boolean (Y/N) | e.g., `N` | 
+| Present | M | Indicates whether a buoy is attached to the drifting floating object | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` | 
 | Identifier | M |  Unique identifier of buoy monitored generally composed of the concatenation of the buoy model with with 5-9 digits | String | e.g., `SLX328501` |
-| Position | M | Indicates whether the vessel have access/knowledge of the buoy position | Boolean (Y/N) | e.g., `Y` | 
+| Position | M | Indicates whether the vessel have access/knowledge of the buoy position | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` | 
 | Activity | M | Type of activities undertaken when visiting or deploying the drifting floating object | **Code** from [Buoy activity types](#DFOBbuoyActivityTypes) | e.g., `DE` | 
 
 ## DFOB Data
@@ -86,24 +86,24 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 
 | Element | Requirement | Description | Format | Input value  |
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Plastic | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | Boolean (Y/N) | e.g., `Y` | 
-| Metal  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | Boolean (Y/N) | e.g., `Y` | 
+| Plastic | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` | 
+| Metal  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` | 
 | Length | M | Length of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `150` |
 | Width  | O | Width of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | e.g. `120` |
 | Height | O | Height of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `50` |
-| Mesh   | M | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | Boolean (Y/N) | e.g., `Y` |
+| Mesh   | M | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
 | Mesh size | O | Size of the main net mesh used on the surface or near-surface structure of the drifting floating object (if any) in millimetres (mm) | Numeric | e.g., `5` |
 
 #### Subsurface (Tail/Cage)
 
 | Element | Requirement | Description | Format | Input value | 
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Plastic | M | Indicates whether the tail of the drifting floating object contains some plastic materials | Boolean (Y/N) | e.g., `N` | 
-| Metal | M | Indicates whether the tail of the drifting floating object contains some metal materials | Boolean (Y/N) | e.g., `N` |
+| Plastic | M | Indicates whether the tail of the drifting floating object contains some plastic materials | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` | 
+| Metal | M | Indicates whether the tail of the drifting floating object contains some metal materials | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
 | Length | M |  Length of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `100` | 
 | Width  | O | Width of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `100` |
 | Height | O | Height of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `80` | 
-| Mesh | M | Indicates whether the subsurface structure of the drifting floating object contains mesh | Boolean (Y/N) | e.g., `Y` | 
+| Mesh | M | Indicates whether the subsurface structure of the drifting floating object contains mesh | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` | 
 | Mesh size | O | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) in millimetres (mm) | Numeric | e.g., `3` | 
 
 # Reporting Metadata
@@ -125,11 +125,19 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 
 ## Entities {#entities}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
++ **Version:** `r version_number("ENTITIES")`
++ **Last update**: `r last_update("ENTITIES")`
+
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
 ```
 
 ## Countries {#countries}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
++ **Version:** `r version_number("COUNTRIES")`
++ **Last update**: `r last_update("COUNTRIES")`
 
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
@@ -137,11 +145,19 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 ## Types of Data {#datatypes}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#types)
++ **Version:** `r version_number("DATA_TYPES")`
++ **Last update**: `r last_update("DATA_TYPES")`
+
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
 ## Fisheries {#fisheries}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries)
++ **Version:** `r version_number("FISHERIES")`
++ **Last update**: `r last_update("FISHERIES")`
 
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
@@ -149,11 +165,19 @@ out_dt(FISHERIES, "FISHERIES")
 
 ## Species {#allSpecies}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
++ **Version:** `r version_number("SPECIES")`
++ **Last update**: `r last_update("SPECIES")`
+
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES")
 ```
 
 ## Types of Buoy Activities {#DFOBbuoyActivityTypes}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#FOBbuoyActivityTypes)
++ **Version:** `r version_number("BUOY_ACTIVITIES")`
++ **Last update**: `r last_update("BUOY_ACTIVITIES")`
 
 ```{r collapse = TRUE}
 out_dt(BUOY_ACTIVITIES, "BUOY_ACTIVITIES")
@@ -161,11 +185,19 @@ out_dt(BUOY_ACTIVITIES, "BUOY_ACTIVITIES")
 
 ## Types of Drifting Floating Objects {#FOBtypes}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#DFOBtypes)
++ **Version:** `r version_number("DFOB_TYPES")`
++ **Last update**: `r last_update("DFOB_TYPES")`
+
 ```{r collapse = TRUE}
 out_dt(DFOB_TYPES, "DFOB_TYPES")
 ```
 
 ## Types of Activities on Drifting Floating Objects {#DFOBactivityTypes}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#DFOBactivityTypes)
++ **Version:** `r version_number("DFOB_ACTIVITIES")`
++ **Last update**: `r last_update("DFOB_ACTIVITIES")`
 
 ```{r collapse = TRUE}
 out_dt(DFOB_ACTIVITIES, "DFOB_ACTIVITIES")
@@ -173,11 +205,19 @@ out_dt(DFOB_ACTIVITIES, "DFOB_ACTIVITIES")
 
 ## Types of Fates {#typesOfFate}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#typesOfFate)
++ **Version:** `r version_number("TYPES_OF_FATE")`
++ **Last update**: `r last_update("TYPES_OF_FATE")`
+
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```
 
 ## Raisings {#raisings}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#raisings)
++ **Version:** `r version_number("DATA_RAISINGS")`
++ **Last update**: `r last_update("DATA_RAISINGS")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
@@ -185,6 +225,20 @@ out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 
 ## Catch Units {#catchUnits}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#catchUnits)
++ **Version:** `r version_number("CATCH_UNITS")`
++ **Last update**: `r last_update("CATCH_UNITS")`
+
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
+```
+
+## Logical Responses {#logicalResponses}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#logicalResponses)
++ **Version:** `r version_number("LOGICAL_RESPONSES")`
++ **Last update**: `r last_update("LOGICAL_RESPONSES")`
+
+```{r echo = FALSE, collapse = TRUE}
+out_dt(LOGICAL_RESPONSES, "LOGICAL_RESPONSES")
 ```

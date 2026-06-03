@@ -1,6 +1,8 @@
 ---
 title: "IOTC ROS Data Reporting: Form ROS-LL"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
+execute:
+  echo: false
 output:
   word_document2:
     reference_docx: "../../templates/doc_template.docx"
@@ -9,7 +11,7 @@ output:
     fig_caption: TRUE
 
   html_document2:
-    css: "../../templates/html_template.css"
+    css: "../../templates/fao_template_simplified.css"
     includes: 
       in_header: "../../templates/google-analytics.html"
     number_sections: FALSE
@@ -158,8 +160,8 @@ This section of the form includes information about the observer and an overview
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | `20`  |
-| observed | M | The total number of fishing sets monitored by the observer. In the case of Electronic Monitoring, only processed sets to be included | Integer | `17` |
+| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | e.g., `20` |
+| observed | M | The total number of fishing sets monitored by the observer. In the case of Electronic Monitoring, only processed sets to be included | Integer | e.g., `17` |
 :::
 
 | **Number of days:** The total number of calendar days the vessel is on a fishing trip, with each day defined as a 24-hour period. These days can be further categorised by activity type (e.g. searching, transiting, actively fishing, or present in fishing areas).
@@ -340,19 +342,19 @@ This section of the form includes details on vessel attributes.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| gnss | O | Indicates whether or not one or more Global Navigation Satellite System systems (GNSS) such as the US Global Positioning System (GPS) were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
-| vms | O | Indicates whether or not one or more Vessel Monitoring Systems (VMS) were present on the vessel (Yes/No/Unk)  | String | e.g., `Yes` |
-| ais | O | Indicates whether or not one or more Automatic Identification Systems (AIS) were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
-| radars | O | Indicates whether or not one or more radars were present on the vessel (Yes/No/Unk) | String | e.g., `Yes`  |
-| track_plotter | O | Indicates whether or not one or more track plotters were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
-| depth_sounder | O | Indicates whether or not one or more depth sounders were present on the vessel (Yes/No/Unk)| String | e.g., `Yes` |
-| sonar | O | Indicates whether one or more sonars were present on the vessel (Yes/No/Unk) | String | e.g., `Yes` |
-| doppler_current_meter | O | Indicates whether one or more doppler current meters were present on the vessel | String | e.g., `Yes` |
-| xbt | O | Indicates whether or not one or more expendable bathythermographs (XBT) were present on the vessel | String | e.g., `Yes` |
-| vhf_radios | O | Indicates whether or not one or more VHF radios weere present on the vessel | String | e.g., `Yes` |
-| hf_radios | O | Indicates whether one or more HF radios were present or not on the vessel | String | e.g., `Yes` |
-| satcom | O | Indicate whether or not one or more satellite communication systems were present on the vessel | String | e.g., `Yes` |
-| fis | O | Indicates whether or not one or more Fisheries Information Services were present on the vessel | String | e.g., `Yes` |
+| gnss | O | Indicates whether or not one or more Global Navigation Satellite System systems (GNSS) such as the US Global Positioning System (GPS) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| vms | O | Indicates whether or not one or more Vessel Monitoring Systems (VMS) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| ais | O | Indicates whether or not one or more Automatic Identification Systems (AIS) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| radars | O | Indicates whether or not one or more radars were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE`  |
+| track_plotter | O | Indicates whether or not one or more track plotters were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| depth_sounder | O | Indicates whether or not one or more depth sounders were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| sonar | O | Indicates whether one or more sonars were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| doppler_current_meter | O | Indicates whether one or more doppler current meters were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
+| xbt | O | Indicates whether or not one or more expendable bathythermographs (XBT) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
+| vhf_radios | O | Indicates whether or not one or more VHF radios were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| hf_radios | O | Indicates whether one or more HF radios were present or not on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| satcom | O | Indicate whether or not one or more satellite communication systems were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| fis | O | Indicates whether or not one or more Fisheries Information Services were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
 
 ## Waste Management Details
 
@@ -379,9 +381,9 @@ This section of the form includes general longline gear configuration.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| line_setter | M | Indicates whether or not the vessel is equipped with a line setter or shooter (Yes/No/Unk) | String | e.g., `Yes` |
-| line_hauler | M | Indicates whether or not the vessel is equipped with a line hauler (Yes/No/Unk) | String | e.g., `Yes` |
-| bait_casting_machine | M | Indicates whether or not the vessel is equipped with a bait cast machine (Yes/No/Unk) | String | e.g., `Yes` |
+| line_setter | M | Indicates whether or not the vessel is equipped with a line setter or shooter | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| line_hauler | M | Indicates whether or not the vessel is equipped with a line hauler | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| bait_casting_machine | M | Indicates whether or not the vessel is equipped with a bait cast machine | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
 
 # G-CONFIG-BRANCHLINES {#gConfigBranchlines}
 
@@ -394,7 +396,7 @@ This section of the form includes general longline gear configuration.
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | configuration_id | O | The identifier for a specific branchline specification as detailed based on the fields below | Integer | e.g., `BL_1` |
-| section_id | O | The identifier for a specific branchline section  | Integer | e.g., `BL_1#1` |
+| section_id | O | The identifier for a specific branchline section | Integer | e.g., `BL_1#1` |
 | material_type | O | The type of material used in each of the four sections of the branchline, where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
 | branchline_length_m | O | The value of the length (m) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | e.g., `15.3` |
 | branchline_diameter_cm | O | The value of the diameter (cm) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | e.g., `1.2` |
@@ -421,7 +423,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | tori_line_length | M | The total length (m) of the tori line, excluding streamers | Float | e.g.,`150` |
 | streamer_type | M | The type of streamers which are used with the tori line | **Code** from [Streamer Types](#streamerTypes) | e.g., `MU` |
-| reach_surface | O | Indicates whether or not the streamers are long enough to touch the surface of the water in calm conditions (Yes/No/Unk) | String | `No` |
+| reach_surface | O | Indicates whether or not the streamers are long enough to touch the surface of the water in calm conditions | **Code** from [Logical Responses](#logicalResponses) | `FALSE` |
 | streamer_line_length_max_m | M | The value of the maximum length (m) of individual streamer lines | Float |e.g., `10` |
 | streamer_line_length_min_m | O | The value of the minimum length (m) of individual streamer lines | Float | e.g.,`1` |
 | streamer_number_per_line | M | The number of streamers that are attached to a single tori line | Integer | e.g., `20` |
@@ -498,7 +500,7 @@ This section of the form includes information regarding individual sets that wer
 ::: {style="margin-left:40px"}
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| shark_lines_set | M | Indicates whether or not shark lines were set during the operation (Yes/No/Unk) | String | e.g., `No` |
+| shark_lines_set | M | Indicates whether or not shark lines were set during the operation | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
 | shark_lines_number | O | The number of shark lines set during the operation | Integer | e.g., `0` |
 :::
 
@@ -557,12 +559,12 @@ This section of the form includes information about the mitigation measures obse
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | number_of_tori_lines_deployed | M | The total number of tori lines deployed during the setting operation | Integer | e.g., `8` |
-| minimum_deck_lighting_used | M | Indicates whether or not minimum deck lighting was used during night setting (Yes/No/Unk) | String | e.g., `Yes` |
-| branchline_weighted | O | Indicates whether or not the branchline was weighted (Yes/No/Unk) | String | `No` |
+| minimum_deck_lighting_used | M | Indicates whether or not minimum deck lighting was used during night setting | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| branchline_weighted | O | Indicates whether or not the branchline was weighted | **Code** from [Logical Responses](#logicalResponses) | `FALSE` |
 | average_sinker_weight_g | M | The average weight (g) of weights or sinkers attached to the branchlines (weights deployed on the snood prior to setting) | Float |  e.g., `60` |
 | percent_branchline_weighted | M | The proportion of branchlines weighted (%) | Float |  e.g., `100` |
 | hook_sinker_distance | M | The distance (cm) of the weights/sinkers from the eye of the hook | Float |  e.g., `765` |
-| hook_pods | M | Indicates whether or not the bait is protected by hook pods on the branchlines until they are a certain depth below the surface (Yes/No/Unk) | String | e.g., `No` |
+| hook_pods | M | Indicates whether or not the bait is protected by hook pods on the branchlines until they are a certain depth below the surface | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
 
 ## Branchline Details
 
@@ -655,7 +657,7 @@ This section includes specific hauling information observed for each set of the 
 
 ||||||
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations (Yes/No/Unk) | String | e.g., `No`  |
+| bird_scaring_device_at_hauler | M | Indicates whether or not a bird scaring device was deployed during hauling operations | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE`  |
 | number_of_branchline_haulings_observed | M | The number of branchline haulings observed | Integer | e.g., `800` |
 | number_of_hooks_retrieved_during_observation | M | The number of hooks retrieved observed | Integer | e.g., `1274` |
 | sampling_protocol | M | Sampling protocol followed by the observer | **Code** from [Sampling Protocol](#samplingProtocol) | e.g., `EP` |
@@ -746,7 +748,7 @@ This section of the form is for the recording of biological information of the s
 | length_type | M | The type of length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
 | length_value_cm | M | The value of length corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
 | length_measuring_tool | M | The tool used for the measurement of the fish length | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
-| is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` |
+<!-- | is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` | -->
 :::
 
 | **Weight**: The specimen's individual weight corresponding to the specified specie and product type. Unprocessed weight when the fish has not been processed.
@@ -832,9 +834,9 @@ This section of the form includes information about Species of Special Interest 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | dehooker_device | O | The dehooking or line cutting device used to extract the hook | **Code** [Dehooker Types](#dehookerTypes) from | e.g., HD  |
-| brought_onboard | O | Indicates whether or not the specimen was brought onboard (Yes/No/Unk) | String | e.g., `Yes` |
+| brought_onboard | O | Indicates whether or not the specimen was brought onboard | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
 | handling_method | O | Detail how the specimen was brought onboard | **Code** from [Handling Methods](#handlingMethods) | e.g., `AN` |
-| revival | O | Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String | e.g., `Yes`  |
+| revival | O | Indicates whether or not the release took place with resuscitation for turtles | **Code** from [Logical Responses](#logicalResponses) | e.g., `NAPP`  |
 | photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric code | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
 
 <!-- | **Depredation details** -->
@@ -863,8 +865,8 @@ This section of the form is for the reporting of each of the tags recovered duri
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| release | O | Indicates whether or not the individual was re-released with a tag attached (Yes/No/Unk) | String | e.g., `No` |
-| recovery | O | Indicates whether or not the individual was recovered with a tag attached (Yes/No/Unk) | String  | e.g., `Yes`  |
+| release | O | Indicates whether or not the individual was re-released with a tag attached | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
+| recovery | O | Indicates whether or not the individual was recovered with a tag attached | **Code** from [Logical Responses](#logicalResponses)  | e.g., `TRUE`  |
 | type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
 | tag_id | O | The tag identifier(s). Up to two identifier may be reported on the form | Alphanumeric | e.g., `AA19051` |
 | finder_name | O | The full name of the person who found the tag, recorded as first and last names | String | e.g., `Jane Doe` |
@@ -882,7 +884,7 @@ This section of the form is for the reporting of each of the tags recovered duri
 -   **Version**: `r version_number("ENTITIES")`
 -   **Last update**: `r last_update("ENTITIES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
 ```
 
@@ -892,7 +894,7 @@ out_dt(ENTITIES, "ENTITIES")
 -   **Version**: `r version_number("COUNTRIES")`
 -   **Last update**: `r last_update("COUNTRIES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
@@ -902,7 +904,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 -   **Version**: `r version_number("SOURCES")`
 -   **Last update**: `r last_update("SOURCES")`
 
-```{r collapse = TRUE, warning = FALSE, message = FALSE}
+```{r echo = FALSE, collapse = TRUE, warning = FALSE, message = FALSE}
 out_dt(DATA_SOURCES_RO[, -c("DATASET_CODE")], "DATA_SOURCES")
 ```
 
@@ -912,7 +914,7 @@ out_dt(DATA_SOURCES_RO[, -c("DATASET_CODE")], "DATA_SOURCES")
 -   **Version**: `r version_number("PORTS")`
 -   **Last update**: `r last_update("PORTS")`
 
-```{r collapse = TRUE, warning = FALSE, message = FALSE}
+```{r echo = FALSE, collapse = TRUE, warning = FALSE, message = FALSE}
 out_dt(PORTS[, -c("POINT")], "PORTS")
 ```
 
@@ -922,7 +924,7 @@ out_dt(PORTS[, -c("POINT")], "PORTS")
 -   **Version**: `r version_number("REASONS_DAYS_LOST")`
 -   **Last update**: `r last_update("REASONS_DAYS_LOST")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
 ```
 
@@ -932,7 +934,7 @@ out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
 -   **Version**: `r version_number("TARGET_SPECIES")`
 -   **Last update**: `r last_update("TARGET_SPECIES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(TARGET_SPECIES, "TARGET_SPECIES")
 ```
 
@@ -942,7 +944,7 @@ out_dt(TARGET_SPECIES, "TARGET_SPECIES")
 -   **Version**: `r version_number("GEAR_TYPES")`
 -   **Last update**: `r last_update("GEAR_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(GEAR_TYPES, "GEAR_TYPES")
 ```
 
@@ -952,7 +954,7 @@ out_dt(GEAR_TYPES, "GEAR_TYPES")
 -   **Version**: `r version_number("HULL_MATERIAL_TYPES")`
 -   **Last update**: `r last_update("HULL_MATERIAL_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(HULL_MATERIAL_TYPES, "HULL_MATERIAL_TYPES")
 ```
 
@@ -962,7 +964,7 @@ out_dt(HULL_MATERIAL_TYPES, "HULL_MATERIAL_TYPES")
 -   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
 -   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 ```
 
@@ -972,7 +974,7 @@ out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 -   **Version**: `r version_number("VESSEL_SIZE_TYPES")`
 -   **Last update**: `r last_update("VESSEL_SIZE_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(VESSEL_SIZE_TYPES, "VESSEL_SIZE_TYPES")
 ```
 
@@ -982,8 +984,18 @@ out_dt(VESSEL_SIZE_TYPES, "VESSEL_SIZE_TYPES")
 -   **Version**: `r version_number("FISH_STORAGE_TYPES")`
 -   **Last update**: `r last_update("FISH_STORAGE_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
+```
+
+## Logical Responses {#logicalResponses}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/data/#logicalResponses)
+-   **Version**: `r version_number("LOGICAL_RESPONSES")`
+-   **Last update**: `r last_update("LOGICAL_RESPONSES")`
+
+```{r echo = FALSE, collapse = TRUE}
+out_dt(LOGICAL_RESPONSES, "LOGICAL_RESPONSES")
 ```
 
 ## Waste Categories {#wasteCategories}
@@ -992,7 +1004,7 @@ out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 -   **Version**: `r version_number("WASTE_CATEGORIES")`
 -   **Last update**: `r last_update("WASTE_CATEGORIES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(WASTE_CATEGORIES, "WASTE_CATEGORIES")
 ```
 
@@ -1002,7 +1014,7 @@ out_dt(WASTE_CATEGORIES, "WASTE_CATEGORIES")
 -   **Version**: `r version_number("WASTE_DISPOSAL_METHODS")`
 -   **Last update**: `r last_update("WASTE_DISPOSAL_METHODS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(WASTE_DISPOSAL_METHODS, "WASTE_DISPOSAL_METHODS")
 ```
 
@@ -1012,7 +1024,7 @@ out_dt(WASTE_DISPOSAL_METHODS, "WASTE_DISPOSAL_METHODS")
 -   **Version**: `r version_number("LINE_MATERIAL_TYPES")`
 -   **Last update**: `r last_update("LINE_MATERIAL_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(LINE_MATERIAL_TYPES, "LINE_MATERIAL_TYPES")
 ```
 
@@ -1022,7 +1034,7 @@ out_dt(LINE_MATERIAL_TYPES, "LINE_MATERIAL_TYPES")
 -   **Version**: `r version_number("BRANCHLINE_STORAGES")`
 -   **Last update**: `r last_update("BRANCHLINE_STORAGES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(BRANCHLINE_STORAGES, "BRANCHLINE_STORAGES")
 ```
 
@@ -1032,7 +1044,7 @@ out_dt(BRANCHLINE_STORAGES, "BRANCHLINE_STORAGES")
 -   **Version**: `r version_number("STREAMER_TYPES")`
 -   **Last update**: `r last_update("STREAMER_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(STREAMER_TYPES, "STREAMER_TYPES")
 ```
 
@@ -1042,7 +1054,7 @@ out_dt(STREAMER_TYPES, "STREAMER_TYPES")
 -   **Version**: `r version_number("MITIGATION_DEVICES")`
 -   **Last update**: `r last_update("MITIGATION_DEVICES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(MITIGATION_DEVICES, "MITIGATION_DEVICES")
 ```
 
@@ -1052,7 +1064,7 @@ out_dt(MITIGATION_DEVICES, "MITIGATION_DEVICES")
 -   **Version**: `r version_number("LIGHT_TYPES")`
 -   **Last update**: `r last_update("LIGHT_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(LIGHT_TYPES, "LIGHT_TYPES")
 ```
 
@@ -1062,7 +1074,7 @@ out_dt(LIGHT_TYPES, "LIGHT_TYPES")
 -   **Version**: `r version_number("LIGHT_COLOURS")`
 -   **Last update**: `r last_update("LIGHT_COLOURS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(LIGHT_COLOURS, "LIGHT_COLOURS")
 ```
 
@@ -1072,7 +1084,7 @@ out_dt(LIGHT_COLOURS, "LIGHT_COLOURS")
 -   **Version**: `r version_number("HOOK_TYPES")`
 -   **Last update**: `r last_update("HOOK_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(HOOK_TYPES, "HOOK_TYPES")
 ```
 
@@ -1082,7 +1094,7 @@ out_dt(HOOK_TYPES, "HOOK_TYPES")
 -   **Version**: `r version_number("BAIT_CONDITIONS")`
 -   **Last update**: `r last_update("BAIT_CONDITIONS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 ```
 
@@ -1092,7 +1104,7 @@ out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 -   **Version**: `r version_number("SPECIES_BAITS")`
 -   **Last update**: `r last_update("SPECIES_BAITS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(SPECIES_BAITS, "SPECIES_BAITS")
 ```
 
@@ -1102,7 +1114,7 @@ out_dt(SPECIES_BAITS, "SPECIES_BAITS")
 -   **Version**: `r version_number("OFFAL_MANAGEMENT_TYPES")`
 -   **Last update**: `r last_update("OFFAL_MANAGEMENT_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(OFFAL_MANAGEMENT_TYPES, "OFFAL_MANAGEMENT_TYPES")
 ```
 
@@ -1112,7 +1124,7 @@ out_dt(OFFAL_MANAGEMENT_TYPES, "OFFAL_MANAGEMENT_TYPES")
 -   **Version**: `r version_number("VESSEL_SECTIONS")`
 -   **Last update**: `r last_update("VESSEL_SECTIONS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(VESSEL_SECTIONS, "VESSEL_SECTIONS")
 ```
 
@@ -1122,7 +1134,7 @@ out_dt(VESSEL_SECTIONS, "VESSEL_SECTIONS")
 -   **Version**: `r version_number("SAMPLING_PROTOCOLS")`
 -   **Last update**: `r last_update("SAMPLING_PROTOCOLS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
 ```
 
@@ -1132,7 +1144,7 @@ out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
 -   **Version**: `r version_number("SPECIES")`
 -   **Last update**: `r last_update("SPECIES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(SPECIES, "SPECIES")
 ```
 
@@ -1142,7 +1154,7 @@ out_dt(SPECIES, "SPECIES")
 -   **Version**: `r version_number("TYPES_OF_FATE")`
 -   **Last update**: `r last_update("TYPES_OF_FATE")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```
 
@@ -1152,7 +1164,7 @@ out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 -   **Version**: `r version_number("FATES")`
 -   **Last update**: `r last_update("FATES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(FATES, "FATES")
 ```
 
@@ -1162,7 +1174,7 @@ out_dt(FATES, "FATES")
 -   **Version**: `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
 -   **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
 ```
 
@@ -1172,7 +1184,7 @@ out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMA
 -   **Version**: `r version_number("MATURITY_STAGES")`
 -   **Last update**: `r last_update("MATURITY_STAGES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(MATURITY_STAGES, "MATURITY_STAGES")
 ```
 
@@ -1182,7 +1194,7 @@ out_dt(MATURITY_STAGES, "MATURITY_STAGES")
 -   **Version**: `r version_number("FISH_PROCESSING_TYPES")`
 -   **Last update**: `r last_update("FISH_PROCESSING_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
 ```
 
@@ -1202,7 +1214,7 @@ out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
 -   **Version**: `r version_number("SAMPLING_PERIODS")`
 -   **Last update**: `r last_update("SAMPLING_PERIODS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(SAMPLING_PERIODS, "SAMPLING_PERIODS")
 ```
 
@@ -1212,7 +1224,7 @@ out_dt(SAMPLING_PERIODS, "SAMPLING_PERIODS")
 -   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
 -   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
 ```
 
@@ -1222,7 +1234,7 @@ out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING
 -   **Version**: `r version_number("MEASUREMENTS")`
 -   **Last update**: `r last_update("MEASUREMENTS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(LENGTH_MEASUREMENTS, "LENGTH_MEASUREMENTS")
 ```
 
@@ -1232,7 +1244,7 @@ out_dt(LENGTH_MEASUREMENTS, "LENGTH_MEASUREMENTS")
 -   **Version**: `r version_number("MEASUREMENT_TOOLS")`
 -   **Last update**: `r last_update("MEASUREMENTS_TOOLS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(LENGTH_MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
 ```
 
@@ -1242,7 +1254,7 @@ out_dt(LENGTH_MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
 -   **Version**: `r version_number("WEIGHT_MEASUREMENTS")`
 -   **Last update**: `r last_update("WEIGHT_MEASUREMENTS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(WEIGHT_MEASUREMENTS, "WEIGHT_MEASUREMENTS")
 ```
 
@@ -1252,7 +1264,7 @@ out_dt(WEIGHT_MEASUREMENTS, "WEIGHT_MEASUREMENTS")
 -   **Version**: `r version_number("WEIGHT_MEASUREMENT_TOOLS")`
 -   **Last update**: `r last_update("WEIGHT_MEASUREMENT_TOOLS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(WEIGHT_MEASUREMENT_TOOLS, "WEIGHT_MEASUREMENT_TOOLS")
 ```
 
@@ -1262,18 +1274,8 @@ out_dt(WEIGHT_MEASUREMENT_TOOLS, "WEIGHT_MEASUREMENT_TOOLS")
 -   **Version**: `r version_number("SEX")`
 -   **Last update**: `r last_update("SEX")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(SEX, "SEX")
-```
-
-## Maturity Stages {#maturityStages}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#Maturity_Stages)
--   **Version**: `r version_number("MATURIY_STAGES")`
--   **Last update**: `r last_update("MATURITY_STAGES")`
-
-```{r collapse = TRUE}
-out_dt(MATURITY_STAGES, "MATURITY_STAGES")
 ```
 
 ## Sampling Type {#samplingMethodsForSamplingCollections}
@@ -1282,18 +1284,18 @@ out_dt(MATURITY_STAGES, "MATURITY_STAGES")
 -   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
 -   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
 ```
 
-## Sample Preservation Methods {#fishPreservationMethods}
+## Sample Preservation Methods {#samplePreservationMethods}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
--   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
--   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplePreservationMethods)
+-   **Version**: `r version_number("SAMPLE_PRESERVATION_METHODS")`
+-   **Last update**: `r last_update("SAMPLE_PRESERVATION_METHODS")`
 
-```{r collapse = TRUE}
-out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
+```{r echo = FALSE, collapse = TRUE}
+out_dt(SAMPLE_PRESERVATION_METHODS, "SAMPLE_PRESERVATION_METHODS")
 ```
 
 ## Depredation Sources {#depredationSources}
@@ -1302,7 +1304,7 @@ out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 -   **Version**: `r version_number("DEPREDATION_SOURCES")`
 -   **Last update**: `r last_update("DEPREDATION_SOURCES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(DEPREDATION_SOURCES, "DEPREDATION_SOURCES")
 ```
 
@@ -1312,7 +1314,7 @@ out_dt(DEPREDATION_SOURCES, "DEPREDATION_SOURCES")
 -   **Version**: `r version_number("SPECIES_PREDATORS")`
 -   **Last update**: `r last_update("SPECIES_PREDATORS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(SPECIES_PREDATORS, "SPECIES_PREDATORS")
 ```
 
@@ -1322,7 +1324,7 @@ out_dt(SPECIES_PREDATORS, "SPECIES_PREDATORS")
 -   **Version**: `r version_number("INDIVIDUAL_CONDITIONS")`
 -   **Last update**: `r last_update("INDIVIDUAL_CONDITIONS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
 ```
 
@@ -1332,28 +1334,8 @@ out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
 -   **Version**: `r version_number("GEAR_INTERACTIONS")`
 -   **Last update**: `r last_update("GEAR_INTERACTIONS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(GEAR_INTERACTIONS, "GEAR_INTERACTIONS")
-```
-
-## Hook Types {#hookTypes}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#hookTypes)
--   **Version**: `r version_number("HOOK_TYPES")`
--   **Last update**: `r last_update("HOOK_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(HOOK_TYPES, "HOOK_TYPES")
-```
-
-## Bait Conditions {#baitConditions}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#baitConditions)
--   **Version**: `r version_number("BAIT_CONDITIONS")`
--   **Last update**: `r last_update("BAIT_CONDITIONS")`
-
-```{r collapse = TRUE}
-out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 ```
 
 ## Dehooker Types {#dehookerTypes}
@@ -1362,7 +1344,7 @@ out_dt(BAIT_CONDITIONS, "BAIT_CONDITIONS")
 -   **Version**: `r version_number("DEHOOKER_TYPES")`
 -   **Last update**: `r last_update("DEHOOKER_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(DEHOOKER_TYPES, "DEHOOKER_TYPES")
 ```
 
@@ -1372,7 +1354,7 @@ out_dt(DEHOOKER_TYPES, "DEHOOKER_TYPES")
 -   **Version**: `r version_number("HANDLING_METHODS")`
 -   **Last update**: `r last_update("HANDLING_METHODS")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(HANDLING_METHODS, "HANDLING_METHODS")
 ```
 
@@ -1382,6 +1364,6 @@ out_dt(HANDLING_METHODS, "HANDLING_METHODS")
 -   **Version**: `r version_number("TAG_TYPES")`
 -   **Last update**: `r last_update("TAG_TYPES")`
 
-```{r collapse = TRUE}
+```{r echo = FALSE, collapse = TRUE}
 out_dt(TAG_TYPES, "TAG_TYPES")
 ```

@@ -30,7 +30,6 @@ render("./RMDs/Form-1IN.Rmd",
        output_format = "html_document2",
        output_file = "Form-1IN.html", 
        output_dir = "./out/HTML/")
-
 ## Amount of fish caught and retained ####
 
 ### Form 1-RC #####
