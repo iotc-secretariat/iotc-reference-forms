@@ -35,7 +35,7 @@ At its 26^th^ session, the IOTC Scientific Committee endorsed the adoption of ne
 
 The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts. You can download all current form templates for submitting data to the IOTC [here](../forms/IOTC-stats-forms.zip).
 
-An archived version of the IOTC statistical forms can be downloaded directly from the Zenodo record or retrieved programmatically using R with the [zen4R](https://github.com/eblondel/zen4R) package: <a href="https://doi.org/10.5281/zenodo.16941787" target="_blank" title="Citable IOTC Reference Data on Zenodo">
+An archived version of the IOTC statistical forms can be downloaded directly from the Zenodo record or retrieved programmatically using R with the [zen4R](https://github.com/eblondel/zen4R) package: <a href="https://doi.org/10.5281/zenodo.16941787" target="_blank" title="Citable IOTC Statistics Forms on Zenodo">
   <img src="../out/images/stats_forms_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;">
   <span style="vertical-align:middle;">
 </a>
@@ -179,7 +179,7 @@ The IOTC Regional Observer Scheme (ROS) was established to collect verified catc
 
 The ROS data reporting forms were revised during the 20^th^ Session of the Working Party on Data Collection and Statistics ([WPDCS20](https://iotc.org/meetings/20th-working-party-data-collection-and-statistics-wpdcs20)), held in November 2024, and were subsequently endorsed by the Scientific Committee at its 27^th^ Session ([SC27](https://iotc.org/meetings/27th-session-scientific-committee-sc27)). The forms are provided as XLSX spreadsheets and contain multiple sheets corresponding to different hierarchical levels of data to be reported. They are available in four distinct gear group versions -- gillnets, longlines, pole-and-line, and purse seines -- corresponding to the main gears used in fisheries subject to the ROS data requirements, i.e., those involving vessels larger than 24 metres in length overall, or vessels smaller than 24 metres operating in Areas Beyond National Jurisdiction (ABNJ).
 
-The different versions of the IOTC ROS forms can be downloaded directly from the Zenodo record or retrieved programmatically using R with the [zen4R](https://github.com/eblondel/zen4R) package: <a href="https://zenodo.org/records/15743875" target="_blank" title="Citable IOTC Reference Data on Zenodo">
+The different versions of the IOTC ROS forms can be downloaded directly from the Zenodo record or retrieved programmatically using R with the [zen4R](https://github.com/eblondel/zen4R) package: <a href="https://zenodo.org/records/15743875" target="_blank" title="Citable IOTC ROS Forms on Zenodo">
   <img src="../out/images/ros_forms_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;">
   <span style="vertical-align:middle;">
 </a>
