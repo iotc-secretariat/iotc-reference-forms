@@ -24,13 +24,21 @@ output:
 
 Following Article XI of the [Agreement for the establishment of the Indian Ocean Tuna Commission](https://iotc.org/sites/default/files/documents/2012/5/25/IOTC%20Agreement.pdf) (IOTC), [Contracting Parties and Cooperating Non-Contracting Parties](https://iotc.org/about-iotc/structure-commission) (CPCs) are required to collect and report fisheries data in accordance with the [Conservation and Management Measures](https://iotc.org/cmms) (CMMs). To manage the data received from CPCs and other parties fishing in the IOTC area of competence for IOTC-managed species, the Secretariat has developed specific reporting forms for each dataset. The forms include all mandatory metadata, data fields, and information on IOTC formats and standard code lists.
 
-All IOTC code lists required by the forms are distributed through the [IOTC Reference Data Catalogue](../) and are also made available via an R library hosted on the IOTC Secretariat's GitHub repository ([iotc-data-reference-codelists](https://github.com/iotc-secretariat/iotc-data-reference-codelists)), with a mirror maintained by the Fisheries Data Interoperability Working Group ([fdiwg](https://github.com/fdiwg/fdi-codelists/tree/main/regional/iotc)). In addition, the code lists have been published on the Zenodo platform to support versioning, citation, and long-term accessibility ([https://doi.org/10.5281/zenodo.15743874](https://zenodo.org/records/15743875)).
+All IOTC code lists required by the forms are distributed through the [IOTC Reference Data Catalogue](../) and are also made available via an R library hosted on the IOTC Secretariat's GitHub repository ([iotc-data-reference-codelists](https://github.com/iotc-secretariat/iotc-data-reference-codelists)), with a mirror maintained by the Fisheries Data Interoperability Working Group ([fdiwg](https://github.com/fdiwg/fdi-codelists/tree/main/regional/iotc)). In addition, the code lists have been published on the [Zenodo](https://zenodo.org/) platform to support versioning, citation, and long-term accessibility: <a href="https://zenodo.org/records/15743875" target="_blank" title="Citable IOTC Reference Data on Zenodo">
+  <img src="../out/images/cl_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;">
+  <span style="vertical-align:middle;">
+</a>
 
 # Statistical Fishery Datasets
 
 At its 26^th^ session, the IOTC Scientific Committee endorsed the adoption of new reporting forms to streamline data flow and improve the quality of dataset submissions to the Secretariat. The use of the forms for submitting the core fisheries statistics to the IOTC became **mandatory** as of 2025 (section [Mandatory Forms](#mandatory)). In addition, the Secretariat has developed some voluntary forms for reporting fishing craft statistics, price time series, information on lost gears, and morphometric and biological data (section [Voluntary Forms](#voluntary)).
 
-The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts. You can download all current form templates for submitting data to the IOTC [here](../forms/IOTC-stats-forms.zip). They are also available on the Zenodo platform, which is used to manage their different versions and to maintain links with the corresponding IOTC code list versions [https://doi.org/10.5281/zenodo.16941787](https://zenodo.org/records/16941788).
+The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts. You can download all current form templates for submitting data to the IOTC [here](../forms/IOTC-stats-forms.zip).
+
+An archived version of the IOTC statistical forms can be downloaded directly from the Zenodo record or retrieved programmatically using R with the [zen4R](https://github.com/eblondel/zen4R) package: <a href="https://doi.org/10.5281/zenodo.16941787" target="_blank" title="Citable IOTC Reference Data on Zenodo">
+  <img src="../out/images/stats_forms_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;">
+  <span style="vertical-align:middle;">
+</a>
 
 We welcome your feedback on these forms and encourage you to direct any questions to the IOTC Secretariat via email at [IOTC-Statistics@fao.org](mailto:IOTC-Statistics@fao.org).
 
@@ -169,7 +177,12 @@ For the submission of data on _prices of fish products for tuna and tuna-like sp
 
 The IOTC Regional Observer Scheme (ROS) was established to collect verified catch and scientific data on tuna and tuna-like species within the IOTC area. Its implementation, which began on 1 July 2010, is carried out entirely at the national level by IOTC Contracting Parties and Cooperating Non-Contracting Parties (CPCs). Information on the ROS, including programme standards and observer training materials, is available on the [ROS page](https://iotc.org/science/regional-observer-scheme-science) of the IOTC website.
 
-The ROS data reporting forms were revised during the 20^th^ Session of the Working Party on Data Collection and Statistics ([WPDCS20](https://iotc.org/meetings/20th-working-party-data-collection-and-statistics-wpdcs20)), held in November 2024, and were subsequently endorsed by the Scientific Committee at its 27^th^ Session ([SC27](https://iotc.org/meetings/27th-session-scientific-committee-sc27)). The forms are provided as XLSX spreadsheets and contain multiple sheets corresponding to different hierarchical levels of data to be reported. They are available in four distinct gear group versions—gillnets, longlines, pole-and-line, and purse seines — corresponding to the main gears used in fisheries subject to the ROS data requirements, i.e., those involving vessels larger than 24 metres in length overall, or vessels smaller than 24 metres operating in Areas Beyond National Jurisdiction (ABNJ).
+The ROS data reporting forms were revised during the 20^th^ Session of the Working Party on Data Collection and Statistics ([WPDCS20](https://iotc.org/meetings/20th-working-party-data-collection-and-statistics-wpdcs20)), held in November 2024, and were subsequently endorsed by the Scientific Committee at its 27^th^ Session ([SC27](https://iotc.org/meetings/27th-session-scientific-committee-sc27)). The forms are provided as XLSX spreadsheets and contain multiple sheets corresponding to different hierarchical levels of data to be reported. They are available in four distinct gear group versions -- gillnets, longlines, pole-and-line, and purse seines -- corresponding to the main gears used in fisheries subject to the ROS data requirements, i.e., those involving vessels larger than 24 metres in length overall, or vessels smaller than 24 metres operating in Areas Beyond National Jurisdiction (ABNJ).
+
+The different versions of the IOTC ROS forms can be downloaded directly from the Zenodo record or retrieved programmatically using R with the [zen4R](https://github.com/eblondel/zen4R) package: <a href="https://zenodo.org/records/15743875" target="_blank" title="Citable IOTC Reference Data on Zenodo">
+  <img src="../out/images/ros_forms_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;">
+  <span style="vertical-align:middle;">
+</a>
 
 ## Form ROS-GN | Gillnets
 
@@ -193,20 +206,23 @@ The ROS data reporting forms were revised during the 20^th^ Session of the Worki
 
 # Vessel Registry Datasets {#5VE}
 
-Information and data on vessels involved in tuna and tuna-like fisheries in the IOTC Area of Competence must be collected and reported in line with the requirements set out in Resolutions [10/08](https://www.iotc.org/cmm/resolution-1008-concerning-record-active-vessels-fishing-tunas-and-swordfish-iotc-area) and [19/04](https://www.iotc.org/cmm/resolution-1904-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence).
+Information and data on active and authorised vessels involved in tuna and tuna-like fisheries in the IOTC Area of Competence shall be collected and reported in line with the requirements of Resolutions [10/08](https://www.iotc.org/cmm/resolution-1008-concerning-record-active-vessels-fishing-tunas-and-swordfish-iotc-area) and [19/04](https://www.iotc.org/cmm/resolution-1904-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence), respectively.
 
-## Record of Authorised Vessels {#RAV}
+Please note that Resolution [26/04](https://iotc.org/cmm/resolution-2604-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence) has been adopted at the 30^th^ session of the Commission and will supersede Resolution 19/04 for CPCs that do not object to its application.
 
-For the submission of data on vessels from longline and surface fisheries authorised to operate in the IOTC Area of Competence, including information on vessel identification, ownership, operator details, fishing gear, and vessel characteristics (e.g. type, length, and gross tonnage).
-
-+ [Form template](https://iotc.org/sites/default/files/documents/compliance/erav/Res_19_04_-_Record_of_IOTC_AFVs_E-FULL_VESSEL.xlsx)
-+ [Form description](https://iotc.org/e-rav)
+Individual vessel information is available via the [IOTC Record of Authorised Vessels](https://rav.iotc.org/). The dataset is also accessible through export views from a PostgreSQL database, supporting programmatic extraction and automated data pipelines. Access credentials may be obtained from the [IOTC Secretariat](mailto:IOTC-Statistics@fao.org).
 
 ## Active Vessel List {#AVL}
 
-For the submission of data on vessels from longline and surface fisheries that operated in the IOTC Area of Competence in the year prior to reporting, including information on vessel identification, ownership, operator details, fishing gear, and vessel characteristics (e.g. type, length, and gross tonnage).
+For the submission of data on vessels from longline and surface fisheries that operated in the IOTC Area of Competence in the year prior to reporting, including information on vessel identification, ownership, operator details, fishing gear, and vessel characteristics (e.g., type, length, and gross tonnage).
 
 + [Form template](https://iotc.org/sites/default/files/documents/compliance/report_templates/Res_10_08_-_Reporting_template_for_active_domestic_vessels_E_F.xlsx)
 + [Form description](https://iotc.org/compliance/reporting-templates)
 
+## Record of Authorised Vessels {#RAV}
+
+For the submission of data on vessels from longline and surface fisheries authorised to operate in the IOTC Area of Competence, including information on vessel identification, ownership, operator details, fishing gear, and vessel characteristics (e.g., type, length, and gross tonnage).
+
++ [Form template](https://iotc.org/sites/default/files/documents/compliance/erav/Res_19_04_-_Record_of_IOTC_AFVs_E-FULL_VESSEL.xlsx)
++ [Form description](https://iotc.org/e-rav)
 
