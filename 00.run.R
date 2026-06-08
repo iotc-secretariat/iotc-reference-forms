@@ -6,6 +6,7 @@ library(RCurl)
 library(data.table)
 library(DT)
 library(iotc.base.common.data)
+library(zen4R)
 
 source("./01.initialise.R")
 source("./02.configure_RMD.R")

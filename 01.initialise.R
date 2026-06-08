@@ -36,14 +36,14 @@ last_update = function(codelist_name, codelist_schema = NA) {
   )
 }
 
-CODELISTS_VERSIONS = query(C_REFERENCE_DATA, "SELECT * FROM refs_meta.CODELISTS_VERSIONS")
+CODELISTS_VERSIONS <- query(C_REFERENCE_DATA, "SELECT cl_schema, cl_name, version, last_update FROM refs_meta.CODELISTS_VERSIONS")
 
 names(CODELISTS_VERSIONS) = toupper(names(CODELISTS_VERSIONS))
 
-V_MAPPINGS = fread("./REFERENCE_CODELISTS_VIEW_MAPPINGS.csv")
+V_MAPPINGS <- fread("./REFERENCE_CODELISTS_VIEW_MAPPINGS.csv")
 V_MAPPINGS = merge(V_MAPPINGS, CODELISTS_VERSIONS, by = c("CL_SCHEMA", "CL_NAME"), all.x = TRUE)[, .(CL_SCHEMA, CL_NAME = REFERENCE_NAME, VERSION, LAST_UPDATE)]
 
-CODELISTS_VERSIONS = unique(rbind(CODELISTS_VERSIONS, V_MAPPINGS))
+CODELISTS_VERSIONS <- unique(rbind(CODELISTS_VERSIONS, V_MAPPINGS))
 
 # read_codelist = function(base_url = "https://data.iotc.org/reference/latest/domain/", domain, schema = NA, codelist) {
 #   if(is.na(schema)) 
