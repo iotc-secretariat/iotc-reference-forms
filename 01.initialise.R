@@ -7,7 +7,7 @@ C_REFERENCE_DATA =
                  password = Sys.getenv("IOTC_REFERENCE_DATA_DB_PASSWORD")
   )
 
-# Version of the Published Code List
+# Most Recent Version of the Published Code List
 DOI_PERMANENT = "10.5281/zenodo.15743874"
 DOI_VERSION = zen4R::get_versions(DOI_PERMANENT)$version
 
@@ -128,7 +128,7 @@ DATA_RAISINGS       <- read_codelist(domain = "data", codelist = "DATA_RAISINGS"
 
 COVERAGE_TYPES      <- read_codelist(domain = "data", codelist = "COVERAGE_TYPES")
 
-LOGICAL_RESPONSES <- read_codelist(domain = "data", codelist = "LOGICAL_RESPONSES")
+LOGICAL_RESPONSES   <- read_codelist(domain = "data", codelist = "LOGICAL_RESPONSES")
 
 # FISHERY DOMAIN ####
 
