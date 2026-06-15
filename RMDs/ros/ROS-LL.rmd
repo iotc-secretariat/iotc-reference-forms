@@ -592,8 +592,8 @@ This section of the form includes information about the specific hooks observed 
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| hook_type | M | The type of hooks used | **Code** from [Hook Types](#hookTypes) | e.g., `C13` |
-| percentage | O | The percentage (%) of hooks set by type | Float | **100** |
+| hook_type | M | The type of hooks and other terminal capture devices used, including trap line loops  | **Code** from [Hook and Terminal Devices](#hookAndTerminalDevices) | e.g., `C13` |
+| percentage | O | The percentage (%) of hooks set by type, including trap line loops  | Float | **100** |
 | variations | O | Indicates any variations in hook type, hook material, and presence/absence of hook ring where possible | String | `tbd` |
 
 # E-SET-BAITS {#eSetBaits}
@@ -1078,14 +1078,14 @@ out_dt(LIGHT_TYPES, "LIGHT_TYPES")
 out_dt(LIGHT_COLOURS, "LIGHT_COLOURS")
 ```
 
-## Hook Types {#hookTypes}
+## Hook and Terminal Devices {#hookAndTerminalDevices}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#hookTypes)
--   **Version**: `r version_number("HOOK_TYPES")`
--   **Last update**: `r last_update("HOOK_TYPES")`
+-   [Permalink](#hookAndTerminalDevices)
+-   **Version**: `r version_number("HOOK_AND_TERMINAL_DEVICES")`
+-   **Last update**: `r last_update("HOOK_AND_TERMINAL_DEVICES")`
 
 ```{r echo = FALSE, collapse = TRUE}
-out_dt(HOOK_TYPES, "HOOK_TYPES")
+out_dt(HOOK_AND_TERMINAL_DEVICES, "HOOK_AND_TERMINAL_DEVICES")
 ```
 
 ## Bait Conditions {#baitConditions}

@@ -93,6 +93,13 @@ The following code lists should be built by the Secretariat and added to the IOT
 | E-SET-CATCH-SPECIMENS | **NA** | SPECIES | NA | to add to the table `ros_ll.specimens` - currently present `ros_ll.catch_details` | 
 | E-SET-TAG_DETAILS     | TAG_X_NUMBER | TAG_X_ID | | |
 
+
+## Change | 2026-06-15
+
+Changed the description, code list, and URL of Hook types used in the sheet `E-SET-HOOKS` to extend the definition to both hooks and other terminal devices, so as to include trap lines (see code list [HOOK_AND_TERMINAL_DEVICES](https://data.iotc.org/reference/latest/domain/fisheries/#hookAndTerminalDevices))
+
+
+
 <!-- 
 ## Purse Seine Form
 

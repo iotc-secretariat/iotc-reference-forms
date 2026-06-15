@@ -196,7 +196,7 @@ LIGHT_TYPES         <- read_codelist(domain = "fisheries", schema = "fishery", c
 
 LIGHT_COLOURS       <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "LIGHT_COLOURS")
 
-HOOK_TYPES          <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "HOOK_TYPES")
+HOOK_AND_TERMINAL_DEVICES <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "HOOK_AND_TERMINAL_DEVICES")
 
 OFFAL_MANAGEMENT_TYPES <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "OFFAL_MANAGEMENT_TYPES")
 
