@@ -2,13 +2,13 @@
 options(DT.options = list(pageLength = 3))
 
 # FORM Summary (EN) ####
-render("./RMDs/Form-summary.Rmd",
+render("./RMDs/Form-main.Rmd",
        output_format = "html_document2",
        output_file = "index.html",
        output_dir = "./out/HTML/")
 
 # FORM SUMMARY (FR) ####
-render("./RMDs/Form-summary_fr.Rmd",
+render("./RMDs/Form-main_fr.Rmd",
       output_format = "html_document2",
        output_file = "index_fr.html",
        output_dir = "./out/HTML/")
