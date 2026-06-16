@@ -40,6 +40,8 @@ An archived version of the IOTC statistical forms can be downloaded directly fro
   <span style="vertical-align:middle;">
 </a>
 
+Additionally, interactive validators have been developed to allow CPCs to verify the contents of the reporting forms prior to submission. All validators are available through the IOTC Shiny Apps Catalogue: <https://iotc.review.fao.org/shiny/app/data_validators>.
+
 We welcome your feedback on these forms and encourage you to direct any questions to the IOTC Secretariat via email at [IOTC-Statistics@fao.org](mailto:IOTC-Statistics@fao.org).
 
 ## Mandatory Forms {#mandatory}
@@ -50,7 +52,9 @@ For the submission of data on [_species presence in the catch_](https://data.iot
 
 + [Form template](./Form-1DR.xlsx)
 + [Form description](./Form-1DR.html)
+<!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
+<!-- + [R Scripts]() to generate Form 1DR from Forms 1RC and 1DI -->
 
 ### Form 1IN {#1IN}
 
@@ -58,6 +62,8 @@ For the submission of data on [_interactions of longline and surface fisheries w
 
 + [Form template](./Form-1IN.xlsx)
 + [Form description](./Form-1IN.html)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 ### Form 1RC {#1RC}
 
@@ -65,7 +71,9 @@ For the submission of data on the total [_amount of fish caught and retained_](h
 
 + [Form template](./Form-1RC.xlsx)
 + [Form description](./Form-1RC.html)
-+ [Form validator](https://data.iotc.org/validators/ui/1RC/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1RC)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 ### Form 1DI {#1DI}
 
@@ -73,7 +81,9 @@ For the submission of data on the [_amount of discards_](https://data.iotc.org/r
 
 + [Form template](./Form-1DI.xlsx)
 + [Form description](./Form-1DI.html)
-+ [Form validator](https://data.iotc.org/validators/ui/1DI/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1DI)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 ### Form 3CE {#3CE}
 
@@ -83,13 +93,17 @@ The unified form allows reporting data for multiple fisheries simultaneously:
 
 + [Form template](./Form-3CE.xlsx)
 + [Form description](./Form-3CE.html)
-+ [Form validator](https://data.iotc.org/validators/ui/3CE/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CE)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 A version of the form allows reporting **updated** data for a single fishery:
 
 + [Form template](./Form-3CE-update.xlsx)
 + [Form description]( ./Form-3CE-update.html)
-+ [Form validator](https://data.iotc.org/validators/ui/update/3CE/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CEUpdate)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 ### Form 3AA {#3AA}
 
@@ -99,11 +113,15 @@ The unified form allows reporting data for multiple fisheries simultaneously:
 
 + [Form template](./Form-3AA.xlsx)
 + [Form description](./Form-3AA.html)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 A version of the form allows reporting **updated** data for a single fishery:
 
 + [Form template](./Form-3AA-update.xlsx)
 + [Form description](./Form-3AA_update.html)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 ### Form 3BU {#3BU}
 
@@ -111,7 +129,9 @@ For the submission of data on [_daily buoy positions_](https://data.iotc.org/ref
 
 + [Form template](./Form-3BU.xlsx)
 + [Form description](./Form-3BU.html)
-+ [Form validator](https://data.iotc.org/validators/ui/3BU/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3BU)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 ### Form 3DA {#3DA}
 
@@ -121,11 +141,15 @@ The unified form addresses the shortcomings of the previous 3FA form and allows 
 
 + [Form template](./Form-3DA.xlsx)
 + [Form description](./Form-3DA.html)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 A version of the form allows reporting **updated** data for a single vessel:
 
 + [Form template](./Form-3DA-update.xlsx)
 + [Form description](./Form-3DA-update.html)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 ### Form 4SF {#4SF}
 
@@ -135,13 +159,17 @@ The unified form allows reporting data for multiple fisheries and species simult
 
 + [Form template](./Form-4SF.xlsx)
 + [Form description](./Form-4SF.html)
-+ [Form validator](https://data.iotc.org/validators/ui/4SF/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SF)
+<!-- + [Guidelines]() including charts describing size measurements and measurement tools and methods -->
+<!-- + [Form example]() -->
 
 A version of the form allows reporting **updated** data for a single fishery and species:
 
 + [Form template](./Form-4SF-update.xlsx)
 + [Form description](./Form-4SF-update.html)
-+ [Form validator](https://data.iotc.org/validators/ui/update/4SF/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SFUpdate)
+<!-- + [Guidelines]() including charts describing size measurements and measurement tools and methods -->
+<!-- + [Form example]() -->
 
 ## Voluntary Forms {#voluntary}
 
@@ -151,6 +179,8 @@ For the submission of data on [_fishing craft statistics_](https://data.iotc.org
 
 + [Form template](./Form-2FC.xlsx)
 + [Form description](./Form-2FC.html)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 ### Form 5MB {#5MB}
 
@@ -158,6 +188,8 @@ For the submission of individual-level morphometric (lengths and weights) and bi
 
 + [Form template](./Form-5MB.xlsx)
 + [Form description](./Form-5MB.html)
+<!-- + [Guidelines]() including charts describing size measurements and measurement tools and methods -->
+<!-- + [Form example]() -->
 
 ### Form 6LG
 
@@ -165,6 +197,8 @@ For the submission of data and information on the recovery of abandoned, lost or
 
 + [Form template](./Form-6LG.xlsx)
 + [Form description](./Form-6LG.html)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 ### Form 7PR {#7PR}
 
@@ -172,6 +206,8 @@ For the submission of data on _prices of fish products for tuna and tuna-like sp
 
 + [Legacy form template](./legacy/Form-7PR-legacy.xlsm)
 + [Legacy form description](./legacy/Form-7PR-legacy.html)
+<!-- + [Guidelines]() -->
+<!-- + [Form example]() -->
 
 # Regional Observer Scheme Datasets
 
