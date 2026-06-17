@@ -71,7 +71,8 @@ For the submission of data on the total [_amount of fish caught and retained_](h
 
 + [Form template](./Form-1RC.xlsx)
 + [Form description](./Form-1RC.html)
-+ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1RC)
++ [Form validator](https://data.iotc.org/validators/ui/1RC/)
+<!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1RC) -->
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
@@ -81,7 +82,8 @@ For the submission of data on the [_amount of discards_](https://data.iotc.org/r
 
 + [Form template](./Form-1DI.xlsx)
 + [Form description](./Form-1DI.html)
-+ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1DI)
++ [Form validator](https://data.iotc.org/validators/ui/1DI/)
+<!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1DI) -->
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
@@ -93,7 +95,8 @@ The unified form allows reporting data for multiple fisheries simultaneously:
 
 + [Form template](./Form-3CE.xlsx)
 + [Form description](./Form-3CE.html)
-+ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CE)
++ [Form validator](https://data.iotc.org/validators/ui/3CE/)
+<!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CE) -->
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
@@ -101,7 +104,8 @@ A version of the form allows reporting **updated** data for a single fishery:
 
 + [Form template](./Form-3CE-update.xlsx)
 + [Form description]( ./Form-3CE-update.html)
-+ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CEUpdate)
++ [Form validator](https://data.iotc.org/validators/ui/update/3CE/)
+<!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CEUpdate) -->
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
@@ -129,7 +133,8 @@ For the submission of data on [_daily buoy positions_](https://data.iotc.org/ref
 
 + [Form template](./Form-3BU.xlsx)
 + [Form description](./Form-3BU.html)
-+ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3BU)
++ [Form validator](https://data.iotc.org/validators/ui/3BU/)
+<!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3BU) -->
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
@@ -159,7 +164,8 @@ The unified form allows reporting data for multiple fisheries and species simult
 
 + [Form template](./Form-4SF.xlsx)
 + [Form description](./Form-4SF.html)
-+ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SF)
++ [Form validator](https://data.iotc.org/validators/ui/4SF/)
+<!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SF) -->
 <!-- + [Guidelines]() including charts describing size measurements and measurement tools and methods -->
 <!-- + [Form example]() -->
 
@@ -167,7 +173,8 @@ A version of the form allows reporting **updated** data for a single fishery and
 
 + [Form template](./Form-4SF-update.xlsx)
 + [Form description](./Form-4SF-update.html)
-+ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SFUpdate)
++ [Form validator](https://data.iotc.org/validators/ui/update/4SF/)
+<!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SFUpdate) -->
 <!-- + [Guidelines]() including charts describing size measurements and measurement tools and methods -->
 <!-- + [Form example]() -->
 
