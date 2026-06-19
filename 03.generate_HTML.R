@@ -1,7 +1,7 @@
 ### Limit all interactive tables to a number of rows
 options(DT.options = list(pageLength = 3))
 
-# FORM Summary (EN) ####
+# Form Main Access Page (EN) ####
 render("./RMDs/Form-main.Rmd",
        output_format = "html_document2",
        output_file = "index.html",

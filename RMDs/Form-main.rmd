@@ -24,7 +24,9 @@ output:
 
 Following Article XI of the [Agreement for the establishment of the Indian Ocean Tuna Commission](https://iotc.org/sites/default/files/documents/2012/5/25/IOTC%20Agreement.pdf) (IOTC), [Contracting Parties and Cooperating Non-Contracting Parties](https://iotc.org/about-iotc/structure-commission) (CPCs) are required to collect and report fisheries data in accordance with the [Conservation and Management Measures](https://iotc.org/cmms) (CMMs). To manage the data received from CPCs and other parties fishing in the IOTC area of competence for IOTC-managed species, the Secretariat has developed specific reporting forms for each dataset. The forms include all mandatory metadata, data fields, and information on IOTC formats and standard code lists.
 
-All IOTC code lists required by the forms are distributed through the [IOTC Reference Data Catalogue](../) and are also made available via an R library hosted on the IOTC Secretariat's GitHub repository ([iotc-data-reference-codelists](https://github.com/iotc-secretariat/iotc-data-reference-codelists)), with a mirror maintained by the Fisheries Data Interoperability Working Group ([fdiwg](https://github.com/fdiwg/fdi-codelists/tree/main/regional/iotc)). In addition, the code lists have been published on the [Zenodo](https://zenodo.org/) platform to support versioning, citation, and long-term accessibility: <a href="https://zenodo.org/records/15743875" target="_blank" title="Citable IOTC Reference Data on Zenodo">
+All IOTC code lists required by the forms are distributed through the [IOTC Reference Data Catalogue](../) and are also made available via an R library hosted on the IOTC Secretariat's GitHub repository ([iotc-data-reference-codelists](https://github.com/iotc-secretariat/iotc-data-reference-codelists)), with a mirror maintained by the Fisheries Data Interoperability Working Group ([fdiwg](https://github.com/fdiwg/fdi-codelists/tree/main/regional/iotc)).
+
+In addition, the code lists have been published on the [Zenodo](https://zenodo.org/) platform to support versioning, citation, and long-term accessibility: <a href="https://zenodo.org/records/15743875" target="_blank" title="Citable IOTC Reference Data on Zenodo">
   <img src="../out/images/cl_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;">
   <span style="vertical-align:middle;">
 </a>
@@ -46,29 +48,32 @@ We welcome your feedback on these forms and encourage you to direct any question
 
 ## Mandatory Forms {#mandatory}
 
-### Form 1DR {#1DR}
+### Form 1DR {#Form-1DR}
 
 For the submission of data on [_species presence in the catch_](https://data.iotc.org/reference/latest/guidelines/#Species_presence_in_the_catch).
 
++ [Permalink](#Form-1DR)
 + [Form template](./Form-1DR.xlsx)
 + [Form description](./Form-1DR.html)
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 <!-- + [R Scripts]() to generate Form 1DR from Forms 1RC and 1DI -->
 
-### Form 1IN {#1IN}
+### Form 1IN {#Form-1IN}
 
 For the submission of data on [_interactions of longline and surface fisheries with endangered, threatened, and protected (ETP) species_](https://data.iotc.org/reference/latest/guidelines/#Interactions_with_Endangered,_Threatened_and_Protected_species).
 
++ [Permalink](#Form-1IN)
 + [Form template](./Form-1IN.xlsx)
 + [Form description](./Form-1IN.html)
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-### Form 1RC {#1RC}
+### Form 1RC {#Form-1RC}
 
 For the submission of data on the total [_amount of fish caught and retained_](https://data.iotc.org/reference/latest/guidelines/#Amount_of_fish_caught_and_retained).
 
++ [Permalink](#Form-1RC)
 + [Form template](./Form-1RC.xlsx)
 + [Form description](./Form-1RC.html)
 + [Form validator](https://data.iotc.org/validators/ui/1RC/)
@@ -76,10 +81,11 @@ For the submission of data on the total [_amount of fish caught and retained_](h
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-### Form 1DI {#1DI}
+### Form 1DI {#Form-1DI}
 
 For the submission of data on the [_amount of discards_](https://data.iotc.org/reference/latest/guidelines/#Amount_of_discards).
 
++ [Permalink](#Form-1DI)
 + [Form template](./Form-1DI.xlsx)
 + [Form description](./Form-1DI.html)
 + [Form validator](https://data.iotc.org/validators/ui/1DI/)
@@ -87,12 +93,13 @@ For the submission of data on the [_amount of discards_](https://data.iotc.org/r
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-### Form 3CE {#3CE}
+### Form 3CE {#Form-3CE}
 
 For the submission of data on [_geo-referenced catches and efforts_](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_catches_and_efforts).
 
 The unified form allows reporting data for multiple fisheries simultaneously:
 
++ [Permalink](#Form-3CE)
 + [Form template](./Form-3CE.xlsx)
 + [Form description](./Form-3CE.html)
 + [Form validator](https://data.iotc.org/validators/ui/3CE/)
@@ -109,12 +116,13 @@ A version of the form allows reporting **updated** data for a single fishery:
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-### Form 3AA {#3AA}
+### Form 3AA {#Form-3AA}
 
 For the submission of data on [_activities related to anchored fish aggregating devices_](https://data.iotc.org/reference/latest/guidelines/#AFAD-related_activities).
 
 The unified form allows reporting data for multiple fisheries simultaneously:
 
++ [Permalink](#Form-3AA)
 + [Form template](./Form-3AA.xlsx)
 + [Form description](./Form-3AA.html)
 <!-- + [Guidelines]() -->
@@ -127,10 +135,11 @@ A version of the form allows reporting **updated** data for a single fishery:
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-### Form 3BU {#3BU}
+### Form 3BU {#Form-3BU}
 
 For the submission of data on [_daily buoy positions_](https://data.iotc.org/reference/latest/guidelines/#Daily_buoy_positions).
 
++ [Permalink](#Form-3BU)
 + [Form template](./Form-3BU.xlsx)
 + [Form description](./Form-3BU.html)
 + [Form validator](https://data.iotc.org/validators/ui/3BU/)
@@ -138,12 +147,13 @@ For the submission of data on [_daily buoy positions_](https://data.iotc.org/ref
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-### Form 3DA {#3DA}
+### Form 3DA {#Form-3DA}
 
 For the submission of data on [_interactions related to drifting floating objects_](https://data.iotc.org/reference/latest/guidelines/#DFOB-related_activities).
 
 The unified form addresses the shortcomings of the previous 3FA form and allows reporting data for multiple vessels simultaneously:
 
++ [Permalink](#Form-3DA)
 + [Form template](./Form-3DA.xlsx)
 + [Form description](./Form-3DA.html)
 <!-- + [Guidelines]() -->
@@ -156,12 +166,13 @@ A version of the form allows reporting **updated** data for a single vessel:
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-### Form 4SF {#4SF}
+### Form 4SF {#Form-4SF}
 
 For the submission of data on [_geo-referenced size frequencies_](https://data.iotc.org/reference/latest/guidelines/#Geo-referenced_size_frequencies).
 
 The unified form allows reporting data for multiple fisheries and species simultaneously:
 
++ [Permalink](#Form-4SF)
 + [Form template](./Form-4SF.xlsx)
 + [Form description](./Form-4SF.html)
 + [Form validator](https://data.iotc.org/validators/ui/4SF/)
@@ -180,37 +191,41 @@ A version of the form allows reporting **updated** data for a single fishery and
 
 ## Voluntary Forms {#voluntary}
 
-### Form 2FC {#2FC}
+### Form 2FC {#Form-2FC}
 
 For the submission of data on [_fishing craft statistics_](https://data.iotc.org/reference/latest/guidelines/#Fishing_craft_statistics).
 
++ [Permalink](#Form-2FC)
 + [Form template](./Form-2FC.xlsx)
 + [Form description](./Form-2FC.html)
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-### Form 5MB {#5MB}
+### Form 5MB {#Form-5MB}
 
 For the submission of individual-level morphometric (lengths and weights) and biological data, including sex, maturity stage, and samples of hard and soft tissues for further analysis.
 
++ [Permalink](#Form-5MB)
 + [Form template](./Form-5MB.xlsx)
 + [Form description](./Form-5MB.html)
 <!-- + [Guidelines]() including charts describing size measurements and measurement tools and methods -->
 <!-- + [Form example]() -->
 
-### Form 6LG
+### Form 6LG {#Form-6LG}
 
 For the submission of data and information on the recovery of abandoned, lost or discarded fishing gear in accordance with IOTC Recommendation [24/11](https://iotc.org/cmm/recommendation-2411-conservation-and-management-measure-marine-pollution) on _Conservation and Management Measure on Marine Pollution_.
 
++ [Permalink](#Form-6LG)
 + [Form template](./Form-6LG.xlsx)
 + [Form description](./Form-6LG.html)
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-### Form 7PR {#7PR}
+### Form 7PR {#Form-7PR}
 
 For the submission of data on _prices of fish products for tuna and tuna-like species under IOTC mandate_. Specifications for a new IOTC Form for fish prices and other socio-economic indicators are expected to be defined through the work conducted by the [Working Party on Socio-Economics](https://iotc.org/meetings/1st-working-party-socio-economics).
 
++ [Permalink](#Form-7PR)
 + [Legacy form template](./legacy/Form-7PR-legacy.xlsm)
 + [Legacy form description](./legacy/Form-7PR-legacy.html)
 <!-- + [Guidelines]() -->
@@ -227,23 +242,27 @@ The different versions of the IOTC ROS forms can be downloaded directly from the
   <span style="vertical-align:middle;">
 </a>
 
-## Form ROS-GN | Gillnets
+## Form ROS-GN | Gillnets {#ROS_GN}
 
++ [Permalink](#ROS_GN)
 + [Form template](./ros/Form-ROS-GN.xlsx)
 + [Form description](./ros/Form-ROS-GN.html)
 
-## Form ROS-LL | Longlines
+## Form ROS-LL | Longlines {#ROS_LL}
 
++ [Permalink](#ROS_LL)
 + [Form template](./ros/Form-ROS-LL.xlsx)
 + [Form description](./ros/Form-ROS-LL.html)
 
-## Form ROS-PL | Pole-and-Lines
+## Form ROS-PL | Pole-and-Lines {#ROS_PL}
 
++ [Permalink](#ROS_PL)
 + [Form template](./ros/Form-ROS-PL.xlsx)
 + [Form description](./ros/Form-ROS-PL.html)
 
-## Form ROS-PS | Purse Seines
+## Form ROS-PS | Purse Seines {#ROS_PS}
 
++ [Permalink](#ROS_PS)
 + [Form template](./ros/Form-ROS-PS.xlsx)
 + [Form description](./ros/Form-ROS-PS.html)
 
