@@ -187,4 +187,11 @@ disseminate = function(version) {
 }
 
 form_version = "1.0.0"
-disseminate(form_version) 
+
+# Upload forms and descriptions
+disseminate(form_version)   
+
+# Upload descriptions only
+upload_ros_form_docs(form_version)
+
+
