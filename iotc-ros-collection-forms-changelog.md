@@ -274,7 +274,7 @@ Sheet 7 (for transhipments was removed)
 | 6-PS     | Catch details | Handling method  | Code list linked |
 | 6-PS     | Catch details | Revival  | format changed, Code list linked |
 
-##### 6-PS
+##### 7-PS
 
 | Sheet    | Section                 | Field (v4)                   |Change (v5)       |
 |:---------|:------------------------|:-----------------------------|:-----------------|
