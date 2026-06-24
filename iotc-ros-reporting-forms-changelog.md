@@ -8,6 +8,22 @@ IOTC ROS Reporting Forms – Changelog
 
 # from v4 to v5
 
+#### updated code lists
+- Code lists updated to "/latest/"
+
+| Sheet                       | Field                         |
+|:----------------------------|:------------------------------|
+| O-INFO              | embarkation: country                  |
+| O-INFO              | embarkation : port                    |
+| O-INFO              | disembarkation: country        |
+| O-INFO              | disembarkation : port              |
+| O-INFO              | reasons for lost days (all fields)      |
+| V-INFO              | flag or chartering state     |
+| V-INFO              | country, port, target species, main fishing gear, nationality (already changed)
+|
+
+
+
 
 
 # From v3 (10.5281/zenodo.17191683) to v4 (10.5281/zenodo.17509753)
