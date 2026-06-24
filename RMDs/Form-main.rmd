@@ -107,11 +107,11 @@ The unified form allows reporting data for multiple fisheries simultaneously:
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-A version of the form allows reporting **updated** data for a single fishery:
+<!-- A version of the form allows reporting **updated** data for a single fishery: -->
 
-+ [Form template](./Form-3CE-update.xlsx)
-+ [Form description]( ./Form-3CE-update.html)
-+ [Form validator](https://data.iotc.org/validators/ui/update/3CE/)
+<!-- + [Form template](./Form-3CE-update.xlsx) -->
+<!-- + [Form description]( ./Form-3CE-update.html) -->
+<!-- + [Form validator](https://data.iotc.org/validators/ui/update/3CE/) -->
 <!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CEUpdate) -->
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
@@ -128,11 +128,11 @@ The unified form allows reporting data for multiple fisheries simultaneously:
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-A version of the form allows reporting **updated** data for a single fishery:
+<!-- A version of the form allows reporting **updated** data for a single fishery: -->
 
-+ [Form template](./Form-3AA-update.xlsx)
-+ [Form description](./Form-3AA_update.html)
-<!-- + [Guidelines]() -->
+<!-- + [Form template](./Form-3AA-update.xlsx) -->
+<!-- + [Form description](./Form-3AA_update.html) -->
+<!-- <!-- + [Guidelines]() --> -->
 <!-- + [Form example]() -->
 
 ### Form 3BU {#Form-3BU}
@@ -159,11 +159,11 @@ The unified form addresses the shortcomings of the previous 3FA form and allows 
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
-A version of the form allows reporting **updated** data for a single vessel:
+<!-- A version of the form allows reporting **updated** data for a single vessel: -->
 
-+ [Form template](./Form-3DA-update.xlsx)
-+ [Form description](./Form-3DA-update.html)
-<!-- + [Guidelines]() -->
+<!-- + [Form template](./Form-3DA-update.xlsx) -->
+<!-- + [Form description](./Form-3DA-update.html) -->
+<!-- <!-- + [Guidelines]() --> -->
 <!-- + [Form example]() -->
 
 ### Form 4SF {#Form-4SF}
@@ -180,11 +180,11 @@ The unified form allows reporting data for multiple fisheries and species simult
 <!-- + [Guidelines]() including charts describing size measurements and measurement tools and methods -->
 <!-- + [Form example]() -->
 
-A version of the form allows reporting **updated** data for a single fishery and species:
+<!-- A version of the form allows reporting **updated** data for a single fishery and species: -->
 
-+ [Form template](./Form-4SF-update.xlsx)
-+ [Form description](./Form-4SF-update.html)
-+ [Form validator](https://data.iotc.org/validators/ui/update/4SF/)
+<!-- + [Form template](./Form-4SF-update.xlsx) -->
+<!-- + [Form description](./Form-4SF-update.html) -->
+<!-- + [Form validator](https://data.iotc.org/validators/ui/update/4SF/) -->
 <!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SFUpdate) -->
 <!-- + [Guidelines]() including charts describing size measurements and measurement tools and methods -->
 <!-- + [Form example]() -->

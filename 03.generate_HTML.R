@@ -54,11 +54,11 @@ render("./RMDs/Form-3CE.Rmd",
        output_file = "Form-3CE.html", 
        output_dir = "./out/HTML/")
 
-### Form 3-CE-update ####
-render("./RMDs/Form-3CE-update.Rmd", 
-       output_format = "html_document2",
-       output_file = "Form-3CE-update.html", 
-       output_dir = "./out/HTML/")
+# ### Form 3-CE-update ####
+# render("./RMDs/Form-3CE-update.Rmd", 
+#        output_format = "html_document2",
+#        output_file = "Form-3CE-update.html", 
+#        output_dir = "./out/HTML/")
 
 ## Geo-referenced size frequencies ####
 
@@ -69,10 +69,10 @@ render("./RMDs/Form-4SF.Rmd",
        output_dir = "./out/HTML/")
 
 ### Form 4-SF-update ####
-render("./RMDs/Form-4SF-update.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-4SF-update.html", 
-       output_dir = "./out/HTML/")
+# render("./RMDs/Form-4SF-update.Rmd", 
+#        output_format = "html_document2",
+#        output_file ="Form-4SF-update.html", 
+#        output_dir = "./out/HTML/")
 
 ## AFAD-related activities ####
 
@@ -83,10 +83,10 @@ render("./RMDs/Form-3AA.Rmd",
        output_dir = "./out/HTML/")
 
 ### Form 3-AA-update ####
-render("./RMDs/Form-3AA-update.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-3AA-update.html", 
-       output_dir = "./out/HTML/")
+# render("./RMDs/Form-3AA-update.Rmd", 
+#        output_format = "html_document2",
+#        output_file ="Form-3AA-update.html", 
+#        output_dir = "./out/HTML/")
 
 ## DFOB-related activities ####
 
@@ -97,10 +97,10 @@ render("./RMDs/Form-3DA.Rmd",
        output_dir = "./out/HTML/")
 
 ### Form 3-DA-update ####
-render("./RMDs/Form-3DA-update.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-3DA-update.html", 
-       output_dir = "./out/HTML/")
+# render("./RMDs/Form-3DA-update.Rmd", 
+#        output_format = "html_document2",
+#        output_file ="Form-3DA-update.html", 
+#        output_dir = "./out/HTML/")
 
 ## Daily buoy positions ####
 

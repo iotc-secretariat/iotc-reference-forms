@@ -23,7 +23,9 @@ output:
   
 This form provides for the reporting of estimates of geo-referenced species-specific catches and efforts by fishing fleet, fishery, and space and time strata.
 
-Click [here](./Form-3CE.xlsx) to download a blank version of Form 3CE, or [return](./index.html) to the list of all new versions of the IOTC statistical data reporting forms. The form allows reporting updated data for multiple fisheries simultaneously. Click [here](./Form-3CE-update.xlsx) to download a blank version of Form 3CE which has been designed to report updated data for a single fishery.
+Click [here](./Form-3CE.xlsx) to download a blank version of Form 3CE, or [return](./index.html) to the list of all new versions of the IOTC statistical data reporting forms. The form allows reporting updated data for multiple fisheries simultaneously.
+
+<!-- Click [here](./Form-3CE-update.xlsx) to download a blank version of Form 3CE which has been designed to report updated data for a single fishery. -->
 
 # Data Content
 
@@ -96,7 +98,7 @@ For most gears (e.g., purse seine, longline, gillnet, handline), a fishing opera
 
 For coastal fisheries, it is recommended that effort data be submitted using the same effort units as those prescribed for longline and surface fisheries characterised by the same fishing gear.
 
-## Standard effort units by gear group
+## Standard Effort Units by Gear Group
 
 | Gear group | Primary effort | Secondary effort | 
 | :------------ | :-------------------- | :------------------- |
@@ -107,7 +109,7 @@ Other gears (OT)     | Number of days at sea    | Number of active gears or fish
 Pole-and-lines (PL)  | Number of fishing days   | Number of fishing operations/sets |
 Purse seines (PS)    | Number of fishing hours  | Number of fishing operations/sets |
 
-## Additional effort indicators
+## Additional Effort Indicators
 
 Additional units may be considered to refine and standardise the estimation of nominal fishing effort:
 
@@ -119,7 +121,7 @@ iii. In longline fisheries that use trap line loops as terminal gear devices (la
 
 iv. In purse seine fisheries, the numbers of successful and null fishing operations, searching time, and surface area explored may complement the information provided by fishing time and the total number of fishing sets. 
 
-## Units not recommended
+## Units Not Recommended
 
 From a general perspective, the use of trips as a unit of effort is not recommended, as trip duration may vary widely due to vessel size, fishing success, environmental conditions, or operational constraints (e.g., fuel availability).
 

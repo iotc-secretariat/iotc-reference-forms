@@ -23,13 +23,15 @@ output:
   
 This form provides for the annual reporting of fishing activities conducted around anchored fish aggregated devices (AFADs) located in the IOTC area of competence along with estimates of retained catches and discards for the IOTC species, common sharks, and other bycatch species caught in association with IOTC fisheries.
 
-Click [here](./Form-3AA.xlsx) to download a blank version of Form 3AA, or [return](./index.html) to the list of all IOTC statistical data reporting forms. The form allows reporting updated data for multiple fisheries simultaneously. Click [here](./Form-3AA-update.xlsx) to download a blank version of Form 3AA which has been designed to report updated data for a single fishery.
+Click [here](./Form-3AA.xlsx) to download a blank version of Form 3AA, or [return](./index.html) to the list of all IOTC statistical data reporting forms. The form allows reporting updated data for multiple fisheries simultaneously.
 
-# Data content
+<!-- Click [here](./Form-3AA-update.xlsx) to download a blank version of Form 3AA which has been designed to report updated data for a single fishery. -->
+
+# Data Content
 
 Daily information on AFOB-related activities along with estimates of total number and/or live weight of retained catches and discards by species, fate, raising status, and catch unit.
 
-## General information
+## General Information
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -37,7 +39,7 @@ Daily information on AFOB-related activities along with estimates of total numbe
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** From [Entities](#entities) |
 | Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |
 
-## Main data elements
+## Main Data Elements
 
 | Element | Requirement | Description | Input value |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -51,7 +53,7 @@ Daily information on AFOB-related activities along with estimates of total numbe
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | 
 | Catch unit | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 
-## AFOB data
+## AFOB Data
 
 | Element | Requirement | Description | Input value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
@@ -59,7 +61,7 @@ Daily information on AFOB-related activities along with estimates of total numbe
 | Type | M | Type of anchored floating object | **Code** from [AFOB types](#AFOBtypes) |
 | Activity | M | Type of activities undertaken when visiting or deploying an anchored floating object | **Code** from [AFOB activity types](#AFOBactivityTypes) |
 
-# Reporting metadata
+# Reporting Metadata
 
 | Element | Requirement | Description | Format | Example |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
@@ -70,11 +72,11 @@ Daily information on AFOB-related activities along with estimates of total numbe
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
 
-# Reporting deadlines
+# Reporting Deadlines
 
 - **Surface fisheries**: 30 June (final)
 
-# Reference code lists
+# Reference Code Lists
 
 ## Entities {#entities}
 
@@ -100,25 +102,25 @@ out_dt(FISHERIES, "FISHERIES")
 out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
 ```
 
-## Types of data {#types}
+## Types of Data {#types}
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
 ```
 
-## Types of anchored fishing objects {#AFOBtypes}
+## Types of Anchored Fishing Objects {#AFOBtypes}
 
 ```{r collapse = TRUE}
 out_dt(AFOB_TYPES, "AFOB_TYPES")
 ```
 
-## Types of activities on anchored floating objects {#AFOBactivityTypes}
+## Types of Activities on Anchored Floating Objects {#AFOBactivityTypes}
 
 ```{r collapse = TRUE}
 out_dt(AFOB_ACTIVITIES, "AFOB_ACTIVITIES")
 ```
 
-## Types of fates {#typesOfFate}
+## Types of Fates {#typesOfFate}
 
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
@@ -130,7 +132,7 @@ out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
-## Catch units {#catchUnits}
+## Catch Units {#catchUnits}
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")
