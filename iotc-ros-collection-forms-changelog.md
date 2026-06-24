@@ -162,6 +162,121 @@ Sheet 7 (for transhipments was removed)
 
 ### PS
 
+#### v4 --> v5
+- code list URLs all updated to be "/latest/" rather than "1.0.0" - did not change the contents of the code lists
+- adding code lists to logical responses
+- removing fields "is straight"
+
+##### 1-PS
+
+| Sheet    | Section                 | Field (v4)                   |Change (v5)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 1-PS     | Observer trip details (embarkation) | Country      | Code list linked |
+| 1-PS     | Observer trip details (embarkation) | Port         | Code list linked |
+| 1-PS     | Observer trip details (disembarkation) | Country   | Code list linked |
+| 1-PS     | Observer trip details (disembarkation) | Port      | Code list linked |
+| 1-PS     | Vessel identification | Vessel flag/chartering state     | Code list linked |
+| 1-PS     | Vessel identification | Vessel port of registration    | Code list linked |
+| 1-PS     | Vessel identification | Vessel country of registration     | Code list linked |
+| 1-PS     | Vessel identification | Licensed target species    | Code list linked |
+| 1-PS     | Vessel identification | Main fishing gear     | Code list linked |
+| 1-PS     | Vessel owner and personnel | fishing master: nationality     | Code list linked |
+| 1-PS     | Vessel owner and personnel | skipper (captain): nationality     | Code list linked |
+| 1-PS     | Vessel trip details | departure - country    | Code list linked |
+| 1-PS     | Vessel trip details | departure - port   | Code list linked |
+| 1-PS     | Vessel trip details | return - country    | Code list linked |
+| 1-PS     | Vessel trip details | return - port    | Code list linked |
+| 1-PS     | Vessel attributes | Hull material    | Code list linked |
+| 1-PS     | Vessel attributes | Fish preservation methods    | Code list linked |
+| 1-PS     | Vessel attributes | fish storage type    | Code list linked |
+| 1-PS     | Vessel electronics | GNSS    | format changed, Code list linked |
+| 1-PS     | Vessel electronics | VMS    | format changed, Code list linked |
+| 1-PS     | Vessel electronics | AIS    | format changed, Code list linked |
+| 1-PS     | Vessel electronics | Radars   | format changed, Code list linked |
+| 1-PS     | Vessel electronics | Track plotter    | format changed, Code list linked |
+| 1-PS     | Vessel electronics | Depth sounder    | format changed, Code list linked |
+| 1-PS     | Vessel electronics | Sonar    | format changed, Code list linked |
+| 1-PS     | Vessel electronics | Doppler current m   | format changed, Code list linked |
+| 1-PS     | Vessel electronics | XBT    | format changed, Code list linked |
+| 1-PS     | Vessel electronics | VHF radios   | format changed, Code list linked |
+| 1-PS     | Vessel electronics | HF radios    | format changed, Code list linked |
+| 1-PS     | Vessel electronics | Sat Comm    | format changed, Code list linked |
+| 1-PS     | Vessel electronics | FIS    | format changed, Code list linked |
+| 1-PS     | Waste management | waste category   | Code list linked |
+| 1-PS     | Waste management | storage/disposal method   | Code list linked |
+| 1-PS     | Observed trip summary | Reasons for lost days  | Code list linked |
+
+##### 2-PS
+
+| Sheet    | Section                 | Field (v4)                   |Change (v5)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 2-PS     | Special equipment or machinery | power block  | format changed, Code list linked |
+| 2-PS     | Special equipment or machinery | purse winch | format changed, Code list linked |
+
+
+##### 3-PS
+
+| Sheet    | Section                 | Field (v4)                   |Change (v5)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 3-PS     | Setting operations | School sighting cues  | Code list linked |
+| 3-PS     | Setting operations | School types  | Code list linked |
+| 3-PS     | Setting operations | First detection method  | Code list linked |
+| 3-PS     | Object details | Deployed  | format changed, Code list linked |
+| 3-PS     | Object details | Retrieved | format changed, Code list linked |
+| 3-PS     | Object details | Raft | Code list linked |
+| 3-PS     | Object details | Tail | Code list linked |
+| 3-PS     | Cetaceans and whale shark sightings | Sighted before setting  | format changed, Code list linked |
+| 3-PS     | Cetaceans and whale shark sightings | Species | Code list linked |
+| 3-PS     | Cetaceans and whale shark sightings | Caught in the net | format changed, Code list linked |
+
+
+##### 4-PS
+
+| Sheet    | Section                 | Field (v4)                   |Change (v5)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 4-PS     | Catch details | Species  | Code list linked |
+| 4-PS     | Catch details | Fate type  | Code list linked |
+| 4-PS     | Catch details | Fate code  | Code list linked |
+| 4-PS     | Catch details | Sampling method  | Code list linked |
+| 4-PS     | Catch details | processing type  | Code list linked |
+| 4-PS     | Catch details | Weight unit | field removed, value to be reported in kg |
+| 4-PS     | Catch details | Estimation method  | Code list linked |
+| 4-PS     | Tag details | Type  | Code list linked |
+
+##### 5-PS
+
+| Sheet    | Section                 | Field (v4)                   |Change (v5)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 5-PS     | Catch details | Sampling method  | Code list linked |
+| 5-PS     | Catch details | Length 1 - Type | Code list linked |
+| 5-PS     | Catch details | Length 1 - measurement tool | Code list linked |
+| 5-PS     | Catch details | Length 1 - Straight | Field removed |
+| 5-PS     | Catch details | Length 2 - Type | Code list linked |
+| 5-PS     | Catch details | Length 2 - Measurement tool | Code list linked |
+| 5-PS     | Catch details | Length 2 - Straight | Field removed |
+| 5-PS     | Catch details | Processing type | Code list linked |
+| 5-PS     | Catch details | Weight measurement tool | Code list linked |
+| 5-PS     | Catch details | Sex | Code list linked |
+| 5-PS     | Catch details | Maturity stage | Code list linked |
+| 5-PS     | Catch details | Sample collected - Type | Code list linked |
+| 5-PS     | Catch details | Sample collected - preservation method | Code list linked |
+
+##### 6-PS
+
+| Sheet    | Section                 | Field (v4)                   |Change (v5)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 6-PS     | Catch details | Condition at capture  | Code list linked |
+| 6-PS     | Catch details | Condition at release  | Code list linked |
+| 6-PS     | Catch details | Gear interaction  | Code list linked |
+| 6-PS     | Catch details | Handling method  | Code list linked |
+
+##### 6-PS
+
+| Sheet    | Section                 | Field (v4)                   |Change (v5)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 7-PS     | Daily activities | Activity type | Code list linked |
+
+
 #### v3 ---> v4
 
 1. Instructions sheet added at the start
