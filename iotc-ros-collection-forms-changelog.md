@@ -268,7 +268,9 @@ Sheet 7 (for transhipments was removed)
 | 6-PS     | Catch details | Condition at capture  | Code list linked |
 | 6-PS     | Catch details | Condition at release  | Code list linked |
 | 6-PS     | Catch details | Gear interaction  | Code list linked |
+| 6-PS     | Catch details | Brought onboard  | format changed, Code list linked |
 | 6-PS     | Catch details | Handling method  | Code list linked |
+| 6-PS     | Catch details | Revival  | format changed, Code list linked |
 
 ##### 6-PS
 
