@@ -59,6 +59,15 @@ IOTC ROS Reporting Forms – Changelog
 
 ## Form ROS-PS
 
+### v4 --> v5
+- all of the links to the code lists updated to "/latest/", but content of code list unchanged by this update
+
+| Sheet    | Section                 | Field (v4)                   |Change (v5)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| E-SET-CATCHES   | Catch details | Weight unit | field removed, value to be reported in kg |
+
+
+
 ### [v1](10.5281/zenodo.17509753) – 2026-06-03
 
 #### Removed
