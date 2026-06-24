@@ -290,9 +290,42 @@ Sheet 7 (for transhipments was removed)
 | 5-PS     | Catch details | Weight (processing type, value, estimation method)  | changed to optional (white ) |
 | 5-PS     | Catch details | Sex  | changed to optional (white) |
 | 5-PS     | Catch details | Maturity (scale and stage)  | new fields added |
-| 5-PS     | Catch details | Sample collected ()  | new fields added |
+| 5-PS     | Catch details | Sample collected (type, preservation method, destination)  | new fields added |
 
 
+
+
+##### 6-PS
+
+| Sheet    | Section                 | Field (v3)                   |Change (v4)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 6-PS     | NA | Observer name  | field removed |
+| 6-PS     | Catch details | Set Number  | changed to Set ID |
+| 6-PS     | Catch details | Set Number  | changed to mandatory (blue) |
+| 6-PS     | Catch details | Set Number  | moved to header |
+| 6-PS     | Catch details | Catch ID  | New field added |
+| 6-PS     | Catch details | Specimen Number  | changed to Specimen ID |
+| 6-PS     | Catch details | Specimen Number  | changed to mandatory (blue) |
+| 6-PS     | Catch details | All other fields  | Field removed. These fields are now on 5-PS. |
+| 6-PS     | Catch details | Condition at capture  | New field added |
+| 6-PS     | Catch details | Condition at release  | New field added |
+| 6-PS     | Catch details | Gear interaction  | New field added |
+| 6-PS     | Catch details | Brought onboard  | New field added |
+| 6-PS     | Catch details | Handling method | New field added |
+| 6-PS     | Catch details | Revival  | New field added |
+| 6-PS     | Catch details | Photo ID  | New field added |
+
+
+##### 7-PS
+- Transshipment section removed from data collection forms
+
+##### 8-PS (now called 7-PS)
+
+| Sheet    | Section                 | Field (v3)                   |Change (v4)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 7-PS     | NA | Observer name  | field removed |
+| 7-PS     | NA | Observed Trip no. | changed to Observed Trip ID |
+| 7-PS     | Daily Activity | Activity  | Changed to Activity type |
 
 
 
