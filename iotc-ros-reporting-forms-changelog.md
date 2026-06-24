@@ -62,9 +62,13 @@ IOTC ROS Reporting Forms – Changelog
 ### v4 --> v5
 - all of the links to the code lists updated to "/latest/", but content of code list unchanged by this update
 
+#### Fields removed
+
 | Sheet    | Section                 | Field (v4)                   |Change (v5)       |
 |:---------|:------------------------|:-----------------------------|:-----------------|
-| E-SET-CATCHES   | Catch details | Weight unit | field removed, value to be reported in kg |
+| E-SET-CATCHES               | Catch details | Weight unit | field removed, value to be reported in kg |
+| E-SET-CATCHES-SPECIMEN      | Catch details | Length 1 - Straight | Field removed |
+| E-SET-CATCHES-SPECIMEN      | Catch details | Length 2 - Straight | Field removed |
 
 
 
