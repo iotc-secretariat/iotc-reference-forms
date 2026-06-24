@@ -65,7 +65,7 @@ Form ROS-PS is an XLSX workbook comprising 13 sheets, designed to report the man
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g., `1996` |
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` |
 | Flag / Chartering state | M | The country registration of the fishing vessels or chartering flag in case of chartering agreement | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Data source | M | The source of data provided: 'OAS' for data collected by Observers at sea and 'EMS' for data derived from Electronic Monitoring Systems | String | e.g., `OAS` |
+| Data source | M | The source of data provided: 'OAS' for data collected by Observers at sea and 'EMS' for data derived from Electronic Monitoring Systems | **Code** from [Source of data](#dataSource) | e.g., `OB` |
 
 # O-INFO {#oInfo}
 
@@ -702,6 +702,18 @@ out_dt(ENTITIES, "ENTITIES")
 ```{r echo = FALSE, collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
+
+## Sources of data {#dataSource}
+
+-   [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesRO)
+-   **Version**: `r version_number("DATA_SOURCES_RO")`
+-   **Last update**: `r last_update("DATA_SOURCES_RO")`
+
+```{r echo = FALSE, collapse = TRUE}
+out_dt(DATA_SOURCES_RO, "DATA_SOURCES_RO")
+```
+
+
 
 ## Ports {#ports}
 
