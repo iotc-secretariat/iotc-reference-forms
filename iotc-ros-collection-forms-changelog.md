@@ -241,6 +241,8 @@ Sheet 7 (for transhipments was removed)
 | 4-PS     | Catch details | processing type  | Code list linked |
 | 4-PS     | Catch details | Weight unit | field removed, value to be reported in kg |
 | 4-PS     | Catch details | Estimation method  | Code list linked |
+| 3-PS     | Tag details | Release  | format changed, Code list linked |
+| 3-PS     | Tag details | Recovery  | format changed, Code list linked |
 | 4-PS     | Tag details | Type  | Code list linked |
 
 ##### 5-PS
