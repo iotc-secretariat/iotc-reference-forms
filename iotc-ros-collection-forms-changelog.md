@@ -2,13 +2,21 @@
 
 # IOTC ROS data collection forms - tracked changes
 
+## LL
+
 ## v4 ---> v5
 
-remove the fields "is straight"
-update with the new code lists
+The Secretariat determined that it was best to link the code lists within the data collection forms. All of the appropriate codelists from the IOTC data cateloge have been linked with the appripriate field name
+to improve the accurate of logical response fields, a code list was create and linked in the appropriate field names
 
+check - light attached - needs to be collected for SSI? 
+added logical responses code lists
 
+### 5-LL
 
+#### Fields removed 
+| 5-LL     | Length 1   | is straight                   | field removed   |
+| 5-LL     | Length 2   | is straight                   | field removed   |
 
 
 
@@ -149,3 +157,144 @@ Sheets with code lists have been removed.
 ### Sheet 7
 
 Sheet 7 (for transhipments was removed)
+
+
+
+### PS
+
+#### v3 ---> v4
+
+1. Instructions sheet added at the start
+2. Field numbering removed
+3. code lists de-linked
+
+
+
+##### 1-PS
+
+| Sheet    | Section                 | Field (v3)                   |Change (v4)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 1-PS     | Observer Identification | Observer registration number   | observer IOTC ID |
+| 1-PS     | Observer Identification | Observer trip number   | observed trip ID |
+| 1-PS     | Observer Identification | Observer nationality  | field removed |
+| 1-PS     | Observer Trip details   | At sea embarkation (subsection)   | changed to blue (mandatory) |
+| 1-PS     | Observer Trip details | date / time of embarkation (UTC) (subsection)  | changed to blue (mandatory) |
+| 1-PS     | Observer Trip details   | At sea disembarkation (subsection)   | changed to blue (mandatory) |
+| 1-PS     | Observer Trip details | date / time of disembarkation (UTC) (subsection)  | changed to blue (mandatory) |
+| 1-PS     | Vessel information | Vessel IMO or Lloyds number  | changed to white (optional) |
+| 1-PS     | Vessel information | Vessel port of registration | changed to white (optional) |
+| 1-PS     | Vessel information | Vessel country of registration  | changed to white (optional) |
+| 1-PS     | Vessel information | Vessel phone(s) | field removed |
+| 1-PS     | Vessel information | Vessel fax(es) | field removed |
+| 1-PS     | Vessel information | Vessel email(s) | field removed |
+| 1-PS     | Vessel information | Licensed target species | changed to white |
+| 1-PS     | Vessel information | Main fishing gear | changed to mandatory |
+| 1-PS     | Vessel owner and personnel | registered owner | fields removed |
+| 1-PS     | Vessel owner and personnel | charter/operator | fields removed |
+| 1-PS     | Vessel owner and personnel | fishing master | changed to mandatory (blue) |
+| 1-PS     | Vessel owner and personnel | Skipper (captain) | changed to mandatory (blue) |
+| 1-PS     | Vessel trip details | Latitude/longitude | changed to mandatory (blue) |
+| 1-PS     | Vessel trip details | date/time vessel sailed (UTC) | changed to mandatory (blue) |
+| 1-PS     | Vessel attributes | tonnage | gross tonnage |
+| 1-PS     | Vessel attributes | Length overall  | units merged into single field (reported in m) |
+| 1-PS     | Vessel attributes | hull material | changed to operational (white) |
+| 1-PS     | Vessel attributes | main engines (subsection) | changed to optional (white) |
+| 1-PS     | Vessel attributes | fish storage capacity | units field merged into single field (reported in m3) |
+| 1-PS     | Vessel attributes | fish storage capacity | changed to optional (white) |
+| 1-PS     | Vessel electronics | all fields | changed to optional (white) |
+| 1-PS     | Vessel electronics | GPS | GNSS |
+| 1-PS     | Vessel electronics | SST guauge | field removed |
+| 1-PS     | Vessel electronics | Weather facsmilie  | field removed |
+| 1-PS     | Waste management | Waste category  | changed to optional (white) |
+| 1-PS     | Waste management | storage / disposal method | changed to optional (white) |
+| 1-PS     | Observed trip summary | Reason for days lost  | changed to optional (white) |
+
+
+##### 2-PS
+
+
+| Sheet    | Section                 | Field (v3)                   |Change (v4)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 2-PS     | NA | Observer name  | field removed |
+| 2-PS     | NA | Observed trip no. | Observed trip ID |
+| 2-PS     | Special equipment or machinery | all fields | changed to optional (white) |
+| 2-PS     | General gear attributes | all fields | changed to optional (white) |
+| 2-PS     | General gear attributes | skiff power | fields removed |
+
+
+##### 3-PS
+
+
+| Sheet    | Section                 | Field (v3)                   |Change (v4)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 3-PS     | NA | Observer name  | field removed |
+| 3-PS     | NA | Observed trip no. | Observed trip ID |
+| 3-PS     | NA | Set number | Set ID |
+| 3-PS     | Setting operations | Beaufort | field removed |
+| 3-PS     | Setting operations | School types | field added |
+| 3-PS     | Setting operations | time net pursed | changed to date/time UTC format |
+| 3-PS     | Setting operations | time start brailing | changed to date/time UTC format |
+| 3-PS     | Setting operations | time end brailing | changed to date/time UTC format |
+| 3-PS     | Setting operations | time skiff onboard | changed to date/time UTC format |
+| 3-PS     | Setting operations | time skiff onboard | changed to mandatory (blue) |
+| 3-PS     | Object details | Buoy ID | changed to optional (white) |
+| 3-PS     | Object details | FAD equipped with artificial lights | changed to optional (white) |
+| 3-PS     | Object details | Artificial FAD design | changed to FAD design |
+| 3-PS     | Cetaceans and whale sharks sightings during setting | number sighted | changed to mandatory (blue) |
+| 3-PS     | Support vessel | all fields | fields removed |
+| 3-PS     | Current | all fields | fields removed |
+
+##### 4-PS
+
+| Sheet    | Section                 | Field (v3)                   |Change (v4)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 4-PS     | NA | Observer name  | field removed |
+| 4-PS     | NA | Set Number  | changed to Set ID |
+| 4-PS     | NA | Set Number  | changed to mandatory (blue) |
+| 4-PS     | Catch details | Catch Number  | changed to Catch ID |
+| 4-PS     | Catch details | Catch Number  | changed to mandatory (blue) |
+| 4-PS     | Catch details | Fate  | split into two mandatory columns: Fate type, fate code |
+| 4-PS     | Catch details | Number  | changed to Number of fish |
+| 4-PS     | Catch details | Number  | changed to mandatory (blue) |
+| 4-PS     | Catch details | Processing type  | changed to mandatory (blue) |
+| 4-PS     | Catch details | Value  | changed to mandatory (blue) |
+| 4-PS     | Catch details | Unit | changed to mandatory (blue) |
+| 4-PS     | Catch details | Estimation Method  | changed to mandatory (blue) |
+| 4-PS     | Catch details | Additional details (condition at capture and condition at release)  | fields removed |
+| 4-PS     | Specimen details | All fields  | removed from this sheet (moved to sheet 5-PS) |
+| 4-PS     | Tag details | Catch number  | changed to Catch ID |
+| 4-PS     | Tag details | Catch number  | changed to mandatory (blue) |
+| 4-PS     | Tag details | Specimen number | changed to Specimen ID |
+| 4-PS     | Tag details | Specimen number | changed to mandatory (blue) |
+| 4-PS     | Tag details | Release | changed to optional (white) |
+| 4-PS     | Tag details | Recovery | changed to optional (white) |
+| 4-PS     | Tag details | Type | changed to optional (white) |
+| 4-PS     | Tag details | Tag #1 | changed to optional (white) |
+| 4-PS     | Tag details | Tag #2 | changed to optional (white) |
+| 4-PS     | Tag details | Finder name and contact details | changed to optional (white) |
+| 4-PS     | Tag details | Well | changed to optional (white) |
+
+
+##### 5-PS
+
+| Sheet    | Section                 | Field (v3)                   |Change (v4)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| 5-PS     | NA | Observer name  | field removed |
+| 5-PS     | Catch details | Set Number  | changed to Set ID |
+| 5-PS     | Catch details | Set Number  | changed to mandatory (blue) |
+| 5-PS     | Catch details | Set Number  | moved to header |
+| 5-PS     | Catch details | Catch ID  | New field added |
+| 5-PS     | Catch details | Specimen Number  | changed to Specimen ID |
+| 5-PS     | Catch details | Specimen Number  | changed to mandatory (blue) |
+| 5-PS     | Catch details | Length 2 (type, value, measuring tool, straight)  | new fields added (mirrors Length 1 fields) |
+| 5-PS     | Catch details | Weight (processing type, value, estimation method)  | changed to optional (white ) |
+| 5-PS     | Catch details | Sex  | changed to optional (white) |
+| 5-PS     | Catch details | Maturity (scale and stage)  | new fields added |
+| 5-PS     | Catch details | Sample collected ()  | new fields added |
+
+
+
+
+
+
+
