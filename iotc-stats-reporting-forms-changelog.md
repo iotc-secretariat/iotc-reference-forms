@@ -52,7 +52,7 @@ We have changed the code-list for Mesh, which makes these columns superfluous.
 | UNK | It is unknown (eg there was a FAD but FAD ID doesn’t exist)|
 | NAV | Not available (replaces NA, not to be used in mandatory fields)|
 
-The general logical response code list is available from the IOTC Reference Data catalogue: <https://data.iotc.org/reference/latest/domain/data/#logicalResponses>
+The general logical response code list is available from the [IOTC Reference Data catalogue](https://data.iotc.org/reference/latest/domain/data/#logicalResponses).
 
 #### New code-list for mesh (to be published)
 
