@@ -17,15 +17,15 @@ The forms 3CE-update, 4SF-update, 3AA-update, and 3-DA-update have been removed 
 | Supply Vessel | SP |
 | Purse Seiner | PS | 
 
-### Renamed
+### Renamed | 2026-06-24
 
 1.	UTC time RENAMED Date_Time
 
-### Permitted values changed
+### Permitted values changed | 2026-06-24
 
 #### Date_Time
 
-1.  **New format (ISO8601): YYYY-MM-DDThh:mm(Z | ±hh:mm)**
+**New format (ISO8601): YYYY-MM-DDThh:mm(Z | ±hh:mm)**
 
 Examples for different time-zone recordings:
 
@@ -40,7 +40,7 @@ Examples for different time-zone recordings:
 
 We have changed the code-list for Mesh, which makes these columns superfluous.
 
-### Changes to the code-lists
+### Changes to the code-lists | 2026-06-24
 
 #### Logic fields now have a code-list that contains:
 
