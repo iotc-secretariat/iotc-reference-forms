@@ -672,8 +672,8 @@ This section of the reporting form describes the activities conducted throughout
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | date_time_utc | O | The date and time of the activity in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
-| latitude | M | The latitude of the activity position, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from  [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
-| longitude | M | The longitude of the activity position, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from  [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
+| latitude | O | The latitude of the activity position, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from  [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
+| longitude | O| The longitude of the activity position, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from  [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
 | activity_type | O | The vessel activity at the start of every fishing activity and every two hours from sunrise to sunset | **Code** from [Surface Fishery Activities](#surfaceFisheryActivities) | e.g., `BA` |
 | comments | O | An open field for additional notes or observations that are not captured in other sections of the form. This may include unusual events, clarifications, or any relevant information the observer wishes to provide | String | `free text` |
 
