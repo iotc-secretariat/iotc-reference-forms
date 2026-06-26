@@ -225,3 +225,107 @@ TORI LINE LENGTH (SECTION MERGED INTO ONE FIELD) --> TORI_LINE_LENGTH
 STREAMER 
     - TYPE CODE --> TYPE
     - LINE LENGTH MAX (SECTION MERGED INTO ONE FIELD) --> LINE_LENGTH_MAX_M
+    
+    
+    
+    
+    
+## PL
+### v4 --> v5
+| Sheet    | Section                 | Field (v4)                   |Change (v5)       |
+|:---------|:------------------------|:-----------------------------|:-----------------|
+| META  | General information | reporting entity      | code list link updated to latest |
+| META  | General information | Flag/chartering state | code list link updated to latest |
+| META  | General information | Data source           | code list link updated to latest |
+| O-INFO  | Embarkation           | Country                     | code list link updated to latest |
+| O-INFO  | Embarkation           | Port                        | code list link updated to latest |
+| O-INFO  | Disembarkation        | Country                     | code list link updated to latest |
+| O-INFO  | Disembarkation        | Port                        | code list link updated to latest |
+| O-INFO  | Observed trip summary | Reasons for lost days (1-4) | code list link updated to latest |
+| V-INFO  | Identification | flag or chartering                         | code list link updated to latest |
+| V-INFO  | Registration   | country                                    | code list link updated to latest |
+| V-INFO  | Registrations  | port                                       | code list link updated to latest |
+| V-INFO  | Registrations  | port                                       | code list link updated to latest |
+| V-INFO  | ----           | Licensed target species (already updated)  | code list link updated to latest |
+| V-INFO  | ----           | Main fishing gear (already updated)        | code list link updated to latest |
+| V-INFO  | Fishing master | Nationality                                | code list link updated to latest |
+| V-INFO  | Skipper        | Nationality                                | code list link updated to latest |
+| V-TRIP  | Vessel departure | country | code list link updated to latest |
+| V-TRIP  | Vessel departure | port    | code list link updated to latest |
+| V-TRIP  | Vessel return    | country | code list link updated to latest |
+| V-TRIP  | Vessel return    | port    | code list link updated to latest |
+| V-ATTRIBUTES  | vessel attributes           | hull material                 | code list link updated to latest |
+| V-ATTRIBUTES  | Fish preservation methods   | methods (1-4)                 | code list link updated to latest |
+| V-ATTRIBUTES  | fish storage types          | types (1-4)                   | code list link updated to latest |
+| V-ATTRIBUTES  | Waste management            | category (1-4)                | code list link updated to latest |
+| V-ATTRIBUTES  | Waste management            | storage disposal method (1-4) | code list link updated to latest |
+| G-GENERAL  | pole material | material   | code list link updated to latest |
+| G-GENERAL  | hook          | type (1-4) | code list link updated to latest |
+| E-SET-TUNA  | school sighting cues | cue (1-3) | code list link updated to latest |
+| E-SET-TUNA  | target species       | species (1-4) | code list link updated to latest |
+| E-SET-TUNA  | bait                 | type | code list link updated to latest |
+| E-SET-TUNA  | bait                 | condition | code list link updated to latest |
+| E-SET-TUNA  | bait                 | species | code list link updated to latest |
+| E-SET-TUNA-CATCHES-FISHING-TRIP  | ---- | species | code list link updated to latest |
+| E-SET-TUNA-CATCHES-FISHING-TRIP  | fate | type | code list link updated to latest |
+| E-SET-TUNA-CATCHES-FISHING-TRIP  | fate | code | code list link updated to latest |
+| E-SET-TUNA-CATCHES-FISHING-TRIP  | ---- | sampling method | code list link updated to latest |
+| E-SET-TUNA-CATCHES-FISHING-TRIP  | weight | processing type (already changed) | code list link updated to latest |
+| E-SET-TUNA-CATCHES-FISHING-TRIP  | weight | estimation method (already changed) | code list link updated to latest |
+| E-SET-TUNA-CATCHES  | ----                | species (already changed) | code list link updated to latest |
+| E-SET-TUNA-CATCHES  | fate                | type | code list link updated to latest |
+| E-SET-TUNA-CATCHES  | fate                | code | code list link updated to latest |
+| E-SET-TUNA-CATCHES  | ----                | sampling method | code list link updated to latest |
+| E-SET-TUNA-CATCHES  | weight              | processing type (already changed) | code list link updated to latest |
+| E-SET-TUNA-CATCHES  | ----                | estimation method (already changed) | code list link updated to latest |
+| E-SET-TUNA-CATCHES  | depredation details | depredation source | code list link updated to latest |
+| E-SET-TUNA-CATCHES  | depredation details | observed predator | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | ----             | sampling method | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | Length 1         | type | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | length 1         | measuring tool | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | length 1         | is straight | field removed |
+| E-SET-TUNA-CATCHES-SPECIMEN  | length 2         | type | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | length 2         | measuring tool | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | length 2         | is straight | field removed |
+| E-SET-TUNA-CATCHES-SPECIMEN  | weight           | processing type | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | weight           | measurement tool | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | ----             | sex | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | ----             | maturity stage (already changed)      | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | sample collected | type (already changed)                | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | sample collected | preservation method (already changed) | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SPECIMEN  | tag details      | type                                  | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SSI  | ----               | gear interaction     | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SSI  | ----               | handling method      | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SSI  | additional details | condition at capture | code list link updated to latest |
+| E-SET-TUNA-CATCHES-SSI  | additional details | condition at release | code list link updated to latest |
+| E-SET-BAIT-CATCHES  | ---- | processing type (already changed)   | code list link updated to latest |
+| E-SET-BAIT-CATCHES  | ---- | estimation method (already changed) | code list link updated to latest |
+| E-SET-BAIT-CATCHES  | ---- | processing type (already changed)   | code list link updated to latest |
+| E-SET-BAIT-CATCHES-SPECIMEN-SSI  | ---- | gear interaction     | code list link updated to latest |
+| E-SET-BAIT-CATCHES-SPECIMEN-SSI  | ---- | handling method      | code list link updated to latest |
+| E-SET-BAIT-CATCHES-SPECIMEN-SSI  | ---- | condition at capture | code list link updated to latest |
+| E-SET-BAIT-CATCHES-SPECIMEN-SSI  | ---- | condition at release | code list link updated to latest |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
