@@ -20,9 +20,26 @@ IOTC ROS Reporting Forms – Changelog
 | O-INFO              | reasons for lost days (all fields)      |
 | V-INFO              | flag or chartering state     |
 | V-INFO              | country, port, target species, main fishing gear, nationality (already changed)
-|
-
-
+| V-INFO              | country |
+| V-INFO              | port (already done) |
+| V-ATTRIBUTES              | hull material, fish preservation methods, fish storage types, waste management categories, waste management storage disposal methods  |
+| G-CONFIG-BRANCHLINES             | material type, branchline storage |
+| G-CONFIG-MITIGATION-DEVICES             | type, mitigation devices |
+| E-SET             | material, target species |
+| E-SET             | leader material type (already done) |
+| E-SET-LIGHTS            | type, color (already done) |
+| E-SET-MITIGATION-MEASURES             | measures |
+| E-SET-HOOKS           | type (already done) |
+| E-SET-BAITS             | condition, species |
+| E-SET-HAULING            | sampling protocol (already done) |
+| E-SET-CATCHES           | species, sampling method,processing type, estimation method (already done) |
+| E-SET-CATCHES           | fate type, fate code  |
+| E-SET-CATCHES-SPECIMEN           | sampling period, sampling method, type, measuring tool, processing type,  estimation method, sex, preservation method, depredation source, observed predator  |
+| E-SET-CATCHES-SPECIMEN           | length 1/2: is straight - field removed   |
+| E-SET-CATCHES-SPECIMEN           | type (already done)    |
+| E-SET-CATCHES-SPECIMEN           | maturity stage - code list added**  |
+| E-SET-CATCHES-SPECIMEN-SSI          | condition at capture, condition at release, hook type, bait condition and type, material, dehooker device, handling method, depredation source, observed predator  |
+| E-SET-TAG-DETAILS           | type  |
 
 
 
