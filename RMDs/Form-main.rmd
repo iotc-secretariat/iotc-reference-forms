@@ -76,7 +76,7 @@ For the submission of data on the total [_amount of fish caught and retained_](h
 + [Permalink](#Form-1RC)
 + [Form template](./Form-1RC.xlsx)
 + [Form description](./Form-1RC.html)
-+ [Form validator](https://data.iotc.org/validators/ui/1RC/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1RC)
 <!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1RC) -->
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
@@ -88,7 +88,7 @@ For the submission of data on the [_amount of discards_](https://data.iotc.org/r
 + [Permalink](#Form-1DI)
 + [Form template](./Form-1DI.xlsx)
 + [Form description](./Form-1DI.html)
-+ [Form validator](https://data.iotc.org/validators/ui/1DI/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1DI)
 <!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1DI) -->
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
@@ -102,7 +102,7 @@ The unified form allows reporting data for multiple fisheries simultaneously:
 + [Permalink](#Form-3CE)
 + [Form template](./Form-3CE.xlsx)
 + [Form description](./Form-3CE.html)
-+ [Form validator](https://data.iotc.org/validators/ui/3CE/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CE)
 <!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CE) -->
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
@@ -142,7 +142,7 @@ For the submission of data on [_daily buoy positions_](https://data.iotc.org/ref
 + [Permalink](#Form-3BU)
 + [Form template](./Form-3BU.xlsx)
 + [Form description](./Form-3BU.html)
-+ [Form validator](https://data.iotc.org/validators/ui/3BU/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3BU)
 <!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3BU) -->
 <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
@@ -175,7 +175,7 @@ The unified form allows reporting data for multiple fisheries and species simult
 + [Permalink](#Form-4SF)
 + [Form template](./Form-4SF.xlsx)
 + [Form description](./Form-4SF.html)
-+ [Form validator](https://data.iotc.org/validators/ui/4SF/)
++ [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SF)
 <!-- + [Form validator](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SF) -->
 <!-- + [Guidelines]() including charts describing size measurements and measurement tools and methods -->
 <!-- + [Form example]() -->
