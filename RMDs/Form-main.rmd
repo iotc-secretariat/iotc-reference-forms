@@ -132,7 +132,7 @@ The unified form allows reporting data for multiple fisheries simultaneously:
 
 <!-- + [Form template](./Form-3AA-update.xlsx) -->
 <!-- + [Form description](./Form-3AA_update.html) -->
-<!-- <!-- + [Guidelines]() --> -->
+<!-- <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
 ### Form 3BU {#Form-3BU}
@@ -163,7 +163,7 @@ The unified form addresses the shortcomings of the previous 3FA form and allows 
 
 <!-- + [Form template](./Form-3DA-update.xlsx) -->
 <!-- + [Form description](./Form-3DA-update.html) -->
-<!-- <!-- + [Guidelines]() --> -->
+<!-- <!-- + [Guidelines]() -->
 <!-- + [Form example]() -->
 
 ### Form 4SF {#Form-4SF}

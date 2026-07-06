@@ -23,7 +23,7 @@ output:
 
 This form provides for the reporting of operational and catch data from pole and line fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with pole and line operations, including IOTC species, and other bycatch species.The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of pole and line fisheries on associated and dependent species. CPCs are required to complete the form for pole and line operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers or with Electronic Monitoring Systems.
 
-Click [here](./Form-ROS-PL.xlsx) to download a blank version of the ROS-PL form, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](./Form-ROS-PL.xlsx) to download a blank version of the ROS-PL form, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 
@@ -619,7 +619,7 @@ This section of the form includes general longline gear configuration.
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | sample_type | O | The type of sample collected by the observer | **Code** from [Sampling Type](#samplingMethodsForSamplingCollections) | e.g., `WM`|
-| sample_preservation_method | O | The type of preservation method used to preserve the sample collected by the observer | **Code** from [Sample Preservation Method](#fishPreservationMethods) | e.g., `FR20` |
+| sample_preservation_method | O | The type of preservation method used to preserve the sample collected by the observer | **Code** from [Sample Preservation Method](#samplePreservationMethods) | e.g., `FR20` |
 | sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` |
 
 :::
@@ -1125,14 +1125,14 @@ out_dt(MATURITY_STAGES, "MATURITY_STAGES")
 out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
 ```
 
-## Sample Preservation Methods {#fishPreservationMethods}
+## Sample Preservation Methods {#samplePreservationMethods}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
--   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
--   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplePreservationMethods)
+-   **Version**: `r version_number("SAMPLE_PRESERVATION_METHODS")`
+-   **Last update**: `r last_update("SAMPLE_PRESERVATION_METHODS")`
 
 ```{r collapse = TRUE}
-out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
+out_dt(SAMPLE_PRESERVATION_METHODS, "sAMPLE_PRESERVATION_METHODS")
 ```
 
 ## Tag Types {#tagTypes}

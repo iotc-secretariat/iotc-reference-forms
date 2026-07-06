@@ -23,7 +23,7 @@ output:
 
 This form provides for the reporting of operational and catch data from gillnet fisheries under the IOTC Regional Observer Scheme (ROS). The form is designed to capture verified information on fishing activity, catch composition, and bycatch associated with gillnet operations, including IOTC species, and other bycatch species. The reporting format follows the standards adopted by the IOTC Scientific Committee and includes multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records. Data collected through this form contribute to scientific assessments of tuna and tuna-like species and support monitoring of the impact of gillnet fisheries on associated and dependent species. CPCs are required to complete the form for gillnet operations covered by the ROS, ensuring consistency, transparency, and quality of the data collected by scientific observers at sea or reviewing data collected with Electronic Monitoring Systems.
 
-Click [here](./Form-ROS-GN.xlsx) to download a blank version of Form-ROS-GN, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](./Form-ROS-GN.xlsx) to download a blank version of Form-ROS-GN, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 # Data content
 
