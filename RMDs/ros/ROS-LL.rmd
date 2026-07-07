@@ -445,7 +445,7 @@ This section of the form includes information regarding individual sets that wer
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` | 
-| set_id | M | The unique four-digit numerical code for each fishing set, beginning with 0001 and assigned consecutively from the first to the last line set of the observed trip | 4-digit number | e.g, `0007` |
+| set_id | M | The unique four-digit numerical code for each fishing set, e.g., beginning with 0001 and assigned consecutively from the first to the last line set of the observed trip. | Alphanumeric | e.g, `0007` |
 
 ## Setting Operations
 
@@ -531,7 +531,7 @@ This section of the form includes information about the lights present for each 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | The parent set identifier | 4-digit number | e.g., `0001` |
+| set_id | M | The parent set identifier | Alphanumeric| e.g., `0001` |
 
 ## Attached Lights
 
@@ -552,7 +552,7 @@ This section of the form includes information about the mitigation measures obse
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | The parent set identifier | 4-digit number | e.g., `0001` |
+| set_id | M | The parent set identifier | Alphanumeric | e.g., `0001` |
 
 ## Mitigation Measures
 
@@ -586,7 +586,7 @@ This section of the form includes information about the specific hooks observed 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | The parent set identifier | 4-digit number | e.g., `0004` |
+| set_id | M | The parent set identifier | Alphanumeric | e.g., `0004` |
 
 ## Hook Details
 
@@ -603,7 +603,7 @@ This section of the form includes information about the specific baits observed 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | The parent set identifier | 4-digit number | e.g., `0095` |
+| set_id | M | The parent set identifier | Alphanumeric | e.g., `0095` |
 
 ## Bait Details
 
@@ -621,7 +621,7 @@ This section includes specific hauling information observed for each set of the 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | The parent set identifier | 4-digit number | e.g., `0084` |
+| set_id | M | The parent set identifier | Alphanumeric | e.g., `0084` |
 
 ## Hauling Operations
 
@@ -669,7 +669,7 @@ This section of the form includes information about individual biteoffs for each
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0023` |
+| set_id | M | Refers to parent set identifier | Alphanumeric | e.g., `0023` |
 
 ## Biteoff Details - Branchline
 
@@ -689,8 +689,8 @@ This section of the reporting form includes information on a species-specific su
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | Refers to parent set identifier | 4-digit number | e.g., `0285` |
-| catch_id | M | Unique identifier of the species-specific part of the catch, within a set in a trip | Alphanumeric code | e.g., `02851` |
+| set_id | M | Refers to parent set identifier | Alphanumeric | e.g., `0285` |
+| catch_id | M | Unique identifier of the species-specific part of the catch, within a set in a trip | Alphanumeric | e.g., `02851` |
 
 ## Catch Details
 
@@ -729,9 +729,9 @@ This section of the form is for the recording of biological information of the s
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | The parent set identifier | 4-digit number | e.g., `0003` |
-| catch_id | M | The parent catch identifier | Alphanumeric code | `C188` |
-| specimen_id | M | A unique four-digit numerical code for each specimen, beginning with 0001, assigned consecutively within the same catch detail of a set during the observed trip | 4-digit number | e.g., `0005` |
+| set_id | M | The parent set identifier | Alphanumeric | e.g., `0003` |
+| catch_id | M | The parent catch identifier | Alphanumeric  | `C188` |
+| specimen_id | M | A unique four-digit numerical code for each specimen. e.g., beginning with 0001, assigned consecutively within the same catch detail of a set during the observed trip | Alphanumeric | e.g., `0005` |
 
 ## Specimen Details
 
@@ -800,9 +800,9 @@ This section of the form includes information about Species of Special Interest 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | The parent set identifier | 4-digit number | e.g., `0004` |
-| catch_id | M | The parent catch identifier | Alphanumeric code | e.g., `0004#1` |
-| specimen_id | M | The parent specimen identifier | 4-digit code | e.g., `01` |
+| set_id | M | The parent set identifier | Alphanumeric | e.g., `0004` |
+| catch_id | M | The parent catch identifier | Alphanumeric  | e.g., `0004#1` |
+| specimen_id | M | The parent specimen identifier | Alphanumeric | e.g., `01` |
 
 ## Additional Catch Details on SSI
 
@@ -857,9 +857,9 @@ This section of the form is for the reporting of each of the tags recovered duri
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` | 
-| set_id | M | The parent set identifier | 4-digit number | e.g., `0023` |
+| set_id | M | The parent set identifier | Alphanumeric | e.g., `0023` |
 | catch_id | M | The parent catch identifier | Alphanumeric | e.g., `0023#1` |
-| specimen_id | M | The parent specimen identifier | 4-digit number | e.g., `02` |
+| specimen_id | M | The parent specimen identifier | Alphanumeric | e.g., `02` |
 
 ## Tag Details
 
