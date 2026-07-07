@@ -41,6 +41,12 @@ IOTC ROS Reporting Forms – Changelog
 | E-SET-CATCHES-SPECIMEN-SSI          | condition at capture, condition at release, hook type, bait condition and type, material, dehooker device, handling method, depredation source, observed predator  |
 | E-SET-TAG-DETAILS           | type  |
 
+- latitude and longitude format description changed to "based on..." as we do not use the "+" but we do use the "-"
+- UIs format description changed from "Alphanumeric Code" to "Alphanumeric"
+
+## Change | 2026-06-15
+Changed the description, code list, and URL of Hook types used in the sheet `E-SET-HOOKS` to extend the definition to both hooks and other terminal devices, so as to include trap lines (see code list [HOOK_AND_TERMINAL_DEVICES](https://data.iotc.org/reference/latest/domain/fisheries/#hookAndTerminalDevices))
+
 
 
 # From v3 (10.5281/zenodo.17191683) to v4 (10.5281/zenodo.17509753)
