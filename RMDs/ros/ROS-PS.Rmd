@@ -523,7 +523,7 @@ This section of the form is for reporting the details of the species-specific po
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
 | set_id  | M | The parent set identifier | 4-digit number | e.g., `0007` | |
-| catch_id | M | Unique within a specific set | Alphanumeric | e.g., `tbd` |
+| catch_id | M | Unique identifier of the species-specific part of the catch, within a set in a trip | Alphanumeric | e.g., `tbd` |
 
 ## Catch Details
 

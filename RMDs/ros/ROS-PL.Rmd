@@ -524,7 +524,8 @@ This section of the form includes general longline gear configuration.
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
 | event_id | O |  The event identifier of the observed event. This should be a four digit numerical code 0001. A unique identifier should be allocated to each individual event | 4-digit-number  | e.g., `0004`  | 
-|catch_detail_id| O | The parent catch identifier | Alphanumeric code | `C188` |
+|catch_id| O | Unique identifier of the species-specific part of the catch, within a set in a trip | Alphanumeric code | `C188` |
+
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | species | O  | The species/species group of bait used | **Code** from [All Species](#allSpecies)  | e.g., `ABL`  |
