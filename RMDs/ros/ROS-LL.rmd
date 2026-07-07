@@ -23,7 +23,7 @@ output:
 
 # Description
 
-This form provides for the reporting of operational and catch data collected by scientific observers at sea, or from data reviewed through Electronic Monitoring Systems, for longline fisheries under the IOTC Regional Observer Scheme (ROS). It is designed to capture verified information on fishing activities, catch composition, bycatch associated with longline operations, and the implementation of mitigation measures. The reporting format follows standards adopted by the IOTC Scientific Committee (SC) and incorporates multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records.
+This form describes the reporting of operational and catch data collected by scientific observers at sea, or from data reviewed through Electronic Monitoring Systems, for longline fisheries under the IOTC Regional Observer Scheme (ROS). It is designed to capture verified information on fishing activities, catch composition, bycatch associated with longline operations, and the implementation of mitigation measures. The reporting format follows standards adopted by the IOTC Scientific Committee (SC) and incorporates multiple hierarchical data levels, ranging from trip and set information to species-specific catch and bycatch records.
 
 Click [here](./Form-ROS-LL.xlsx) to download a blank version of Form ROS-LL, or [return](../index.html) to the list of all IOTC data reporting forms.
 
