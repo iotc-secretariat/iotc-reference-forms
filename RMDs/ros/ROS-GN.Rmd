@@ -65,7 +65,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | 	Unique identifier of the fishing trip defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/GN` |
+| observed_trip_id | M | 	Unique identifier of the fishing trip, e.g., defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | e.g., `2024-01-23/IOTCFRA001/IOTC012345/GN` |
 
 ## Observer Identification
 
@@ -470,7 +470,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_id | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| set_id | M  | The unique four-digit numerical code for each fishing set, e.g., beginning with 0001 and assigned consecutively from the first to the last line set of the observed trip. | Alphanumeric  |e.g., `0004`  |
 | gillnet_sequential_number  | M  | indicates the gillnet used on this set by recording its sequential number | Integer  | e.g., `15` |
 <!-- **what is the gillnet sequential number?** -->
 
@@ -530,7 +530,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_id | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
+| set_id | M  | The parent set identifier | Alphanumeric  |e.g., `0004`  |
 
 ## Hauling operations
 
@@ -568,8 +568,8 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_number | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_id | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
-| catch_id  | M  | Unique identifier of the species-specific part of the catch, within a trip | Integer | e.g., `15` |
+| set_id | M  | The parent set identifier | Alphanumeric  |e.g., `0004`  |
+| catch_id  | M  | Unique identifier of the species-specific part of the catch, within a set on a trip | Alphanumeric | e.g., `15` |
 
 ## Catch details
 
@@ -609,9 +609,9 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_id | M  | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
-| catch_number | M  | The parent catch identifier | Alphanumeric code | `C188` |
-| specimen_number | M  | A unique four-digit numerical code for each specimen, beginning with 0001, assigned consecutively within the same catch detail of a set during the observed trip | 4-digit number | e.g., `0005` |
+| set_id | M  | The parent set identifier | Alphanumeric  |e.g., `0004`  |
+| catch_number | M  | The parent catch identifier | Alphanumeric  | `C188` |
+| specimen_number | M  | A unique four-digit numerical code for each specimen, e.g., beginning with 0001, assigned consecutively within the same catch detail of a set during the observed trip | Alphanumeric | e.g., `0005` |
 
 <!--Change Set number to SET ID?** And same for catch and specimen number?-->
 
@@ -713,9 +713,9 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_number | M | The set number should be a four digit numerical code beginning 0001. Set numbers should be consecutive from the start of the first line to the last line set of the observed trip. A unique number is to be allocated to each individual set | 4-digit number  |e.g., `0004`  |
-| catch_number | M | | | |
-| specimen_number | M | | | |
+| set_number | M | The parent set identifier | Alphanumeric  |e.g., `0004`  |
+| catch_number | M |The parent catch identifier | Alphanumeric | e.g., `0006` |
+| specimen_number | M | The parent specimen identifier | Alphanumeric  | e.g., `0008` |
 
 <!-- **Change Set number to SET ID?** And same for catch and specimen number? -->
 
