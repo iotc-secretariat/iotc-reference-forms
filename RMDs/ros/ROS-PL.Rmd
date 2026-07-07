@@ -76,7 +76,7 @@ This section of the form includes information about the observer and an overview
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-|observed_trip_id |M | Unique identifier of the fishing trip defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer number, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification| Alphanumeric code   |e.g. `2024-01-23/IOTCFRA001/IOTC012345/PS` | 
+|observed_trip_id |M | Unique identifier of the fishing trip, e.g., defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification| Alphanumeric   |e.g. `2024-01-23/IOTCFRA001/IOTC012345/PS` | 
 
 ## Observer Identification
 
@@ -183,7 +183,7 @@ This section of the form includes specific vessel information.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier |Alphanumeric code |e.g., `2024-01-23/IOTCFRA001/IOTC012345/PL` |
+| observed_trip_id | M | The parent observed trip identifier |Alphanumeric |e.g., `2024-01-23/IOTCFRA001/IOTC012345/PL` |
 
 ## Vessel Information
 
@@ -405,7 +405,7 @@ This section of the form includes general longline gear configuration.
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
-| event_id | M |  The event identifier of the observed event. This should be a four digit numerical code 0001. A unique identifier should be allocated to each individual event | 4-digit-number  | e.g., `0004`  |  
+| event_id | M |  The event identifier of the observed event, e.g., a four digit numerical code 0001. A unique identifier should be allocated to each individual event | Alphanumeric  | e.g., `0004`  |  
 
 ## Setting Operations
 
@@ -523,8 +523,8 @@ This section of the form includes general longline gear configuration.
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
-| event_id | O |  The event identifier of the observed event. This should be a four digit numerical code 0001. A unique identifier should be allocated to each individual event | 4-digit-number  | e.g., `0004`  | 
-|catch_id| O | Unique identifier of the species-specific part of the catch, within a set in a trip | Alphanumeric code | `C188` |
+| event_id | O |  The parent event identifier | Alphanumeric  | e.g., `0004`  | 
+|catch_id| O | Unique identifier of the species-specific part of the catch, within a set in a trip | Alphanumeric | `C188` |
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -572,8 +572,8 @@ This section of the form includes general longline gear configuration.
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id |  M | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
-| event_id | M |  The event identifier of the observed event. This should be a four digit numerical code 0001. A unique identifier should be allocated to each individual event | 4-digit-number   | e.g., `0004`  | 
-| specimen_id | M  | The parent specimen identifier | 4-digit number |e.g., `0005`  |
+| event_id | M |  The parent event identifier | Alphanumeric  | e.g., `0004`  | 
+| specimen_id | M  | The parent specimen identifier | Alphanumeric |e.g., `0005`  |
 
 ## Specimen Details - All species
 
@@ -644,8 +644,8 @@ This section of the form includes information about Species of Special Interest 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric |e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` |
-| event_id | M |  The event identifier of the observed event. This should be a four digit numerical code 0001. A unique identifier should be allocated to each individual event | 4-digit-number   | e.g., `0004`  | 
-| specimen_id | M  | The parent specimen identifier | 4-digit number |e.g., `0005`  |
+| event_id | M |  The parent event identifier | Alphanumeric   | e.g., `0004`  | 
+| specimen_id | M  | The parent specimen identifier | Alphanumeric |e.g., `0005`  |
 
 ## Additionl Catch Details on SSI
 
@@ -672,7 +672,7 @@ This section of the form includes information about Species of Special Interest 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | O | The parent observed trip identifier | Alphanumeric | e.g., `	2024-01-23/IOTCFRA001/IOTC012345/PL` | 
-| event_id | O | The parent set identifier |||
+| event_id | O | The parent set identifier | Alphanumeric | e.g., '0001' |
 
 ## Setting Operations
 
