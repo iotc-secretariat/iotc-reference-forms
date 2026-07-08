@@ -316,7 +316,7 @@ STREAMER
 
 # Updates | 2026-07-08
 
-- Revisions of formats from integer to alphanumeric for `configuration_id` and `section_id`
+- Revisions of formats from integer to alphanumeric for `configuration_id` and `section_id` in longline form
 - Revisions of descriptions for observed_trip_id, set_id, catch_id, and specimen_id with the following proposals:
 
     - observed_trip_id: The unique identifier for the observed trip. For instance, the identifier could be defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification (e.g., 2026-01-15_OBS123_12345_PS)
