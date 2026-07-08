@@ -114,8 +114,6 @@ Changed the description, code list, and URL of Hook types used in the sheet `E-S
 | E-SET-CATCHES-SPECIMEN      | Catch details | Length 1 - Straight | Field removed |
 | E-SET-CATCHES-SPECIMEN      | Catch details | Length 2 - Straight | Field removed |
 
-
-
 ### [v1](10.5281/zenodo.17509753) – 2026-06-03
 
 #### Removed
@@ -174,6 +172,7 @@ new field: reporting entity
 new field: data source
 
 #### O-INFO
+
 OBSERVED_TRIP_NUMBER --> OBSERVED_TRIP_ID
 NATIONALITY_CODE (REMOVED)
 NUMBER OF FISHING DAYS:
@@ -182,6 +181,7 @@ NUMBER OF FISHING DAYS:
   - LOST (NOW OPTIONAL)
   
 #### V-INFO
+
 COUNTRY CODE --> COUNTRY
 PORT CODE --> PORT
 NUMBER --> REGISTRATION NUMBER
@@ -192,7 +192,8 @@ CHARTER OR OPERATOR (ALL FIELDS REMOVED)
 FISHING MASTER (NOW MANDATORY)
 SKIPPER CAPTAIN (NOW MANDATORY)
 
-####V-TRIP
+#### V-TRIP
+
 COUNTRY CODE --> COUNTRY
 PORT CODE --> PORT
 
@@ -213,12 +214,14 @@ WASTE MANAGEMENT
     STORAGE DISPOSAL METHOD CODE 1 --> STORAGE DISPOSAL METHOD 1 (SAME FOR ALL METHOD CODES IN THIS SECTION)
 
 #### G-GENERAL
+
 GENERAL GEAR ATTRIBUTES SECTION (REMOVED)
 ADDITIONAL BRANCHLINE DETAILS SECTION (REMOVED)
 MITIGATION DEVICES SECTION (REMOVED)
 TORI LINE DETAILS SECTION (REMOVED)
 
 #### G-CONFIG-BRANCHLINES
+
 CONFIGURATION NUMBER --> CONFIGURATION ID
 SECTION NUMBER --> SECTION ID
 MATERIAL TYPE CODE --> MATERIAL TYPE
@@ -226,18 +229,17 @@ LENGTH (COMBINED INTO ONE SECTION) --> LENGTH_M
 DIAMETER (SECTION COMBINED INTO ONE) --> DIAMETER_CM
 
 #### G-CONFIG-MITIGATION-MEASURES
+
 *SECTIONS TAKEN FROM G-GENERAL (SEE ABOVE)
 TORI LINE LENGTH (SECTION MERGED INTO ONE FIELD) --> TORI_LINE_LENGTH
 STREAMER 
     - TYPE CODE --> TYPE
     - LINE LENGTH MAX (SECTION MERGED INTO ONE FIELD) --> LINE_LENGTH_MAX_M
-    
-    
-    
-    
-    
+
 ## PL
+
 ### v4 --> v5
+
 | Sheet    | Section                 | Field (v4)                   |Change (v5)       |
 |:---------|:------------------------|:-----------------------------|:-----------------|
 | META  | General information | reporting entity      | code list link updated to latest |
@@ -311,6 +313,18 @@ STREAMER
 | E-SET-BAIT-CATCHES-SPECIMEN-SSI  | ---- | handling method      | code list link updated to latest |
 | E-SET-BAIT-CATCHES-SPECIMEN-SSI  | ---- | condition at capture | code list link updated to latest |
 | E-SET-BAIT-CATCHES-SPECIMEN-SSI  | ---- | condition at release | code list link updated to latest |
+
+# Updates | 2026-07-08
+
+- Revisions of formats from integer to alphanumeric for `configuration_id` and `section_id`
+- Revisions of descriptions for observed_trip_id, set_id, catch_id, and specimen_id with the following proposals:
+
+    - observed_trip_id: The unique identifier for the observed trip. For instance, the identifier could be defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification (e.g., 2026-01-15_OBS123_12345_PS)
+
+    - set_id: The unique identifier for each set/operation conducted during the observed trip. For instance, the identifier could be defined as a four-digit numerical code assigned sequentially from the first to the last set/operation of the observed trip (e.g., 0001, 0002, 0003). 
+    - catch_id: The unique identifier for each species-specific catch component within a fishing set/operation. For instance, the identifier could be defined as the concatenation of the observed trip identifier and the set identifier, followed by a sequential four-digital numerical code assigned to each species-specific catch component within the same set (e.g., 2026-01-15_OBS123_12345_PS_0001_0001)
+
+    - specimen_id: The unique identifier for each individual specimen sampled or measured within a species-specific catch component. For instance, the identifier could be defined as the concatenation of the observed trip identifier, the set identifier, the species-specific catch component identifier, and a sequential number assigned to each specimen collected (e.g., 2026-01-15_OBS123_12345_PS_0001_0001_0001).
 
 
 

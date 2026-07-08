@@ -81,7 +81,7 @@ This section of the form includes information about the observer and an overview
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M |Unique identifier of the fishing trip, e.g., defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification  | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
+| observed_trip_id | M | The unique identifier for the observed trip. For instance, the identifier could be defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 
 ## Observer Identification
 
@@ -201,7 +201,7 @@ This section of the form includes specific vessel information.
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or Electronic Monitoring records | String | e.g., `HAWWA` |
 | flag_or_chartering_state | M | The country code of registration or chartering | **Code** from [Countries](#countries) | e.g., `OMN` |
-| iotc_ID | M | The unique identification number assigned to the vessel by the IOTC when it is included in the Record of Authorised Vessels | Alphanumeric | e.g., `IOTC003810` |
+| iotc_id | M | The unique identification number assigned to the vessel by the IOTC when it is included in the Record of Authorised Vessels | Alphanumeric | e.g., `IOTC003810` |
 | imo_number | O | The unique vessel identification number assigned by the International Maritime Organization | Seven-digit number | e.g., `9359698` |
 | ircs | O | The unique alphanumeric code (International Radio Call Sign; IRCS) assigned to the vessel for radio communications, as recorded in official registration documents radio call sign (when available) | Alphanumeric | e.g., `A4DP6` |
 :::
@@ -395,8 +395,8 @@ This section of the form includes general longline gear configuration.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| configuration_id | O | The identifier for a specific branchline specification as detailed based on the fields below | Integer | e.g., `BL_1` |
-| section_id | O | The identifier for a specific branchline section | Integer | e.g., `BL_1#1` |
+| configuration_id | O | The identifier for a specific branchline specification as detailed based on the fields below | Alphanumeric | e.g., `BL_1` |
+| section_id | O | The identifier for a specific branchline section | Alphanumeric | e.g., `BL_1#1` |
 | material_type | O | The type of material used in each of the four sections of the branchline, where section 1 is that closest to the mainline and section 4 is the leader; note that wire trace may be sheathed by a plastic or nylon coating | **Code** from [Line Material Types](#lineMaterialTypes) | e.g., `NL` |
 | branchline_length_m | O | The value of the length (m) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | e.g., `15.3` |
 | branchline_diameter_cm | O | The value of the diameter (cm) of the branchline for each of the four sections where section 1 is that closest to the mainline and section 4 is the leader | Float | e.g., `1.2` |
@@ -445,7 +445,7 @@ This section of the form includes information regarding individual sets that wer
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` | 
-| set_id | M | The unique four-digit numerical code for each fishing set, e.g., beginning with 0001 and assigned consecutively from the first to the last line set of the observed trip. | Alphanumeric | e.g, `0007` |
+| set_id | M | The unique identifier for each set/operation conducted during the observed trip. For instance, the identifier could be defined as a four-digit numerical code assigned sequentially from the first to the last set/operation of the observed trip | Alphanumeric | e.g, `0007` |
 
 ## Setting Operations
 
@@ -570,7 +570,7 @@ This section of the form includes information about the mitigation measures obse
 
 | Field | Requirement | Description | Format | Input value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
-| configuration_id | O | Identifier of the branchline configuration | Alphanumeric code | e.g., `BL_1` |
+| configuration_id | O | Identifier of the branchline configuration | Alphanumeric | e.g., `BL_1` |
 | number_of_branchlines_set | O | The number of branchlines set by type | Integer | e.g.,`20`  |
 
 ## Other Mitigation Measures Used
@@ -668,8 +668,8 @@ This section of the form includes information about individual biteoffs for each
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | Refers to parent set identifier | Alphanumeric | e.g., `0023` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
+| set_id | M | The parent set identifier | Alphanumeric | e.g., `0023` |
 
 ## Biteoff Details - Branchline
 
@@ -688,9 +688,9 @@ This section of the reporting form includes information on a species-specific su
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
-| observed_trip_id | M | Refers to parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | Refers to parent set identifier | Alphanumeric | e.g., `0285` |
-| catch_id | M | Unique identifier of the species-specific part of the catch, within a set in a trip | Alphanumeric | e.g., `02851` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
+| set_id | M | The parent set identifier | Alphanumeric | e.g., `0285` |
+| catch_id | M | The unique identifier for each species-specific catch component within a fishing set/operation. For instance, the identifier could be defined as the concatenation of the observed trip identifier and the set identifier, followed by a sequential number assigned to each catch event within the same set | Alphanumeric | e.g., `02851` |
 
 ## Catch Details
 
@@ -730,8 +730,8 @@ This section of the form is for the recording of biological information of the s
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | Alphanumeric | e.g., `0003` |
-| catch_id | M | The parent catch identifier | Alphanumeric  | `C188` |
-| specimen_id | M | A unique four-digit numerical code for each specimen. e.g., beginning with 0001, assigned consecutively within the same catch detail of a set during the observed trip | Alphanumeric | e.g., `0005` |
+| catch_id | M | The parent species-specific catch component identifier | Alphanumeric  | e.g., `C188` |
+| specimen_id | M | The unique identifier for each individual specimen sampled or measured within a species-specific catch component, e.g., a four-digit numerical code assigned consecutively, beginning with 0001 | Alphanumeric | e.g., `0005` |
 
 ## Specimen Details
 
@@ -801,7 +801,7 @@ This section of the form includes information about Species of Special Interest 
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | Alphanumeric | e.g., `0004` |
-| catch_id | M | The parent catch identifier | Alphanumeric  | e.g., `0004#1` |
+| catch_id | M | The parent species-specific catch component identifier | Alphanumeric  | e.g., `0004#1` |
 | specimen_id | M | The parent specimen identifier | Alphanumeric | e.g., `01` |
 
 ## Additional Catch Details on SSI
@@ -837,7 +837,7 @@ This section of the form includes information about Species of Special Interest 
 | brought_onboard | O | Indicates whether or not the specimen was brought onboard | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
 | handling_method | O | Detail how the specimen was brought onboard | **Code** from [Handling Methods](#handlingMethods) | e.g., `AN` |
 | revival | O | Indicates whether or not the release took place with resuscitation for turtles | **Code** from [Logical Responses](#logicalResponses) | e.g., `NAPP`  |
-| photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric code | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
+| photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
 
 <!-- | **Depredation details** -->
 
@@ -858,7 +858,7 @@ This section of the form is for the reporting of each of the tags recovered duri
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` | 
 | set_id | M | The parent set identifier | Alphanumeric | e.g., `0023` |
-| catch_id | M | The parent catch identifier | Alphanumeric | e.g., `0023#1` |
+| catch_id | M | The parent species-specific catch component identifier | Alphanumeric | e.g., `0023#1` |
 | specimen_id | M | The parent specimen identifier | Alphanumeric | e.g., `02` |
 
 ## Tag Details

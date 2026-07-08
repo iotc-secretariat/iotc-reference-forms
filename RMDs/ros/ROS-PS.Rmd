@@ -73,7 +73,7 @@ This section of the form includes information about the observer and an overview
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | Unique identifier of the fishing trip, e.g., defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
+| observed_trip_id | M | The unique identifier for the observed trip, e.g., defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
 
 ## Observer Identification
 
@@ -187,7 +187,7 @@ This section of the form includes specific vessel information.
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or Electronic Monitoring records | String | e.g., `HAWWA` |
 | flag_or_chartering_state | M | The country code of registration or chartering | **Code** from [Countries](#countries) | e.g., `OMN` |
-| iotc_ID | M | The unique identification number assigned to the vessel by the IOTC when it is included in the Record of Authorised Vessels | Alphanumeric | e.g., `IOTC003810` |
+| iotc_id | M | The unique identification number assigned to the vessel by the IOTC when it is included in the Record of Authorised Vessels | Alphanumeric | e.g., `IOTC003810` |
 | imo_number | O | The unique vessel identification number assigned by the International Maritime Organization | Seven-digit number | e.g., `9359698` |
 | ircs | O | The unique alphanumeric code (International Radio Call Sign; IRCS) assigned to the vessel for radio communications, as recorded in official registration documents radio call sign (when available) | Alphanumeric | e.g., `A4DP6` |
 :::
@@ -427,8 +427,8 @@ This section describes details of each of the setting operations within the fish
 
 | Field | Requirement | Description | Reporting format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id  | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
-| set_id | M | The unique four-digit numerical code for each fishing set, e.g., beginning with 0001 and assigned consecutively from the first to the last line set of the observed trip. | Alphanumeric | e.g., `0007` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
+| set_id | M | The unique identifier for each set/operation conducted during the observed trip, e.g., a four-digit numerical code beginning with 0001 and assigned consecutively from the first to the last line set of the observed trip | Alphanumeric | e.g., `0007` |
 
 | **Start setting:** Details on the start of setting operations.
 
@@ -473,7 +473,7 @@ This section describes details of each of the setting operations within the fish
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| buoy_id | O | The unique identifier of the buoy | Alphanumeric | e.g., `ISD+295781` |
+| buoy_id | O | The unique identifier of the buoy, e.g., defined as the concatenation of the buoy model and buoy number | Alphanumeric | e.g., `ISD+295781` |
  
 ::: {style="margin-left:40px"}
 **FAD equipped with artificial lights** Characterises artificial lights on the DFAD.
@@ -523,7 +523,7 @@ This section of the form is for reporting the details of the species-specific po
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
 | set_id  | M | The parent set identifier | alphanumeric | e.g., `0007` | |
-| catch_id | M | Unique identifier of the species-specific part of the catch, within a set in a trip | Alphanumeric | e.g., `A001` |
+| catch_id | M | The unique identifier of the species-specific part of the catch within a fishing set/operation | Alphanumeric | e.g., `A001` |
 
 ## Catch Details
 
@@ -563,8 +563,8 @@ This section of the form is for the recording of biological information of the s
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
 | set_id  | M | The parent set identifier | Alphanumeric | e.g., `0007` | |
-| catch_id | M | The parent catch identifier | Alphanumeric  | e.g., `A001`|
-| specimen_id | M | A unique four-digit numerical code for each specimen,e.g., beginning with 0001, assigned consecutively within the same catch detail of a set during the observed trip | Alphanumeric | e.g., `0006`  |
+| catch_id | M | The parent species-specific catch component identifier | Alphanumeric  | e.g., `A001`|
+| specimen_id | M | The unique identifier for each individual specimen sampled or measured within a species-specific catch component, e.g., a four-digit numerical code assigned consecutively, beginning with 0001 | Alphanumeric | e.g., `0006`  |
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
@@ -622,7 +622,7 @@ This section of the form includes information about Species of Special Interest 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
 | set_id | M | The parent set identifier | Alphanumeric | e.g., `0004` |
-| catch_id | M | The parent catch identifier | Alphanumeric  | e.g., `0004#1` |
+| catch_id | M | The parent species-specific catch component identifier | Alphanumeric  | e.g., `0004#1` |
 | specimen_id | M | The parent specimen identifier | Alphanumeric | e.g., `01` |
 
 ## Specimen details SSI
@@ -635,7 +635,7 @@ This section of the form includes information about Species of Special Interest 
 | brought_onboard | O | Indicates if the specimen was brought on board | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE`  |
 | handling_method | O | Details how the specimen was brought on-board | **Code** from [Handling Methods](#handlingMethods) | e.g., `AN` |
 | revival | O | Indicates whether or not the release took place with resuscitation for turtles | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE`  |
-| photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric code | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
+| photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
 
 # E-SET-TAG-DETAILS {#eSetTagDetails}
 
@@ -643,7 +643,7 @@ This section of the form includes information about Species of Special Interest 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` | 
 | set_id | M | The parent set identifier | Alphanumeric | e.g., `0023` |
-| catch_id | M | The parent catch identifier | Alphanumeric | e.g., `0023#1` |
+| catch_id | M | The parent species-specific catch component identifier | Alphanumeric | e.g., `0023#1` |
 | specimen_id | M | The parent specimen identifier | Alphanumeric| e.g., `02` |
 
 ## Tag details
