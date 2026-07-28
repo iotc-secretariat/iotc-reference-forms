@@ -75,7 +75,7 @@ Operational information on DFOB-related activities, including buoys and DFOB cha
 
 ## DFOB Data
 
-| Element | Requirement | Description | Format ¦ Input value  |
+| Element | Requirement | Description | Format | Input value  |
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Identifier | M | Unique identifier of the drifting floating object | String | e.g., `IOTC-ABC-123` | 
 | Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](#FOBtypes) | e.g., `DFAD` | 
