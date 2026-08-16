@@ -2,23 +2,18 @@
 title: "IOTC Statistical Data Reporting: Form 1DI (v`r DOI_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
-  word_document2:
-    reference_docx: "../templates/doc_template.docx"
-    number_sections: FALSE
-    reference_num: TRUE
-    fig_caption: TRUE
-
   html_document2:
     css: "../templates/fao_template_simplified.css"
     self-contained: true
+    mathjax: null
     embed-resources: true
     includes: 
       in_header: "../templates/google-analytics.html"
-    number_sections: FALSE
+    number_sections: false
     toc: yes
     toc_float:
-      collapsed: FALSE
-    smooth_scroll: FALSE
+      collapsed: false
+    smooth_scroll: false
 ---
   
 # Description
@@ -46,7 +41,7 @@ Number or live weight of discards by species, including their condition at relea
 | Element | Requirement | Description | Format | Input value |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
 | Quarter | M | Gregorian calendar quarter of the fishing activities reported through the dataset. **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec | 1-digit integer | e.g., `1` |
-| Fisheries | M | [IOTC fishery](../guidelines/#Fisheries) derived from the combination of several factors | **Code** from [Fisheries](#fisheries) | e.g., `PS-DF[IN]TR` |
+| Fisheries | M | [IOTC fishery](../guidelines/#Fisheries) used to define fishing practices, which emerge from the combination of fishery purposes, area of operation, fishing vessels' size, gear and gear configuration, and target species | **Code** from [Fisheries](#fisheries) | e.g., `PS-DF[IN]TR` |
 | IOTC main areas | M | Main IOTC areas of competence | **Code** from  [IOTC main areas](#IOTCareasMain) | e.g., `IOTC_EAST` |
 | Reasons for discarding | M | Reasons why the species was discarded | **Code** from [Reasons for discarding](#discardReasons) | e.g., `PQ` |
 | Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) | e.g., `YFT` |

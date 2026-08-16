@@ -2,21 +2,16 @@
 title: "IOTC Statistical Data Reporting: Form 1IN  (v`r DOI_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
-  word_document2:
-    reference_docx: "../templates/doc_template.docx"
-    number_sections: FALSE
-    reference_num: TRUE
-    fig_caption: TRUE
-
   html_document2:
     css: "../templates/fao_template_simplified.css"
     includes: 
       in_header: "../templates/google-analytics.html"
-    number_sections: FALSE
+    mathjax: null
+    number_sections: false
     toc: yes
     toc_float:
-      collapsed: FALSE
-    smooth_scroll: FALSE
+      collapsed: false
+    smooth_scroll: false
 ---
   
 # Description
@@ -41,22 +36,28 @@ Number of interactions along with information on the value (%) and type of sampl
 
 ## Main Data Elements
 
-| Element | Requirement | Description | Format | Input value  |
-| :--------| :----: | :----------------------- | :------- | :------------ |
-| Fisheries | M | IOTC definition of fishery units used to define fishing practices, which emerge from the combination of fishery purposes, area of operation, fishing vessels' size, gear and gear configuration, and target species | **Code** from [Fisheries](#fisheries) | e.g., `PS-AF[SI]TR` |
+| Element | Requirement | Description | Format | Input value |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Fisheries | M | [IOTC fishery](../guidelines/#Fisheries) used to define fishing practices, which emerge from the combination of fishery purposes, area of operation, fishing vessels' size, gear and gear configuration, and target species | **Code** from [Fisheries](#fisheries) | e.g., `PS-AF[SI]TR` |
 | IOTC main areas | M | Two main statistical areas constituting the IOTC area of competence | **Code** from [IOTC main areas](#IOareasMain) | e.g., `IOTC_WEST` |
 
 ## Original Data
 
-| Element | Requirement | Description | Input value |
-| :--------| :----: | :----------------------- | :------- | :------------ |
+| Element | Requirement | Description | Format | Input value |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
 | Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#datatypes) | e.g., `FI` | 
 | Types of coverage | O | Variable used for data coverage | **Code** from [Types of Coverage](#coverageTypes) | e.g., `SE` |
+| Source coverage percentage | O | Percentage of the relevant population or variable covered by the reported data, based on the selected coverage type| Numeric | e.g., `20.5` |  
+| Interactions with turtles | M | Indicates whether one or more interactions with [marine turtle species](https://data.iotc.org/reference/latest/domain/biology/#speciesTurtles) were recorded during the reporting period | **Code** from [Logical responses](#logicalResponses) | e.g., `FALSE` |  
+| Interactions with seabirds | M | Indicates whether one or more interactions with [seabird species](https://data.iotc.org/reference/latest/domain/biology/#speciesSeabirds) were recorded during the reporting period | **Code** from [Logical responses](#logicalResponses) | e.g., `TRUE` | 
+| Interactions with mobulid rays | M | Indicates whether one or more interactions with [mobulid ray species](https://data.iotc.org/reference/latest/domain/biology/#speciesMobulids) were recorded during the reporting period | **Code** from [Logical responses](#logicalResponses) | e.g., `TRUE` | 
+| Interactions with cetaceans | M | Indicates whether one or more interactions with [cetacean species](https://data.iotc.org/reference/latest/domain/biology/#speciesCetaceans) were recorded during the reporting period | **Code** from [Logical responses](#logicalResponses) | e.g., `NAP` | 
+| Interactions with whale sharks | M | Indicates whether one or more interactions with whale sharks were recorded during the reporting period | **Code** from [Logical responses](#logicalResponses) | e.g., `NAP` | 
 
 # Reporting Metadata
 
 | Element | Requirement | Description | Format | Input value |
-| :--------| :----: | :----------------------- | :------- | :------------ |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
 | Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
 | Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
 | Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
@@ -132,4 +133,13 @@ out_dt(DATA_TYPES, "DATA_TYPES")
 ```{r collapse = TRUE}
 out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
 ```
- 
+
+## Logical Responses {#logicalResponses}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/#logicalResponses)
++ **Version:** `r version_number("LOGICAL_RESPONSES")`
++ **Last update**: `r last_update("LOGICAL_RESPONSES")`
+
+```{r echo = FALSE, collapse = TRUE}
+out_dt(LOGICAL_RESPONSES, "LOGICAL_RESPONSES")
+```

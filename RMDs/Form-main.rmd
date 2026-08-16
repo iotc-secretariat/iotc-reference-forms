@@ -3,21 +3,16 @@ title: "IOTC Data Reporting Forms (v`r DOI_VERSION`)"
 subtitle: "`r paste0('Last updated: ', format(Sys.time(), format = '%d %B %Y'))`"   #%F %r %Z
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
-  word_document2:
-    reference_docx: "../templates/doc_template.docx"
-    number_sections: FALSE
-    reference_num: TRUE
-    fig_caption: TRUE
-
   html_document2:
     css: "../templates/fao_template_simplified.css"
     includes: 
       in_header: "../templates/google-analytics.html"
-    number_sections: FALSE
+    mathjax: null
+    number_sections: false
     toc: yes
     toc_float:
-      collapsed: FALSE
-    smooth_scroll: FALSE
+      collapsed: false
+    smooth_scroll: false
 ---
 
 # Overview

@@ -12,6 +12,7 @@ output:
     css: "../../templates/fao_template_simplified.css"
     includes: 
       in_header: "../../templates/google-analytics.html"
+    mathjax: null
     number_sections: FALSE
     toc: yes
     toc_float:

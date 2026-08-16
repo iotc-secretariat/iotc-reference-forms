@@ -1,16 +1,9 @@
 ---
 title: "IOTC statistical data reporting: Form-3LG (draft)"
 author: "[IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)"
-#date: "2025-10-13"
-output:
-  word_document2:
-    reference_docx: "../templates/doc_template.docx"
-    number_sections: FALSE
-    reference_num: TRUE
-    fig_caption: TRUE
-
   html_document2:
     css: "../templates/fao_template_simplified.css"
+    mathjax: null
     includes: 
       in_header: "../templates/google-analytics.html"
     number_sections: FALSE

@@ -164,10 +164,9 @@ upload_form_docs = function(version) {
   }
  }
 
-upload_ros_form_docs = function(version) {
-  folder = full_folder(version)
+upload_ros_form_docs <- function(version) {
   
-  folder = paste0(full_folder(version, "forms/ros"))
+  folder <- paste0(full_folder(version, "forms/ros"))
   
   for(formdoc in list.files(paste0("./out/HTML/ros"), pattern = "*.html")) {
     print(paste0("Uploading form document '", formdoc, "' in ", folder, "..."))
@@ -179,14 +178,14 @@ upload_ros_form_docs = function(version) {
   }
 }
 
-disseminate = function(version) {
+disseminate <- function(version) {
   upload_forms(version)
   upload_ros_forms(version)
   upload_form_docs(version)
   upload_ros_form_docs(version)
 }
 
-form_version = "1.0.0"
+form_version <- "1.0.0"
 
 # Upload forms and descriptions
 disseminate(form_version)   

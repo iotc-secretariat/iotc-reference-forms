@@ -2,14 +2,9 @@
 title: "IOTC statistical data reporting: Form 3DA (v`r BASE_VERSION`)"
 author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
 output:
-  word_document2:
-    reference_docx: "../templates/doc_template.docx"
-    number_sections: FALSE
-    reference_num: TRUE
-    fig_caption: TRUE
-
   html_document2:
     css: "../templates/fao_template_simplified.css"
+    mathjax: null
     includes: 
       in_header: "../templates/google-analytics.html"
     number_sections: FALSE
@@ -59,7 +54,7 @@ Operational information on DFOB-related activities, including buoys and DFOB cha
 | Date_Time | M | The date and time at which the drifting floating object was visited in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | String based on [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MM(Z\|+/-hh:mm)] | e.g., `2025-09-15T12:00Z` |
 | Latitude  | M | The latitude of the drifting floating object location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | Float based on [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
 | Longitude | M | The longitude of the drifting floating object location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | Float based on [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
-| Species | M | Species caught and discarded | **Code** from [All Species](#allSpecies) | e.g., `YFT` | 
+| Species | M | Species caught and discarded | **Code** from [All species](#allSpecies) | e.g., `YFT` | 
 | Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](#typesOfFate) | e.g., `DL` | 
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | e.g., `NR` | 
 | Catch unit   | M | Unit used to report the value of catch of a given species | **Code** from [Catch units](#catchUnits) | e.g., `T` | 
@@ -68,9 +63,9 @@ Operational information on DFOB-related activities, including buoys and DFOB cha
 
 | Element | Requirement | Description | Format | Input value |
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Present | M | Indicates whether a buoy is attached to the drifting floating object | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` | 
+| Present | M | Indicates whether a buoy is attached to the drifting floating object | **Code** from [Logical responses](#logicalResponses) | e.g., `TRUE` | 
 | Identifier | M |  Unique identifier of buoy monitored generally composed of the concatenation of the buoy model with with 5-9 digits | String | e.g., `SLX328501` |
-| Position known | M | Indicates whether the vessel have access/knowledge of the buoy position | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` | 
+| Position known | M | Indicates whether the vessel have access/knowledge of the buoy position | **Code** from [Logical responses](#logicalResponses) | e.g., `TRUE` | 
 | Activity | M | Type of activities undertaken when visiting or deploying the drifting floating object | **Code** from [Buoy activity types](#DFOBbuoyActivityTypes) | e.g., `DE` | 
 
 ## DFOB Data
@@ -89,24 +84,24 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 
 | Element | Requirement | Description | Format | Input value  |
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Plastic | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` | 
-| Metal  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` | 
+| Plastic | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | **Code** from [Logical responses](#logicalResponses) | e.g., `TRUE` | 
+| Metal  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | **Code** from [Logical responses](#logicalResponses) | e.g., `FALSE` | 
 | Length | M | Length of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `150` |
 | Width  | O | Width of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | e.g. `120` |
 | Height | O | Height of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `50` |
-| Mesh   | M | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
+| Mesh   | M | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | **Code** from [Logical responses](#logicalResponses) | e.g., `FALSE` |
 <!-- | Mesh size | O | Size of the main net mesh used on the surface or near-surface structure of the drifting floating object (if any) in millimetres (mm) | Numeric | e.g., `5` | -->
 
 #### Subsurface (Tail/Cage)
 
 | Element | Requirement | Description | Format | Input value | 
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Plastic | M | Indicates whether the tail of the drifting floating object contains some plastic materials | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` | 
-| Metal | M | Indicates whether the tail of the drifting floating object contains some metal materials | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| Plastic | M | Indicates whether the tail of the drifting floating object contains some plastic materials | **Code** from [Logical responses](#logicalResponses) | e.g., `FALSE` | 
+| Metal | M | Indicates whether the tail of the drifting floating object contains some metal materials | **Code** from [Logical responses](#logicalResponses) | e.g., `TRUE` |
 | Length | M |  Length of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `100` | 
 | Width  | O | Width of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `100` |
 | Height | O | Height of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | e.g., `80` | 
-| Mesh | M | Indicates whether the subsurface structure of the drifting floating object contains mesh | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` | 
+| Mesh | M | Indicates whether the subsurface structure of the drifting floating object contains mesh | **Code** from [Logical responses](#logicalResponses) | e.g., `FALSE` | 
 | Mesh size | O | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) in millimetres (mm) | Numeric | e.g., `3` | 
 
 # Reporting Metadata
