@@ -263,9 +263,7 @@ The different versions of the IOTC ROS forms can be downloaded directly from the
 
 # Vessel Registry Datasets {#5VE}
 
-Information and data on active and authorised vessels involved in tuna and tuna-like fisheries in the IOTC Area of Competence shall be collected and reported in line with the requirements of Resolutions [10/08](https://www.iotc.org/cmm/resolution-1008-concerning-record-active-vessels-fishing-tunas-and-swordfish-iotc-area) and [19/04](https://www.iotc.org/cmm/resolution-1904-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence), respectively.
-
-Please note that Resolution [26/04](https://iotc.org/cmm/resolution-2604-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence) has been adopted at the 30^th^ session of the Commission and will supersede Resolution 19/04 for CPCs that do not object to its application.
+Information and data on active and authorised vessels involved in tuna and tuna-like fisheries in the IOTC Area of Competence shall be collected and reported in line with the requirements of Resolutions [10/08](https://www.iotc.org/cmm/resolution-1008-concerning-record-active-vessels-fishing-tunas-and-swordfish-iotc-area) and [26/04](https://iotc.org/cmm/resolution-2604-concerning-iotc-record-vessels-authorised-operate-iotc-area-competence), respectively.
 
 Individual vessel information is available via the [IOTC Record of Authorised Vessels](https://rav.iotc.org/). The dataset is also accessible through export views from a PostgreSQL database, supporting programmatic extraction and automated data pipelines. Access credentials may be obtained from the [IOTC Secretariat](mailto:IOTC-Statistics@fao.org).
 
