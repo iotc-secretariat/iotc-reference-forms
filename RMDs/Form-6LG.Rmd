@@ -1,6 +1,7 @@
 ---
 title: "IOTC statistical data reporting: Form-3LG (draft)"
 author: "[IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)"
+output:
   html_document2:
     css: "../templates/fao_template_simplified.css"
     mathjax: null
