@@ -41,7 +41,7 @@ Species of Special Interest during tuna fishing events|
 | [E-SET-BAIT](#eSetBait) | Gear Technology / Equipment | Operations | Information on bait use by operation |
 | [E-SET-BAIT-CATCH](#eSetBaitCatch) | Catch | Operations  | Information on magnitude, composition, and fate of bait catch|
 | [E-SET-BAIT-CATCH-SPECIMEN-SSI](#eSetBaitCatchSpecimenSSI) | Catch |Species |Information on specimen condition, depredation, and technical details associated with the catch for Species of Special Interest during bait fishing events|
-| [DAILY-ACTIVITY](#DailyActivity) | Trip | Trip | Information on the activities occurring throughout the fishing trip observed|
+| [D-ACTIVITY](#dailyActivities) | Trip | Trip | Information on the activities occurring throughout the fishing trip observed|
 
 # META {#meta}
 
@@ -63,7 +63,7 @@ Species of Special Interest during tuna fishing events|
 |Reporting year | M |Gregorian calendar year of the fishing activities reported through the dataset | Integer | e.g., `1996` |
 |Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |e.g., `ABW` |
 |Flag / Chartering state | M | The reporting flag or chartering state **OR** three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Data source | M |The source of data provided  | Observer data or EM data | e.g., `OAS` |
+| Data source | M | The source of the data, i.e., collected by observers at sea or derived from Electronic Monitoring Systems | **Code** from [Data Sources](#dataSources) | e.g., `OB` |
 
 # O-INFO {#oInfo}
 
@@ -746,9 +746,9 @@ This section of the form includes information about Species of Special Interest 
 | revival | O  | 	Indicates whether or not the release took place with resuscitation for turtles (Yes/No/Unk) | String |e.g., `Yes`  |
 | photo_ID | O  | The unique identifier of the photo taken of a specimen | Alphanumeric  | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png`  |
 
-# D-ACTIVITIES {#dActivities}
+# D-ACTIVITIES {#dailyActivities}
 
-<!-- This section of the reporting form describes the activities conducted throughout the fishing trip -->
+This section of the reporting form describes the activities conducted throughout the fishing trip.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|

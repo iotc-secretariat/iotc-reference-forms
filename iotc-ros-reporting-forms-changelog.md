@@ -326,11 +326,11 @@ STREAMER
 
     - specimen_id: The unique identifier for each individual specimen sampled or measured within a species-specific catch component. For instance, the identifier could be defined as the concatenation of the observed trip identifier, the set identifier, the species-specific catch component identifier, and a sequential number assigned to each specimen collected (e.g., 2026-01-15_OBS123_12345_PS_0001_0001_0001).
 
+# Updates | 2026-09-23
 
+- Changed the name of the sheet `DAILY-ACTIVITY` to `D-ACTIVITIES` for the PL reporting form, for consistency with the PS form and the descriptions.
 
-
-
-
+- Corrected bug preventing data entry and reduced headers to 1 single row (instead of 2 merged) in sheet `E-SET-BAIT-CATCHES-SPECIMEN-SSI` of the PL form
 
 
 
