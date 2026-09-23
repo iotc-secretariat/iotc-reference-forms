@@ -358,7 +358,7 @@ This section of the form includes details on vessel attributes.
 
 # G-GENERAL {#gGeneral}
 
-This section of the form includes general longline gear configuration.
+This section of the form includes general pole-and-line gear configuration.
 
 | Field | Requirement | Description | Format | Input value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
