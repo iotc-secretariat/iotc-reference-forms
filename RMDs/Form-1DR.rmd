@@ -26,30 +26,30 @@ For the combination of each taxon, gear group, and fishery category listed in th
 
 ## General Information
 
-| Element | Requirement | Description | Format | Input value  |
+| Element | Requirement | Description | Format | Example value  |
 | :-------- | :-----: | :----------------------- | :----- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g. `1996` |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` | 
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | e.g., `FRA` |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | `EUR` | 
+| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) | `FRA` |
 
 ## Main Data Elements
 
-| Element | Description | Format | Input value |
+| Element | Description | Format | Example value |
 | :-------- | :-------------------------- | :----- | :-------: |
-| Species | Fish species caught, whether retained or discarded | **Code** from [Species](#1DRspecies) | e.g., `YFT` |
-| Gear groups | Classification of different types of fishing gear that share similar characteristics or functions | **Code** from [Gear groups](#gearGroups) | e.g., `PL` | 
-| Fishery categories | One of the three main IOTC fishery categories defined according to the main gear used by the vessel and their recording in the IOTC Record of Authorised Vessels | **Code** from [Fishery categories](#fisheryCategories) | e.g., `COASTAL` | 
+| Species | Fish species caught, whether retained or discarded | **Code** from [Species](#1DRspecies) | `YFT` |
+| Gear groups | Classification of different types of fishing gear that share similar characteristics or functions | **Code** from [Gear groups](#gearGroups) | `PL` | 
+| Fishery categories | One of the three main IOTC fishery categories defined according to the main gear used by the vessel and their recording in the IOTC Record of Authorised Vessels | **Code** from [Fishery categories](#fisheryCategories) | `COASTAL` | 
 
 # Reporting Metadata
 
-| Element | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Example value |
 | :-------- | :----: | :----------------------- | :------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
-| Liaison officer email | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
-| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | String | `John Doe` |
+| Liaison officer email | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | `Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-03-27` |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1997-03-21` |
 
 # Reporting Deadlines
 
@@ -59,7 +59,7 @@ For the combination of each taxon, gear group, and fishery category listed in th
 
 ## Entities {#entities}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities)
 + **Version**: `r version_number("ENTITIES")`
 + **Last update**: `r last_update("ENTITIES")`
 
@@ -69,7 +69,7 @@ out_dt(ENTITIES, "ENTITIES")
 
 ## Countries {#countries}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries)
 + **Version**: `r version_number("COUNTRIES")`
 + **Last update**: `r last_update("COUNTRIES")`
 
@@ -79,7 +79,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 ## Gear Groups {#gearGroups}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups)
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#gearGroups)
 + **Version**: `r version_number("GEAR_GROUPS")`
 + **Last update**: `r last_update("GEAR_GROUPS")`
 
@@ -89,7 +89,7 @@ out_dt(GEAR_GROUPS, "GEAR_GROUPS")
 
 ## Species {#1DRspecies}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies)
 + **Version**: `r version_number("SPECIES")`
 + **Last update**: `r last_update("SPECIES")`
 
@@ -99,7 +99,7 @@ out_dt(SPECIES_1DR, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", font
 
 ## Fishery Categories {#fisheryCategories}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheryCategories)
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fisheryCategories)
 + **Version**: `r version_number("FISHERY_CATEGORIES")`
 + **Last update**: `r last_update("FISHERY_CATEGORIES")`
 

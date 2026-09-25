@@ -28,25 +28,25 @@ Total live weight of retained catches by species, along with information on the 
 
 ## General Information
 
-| Element | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer	| e.g., `1996` |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer	| `1996` |
 | Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | String | **Code** from [Entities](#entities) |
 | Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | String | **Code** from [Countries](#countries) |
 
 ## Main Data Elements
 
-| Element | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
 | Quarter | O | Fishing time period | Integer | **0**: Jan-Dec; **1**: Jan-Mar; **2**: Apr-Jun; **3**: Jul-Sep; **4**: Oct-Dec |
-| Fishery | M | [IOTC fishery](../guidelines/#Fisheries) used to define fishing practices, which emerge from the combination of fishery purposes, area of operation, fishing vessels' size, gear and gear configuration, and target species | **Code** from [Fisheries](#Fisheries) | e.g., `PS-DF[IN]TR` | 
-| IOTC area | M | Main IOTC areas | **Code** from [IOTC main areas](#IOTCareasMain) | e.g., `` |
-| Retain reason | M | Reason for retaining the catch onboard | **Code** from [Reasons for retaining](#retainReasons) | e.g., | 
-| Species | M | Species caught and retained | **Code** from [Species](#allSpecies) | e.g., `` | 
+| Fishery | M | [IOTC fishery](../guidelines/stats/index.html#Fisheries) used to define fishing practices, which emerge from the combination of fishery purposes, area of operation, fishing vessels' size, gear and gear configuration, and target species | **Code** from [Fisheries](#Fisheries) | `PS-DF[IN]TR` | 
+| IOTC area | M | Main IOTC areas | **Code** from [IOTC main areas](#IOTCareasMain) | `IOTC_WEST` |
+| Retain reason | M | Reason for retaining the catch onboard | **Code** from [Reasons for retaining](#retainReasons) | `FL` | 
+| Species | M | Species caught and retained | **Code** from [Species](#allSpecies) | `YFT` | 
 
 ## Original Data
 
-| Element | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
 | Original data type  | M | Preliminary/final status of the data | String | **Code** from [Types of data](#types) |
 | Original data source  | M | Source of information | String | **Code** from [Retained catches data sources](#dataSourcesRC) |
@@ -55,14 +55,14 @@ Total live weight of retained catches by species, along with information on the 
 
 # Reporting Metadata
 
-| Element | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | String | e.g., `John Doe` |
-| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
-| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | String | `John Doe` |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | `Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-03-27` |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1997-03-21` |
 
 # Reporting Deadlines
 
@@ -74,7 +74,7 @@ Total live weight of retained catches by species, along with information on the 
 
 ## Entities {#entities}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities)
 + **Version:** `r version_number("ENTITIES")`
 + **Last update**: `r last_update("ENTITIES")`
 
@@ -84,7 +84,7 @@ out_dt(ENTITIES, "ENTITIES")
 
 ## Countries {#countries}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries)
 + **Version:** `r version_number("COUNTRIES")`
 + **Last update**: `r last_update("COUNTRIES")`
 
@@ -94,7 +94,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 ## IOTC Main Areas {#IOTCareasMain}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/#IOTCareasMain)
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#IOTCareasMain)
 + **Version:** `r version_number("IOTC_MAIN_AREAS")`
 + **Last update**: `r last_update("IOTC_MAIN_AREAS")`
 
@@ -106,7 +106,7 @@ out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
 
 ## Fisheries {#fisheries}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fisheries)
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fisheries)
 + **Version:** `r version_number("FISHERIES")`
 + **Last update**: `r last_update("FISHERIES")`
 
@@ -116,7 +116,7 @@ out_dt(FISHERIES, "FISHERIES")
 
 ## Species {#allSpecies}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies)
 + **Version:** `r version_number("SPECIES")`
 + **Last update**: `r last_update("SPECIES")`
 
@@ -126,7 +126,7 @@ out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyl
 
 ## Reasons for Retaining {#retainReasons}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/#retainReasons)
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#retainReasons)
 + **Version:** `r version_number("RETAIN_REASONS")`
 + **Last update**: `r last_update("RETAIN_REASONS")`
 
@@ -136,7 +136,7 @@ out_dt(RETAIN_REASONS, "RETAIN_REASONS")
 
 ## Types of Data {#types}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/#types)
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#types)
 + **Version:** `r version_number("DATA_TYPES")`
 + **Last update**: `r last_update("DATA_TYPES")`
 
@@ -146,7 +146,7 @@ out_dt(DATA_TYPES, "DATA_TYPES")
 
 ## Retained Catches Data Sources {#dataSourcesRC}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesRC)
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#sourcesRC)
 + **Version:** `r version_number("DATA_SOURCES_RC")`
 + **Last update**: `r last_update("DATA_SOURCES_RC")`
 
@@ -156,7 +156,7 @@ out_dt(DATA_SOURCES_RC, "DATA_SOURCES_RC")
 
 ## Retained Catches Data Processings {#dataProcessingsRC}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/#processingsRC)
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#processingsRC)
 + **Version:** `r version_number("DATA_PROCESSINGS_RC")`
 + **Last update**: `r last_update("DATA_PROCESSINGS_RC")`
 
@@ -166,7 +166,7 @@ out_dt(DATA_PROCESSINGS_RC, "DATA_PROCESSINGS_RC")
 
 ## Types of Coverage {#coverageTypes}
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/#coverageTypes)
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#coverageTypes)
 + **Version:** `r version_number("COVERAGE_TYPES")`
 + **Last update**: `r last_update("COVERAGE_TYPES")`
 

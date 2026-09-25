@@ -20,60 +20,62 @@ This form provides for the annual reporting of fishing activities conducted arou
 
 Click [here](./Form-3AA.xlsx) to download a blank version of Form 3AA, or [return](./index.html) to the list of all IOTC statistical data reporting forms. The form allows reporting updated data for multiple fisheries simultaneously.
 
-<!-- Click [here](./Form-3AA-update.xlsx) to download a blank version of Form 3AA which has been designed to report updated data for a single fishery. -->
-
 # Data Content
 
 Daily information on AFOB-related activities along with estimates of total number and/or live weight of retained catches and discards by species, fate, raising status, and catch unit.
 
 ## General Information
 
-| Element | Requirement | Description | Input value  |
+| Element | Requirement | Description | Example value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** From [Entities](#entities) |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |
 | Flag state | M | Three-letter (alpha-3) code of the country registration of the fishing vessels | **Code** from [Countries](#countries) |
 
 ## Main Data Elements
 
-| Element | Requirement | Description | Input value |
+| Element | Requirement | Description | Example value |
 | :----------------- | :-----: | :----------------------- | :-------: |
 | Month | M | Gregorian calendar month of the fishing activities reported through the dataset | Integer 1..12 |
 | Day of the month | M | Day of the month of the fishing activities reported through the dataset | Integer 1..31 |
-| Fisheries | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries)            |
-| Latitude | M | Horizontal distances north or south of the Equator | Decimal degrees  |
+| Fisheries | M | Type of fishing practices based on several factors| **Code** from [Fisheries](#fisheries) |
+| Latitude | M | Horizontal distances north or south of the Equator | Decimal degrees |
 | Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees |
-| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies)           |
-| Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](#typesOfFate)           |
+| Species | M | Species caught and discarded | **Code** from [Species](#allSpecies) |
+| Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](#typesOfFate) |
 | Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | 
 | Catch unit | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) |
 
 ## AFOB Data
 
-| Element | Requirement | Description | Input value  |
+| Element | Requirement | Description | Example value  |
 | :----------------- | :-----: | :----------------------- | :-------: |
-| Identifier | M | Unique identifier of the floating object | Plain text      |
+| Identifier | M | Unique identifier of the floating object | Plain text |
 | Type | M | Type of anchored floating object | **Code** from [AFOB types](#AFOBtypes) |
 | Activity | M | Type of activities undertaken when visiting or deploying an anchored floating object | **Code** from [AFOB activity types](#AFOBactivityTypes) |
 
 # Reporting Metadata
 
-| Element | Requirement | Description | Format | Example |
+| Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | John Doe |
-| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
+| Liaison officer full name | M  | Name of the liaison officer in charge of the compilation of the data | Plain text | `John Doe` |
+| Liaison officer email	| M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | [John.Doe\@fao.org](mailto:John.Doe@fao.org){.email} |
 | Organisation name | M | Name of the organisation in charge of the compilation of the data | Plain text | National Institute of Fisheries |
 | Organisation email | O | Email address of the organisation in charge of the compilation of the data | [nif\@gov.sc](mailto:nif@gov.sc){.email} |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1996-03-27 |
-| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | 1997-03-21 |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-03-27` |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1997-03-21` |
 
 # Reporting Deadlines
 
-- **Surface fisheries**: 30 June (final)
+- **Coastal and surface fisheries**: 30 June (final)
 
 # Reference Code Lists
 
 ## Entities {#entities}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities)
++ **Version:** `r version_number("ENTITIES")`
++ **Last update**: `r last_update("ENTITIES")`
 
 ```{r collapse = TRUE}
 out_dt(ENTITIES, "ENTITIES")
@@ -81,11 +83,18 @@ out_dt(ENTITIES, "ENTITIES")
 
 ## Countries {#countries}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries)
++ **Version:** `r version_number("COUNTRIES")`
++ **Last update**: `r last_update("COUNTRIES")`
+
 ```{r collapse = TRUE}
 out_dt(COUNTRIES, "COUNTRIES")
 ```
 
 ## Fisheries {#fisheries}
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fisheries)
++ **Version:** `r version_number("FISHERIES")`
++ **Last update**: `r last_update("FISHERIES")`
 
 ```{r collapse = TRUE}
 out_dt(FISHERIES, "FISHERIES")
@@ -93,11 +102,19 @@ out_dt(FISHERIES, "FISHERIES")
 
 ## Species {#allSpecies}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies)
++ **Version:** `r version_number("SPECIES")`
++ **Last update**: `r last_update("SPECIES")`
+
 ```{r collapse = TRUE}
 out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
 ```
 
 ## Types of Data {#types}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#types)
++ **Version:** `r version_number("DATA_TYPES")`
++ **Last update**: `r last_update("DATA_TYPES")`
 
 ```{r collapse = TRUE}
 out_dt(DATA_TYPES, "DATA_TYPES")
@@ -105,11 +122,19 @@ out_dt(DATA_TYPES, "DATA_TYPES")
 
 ## Types of Anchored Fishing Objects {#AFOBtypes}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#AFOBtypes)
++ **Version:** `r version_number("AFOB_TYPES")`
++ **Last update**: `r last_update("AFOB_TYPES")`
+
 ```{r collapse = TRUE}
 out_dt(AFOB_TYPES, "AFOB_TYPES")
 ```
 
 ## Types of Activities on Anchored Floating Objects {#AFOBactivityTypes}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#AFOBactivityTypes)
++ **Version:** `r version_number("AFOB_ACTIVITIES")`
++ **Last update**: `r last_update("AFOB_ACTIVITIES")`
 
 ```{r collapse = TRUE}
 out_dt(AFOB_ACTIVITIES, "AFOB_ACTIVITIES")
@@ -117,17 +142,29 @@ out_dt(AFOB_ACTIVITIES, "AFOB_ACTIVITIES")
 
 ## Types of Fates {#typesOfFate}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#typesOfFate)
++ **Version:** `r version_number("TYPES_OF_FATE")`
++ **Last update**: `r last_update("TYPES_OF_FATE")`
+
 ```{r collapse = TRUE}
 out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 ```
 
 ## Raisings {#raisings}
 
++ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#raisings)
++ **Version:** `r version_number("DATA_RAISINGS")`
++ **Last update**: `r last_update("DATA_RAISINGS")`
+
 ```{r collapse = TRUE}
 out_dt(DATA_RAISINGS, "DATA_RAISINGS")
 ```
 
 ## Catch Units {#catchUnits}
+
++ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#catchUnits)
++ **Version:** `r version_number("CATCH_UNITS")`
++ **Last update**: `r last_update("CATCH_UNITS")`
 
 ```{r collapse = TRUE}
 out_dt(CATCH_UNITS, "CATCH_UNITS")

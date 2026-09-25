@@ -23,7 +23,7 @@ Click [here](./Form-ROS-PS.xlsx) to download a blank version of Form ROS-PS, or 
 
 # Data content
 
-Form ROS-PS is an XLSX workbook comprising 13 sheets, designed to report the mandatory (<span style="color: blue;">M; blue cells</span>) and optional (<span style="color: green;">O; green cells</span>) data fields defined by the SC. The current version builds on the most recent revision of ROS fields endorsed at the 27^th^ session of the SC ([IOTC-2024-SC27-DATA01](https://iotc.org/documents/SC/27/DATA01)). The sheets are interconnected through technical identifiers (e.g., observer trip ID, set ID), enabling the hierarchical organisation of the observations to be maintained.
+Form ROS-PS is an XLSX workbook comprising 13 sheets, designed to report the mandatory (<span style="color: blue;">M; blue cells</span>) and optional (<span style="color: green;">O; green cells</span>) data fields defined by the SC. The current version builds on the most recent revision of ROS fields endorsed at the 27^th^ session of the SC ([IOTC-2024-SC27-DATA01](https://iotc.org/documents/SC/27/DATA01)). The sheets are interconnected through technical identifiers (observer trip ID, set ID), enabling the hierarchical organisation of the observations to be maintained.
 
 | Sheet | Data Components | Resolution |  Description |
 | :---------- | :----------: | :--------: | :----------------------------- |
@@ -45,38 +45,38 @@ Form ROS-PS is an XLSX workbook comprising 13 sheets, designed to report the man
 
 ## Submission Information
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data  | String | e.g., `John Doe`  |
-| Liaison officer email | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | e.g., `John.Doe@fao.org` |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | e.g., `Institute of Fisheries` |
-| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | e.g., `nif@gov.sc` |
-| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1996-03-27` |
-| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | e.g., `1997-03-21` |
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data  | String | `John Doe`  |
+| Liaison officer email | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | `Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-03-27` |
+| [Submission date]{#subdate} | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1997-03-21` |
 
 ## General Information
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | e.g., `1996` |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | e.g., `EUR` |
-| Flag / Chartering state | M | The country registration of the fishing vessels or chartering flag in case of chartering agreement | **Code** from [Countries](#countries) | e.g., `FRA` |
-| Data source | M | The source of the data, i.e., collected by observers at sea or derived from Electronic Monitoring Systems | **Code** from [Data Sources](#dataSources) | e.g., `OB` |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | `1996` |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | `EUR` |
+| Flag / Chartering state | M | The country registration of the fishing vessels or chartering flag in case of chartering agreement | **Code** from [Countries](#countries) | `FRA` |
+| Data source | M | The source of the data, i.e., collected by observers at sea or derived from Electronic Monitoring Systems | **Code** from [Data Sources](#dataSources) | `OB` |
 
 # O-INFO {#oInfo}
 
 This section of the form includes information about the observer and an overview of the fishing trip they observed.
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The unique identifier for the observed trip, e.g., defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
+| observed_trip_id | M | The unique identifier for the observed trip, defined as the concatenation of (i) the observation or trip start date (YYYY-MM-DD), (ii) the IOTC observer identifier, (iii) the IOTC vessel identifier as per Record of Authorised Vessels ([RAV](https://rav.iotc.org/)) and the vessel [gear group](https://data.iotc.org/reference/latest/domain/fisheries/#gearGroups) code as per IOTC classification | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/PS` |
 
 ## Observer Identification
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| iotc_id | M | The unique registration identifier assigned to each observer by the IOTC Secretariat | Alphanumeric | e.g., `IOTC_0976` |
-| full_name | O | The name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer | String | e.g., `John Doe` |
+| iotc_id | M | The unique registration identifier assigned to each observer by the IOTC Secretariat | Alphanumeric | `IOTC_0976` |
+| full_name | O | The name of the scientific observer(s) that collected the data on-board the fishing vessel or EM reviewer | String | `John Doe` |
 
 ## Observer Trip Details
 
@@ -86,25 +86,25 @@ This section of the form includes information about the observer and an overview
 | **In port**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O | The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | e.g., `FRA` |
-| port | O | The port of the observation starting location | **Code** from [Ports](#ports) | e.g., `REREU` |
+| country | O | The country or EEZ of the observation starting location | **Code** from [Countries](#countries) | `FRA` |
+| port | O | The port of the observation starting location | **Code** from [Ports](#ports) | `REREU` |
 :::
 
 ::: {style="margin-left:40px"}
 | **At sea**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| latitude | M | The latitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
-| longitude | M | The longitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
+| latitude | M | The latitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | `-20.8854` |
+| longitude | M | The longitude of the observation starting location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | `55.5312` |
 :::
 ::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time of the start of observations in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| date_time_utc | M | The date and time of the start of observations in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | `2025-09-15T12:00Z` |
 :::
 
 | **Disembarkation:** The ending port. If the last observation is available after a port launch while the vessel is within port limits, this is still considered as the observation ending port. If the observation ends at sea outside port limits (onboard observer disembarking boarding the vessel via a vessel transfer or EM records not available at the end of observations due to a recording failure) , it is considered "at sea".
@@ -113,26 +113,26 @@ This section of the form includes information about the observer and an overview
 | **In port**
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O | The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | e.g., `FRA` |
-| port | O | The port of the observation ending location | **Code** from [Ports](#ports) | e.g., `REREU` |
+| country | O | The country or EEZ of the observation ending location | **Code** from [Countries](#countries) | `FRA` |
+| port | O | The port of the observation ending location | **Code** from [Ports](#ports) | `REREU` |
 :::
 ::: {style="margin-left:40px"}
 | **At sea**
 :::
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| latitude | M | The latitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
-| longitude | M | The longitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
+| latitude | M | The latitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | `-20.8854` |
+| longitude | M | The longitude of the observation ending location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time corresponding to the end of observations in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| date_time_utc | M | The date and time corresponding to the end of observations in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | `2025-09-15T12:00Z` |
 :::
 
 ## Observed Trip Summary
@@ -140,88 +140,88 @@ This section of the form includes information about the observer and an overview
 | **Number of fishing sets:**: The total number of purse seine sets deployed by the vessel or observed by the scientific observer during a single fishing trip. Each set corresponds to one complete deployment of the purse seine.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | e.g., `45` |
-| observed | M | The total number of fishing sets monitored by the observer. In the case of EM, only processed sets to be included | Integer | e.g., `45` |
+| conducted | M | The total number of fishing sets conducted by the vessel from the observation starting date to the observation ending date, regardless their catch and data collection activities | Integer | `45` |
+| observed | M | The total number of fishing sets monitored by the observer. In the case of EM, only processed sets to be included | Integer | `45` |
 :::
 
 | **Number of hours:** The total number of hours the vessel is on a fishing trip, with each day defined as a 24-hour period. These days can be further categorised by activity type (e.g. searching, transiting, actively fishing, or present in fishing areas). 
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| searching | M | The number of hours searching during the observation period | Integer | e.g., `420` |
-| actively_fishing | M | The number of active fishing hours during the observation period | Integer | e.g., `75` |
-| in_fishing_area | O | The number of hours in the fishing area during the observation period | Integer | e.g., `480` |
-| transiting | O | The number of hours transiting during the observation period | Integer | e.g., `100` |
-| lost | M | The number of hours lost during the observation period | Integer | e.g., `5` | 
+| searching | M | The number of hours searching during the observation period | Integer | `420` |
+| actively_fishing | M | The number of active fishing hours during the observation period | Integer | `75` |
+| in_fishing_area | O | The number of hours in the fishing area during the observation period | Integer | `480` |
+| transiting | O | The number of hours transiting during the observation period | Integer | `100` |
+| lost | M | The number of hours lost during the observation period | Integer | `5` | 
 :::
 
 | **Reasons for lost days:** The reason(s) a vessel was unable to fish: (i) adverse weather conditions, (ii) mechanical breakdown or inoperative gear or (iii) unforeseen events (specify).  
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| reason | O | The main reasons for days at sea lost to fishing activity. Up to 4 reasons may be reported on the form | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | e.g., `AW` |
+| reason | O | The main reasons for days at sea lost to fishing activity. Up to 4 reasons may be reported on the form | **Code** from [Reasons for Days Lost](#reasonsDaysLost) | `AW` |
 :::
 
 # V-INFO {#vInfo}
 
 This section of the form includes specific vessel information.
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/PS` |
 
 ## Vessel Information
 
 | **Identification**: Unique identifiers and key details of the vessel to uniquely identify the vessel in fisheries and observer records.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or Electronic Monitoring records | String | e.g., `HAWWA` |
-| flag_or_chartering_state | M | The country code of registration or chartering | **Code** from [Countries](#countries) | e.g., `OMN` |
-| iotc_id | M | The unique identification number assigned to the vessel by the IOTC when it is included in the Record of Authorised Vessels | Alphanumeric | e.g., `IOTC003810` |
-| imo_number | O | The unique vessel identification number assigned by the International Maritime Organization | Seven-digit number | e.g., `9359698` |
-| ircs | O | The unique alphanumeric code (International Radio Call Sign; IRCS) assigned to the vessel for radio communications, as recorded in official registration documents radio call sign (when available) | Alphanumeric | e.g., `A4DP6` |
+| name | M | The vessel full name as recorded on vessel official documentation or record the vessel full name as imprinted on the vessel itself or Electronic Monitoring records | String | `HAWWA` |
+| flag_or_chartering_state | M | The country code of registration or chartering | **Code** from [Countries](#countries) | `OMN` |
+| iotc_id | M | The unique identification number assigned to the vessel by the IOTC when it is included in the Record of Authorised Vessels | Alphanumeric | `IOTC003810` |
+| imo_number | O | The unique vessel identification number assigned by the International Maritime Organization | Seven-digit number | `9359698` |
+| ircs | O | The unique alphanumeric code (International Radio Call Sign; IRCS) assigned to the vessel for radio communications, as recorded in official registration documents radio call sign (when available) | Alphanumeric | `A4DP6` |
 :::
 
 | **Registration**: Official vessel registration details to uniquely identify the vessel within the national or regional registry.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O | The code of vessel's country of registry | **Code** from [Countries](#countries) | e.g., `FRA` |
-| port | O | The code of vessel's port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship's hull – also include the country | **Code** from [Ports](#ports) | e.g., `REREU` |
-| registration_number | O | The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel. This may be a combination of characters and numbers; record them all | Alphanumeric or numeric according to CPC standards | e.g., `CBG303`|
+| country | O | The code of vessel's country of registry | **Code** from [Countries](#countries) | `FRA` |
+| port | O | The code of vessel's port of registry (also called home port) shown on its registration documents and lettered on the stern of the ship's hull – also include the country | **Code** from [Ports](#ports) | `REREU` |
+| registration_number | O | The number issued by country in which the vessel is registered, shown on its registration documents and written on the hull of the vessel. This may be a combination of characters and numbers; record them all | Alphanumeric or numeric according to CPC standards | `CBG303`|
 :::
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| licensed_target_species | O | The licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all | **Code** from [All Species](#allSpecies) | e.g., `AL` |
-| main_fishing_gear | M |The main vessel fishing gear | **Code** from [Fishing Gear](#fishingGear) | e.g., `DL` |
+| licensed_target_species | O | The licensed target species as specified in vessel licences or permit conditions. Vessels will generally target a narrow range or aggregation of species, however one or more might not be an IOTC species; record them all | **Code** from [All Species](#allSpecies) | `AL` |
+| main_fishing_gear | M |The main vessel fishing gear | **Code** from [Fishing Gear](#fishingGear) | `DL` |
 
 | **Vessel Personnel:** Details of the individuals working onboard during the fishing trip as well as the total number of crew members onboard.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| fishing_master_name | M | The full name of the fishing master recorded as first and last names | String | e.g., `John Doe` |
-| fishing_master_nationality | M | The nationality of the fishing master | **Code** from [Countries](#countries) | e.g., `FRA` |
-| skipper_captain_name | M | Name of the skipper or captain recorded as first and last names| String | e.g., `John Doe` |
-| skipper_captain_nationality | M | Nationality of the skipper or captain | **Code** from [Countries](#countries) | e.g., `FRA` |
-| crew_number | O | The number of crew onboard the vessel during the trip | Integer | e.g., `26` |
+| fishing_master_name | M | The full name of the fishing master recorded as first and last names | String | `John Doe` |
+| fishing_master_nationality | M | The nationality of the fishing master | **Code** from [Countries](#countries) | `FRA` |
+| skipper_captain_name | M | Name of the skipper or captain recorded as first and last names| String | `John Doe` |
+| skipper_captain_nationality | M | Nationality of the skipper or captain | **Code** from [Countries](#countries) | `FRA` |
+| crew_number | O | The number of crew onboard the vessel during the trip | Integer | `26` |
 :::
 
 # V-TRIP {#vTrip}
 
 This section of the form includes information about the overall fishing trip of the vessel.
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/PS` |
 
 ## Trip Details
 
@@ -231,18 +231,18 @@ This section of the form includes information about the overall fishing trip of 
 :::
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O | The country or EEZ from which the trip started | **Code** from [Countries](#countries) | e.g., `FRA` |
-| port | O | The port from which the trip started | **Code** from [Ports](#ports) | e.g., `REREU` |
-| latitude | M | The latitude from which the trip started, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
-| longitude | M | The longitude from which the trip started, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
+| country | O | The country or EEZ from which the trip started | **Code** from [Countries](#countries) | `FRA` |
+| port | O | The port from which the trip started | **Code** from [Ports](#ports) | `REREU` |
+| latitude | M | The latitude from which the trip started, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | `-20.8854` |
+| longitude | M | The longitude from which the trip started, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time the vessel departed from port in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| date_time_utc | M | The date and time the vessel departed from port in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | `2025-09-15T12:00Z` |
 :::
 
 | **Vessel return:** The name and/or geographical coordinates of the port where the vessel returned – also include the country. If the vessel arrived at a transhipment location record 'at-sea' plus the geographical coordinates corresponding to the location the transhipment started. If the observer disembarked before the vessel returned then record expected port of return as provided by the vessel
@@ -252,88 +252,88 @@ This section of the form includes information about the overall fishing trip of 
 :::
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| country | O |The country or EEZ from which the trip ended | **Code** from [Countries](#countries) | e.g., `FRA` |
-| port | O | The port from which the trip ended | **Code** from [Ports](#ports) | e.g., `REREU` |
-| latitude | M | The latitude from which the trip ended, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
-| longitude | M | The longitude from which the trip ended, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
+| country | O |The country or EEZ from which the trip ended | **Code** from [Countries](#countries) | `FRA` |
+| port | O | The port from which the trip ended | **Code** from [Ports](#ports) | `REREU` |
+| latitude | M | The latitude from which the trip ended, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | `-20.8854` |
+| longitude | M | The longitude from which the trip ended, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | `55.5312` |
 :::
 
 ::: {style="margin-left:40px"}
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and time (in Coordinated Universal Time, UTC) corresponding to the end of the vessel trip at the reported location | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| date_time_utc | M | The date and time (in Coordinated Universal Time, UTC) corresponding to the end of the vessel trip at the reported location | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | `2025-09-15T12:00Z` |
 :::
 
 # V-ATTRIBUTES {#vAttributes}
 
 This section of the form includes details on vessel attributes.
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/LL` |
 
 ## Vessel Attributes
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| gross_tonnage | O | Gross tonnage (GT), a dimensionless measure of vessel's internal volume from registration documents | Integer | e.g., `2319` |
-| loa_m | O | The vessel overall length (m) as specified in vessel registration documents | Floats | e.g., `84.1` |
-| hull_material | O | The primary material used in the construction of the vessel's hull | **Code** from [Hull Material Types](#hullMaterialTypes) | e.g., `AL` |
+| gross_tonnage | O | Gross tonnage (GT), a dimensionless measure of vessel's internal volume from registration documents | Integer | `2319` |
+| loa_m | O | The vessel overall length (m) as specified in vessel registration documents | Floats | `84.1` |
+| hull_material | O | The primary material used in the construction of the vessel's hull | **Code** from [Hull Material Types](#hullMaterialTypes) | `AL` |
 
 | **Main engines:** The make (brand) and power of the two main engines.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| make | O | The manufacturer or brand name of the vessel's engine, as specified in the official vessel registration or engine documentation | String | e.g., `MAN Energy Solutions`  |
-| power_value | O | The rated power output of the vessel's main engine as specified in the official vessel registration or engine documentation | Integer | e.g., `5000` |
-| power_unit | O | Rated output of the vessel's main engine, as specified in official registration or engine documentation in kilowatts (kW), horsepower (hp), or break horsepower (bhp) | String | e.g., `kW` |
+| make | O | The manufacturer or brand name of the vessel's engine, as specified in the official vessel registration or engine documentation | String | `MAN Energy Solutions`  |
+| power_value | O | The rated power output of the vessel's main engine as specified in the official vessel registration or engine documentation | Integer | `5000` |
+| power_unit | O | Rated output of the vessel's main engine, as specified in official registration or engine documentation in kilowatts (kW), horsepower (hp), or break horsepower (bhp) | String | `kW` |
 :::
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| fish_storage_capacity_m3 | O | Total volume of fish hold(s) (cubic metres; m^3^) | Float | e.g., `1100` |
+| fish_storage_capacity_m3 | O | Total volume of fish hold(s) (cubic metres; m^3^) | Float | `1100` |
 
 ::: {style="margin-left:40px"}
-| Element | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| preservation_method | O | The fish preservation methods used by the vessel to preserve the catch during the trip. Up to four preservation methods may be reported on the form | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | e.g., `BR` |
+| preservation_method | O | The fish preservation methods used by the vessel to preserve the catch during the trip. Up to four preservation methods may be reported on the form | **Code** from [Fish Preservation Methods](#fishPreservationMethods) | `BR` |
 ::: 
 
 ::: {style="margin-left:40px"}
-| Element | Requirement | Description | Format | Input value |
+| Element | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| storage_type | O | The type of structure(s) onboard used by the vessel to store its catch. Up to three storage types may be reported on the form. |  **Code** from [Fish Storage Types](#fishStorageTypes) | e.g., `BF` |
+| storage_type | O | The type of structure(s) onboard used by the vessel to store its catch. Up to three storage types may be reported on the form. |  **Code** from [Fish Storage Types](#fishStorageTypes) | `BF` |
 :::
 
 | **Autonomy range:** Vessel autonomy, expressed as the number of days a vessel can remain at sea without refuelling. If this information is not available, autonomy may be expressed as cruising distance (nm).
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| range_value | O | The vessel's operational endurance, expressed either as the maximum number of days it can remain at sea without resupply, or as the maximum distance it can cover (in nautical miles, nm) | Float | e.g., `30` |
-| range_unit  | O | The unit used to describe the value of autonomy range | days or nm | e.g., `days` |
+| range_value | O | The vessel's operational endurance, expressed either as the maximum number of days it can remain at sea without resupply, or as the maximum distance it can cover (in nautical miles, nm) | Float | `30` |
+| range_unit  | O | The unit used to describe the value of autonomy range | days or nm | `days` |
 :::
 
 ## Vessel Electronics
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| gnss | O | Indicates whether or not one or more Global Navigation Satellite System systems (GNSS) such as the US Global Positioning System (GPS) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
-| vms | O | Indicates whether or not one or more Vessel Monitoring Systems (VMS) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
-| ais | O | Indicates whether or not one or more Automatic Identification Systems (AIS) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
-| radars | O | Indicates whether or not one or more radars were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE`  |
-| track_plotter | O | Indicates whether or not one or more track plotters were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
-| depth_sounder | O | Indicates whether or not one or more depth sounders were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
-| sonar | O | Indicates whether one or more sonars were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
-| doppler_current_meter | O | Indicates whether one or more doppler current meters were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
-| xbt | O | Indicates whether or not one or more expendable bathythermographs (XBT) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
-| vhf_radios | O | Indicates whether or not one or more VHF radios were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
-| hf_radios | O | Indicates whether one or more HF radios were present or not on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
-| satcom | O | Indicate whether or not one or more satellite communication systems were present on the vessel | **Code** from [Logical Responses](#logicalResponses)  | e.g., `TRUE` |
-| fis | O | Indicates whether or not one or more Fisheries Information Services were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| gnss | O | Indicates whether or not one or more Global Navigation Satellite System systems (GNSS) such as the US Global Positioning System (GPS) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
+| vms | O | Indicates whether or not one or more Vessel Monitoring Systems (VMS) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
+| ais | O | Indicates whether or not one or more Automatic Identification Systems (AIS) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
+| radars | O | Indicates whether or not one or more radars were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `TRUE`  |
+| track_plotter | O | Indicates whether or not one or more track plotters were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
+| depth_sounder | O | Indicates whether or not one or more depth sounders were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
+| sonar | O | Indicates whether one or more sonars were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
+| doppler_current_meter | O | Indicates whether one or more doppler current meters were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `FALSE` |
+| xbt | O | Indicates whether or not one or more expendable bathythermographs (XBT) were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `FALSE` |
+| vhf_radios | O | Indicates whether or not one or more VHF radios were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
+| hf_radios | O | Indicates whether one or more HF radios were present or not on the vessel | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
+| satcom | O | Indicate whether or not one or more satellite communication systems were present on the vessel | **Code** from [Logical Responses](#logicalResponses)  | `TRUE` |
+| fis | O | Indicates whether or not one or more Fisheries Information Services were present on the vessel | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
 
 ## Waste Management Details
 
@@ -342,26 +342,26 @@ This section of the form includes details on vessel attributes.
 :::
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:-----------------|:------------:|:------------------------|:------------:|:------------:|
-| waste_management_category | O | The category of the waste produced by the vessel | **Code** from [Waste Categories](#wasteCategories) | e.g., `CP` |
-| waste_storage_disposal_method | O |	The method used to dispose of the waste | **Code** from [Storage / Disposal Methods](#storageDisposalMethods)| e.g., `AS` |
+| waste_management_category | O | The category of the waste produced by the vessel | **Code** from [Waste Categories](#wasteCategories) | `CP` |
+| waste_storage_disposal_method | O |	The method used to dispose of the waste | **Code** from [Storage / Disposal Methods](#storageDisposalMethods)| `AS` |
 :::
 
 # G-GENERAL {#gGeneral}
 
 This section of the reporting form describes the purse seine fishing gear present on the vessel.
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id  | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
+| observed_trip_id  | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/PS` |
 
 ## Special Equipment or Machinery
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| power_block | O | Indicates whether or not the vessel is equipped with this technology | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
-| purse_winch | O | Indicates whether or not the vessel is equipped with this technology | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
+| power_block | O | Indicates whether or not the vessel is equipped with this technology | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
+| purse_winch | O | Indicates whether or not the vessel is equipped with this technology | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
 
 ## General Gear Attributes
 
@@ -372,30 +372,30 @@ This section of the reporting form describes the purse seine fishing gear presen
 :::
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| value | O | The maximum length of the net according to the net specifications | Float | e.g., `2.5` |
-| unit | O | The unit of the net maximum length (m or km) | String | e.g., `km` |
+| value | O | The maximum length of the net according to the net specifications | Float | `2.5` |
+| unit | O | The unit of the net maximum length (m or km) | String | `km` |
 :::
 ::: {style="margin-left:40px"}
 | **Maximum depth:** The maximum vertical depth of the purse seine net, measured from the corkline (topline) to the leadline (bottom line) when the net is fully extended. This indicates the maximum fishing depth that the gear can reach under ideal conditions 
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| value | O | The maximum fishing depth according to the net specifications | Float | e.g., `150` |
-| unit | O | The unit of the net maximum depth (m or km) | String | e.g., `m` |
+| value | O | The maximum fishing depth according to the net specifications | Float | `150` |
+| unit | O | The unit of the net maximum depth (m or km) | String | `m` |
 :::
-| **Mesh size:** The stretched mesh size of the purse seine net, measured knot-to-knot when the mesh is pulled taut. This measurement represents the distance between opposing knots and indicates the size of the openings in the netting. Mesh size may vary between sections of the net (e.g., wings, mid-net, bunt) according to their function.
+| **Mesh size:** The stretched mesh size of the purse seine net, measured knot-to-knot when the mesh is pulled taut. This measurement represents the distance between opposing knots and indicates the size of the openings in the netting. Mesh size may vary between sections of the net (wings, mid-net, bunt) according to their function.
 
 ::: {style="margin-left:40px"}
 | **Bunt Stretched:** The stretched mesh size of the bunt section of the purse seine net, measured knot-to-knot when the mesh is pulled taut. This indicates the size of the openings in the bunt where fish are concentrated during hauling.
 :::
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| value | O | The numerical measurement of the bunt stretched mesh size | Float | e.g., `55` |
-| unit | O | The unit of the stretched mesh size of the bunt section (mm, cm or m) | String | e.g., `mm`  |
+| value | O | The numerical measurement of the bunt stretched mesh size | Float | `55` |
+| unit | O | The unit of the stretched mesh size of the bunt section (mm, cm or m) | String | `mm`  |
 :::
 ::: {style="margin-left:40px"}
 
@@ -403,17 +403,17 @@ This section of the reporting form describes the purse seine fishing gear presen
 :::
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| value | O | The average stretched mesh length of the mid-net (measured knot-to-knot). Usually calculated by measuring three consecutive meshes and taking the average | Float | e.g., `70` |
-| unit | O | The unit of measurement for the stretched mesh size of the mid-net section (mm, cm, or m) | String | e.g., `mm`  |
+| value | O | The average stretched mesh length of the mid-net (measured knot-to-knot). Usually calculated by measuring three consecutive meshes and taking the average | Float | `70` |
+| unit | O | The unit of measurement for the stretched mesh size of the mid-net section (mm, cm, or m) | String | `mm`  |
 :::
 
 **Maximum Brail Capacity**: the maximum brailing capacity for the purse seine net, where the brail is defined as the basket-shaped net used to lift the fish from the bunt of the purse seine into the vessel.
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| value_t | O | The maximum weight capacity of a full brail in metric tonnes (t) | Float | e.g., `7` |
+| value_t | O | The maximum weight capacity of a full brail in metric tonnes (t) | Float | `7` |
 
 # E-SET {#eSet}
 
@@ -421,65 +421,65 @@ This section describes details of each of the setting operations within the fish
 
 ## Setting Operations
 
-| Field | Requirement | Description | Reporting format | Input value |
+| Field | Requirement | Description | Reporting format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
-| set_id | M | The unique identifier for each set/operation conducted during the observed trip, e.g., a four-digit numerical code beginning with 0001 and assigned consecutively from the first to the last line set of the observed trip | Alphanumeric | e.g., `0007` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/PS` |
+| set_id | M | The unique identifier for each set/operation conducted during the observed trip, a four-digit numerical code beginning with 0001 and assigned consecutively from the first to the last line set of the observed trip | Alphanumeric | `0007` |
 
 | **Start setting:** Details on the start of setting operations.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | M | The date and the time the first dhan buoy and / or radio buoy is deployed to start the setting of the line in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
-| latitude | M | The latitude of the position at the start of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
-| longitude | M | The longitude of the position at the start of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adatped from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
+| date_time_utc | M | The date and the time the first dhan buoy and / or radio buoy is deployed to start the setting of the line in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | `2025-09-15T12:00Z` |
+| latitude | M | The latitude of the position at the start of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | `-20.8854` |
+| longitude | M | The longitude of the position at the start of the setting operation, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adatped from [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | `55.5312` |
 :::
 
 | **School Sighting Cues:** The visual or instrumental signs used to detect the presence of a tuna school before setting the net. These cues may include natural indicators such as bird activity, fish jumping or surface ripples, floating objects, discoloured water, or instrumental detections from sonar, echo sounders, or radars.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| cue | O | School sighting cues which lead the vessel to detect the presence of the tuna school. Up to four cues may be reported on the form | **Code** from [Sighting Cues](#sightingCues) | e.g., `AF` |
+| cue | O | School sighting cues which lead the vessel to detect the presence of the tuna school. Up to four cues may be reported on the form | **Code** from [Sighting Cues](#sightingCues) | `AF` |
 :::
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| school_types | M | The type of tuna school encountered | **Code** from [School Types](#schoolTypes) | e.g., `FS`  |
-| first_detection_method | O | The method by which the vessel first detected the tuna school, floating object, or bird aggregation. If multiple cues were observed, this field records the one that first prompted the vessel to change course | **Code** from [Detection Methods](#schoolDetectionMethods) | e.g., `AS` |
-| school_size_t | O | The estimation of the size of the tuna school being targeted (in tonnes) | Float | e.g., `60`  |
-| date_time_net_pursed_utc | O | The date and time when the net is fully pursed, i.e., all rings are up, in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| school_types | M | The type of tuna school encountered | **Code** from [School Types](#schoolTypes) | `FS`  |
+| first_detection_method | O | The method by which the vessel first detected the tuna school, floating object, or bird aggregation. If multiple cues were observed, this field records the one that first prompted the vessel to change course | **Code** from [Detection Methods](#schoolDetectionMethods) | `AS` |
+| school_size_t | O | The estimation of the size of the tuna school being targeted (in tonnes) | Float | `60`  |
+| date_time_net_pursed_utc | O | The date and time when the net is fully pursed, i.e., all rings are up, in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | `2025-09-15T12:00Z` |
 
 | **Brailing:** The operation of lifting fish from the bunt of a purse seine net into the vessel using a brail, a basket-shaped net. This concentrates the catch and transfers it on board for sorting and storage. 
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_start_utc | O | The date and time the brailing operation starts in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
-| date_time_end_utc | O | The date and time the brailing operation ends | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
+| date_time_start_utc | O | The date and time the brailing operation starts in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | `2025-09-15T12:00Z` |
+| date_time_end_utc | O | The date and time the brailing operation ends | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | `2025-09-15T12:00Z` |
 :::
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_skiff_onboard_utc | M | The date and time the skiff comes on board and the set is over in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
-| maximum_closing_net_depth_m | O | The real, measured, closed net depth in metres (m) | Float | e.g., `60` |
+| date_time_skiff_onboard_utc | M | The date and time the skiff comes on board and the set is over in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | `2025-09-15T12:00Z` |
+| maximum_closing_net_depth_m | O | The real, measured, closed net depth in metres (m) | Float | `60` |
 
 | **Object details** 
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| buoy_id | O | The unique identifier of the buoy, e.g., defined as the concatenation of the buoy model and buoy number | Alphanumeric | e.g., `ISD+295781` |
+| buoy_id | O | The unique identifier of the buoy, defined as the concatenation of the buoy model and buoy number | Alphanumeric | `ISD+295781` |
  
 ::: {style="margin-left:40px"}
 **FAD equipped with artificial lights** Characterises artificial lights on the DFAD.
 :::
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| at_deploy | O | Indicates whether or not artificial lights were present at this time | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
-| on_retrieval | O | Indicates whether or not artificial lights were present at this time | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
+| at_deploy | O | Indicates whether or not artificial lights were present at this time | **Code** from [Logical Responses](#logicalResponses) | `FALSE` |
+| on_retrieval | O | Indicates whether or not artificial lights were present at this time | **Code** from [Logical Responses](#logicalResponses) | `FALSE` |
 :::
 
 ::: {style="margin-left:40px"}
@@ -487,190 +487,190 @@ This section describes details of each of the setting operations within the fish
 :::
 
 ::: {style="margin-left:80px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| raft_design | O | The description of the materials and construction of the floating raft of a drifting FAD, e.g., ecological coverings or netting of specified mesh size) | **Code** from [FAD Raft Designs](#fadRaftDesigns) | e.g., `EM`  |
-| tail_design | O | The description of the construction and mesh size of the submerged appendage of a drifting FAD, e.g., net panels with specified stretched mesh size | **Code** from [FAD Tail Designs](#fadTailsDesigns) | e.g., `NL` |
+| raft_design | O | The description of the materials and construction of the floating raft of a drifting FAD, ecological coverings or netting of specified mesh size) | **Code** from [FAD Raft Designs](#fadRaftDesigns) | `EM`  |
+| tail_design | O | The description of the construction and mesh size of the submerged appendage of a drifting FAD, net panels with specified stretched mesh size | **Code** from [FAD Tail Designs](#fadTailsDesigns) | `NL` |
 :::
 
 # E-SET-CETACEANS {#eSetCetaceans}
 
 Within each purse seine fishing trip, this section outlines the cetacean sightings prior to and during each of the setting operations.
 
-| Field | Requirement | Description | Reporting format | Input value |
+| Field | Requirement | Description | Reporting format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id  | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
-| set_id | M | The parent set identifier | Alphanumeric | e.g., `0007` |
+| observed_trip_id  | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/PS` |
+| set_id | M | The parent set identifier | Alphanumeric | `0007` |
 
 ## Cetacean and Whale Shark Sightings During Setting
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| sighting_before_setting | M | Indicates whether or not a sighting occurred before setting | **Code** from [Logical Responses](#logicalResponses) | e.g., `TRUE` |
-| species | M | The species code for the sighted specimen/s | **Code** from [Cetacean Species](#speciesCetaceans) | e.g., `BAW` | 
-| number_sighted | M | The number of cetaceans sighted | Integer | e.g., `15` |
-| caught_inside_net | M | Indicates whether or not any individuals where caught inside the net | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE` |
+| sighting_before_setting | M | Indicates whether or not a sighting occurred before setting | **Code** from [Logical Responses](#logicalResponses) | `TRUE` |
+| species | M | The species code for the sighted specimen/s | **Code** from [Cetacean Species](#speciesCetaceans) | `BAW` | 
+| number_sighted | M | The number of cetaceans sighted | Integer | `15` |
+| caught_inside_net | M | Indicates whether or not any individuals where caught inside the net | **Code** from [Logical Responses](#logicalResponses) | `FALSE` |
 
 # E-SET-CATCHES {#eSetCatches}
 
 This section of the form is for reporting the details of the species-specific portion of the catch for each set.
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
-| set_id  | M | The parent set identifier | alphanumeric | e.g., `0007` | |
-| catch_id | M | The unique identifier of the species-specific part of the catch within a fishing set/operation | Alphanumeric | e.g., `A001` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/PS` |
+| set_id  | M | The parent set identifier | alphanumeric | `0007` | |
+| catch_id | M | The unique identifier of the species-specific part of the catch within a fishing set/operation | Alphanumeric | `A001` |
 
 ## Catch Details
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| species | M | The species code for the portion of catch observed | **Code** from [All Species](#allSpecies) | e.g., `ABL` | 
+| species | M | The species code for the portion of catch observed | **Code** from [All Species](#allSpecies) | `ABL` | 
 
 | **Fate:** The fate which includes whether it was retained or discarded and the reason.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:-------|:-----:|:-----------------------|:-------------:|:-------------:|
-| fate_type | M | The outcome of the catch, indicating whether a fish was retained on board or discarded | **Code** from [Types of Fate](#fateTypes) | e.g., `DI` |
-| fate | M | The final disposition of the catch or sampled portion of the catch, indicating whether it was retained on board or discarded, with specification of the reason where applicable | **Code** from [Fates](#fates) | e.g., `DL` |
+| fate_type | M | The outcome of the catch, indicating whether a fish was retained on board or discarded | **Code** from [Types of Fate](#fateTypes) | `DI` |
+| fate | M | The final disposition of the catch or sampled portion of the catch, indicating whether it was retained on board or discarded, with specification of the reason where applicable | **Code** from [Fates](#fates) | `DL` |
 :::
 
 ||||||
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| sampling_method | M | The method applied to derive the total catch from the samples collected during observation | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | e.g., `EP` |
+| sampling_method | M | The method applied to derive the total catch from the samples collected during observation | **Code** from [Sampling Methods for Catch Estimation](#samplingMethodsCatchEstimation) | `EP` |
 | number_of_fish | M | The numbers of individuals observed/caught by species and fate (including if recording at an individual animal level) | Integer | `183` |
 
 | **Weight:** The catch weight corresponding to the specified species and product type recorded in processing type. If the fish has not been processed, it corresponds to the unprocessed weight.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| processing_type | M | Form in which the fish is processed prior to storage | **Code** from [Fish Processing Types](#fishProcessingTypes) | e.g., `DR` |
-| value_kg | M | The value of fish weight expressed in kilograms (kg) | Float | e.g., `35` |
-| estimation_method | M | The method applied to derive the weight from the samples collected during observation | **Code** from [Total Catch Estimation](#totalCatchEstimation) | e.g., `EP` |
+| processing_type | M | Form in which the fish is processed prior to storage | **Code** from [Fish Processing Types](#fishProcessingTypes) | `DR` |
+| value_kg | M | The value of fish weight expressed in kilograms (kg) | Float | `35` |
+| estimation_method | M | The method applied to derive the weight from the samples collected during observation | **Code** from [Total Catch Estimation](#totalCatchEstimation) | `EP` |
 :::
 
 # E-SET-CATCH-SPECIMENS {#eSetCatchSpecimens}
 
 This section of the form is for the recording of biological information of the specimens sampled during individual sets.
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
-| set_id  | M | The parent set identifier | Alphanumeric | e.g., `0007` | |
-| catch_id | M | The parent species-specific catch component identifier | Alphanumeric  | e.g., `A001`|
-| specimen_id | M | The unique identifier for each individual specimen sampled or measured within a species-specific catch component, e.g., a four-digit numerical code assigned consecutively, beginning with 0001 | Alphanumeric | e.g., `0006`  |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/PS` |
+| set_id  | M | The parent set identifier | Alphanumeric | `0007` | |
+| catch_id | M | The parent species-specific catch component identifier | Alphanumeric  | `A001`|
+| specimen_id | M | The unique identifier for each individual specimen sampled or measured within a species-specific catch component, a four-digit numerical code assigned consecutively, beginning with 0001 | Alphanumeric | `0006`  |
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| sampling_method | M | The sampling method used for the collection of biometric information on specimens | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | e.g., `ES` |
+| sampling_method | M | The sampling method used for the collection of biometric information on specimens | **Code** from [Biological Sampling Method](#biologicalSamplingMethod) | `ES` |
 
 | **Length:** The specimen's individual length corresponding to the specified length type. Up to two length measurements may be reported on the form.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| length_type | M | The type of length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | e.g., `CF` |
-| length_value_cm | M | The value of length corresponding to the length type taken rounded to the lower centimetre | Float | e.g., `34` |
-| length_measuring_tool | M | The tool used for the measurement of the fish length | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | e.g., `CA`  |
-<!-- | is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | e.g., `Yes` | -->
+| length_type | M | The type of length used for the measurement | **Code** from [Length Measurements](#lengthMeasurements) | `CF` |
+| length_value_cm | M | The value of length corresponding to the length type taken rounded to the lower centimetre | Float | `34` |
+| length_measuring_tool | M | The tool used for the measurement of the fish length | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | `CA`  |
+<!-- | is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | `Yes` | -->
 :::
 
 | **Weight:** The specimen's weight corresponding to the specified product type recorded in 'weight code'. The specimen's individual weight corresponding to the specified specie and product type. Unprocessed weight when the fish has not been processed.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| weight_processing_type | O | The processing/dressing used for the weight measurement | **Code** from [Weight Measurements](#weightMeasurements)  | e.g., `GG` |
-| weight_value_kg | O | The weight corresponding to the weight measurement type code | Float | e.g., `43.2` |
-| weight_estimation_method | O | The method used to estimate the weight of the specimen | **Code** from [Weight Measurement Tools](#weightMeasurementTools) | e.g., `BR` |
+| weight_processing_type | O | The processing/dressing used for the weight measurement | **Code** from [Weight Measurements](#weightMeasurements)  | `GG` |
+| weight_value_kg | O | The weight corresponding to the weight measurement type code | Float | `43.2` |
+| weight_estimation_method | O | The method used to estimate the weight of the specimen | **Code** from [Weight Measurement Tools](#weightMeasurementTools) | `BR` |
 :::
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Sex | O | The sex of the sampled fish specimen | **Code** from [Sex](#sex) | e.g., `F` |
+| Sex | O | The sex of the sampled fish specimen | **Code** from [Sex](#sex) | `F` |
 
 | **Maturity:** The stage of maturity of the specimen according to standard maturity scales approved by the IOTC.
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| maturity_scale | O | The standardised system used to classify the reproductive development of fish (i.e., source) | String | e.g., `ICCAT` |
-| maturity_stage | O | The reproductive stage of a fish determined through visual inspection of the gonads without the aid of a microscope | **Code** from [Maturity Stages](#maturityStages) | e.g., `DEV` | 
+| maturity_scale | O | The standardised system used to classify the reproductive development of fish (i.e., source) | String | `ICCAT` |
+| maturity_stage | O | The reproductive stage of a fish determined through visual inspection of the gonads without the aid of a microscope | **Code** from [Maturity Stages](#maturityStages) | `DEV` | 
 :::
 
-| **Sample collected:** Details on the collection of samples: a) type (e.g., otoliths, spine clippings, and genetic samples), b) preservation method (e.g., alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored).
+| **Sample collected:** Details on the collection of samples: a) type (otoliths, spine clippings, and genetic samples), b) preservation method (alcohol, frozen, etc.), c) destination (i.e., location to be sent/stored).
 
 ::: {style="margin-left:40px"}
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| sample_type | O | The type of sample collected by the observer | **Code** from [Sampling Type](#samplingMethodsForSamplingCollections) | e.g., `WM`|
-| sample_preservation_method | O | The type of preservation method used to preserve the sample collected by the observer | **Code** from [Sample Preservation Method](#samplePreservationMethods) | e.g., `FR20` |
-| sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | e.g., `University of Tasmania` |
+| sample_type | O | The type of sample collected by the observer | **Code** from [Sampling Type](#samplingMethodsForSamplingCollections) | `WM`|
+| sample_preservation_method | O | The type of preservation method used to preserve the sample collected by the observer | **Code** from [Sample Preservation Method](#samplePreservationMethods) | `FR20` |
+| sample_destination | O | Destination of the collected sample after the trip (institution or lab of analysis) | Free entry | `University of Tasmania` |
 :::
 
 # E-SET-CATCH-SPECIMENS-SSI {#eSetCatchSpecimensSSI}
 
 This section of the form includes information about Species of Special Interest ([SSI](https://data.iotc.org/reference/latest/domain/biology/#SSIspecies)) sampled in selected sets.
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` |
-| set_id | M | The parent set identifier | Alphanumeric | e.g., `0004` |
-| catch_id | M | The parent species-specific catch component identifier | Alphanumeric  | e.g., `0004#1` |
-| specimen_id | M | The parent specimen identifier | Alphanumeric | e.g., `01` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/LL` |
+| set_id | M | The parent set identifier | Alphanumeric | `0004` |
+| catch_id | M | The parent species-specific catch component identifier | Alphanumeric  | `0004#1` |
+| specimen_id | M | The parent specimen identifier | Alphanumeric | `01` |
 
 ## Specimen details SSI
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| condition_at_capture | M | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
-| condition_at_release | M | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | e.g., `A0` |
-| gear_interaction | M | The type of interaction of the specimen with the fishing gear | **Code** from [Gear Interactions](#gearInteractions) | e.g., `EF` |
-| brought_onboard | O | Indicates if the specimen was brought on board | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE`  |
-| handling_method | O | Details how the specimen was brought on-board | **Code** from [Handling Methods](#handlingMethods) | e.g., `AN` |
-| revival | O | Indicates whether or not the release took place with resuscitation for turtles | **Code** from [Logical Responses](#logicalResponses) | e.g., `FALSE`  |
-| photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric | e.g., `Doe_Hawwa_20260302_1435_hawksbill.png` |
+| condition_at_capture | M | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions) | `A0` |
+| condition_at_release | M | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | `A0` |
+| gear_interaction | M | The type of interaction of the specimen with the fishing gear | **Code** from [Gear Interactions](#gearInteractions) | `EF` |
+| brought_onboard | O | Indicates if the specimen was brought on board | **Code** from [Logical Responses](#logicalResponses) | `FALSE`  |
+| handling_method | O | Details how the specimen was brought on-board | **Code** from [Handling Methods](#handlingMethods) | `AN` |
+| revival | O | Indicates whether or not the release took place with resuscitation for turtles | **Code** from [Logical Responses](#logicalResponses) | `FALSE`  |
+| photo_id | O | The unique identifier of the photo taken of a specimen | Alphanumeric | `Doe_Hawwa_20260302_1435_hawksbill.png` |
 
 # E-SET-TAG-DETAILS {#eSetTagDetails}
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/LL` | 
-| set_id | M | The parent set identifier | Alphanumeric | e.g., `0023` |
-| catch_id | M | The parent species-specific catch component identifier | Alphanumeric | e.g., `0023#1` |
-| specimen_id | M | The parent specimen identifier | Alphanumeric| e.g., `02` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/LL` | 
+| set_id | M | The parent set identifier | Alphanumeric | `0023` |
+| catch_id | M | The parent species-specific catch component identifier | Alphanumeric | `0023#1` |
+| specimen_id | M | The parent specimen identifier | Alphanumeric| `02` |
 
 ## Tag details
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| release | O | Indicates whether or not the individual was re-released with a tag attached | **Code** from [Logical Responses](#logicalResponses) | e.g., `NAPP` |
-| recovery | O | Indicates whether or not the individual was recovered with a tag attached | **Code** from [Logical Responses](#logicalResponses)  | e.g., `TRUE` |
-| type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | e.g., `CP` |
-| tag_id_1 | O | The tag identifier(s) | Alphanumeric | e.g., `AA19051` |
-| tag_id_2 | O | The tag identifier(s) | Alphanumeric | e.g., `AA19052` |
-| finder_name | O | The full name of the person who found the tag | String | e.g., `Jane Doe` |
-| finder_contact_details | O | The contact details of the person who found the tag | String | e.g., `jane.doe@fishing.org` |
-| well | O | The well number from which the tagged fish has been recovered, if the fish is recovered during shifting, transhipping or unloading | String | e.g., `3ST` |
+| release | O | Indicates whether or not the individual was re-released with a tag attached | **Code** from [Logical Responses](#logicalResponses) | `NAPP` |
+| recovery | O | Indicates whether or not the individual was recovered with a tag attached | **Code** from [Logical Responses](#logicalResponses)  | `TRUE` |
+| type | O | The type of tag used | **Code** from [Tag Types](#tagTypes) | `CP` |
+| tag_id_1 | O | The tag identifier(s) | Alphanumeric | `AA19051` |
+| tag_id_2 | O | The tag identifier(s) | Alphanumeric | `AA19052` |
+| finder_name | O | The full name of the person who found the tag | String | `Jane Doe` |
+| finder_contact_details | O | The contact details of the person who found the tag | String | `jane.doe@fishing.org` |
+| well | O | The well number from which the tagged fish has been recovered, if the fish is recovered during shifting, transhipping or unloading | String | `3ST` |
 
 # D-ACTIVITIES {#dailyActivities}
 
 This section of the reporting form describes the activities conducted throughout the fishing trip.
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | e.g., `2024-01-23/IOTC001/IOTC012345/PS` |
+| observed_trip_id | M | The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTC001/IOTC012345/PS` |
 
 ## Daily activities
 
-| Field | Requirement | Description | Format | Input value |
+| Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| date_time_utc | O | The date and time of the activity in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | e.g., `2025-09-15T12:00Z` |
-| latitude | O | The latitude of the activity position, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from  [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | e.g., `-20.8854` |
-| longitude | O| The longitude of the activity position, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from  [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | e.g., `55.5312` |
-| activity_type | O | The vessel activity at the start of every fishing activity and every two hours from sunrise to sunset | **Code** from [Surface Fishery Activities](#surfaceFisheryActivities) | e.g., `BA` |
+| date_time_utc | O | The date and time of the activity in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MMZ] | `2025-09-15T12:00Z` |
+| latitude | O | The latitude of the activity position, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from  [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | `-20.8854` |
+| longitude | O| The longitude of the activity position, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | adapted from  [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | `55.5312` |
+| activity_type | O | The vessel activity at the start of every fishing activity and every two hours from sunrise to sunset | **Code** from [Surface Fishery Activities](#surfaceFisheryActivities) | `BA` |
 | comments | O | An open field for additional notes or observations that are not captured in other sections of the form. This may include unusual events, clarifications, or any relevant information the observer wishes to provide | String | `free text` |
 
 # Reporting deadlines
@@ -681,7 +681,7 @@ This section of the reporting form describes the activities conducted throughout
 
 ## Entities {#entities}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/admin/#entities)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities)
 -   **Version**: `r version_number("ENTITIES")`
 -   **Last update**: `r last_update("ENTITIES")`
 
@@ -691,7 +691,7 @@ out_dt(ENTITIES, "ENTITIES")
 
 ## Countries {#countries}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/admin/#countries)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries)
 -   **Version**: `r version_number("COUNTRIES")`
 -   **Last update**: `r last_update("COUNTRIES")`
 
@@ -701,7 +701,7 @@ out_dt(COUNTRIES, "COUNTRIES")
 
 ## Sources of data {#dataSource}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/data/#sourcesRO)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#sourcesRO)
 -   **Version**: `r version_number("DATA_SOURCES_RO")`
 -   **Last update**: `r last_update("DATA_SOURCES_RO")`
 
@@ -713,7 +713,7 @@ out_dt(DATA_SOURCES_RO, "DATA_SOURCES_RO")
 
 ## Ports {#ports}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/admin/#Ports)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#ports)
 -   **Version**: `r version_number("PORTS")`
 -   **Last update**: `r last_update("PORTS")`
 
@@ -723,7 +723,7 @@ out_dt(PORTS[, -c("POINT")], "PORTS")
 
 ## Reasons for Days Lost {#reasonsDaysLost}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#reasonsDaysLost)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#reasonsDaysLost)
 -   **Version**: `r version_number("REASONS_DAYS_LOST")`
 -   **Last update**: `r last_update("REASONS_DAYS_LOST")`
 
@@ -733,7 +733,7 @@ out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
 
 ## Target Species {#targetSpecies}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#targetSpecies)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#targetSpecies)
 -   **Version**: `r version_number("TARGET_SPECIES")`
 -   **Last update**: `r last_update("TARGET_SPECIES")`
 
@@ -743,7 +743,7 @@ out_dt(TARGET_SPECIES, "TARGET_SPECIES")
 
 ## Fishing Gears {#fishingGear}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#gears)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#gears)
 -   **Version**: `r version_number("GEARS")`
 -   **Last update**: `r last_update("GEARS")`
 
@@ -753,7 +753,7 @@ out_dt(GEARS, "GEARS")
 
 ## Hull Material Types {#hullMaterialTypes}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#hullMaterialTypes)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#hullMaterialTypes)
 -   **Version**: `r version_number("HULL_MATERIAL_TYPES")`
 -   **Last update**: `r last_update("HULL_MATERIAL_TYPES")`
 
@@ -763,7 +763,7 @@ out_dt(HULL_MATERIAL_TYPES, "HULL_MATERIAL_TYPES")
 
 ## Fish Preservation Methods {#fishPreservationMethods}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishPreservationMethods)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fishPreservationMethods)
 -   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
 -   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
 
@@ -773,7 +773,7 @@ out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
 
 ## Fish Storage Types {#fishStorageTypes}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fishStorageTypes)
 -   **Version**: `r version_number("FISH_STORAGE_TYPES")`
 -   **Last update**: `r last_update("FISH_STORAGE_TYPES")`
 
@@ -783,7 +783,7 @@ out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
 
 ## Logical Responses {#logicalResponses}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/data/#logicalResponses)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses)
 -   **Version**: `r version_number("LOGICAL_RESPONSES")`
 -   **Last update**: `r last_update("LOGICAL_RESPONSES")`
 
@@ -793,7 +793,7 @@ out_dt(LOGICAL_RESPONSES, "LOGICAL_RESPONSES")
 
 ## Waste Categories {#wasteCategories}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#wasteCategories)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#wasteCategories)
 -   **Version**: `r version_number("WASTE_CATEGORIES")`
 -   **Last update**: `r last_update("WASTE_CATEGORIES")`
 
@@ -803,7 +803,7 @@ out_dt(WASTE_CATEGORIES, "WASTE_CATEGORIES")
 
 ## Storage/Disposal Methods {#storageDisposalMethods}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#wasteDisposalMethods)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#wasteDisposalMethods)
 -   **Version**: `r version_number("WASTE_DISPOSAL_METHODS")`
 -   **Last update**: `r last_update("WASTE_DISPOSAL_METHODS")`
 
@@ -813,7 +813,7 @@ out_dt(WASTE_DISPOSAL_METHODS, "WASTE_DISPOSAL_METHODS")
 
 ## Sighting Cues {#sightingCues}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#schoolSightingCues)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#schoolSightingCues)
 -   **Version**: `r version_number("SCHOOL_SIGHTING_CUES")`
 -   **Last update**: `r last_update("SCHOOL_SIGHTING_CUES")`
 
@@ -823,7 +823,7 @@ out_dt(SCHOOL_SIGHTING_CUES, "SCHOOL_SIGHTING_CUES")
 
 ## School Types {#schoolTypes}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#schoolTypeCategories)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#schoolTypeCategories)
 -   **Version**: `r version_number("SCHOOL_TYPE_CATEGORIES")`
 -   **Last update**: `r last_update("SCHOOL_TYPE_CATEGORIES")`
 
@@ -833,7 +833,7 @@ out_dt(SCHOOL_TYPE_CATEGORIES, "SCHOOL_TYPE_CATEGORIES")
 
 ## Detection Methods {#schoolDetectionMethods}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#schoolDetectionMethods)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#schoolDetectionMethods)
 -   **Version**: `r version_number("SCHOOL_DETECTION_METHODS")`
 -   **Last update**: `r last_update("SCHOOL_DETECTION_METHODS")`
 
@@ -843,7 +843,7 @@ out_dt(SCHOOL_DETECTION_METHODS, "SCHOOL_DETECTION_METHODS")
 
 ## FAD Raft Designs {#fadRaftDesigns}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#FADraftDesigns)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#FADraftDesigns)
 -   **Version**: `r version_number("FAD_RAFT_DESIGNS")`
 -   **Last update**: `r last_update("FAD_RAFT_DESIGNS")`
 
@@ -853,7 +853,7 @@ out_dt(FAD_RAFT_DESIGNS, "FAD_RAFT_DESIGNS")
 
 ## FAD Tail Designs {#fadTailDesigns}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#FADtailDesigns)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#FADtailDesigns)
 -   **Version**: `r version_number("FAD_TAIL_DESIGNS")`
 -   **Last update**: `r last_update("FAD_TAIL_DESIGNS")`
 
@@ -863,7 +863,7 @@ out_dt(FAD_TAIL_DESIGNS, "FAD_TAIL_DESIGNS")
 
 ## Cetacean Species {#speciesCetaceans}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#cetaceans)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#cetaceans)
 -   **Version**: `r version_number("SPECIES_CETACEANS")`
 -   **Last update**: `r last_update("SPECIES_CETACEANS")`
 
@@ -873,7 +873,7 @@ out_dt(SPECIES_CETACEANS, "SPECIES_CETACEANS")
 
 ## All Species {#allSpecies}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#allSpecies)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies)
 -   **Version**: `r version_number("SPECIES")`
 -   **Last update**: `r last_update("SPECIES")`
 
@@ -883,7 +883,7 @@ out_dt(SPECIES, "SPECIES")
 
 ## Types of Fate {#fateTypes}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#typesOfFate)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#typesOfFate)
 -   **Version**: `r version_number("TYPES_OF_FATE")`
 -   **Last update**: `r last_update("TYPES_OF_FATE")`
 
@@ -893,7 +893,7 @@ out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
 
 ## Fates {#fates}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#fates)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#fates)
 -   **Version**: `r version_number("FATES")`
 -   **Last update**: `r last_update("FATES")`
 
@@ -903,7 +903,7 @@ out_dt(FATES, "FATES")
 
 ## Sampling Method for Catch Estimation {#samplingMethodCatchEstimation}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForCatchEstimation)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#samplingMethodsForCatchEstimation)
 -   **Version**: `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
 -   **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
 
@@ -913,7 +913,7 @@ out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMA
 
 ## Sample Preservation Methods {#samplePreservationMethods}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplePreservationMethods)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#samplePreservationMethods)
 -   **Version**: `r version_number("SAMPLE_PRESERVATION_METHODS")`
 -   **Last update**: `r last_update("SAMPLE_PRESERVATION_METHODS")`
 
@@ -923,7 +923,7 @@ out_dt(SAMPLE_PRESERVATION_METHODS, "SAMPLE_PRESERVATION_METHODS")
 
 ## Fish Processing Types {#fishProcessingTypes}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishProcessingTypes)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fishProcessingTypes)
 -   **Version**: `r version_number("FISH_PROCESSING_TYPES")`
 -   **Last update**: `r last_update("FISH_PROCESSING_TYPES")`
 
@@ -933,7 +933,7 @@ out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
 
 ## Total Catch Estimation {#totalCatchEstimation}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForCatchEstimation)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#samplingMethodsForCatchEstimation)
 -   **Version**: `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
 -   **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
 
@@ -943,7 +943,7 @@ out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMA
 
 ## Biological Sampling Method {#biologicalSamplingMethod}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForSamplingCollection)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#samplingMethodsForSamplingCollection)
 -   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
 -   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
 
@@ -953,7 +953,7 @@ out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING
 
 ## Length Measurements {#lengthMeasurements}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#lengthMeasurements)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#lengthMeasurements)
 -   **Version**: `r version_number("LENGTH_MEASUREMENTS")`
 -   **Last update**: `r last_update("LENGTH_MEASUREMENTS")`
 
@@ -973,7 +973,7 @@ out_dt(LENGTH_MEASUREMENT_TOOLS, "LENGTH_MEASUREMENT_TOOLS")
 
 ## Weight Measurements {#weightMeasurements}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightMeasurements)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#weightMeasurements)
 -   **Version**: `r version_number("WEIGHT_MEASUREMENTS")`
 -   **Last update**: `r last_update("WEIGHT_MEASUREMENTS")`
 
@@ -983,7 +983,7 @@ out_dt(WEIGHT_MEASUREMENTS, "WEIGHT_MEASUREMENTS")
 
 ## Weight Estimation Methods {#weightMeasurementTools}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#weightMeasurementTools)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#weightMeasurementTools)
 -   **Version**: `r version_number("MEASUREMENT_TOOLS")`
 -   **Last update**: `r last_update("MEASUREMENTS_TOOLS")`
 
@@ -993,7 +993,7 @@ out_dt(WEIGHT_MEASUREMENT_TOOLS, "WEIGHT_MEASUREMENT_TOOLS")
 
 ## Sex {#sex}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#sex)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#sex)
 -   **Version**: `r version_number("SEX")`
 -   **Last update**: `r last_update("SEX")`
 
@@ -1003,7 +1003,7 @@ out_dt(SEX, "SEX")
 
 ## Maturity Stages {#maturityStages}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#Maturity_Stages)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#Maturity_Stages)
 -   **Version**: `r version_number("MATURIY_STAGES")`
 -   **Last update**: `r last_update("MATURITY_STAGES")`
 
@@ -1013,7 +1013,7 @@ out_dt(MATURITY_STAGES, "MATURITY_STAGES")
 
 ## Sampling Type {#samplingMethodsForSamplingCollections}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#samplingMethodsForSamplingCollection)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#samplingMethodsForSamplingCollection)
 -   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
 -   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
 
@@ -1023,7 +1023,7 @@ out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING
 
 ## Depredation Sources {#depredationSources}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#depredationSources)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#depredationSources)
 -   **Version**: `r version_number("DEPREDATION_SOURCES")`
 -   **Last update**: `r last_update("DEPREDATION_SOURCES")`
 
@@ -1033,7 +1033,7 @@ out_dt(DEPREDATION_SOURCES, "DEPREDATION_SOURCES")
 
 ## Predator Species {#predatorSpecies}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#predators)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#predators)
 -   **Version**: `r version_number("SPECIES_PREDATORS")`
 -   **Last update**: `r last_update("SPECIES_PREDATORS")`
 
@@ -1043,7 +1043,7 @@ out_dt(SPECIES_PREDATORS, "SPECIES_PREDATORS")
 
 ## Individual Conditions {#individualConditions}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#individualConditions)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#individualConditions)
 -   **Version**: `r version_number("INDIVIDUAL_CONDITIONS")`
 -   **Last update**: `r last_update("INDIVIDUAL_CONDITIONS")`
 
@@ -1053,7 +1053,7 @@ out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
 
 ## Gear Interactions {#gearInteractions}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#gearInteractions)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#gearInteractions)
 -   **Version**: `r version_number("GEAR_INTERACTIONS")`
 -   **Last update**: `r last_update("GEAR_INTERACTIONS")`
 
@@ -1063,7 +1063,7 @@ out_dt(GEAR_INTERACTIONS, "GEAR_INTERACTIONS")
 
 ## Handling Methods {#handlingMethods}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#handlingMethods)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#handlingMethods)
 -   **Version**: `r version_number("HANDLING_METHODS")`
 -   **Last update**: `r last_update("HANDLING_METHODS")`
 
@@ -1073,7 +1073,7 @@ out_dt(HANDLING_METHODS, "HANDLING_METHODS")
 
 ## Tag Types {#tagTypes}
 
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/#tagTypes)
+-   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#tagTypes)
 -   **Version**: `r version_number("TAG_TYPES")`
 -   **Last update**: `r last_update("TAG_TYPES")`
 
