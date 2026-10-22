@@ -1,70 +1,58 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 3CE (v`r DOI_VERSION`)"
-author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
-output:
-  html_document2:
-    css: "../templates/fao_template_simplified.css"
-    mathjax: null
-    includes: 
-      in_header: "../templates/google-analytics.html"
-    number_sections: FALSE
-    toc: yes
-    toc_float:
-      collapsed: FALSE
-    smooth_scroll: FALSE
+title: "IOTC Statistical Data Reporting: Form 3CE"
 ---
   
-# Description
+## Description
   
 This form provides for the reporting of estimates of geo-referenced species-specific catches and efforts by fishing fleet, fishery, and space and time strata.
 
 Click [here](./Form-3CE.xlsx) to download a blank version of Form 3CE, or [return](./index.html) to the list of all new versions of the IOTC statistical data reporting forms. The form allows reporting updated data for multiple fisheries simultaneously.
 
-# Data Content
+## Data Content
 
 Total number and/or live weight of retained catches by species and effort by stratum, along with information on the value (%) and type of sampling coverage used for the estimations by month, year, fleet, fishery, raising status, and fishing area.
 
-# Stratification
+## Stratification
 
-## General Information
+### General Information
 
-| Element | Requirement | Description | Format | Example value  |
+| Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | `1996` |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | `EUR` | 
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) | `FRA` | 
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](https://data.iotc.org/reference/latest/domain/admin/index.html#entities) | `EUR` | 
+| Flag state | M | Country in which a fishery vessel is registered and whose flag it is entitled to fly | **Code** from [Countries](https://data.iotc.org/reference/latest/domain/admin/index.html#countries) | `FRA` | 
 
-## Main Data Elements
-
-| Element | Requirement | Description | Format | Example value |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| Month | M | Month of fishing activities | Integer | `7` |
-| Fishery | M | [IOTC fishery](../guidelines/#Fisheries) derived from the combination of several factors | **Code** from [Fisheries](#fisheries) | `PS-DF[IN]TR` | 
-| Grid | M | Fishing area | **Code** from [Grid codes](#fishingArea) | `6100040` | 
-| Species | M | Species caught and retained | **Code** from [Species](#allSpecies) | `YFT` | 
-| Catch unit | M | Units used to report the level of catches of a given species | **Code** from [Catch units](#catchUnits) | `T` |
-
-## Original Data
+### Main Data Elements
 
 | Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Estimation | M | Indicates whether the data were estimated or actual recorded data | **Code** from [Types of estimations](#estimations) | `AV` | 
-| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) | `FI` |
-| Original data source | M | Source of information | **Code** from [Catch and effort data sources](#dataSourcesCE) | `LG` | 
-| Original data processing | M | Processing applied to the data | **Code** from [Catch and effort data processings](#dataProcessingsCE) | `SB` |
-| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#dataRaising) | `RT` |
-| source coverage type | M | Variable used for data coverage | **Code** from [Types of coverage](#coverageTypes) | `FW` |
+| Month | M | Month of fishing activities | Integer (1--12) | `7` |
+| Fishery | M | [IOTC fishery](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Fisheries) used to define fishing practices, which emerge from the combination of fishery purposes, area of operation, fishing vessels' size, gear and gear configuration, and target species | **Code** from [Fisheries](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fisheries) | `PS-DF[IN]TR` | 
+| Grid | M | Fishing area | **Code** from [Grid codes](https://data.iotc.org/reference/latest/domain/admin/index.html#IOTCgridsCESFAR) | `6100040` | 
+| Species | M | Species caught and retained | **Code** from [Species](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies) | `YFT` | 
+| Catch unit | M | Units used to report the level of catches of a given species | **Code** from [Catch units](https://data.iotc.org/reference/latest/domain/fisheries/index.html#catchUnits) | `T` |
+
+### Original Data
+
+| Element | Requirement | Description | Format | Example value |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Estimation | M | Indicates whether the reported data are available or have been derived using a substitution scheme, or whether this information is unknown| **Code** from [Types of estimations](https://data.iotc.org/reference/latest/domain/data/index.html#estimations) | `AV` | 
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](https://data.iotc.org/reference/latest/domain/data/index.html#types) | `FI` |
+| Original data source | M | Source of information | **Code** from [Catch and effort data sources](https://data.iotc.org/reference/latest/domain/data/index.html#sourcesCE) | `LG` | 
+| Original data processing | M | Processing applied to the data | **Code** from [Catch and effort data processings](https://data.iotc.org/reference/latest/domain/data/index.html#processingsCE) | `SB` |
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](https://data.iotc.org/reference/latest/domain/data/index.html#raisings) | `RT` |
+| source coverage type | M | Variable used for data coverage | **Code** from [Types of coverage](https://data.iotc.org/reference/latest/domain/data/index.html#coverageTypes) | `FW` |
 | Source coverage value | M | Value of coverage | Numeric with two decimal places | `0.23` |
 
-## Effort Units
+### Effort Units
 
-| Element | Requirement | Description | Format | Example value  |
+| Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Primary   | M | Primary effort unit | **Code** from [Effort units](#effortUnits) | `FH` | 
-| Secondary | O | Secondary effort unit (if any) | **Code** from [Effort units](#effortUnits) | `NS` |
-| Tertiary  | O | Tertiary effort unit (if any) | **Code** from [Effort units](#effortUnits) | `SR` |
+| Primary   | M | Primary effort unit | **Code** from [Effort units](https://data.iotc.org/reference/latest/domain/fisheries/index.html#effortUnits) | `FH` | 
+| Secondary | O | Secondary effort unit (if any) | **Code** from [Effort units](https://data.iotc.org/reference/latest/domain/fisheries/index.html#effortUnits) | `NS` |
+| Tertiary  | O | Tertiary effort unit (if any) | **Code** from [Effort units](https://data.iotc.org/reference/latest/domain/fisheries/index.html#effortUnits) | `SR` |
 
-# Reporting Metadata
+## Reporting Metadata
 
 | Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
@@ -75,15 +63,15 @@ Total number and/or live weight of retained catches by species and effort by str
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-03-27` |
 | Submission date | M | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1997-03-21` |
 
-# Reporting Deadlines
+## Reporting Deadlines
 
 -   **Longline fisheries**: 30 June (preliminary), 30 December (final)
 -   **Surface fisheries**: 30 June (final)
 -   **Coastal fisheries**: 30 June (final)
 
-# Additional Information
+## Additional Information
 
-## Effort Units Recommended By Gear Group
+### Effort Units Recommended By Gear Group
 
 Estimates of fishing effort shall be expressed in units consistent with the recording requirements established by relevant IOTC Conservation and Management Measures and shall be complemented by the number of [fishing operations/sets](https://data.iotc.org/reference/latest/guidelines/stats/index.html#fishingOperation) for [longline fisheries](https://data.iotc.org/reference/latest/guidelines/stats/index.html/#iotcLonglineFishery) and [surface fisheries](https://data.iotc.org/reference/latest/guidelines/stats/index.html#iotcSurfaceFishery).
 
@@ -91,7 +79,7 @@ For most gears (purse seine, longline, gillnet, handline), a fishing operation c
 
 For coastal fisheries, it is recommended that effort data be submitted using the same effort units as those prescribed for longline and surface fisheries characterised by the same fishing gear.
 
-## Standard Effort Units by Gear Group
+### Standard Effort Units by Gear Group
 
 | Gear group | Primary effort | Secondary effort | 
 | :------------ | :-------------------- | :------------------- |
@@ -102,7 +90,7 @@ Other gears (OT)     | Number of days at sea    | Number of active gears or fish
 Pole-and-lines (PL)  | Number of fishing days   | Number of fishing operations/sets |
 Purse seines (PS)    | Number of fishing hours  | Number of fishing operations/sets |
 
-## Additional Effort Indicators
+### Additional Effort Indicators
 
 Additional units may be considered to refine and standardise the estimation of nominal fishing effort:
 
@@ -114,150 +102,18 @@ iii. In longline fisheries that use trap line loops as terminal gear devices (la
 
 iv. In purse seine fisheries, the numbers of successful and null fishing operations, searching time, and surface area explored may complement the information provided by fishing time and the total number of fishing sets. 
 
-## Units Not Recommended
+### Units Not Recommended
 
 From a general perspective, the use of trips as a unit of effort is not recommended, as trip duration may vary widely due to vessel size, fishing success, environmental conditions, or operational constraints (fuel availability).
 
 Similarly, fishing events may not accurately reflect the level of effort exerted in pole-and-line fisheries where the number of poles operated simultaneously varies between events. For this reason, the fishing operation/set remains the preferred standardised unit for effort reporting wherever feasible.
 
-## Other Dimensions
+### Other Dimensions
 
 The spatial and temporal resolutions, catch units, and level of extrapolation vary according to the fishery category.
 
 | Category | Temporal resolution | Spatial resolution | Catch unit | Extrapolation | 
 | :-------- | :--------- | :---------- | :------------- | :-------: |
-[Surface fisheries](https://data.iotc.org/reference/latest/guidelines/stats/index.html#iotcSurfaceFishery)  | Month | [1° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/index.html#IOgrids1x1) | Live weight equivalent | M |
+[Surface fisheries](https://data.iotc.org/reference/latest/guidelines/stats/index.html#iotcSurfaceFishery) | Month | [1° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/index.html#IOgrids1x1) | Live weight equivalent | M |
 [Longline fisheries](https://data.iotc.org/reference/latest/guidelines/stats/index.html#iotcLonglineFishery) | Month or finer for the SC | [5° grid area](https://data.iotc.org/reference/1.0.0/domain/admin/stats/index.html#IOgrids5x5) or finer for the SC | Numbers or live weight equivalent | M |
 [Coastal fisheries](https://data.iotc.org/reference/latest/guidelines/stats/index.html#iotcCoastalFishery) | Year or finer | [Irregular areas](https://data.iotc.org/reference/latest/domain/admin/index.html#IOTCareasAR) | Numbers or live weight equivalent | O |
-
-# Reference Code Lists
-
-## Entities {#entities}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities)
-+ **Version:** `r version_number("ENTITIES")`
-+ **Last updated**: `r last_update("ENTITIES")`
-
-```{r collapse = TRUE}
-out_dt(ENTITIES, "ENTITIES")
-```
-
-## Countries {#countries}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries)
-+ **Version:** `r version_number("COUNTRIES")`
-+ **Last updated**: `r last_update("COUNTRIES")`
-
-```{r collapse = TRUE}
-out_dt(COUNTRIES, "COUNTRIES")
-```
-
-## Fisheries {#fisheries}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fisheries)
-+ **Version:** `r version_number("FISHERIES")`
-+ **Last updated**: `r last_update("FISHERIES")`
-
-```{r collapse = TRUE}
-out_dt(FISHERIES, "FISHERIES")
-```
-
-## Fishing Areas {#fishingArea}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#IOTCgridsCESFAR)
-+ **Version:** `r version_number("IOTC_GRIDS_CE_SF_AR")`
-+ **Last updated**: `r last_update("IOTC_GRIDS_CE_SF_AR")`
-
-```{r collapse = TRUE}
-out_dt(IOTC_GRIDS_CE_SF_AR, "IOTC_GRIDS_CE_SF_AR")
-```
-
-## Species {#allSpecies}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies)
-+ **Version:** `r version_number("SPECIES")`
-+ **Last updated**: `r last_update("SPECIES")`
-
-```{r collapse = TRUE}
-out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
-```
-
-## Types of Data {#types}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#types)
-+ **Version:** `r version_number("DATA_TYPES")`
-+ **Last updated**: `r last_update("DATA_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(DATA_TYPES, "DATA_TYPES")
-```
-
-## Data Raisings {#dataRaising}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#raisings)
-+ **Version:** `r version_number("DATA_RAISINGS")`
-+ **Last updated**: `r last_update("DATA_RAISINGS")`
-
-```{r collapse = TRUE}
-out_dt(DATA_RAISINGS, "DATA_RAISINGS")
-```
-
-## Catch and Effort Data Sources {#sourcesCE}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#sourcesCE)
-+ **Version:** `r version_number("DATA_SOURCES_CE")`
-+ **Last updated**: `r last_update("DATA_SOURCES_CE")`
-
-```{r collapse = TRUE}
-out_dt(DATA_SOURCES_CE, "DATA_SOURCES_CE")
-```
-
-## Catch and Effort Data Processings {#dataProcessingsCE}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#processingsCE)
-+ **Version:** `r version_number("DATA_PROCESSINGS_CE")`
-+ **Last updated**: `r last_update("DATA_PROCESSINGS_CE")`
-
-```{r collapse = TRUE}
-out_dt(DATA_PROCESSINGS_CE, "DATA_PROCESSINGS_CE")
-```
-
-## Types of Coverage {#coverageTypes}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#coverageTypes)
-+ **Version:** `r version_number("COVERAGE_TYPES")`
-+ **Last updated**: `r last_update("COVERAGE_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
-```
-
-## Catch Units {#catchUnits}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#catchUnits)
-+ **Version:** `r version_number("CATCH_UNITS")`
-+ **Last updated**: `r last_update("CATCH_UNITS")`
-
-```{r collapse = TRUE}
-out_dt(CATCH_UNITS, "CATCH_UNITS")
-```
-
-## Estimations {#estimations}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#estimations)
-+ **Version:** `r version_number("DATA_ESTIMATIONS")`
-+ **Last updated**: `r last_update("DATA_ESTIMATIONS")`
-
-```{r collapse = TRUE}
-out_dt(DATA_ESTIMATIONS, "DATA_ESTIMATIONS")
-```
-
-## Effort Units {#effortUnits}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#effortUnits)
-+ **Version:** `r version_number("EFFORT_UNITS")`
-+ **Last updated**: `r last_update("EFFORT_UNITS")`
-
-```{r collapse = TRUE}
-out_dt(EFFORT_UNITS, "EFFORT_UNITS")
-```

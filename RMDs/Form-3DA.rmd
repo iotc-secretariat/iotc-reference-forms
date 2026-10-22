@@ -1,108 +1,96 @@
 ---
-title: "IOTC statistical data reporting: Form 3DA (v`r BASE_VERSION`)"
-author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
-output:
-  html_document2:
-    css: "../templates/fao_template_simplified.css"
-    mathjax: null
-    includes: 
-      in_header: "../templates/google-analytics.html"
-    number_sections: FALSE
-    toc: yes
-    toc_float:
-      collapsed: FALSE
-    smooth_scroll: FALSE
+title: "IOTC statistical data reporting: Form 3DA"
 ---
   
-# Description
+## Description
 
 This form provides for the reporting of data on operational activities conducted by purse seine and support vessels on drifting floating objects (DFOBs) and buoys. When present, data include information on buoy identifier, knowledge of the buoy position, and type of activity conducted on the buoy. For each DFOB, information on materials (i.e., presence of plastic or metal), dimensions (i.e., length, width, and height), and presence of mesh with value of mesh size for both the surface (i.e., raft) and subsurface (i.e., tail) components must be recorded. Finally, species-specific estimates of catches retained and discarded in numbers or live weight equivalent for the IOTC species, common sharks, and other bycatch species caught in association with IOTC fisheries must also be included in the dataset.
 
 Click [here](./Form-3DA.xlsx) to download a blank version of Form 3DA, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
-# Data Content
+## Data Content
 
 Operational information on DFOB-related activities, including buoys and DFOB characteristics and dimensions, along with estimates of retained catches and discards (in numbers or live weight equivalent) by species, fate, raising status, and catch unit.
 
-# Stratification
+## Stratification
 
-## General Information
+### General Information
 
-| Element | Requirement | Description | Format | Example value  |
+| Element | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | `1996` |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | `EUR` | 
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) | `ESP` |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](https://data.iotc.org/reference/latest/domain/admin/index.html#entities) | `EUR` | 
+| Flag state | M | Country in which a fishery vessel is registered and whose flag it is entitled to fly | **Code** from [Countries](https://data.iotc.org/reference/latest/domain/admin/index.html#countries) | `ESP` |
 | Reporting month | M | Month of the fishing activities reported through the dataset | Integer (1--12) | `3` | 
 
-## Data Specifications
+### Data Specifications
 
 | Element | Requirement | Description | Format | Example value | 
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) | `FI` | 
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](https://data.iotc.org/reference/latest/domain/data/index.html#types) | `FI` | 
 
-## Main Data Elements
+### Main Data Elements
 
-| Element | Requirement | Description | Format | Example value  |
+| Element | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Vessel name | M | Name of the purse seine vessel as available from the IOTC Record of Authorised Vessel ([RAV](https://rav.iotc.org/)) | String | `DRENNEC` | 
 | Vessel IOTC number | M | IOTC registered number of the purse seine vessel as available from the IOTC Record of Authorised Vessel ([RAV](https://rav.iotc.org/)) | String | `IOTC018542` |
-| Vessel type | M | Type of fishing vessel according to primary gear or operational function | **Code** from [Vessel types](#vesselTypes) | `PS` | 
+| Vessel type | M | Type of fishing vessel according to primary gear or operational function | **Code** from [Vessel types](https://data.iotc.org/reference/latest/domain/fisheries/index.html#vesselTypes) | `PS` | 
 | Day of the month | M | Day of the month of the fishing activities reported through the dataset | Integer | `23` |
 | Date_Time | M | The date and time at which the drifting floating object was visited in Coordinated Universal Time ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) | String based on [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) [YYYY-MM-DDTHH:MM(Z\|+/-hh:mm)] | `2025-09-15T12:00Z` |
 | Latitude  | M | The latitude of the drifting floating object location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | Float based on [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | `-20.8854` |
 | Longitude | M | The longitude of the drifting floating object location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | Float based on [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | `55.5312` |
-| Species | M | Species caught and discarded | **Code** from [All species](#allSpecies) | `YFT` | 
-| Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](#typesOfFate) | `DL` | 
-| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](#raisings) | `NR` | 
-| Catch unit   | M | Unit used to report the value of catch of a given species | **Code** from [Catch units](#catchUnits) | `T` | 
+| Species | M | Species caught | **Code** from [All species](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies) | `YFT` | 
+| Type of fate | M | Fate of fish caught (retained or discarded) | **Code** from [Types of fate](https://data.iotc.org/reference/latest/domain/biology/index.html#Types_of_Fate) | `DL` | 
+| Data raising | M | Level of raising (i.e., extrapolation) | **Code** from [Raisings](https://data.iotc.org/reference/latest/domain/data/index.html#raisings) | `NR` | 
+| Catch unit   | M | Unit used to report the value of catch of a given species | **Code** from [Catch units](https://data.iotc.org/reference/latest/domain/fisheries/index.html#catchUnits) | `T` | 
 
-## Buoy Data
+### Buoy Data
 
 | Element | Requirement | Description | Format | Example value |
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Present | M | Indicates whether a buoy is attached to the drifting floating object | **Code** from [Logical responses](#logicalResponses) | `TRUE` | 
-| Identifier | M |  Unique identifier of buoy monitored generally composed of the concatenation of the buoy model with with 5-9 digits | String | `SLX328501` |
-| Position known | M | Indicates whether the vessel have access/knowledge of the buoy position | **Code** from [Logical responses](#logicalResponses) | `TRUE` | 
-| Activity | M | Type of activities undertaken when visiting or deploying the drifting floating object | **Code** from [Buoy activity types](#DFOBbuoyActivityTypes) | `DE` | 
+| Present | M | Indicates whether a buoy is attached to the drifting floating object | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `TRUE` | 
+| Identifier | M |  Unique identifier of buoy monitored generally composed of the concatenation of the buoy model with 5-9 digits | String | `SLX328501` |
+| Position known | M | Indicates whether the vessel have access/knowledge of the buoy position | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `TRUE` | 
+| Activity | M | Type of activities undertaken when visiting or deploying the drifting floating object | **Code** from [Buoy activity types](https://data.iotc.org/reference/latest/domain/fisheries/index.html#FOBbuoyActivityTypes) | `DE` | 
 
-## DFOB Data
+### DFOB Data
 
 | Element | Requirement | Description | Format | Example value  |
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | Identifier | M | Unique identifier of the drifting floating object | String | `IOTC-ABC-123` | 
-| Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](#FOBtypes) | `DFAD` | 
-| Activity | M | Type of activity undertaken when visiting or deploying the drifting floating object | **Code** from [Types of DFOB activities](#DFOBactivityTypes) | `DE` | 
+| Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](https://data.iotc.org/reference/latest/domain/fisheries/index.html#DFOBtypes) | `DFAD` | 
+| Activity | M | Type of activity undertaken when visiting or deploying the drifting floating object | **Code** from [Types of DFOB activities](https://data.iotc.org/reference/latest/domain/fisheries/index.html#FOBbuoyActivityTypes) | `DE` | 
 
-## DFOB Characteristics 
+### DFOB Characteristics 
 
 Description of the materials and dimensions of both *surface* and *subsurface* components of the drifting floating objects.
 
-#### Surface (Raft)
+##### Surface (Raft)
 
 | Element | Requirement | Description | Format | Example value  |
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Plastic | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | **Code** from [Logical responses](#logicalResponses) | `TRUE` | 
-| Metal  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | **Code** from [Logical responses](#logicalResponses) | `FALSE` | 
+| Plastic | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some plastic materials | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `TRUE` | 
+| Metal  | M | Indicates whether the surface or near-surface structure of the drifting floating object contains some metal materials | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `FALSE` | 
 | Length | M | Length of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | `150` |
 | Width  | O | Width of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | e.g. `120` |
 | Height | O | Height of the surface or near-surface structure of the drifting floating object in centimetres (cm) | Numeric | `50` |
-| Mesh   | M | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | **Code** from [Logical responses](#logicalResponses) | `FALSE` |
+| Mesh   | M | Indicates whether the surface or near-surface structure of the drifting floating object contains mesh | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `FALSE` |
 <!-- | Mesh size | O | Size of the main net mesh used on the surface or near-surface structure of the drifting floating object (if any) in millimetres (mm) | Numeric | `5` | -->
 
-#### Subsurface (Tail/Cage)
+##### Subsurface (Tail/Cage)
 
 | Element | Requirement | Description | Format | Example value | 
 :------- |:-----:|:-----------------------|:-------------:|:-------------:|
-| Plastic | M | Indicates whether the tail of the drifting floating object contains some plastic materials | **Code** from [Logical responses](#logicalResponses) | `FALSE` | 
-| Metal | M | Indicates whether the tail of the drifting floating object contains some metal materials | **Code** from [Logical responses](#logicalResponses) | `TRUE` |
+| Plastic | M | Indicates whether the tail of the drifting floating object contains some plastic materials | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `FALSE` | 
+| Metal | M | Indicates whether the tail of the drifting floating object contains some metal materials | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `TRUE` |
 | Length | M |  Length of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | `100` | 
 | Width  | O | Width of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | `100` |
 | Height | O | Height of the subsurface structure of the drifting floating object in centimetres (cm) | Numeric | `80` | 
-| Mesh | M | Indicates whether the subsurface structure of the drifting floating object contains mesh | **Code** from [Logical responses](#logicalResponses) | `FALSE` | 
+| Mesh | M | Indicates whether the subsurface structure of the drifting floating object contains mesh | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `FALSE` | 
 | Mesh size | O | Size of the main net mesh used on the subsurface structure of the drifting floating object (if any) in millimetres (mm) | Numeric | `3` | 
 
-# Reporting Metadata
+## Reporting Metadata
 
 | Element | Requirement | Description | Format | Example value |
 | :-------- | :----: | :----------------------- | :-------- | :------------ |
@@ -113,128 +101,6 @@ Description of the materials and dimensions of both *surface* and *subsurface* c
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-03-27` |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1997-03-21` |
 
-# Reporting Deadlines
+## Reporting Deadlines
 
 - **Surface fisheries**: 30 June (final)
-
-# Reference Code Lists
-
-## Entities {#entities}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities)
-+ **Version:** `r version_number("ENTITIES")`
-+ **Last update**: `r last_update("ENTITIES")`
-
-```{r collapse = TRUE}
-out_dt(ENTITIES, "ENTITIES")
-```
-
-## Countries {#countries}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries)
-+ **Version:** `r version_number("COUNTRIES")`
-+ **Last update**: `r last_update("COUNTRIES")`
-
-```{r collapse = TRUE}
-out_dt(COUNTRIES, "COUNTRIES")
-```
-
-## Types of Data {#datatypes}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#types)
-+ **Version:** `r version_number("DATA_TYPES")`
-+ **Last update**: `r last_update("DATA_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(DATA_TYPES, "DATA_TYPES")
-```
-
-## Types of Vessel {#vesselTypes}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#vesselTypes)
-+ **Version**: `r version_number("VESSEL_TYPES")`
-+ **Last update**: `r last_update("VESSEL_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(VESSEL_TYPES, "VESSEL_TYPES")
-```
-
-## Types of Buoy Activities {#DFOBbuoyActivityTypes}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#FOBbuoyActivityTypes)
-+ **Version:** `r version_number("BUOY_ACTIVITIES")`
-+ **Last update**: `r last_update("BUOY_ACTIVITIES")`
-
-```{r collapse = TRUE}
-out_dt(BUOY_ACTIVITIES, "BUOY_ACTIVITIES")
-```
-
-## Types of Drifting Floating Objects {#FOBtypes}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#DFOBtypes)
-+ **Version:** `r version_number("DFOB_TYPES")`
-+ **Last update**: `r last_update("DFOB_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(DFOB_TYPES, "DFOB_TYPES")
-```
-
-## Types of Activities on Drifting Floating Objects {#DFOBactivityTypes}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#DFOBactivityTypes)
-+ **Version:** `r version_number("DFOB_ACTIVITIES")`
-+ **Last update**: `r last_update("DFOB_ACTIVITIES")`
-
-```{r collapse = TRUE}
-out_dt(DFOB_ACTIVITIES, "DFOB_ACTIVITIES")
-```
-
-## Species {#allSpecies}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies)
-+ **Version:** `r version_number("SPECIES")`
-+ **Last update**: `r last_update("SPECIES")`
-
-```{r collapse = TRUE}
-out_dt(SPECIES, "SPECIES")
-```
-
-## Types of Fates {#typesOfFate}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#typesOfFate)
-+ **Version:** `r version_number("TYPES_OF_FATE")`
-+ **Last update**: `r last_update("TYPES_OF_FATE")`
-
-```{r collapse = TRUE}
-out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
-```
-
-## Raisings {#raisings}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#raisings)
-+ **Version:** `r version_number("DATA_RAISINGS")`
-+ **Last update**: `r last_update("DATA_RAISINGS")`
-
-```{r collapse = TRUE}
-out_dt(DATA_RAISINGS, "DATA_RAISINGS")
-```
-
-## Catch Units {#catchUnits}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#catchUnits)
-+ **Version:** `r version_number("CATCH_UNITS")`
-+ **Last update**: `r last_update("CATCH_UNITS")`
-
-```{r collapse = TRUE}
-out_dt(CATCH_UNITS, "CATCH_UNITS")
-```
-
-## Logical Responses {#logicalResponses}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses)
-+ **Version:** `r version_number("LOGICAL_RESPONSES")`
-+ **Last update**: `r last_update("LOGICAL_RESPONSES")`
-
-```{r echo = FALSE, collapse = TRUE}
-out_dt(LOGICAL_RESPONSES, "LOGICAL_RESPONSES")
-```

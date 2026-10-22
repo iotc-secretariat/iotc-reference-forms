@@ -2,10 +2,11 @@
 options(DT.options = list(pageLength = 3))
 
 # Form Main Access Page (EN) ####
-render("./RMDs/Form-main.Rmd",
-       output_format = "html_document2",
-       output_file = "index.html",
-       output_dir = "./out/HTML/")
+render_iotc(
+  input = "./RMDs/Form-main.Rmd", 
+  output_dir = "./out/HTML/", 
+  output_file = "index.html"
+  )
 
 # FORM SUMMARY (FR) ####
 render("./RMDs/Form-main_fr.Rmd",
@@ -15,116 +16,102 @@ render("./RMDs/Form-main_fr.Rmd",
 
 # IOTC STATISTICAL FORMS ####
 
+## Amount of discards ####
+
+### Form 1-DI ####
+render_iotc(
+  input = "./RMDs/Form-1DI.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-1DI.html"
+)
+
 ## Species presence in the catch ####
 
 ### Form 1-DR ####
-render("./RMDs/Form-1DR.Rmd", 
-       output_format = "html_document2",
-       output_file = "Form-1DR.html", 
-       output_dir = "./out/HTML/")
+render_iotc(
+  input = "./RMDs/Form-1DR.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-1DR.html"
+)
 
 ## Interactions with ETP species ####
 
 ### Form 1-IN ####
-render("./RMDs/Form-1IN.Rmd", 
-       output_format = "html_document2",
-       output_file = "Form-1IN.html", 
-       output_dir = "./out/HTML/")
+render_iotc(
+  input = "./RMDs/Form-1IN.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-1IN.html"
+)
+
 ## Amount of fish caught and retained ####
 
 ### Form 1-RC #####
-render("./RMDs/Form-1RC.Rmd", 
-       output_format = "html_document2",
-       output_file = "Form-1RC.html", 
-       output_dir = "./out/HTML/")
-
-## Amount of discards ####
-
-### Form 1-DI ####
-render("./RMDs/Form-1DI.Rmd", 
-       output_format = "html_document2",
-       output_file = "Form-1DI.html", 
-       output_dir = "./out/HTML/")
+render_iotc(
+  input = "./RMDs/Form-1RC.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-1RC.html"
+)
 
 ## Geo-referenced catches and efforts ####
 
 ### Form 3-CE ####
-render("./RMDs/Form-3CE.Rmd", 
-       output_format = "html_document2",
-       output_file = "Form-3CE.html", 
-       output_dir = "./out/HTML/")
-
-# ### Form 3-CE-update ####
-# render("./RMDs/Form-3CE-update.Rmd", 
-#        output_format = "html_document2",
-#        output_file = "Form-3CE-update.html", 
-#        output_dir = "./out/HTML/")
+render_iotc(
+  input = "./RMDs/Form-3CE.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-3CE.html"
+)
 
 ## Geo-referenced size frequencies ####
 
 ### Form 4-SF ####
-render("./RMDs/Form-4SF.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-4SF.html", 
-       output_dir = "./out/HTML/")
-
-### Form 4-SF-update ####
-# render("./RMDs/Form-4SF-update.Rmd", 
-#        output_format = "html_document2",
-#        output_file ="Form-4SF-update.html", 
-#        output_dir = "./out/HTML/")
+render_iotc(
+  input = "./RMDs/Form-4SF.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-4SF.html"
+)
 
 ## AFAD-related activities ####
 
 ### Form 3-AA ####
-render("./RMDs/Form-3AA.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-3AA.html", 
-       output_dir = "./out/HTML/")
-
-### Form 3-AA-update ####
-# render("./RMDs/Form-3AA-update.Rmd", 
-#        output_format = "html_document2",
-#        output_file ="Form-3AA-update.html", 
-#        output_dir = "./out/HTML/")
+render_iotc(
+  input = "./RMDs/Form-3AA.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-3AA.html"
+)
 
 ## DFOB-related activities ####
 
 ### Form 3-DA ####
-render("./RMDs/Form-3DA.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-3DA.html", 
-       output_dir = "./out/HTML/")
-
-### Form 3-DA-update ####
-# render("./RMDs/Form-3DA-update.Rmd", 
-#        output_format = "html_document2",
-#        output_file ="Form-3DA-update.html", 
-#        output_dir = "./out/HTML/")
+render_iotc(
+  input = "./RMDs/Form-3DA.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-3DA.html"
+)
 
 ## Daily buoy positions ####
 
 ### Form 3BU ####
-render("./RMDs/Form-3BU.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-3BU.html", 
-       output_dir = "./out/HTML/")
+render_iotc(
+  input = "./RMDs/Form-3BU.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-3BU.html"
+)
 
 ## Fishing craft statistics ####
 
 ### Form 2FC #####
-render("./RMDs/Form-2FC.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-2FC.html", 
-       output_dir = "./out/HTML/")
+render_iotc(
+  input = "./RMDs/Form-2FC.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-2FC.html"
+)
 
 ## Form 5MB ####
-render("./RMDs/Form-5MB.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-5MB.html", 
-       output_dir = "./out/HTML/")
-
-## Fish prices ####
+render_iotc(
+  input = "./RMDs/Form-5MB.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-5MB.html"
+)
 
 ### Form 7PR #####
 

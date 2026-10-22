@@ -1,49 +1,37 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 3BU (v`r DOI_VERSION`)"
-author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
-output:
-  html_document2:
-    css: "../templates/fao_template_simplified.css"
-    mathjax: null
-    includes: 
-      in_header: "../templates/google-analytics.html"
-    number_sections: FALSE
-    toc: yes
-    toc_float:
-      collapsed: FALSE
-    smooth_scroll: FALSE
+title: "IOTC Statistical Data Reporting: Form 3BU"
 ---
 
-# Description
+## Description
 
 This form provides for the monthly reporting of daily positions for each of the buoys monitored in purse seine fisheries. Each buoy is identified by its unique identifier which is a concatenation of the acronym of the buoy commercial model (ISD+, M3+, T8E) followed by 5-9 digits depending on the buoy model.
 
 Click [here](./Form-3BU.xlsx) to download a blank version of Form 3BU, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
-# Data Content
+## Data Content
 
 Single positions (latitude and longitude in decimal degrees) by buoy and day for each purse seine vessel.
 
-# Stratification
+## Stratification
 
-## General Information
+### General Information
 
-| Element | Requirement | Description | Format | Example value  |
+| Element | Requirement | Description | Format | Example value |
 | :-------- | :-----: | :----------------------- | :-------------:|:-------------:|
 | Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | `1996` |
 | Reporting month | M | Month of the fishing activities reported through the dataset | Integer (1--12) | `3` | 
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | `EUR` | 
-| Flag state | M | Three-letter (alpha-3) code of the country registration of the fishery vessels | **Code** from [Countries](#countries) | `ESP` |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](https://data.iotc.org/reference/latest/domain/admin/index.html#entities) | `EUR` | 
+| Flag state | M | Country in which a fishery vessel is registered and whose flag it is entitled to fly | **Code** from [Countries](https://data.iotc.org/reference/latest/domain/admin/index.html#countries) | `ESP` |
 | Vessel name | M | Name of purse seine vessel monitoring the buoy as available from the IOTC Record of Authorised Vessel ([RAV](https://rav.iotc.org/)) | String | `DRENNEC` | 
 | Vessel IOTC number | M | IOTC registered number of the purse seine vessel monitoring the buoy as available from the IOTC Record of Authorised Vessel ([RAV](https://rav.iotc.org/)) | String | `IOTC018542` |
 
-## Data Specifications
+### Data Specifications
 
 | Element | Requirement | Description | Format | Example value |
 | :-------- | :-----: | :------------------- | :-----------: | :-------: |
-| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#types) | `FI` | 
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](https://data.iotc.org/reference/latest/domain/data/index.html#types) | `FI` | 
 
-## Main Data Elements
+### Main Data Elements
 
 | Element | Requirement | Description | Format | Example value |
 | :-------- | :-----: | :----------------------- | :-------: | :-------: |
@@ -52,7 +40,7 @@ Single positions (latitude and longitude in decimal degrees) by buoy and day for
 | Latitude | M | The latitude of the buoy location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DD.DDDD] | `-20.8854` |
 | Longitude | M | The longitude of the buoy location, expressed in decimal degrees according to the WGS 84 reference system (EPSG:4326). Recommended precision: four decimal places (~10 m) | [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) [+/-DDD.DDDD] | `55.5312` |
 
-# Reporting Metadata
+## Reporting Metadata
 
 | Element | Requirement | Description | Format | Example value |
 | :-------- | :----: | :----------------------- | :-------- | :------------ |
@@ -63,39 +51,7 @@ Single positions (latitude and longitude in decimal degrees) by buoy and day for
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-03-27` |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1997-03-21` |
 
-# Reporting Deadlines
+## Reporting Deadlines
 
 - **Surface fisheries**: To be submitted with a 30–60 day delay (Para. 23 of Res. [24/02](https://www.iotc.org/cmm/resolution-2402-management-drifting-fish-aggregating-devices-fads-iotc-area-competence))
 or a 60-90 delay (Para. 24 of Res. [19/02](https://iotc.org/cmm/resolution-1902-procedures-fish-aggregating-devices-fads-management-plan), which remains binding on Oman)
-
-# Reference Code Lists
-
-## Entities {#entities}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities)
-+ **Version:** `r version_number("ENTITIES")`
-+ **Last update**: `r last_update("ENTITIES")`
-
-```{r collapse = TRUE}
-out_dt(ENTITIES, "ENTITIES")
-```
-
-## Countries {#countries}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries)
-+ **Version:** `r version_number("COUNTRIES")`
-+ **Last update**: `r last_update("COUNTRIES")`
-
-```{r collapse = TRUE}
-out_dt(COUNTRIES, "COUNTRIES")
-```
-
-## Types of Data {#types}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#types)
-+ **Version:** `r version_number("DATA_TYPES")`
-+ **Last update**: `r last_update("DATA_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(DATA_TYPES, "DATA_TYPES")
-```

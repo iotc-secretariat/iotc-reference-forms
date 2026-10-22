@@ -1,60 +1,50 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 1IN  (v`r DOI_VERSION`)"
-author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
-output:
-  html_document2:
-    css: "../templates/fao_template_simplified.css"
-    includes: 
-      in_header: "../templates/google-analytics.html"
-    mathjax: null
-    number_sections: false
-    toc: yes
-    toc_float:
-      collapsed: false
-    smooth_scroll: false
+title: "IOTC Statistical Data Reporting: Form 1IN"
 ---
   
-# Description
+## Description
   
 This form provides for the reporting of data on fisheries interactions with marine turtles, seabirds, mobulid rays, cetaceans, and whale sharks. For each stratum, the types of data and coverage (percentage; %) are essential to assess the representativeness and quality of the estimates.
 
 Click [here](./Form-1IN.xlsx) to download a blank version of Form 1IN, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
-# Data Content
+<!-- A response is required for each species group. Where information is unavailable, unknown or not applicable, the corresponding logical response code should be used rather than leaving the field blank. -->
+
+## Data Content
 
 Number of interactions along with information on the value (%) and type of sampling coverage used for the estimations by year, fleet, fishery, and IOTC main area.
 
-# Stratification
+## Stratification
 
-## General Information
+### General Information
 
 | Element | Requirement | Description | Format | Example value  |
 | :--------| :----: | :----------------------- | :------- | :------------ |
-| Reporting year | M | Gregorian calendar year of the reported fishing activities in the dataset | 4-digit integer | `1996` |
-| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | `EUR` |
-| Flag state | M | Three-letter (alpha-3) code of the country of registration of the fishing vessels | **Code** from [Countries](#countries) | `FRA` |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | 4-digit integer | `1996` |
+| Reporting entity | M | Three-letter (alpha-3) code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](https://data.iotc.org/reference/latest/domain/admin/index.html#entities) | `EUR` |
+| Flag state | M | Country in which a fishing vessel is registered and whose flag it is entitled to fly | **Code** from [Countries](https://data.iotc.org/reference/latest/domain/admin/index.html#countries) | `FRA` |
 
-## Main Data Elements
-
-| Element | Requirement | Description | Format | Example value |
-| :--------| :----: | :----------------------- | :-------- | :------------ |
-| Fisheries | M | [IOTC fishery](../guidelines/stats/index.html#Fisheries) used to define fishing practices, which emerge from the combination of fishery purposes, area of operation, fishing vessels' size, gear and gear configuration, and target species | **Code** from [Fisheries](#fisheries) | `PS-AF[SI]TR` |
-| IOTC main areas | M | Two main statistical areas constituting the IOTC area of competence | **Code** from [IOTC main areas](#IOareasMain) | `IOTC_WEST` |
-
-## Original Data
+### Main Data Elements
 
 | Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
-| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](#datatypes) | `FI` | 
-| Types of coverage | O | Variable used for data coverage | **Code** from [Types of Coverage](#coverageTypes) | `SE` |
-| Source coverage percentage | O | Percentage of the relevant population or variable covered by the reported data, based on the selected coverage type| Numeric | `20.5` |  
-| Interactions with turtles | M | Indicates whether one or more interactions with [marine turtle species](https://data.iotc.org/reference/latest/domain/biology/index.html#speciesTurtles) were recorded during the reporting period | **Code** from [Logical responses](#logicalResponses) | `FALSE` |  
-| Interactions with seabirds | M | Indicates whether one or more interactions with [seabird species](https://data.iotc.org/reference/latest/domain/biology/index.html#speciesSeabirds) were recorded during the reporting period | **Code** from [Logical responses](#logicalResponses) | `TRUE` | 
-| Interactions with mobulid rays | M | Indicates whether one or more interactions with [mobulid ray species](https://data.iotc.org/reference/latest/domain/biology/index.html#speciesMobulids) were recorded during the reporting period | **Code** from [Logical responses](#logicalResponses) | `TRUE` | 
-| Interactions with cetaceans | M | Indicates whether one or more interactions with [cetacean species](https://data.iotc.org/reference/latest/domain/biology/index.html#speciesCetaceans) were recorded during the reporting period | **Code** from [Logical responses](#logicalResponses) | `NAP` | 
-| Interactions with whale sharks | M | Indicates whether one or more interactions with whale sharks were recorded during the reporting period | **Code** from [Logical responses](#logicalResponses) | `NAP` | 
+| Fisheries | M | [IOTC fishery](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Fisheries) used to define fishing practices, which emerge from the combination of fishery purposes, area of operation, fishing vessels' size, gear and gear configuration, and target species | **Code** from [Fisheries](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fisheries) | `PS-AF[SI]TR` |
+| IOTC main areas | M | Two main statistical areas constituting the IOTC area of competence | **Code** from [IOTC main areas](https://data.iotc.org/reference/latest/domain/admin/index.html#IOTCareasMain) | `IOTC_WEST` |
 
-# Reporting Metadata
+### Original Data
+
+| Element | Requirement | Description | Format | Example value |
+| :--------| :----: | :----------------------- | :-------- | :------------ |
+| Original data type | M | Preliminary/final status of the data | **Code** from [Types of data](https://data.iotc.org/reference/latest/domain/data/index.html#types) | `FI` | 
+| Types of coverage | O | Variable used for data coverage | **Code** from [Types of Coverage](https://data.iotc.org/reference/latest/domain/data/index.html#coverageTypes) | `SE` |
+| Source coverage percentage | O | Percentage of the relevant population or variable covered by the reported data, based on the selected coverage type | Numeric | `20.5` |  
+| Interactions with turtles | M | Indicates whether one or more interactions with [marine turtle species](https://data.iotc.org/reference/latest/domain/biology/index.html#speciesTurtles) were recorded during the reporting period | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `FALSE` |  
+| Interactions with seabirds | M | Indicates whether one or more interactions with [seabird species](https://data.iotc.org/reference/latest/domain/biology/index.html#speciesSeabirds) were recorded during the reporting period | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `TRUE` | 
+| Interactions with mobulid rays | M | Indicates whether one or more interactions with [mobulid ray species](https://data.iotc.org/reference/latest/domain/biology/index.html#speciesMobulids) were recorded during the reporting period | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `TRUE` | 
+| Interactions with cetaceans | M | Indicates whether one or more interactions with [cetacean species](https://data.iotc.org/reference/latest/domain/biology/index.html#speciesCetaceans) were recorded during the reporting period | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `NAP` | 
+| Interactions with whale sharks | M | Indicates whether one or more interactions with whale sharks were recorded during the reporting period | **Code** from [Logical responses](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses) | `NAP` | 
+
+## Reporting Metadata
 
 | Element | Requirement | Description | Format | Example value |
 | :--------| :----: | :----------------------- | :-------- | :------------ |
@@ -65,81 +55,7 @@ Number of interactions along with information on the value (%) and type of sampl
 | Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-03-27` |
 | Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1997-03-21` |
 
-# Reporting Deadlines
+## Reporting Deadlines
 
 - **Longline fisheries**: 30 June (preliminary), 30 December (final)
 - **Surface fisheries**: 30 June (final)
-
-# Reference Code Lists
-
-## Entities {#entities}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities)
-+ **Version**: `r version_number("ENTITIES")`
-+ **Last update**: `r last_update("ENTITIES")`
-
-```{r collapse = TRUE}
-out_dt(ENTITIES, "ENTITIES")
-```
-
-## Countries {#countries}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries)
-+ **Version**: `r version_number("COUNTRIES")`
-+ **Last update**: `r last_update("COUNTRIES")`
-
-```{r collapse = TRUE}
-out_dt(COUNTRIES, "COUNTRIES")
-```
-
-## IOTC Main Areas {#IOTCareasMain}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#IOTCareasMain)
-+ **Version**: `r version_number("IOTC_MAIN_AREAS")`
-+ **Last update**: `r last_update("IOTC_MAIN_AREAS")`
-
-![](https://iotc.org/sites/default/files/content/IOTC_AREA_OF_COMPETENCE_ENG.png)
-
-```{r collapse = TRUE}
-out_dt(IOTC_MAIN_AREAS, "IOTC_MAIN_AREAS")
-```
-
-## Fisheries {#fisheries}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fisheries)
-+ **Version**: `r version_number("FISHERIES")`
-+ **Last update**: `r last_update("FISHERIES")`
-
-```{r collapse = TRUE}
-out_dt(FISHERIES, "FISHERIES")
-```
-
-## Types of Data {#datatypes}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#types)
-+ **Version**: `r version_number("DATA_TYPES")`
-+ **Last update**: `r last_update("DATA_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(DATA_TYPES, "DATA_TYPES")
-```
-
-## Types of Coverage {#coverageTypes}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#coverageTypes)
-+ **Version**: `r version_number("COVERAGE_TYPES")`
-+ **Last update**: `r last_update("COVERAGE_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(COVERAGE_TYPES, "COVERAGE_TYPES")
-```
-
-## Logical Responses {#logicalResponses}
-
-+ [Permalink](https://data.iotc.org/reference/latest/domain/data/index.html#logicalResponses)
-+ **Version:** `r version_number("LOGICAL_RESPONSES")`
-+ **Last update**: `r last_update("LOGICAL_RESPONSES")`
-
-```{r echo = FALSE, collapse = TRUE}
-out_dt(LOGICAL_RESPONSES, "LOGICAL_RESPONSES")
-```
