@@ -1,0 +1,136 @@
+---
+title: "IOTC Form 7PR — Fish prices (simplified reporting form)"
+subtitle: "Revised draft — date ranges and price types"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Overview
+
+Form 7PR is used to report fish price information to the IOTC Secretariat. This draft documentation describes the simplified form (`Form-7PR_simp.xlsx`) and identifies matters to resolve before its submission for consideration by the Working Party on Data Collection and Statistics (WPDCS).
+
+The revised form aims to reduce reporting burden, particularly the requirement to provide prices at monthly resolution. The simplified form retains the standard **Metadata** worksheet and a **Data** worksheet. Each completed row in the Data worksheet describes a price observation or aggregate for a specified period and combination of price descriptors.
+
+**Status:** Working draft. Definitions and reporting rules below require confirmation; no new reporting obligation is implied by this document.
+
+# Metadata worksheet
+
+The following fields are retained from the legacy form.
+
+| Field | Proposed definition |
+|:--|:--|
+| Form | Identifier of the IOTC reporting form |
+| Version | Version of the reporting form |
+| Liaison officer — Full name | Full name of the person responsible for liaison regarding the submission |
+| Liaison officer — email | Email address of the liaison officer |
+| Organisation — Name | Name of the organisation responsible for the submission |
+| Organisation — email | Email address of the organisation responsible for the submission |
+| Finalisation date | Date on which the dataset was finalised |
+| Submission date | Date on which the dataset was submitted to the IOTC Secretariat |
+| Reporting year | Gregorian calendar year to which the reported data relate |
+| Reporting entity | Entity responsible for reporting the dataset to the IOTC Secretariat |
+| Flag state | Country in which the fishery vessel is registered and whose flag it is entitled to fly |
+| Comments | Additional information relevant to interpreting the submitted data |
+
+# Data worksheet
+
+The following is the **proposed revised Data worksheet**, based on `Form-7PR_simp.xlsx` and the subsequent decisions. **The uploaded Excel template has not yet been modified**: its original Time Period and Period- value columns must be replaced with Date start and Date end, and a Price type column must be added. The column letters and final order below are proposed, not the current Excel layout. Field meanings are kept separate from reporting formats and guidance.
+
+| Proposed order | Field | Harmonised definition | Format / reference |
+|:--:|:--|:--|:--|
+| 1 | Date start | First date of the period to which the reported price relates | Date, `YYYY-MM-DD` |
+| 2 | Date end | Last date of the period to which the reported price relates | Date, `YYYY-MM-DD` |
+| 3 | Pricing location | Location at which the reported price was observed | Existing IOTC Pricing locations code list |
+| 4 | Price type | Commercial or transaction basis on which the reported price is established | New `refs_socio_economics.price_types` code list |
+| 5 | Currency | Currency in which the reported price is expressed | Existing IOTC Country currencies code list |
+| 6 | Destination | Destination market associated with the reported product or transaction | Existing IOTC Destination markets code list |
+| 7 | Weight unit | Unit of weight used as the denominator of the reported price | Existing or agreed unit code list; units to confirm |
+| 8 | Species | Species or taxonomic group to which the reported price relates | IOTC species reference codes |
+| 9 | Product type | Type of fishery product to which the reported price relates | Existing IOTC Types of products code list |
+| 10 | Price | Monetary amount per specified unit of weight for the reported product | Numeric; expressed in Currency per Weight unit; price statistic to confirm |
+
+**Implementation note:** The Metadata worksheet is assumed to remain as in the simplified workbook, subject to final checking against the published template. The code-list names above are logical references; final web URLs and downloadable files should be resolved centrally through the Reference Data Catalogue.
+
+## Temporal coverage and reporting frequency
+
+Each record is associated with a period bounded by **Date start** and **Date end**. Both dates are **inclusive**. These fields replace the proposed `Time Period` and `Period- value` fields, eliminating the need for a time-period code list.
+
+| Example | Date start | Date end |
+|:--|:--|:--|
+| Annual | 2025-01-01 | 2025-12-31 |
+| Quarterly | 2025-04-01 | 2025-06-30 |
+| Monthly | 2025-07-01 | 2025-07-31 |
+| Irregular interval | 2025-03-12 | 2025-05-28 |
+| Single day | 2025-07-15 | 2025-07-15 |
+
+**Reporting guidance:** Annual reporting is the minimum expected temporal resolution; CPCs may voluntarily provide shorter or irregular periods where available. The dates describe the **period represented by the reported price**, not necessarily the frequency of original price observations (for example, daily observations summarised as an annual price). The start date must be on or before the end date; both dates must be present.
+
+**To resolve before publication:** How `Reporting year` in Metadata relates to periods crossing calendar years. A conservative option is to require each record's dates to fall within the stated reporting year, while allowing irregular intervals within that year. This rule has **not yet been agreed**.
+
+## Price types {#priceTypes}
+
+**Field definition:** Commercial or transaction basis on which the reported price is established
+
+**Reference code list:** `refs_socio_economics.price_types` (IOTC Reference Data Catalogue; to be published on the website and in the GitHub reference-data package). This is a proposed IOTC-specific classification, rather than a single established international code list.
+
+| Code | Name (EN) | Description (EN) |
+|:--|:--|:--|
+| EXV | Ex-vessel | Price received by fishers or vessel owners from the first sale of their catch |
+| WHL | Wholesale | Price received from the sale of fish or fishery products to commercial buyers for resale or further distribution |
+| RTL | Retail | Price paid by final consumers purchasing fish or fishery products |
+| FOB | Free on board | Export price under FOB terms, with the seller responsible for delivering the goods on board the nominated vessel at the port of shipment |
+| CIF | Cost, insurance and freight | Price under CIF terms, including the costs of goods, freight and insurance to the named destination port |
+| OTH | Other | Price established on a commercial or transaction basis not covered by the other categories |
+| UNK | Unknown | Commercial or transaction basis of the reported price is unknown |
+
+**Reporting guidance:** CPCs may report any price types for which they have reliable data; they are **not expected to report all seven categories**. Ex-vessel, wholesale and retail refer to stages of the marketing chain, while FOB and CIF are international trade terms. The combined list is retained for simplicity, but the categories should not be treated as interchangeable. Keep Price type separate from Pricing location and Destination.
+
+**Publication note:** Replace the database identifier above with the canonical catalogue hyperlink once the webpage is published. Avoid hard-coding a provisional URL in the reporting form.
+
+## Price interpretation
+
+Price should be interpreted together with Price type, Currency, Weight unit, Pricing location, Destination, Species and Product type. A price in a different currency, market or product form is not directly comparable without adjustment.
+
+**To confirm:** Whether Price is a transaction price, an arithmetic average, a weighted average, a median, or another summary statistic; whether prices include taxes, handling, transport or other charges; and whether Weight unit refers to the marketed product weight or whole-fish equivalent.
+
+## Products and markets
+
+The simplified workbook uses **Product type** without the separate legacy **Processing** and **Preservation** dimensions. This is a substantive simplification, but it should be verified that the product-type code list can distinguish the product forms necessary for meaningful price comparisons without reintroducing redundant fields.
+
+The meanings of **Pricing location** and **Destination** should remain distinct: the former concerns where or at what marketing stage the price is observed; the latter concerns the destination market associated with the product or transaction.
+
+# Comparison with the legacy Form 7PR
+
+| Aspect | Legacy workbook (`Form-7PR.xlsx`) | Simplified workbook (`Form-7PR_simp.xlsx`) |
+|:--|:--|:--|
+| Temporal descriptor | Month | Date start; Date end (proposed replacement of Time Period and Period- value) |
+| Pricing location | Present | Retained |
+| Price type | Not a separate descriptor | Added; linked to `refs_socio_economics.price_types` |
+| Currency | Present | Retained |
+| Destination | Present | Retained |
+| Weight unit | Present | Retained |
+| Weight classes | Lower and upper weight classes | Removed |
+| Species | Presented in species/product header structure | Explicit row-level Species column |
+| Processing | Separate product descriptor | Removed |
+| Product type | Separate product descriptor | Retained as row-level Product type |
+| Preservation | Separate product descriptor | Removed |
+| Price | Prices arranged by species and product specifications across columns | Explicit row-level Price column |
+
+The legacy sheet uses a wide species/product layout, while the simplified sheet has a compact row-based structure. This is likely to simplify validation, database ingestion and aggregation.
+
+# Outstanding questions before WPDCS
+
+1. **Price statistic:** When multiple observations fall within the reporting period, is the reported value a weighted mean, simple mean, median, or another representative price? Should a single method be prescribed or documented separately?
+2. **Weight unit:** Are prices standardised per kilogram, or may CPCs use other mass units? If multiple units are allowed, identify the reference codes.
+3. **Product type:** Does the existing code list adequately replace the legacy Processing and Preservation fields?
+4. **Destination and Pricing location:** Confirm accepted codes and treatment of missing or not-applicable information.
+5. **Temporal boundaries:** Should reporting periods be restricted to one reporting year, or can they cross calendar years?
+6. **Coverage and source:** Is it sufficient to accept any reliable price series without imposing a minimum transaction coverage? Is an optional data-source description desirable?
+7. **Price types:** Confirm whether the new seven-code list is adequate for initial implementation and whether `OTH` should require explanatory comments.
+8. **Template and validation:** Update `Form-7PR_simp.xlsx`, its code-list references and validators to match the agreed date-range and price-type fields before publication.
+
+# Proposed rationale for WPDCS
+
+The revised Form 7PR aims to improve the feasibility and consistency of fish price reporting by allowing less demanding temporal aggregation and reducing the number of mandatory product descriptors. It replaces the legacy wide-format structure with one row per combination of reporting period, market and product characteristics. The proposed date-range fields support annual, shorter and irregular reporting periods without a separate period-code list. The new Price type field distinguishes ex-vessel, wholesale, retail and trade-term prices. Price calculation and product classifications still require clarification before implementation so that the reduced reporting burden does not compromise interpretability or comparability.
