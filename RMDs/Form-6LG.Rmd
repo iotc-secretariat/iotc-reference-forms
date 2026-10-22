@@ -1,20 +1,8 @@
 ---
 title: "IOTC statistical data reporting: Form-3LG (draft)"
-author: "[IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)"
-output:
-  html_document2:
-    css: "../templates/fao_template_simplified.css"
-    mathjax: null
-    includes: 
-      in_header: "../templates/google-analytics.html"
-    number_sections: FALSE
-    toc: yes
-    toc_float:
-      collapsed: FALSE
-    smooth_scroll: FALSE
 ---
   
-# Description
+## Description
 
 This form provides for the voluntary reporting of data on recovery of abandoned, lost or discarded fishing gears (ADLFG), including specifications for FADs and buoys. Data includes information on the recovery location, gear specifications, information to assess the impact of the area, presence of species entanglements and reuse or place of disposal information. For FADs data also include unique identifiers, and information of the FAD structure and materials.
 
@@ -26,76 +14,74 @@ Click [here](./Form-3LG.xlsx) to download a blank version of Form 3LG, or [retur
 | [GEAR](#gear) | Data | Information on recovery of gears other than FADs |
 | [FAD](#fad) | Data | Information on recovery of FADs and buoys |
 
-# META {#meta}
+## META {#meta}
 
-## Submission Information
+### Submission Information
 
 | Field | Requirement | Description | Format | Example value |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | String |  `John Doe`  |
-| Liaison officer email | M | Email address of the liaison officer in charge of the compilation of the data | String |  `John.Doe@fao.org` |
-| Organisation name | M | Name of the organisation in charge of the compilation of the data | String |  `Institute of Fisheries` |
-| Organisation email | M | Email address of the organisation in charge of the compilation of the data | String |  `nif@gov.sc` |
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | String | `John Doe`  |
+| Liaison officer email | M | Email address of the liaison officer in charge of the compilation of the data | String | `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | `Institute of Fisheries` |
+| Organisation email | M | Email address of the organisation in charge of the compilation of the data | String | `nif@gov.sc` |
 
-## General Information
-
-| Element | Requirement | Description | Format | Example value  |
-| :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer |  1996 |
-| Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) |  `EUESP` |
-| Flag state | M | Code of the country registration of the fishery vessels | **Code** from [Countries](#countries) |  `EUESP` |
-
-<!--wondering if define it as annual submission or indicating month, for reporting just when is recovered-->
-
-# GEAR {#gear}
-
-## Recovery data
+### General Information
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Month | M | Month of year of the gear recovery reported through the dataset | Integer |  `10` |
+| Reporting year | M | Gregorian calendar year of the fishing activities reported through the dataset | Integer | `1996` |
+| Reporting entity | M | Code of the entity reporting the dataset to the IOTC Secretariat | **Code** from [Entities](#entities) | `EUESP` |
+| Flag state | M | Country in which a fishing vessel is registered and whose flag it is entitled to fly | **Code** from [Countries](#countries) | `EUESP` |
+
+## GEAR {#gear}
+
+### Recovery Data
+
+| Element | Requirement | Description | Format | Example value  |
+| :------ | :-----: | :----------------------- | :----------- | :-----: |
+| Month | M | Month of year of the gear recovery reported through the dataset | Integer | `10` |
 | Day of month | M | Day of the month of the gear recovery reported through the dataset | Integer | `31` |
-| Latitude | M | Horizontal distances north or south of the Equator | Decimal degrees  |  `-25.60`
-| Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees | e.g, `60.10`
-| Depth | M | Length of a straight line measured downwards from the sea surface in meters | Decimal degrees | `3.5`  |
+| Latitude | M | Horizontal distances north or south of the Equator | Decimal degrees | `-25.60` |
+| Longitude | M | Vertical distances east or west of the prime meridian | Decimal degrees | `60.10`
+| Depth | M | Length of a straight line measured downwards from the sea surface in meters | Decimal degrees | `3.5` |
 | Habitat type | M | *Code list to develop* |  `seagrass meadow` |
 
-##Gear data
+### Gear Data
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
 | Identifier | M | Unique identifier of the of the gear or gear component found | Plain text |
-| Fishing_gear | M | The identified fishing gear | **Code** from [Fishing Gear](#fishingGear) |  `DL` |
-| Gear component | M | The identified gear component | String |  `net` |
-| Gear material | M | The identified gear component material | String |  `monofilament` |
-| Gear weight | M | the identified gear component weight in kilograms | Decimal |  `50.40` |
+| Fishing_gear | M | The identified fishing gear | **Code** from [Fishing Gear](#fishingGear) | `DL` |
+| Gear component | M | The identified gear component | String | `net` |
+| Gear material | M | The identified gear component material | String | `monofilament` |
+| Gear weight | M | the identified gear component weight in kilograms | Decimal | `50.40` |
 
-## Impact area evaluation
+### Impact Area Evaluation
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Damage type | M | The type of damage caused by the gear found | **Code list to develop** |  `abrasion` |
-| Area | M | The damaged area in m2 in which the gear was found | Decimal |  `3.6`|
-| Reef zone | M | If the gear was found on the reef indicate the area | **Code list to develop** |  `reef bank` |
-| Coral type | M | If the gear was found on corals indicate the coral type | **Code list to develop** |  `soft` |
-| Coral species | M | If the gear was found on corals, indicate the coral species identified in the damaged area| **Code list to develop** |  `tbd` |
+| Damage type | M | The type of damage caused by the gear found | **Code list to develop** | `abrasion` |
+| Area | M | The damaged area in m2 in which the gear was found | Decimal | `3.6`|
+| Reef zone | M | If the gear was found on the reef indicate the area | **Code list to develop** | `reef bank` |
+| Coral type | M | If the gear was found on corals indicate the coral type | **Code list to develop** | `soft` |
+| Coral species | M | If the gear was found on corals, indicate the coral species identified in the damaged area | **Code list to develop** | `tbd` |
 
 ## Entanglements
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Species | M | Species entangled with the gear found | **Code** from [Species](#allSpecies) |  `LKV` |
+| Species | M | Species entangled with the gear found | **Code** from [Species](#allSpecies) | `LKV` |
 
 ## Recovered gear data
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Reused | M | Indicate if the gear component found be re-utilised | String |  `Yes` |
-| Place of disposal | M | indicate the place of disposal if the gear its not re utilized | String |  `tbd` |
+| Reused | M | Indicate if the gear component found be re-utilised | String | `Yes` |
+| Place of disposal | M | indicate the place of disposal if the gear its not re utilized | String | `tbd` |
 
 # FAD {#fad}
 
-## Recovery data
+## Recovery Data
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
@@ -106,21 +92,21 @@ Click [here](./Form-3LG.xlsx) to download a blank version of Form 3LG, or [retur
 | Depth | M | Length of a straight line measured downwards from the sea surface in meters when the FADor FAD component was found | Decimal degrees |  `3.5`  |
 | Habitat type | M | *Code list to develop* |  `seagrass meadow` |
 
-## FAD data
+## FAD Data
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](#FOBtypes) |  `DFAD` |
-| FAD ID | M | Unique identifier of the drifting floating object found |Alphanumeric |  `tbd` |
+| Type | M | Type of drifting floating object | **Code** from [Types of DFOBs](#FOBtypes) | `DFAD` |
+| FAD ID | M | Unique identifier of the drifting floating object found |Alphanumeric | `tbd` |
 | Buoy ID  | M | Unique identifier of buoy model found ( ISD+, M3+, T8E) followed by 5-9 digits | Alphanumeric | `tbd` |
 
-## Floating elements
+## Floating Elements
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Material | M | The identified floating element material | String |  `monofilament` |
-| Number | M | The number of floating elements found by material | Integer |  `2` |
-| Rope length | M | The length of rope in meters (m) | Decimal |  `5.40` |
+| Material | M | The identified floating element material | String | `monofilament` |
+| Number | M | The number of floating elements found by material | Integer | `2` |
+| Rope length | M | The length of rope in meters (m) | Decimal | `5.40` |
 
 ## Surface (raft)
 
@@ -131,30 +117,30 @@ Click [here](./Form-3LG.xlsx) to download a blank version of Form 3LG, or [retur
 | Structure material| M | **Description to add** | **Code list to develop** |  `tbd` |
 | Coverage material  | M | **Description to add** | **Code list to develop** |  `tbd` |
 
-## Submerged structure
+## Submerged Structure
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Structure type | M | **Description to add** | **Code list to develop** |  `tbd` |
-| Material | M | **Description to add** | **Code list to develop** |  `tbd` |
+| Structure type | M | **Description to add** | **Code list to develop** | `tbd` |
+| Material | M | **Description to add** | **Code list to develop** | `tbd` |
 | Length | M |  Length of the subsurface structure of the drifting floating object | cm | Decimal |
 | Mesh size | M | Size of the main net mesh used on the subsurface structure of the drifting floating object | mm | Decimal |
-| Type of attractors | M | **Description to add** | **Code list to develop** |  `tbd` |
-| Length laying | M | **Description to add** | **Code list to develop** |  `tbd` |
+| Type of attractors | M | **Description to add** | **Code list to develop** | `tbd` |
+| Length laying | M | **Description to add** | **Code list to develop** | `tbd` |
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Weight | M | Weight in kilogrammes (kg) of the gear or gear element found | Decimal |  `25.10` |
+| Weight | M | Weight in kilogrammes (kg) of the gear or gear element found | Decimal | `25.10` |
 
-## Impact area evaluation
+## Impact Area Evaluation
 
 | Element | Requirement | Description | Format | Example value  |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Damage type | M | The type of damage caused by the gear found | **Code list to develop** |  `abrasion` |
-| Area | M | The damaged area in m^2^ in which the gear was found | Decimal |  `3.6`|
-| Reef zone | M | If the gear was found on the reef indicate the area | **Code list to develop** |  `reef bank` |
-| Coral type | M | If the gear was found on corals indicate the coral type | **Code list to develop** |  `soft` |
-| Coral species | M | If the gear was found on corals, indicate the coral species identified in the damaged area | **Code list to develop** |  `tbd` |
+| Damage type | M | The type of damage caused by the gear found | **Code list to develop** | `abrasion` |
+| Area | M | The damaged area in m^2^ in which the gear was found | Decimal | `3.6`|
+| Reef zone | M | If the gear was found on the reef indicate the area | **Code list to develop** | `reef bank` |
+| Coral type | M | If the gear was found on corals indicate the coral type | **Code list to develop** | `soft` |
+| Coral species | M | If the gear was found on corals, indicate the coral species identified in the damaged area | **Code list to develop** | `tbd` |
 
 <!--| Substrate | M | The substrate of the bottom in which the gear was found | **To develop codelist** |   |-->
 
@@ -164,61 +150,61 @@ Click [here](./Form-3LG.xlsx) to download a blank version of Form 3LG, or [retur
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
 | Species | M | Species entangled with the gear found | **Code** from [Species](#allSpecies) |
 
-## Recovered gear data
+## Recovered Gear Data
 
-| Element | Requirement | Description | Format | Example value  |
+| Element | Requirement | Description | Format | Example value |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
-| Reused | M | Indicate if the gear component found be re-utilised | String |  `Yes` |
-| Place of disposal | M | indicate the place of disposal if the gear its not re utilized| String |  `tbd` |
+| Reused | M | Indicate if the gear component found be re-utilised | String | `Yes` |
+| Place of disposal | M | indicate the place of disposal if the gear its not re utilized| String | `tbd` |
 
-# Reference Code Lists
+<!-- # Reference Code Lists -->
 
-## Entities {#entities}
+<!-- ## Entities {#entities} -->
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities)
-+ **Version**: `r version_number("ENTITIES")`
-+ **Last update**: `r last_update("ENTITIES")`
+<!-- + [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities) -->
+<!-- + **Version**: `r version_number("ENTITIES")` -->
+<!-- + **Last update**: `r last_update("ENTITIES")` -->
 
-```{r collapse = TRUE}
-out_dt(ENTITIES, "ENTITIES")
-```
+<!-- ```{r collapse = TRUE} -->
+<!-- out_dt(ENTITIES, "ENTITIES") -->
+<!-- ``` -->
 
-## Countries {#countries}
+<!-- ## Countries {#countries} -->
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries)
-+ **Version**: `r version_number("COUNTRIES")`
-+ **Last update**: `r last_update("COUNTRIES")`
+<!-- + [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries) -->
+<!-- + **Version**: `r version_number("COUNTRIES")` -->
+<!-- + **Last update**: `r last_update("COUNTRIES")` -->
 
-```{r collapse = TRUE}
-out_dt(COUNTRIES, "COUNTRIES")
-```
+<!-- ```{r collapse = TRUE} -->
+<!-- out_dt(COUNTRIES, "COUNTRIES") -->
+<!-- ``` -->
 
-## Fishing Gears {#gears}
+<!-- ## Fishing Gears {#gears} -->
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#gears)
-+ **Version**: `r version_number("GEARS")`
-+ **Last update**: `r last_update("GEARS")`
+<!-- + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#gears) -->
+<!-- + **Version**: `r version_number("GEARS")` -->
+<!-- + **Last update**: `r last_update("GEARS")` -->
 
-```{r collapse = TRUE}
-out_dt(GEARS, "GEARS")
-```
+<!-- ```{r collapse = TRUE} -->
+<!-- out_dt(GEARS, "GEARS") -->
+<!-- ``` -->
 
-## Species {#allSpecies}
+<!-- ## Species {#allSpecies} -->
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies)
-+ **Version**: `r version_number("SPECIES")`
-+ **Last update**: `r last_update("SPECIES")`
+<!-- + [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies) -->
+<!-- + **Version**: `r version_number("SPECIES")` -->
+<!-- + **Last update**: `r last_update("SPECIES")` -->
 
-```{r collapse = TRUE}
-out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic")
-```
+<!-- ```{r collapse = TRUE} -->
+<!-- out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic") -->
+<!-- ``` -->
 
-## Types of drifting floating objects {#FOBtypes}
+<!-- ## Types of drifting floating objects {#FOBtypes} -->
 
-+ [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#DFOBtypes)
-+ **Version:** `r version_number("DFOB_TYPES")`
-+ **Last update**: `r last_update("DFOB_TYPES")`
+<!-- + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#DFOBtypes) -->
+<!-- + **Version:** `r version_number("DFOB_TYPES")` -->
+<!-- + **Last update**: `r last_update("DFOB_TYPES")` -->
 
-```{r collapse = TRUE}
-out_dt(DFOB_TYPES, "DFOB_TYPES")
-```
+<!-- ```{r collapse = TRUE} -->
+<!-- out_dt(DFOB_TYPES, "DFOB_TYPES") -->
+<!-- ``` -->
