@@ -157,6 +157,10 @@ Click [here](./Form-3LG.xlsx) to download a blank version of Form 3LG, or [retur
 | Reused | M | Indicate if the gear component found be re-utilised | String | `Yes` |
 | Place of disposal | M | indicate the place of disposal if the gear its not re utilized| String | `tbd` |
 
+## Reporting Deadlines
+
+Submission of Form 6LG is voluntary, and no specific reporting deadline applies. CPCs are encouraged to submit available lost gear data and provide updates as new data become available.
+
 <!-- # Reference Code Lists -->
 
 <!-- ## Entities {#entities} -->

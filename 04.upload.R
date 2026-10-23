@@ -1,4 +1,3 @@
-#SERVER_ROOT = "/var/www/static/reference"
 SERVER_ROOT = "/reference"
 
 FORMS_FOLDER         = "forms"

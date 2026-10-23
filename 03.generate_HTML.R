@@ -113,18 +113,18 @@ render_iotc(
   output_file = "Form-5MB.html"
 )
 
-### Form 7PR #####
-
-#render("./RMDs/Form_7PR.Rmd", 
-#       output_format = "html_document2",
-#       output_file ="Form_7PR.html", 
-#       output_dir = "./out/HTML/")
-
 ### Form 6LG #####
 render("./RMDs/Form-6LG.Rmd", 
        output_format = "html_document2",
        output_file ="Form-6LG.html", 
        output_dir = "./out/HTML/")
+
+### Form 7PR #####
+render_iotc(
+  input = "./RMDs/Form-7PR.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-7PR.html"
+)
 
 # ROS REPORTING FORMS ####
 

@@ -55,3 +55,7 @@ Click [here](./Form-5MB.xlsx) to download a blank version of Form 5MB, or [retur
 | Protocol | The reference to the sampling protocol used | String (free entry text) | [protocols.io](https://www.protocols.io/view/c-elegans-worm-size-measurement-e6nvwke4wvmk/v1) | 
 | Preservation | The type of preservation of the sample | **Code** from [preservation type](https://data.iotc.org/reference/latest/domain/biology/index.html#samplePreservationMethods) | `FR80` |
 | Location | The location of the sample | String (free entry text) | `Ifremer Freezer in room A5` | 
+
+## Reporting Deadlines
+
+Submission of Form 5MB is voluntary, and no specific reporting deadline applies. CPCs are encouraged to submit available morphometric and biological data and provide updates as new data become available.

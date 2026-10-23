@@ -234,81 +234,47 @@ SINKER_MATERIAL_TYPES <- read_codelist(domain = "fisheries", schema = "fishery",
 
 # BIOLOGY AND MORPHOMETRICS DOMAINS ####
 
-SPECIES               <- read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
-
-SPECIES_1DR_CODES     <- data.table(read.xlsx("./form_reporting_templates/Form-1DR.xlsx", sheet = "Data", cols = 3, startRow = 4))
-
+SPECIES                  <- read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES")
+SPECIES_1DR_CODES        <- data.table(read.xlsx("./form_reporting_templates/Form-1DR.xlsx", sheet = "Data", cols = 3, startRow = 4))
 setnames(SPECIES_1DR_CODES, old = "Code", new = "CODE")
-
-SPECIES_1DR           <- merge(SPECIES_1DR_CODES, SPECIES, by.x = "CODE", by.y = "CODE", all.x = TRUE)
-
-SPECIES_PREDATORS     <- read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_PREDATORS")
-
-RETAIN_REASONS        <- read_codelist(domain = "biology", schema = "biology", codelist = "RETAIN_REASONS")
-
-GEAR_INTERACTIONS     <- read_codelist(domain = "biology", schema = "biology", codelist = "GEAR_INTERACTIONS")
-
-DISCARD_REASONS       <- read_codelist(domain = "biology", schema = "biology", codelist = "DISCARD_REASONS")
-
-INDIVIDUAL_CONDITIONS <- read_codelist(domain = "biology", schema = "biology", codelist = "INDIVIDUAL_CONDITIONS")
-
-MEASUREMENTS          <- read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENTS")
-
-LENGTH_MEASUREMENTS <- MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "LN", -c("TYPE_OF_MEASUREMENT_CODE")]
-
-WEIGHT_MEASUREMENTS <- read_codelist(domain = "biology", schema = "biology", codelist = "WEIGHT_MEASUREMENTS")
-
-MEASUREMENT_TOOLS     <- read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENT_TOOLS")
-
+SPECIES_1DR              <- merge(SPECIES_1DR_CODES, SPECIES, by.x = "CODE", by.y = "CODE", all.x = TRUE)
+SPECIES_PREDATORS        <- read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_PREDATORS")
+RETAIN_REASONS           <- read_codelist(domain = "biology", schema = "biology", codelist = "RETAIN_REASONS")
+GEAR_INTERACTIONS        <- read_codelist(domain = "biology", schema = "biology", codelist = "GEAR_INTERACTIONS")
+DISCARD_REASONS          <- read_codelist(domain = "biology", schema = "biology", codelist = "DISCARD_REASONS")
+INDIVIDUAL_CONDITIONS    <- read_codelist(domain = "biology", schema = "biology", codelist = "INDIVIDUAL_CONDITIONS")
+MEASUREMENTS             <- read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENTS")
+LENGTH_MEASUREMENTS      <- MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "LN", -c("TYPE_OF_MEASUREMENT_CODE")]
+WEIGHT_MEASUREMENTS      <- read_codelist(domain = "biology", schema = "biology", codelist = "WEIGHT_MEASUREMENTS")
+MEASUREMENT_TOOLS        <- read_codelist(domain = "biology", schema = "biology", codelist = "MEASUREMENT_TOOLS")
 LENGTH_MEASUREMENT_TOOLS <- read_codelist(domain = "biology", schema = "biology", codelist = "LENGTH_MEASUREMENT_TOOLS")
-
-TYPES_OF_MEASUREMENT  <- read_codelist(domain = "biology", schema = "biology", codelist = "TYPES_OF_MEASUREMENT")
-
-TYPES_OF_FATE         <- read_codelist(domain = "biology", schema = "biology", codelist = "TYPES_OF_FATE")
-
-FATES                 <- read_codelist(domain = "biology", schema = "biology", codelist = "FATES")
-
-SEX                   <- read_codelist(domain = "biology", schema = "biology", codelist = "SEX")
-
-MATURITY_STAGES       <- read_codelist(domain = "biology", schema = "biology", codelist = "MATURITY_STAGES")
-
-BAIT_CONDITIONS       <- read_codelist(domain = "biology", schema = "biology", codelist = "BAIT_CONDITIONS")
-
-SPECIES_BAITS         <- read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_BAITS")
-
-HANDLING_METHODS      <- read_codelist(domain = "biology", schema = "biology", codelist = "HANDLING_METHODS")
-
-FISH_STATUS           <- read_codelist(domain = "biology", schema = "biology", codelist = "FISH_STATUS")
-
-SAMPLING_PROTOCOLS    <- read_codelist(domain = "biology", schema = "biology", codelist = "SAMPLING_PROTOCOLS")
-
-SAMPLING_PERIODS      <- read_codelist(domain = "biology", schema = "biology", codelist = "SAMPLING_PERIODS")
-
-SAMPLING_METHODS_FOR_CATCH_ESTIMATION <- read_codelist(domain = "biology", codelist = "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
-
+TYPES_OF_MEASUREMENT     <- read_codelist(domain = "biology", schema = "biology", codelist = "TYPES_OF_MEASUREMENT")
+TYPES_OF_FATE            <- read_codelist(domain = "biology", schema = "biology", codelist = "TYPES_OF_FATE")
+FATES                    <- read_codelist(domain = "biology", schema = "biology", codelist = "FATES")
+SEX                      <- read_codelist(domain = "biology", schema = "biology", codelist = "SEX")
+MATURITY_STAGES          <- read_codelist(domain = "biology", schema = "biology", codelist = "MATURITY_STAGES")
+BAIT_CONDITIONS          <- read_codelist(domain = "biology", schema = "biology", codelist = "BAIT_CONDITIONS")
+SPECIES_BAITS            <- read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_BAITS")
+HANDLING_METHODS         <- read_codelist(domain = "biology", schema = "biology", codelist = "HANDLING_METHODS")
+FISH_STATUS              <- read_codelist(domain = "biology", schema = "biology", codelist = "FISH_STATUS")
+SAMPLING_PROTOCOLS       <- read_codelist(domain = "biology", schema = "biology", codelist = "SAMPLING_PROTOCOLS")
+SAMPLING_PERIODS         <- read_codelist(domain = "biology", schema = "biology", codelist = "SAMPLING_PERIODS")
+SAMPLING_METHODS_FOR_CATCH_ESTIMATION     <- read_codelist(domain = "biology", codelist = "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
 SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS <- read_codelist(domain = "biology", codelist = "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
-
-BIOLOGICAL_MATERIALS <- read_codelist(domain = "biology", schema = "biology", codelist = "BIOLOGICAL_MATERIALS")
-
-TAG_TYPES <- read_codelist(domain = "biology", schema = "biology", codelist = "TAG_TYPES")
-
-DEPREDATION_SOURCES <- read_codelist(domain = "biology", schema = "biology", codelist = "DEPREDATION_SOURCES")
-
+BIOLOGICAL_MATERIALS     <- read_codelist(domain = "biology", schema = "biology", codelist = "BIOLOGICAL_MATERIALS")
+TAG_TYPES                <- read_codelist(domain = "biology", schema = "biology", codelist = "TAG_TYPES")
+DEPREDATION_SOURCES      <- read_codelist(domain = "biology", schema = "biology", codelist = "DEPREDATION_SOURCES")
 WEIGHT_MEASUREMENT_TOOLS <- read_codelist(domain = "biology", schema = "biology", codelist = "WEIGHT_MEASUREMENT_TOOLS")
-
-SPECIES_CETACEANS     <- read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_CETACEANS")
-
-BAIT_TYPES <- read_codelist(domain = "biology", schema = "biology", codelist = "BAIT_TYPES")
+SPECIES_CETACEANS        <- read_codelist(domain = "biology", schema = "biology", codelist = "SPECIES_CETACEANS")
+BAIT_TYPES               <- read_codelist(domain = "biology", schema = "biology", codelist = "BAIT_TYPES")
 
 # SOCIO-ECONOMIC DOMAIN ####
 
-COUNTRIES_CURRENCIES <- read_codelist(domain = "economics", schema = "socio_economics", codelist = "COUNTRIES_CURRENCIES")
-
+COUNTRY_CURRENCIES   <- read_codelist(domain = "economics", schema = "socio_economics", codelist = "COUNTRY_CURRENCIES")
 DESTINATION_MARKETS  <- read_codelist(domain = "economics", schema = "socio_economics", codelist = "DESTINATION_MARKETS")
-
 PRICING_LOCATIONS    <- read_codelist(domain = "economics", schema = "socio_economics", codelist = "PRICING_LOCATIONS")
-
-FISH_PRODUCT_TYPES   <- read_codelist(domain = "economics", schema = "socio_economics", codelist = "PRODUCT_TYPES")
+PRODUCT_TYPES        <- read_codelist(domain = "economics", schema = "socio_economics", codelist = "PRODUCT_TYPES")
+PRICE_TYPES          <- read_codelist(domain = "economics", schema = "socio_economics", codelist = "PRICE_TYPES")
 
 # LEGACY DOMAIN ####
 
