@@ -1,0 +1,61 @@
+---
+title: "IOTC Statistical Data Reporting: Form 7PR"
+---
+
+## Overview
+
+This form provides for the reporting of fish price information for IOTC species, common sharks and other bycatch species, to support socio-economic analyses conducted by the IOTC.
+
+Prices may be reported at different stages of the fish value chain, including ex-vessel, wholesale, retail and international trade. CPCs are encouraged to provide any available price information, identifying the corresponding price type to support interpretation and comparability across markets and reporting entities.
+
+Annual reporting is sufficient, although CPCs may provide prices for shorter or irregular periods where available. The start and end dates define the period represented by the reported price, which may differ from the frequency of the original price observations.
+
+All prices shall be expressed per kilogram (kg) of fish or fishery product, in the currency specified in the reporting form. Prices originally expressed in other weight units shall be converted to prices per kilogram before submission. Prices for which the corresponding weight cannot be reliably established should not be reported.
+
+Reported prices may represent individual observations or summary statistics derived from multiple observations. The method used to obtain or calculate the reported price should be identified whenever known, to facilitate interpretation and comparison of the data.
+
+Click [here](./Form-7PR.xlsx) to download a blank version of Form 7PR, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+
+## Data Content
+
+### General Information
+
+| Element | Requirement | Description | Format | Example value |
+| :--------| :----: | :----------------------- | :-------- | :------------: |
+| Reporting year | M | Gregorian calendar year to which the reported data relate | 4-digit integer	| `1996` |
+| Reporting entity | M | Entity responsible for reporting the dataset to the IOTC Secretariat | **Code** from [Entities](https://data.iotc.org/reference/latest/domain/admin/index.html#entities) | `MYS` | 
+| Flag state | O | Country in which a fishing vessel is registered and whose flag it is entitled to fly | **Code** from [Countries](https://data.iotc.org/reference/latest/domain/admin/index.html#countries) | `MYS` | 
+
+### Main Data Elements
+
+| Element | Requirement | Description | Format | Example value |
+| :--------| :----: | :----------------------- | :-------- | :------------: |
+| Date start | M | First date of the period to which the reported price relates | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-01-01` |
+| Date end | M | Last date of the period to which the reported price relates | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-12-31` |
+| Pricing location | O | Location at which the reported price was observed | **Code** from  [Pricing locations](https://data.iotc.org/reference/latest/domain/economics/index.html#pricingLocations) | `BO` |
+| Price type | M | Commercial or transaction basis on which the reported price is established | **Code** from  [Price types](https://data.iotc.org/reference/latest/domain/economics/index.html#priceTypes) | `FOB` | 
+| Currency | M | Currency in which the reported price is expressed | **Code** from  [Country currencies](https://data.iotc.org/reference/latest/domain/economics/index.html#countryCurrencies) | `MGA` |  
+| Destination | O | Destination market associated with the reported product or transaction | **Code** from  [Destination markets](https://data.iotc.org/reference/latest/domain/economics/index.html#destinationMarkets)  | `LM` |
+| Species | M | Species to which the reported price relates | **Code** from [Species](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies) | `YFT` | 
+| Product type | M | Type of fishery product to which the reported price relates | **Code** from  [Product types](https://data.iotc.org/reference/latest/domain/economics/index.html#productTypes) | `DR` | 
+| Price calculation method | O | Method used to obtain or calculate the reported price | **Code** from [Price calculation methods](https://data.iotc.org/reference/latest/domain/economics/index.html#priceCalculationMethods) | `WGT` |
+| Price | M |  Monetary value of the reported fish or fishery product per kilogram | Numeric | `18.4` |
+
+## Reporting Metadata
+
+| Element | Requirement | Description | Format | Example value |
+| :--------| :----: | :----------------------- | :-------- | :------------: |
+| Liaison officer full name | M | Name of the liaison officer in charge of the compilation of the data | String | `John Doe` |
+| Liaison officer email	 | M | Email address of the liaison officer in charge of the compilation of the data | Valid email address | `John.Doe@fao.org` |
+| Organisation name | M | Name of the organisation in charge of the compilation of the data | String | `Institute of Fisheries` |
+| Organisation email | O | Email address of the organisation in charge of the compilation of the data | Valid email address | `nif@gov.sc` |
+| Finalisation date | M | Date of finalisation of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1997-06-25` |
+| Submission date | O | Date of submission of the dataset | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1997-06-29` |
+
+## Reporting Deadlines
+
+Submission of Form 7PR is voluntary, and no specific reporting deadline applies. CPCs are encouraged to submit available fish price information and provide updates as new data become available.
+
+<!-- # Proposed rationale for WPDCS -->
+
+<!-- The revised Form 7PR aims to improve the feasibility and consistency of fish price reporting by allowing less demanding temporal aggregation and reducing the number of mandatory product descriptors. It replaces the legacy wide-format structure with one row per combination of reporting period, market and product characteristics. The proposed date-range fields support annual, shorter and irregular reporting periods without a separate period-code list. The new Price type field distinguishes ex-vessel, wholesale, retail and trade-term prices. Price calculation and product classifications still require clarification before implementation so that the reduced reporting burden does not compromise interpretability or comparability. -->
