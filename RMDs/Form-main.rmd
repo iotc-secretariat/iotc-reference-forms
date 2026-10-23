@@ -54,8 +54,8 @@ We welcome your feedback on these forms and encourage you to direct any question
 | [4SF]{#Form-4SF} | M | [v1.0](./Form-4SF.xlsx) | [Geo-referenced size frequencies](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Geo-referenced_size_frequencies) | [Form-4SF.html](./Form-4SF.html) | [IOTCForm4SF](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SF) |  
 | [2FC]{#Form-2FC} | V | [v1.0](./Form-2FC.xlsx) | [Fishing craft statistics](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Fishing_Craft_Statistics) | [Form-2FC.html](./Form-2FC.html) | | 
 | [5MB]{#Form-5MB} | V | [v1.0](./Form-5MB.xlsx) | Individual-level morphometric and biological data | [Form-5MB.html](./Form-5MB.html) | | | 
-| [6LG]{#Form-6LG} | V | [v1.0](./Form-6LG.xlsx) | Data and information on the recovery of abandoned, lost or discarded fishing gear | [Form-6LG.html](./Form-6LG.html) | | 
-| [7PR]{#Form-7PR} | V | [v1.0](./legacy/Form-7PR-legacy.xlsm) | Prices of fish products for tuna and tuna-like species under IOTC mandate | Form-7PR-legacy.html ||  
+| [6LG]{#Form-6LG} | V | [v1.0](./Form-6LG.xlsx) | Data and information on the recovery of abandoned, lost or discarded fishing gear | [Form-6LG.html](./Form-6LG.html) || 
+| [7PR]{#Form-7PR} | V | [v1.0](./legacy/Form-7PR-legacy.xlsx) | Prices of fish products for tuna and tuna-like species under IOTC mandate | [Form-7PR.html](./Form-7PR.html) ||  
 
 ## Regional Observer Scheme Datasets
 

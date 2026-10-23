@@ -33,12 +33,12 @@ Click [here](./Form-7PR.xlsx) to download a blank version of Form 7PR, or [retur
 | Date start | M | First date of the period to which the reported price relates | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-01-01` |
 | Date end | M | Last date of the period to which the reported price relates | [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) | `1996-12-31` |
 | Pricing location | O | Location at which the reported price was observed | **Code** from  [Pricing locations](https://data.iotc.org/reference/latest/domain/economics/index.html#pricingLocations) | `BO` |
-| Price type | M | Commercial or transaction basis on which the reported price is established | **Code** from  [Price types](https://data.iotc.org/reference/latest/domain/economics/index.html#priceTypes) | `FOB` | 
-| Currency | M | Currency in which the reported price is expressed | **Code** from  [Country currencies](https://data.iotc.org/reference/latest/domain/economics/index.html#countryCurrencies) | `MGA` |  
-| Destination | O | Destination market associated with the reported product or transaction | **Code** from  [Destination markets](https://data.iotc.org/reference/latest/domain/economics/index.html#destinationMarkets)  | `LM` |
 | Species | M | Species to which the reported price relates | **Code** from [Species](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies) | `YFT` | 
 | Product type | M | Type of fishery product to which the reported price relates | **Code** from  [Product types](https://data.iotc.org/reference/latest/domain/economics/index.html#productTypes) | `DR` | 
+| Destination | O | Destination market associated with the reported product or transaction | **Code** from  [Destination markets](https://data.iotc.org/reference/latest/domain/economics/index.html#destinationMarkets)  | `LM` |
+| Price type | M | Commercial or transaction basis on which the reported price is established | **Code** from  [Price types](https://data.iotc.org/reference/latest/domain/economics/index.html#priceTypes) | `FOB` | 
 | Price calculation method | O | Method used to obtain or calculate the reported price | **Code** from [Price calculation methods](https://data.iotc.org/reference/latest/domain/economics/index.html#priceCalculationMethods) | `WGT` |
+| Currency | M | Currency in which the reported price is expressed | **Code** from  [Country currencies](https://data.iotc.org/reference/latest/domain/economics/index.html#countryCurrencies) | `MGA` |  
 | Price | M |  Monetary value of the reported fish or fishery product per kilogram | Numeric | `18.4` |
 
 ## Reporting Metadata
