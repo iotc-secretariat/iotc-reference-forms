@@ -1,6 +1,7 @@
 # Generic function to render the RMD files
 render_iotc <- function(input, output_dir,
-                        output_file = "index.html") {
+                        output_file = "index.html",
+                        toc = NULL) {
   
   config <- yaml::read_yaml("./templates/html_output.yml")
   opts <- config[["bookdown::html_document2"]]
@@ -22,6 +23,11 @@ render_iotc <- function(input, output_dir,
     winslash = "/",
     mustWork = TRUE
   )
+  
+  # Override YAML TOC setting if explicitly requested
+  if (!is.null(toc)) {
+    opts$toc <- toc
+  }
   
   rmarkdown::render(
     input = input,

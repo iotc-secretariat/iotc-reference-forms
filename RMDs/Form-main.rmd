@@ -13,67 +13,132 @@ output:
     toc_float:
       collapsed: false
     smooth_scroll: false
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ## Overview
 
-Following Article XI of the [Agreement for the establishment of the Indian Ocean Tuna Commission](https://iotc.org/sites/default/files/documents/2012/5/25/IOTC%20Agreement.pdf) (IOTC), [Contracting Parties and Cooperating Non-Contracting Parties](https://iotc.org/about-iotc/structure-commission) (CPCs) are required to collect and report fisheries data in accordance with the [Conservation and Management Measures](https://iotc.org/cmms) (CMMs). To manage the data received from CPCs and other parties fishing in the IOTC area of competence for IOTC-managed species, the Secretariat has developed specific reporting forms for each dataset. The forms include all mandatory metadata, data fields, and information on IOTC formats and standard code lists.
+Following Article XI of the [Agreement for the establishment of the
+Indian Ocean Tuna
+Commission](https://iotc.org/sites/default/files/documents/2012/5/25/IOTC%20Agreement.pdf)
+(IOTC), [Contracting Parties and Cooperating Non-Contracting
+Parties](https://iotc.org/about-iotc/structure-commission) (CPCs) are
+required to collect and report fisheries data in accordance with the
+[Conservation and Management Measures](https://iotc.org/cmms) (CMMs). To
+manage the data received from CPCs and other parties fishing in the IOTC
+area of competence for IOTC-managed species, the Secretariat has
+developed specific reporting forms for each dataset. The forms include
+all mandatory metadata, data fields, and information on IOTC formats and
+standard code lists.
 
-All IOTC code lists required by the forms are distributed through the [IOTC Reference Data Catalogue](../) and are also made available via an R library hosted on the IOTC Secretariat's GitHub repository ([iotc-data-reference-codelists](https://github.com/iotc-secretariat/iotc-data-reference-codelists)), with a mirror maintained by the Fisheries Data Interoperability Working Group ([fdiwg](https://github.com/fdiwg/fdi-codelists/tree/main/regional/iotc)).
+All IOTC code lists required by the forms are distributed through the
+[IOTC Reference Data Catalogue](../) and are also made available via an
+R library hosted on the IOTC Secretariat's GitHub repository
+([iotc-data-reference-codelists](https://github.com/iotc-secretariat/iotc-data-reference-codelists)),
+with a mirror maintained by the Fisheries Data Interoperability Working
+Group
+([fdiwg](https://github.com/fdiwg/fdi-codelists/tree/main/regional/iotc)).
 
-In addition, the code lists have been published on the [Zenodo](https://zenodo.org/) platform to support versioning, citation, and long-term accessibility: <a href="https://zenodo.org/records/15743875" target="_blank" title="Citable IOTC Reference Data on Zenodo">
-  <img src="../out/images/cl_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;">
-  <span style="vertical-align:middle;">
-</a>
+In addition, the code lists have been published on the
+[Zenodo](https://zenodo.org/) platform to support versioning, citation,
+and long-term accessibility:
+<a href="https://zenodo.org/records/15743875" target="_blank" title="Citable IOTC Reference Data on Zenodo">
+<img src="../out/images/cl_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;"/>
+<span style="vertical-align:middle;"> </a>
 
 ## Statistical Fishery Datasets
+```{r}
 
-At its 26^th^ session, the IOTC Scientific Committee endorsed the adoption of new reporting forms to streamline data flow and improve the quality of dataset submissions to the Secretariat. The use of the forms for submitting the core fisheries statistics to the IOTC became **mandatory** (M) as of 2025. In addition, the Secretariat has developed some voluntary (V) forms for reporting fishing craft statistics, price time series, information on lost gears, and morphometric and biological data.
+```
 
-The forms are available as plain Microsoft Excel™ spreadsheets, allowing reporting officers to input data either manually or programmatically using automated scripts. You can download all current form templates for submitting data to the IOTC [here](../forms/IOTC-stats-forms.zip).
+At its 26^th^ session, the IOTC Scientific Committee endorsed the
+adoption of new reporting forms to streamline data flow and improve the
+quality of dataset submissions to the Secretariat. The use of the forms
+for submitting the core fisheries statistics to the IOTC became
+**mandatory** (M) as of 2025. In addition, the Secretariat has developed
+some voluntary (V) forms for reporting fishing craft statistics, price
+time series, information on lost gears, and morphometric and biological
+data.
 
-An archived version of the IOTC statistical forms can be downloaded directly from the Zenodo record or retrieved programmatically using R with the [zen4R](https://github.com/eblondel/zen4R) package: <a href="https://doi.org/10.5281/zenodo.16941787" target="_blank" title="Citable IOTC Statistics Forms on Zenodo">
-  <img src="../out/images/stats_forms_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;">
-  <span style="vertical-align:middle;">
-</a>
+The forms are available as plain Microsoft Excel™ spreadsheets, allowing
+reporting officers to input data either manually or programmatically
+using automated scripts. You can download all current form templates for
+submitting data to the IOTC [here](../forms/IOTC-stats-forms.zip).
 
-Additionally, interactive validators have been developed to allow CPCs to verify the contents of the reporting forms prior to submission. All validators are available through the IOTC Shiny Apps Catalogue: <https://iotc.review.fao.org/shiny/app/data_validators>.
+An archived version of the IOTC statistical forms can be downloaded
+directly from the Zenodo record or retrieved programmatically using R
+with the [zen4R](https://github.com/eblondel/zen4R) package:
+<a href="https://doi.org/10.5281/zenodo.16941787" target="_blank" title="Citable IOTC Statistics Forms on Zenodo">
+<img src="../out/images/stats_forms_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;"/>
+<span style="vertical-align:middle;"> </a>
 
-We welcome your feedback on these forms and encourage you to direct any questions to the IOTC Secretariat via email at [IOTC-Statistics@fao.org](mailto:IOTC-Statistics@fao.org).
+Additionally, interactive validators have been developed to allow CPCs
+to verify the contents of the reporting forms prior to submission. All
+validators are available through the IOTC Shiny Apps Catalogue:
+<https://iotc.review.fao.org/shiny/app/data_validators>.
 
-| Form | Requirement | Template | Dataset | Description | Validator | 
-| :----: | :-----:  | :------: | :----------------------- | :--------- | :-------- |
-| [1DR]{#Form-1DR} | M | [v1.0](./Form-1DR.xlsx) | [Species presence in the catch](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Species_presence_in_the_catch) | [Form-1DR.html](./Form-1DR.html) | |
-| [1IN]{#Form-1IN} | M | [v1.0](./Form-1IN.xlsx) | [Interactions of longline and surface fisheries with endangered, threatened, and protected (ETP) species](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Interactions_with_Endangered,_Threatened_and_Protected_species) | [Form-1IN.html](./Form-1IN.html) | |
+We welcome your feedback on these forms and encourage you to direct any
+questions to the IOTC Secretariat via email at
+[IOTC-Statistics\@fao.org](mailto:IOTC-Statistics@fao.org).
+
+| Form | Requirement | Template | Dataset | Description | Validator |
+|:---------:|:---------:|:---------:|:------------------|:----------|:----------|
+| [1DR]{#Form-1DR} | M | [v1.0](./Form-1DR.xlsx) | [Species presence in the catch](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Species_presence_in_the_catch) | [Form-1DR.html](./Form-1DR.html) |  |
+| [1IN]{#Form-1IN} | M | [v1.0](./Form-1IN.xlsx) | [Interactions of longline and surface fisheries with endangered, threatened, and protected (ETP) species](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Interactions_with_Endangered,_Threatened_and_Protected_species) | [Form-1IN.html](./Form-1IN.html) |  |
 | [1RC]{#Form-1RC} | M | [v1.0](./Form-1RC.xlsx) | [Amount of fish caught and retained](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Amount_of_fish_caught_and_retained) | [Form-1RC.html](./Form-1RC.html) | [IOTCForm1RC](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1RC) |
-| [1DI]{#Form-1DI} | M | [v1.0](./Form-1DI.xlsx) | [Amount of discards](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Amount_of_discards) | [Form-1DI.html](./Form-1DI.html) | [IOTCForm1DI](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1DI) | 
-| [3CE]{#Form-3CE} | M | [v1.0](./Form-3CE.xlsx) | [Geo-referenced catches and efforts](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Geo-referenced_catches_and_efforts) | [Form-1DI.html](./Form-1DI.html) | [IOTCForm3CE](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CE) |  
-| [3AA]{#Form-3AA} | M | [v1.0](./Form-3AA.xlsx) | [Activities related to anchored fish aggregating devices](https://data.iotc.org/reference/latest/guidelines/stats/index.html#AFAD-related_activities) | [Form-3AA.html](./Form-3AA.html) | | 
-| [3BU]{#Form-3BU} | M | [v1.0](./Form-3BU.xlsx) | [Daily buoy positions](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Daily_buoy_positions) | [Form-3BU.html](./Form-3BU.html) | [IOTCForm3BU](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3BU) | 
-| [3DA]{#Form-3DA} | M | [v1.0](./Form-3DA.xlsx) | [Interactions related to drifting floating objects](https://data.iotc.org/reference/latest/guidelines/stats/index.html#DFOB-related_activities) | [Form-3DA.html](./Form-3DA.html) | | 
-| [4SF]{#Form-4SF} | M | [v1.0](./Form-4SF.xlsx) | [Geo-referenced size frequencies](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Geo-referenced_size_frequencies) | [Form-4SF.html](./Form-4SF.html) | [IOTCForm4SF](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SF) |  
-| [2FC]{#Form-2FC} | V | [v1.0](./Form-2FC.xlsx) | [Fishing craft statistics](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Fishing_Craft_Statistics) | [Form-2FC.html](./Form-2FC.html) | | 
-| [5MB]{#Form-5MB} | V | [v1.0](./Form-5MB.xlsx) | Individual-level morphometric and biological data | [Form-5MB.html](./Form-5MB.html) | | | 
-| [6LG]{#Form-6LG} | V | [v1.0](./Form-6LG.xlsx) | Data and information on the recovery of abandoned, lost or discarded fishing gear | [Form-6LG.html](./Form-6LG.html) || 
-| [7PR]{#Form-7PR} | V | [v1.0](./legacy/Form-7PR-legacy.xlsx) | Prices of fish products for tuna and tuna-like species under IOTC mandate | [Form-7PR.html](./Form-7PR.html) ||  
+| [1DI]{#Form-1DI} | M | [v1.0](./Form-1DI.xlsx) | [Amount of discards](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Amount_of_discards) | [Form-1DI.html](./Form-1DI.html) | [IOTCForm1DI](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1DI) |
+| [3CE]{#Form-3CE} | M | [v1.0](./Form-3CE.xlsx) | [Geo-referenced catches and efforts](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Geo-referenced_catches_and_efforts) | [Form-3CE.html](./Form-3CE.html) | [IOTCForm3CE](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CE) |
+| [3AA]{#Form-3AA} | M | [v1.0](./Form-3AA.xlsx) | [Activities related to anchored fish aggregating devices](https://data.iotc.org/reference/latest/guidelines/stats/index.html#AFAD-related_activities) | [Form-3AA.html](./Form-3AA.html) |  |
+| [3BU]{#Form-3BU} | M | [v1.0](./Form-3BU.xlsx) | [Daily buoy positions](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Daily_buoy_positions) | [Form-3BU.html](./Form-3BU.html) | [IOTCForm3BU](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3BU) |
+| [3DA]{#Form-3DA} | M | [v1.0](./Form-3DA.xlsx) | [Interactions related to drifting floating objects](https://data.iotc.org/reference/latest/guidelines/stats/index.html#DFOB-related_activities) | [Form-3DA.html](./Form-3DA.html) |  |
+| [4SF]{#Form-4SF} | M | [v1.0](./Form-4SF.xlsx) | [Geo-referenced size frequencies](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Geo-referenced_size_frequencies) | [Form-4SF.html](./Form-4SF.html) | [IOTCForm4SF](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SF) |
+| [2FC]{#Form-2FC} | V | [v1.0](./Form-2FC.xlsx) | [Fishing craft statistics](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Fishing_Craft_Statistics) | [Form-2FC.html](./Form-2FC.html) |  |
+| [5MB]{#Form-5MB} | V | [v1.0](./Form-5MB.xlsx) | Individual-level morphometric and biological data | [Form-5MB.html](./Form-5MB.html) |  |
+| [6LG]{#Form-6LG} | V | [v1.0](./Form-6LG.xlsx) | Data and information on the recovery of abandoned, lost or discarded fishing gear | [Form-6LG.html](./Form-6LG.html) |  |
+| [7PR]{#Form-7PR} | V | [v1.0](./legacy/Form-7PR.xlsx) | Prices of fish products for tuna and tuna-like species under IOTC mandate | [Form-7PR.html](./Form-7PR.html) |  |
 
 ## Regional Observer Scheme Datasets
 
-The IOTC Regional Observer Scheme (ROS) was established to collect verified catch and scientific data on tuna and tuna-like species within the IOTC area. Its implementation, which began on 1 July 2010, is carried out entirely at the national level by IOTC Contracting Parties and Cooperating Non-Contracting Parties (CPCs). Information on the ROS, including programme standards and observer training materials, is available on the [ROS page](https://iotc.org/science/regional-observer-scheme-science) of the IOTC website.
+The IOTC Regional Observer Scheme (ROS) was established to collect
+verified catch and scientific data on tuna and tuna-like species within
+the IOTC area. Its implementation, which began on 1 July 2010, is
+carried out entirely at the national level by IOTC Contracting Parties
+and Cooperating Non-Contracting Parties (CPCs). Information on the ROS,
+including programme standards and observer training materials, is
+available on the [ROS
+page](https://iotc.org/science/regional-observer-scheme-science) of the
+IOTC website.
 
-The ROS data reporting forms were revised during the 20^th^ Session of the Working Party on Data Collection and Statistics ([WPDCS20](https://iotc.org/meetings/20th-working-party-data-collection-and-statistics-wpdcs20)), held in November 2024, and were subsequently endorsed by the Scientific Committee at its 27^th^ Session ([SC27](https://iotc.org/meetings/27th-session-scientific-committee-sc27)). The forms are provided as XLSX spreadsheets and contain multiple sheets corresponding to different hierarchical levels of data to be reported. They are available in four distinct gear group versions -- gillnets, longlines, pole-and-line, and purse seines -- corresponding to the main gears used in fisheries subject to the ROS data requirements, i.e., those involving vessels larger than 24 metres in length overall, or vessels smaller than 24 metres operating in Areas Beyond National Jurisdiction (ABNJ).
+The ROS data reporting forms were revised during the 20^th^ Session of
+the Working Party on Data Collection and Statistics
+([WPDCS20](https://iotc.org/meetings/20th-working-party-data-collection-and-statistics-wpdcs20)),
+held in November 2024, and were subsequently endorsed by the Scientific
+Committee at its 27^th^ Session
+([SC27](https://iotc.org/meetings/27th-session-scientific-committee-sc27)).
+The forms are provided as XLSX spreadsheets and contain multiple sheets
+corresponding to different hierarchical levels of data to be reported.
+They are available in four distinct gear group versions -- gillnets,
+longlines, pole-and-line, and purse seines -- corresponding to the main
+gears used in fisheries subject to the ROS data requirements, i.e.,
+those involving vessels larger than 24 metres in length overall, or
+vessels smaller than 24 metres operating in Areas Beyond National
+Jurisdiction (ABNJ).
 
-The different versions of the IOTC ROS forms can be downloaded directly from the Zenodo record or retrieved programmatically using R with the [zen4R](https://github.com/eblondel/zen4R) package: <a href="https://zenodo.org/records/15743875" target="_blank" title="Citable IOTC ROS Forms on Zenodo">
-  <img src="../out/images/ros_forms_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;">
-  <span style="vertical-align:middle;">
-</a>
+The different versions of the IOTC ROS forms can be downloaded directly
+from the Zenodo record or retrieved programmatically using R with the
+[zen4R](https://github.com/eblondel/zen4R) package:
+<a href="https://zenodo.org/records/15743875" target="_blank" title="Citable IOTC ROS Forms on Zenodo">
+<img src="../out/images/ros_forms_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;"/>
+<span style="vertical-align:middle;"> </a>
 
-| Form | Template | Dataset | Description | 
-| :----: | :------: | :----------------------- | --------- |
-| [ROS_GN]{#ROS_GN} | [v4.1.0](./ros/Form-ROS-GN.xlsx) | Gillnet ROS-related dataset | [Form-ROS-GN.html](./ros/Form-ROS-GN.html) | 
-| [ROS_LL]{#ROS_LL} | [v4.1.0](./ros/Form-ROS-LL.xlsx) | Longline ROS-related dataset| [Form-ROS-LL.html](./ros/Form-ROS-LL.html) |
-| [ROS_PL]{#ROS_PL} | [v4.1.0](./ros/Form-ROS-PL.xlsx) | Pole-and-line ROS-related dataset| [Form-ROS-LL.html](./ros/Form-ROS-PL.html) |
-| [ROS_PS]{#ROS_PS} | [v4.1.0](./ros/Form-ROS-PS.xlsx) | Purse seine ROS-related dataset | [Form-ROS-LL.html](./ros/Form-ROS-PS.html) |
+| Form | Template | Dataset | Description |
+|:------------:|:------------:|:------------------------------|--------------|
+| [ROS_GN]{#ROS_GN} | [v4.1.0](./ros/Form-ROS-GN.xlsx) | Observer data collected aboard gillnet fishing vessels | [Form-ROS-GN.html](./ros/Form-ROS-GN.html) |
+| [ROS_LL]{#ROS_LL} | [v4.1.0](./ros/Form-ROS-LL.xlsx) | Observer data collected aboard longline fishing vessels | [Form-ROS-LL.html](./ros/Form-ROS-LL.html) |
+| [ROS_PL]{#ROS_PL} | [v4.1.0](./ros/Form-ROS-PL.xlsx) | Observer data collected aboard pole-and-line fishing vessels | [Form-ROS-PL.html](./ros/Form-ROS-PL.html) |
+| [ROS_PS]{#ROS_PS} | [v4.1.0](./ros/Form-ROS-PS.xlsx) | Observer data collected aboard purse seine fishing vessels | [Form-ROS-PS.html](./ros/Form-ROS-PS.html) |
 
 <!-- ## Vessel Registry Datasets {#5VE} -->
 
@@ -86,7 +151,9 @@ The different versions of the IOTC ROS forms can be downloaded directly from the
 <!-- For the submission of data on vessels from longline and surface fisheries that operated in the IOTC Area of Competence in the year prior to reporting, including information on vessel identification, ownership, operator details, fishing gear, and vessel characteristics (e.g., type, length, and gross tonnage). -->
 
 <!-- + [Permalink](#AVL) -->
+
 <!-- + [Form template](https://iotc.org/sites/default/files/documents/compliance/erav/Res_10_08_-_Active_Vessels_List_declaration.xlsx) -->
+
 <!-- + [Form description](https://iotc.org/compliance/reporting-templates) -->
 
 <!-- ## Record of Authorised Vessels {#RAV} -->
@@ -94,6 +161,7 @@ The different versions of the IOTC ROS forms can be downloaded directly from the
 <!-- For the submission of data on vessels from longline and surface fisheries authorised to operate in the IOTC Area of Competence, including information on vessel identification, ownership, operator details, fishing gear, and vessel characteristics (e.g., type, length, and gross tonnage). -->
 
 <!-- + [Permalink](#RAV) -->
-<!-- + [Form template](https://iotc.org/sites/default/files/documents/compliance/erav/Res_19_04_-_Record_of_IOTC_AFVs_E-FULL_VESSEL.xlsx) -->
-<!-- + [Form description](https://iotc.org/e-rav) -->
 
+<!-- + [Form template](https://iotc.org/sites/default/files/documents/compliance/erav/Res_19_04_-_Record_of_IOTC_AFVs_E-FULL_VESSEL.xlsx) -->
+
+<!-- + [Form description](https://iotc.org/e-rav) -->

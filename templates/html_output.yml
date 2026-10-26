@@ -1,5 +1,5 @@
 bookdown::html_document2:
-  css: "html_template_no_logo.css" #fao_template_simplified.css
+  css: "fao_template_simplified.css" #html_template_no_logo.css
   includes:
     in_header: "google-analytics.html"
   mathjax: null

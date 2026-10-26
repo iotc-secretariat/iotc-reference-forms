@@ -5,7 +5,8 @@ options(DT.options = list(pageLength = 3))
 render_iotc(
   input = "./RMDs/Form-main.Rmd", 
   output_dir = "./out/HTML/", 
-  output_file = "index.html"
+  output_file = "index.html", 
+  toc = TRUE
   )
 
 # FORM SUMMARY (FR) ####
@@ -141,10 +142,11 @@ render("./RMDs/ros/ROS-PL.rmd",
        output_dir = "./out/HTML/ros/")
 
 ## PURSE SEINE ####
-render("./RMDs/ros/ROS-PS.rmd", 
-       output_format = "html_document2",
-       output_file ="Form-ROS-PS.html", 
-       output_dir = "./out/HTML/ros/")
+render_iotc(
+  input = "./RMDs/ros/ROS-PS.rmd", 
+  output_dir = "./out/HTML/ros/", 
+  output_file ="Form-ROS-PS.html"
+  )
 
 ## GILLNET ####
 render("./RMDs/ros/ROS-GN.rmd", 
